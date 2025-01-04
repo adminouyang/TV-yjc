@@ -417,15 +417,15 @@ url_blacklist = [
 ]
 
 announcements = [
-    {
-        "channel": "公告",
-        "entries": [
-            {"name": "请阅读", "url": "https://yunlongn.github.io/", "logo": "https://avatars.githubusercontent.com/u/38271111?v=4"},
-            {"name": "yunlongn.github.io", "url": "https://yunlongn.github.io/", "logo": "https://avatars.githubusercontent.com/u/38271111?v=4"},
-            {"name": "更新日期", "url": "https://yunlongn.github.io/", "logo": "https://avatars.githubusercontent.com/u/38271111?v=4"},
-            {"name": None, "url": "https://yunlongn.github.io/", "logo": "https://avatars.githubusercontent.com/u/38271111?v=4"}
-        ]
-    }
+    #{
+        #"channel": "公告",
+        #"entries": [
+            #{"name": "请阅读", "url": "https://yunlongn.github.io/", "logo": "https://avatars.githubusercontent.com/u/38271111?v=4"},
+            #{"name": "yunlongn.github.io", "url": "https://yunlongn.github.io/", "logo": "https://avatars.githubusercontent.com/u/38271111?v=4"},
+            #{"name": "更新日期", "url": "https://yunlongn.github.io/", "logo": "https://avatars.githubusercontent.com/u/38271111?v=4"},
+            #{"name": None, "url": "https://yunlongn.github.io/", "logo": "https://avatars.githubusercontent.com/u/38271111?v=4"}
+        #]
+    #}
 ]
 
 epg_urls = [
