@@ -126,7 +126,7 @@ def load_modify_name(filename):
 
 def filter_source_urls(template_file):
     #读取修改字典文件
-    rename_dic: dict[str, str] = load_modify_name('config/rename.txt')
+    rename_dic: dict[str, str] = load_modify_name('my_tv/config/rename.txt')
     template_channels = parse_template(template_file)
     source_urls = config.source_urls
     future_to_url = {}
@@ -304,6 +304,6 @@ def add_author_info(f_m3u, f_txt):
 
 
 if __name__ == "__main__":
-    template_file = "config/tag.txt"
+    template_file = "my_tv/config/tag.txt"
     channels, template_channels = filter_source_urls(template_file)
     update_channel_urls_m3u(channels, template_channels)
