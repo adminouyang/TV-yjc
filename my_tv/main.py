@@ -281,12 +281,12 @@ def update_channel_urls_m3u(channels, template_channels):
                             f_m3u.write(new_url + "\n")
             f_txt.write("\n")
 
-    with open("config/error_host", "w", encoding="utf-8") as error_host:
+    with open("my_tv/config/error_host", "w", encoding="utf-8") as error_host:
         error_host.write(f"check_return_channels len {len(channel_url_time)} \n")
         for invalid_host in invalid_hosts:
             error_host.write(f"{invalid_host}\n")
 
-    with open("config/error_urls", "w", encoding="utf-8") as error_urlsf:
+    with open("my_tv/config/error_urls", "w", encoding="utf-8") as error_urlsf:
         for invalid_host in invalid_urls:
             error_urlsf.write(f"{invalid_host}\n")
 
