@@ -258,9 +258,9 @@ def update_channel_urls_m3u(channels, template_channels):
                             url = url_item[0]
                             req_time = round(url_item[1], 3)
                             if is_ipv6(url):
-                                url_suffix = f"$LR•IPV6{req_time}" if total_urls == 1 else f"$IPV6•线路{index}-{req_time}"
+                                url_suffix = f"$源{req_time}" if total_urls == 1 else f"$源{index}-{req_time}"#LR•IPV6
                             else:
-                                url_suffix = f"$LR•IPV4{req_time}" if total_urls == 1 else f"$IPV4•线路{index}-{req_time}"
+                                url_suffix = f"$源{req_time}" if total_urls == 1 else f"$源{index}-{req_time}"#LR•IPV4
                             if '$' in url:
                                 base_url = url.split('$', 1)[0]
                             else:
