@@ -160,7 +160,7 @@ def filter_source_urls(template_file):
                 logging.info("\n")
                 logging.info(pbar.__str__())
 
-    with open("all_channels.txt", "w", encoding="utf-8") as f_all_channels:
+    with open("my_tv/all_channels.txt", "w", encoding="utf-8") as f_all_channels:
         if all_channels:
             for channel in all_channels:
                 f_all_channels.write(f"{channel},#genre#\n")
@@ -186,10 +186,10 @@ def update_channel_urls_m3u(channels, template_channels):
             if announcement['name'] is None:
                 announcement['name'] = current_date
 
-    with open("live.m3u", "w", encoding="utf-8") as f_m3u:
+    with open("my_tv/live.m3u", "w", encoding="utf-8") as f_m3u:
         f_m3u.write(f"""#EXTM3U x-tvg-url={",".join(f'"{epg_url}"' for epg_url in config.epg_urls)}\n""")
 
-        with open("live.txt", "w", encoding="utf-8") as f_txt:
+        with open("my_tv/live.txt", "w", encoding="utf-8") as f_txt:
             add_author_info(f_m3u, f_txt)
 
             future_concurrents = {}
