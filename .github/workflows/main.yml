@@ -43,11 +43,11 @@ jobs:
       - name: Install dependencies
         run: |
           pip install requests
-          pip install -r ./my_tv/requirements.txt
+          pip install -r my_tv/requirements.txt
           pip list
 
       - name: Run Python script
-        run: python ./my_tv/main.py
+        run: python my_tv/main.py
 
       - name: Commit and push if changed
         run: |
