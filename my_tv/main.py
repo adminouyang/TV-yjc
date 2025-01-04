@@ -132,7 +132,7 @@ def filter_source_urls(template_file):
     future_to_url = {}
     pbar = tqdm.tqdm(total=len(source_urls), desc="Checking channels", ncols=100, colour="green")
 
-    with open("config/invalid_url.txt", "w", encoding="utf-8") as invalid_url:
+    with open("my_tv/config/invalid_url.txt", "w", encoding="utf-8") as invalid_url:
         with concurrent.futures.ThreadPoolExecutor(max_workers = config.threadNum) as executor:
             all_channels = OrderedDict()
             for url in source_urls:
