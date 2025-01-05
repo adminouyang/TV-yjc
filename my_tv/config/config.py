@@ -11,7 +11,7 @@ source_urls = [
     #"https://live.fanmingming.com/tv/m3u/ipv6.m3u",
     "https://ghgo.xyz/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.txt",
     "https://ghgo.xyz/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
-    "https://ghgo.xyz/https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
+
     "https://ghgo.xyz/https://raw.githubusercontent.com/yuanzl77/IPTV/main/直播/央视频道.txt",
     "https://ghgo.xyz/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.txt",
     "https://live.zhoujie218.top/tv/iptv6.txt",
@@ -82,38 +82,7 @@ source_urls = [
     "http://154.9.252.167:190/tvlive.txt",
     "https://gitee.com/tushaoyong/live/raw/master/%E6%8E%A5%E5%8F%A3/IPV6.txt",
     "https://ghgo.xyz/https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u",
-    # "https://ghgo.xyz/https://raw.githubusercontent.com/frxz751113/IPTVzb1/refs/heads/main/{MMdd}%E7%BB%BC%E5%90%88%E6%BA%90.txt",
-    # "https://ghgo.xyz/https://raw.githubusercontent.com/frxz751113/IPTVzb1/refs/heads/main/{MMdd-1}%E7%BB%BC%E5%90%88%E6%BA%90.txt",
-    # "https://d.kstore.space/download/7395/xiaohei.txt",
-    # "http://vip.vip0531.com/viptv/live202405.txt",
-    # "http://120.79.4.185/new/mdlive.txt",
-    # --https://ghgo.xyz/https://raw.githubusercontent.com/zzj2678/IPTVzb1/refs/heads/main/iptv_list.txt
-    # --https://4gtv.mytvsuper.xyz/myiptv.m3u
-    # --https://gongdian.top/tv/gongdian.txt
-    # --http://wp.wadg.pro/down.php/d7b52d125998d00e2d2339bac6abd2b5.txt
-    # --https://ghgo.xyz/https://raw.githubusercontent.com/zzmaze/iptv/main/iptv.txt
-    # --https://tvkj.top/tvlive.txt
-    # --https://ghgo.xyz/https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u
-    # --https://gitcode.net/MZ011/BHJK/-/raw/master/BHZB1.txt
-    # --https://ghgo.xyz/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt
-    # --http://117.72.68.25:9230/latest.txt
-    # --https://gitlab.com/tvtg/vip/-/raw/main/log.txt
-    # --https://cdn05042023.gitlink.org.cn/liliang74120/cmds/raw/branch/master/myDS.txt
-    # --https://cdn05042023.gitlink.org.cn/api/v1/repos/xuanbei/ysv/raw/live.txt
-    # --http://ttkx.live:55/lib/kx2024.txt
-    # --https://2883.kstore.vip/gggg.nzk
-    # --http://kxrj.site:35455/tv.m3u
-    # --http://ttkx.live:567/gggg.nzk
-    # ++http://120.79.4.185/new/mdlive.txt
-    # ++http://tv.850930.xyz/kdsb.m3u
-    # ++http://tv.850930.xyz/kdsb2.m3u
-    # ++http://tv.850930.xyz/gather.m3u
-    # ++http://tv.850930.xyz/543.m3u
-    # ++http://tv.850930.xyz/histar.m3u
-    # ++http://l.gmbbk.com/upload/16401640.txt
-    # ++http://122.228.85.203:5988/uploads/tvbox/tv.txt
-    # ++https://ghgo.xyz/https://raw.githubusercontent.com/lystv/short/main/影视/tvb/MTV.txt
-    # "https://dingyue.mytvsuper.xyz/myiptv.m3u",
+
 ]
 
 url_blacklist = [
@@ -414,6 +383,11 @@ url_blacklist = [
     "tvbox6.com",
     "180.97.247.27:8088",
     "ygbh.live",
+    "livetv.wqwqwq.sbs",
+    "cookies.elementfx.com",
+    "111.31.22.5",
+    "150.158.112.123",
+    "104.244.79.187:4994",
 ]
 
 announcements = [
