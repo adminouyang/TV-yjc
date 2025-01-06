@@ -126,7 +126,7 @@ def load_modify_name(filename):
 
 def filter_source_urls(template_file):
     #读取修改字典文件
-    rename_dic: dict[str, str] = load_modify_name('my_tv/config/rename.txt')
+    rename_dic: Dict[str, str] = load_modify_name('my_tv/config/rename.txt')
     template_channels = parse_template(template_file)
     source_urls = config.source_urls
     future_to_url = {}
