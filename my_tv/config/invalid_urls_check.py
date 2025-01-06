@@ -19,7 +19,7 @@ def ping_url(url: str):
 
 
 if __name__ == "__main__":
-    with open("error_urls", 'r', encoding='utf-8') as f:
+    with open("my_tv/config/error_urls", 'r', encoding='utf-8') as f:
         future_to_url = {}
         invalid_hosts = set()
         warnings.filterwarnings('ignore')
