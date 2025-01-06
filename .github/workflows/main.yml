@@ -42,6 +42,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install ping3      
           pip install requests
           pip install -r my_tv/requirements.txt
           pip list
