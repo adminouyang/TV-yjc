@@ -1,5 +1,7 @@
-https://aktv.top/live.m3u
-http://aktv.top/live.m3u
+http://154.9.252.167:190/tvlive.txt
 https://gitee.com/xxy002/zhiboyuan/raw/master/zby.txt
+http://wx.thego.cn/ak.m3u
 http://kxrj.site:55/lib/kx2024.txt
+http://rihou.cc:567/gggg.nzk
+http://rihou.cc:555/gggg.nzk
 http://ttkx.cc:55/lib/kx2024.txt
