@@ -50,7 +50,7 @@ jobs:
       - name: Run Python script
         run: |
           python my_tv/config/invalid_urls_check.py
-          python my_tv/main.py
+          #python my_tv/main.py
 
       - name: Commit and push if changed
         run: |
