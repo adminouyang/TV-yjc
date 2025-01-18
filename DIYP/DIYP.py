@@ -182,7 +182,7 @@ def updateChannelUrlsM3U(channels, template_channels):
                                     url
                                     and url not in written_urls
                                     and not any(
-                                        blacklist in url for blacklist in DIPY_config.url_blacklist
+                                        blacklist in url for blacklist in DIYP_config.url_blacklist
                                     )
                                 ):
                                     filtered_urls.append(url)
