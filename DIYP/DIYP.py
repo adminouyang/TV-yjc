@@ -220,7 +220,7 @@ def updateChannelUrlsM3U(channels, template_channels):
             logging.info(f"爬取完成✅，共计频道数：{count}")
 
 if __name__ == "__main__":
-    template_file = "DIPY/demo.txt"
+    template_file = "DIYP/demo.txt"
     channels, template_channels = filter_source_urls(template_file)
     updateChannelUrlsM3U(channels, template_channels)
 ###################
