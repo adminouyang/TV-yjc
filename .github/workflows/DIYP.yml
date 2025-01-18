@@ -37,14 +37,22 @@ jobs:
         
       # - name: Run qita
       #   run: python ${{ github.workspace }}/py/酒店源/qita.py
-        
-      - name: 提交更改
+      - name: Commit and push if changed
         run: |
-
-          git config --local user.email "2856364053@qq.com"
-          git config --local user.name "adminouyang" 
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
           git add .
-          git commit *.txt -m "action: `date`"
-          git commit *.m3u -m "action: `date`"
-          git push -f
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update live files" && git push)
+        env:
+         TZ: Asia/Shanghai
+        
+      # - name: 提交更改
+      #   run: |
+
+      #     git config --local user.email "2856364053@qq.com"
+      #     git config --local user.name "adminouyang" 
+      #     git add .
+      #     git commit *.txt -m "action: `date`"
+      #     git commit *.m3u -m "action: `date`"
+      #     git push -f
           #git pull --rebase
