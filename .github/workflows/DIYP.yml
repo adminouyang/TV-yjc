@@ -42,7 +42,9 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git add .
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update live files" && git push)
+          git commit *.txt -m "action: `date`"
+          git commit *.m3u -m "action: `date`"
+          git push -f
         env:
          TZ: Asia/Shanghai
         
