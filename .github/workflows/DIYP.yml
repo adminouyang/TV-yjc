@@ -25,36 +25,16 @@ jobs:
 
       - name: Run DIYP.py
         run: python ${{ github.workspace }}/DIYP/DIYP.py
-     
-      # - name: Run cctv.py
-      #   run: python ${{ github.workspace }}/py/酒店源/cctv.py
-
-      # - name: Run weishi.py
-      #   run: python ${{ github.workspace }}/py/酒店源/weishi.py 
-
-      # - name: Run iptv
-      #   run: python ${{ github.workspace }}/py/酒店源/iptv.py    
-        
-      # - name: Run qita
-      #   run: python ${{ github.workspace }}/py/酒店源/qita.py
-      - name: Commit and push if changed
+      
+      - name: 提交更改
         run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
+
+          git config --local user.email "2856364053@qq.com"
+          git config --local user.name "adminouyang" 
           git add .
           git commit *.txt -m "action: `date`"
           git commit *.m3u -m "action: `date`"
           git push -f
+          #git pull --rebase
         env:
          TZ: Asia/Shanghai
-        
-      # - name: 提交更改
-      #   run: |
-
-      #     git config --local user.email "2856364053@qq.com"
-      #     git config --local user.name "adminouyang" 
-      #     git add .
-      #     git commit *.txt -m "action: `date`"
-      #     git commit *.m3u -m "action: `date`"
-      #     git push -f
-          #git pull --rebase
