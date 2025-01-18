@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: pip install selenium requests futures eventlet
 
-      - name: Run main.py
+      - name: Run DIYP.py
         run: python ${{ github.workspace }}/DIYP/DIYP.py
      
       # - name: Run cctv.py
