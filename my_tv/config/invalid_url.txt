@@ -5,3 +5,5 @@
 
 
 https://gh-proxy.com/https://raw.githubusercontent.com/fenxp/iptv/main/live/tvlive.txt
+http://rihou.cc:567/gggg.nzk
+http://rihou.cc:555/gggg.nzk
