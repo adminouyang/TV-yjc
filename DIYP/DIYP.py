@@ -1,3 +1,29 @@
+from lxml import etree
+import time
+import datetime
+#from datetime import datetime, timedelta  # 确保 timedelta 被导入
+import concurrent.futures
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from concurrent.futures import ThreadPoolExecutor
+import requests
+import re
+import os
+import threading
+from queue import Queue
+import eventlet
+import queue
+from datetime import datetime
+import fileinput
+from tqdm import tqdm
+from pypinyin import lazy_pinyin
+from opencc import OpenCC
+import base64
+import cv2
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse
+from translate import Translator  # 导入Translator类,用于文本翻译
+# 定义txt文件的URL列表
 urls = [
        #'https://dimaston.github.io/live.m3u',  #假m3u
        # 'https://ghproxy.cc/https://raw.githubusercontent.com/gaotianliuyun/gao/master/list.txt',   #暂时保留
