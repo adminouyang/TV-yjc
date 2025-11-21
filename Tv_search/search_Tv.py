@@ -124,7 +124,7 @@ def download_m3u8(url, name, initial_url=None):
             end_time = time.time()
 
             # 将视频片段保存到本地
-            with open('video.ts', 'wb') as f:
+            with open('Tv_search/video.ts', 'wb') as f:
                 f.write(response.content)
 
             # 计算下载速度
@@ -291,7 +291,7 @@ if __name__ == '__main__':
         tv_dict.clear()
 
     time.sleep(10)
-    os.remove('video.ts')
+    os.remove('Tv_search/video.ts')
     # 直播源去重
     # re_dup(output_file_path)
     re_dup_ordered(output_file_path)
