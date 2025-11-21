@@ -251,7 +251,7 @@ if __name__ == '__main__':
     current_directory = os.getcwd()
     # 构造上级目录的路径
     parent_dir = os.path.dirname(current_directory)
-    output_file_path = os.path.join(parent_dir, 'live.txt')
+    output_file_path = os.path.join(parent_dir, 'Tv_search/live.txt')
     # 清空live.txt内容
     with open(output_file_path, 'w', encoding='utf-8') as f:
         pass
