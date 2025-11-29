@@ -17,11 +17,11 @@ def read_config(config_file):
                     # 从文件名提取运营商信息来确定option
                     filename = os.path.basename(config_file)
                     if "电信" in filename:
-                        option = 0  # 电信使用option=0（扫描D段）
+                        option = 1  # 电信使用option=1（扫描D段）
                     elif "联通" in filename or "移动" in filename:
-                        option = 1  # 联通/移动使用option=1（扫描C段和D段）
+                        option = 0  # 联通/移动使用option=0（扫描C段和D段）
                     else:
-                        option = 0  # 默认使用option=0
+                        option = 1  # 默认使用option=0
                     
                     # 解析IP和端口
                     if ":" in line:
@@ -30,7 +30,7 @@ def read_config(config_file):
                         url_end = "/status" if option >= 10 else "/stat"
                         
                         # 根据option选择IP生成方式
-                        if option % 10 == 0:  # 扫描D段
+                        if option % 10 == 1:  # 扫描D段
                             ip = f"{a}.{b}.{c}.1"
                         else:  # 扫描C段和D段
                             ip = f"{a}.{b}.1.1"
