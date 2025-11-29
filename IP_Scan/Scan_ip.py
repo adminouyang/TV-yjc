@@ -74,7 +74,7 @@ def generate_ip_ports(ip, port, option):
 def check_ip_port(ip_port, url_end):    
     try:
         url = f"http://{ip_port}{url_end}"
-        resp = requests.get(url, timeout=3)  # 增加超时时间
+        resp = requests.get(url, timeout=6)  # 增加超时时间
         resp.raise_for_status()
         if "Multi stream daemon" in resp.text or "udpxy status" in resp.text:
             print(f"✓ 找到有效IP: {url}")
