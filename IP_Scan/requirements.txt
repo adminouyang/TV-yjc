@@ -3,4 +3,3 @@ requests
 selenium 
 futures 
 eventlet
-os
