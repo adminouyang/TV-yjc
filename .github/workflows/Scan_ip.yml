@@ -26,7 +26,7 @@ jobs:
 
       - name: 获取组播源
         run: |
-          #cd $GITHUB_WORKSPACE
+          cd $GITHUB_WORKSPACE
           python IP_Scan/Scan_ip.py
 
       - name: 更新组播源
