@@ -3,5 +3,4 @@ requests
 selenium 
 futures 
 eventlet
-glob
 os
