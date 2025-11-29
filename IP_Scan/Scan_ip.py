@@ -80,16 +80,16 @@ def check_ip_port(ip_port, url_end):
             print(f"✓ 找到有效IP: {url}")
             return ip_port
         else:
-            print(f"× 响应不匹配: {url}")
+            #print(f"× 响应不匹配: {url}")
             return None
     except requests.exceptions.Timeout:
-        print(f"× 超时: {url}")
+        #print(f"× 超时: {url}")
         return None
     except requests.exceptions.ConnectionError:
-        print(f"× 连接失败: {url}")
+        #print(f"× 连接失败: {url}")
         return None
     except Exception as e:
-        print(f"× 错误: {url} - {str(e)}")
+        #print(f"× 错误: {url} - {str(e)}")
         return None
 
 def scan_ip_port(ip, port, option, url_end):
