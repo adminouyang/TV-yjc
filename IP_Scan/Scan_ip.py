@@ -21,9 +21,21 @@ USER_AGENTS = [
 
 # 城市特定的测试流地址
 CITY_STREAMS = {
-    "安徽电信": ["rtp/238.1.79.27:4328"],
-    "江苏电信": ["udp/239.49.8.19:9614"],
-
+    "安徽电信": ["rtp/238.1.79.27:4328", "rtp/238.1.79.28:4328", "rtp/238.1.79.29:4328"],
+    "江苏电信": ["udp/239.49.8.19:9614", "udp/239.49.8.20:9614", "udp/239.49.8.21:9614"],
+    "上海电信": ["rtp/225.1.4.191:1025", "rtp/225.1.4.192:1025", "rtp/225.1.4.193:1025"],
+    "浙江电信": ["udp/233.50.201.18:5140", "udp/233.50.201.19:5140", "udp/233.50.201.20:5140"],
+    "广东电信": ["rtp/239.253.43.20:8006", "rtp/239.253.43.21:8006", "rtp/239.253.43.22:8006"],
+    "北京联通": ["udp/239.3.1.153:8002", "udp/239.3.1.154:8002", "udp/239.3.1.155:8002"],
+    "山东联通": ["rtp/239.21.1.100:5002", "rtp/239.21.1.101:5002", "rtp/239.21.1.102:5002"],
+    "河南移动": ["udp/239.11.0.99:10000", "udp/239.11.0.100:10000", "udp/239.11.0.101:10000"],
+    "湖南电信": ["rtp/238.1.2.3:1234", "rtp/238.1.2.4:1234", "rtp/238.1.2.5:1234"],
+    "四川电信": ["udp/239.93.1.100:6000", "udp/239.93.1.101:6000", "udp/239.93.1.102:6000"],
+    "福建电信": ["rtp/238.1.1.100:8000", "rtp/238.1.1.101:8000", "rtp/238.1.1.102:8000"],
+    "湖北电信": ["udp/239.69.1.1:7000", "udp/239.69.1.2:7000", "udp/239.69.1.3:7000"],
+    "辽宁联通": ["rtp/239.21.1.50:6000", "rtp/239.21.1.51:6000", "rtp/239.21.1.52:6000"],
+    "重庆电信": ["udp/239.11.1.1:9000", "udp/239.11.1.2:9000", "udp/239.11.1.3:9000"],
+    "天津联通": ["rtp/239.3.1.100:5000", "rtp/239.3.1.101:5000", "rtp/239.3.1.102:5000"],
 }
 
 # 通用测试流（当城市特定流不可用时使用）
@@ -98,63 +110,21 @@ def read_config(config_file):
                         if len(ip_parts) == 4:
                             a, b, c, d = ip_parts
                             
+                            # 保存原始IP和端口
+                            original_ip = f"{a}.{b}.{c}.{d}"
+                            
                             # 根据option确定扫描范围
                             if option % 10 == 0:  # 扫描D段
                                 ip = f"{a}.{b}.{c}.1"
                             else:  # 扫描C段和D段
                                 ip = f"{a}.{b}.1.1"
                             
-                            ip_configs.append((ip, port, option))
-                            print(f"生成扫描目标: {ip}:{port} (option={option})")
+                            ip_configs.append((original_ip, port, ip, port, option))
+                            print(f"生成扫描目标: 原始IP={original_ip}:{port}, 扫描IP={ip}:{port} (option={option})")
         return ip_configs
     except Exception as e:
         print(f"读取文件错误: {e}")
         return []
-
-def generate_ip_ports(ip, port, option):
-    """根据option值生成要扫描的IP地址列表"""
-    parts = ip.split('.')
-    if len(parts) != 4:
-        print(f"无效的IP格式: {ip}")
-        return []
-        
-    a, b, c, d = parts
-    opt = option % 10  # 只取个位数
-    
-    print(f"生成IP范围: 基础IP={ip}, 端口={port}, option={opt}")
-    
-    # 限制扫描范围，避免过大
-    if opt == 0:  # 扫描D段：x.x.x.1-254
-        # 只扫描部分IP，提高效率
-        ip_list = [f"{a}.{b}.{c}.{y}" for y in range(1, 255, 5)]  # 每5个IP扫描一个
-        print(f"扫描D段: 共{len(ip_list)}个IP")
-    elif opt == 1:  # 扫描C段和D段
-        c_val = int(c)
-        if c_val < 254:
-            ip_list = ([f"{a}.{b}.{c}.{y}" for y in range(1, 255, 5)] + 
-                      [f"{a}.{b}.{c_val+1}.{y}" for y in range(1, 255, 5)])
-            print(f"扫描C段和D段: 共{len(ip_list)}个IP")
-        else:
-            ip_list = [f"{a}.{b}.{c}.{y}" for y in range(1, 255, 5)]
-            print(f"扫描D段(边界情况): 共{len(ip_list)}个IP")
-    elif opt == 2:  # 扫描指定范围的C段
-        c_extent = c.split('-')
-        if len(c_extent) == 2:
-            c_first = int(c_extent[0])
-            c_last = int(c_extent[1]) + 1
-            ip_list = [f"{a}.{b}.{x}.{y}" for x in range(c_first, c_last, 2) for y in range(1, 255, 5)]
-            print(f"扫描C段范围 {c_first}-{c_last-1}: 共{len(ip_list)}个IP")
-        else:
-            ip_list = [f"{a}.{b}.{c}.{y}" for y in range(1, 255, 5)]
-            print(f"扫描D段: 共{len(ip_list)}个IP")
-    else:  # 默认扫描整个B段
-        # 大幅减少扫描范围
-        ip_list = [f"{a}.{b}.{x}.{y}" for x in range(1, 254, 10) for y in range(1, 255, 10)]
-        print(f"扫描整个B段: 共{len(ip_list)}个IP")
-    
-    # 添加端口
-    ip_ports = [f"{ip}:{port}" for ip in ip_list]
-    return ip_ports
 
 def test_stream_speed(stream_url, timeout=15):
     """测试流媒体速度，返回速度(KB/s)和是否成功"""
@@ -171,8 +141,8 @@ def test_stream_speed(stream_url, timeout=15):
         
         # 读取更多数据用于测速（500KB）
         downloaded = 0
-        chunk_size = 100 * 1024  # 64KB chunks
-        max_download = 1000 * 1024  # 500KB
+        chunk_size = 60 * 1024  # 64KB chunks
+        max_download = 500 * 1024  # 500KB
         
         for chunk in response.iter_content(chunk_size=chunk_size):
             downloaded += len(chunk)
@@ -237,6 +207,51 @@ def check_single_url(ip_port, province, timeout=15):
         print(f"× 检查过程出错: {ip_port} - {str(e)}")
         return None, 0, ""
 
+def generate_ip_ports(ip, port, option):
+    """根据option值生成要扫描的IP地址列表"""
+    parts = ip.split('.')
+    if len(parts) != 4:
+        print(f"无效的IP格式: {ip}")
+        return []
+        
+    a, b, c, d = parts
+    opt = option % 10  # 只取个位数
+    
+    print(f"生成IP范围: 基础IP={ip}, 端口={port}, option={opt}")
+    
+    # 根据option值生成不同的IP范围
+    if opt == 0:  # 扫描D段：x.x.x.1-254
+        # 只扫描部分IP，提高效率
+        ip_list = [f"{a}.{b}.{c}.{y}" for y in range(1, 255, 3)]  # 每3个IP扫描一个
+        print(f"扫描D段: 共{len(ip_list)}个IP")
+    elif opt == 1:  # 扫描C段和D段
+        c_val = int(c)
+        if c_val < 254:
+            ip_list = ([f"{a}.{b}.{c}.{y}" for y in range(1, 255, 3)] + 
+                      [f"{a}.{b}.{c_val+1}.{y}" for y in range(1, 255, 3)])
+            print(f"扫描C段和D段: 共{len(ip_list)}个IP")
+        else:
+            ip_list = [f"{a}.{b}.{c}.{y}" for y in range(1, 255, 3)]
+            print(f"扫描D段(边界情况): 共{len(ip_list)}个IP")
+    elif opt == 2:  # 扫描指定范围的C段
+        c_extent = c.split('-')
+        if len(c_extent) == 2:
+            c_first = int(c_extent[0])
+            c_last = int(c_extent[1]) + 1
+            ip_list = [f"{a}.{b}.{x}.{y}" for x in range(c_first, c_last, 2) for y in range(1, 255, 5)]
+            print(f"扫描C段范围 {c_first}-{c_last-1}: 共{len(ip_list)}个IP")
+        else:
+            ip_list = [f"{a}.{b}.{c}.{y}" for y in range(1, 255, 3)]
+            print(f"扫描D段: 共{len(ip_list)}个IP")
+    else:  # 默认扫描整个B段
+        # 大幅减少扫描范围
+        ip_list = [f"{a}.{b}.{x}.{y}" for x in range(1, 254, 10) for y in range(1, 255, 10)]
+        print(f"扫描整个B段: 共{len(ip_list)}个IP")
+    
+    # 添加端口
+    ip_ports = [f"{ip}:{port}" for ip in ip_list]
+    return ip_ports
+
 def scan_ip_port(ip, port, option, province):
     def show_progress():
         start_time = time.time()
@@ -260,7 +275,7 @@ def scan_ip_port(ip, port, option, province):
     # 显示进度
     Thread(target=show_progress, daemon=True).start()
     
-    # 进一步降低并发数，提高稳定性
+    # 降低并发数，提高稳定性
     max_workers = 5
     print(f"开始扫描 {province}，使用 {max_workers} 个线程")
     
@@ -292,14 +307,27 @@ def multicast_province(config_file):
     print(f"读取完成，共需扫描 {len(configs)}组配置")
     all_results = []  # 存储所有有效结果
     
-    for ip, port, option in configs:
-        print(f"\n开始扫描: {ip}:{port} (option={option})")
-        results = scan_ip_port(ip, port, option, province)
-        all_results.extend(results)
-        print(f"本组扫描完成，找到 {len(results)} 个有效IP")
+    for original_ip, original_port, scan_ip, scan_port, option in configs:
+        print(f"\n处理配置: 原始IP={original_ip}:{original_port}, 扫描IP={scan_ip}:{scan_port} (option={option})")
         
-        # 每组扫描后休息一下
-        time.sleep(5)
+        # 首先测试原始IP
+        original_ip_port = f"{original_ip}:{original_port}"
+        print(f"首先测试原始IP: {original_ip_port}")
+        original_result = check_single_url(original_ip_port, province)
+        
+        if original_result[0] is not None:
+            # 原始IP有效，直接使用
+            print(f"✓ 原始IP有效，跳过扫描: {original_ip_port}")
+            all_results.append(original_result)
+        else:
+            # 原始IP无效，进行扫描
+            print(f"× 原始IP无效，开始扫描: {scan_ip}:{scan_port}")
+            results = scan_ip_port(scan_ip, scan_port, option, province)
+            all_results.extend(results)
+            print(f"本组扫描完成，找到 {len(results)} 个有效IP")
+        
+        # 每组处理后休息一下
+        time.sleep(3)
     
     if all_results:
         # 按速度排序
@@ -414,7 +442,7 @@ def main():
     for config_file in config_files:
         multicast_province(config_file)
         # 每组扫描后休息更长时间
-        time.sleep(10)
+        time.sleep(5)
     
     # 合并结果
     file_contents = []
