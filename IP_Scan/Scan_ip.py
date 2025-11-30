@@ -217,10 +217,10 @@ def check_single_url(ip_port, province, timeout=15):
                         best_speed = speed
                         best_stream = stream_path
                 else:
-                    print(f"× 流媒体不可用: {stream_url}")
+                    #print(f"× 流媒体不可用: {stream_url}")
                     
             except Exception as e:
-                print(f"× 流媒体错误: {stream_url} - {str(e)}")
+                #print(f"× 流媒体错误: {stream_url} - {str(e)}")
         
         # 只有速度大于100KB/s才认为是有效的
         if best_speed > 100:
@@ -230,11 +230,11 @@ def check_single_url(ip_port, province, timeout=15):
             if best_speed > 0:
                 print(f"× 速度不足: {ip_port} - 最佳速度: {best_speed:.2f} KB/s")
             else:
-                print(f"× 无响应: {ip_port}")
+                #print(f"× 无响应: {ip_port}")
             return None, 0, ""
         
     except Exception as e:
-        print(f"× 检查过程出错: {ip_port} - {str(e)}")
+        #print(f"× 检查过程出错: {ip_port} - {str(e)}")
         return None, 0, ""
 
 def scan_ip_port(ip, port, option, province):
