@@ -19,17 +19,56 @@ USER_AGENTS = [
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 ]
 
+# 城市特定的测试流地址
+CITY_STREAMS = {
+    "安徽电信": "rtp/238.1.79.27:4328",
+    "江苏电信": "udp/239.49.8.19:9614",
+
+}
+
+# 通用测试流（当城市特定流不可用时使用）
+COMMON_TEST_STREAMS = [
+    "rtp/225.1.1.1:1234",
+    "udp/239.1.1.1:1234",
+    "rtp/238.1.1.1:1234",
+]
+
 def get_random_headers():
     return {
         'User-Agent': random.choice(USER_AGENTS),
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Accept': '*/*',
         'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
         'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1',
-        'Cache-Control': 'max-age=0'
+        'Range': 'bytes=0-',  # 请求整个流用于测速
     }
 
+def get_test_stream_for_city(city_name):
+    """根据城市名称获取测试流地址"""
+    # 精确匹配
+    if city_name in CITY_STREAMS:
+        return [CITY_STREAMS[city_name]]
+    
+    # 模糊匹配（包含关系）
+    for key, stream in CITY_STREAMS.items():
+        if key in city_name or city_name in key:
+            return [stream]
+    
+    # 运营商匹配
+    if "电信" in city_name:
+        streams = [stream for key, stream in CITY_STREAMS.items() if "电信" in key]
+        return streams[:3] if streams else COMMON_TEST_STREAMS[:2]
+    elif "联通" in city_name:
+        streams = [stream for key, stream in CITY_STREAMS.items() if "联通" in key]
+        return streams[:3] if streams else COMMON_TEST_STREAMS[:2]
+    elif "移动" in city_name:
+        streams = [stream for key, stream in CITY_STREAMS.items() if "移动" in key]
+        return streams[:3] if streams else COMMON_TEST_STREAMS[:2]
+    
+    # 返回通用测试流
+    return COMMON_TEST_STREAMS[:2]
+
 def read_config(config_file):
+    """读取配置文件，解析IP:端口和可选的option值"""
     print(f"读取设置文件：{config_file}")
     ip_configs = []
     try:
@@ -38,26 +77,30 @@ def read_config(config_file):
                 line = line.strip()
                 if line and not line.startswith("#"):
                     print(f"解析第{line_num}行: {line}")
-                    if ":" in line:
-                        ip_part, port = line.split(':', 1)
-                        parts = ip_part.split('.')
-                        if len(parts) == 4:
-                            a, b, c, d = parts
+                    
+                    # 解析IP:端口和可选的option值
+                    if "," in line:
+                        # 格式: IP:端口,option
+                        parts = line.split(',', 1)
+                        ip_port_part = parts[0].strip()
+                        option = int(parts[1].strip()) if parts[1].strip().isdigit() else 0
+                    else:
+                        # 格式: IP:端口 (默认option=0)
+                        ip_port_part = line
+                        option = 0
+                    
+                    if ":" in ip_port_part:
+                        ip_part, port = ip_port_part.split(':', 1)
+                        ip_parts = ip_part.split('.')
+                        if len(ip_parts) == 4:
+                            a, b, c, d = ip_parts
                             
-                            # 从文件名提取运营商信息来确定option
-                            filename = os.path.basename(config_file)
-                            if "电信" in filename:
-                                option = 0
-                            elif "联通" in filename or "移动" in filename:
-                                option = 1
-                            else:
-                                option = 0
-                            
+                            # 根据option确定扫描范围
                             if option % 10 == 0:  # 扫描D段
                                 ip = f"{a}.{b}.{c}.1"
                             else:  # 扫描C段和D段
                                 ip = f"{a}.{b}.1.1"
-                                
+                            
                             ip_configs.append((ip, port, option))
                             print(f"生成扫描目标: {ip}:{port} (option={option})")
         return ip_configs
@@ -66,17 +109,18 @@ def read_config(config_file):
         return []
 
 def generate_ip_ports(ip, port, option):
+    """根据option值生成要扫描的IP地址列表"""
     parts = ip.split('.')
     if len(parts) != 4:
         print(f"无效的IP格式: {ip}")
         return []
         
     a, b, c, d = parts
-    opt = option % 10
+    opt = option % 10  # 只取个位数
     
     print(f"生成IP范围: 基础IP={ip}, 端口={port}, option={opt}")
     
-    # 限制扫描范围，避免过大
+    # 根据option值生成不同的IP范围
     if opt == 0:  # 扫描D段：x.x.x.1-254
         ip_list = [f"{a}.{b}.{c}.{y}" for y in range(1, 255)]
         print(f"扫描D段: 共{len(ip_list)}个IP")
@@ -89,8 +133,17 @@ def generate_ip_ports(ip, port, option):
         else:
             ip_list = [f"{a}.{b}.{c}.{y}" for y in range(1, 255)]
             print(f"扫描D段(边界情况): 共{len(ip_list)}个IP")
-    else:
-        # 限制B段扫描范围，避免过大
+    elif opt == 2:  # 扫描指定范围的C段
+        c_extent = c.split('-')
+        if len(c_extent) == 2:
+            c_first = int(c_extent[0])
+            c_last = int(c_extent[1]) + 1
+            ip_list = [f"{a}.{b}.{x}.{y}" for x in range(c_first, c_last) for y in range(1, 255)]
+            print(f"扫描C段范围 {c_first}-{c_last-1}: 共{len(ip_list)}个IP")
+        else:
+            ip_list = [f"{a}.{b}.{c}.{y}" for y in range(1, 255)]
+            print(f"扫描D段: 共{len(ip_list)}个IP")
+    else:  # 默认扫描整个B段
         ip_list = [f"{a}.{b}.{x}.{y}" for x in range(1, 254) for y in range(1, 255)]
         print(f"扫描整个B段: 共{len(ip_list)}个IP")
     
@@ -98,64 +151,96 @@ def generate_ip_ports(ip, port, option):
     ip_ports = [f"{ip}:{port}" for ip in ip_list]
     return ip_ports
 
-def check_single_url(url, timeout=8):
-    """检查单个URL"""
+def test_stream_speed(stream_url, timeout=10):
+    """测试流媒体速度，返回速度(KB/s)和是否成功"""
     try:
         headers = get_random_headers()
+        start_time = time.time()
         
+        # 设置流式请求，只下载前100KB用于测速
+        response = requests.get(stream_url, headers=headers, timeout=timeout, 
+                              verify=False, allow_redirects=True, stream=True)
+        
+        if response.status_code not in [200, 206]:
+            return 0, False
+        
+        # 读取前100KB数据用于测速
+        downloaded = 0
+        chunk_size = 8192  # 8KB chunks
+        max_download = 100 * 1024  # 100KB
+        
+        for chunk in response.iter_content(chunk_size=chunk_size):
+            downloaded += len(chunk)
+            if downloaded >= max_download:
+                break
+        
+        end_time = time.time()
+        duration = end_time - start_time
+        
+        if duration > 0:
+            speed_kbs = downloaded / duration / 1024  # 转换为KB/s
+            return speed_kbs, True
+        else:
+            return 0, False
+            
+    except Exception as e:
+        return 0, False
+
+def check_single_url(ip_port, province, timeout=10):
+    """检查单个URL，直接测试组播流速度"""
+    try:
         # 添加随机延迟，避免请求过于频繁
         time.sleep(random.uniform(0.1, 0.5))
         
-        # 尝试多种路径
-        paths_to_try = [
-            "/status",
-            "/stat",
-            "/udpxy",
-            "/"
-        ]
+        print(f"测试: {ip_port} - {province}")
         
-        for path in paths_to_try:
-            test_url = f"http://{url}{path}"
+        # 获取该城市对应的测试流
+        test_streams = get_test_stream_for_city(province)
+        print(f"使用测试流: {test_streams}")
+        
+        best_speed = 0
+        best_stream = ""
+        
+        for stream_path in test_streams:
+            stream_url = f"http://{ip_port}/{stream_path}"
             try:
-                print(f"测试: {test_url}")
-                resp = requests.get(test_url, headers=headers, timeout=timeout, 
-                                  verify=False, allow_redirects=True)
+                speed, success = test_stream_speed(stream_url, timeout)
                 
-                if resp.status_code == 200:
-                    content = resp.text.lower()
-                    # 检查常见的关键词
-                    if any(keyword in content for keyword in ['udpxy', 'multi stream', 'status']):
-                        print(f"✓ 找到有效服务: {test_url}")
-                        return url
-                    else:
-                        print(f"× 响应内容不匹配: {test_url}")
+                if success:
+                    print(f"✓ 流媒体可用: {stream_url} - 速度: {speed:.2f} KB/s")
+                    if speed > best_speed:
+                        best_speed = speed
+                        best_stream = stream_path
                 else:
-                    print(f"× HTTP状态码 {resp.status_code}: {test_url}")
+                    print(f"× 流媒体不可用: {stream_url}")
                     
-            except requests.exceptions.Timeout:
-                print(f"× 超时: {test_url}")
-            except requests.exceptions.ConnectionError:
-                print(f"× 连接失败: {test_url}")
             except Exception as e:
-                print(f"× 错误: {test_url} - {str(e)}")
-                
-        return None
+                print(f"× 流媒体错误: {stream_url} - {str(e)}")
+        
+        # 只有速度大于100KB/s才认为是有效的
+        if best_speed > 100:
+            print(f"✓ 验证通过: {ip_port} - 最佳速度: {best_speed:.2f} KB/s")
+            return ip_port, best_speed, best_stream
+        else:
+            print(f"× 速度不足: {ip_port} - 最佳速度: {best_speed:.2f} KB/s")
+            return None, 0, ""
         
     except Exception as e:
-        print(f"× 检查过程出错: {url} - {str(e)}")
-        return None
+        print(f"× 检查过程出错: {ip_port} - {str(e)}")
+        return None, 0, ""
 
-def scan_ip_port(ip, port, option):
+def scan_ip_port(ip, port, option, province):
     def show_progress():
         start_time = time.time()
         while checked[0] < len(ip_ports):
             elapsed = time.time() - start_time
             rate = checked[0] / elapsed if elapsed > 0 else 0
+            valid_count = len([x for x in valid_results if x is not None])
             print(f"进度: {checked[0]}/{len(ip_ports)} ({checked[0]/len(ip_ports)*100:.1f}%), "
-                  f"有效: {len(valid_ip_ports)}, 速率: {rate:.1f}个/秒, 耗时: {elapsed:.1f}秒")
+                  f"有效: {valid_count}, 速率: {rate:.1f}个/秒, 耗时: {elapsed:.1f}秒")
             time.sleep(10)
     
-    valid_ip_ports = []
+    valid_results = []  # 存储(ip_port, speed, stream)元组
     ip_ports = generate_ip_ports(ip, port, option)
     
     if not ip_ports:
@@ -167,20 +252,22 @@ def scan_ip_port(ip, port, option):
     # 显示进度
     Thread(target=show_progress, daemon=True).start()
     
-    # 减少并发数，避免被封锁
-    max_workers = 20
-    print(f"开始扫描，使用 {max_workers} 个线程")
+    # 根据option调整并发数，减少并发以提高稳定性
+    max_workers = 10 if option % 2 == 0 else 5
+    print(f"开始扫描 {province}，使用 {max_workers} 个线程")
     
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(check_single_url, ip_port): ip_port for ip_port in ip_ports}
+        futures = {executor.submit(check_single_url, ip_port, province): ip_port for ip_port in ip_ports}
         
         for future in as_completed(futures):
             result = future.result()
-            if result:
-                valid_ip_ports.append(result)
+            if result[0] is not None:  # 只保存有效的IP
+                valid_results.append(result)
             checked[0] += 1
     
-    return valid_ip_ports
+    # 按速度排序
+    valid_results.sort(key=lambda x: x[1], reverse=True)
+    return valid_results
 
 def multicast_province(config_file):
     filename = os.path.basename(config_file)
@@ -195,37 +282,47 @@ def multicast_province(config_file):
         return
     
     print(f"读取完成，共需扫描 {len(configs)}组配置")
-    all_ip_ports = []
+    all_results = []  # 存储所有有效结果
     
     for ip, port, option in configs:
-        print(f"\n开始扫描: {ip}:{port}")
-        valid_ips = scan_ip_port(ip, port, option)
-        all_ip_ports.extend(valid_ips)
-        print(f"本组扫描完成，找到 {len(valid_ips)} 个有效IP")
+        print(f"\n开始扫描: {ip}:{port} (option={option})")
+        results = scan_ip_port(ip, port, option, province)
+        all_results.extend(results)
+        print(f"本组扫描完成，找到 {len(results)} 个有效IP")
         
         # 每组扫描后休息一下
-        time.sleep(2)
+        time.sleep(3)
     
-    if all_ip_ports:
-        all_ip_ports = sorted(set(all_ip_ports))
-        print(f"\n✓ {province} 扫描完成，共找到 {len(all_ip_ports)} 个有效IP")
+    if all_results:
+        # 按速度排序
+        all_results.sort(key=lambda x: x[1], reverse=True)
         
-        # 保存结果
+        # 去重（相同的IP只保留速度最快的）
+        unique_results = {}
+        for ip_port, speed, stream in all_results:
+            if ip_port not in unique_results or speed > unique_results[ip_port][1]:
+                unique_results[ip_port] = (ip_port, speed, stream)
+        
+        unique_results = list(unique_results.values())
+        unique_results.sort(key=lambda x: x[1], reverse=True)
+        
+        print(f"\n✓ {province} 扫描完成，共找到 {len(unique_results)} 个有效IP")
+        
+        # 保存结果（包含速度信息）
         os.makedirs('ip', exist_ok=True)
         with open(f"ip/{province}_ip.txt", 'w', encoding='utf-8') as f:
-            f.write('\n'.join(all_ip_ports))
+            for ip_port, speed, stream in unique_results:
+                f.write(f"{ip_port},{speed:.2f},{stream}\n")
         
-        # 生成组播文件
+        # 生成组播文件（只包含IP:端口）
         template_file = os.path.join('template', f"template_{province}.txt")
         if os.path.exists(template_file):
             with open(template_file, 'r', encoding='utf-8') as f:
                 tem_channels = f.read()
             output = []
-            with open(f"ip/{province}_ip.txt", 'r', encoding='utf-8') as f:
-                for line_num, line in enumerate(f, 1):
-                    ip_port = line.strip()
-                    output.append(f"{province}-组播{line_num},#genre#\n")
-                    output.append(tem_channels.replace("ipipip", f"{ip_port}"))
+            for i, (ip_port, speed, stream) in enumerate(unique_results, 1):
+                output.append(f"{province}-组播{i}({speed:.0f}KB/s),#genre#\n")
+                output.append(tem_channels.replace("ipipip", f"{ip_port}"))
             
             os.makedirs('my_tv', exist_ok=True)
             with open(f"my_tv/组播_{province}.txt", 'w', encoding='utf-8') as f:
@@ -233,6 +330,14 @@ def multicast_province(config_file):
             print(f"已生成组播文件: my_tv/组播_{province}.txt")
         else:
             print(f"缺少模板文件: {template_file}")
+            
+        # 显示速度统计
+        speeds = [speed for _, speed, _ in unique_results]
+        if speeds:
+            avg_speed = sum(speeds) / len(speeds)
+            max_speed = max(speeds)
+            min_speed = min(speeds)
+            print(f"速度统计: 平均{avg_speed:.2f}KB/s, 最高{max_speed:.2f}KB/s, 最低{min_speed:.2f}KB/s")
     else:
         print(f"\n× {province} 扫描完成，未找到有效IP")
 
@@ -275,7 +380,22 @@ def main():
     if not config_files:
         print("未找到配置文件，请在ip文件夹下创建.txt配置文件")
         # 创建示例配置文件
-        example_content = "# 示例配置文件\n# 格式: IP:端口\n192.168.1.1:4022\n10.0.0.1:8080"
+        example_content = """# 示例配置文件
+# 格式: IP:端口 (默认option=0)
+# 或者: IP:端口,option (指定option值)
+
+# 扫描D段 (option=0)
+114.107.2.156:2000
+
+# 扫描C段和D段 (option=1)  
+114.107.2.156:2000,1
+
+# 扫描指定C段范围 (option=2)
+114.107.2-10.156:2000,2
+
+# 扫描整个B段 (option=3)
+114.107.2.156:2000,3
+"""
         with open(os.path.join(ip_dir, '示例电信.txt'), 'w', encoding='utf-8') as f:
             f.write(example_content)
         print("已创建示例配置文件: ip/示例电信.txt")
