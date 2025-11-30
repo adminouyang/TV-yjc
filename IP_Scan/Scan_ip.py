@@ -438,7 +438,7 @@ def main():
     current_time = now.strftime("%Y/%m/%d %H:%M")
     
     # 写入总文件
-    with open("zubo_all.txt", "w', encoding="utf-8") as f:
+    with open("zubo_all.txt", "w", encoding="utf-8") as f:
         f.write(f"{current_time}更新,#genre#\n")
         f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
         if file_contents:
