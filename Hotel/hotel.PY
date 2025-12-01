@@ -278,7 +278,7 @@ def hotel_iptv(config_file):
     print("测速完成")
 
 def main():
-    hotel_config_files = [f"ip/酒店高清.ip", f"ip/酒店标清.ip"]
+    hotel_config_files = [f"Hotel/ip/高清.ip", f"Hotel/ip/标清.ip"]
     for config_file in hotel_config_files:
         hotel_iptv(config_file)
     classify_channels('1.txt', '央视.txt', keywords="央视频道,CCTV,风云剧场,怀旧剧场,第一剧场,兵器,女性,地理,央视文化,风云音乐,CHC")
