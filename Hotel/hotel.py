@@ -293,7 +293,7 @@ def main():
     classify_channels('1.txt', '其他.txt', keywords="其他频道,tsfile")
     # 合并写入文件
     file_contents = []
-    file_paths = ["央视.txt","卫视.txt","浙江.txt","少儿.txt","湖南.txt","广东.txt","河南.txt","广西.txt","陕西.txt","港台.txt","其他.txt"]  # 替换为实际的文件路径列表
+    file_paths = ["央视.txt","卫视.txt","少儿.txt","湖南.txt","广东.txt","河南.txt","广西.txt","陕西.txt","港台.txt","其他.txt"]  # 替换为实际的文件路径列表
     for file_path in file_paths:
         with open(file_path, 'r', encoding="utf-8") as f:
             content = f.read()
