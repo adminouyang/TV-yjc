@@ -37,36 +37,3 @@ jobs:
           git commit -m "更新直播源"
           git push
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-    
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-
-      - name: Install dependencies
-        run: pip install selenium requests futures eventlet
-
-      - name: Run DIYP.py
-        run: python ${{ github.workspace }}/DIYP/DIYP.py
-      
-      - name: 提交更改
-        run: |
-
-          git config --local user.email "2856364053@qq.com"
-          git config --local user.name "adminouyang" 
-          git add .
-          git commit *.txt -m "action: `date`"
-          git commit *.m3u -m "action: `date`"
-          git push -f
-          #git pull --rebase
-        env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         TZ: Asia/Shanghai
