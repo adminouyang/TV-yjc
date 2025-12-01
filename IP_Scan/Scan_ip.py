@@ -336,7 +336,7 @@ def multicast_province(config_file):
         os.makedirs('ip', exist_ok=True)
         with open(f"ip/{province}_ip.txt", 'w', encoding='utf-8') as f:
             for ip_port, speed, stream in unique_results:
-                f.write(f"{ip_port}\n,{speed:.2f} KB/s\n")             #f.write(f"{ip_port},{speed:.2f},{stream}\n")
+                f.write(f"{ip_port}\n {speed:.2f} KB/s\n")             #f.write(f"{ip_port},{speed:.2f},{stream}\n")
         
         # 生成组播文件（只包含IP:端口）
         template_file = os.path.join('template', f"template_{province}.txt")
