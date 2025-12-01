@@ -293,7 +293,7 @@ def main():
     classify_channels('1.txt', '其他.txt', keywords="其他频道,tsfile")
     # 合并写入文件
     file_contents = []
-    file_paths = ["央视.txt","卫视.txt","txt/浙江.txt","少儿.txt","湖南.txt","广东.txt","河南.txt","广西.txt","陕西.txt","港台.txt","其他.txt"]  # 替换为实际的文件路径列表
+    file_paths = ["央视.txt","卫视.txt","浙江.txt","少儿.txt","湖南.txt","广东.txt","河南.txt","广西.txt","陕西.txt","港台.txt","其他.txt"]  # 替换为实际的文件路径列表
     for file_path in file_paths:
         with open(file_path, 'r', encoding="utf-8") as f:
             content = f.read()
@@ -313,7 +313,7 @@ def main():
         if line not in seen_lines:
             unique_lines.append(line)
             seen_lines.add(line)
-    with open('iptv.txt', 'w', encoding="utf-8") as f:
+    with open('Hotel/iptv.txt', 'w', encoding="utf-8") as f:
         f.writelines(unique_lines)
     # 移除过程文件
     files_to_remove = ["1.txt","央视.txt","卫视.txt","少儿.txt","湖南.txt","广东.txt","河南.txt","广西.txt","陕西.txt","港台.txt","其他.txt"]
