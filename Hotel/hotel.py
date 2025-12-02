@@ -12,7 +12,9 @@ from bs4 import BeautifulSoup
 import json
 
 # 配置区
-FOFA_URL = "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICAmJiBwb3J0PSI5OTAxIg%3D%3D"
+FOFA_URLS = {
+    "链接1": "ip.txt",
+}
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 }
@@ -23,148 +25,80 @@ IP_DIR = "Hotel/ip"
 if not os.path.exists(IP_DIR):
     os.makedirs(IP_DIR)
 
-# 从FOFA链接获取IP信息
-def fetch_ips_from_fofa():
-    all_ips = []
+# 从HTML文件分析获取IP（示例函数，需要根据实际HTML结构调整）
+def parse_ip_from_html(html_file):
+    ips = []
     try:
-        response = requests.get(FOFA_URL, headers=HEADERS, timeout=30)
-        soup = BeautifulSoup(response.text, 'html.parser')
-        
-        # 根据FOFA搜索结果页面的结构解析IP和端口
-        # FOFA的结果通常在表格中显示
-        ip_list = []
-        
-        # 方法1: 查找包含IP地址的表格
-        tables = soup.find_all('table')
-        for table in tables:
-            rows = table.find_all('tr')
-            for row in rows:
-                cells = row.find_all('td')
-                for cell in cells:
-                    text = cell.get_text().strip()
-                    # 匹配IP:端口格式
-                    if re.match(r'\d+\.\d+\.\d+\.\d+:\d+', text):
-                        ip_list.append(text)
-        
-        # 方法2: 查找所有可能包含IP的文本
-        if not ip_list:
-            # 使用更宽松的正则表达式匹配
-            ip_pattern = r'\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}:\d+\b'
-            text_content = soup.get_text()
-            ip_list = re.findall(ip_pattern, text_content)
-        
-        # 去重
-        all_ips = list(set(ip_list))
-        print(f"从FOFA获取到 {len(all_ips)} 个IP")
-        return all_ips
+        with open(html_file, 'r', encoding='utf-8') as f:
+            soup = BeautifulSoup(f.read(), 'html.parser')
+            # 这里需要根据实际的HTML结构来解析IP
+            # 示例：查找包含IP地址的表格或列表
+            tables = soup.find_all('table')
+            for table in tables:
+                rows = table.find_all('tr')
+                for row in rows:
+                    cells = row.find_all('td')
+                    if len(cells) >= 2:
+                        ip_text = cells[0].get_text().strip()
+                        port_text = cells[1].get_text().strip()
+                        # 简单的IP验证
+                        if re.match(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$', ip_text) and port_text.isdigit():
+                            ips.append(f"{ip_text}:{port_text}")
     except Exception as e:
-        print(f"从FOFA获取IP错误: {e}")
-        # 如果网络获取失败，尝试从本地文件读取
-        return read_ips_from_file()
+        print(f"解析HTML文件错误: {e}")
+    return ips
 
-# 从本地文件读取IP（备用方法）
-def read_ips_from_file():
-    # 假设有一个包含IP列表的文件
-    ip_file = "ip_list.txt"
-    if os.path.exists(ip_file):
-        with open(ip_file, 'r', encoding='utf-8') as f:
-            ips = [line.strip() for line in f if line.strip()]
-        print(f"从本地文件读取到 {len(ips)} 个IP")
-        return ips
-    return []
+# 从URL获取IP信息
+def fetch_ips_from_urls():
+    all_ips = []
+    for url, filename in FOFA_URLS.items():
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=10)
+            # 这里可以根据实际的响应格式来解析IP
+            # 如果是JSON格式
+            if 'application/json' in response.headers.get('content-type', ''):
+                data = response.json()
+                # 根据实际JSON结构提取IP
+                # 示例：假设JSON中有ip和port字段
+                for item in data.get('data', []):
+                    ip = item.get('ip')
+                    port = item.get('port')
+                    if ip and port:
+                        all_ips.append(f"{ip}:{port}")
+            else:
+                # 如果是HTML，使用BeautifulSoup解析
+                soup = BeautifulSoup(response.text, 'html.parser')
+                # 解析逻辑与parse_ip_from_html类似
+                tables = soup.find_all('table')
+                for table in tables:
+                    rows = table.find_all('tr')
+                    for row in rows:
+                        cells = row.find_all('td')
+                        if len(cells) >= 2:
+                            ip_text = cells[0].get_text().strip()
+                            port_text = cells[1].get_text().strip()
+                            if re.match(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$', ip_text) and port_text.isdigit():
+                                all_ips.append(f"{ip_text}:{port_text}")
+        except Exception as e:
+            print(f"从URL {url} 获取IP错误: {e}")
+    return all_ips
 
 # 按照省份分类保存IP
 def save_ips_by_province(ips):
+    # 简单的IP到省份的映射（实际应该使用IP库）
     province_map = {}
     for ip_port in ips:
         ip = ip_port.split(':')[0]
-        # 简单的IP到省份映射（实际应该使用IP库）
-        # 这里使用IP的第一个字节进行简单分类
-        first_octet = int(ip.split('.')[0])
-        
-        # 根据中国IP地址分配进行简单分类
-        if 1 <= first_octet <= 9:
+        # 这里应该使用IP库查询省份，暂时用简单的前缀映射
+        first_octet = ip.split('.')[0]
+        if first_octet in ['1', '2']:
             province = '北京'
-        elif 10 <= first_octet <= 10:
-            province = '内网'
-        elif 11 <= first_octet <= 11:
-            province = '北京'
-        elif 12 <= first_octet <= 12:
-            province = '天津'
-        elif 14 <= first_octet <= 14:
-            province = '山西'
-        elif 27 <= first_octet <= 27:
-            province = '湖南'
-        elif 36 <= first_octet <= 36:
-            province = '福建'
-        elif 39 <= first_octet <= 39:
-            province = '吉林'
-        elif 42 <= first_octet <= 42:
-            province = '辽宁'
-        elif 49 <= first_octet <= 49:
-            province = '江苏'
-        elif 58 <= first_octet <= 58:
+        elif first_octet in ['3', '4']:
             province = '上海'
-        elif 60 <= first_octet <= 60:
-            province = '内蒙古'
-        elif 61 <= first_octet <= 61:
-            province = '黑龙江'
-        elif 101 <= first_octet <= 101:
+        elif first_octet in ['5', '6']:
             province = '广东'
-        elif 103 <= first_octet <= 103:
-            province = '云南'
-        elif 106 <= first_octet <= 106:
-            province = '四川'
-        elif 110 <= first_octet <= 110:
-            province = '重庆'
-        elif 111 <= first_octet <= 111:
-            province = '北京'
-        elif 112 <= first_octet <= 112:
-            province = '江苏'
-        elif 113 <= first_octet <= 113:
+        elif first_octet in ['7', '8']:
             province = '浙江'
-        elif 114 <= first_octet <= 114:
-            province = '安徽'
-        elif 115 <= first_octet <= 115:
-            province = '福建'
-        elif 116 <= first_octet <= 116:
-            province = '江西'
-        elif 117 <= first_octet <= 117:
-            province = '山东'
-        elif 118 <= first_octet <= 118:
-            province = '河南'
-        elif 119 <= first_octet <= 119:
-            province = '湖北'
-        elif 120 <= first_octet <= 120:
-            province = '湖南'
-        elif 121 <= first_octet <= 121:
-            province = '广东'
-        elif 122 <= first_octet <= 122:
-            province = '广西'
-        elif 123 <= first_octet <= 123:
-            province = '海南'
-        elif 124 <= first_octet <= 124:
-            province = '四川'
-        elif 125 <= first_octet <= 125:
-            province = '贵州'
-        elif 126 <= first_octet <= 126:
-            province = '云南'
-        elif 171 <= first_octet <= 171:
-            province = '陕西'
-        elif 175 <= first_octet <= 175:
-            province = '广东'
-        elif 180 <= first_octet <= 180:
-            province = '安徽'
-        elif 182 <= first_octet <= 182:
-            province = '四川'
-        elif 183 <= first_octet <= 183:
-            province = '江苏'
-        elif 202 <= first_octet <= 202:
-            province = '教育网'
-        elif 203 <= first_octet <= 203:
-            province = '香港'
-        elif 210 <= first_octet <= 210:
-            province = '台湾'
         else:
             province = '其他'
         
@@ -180,268 +114,385 @@ def save_ips_by_province(ips):
                 f.write(f"{ip_port}\n")
         print(f"保存 {len(ip_list)} 个IP到 {filename}")
 
-# 读取省份IP文件
-def read_province_ips(province_file):
-    ips = []
+# 读取文件并设置参数
+def read_config(config_file):
+    ip_configs = []
     try:
-        with open(province_file, 'r', encoding='utf-8') as f:
+        with open(config_file, 'r', encoding='utf-8') as f:
             for line in f:
                 line = line.strip()
-                if line and ':' in line:
-                    ips.append(line)
-        return ips
+                if line and not line.startswith("#"):
+                    if ':' in line:
+                        ip_part, port = line.split(':', 1)
+                        a, b, c, d = ip_part.split('.')
+                        ip = f"{a}.{b}.{c}.1"
+                        ip_configs.append((ip, port))
+        return ip_configs
     except Exception as e:
-        print(f"读取省份IP文件错误: {e}")
+        print(f"读取文件错误: {e}")
         return []
 
-# 扫描单个IP
-def scan_single_ip(ip_port, url_ends):
-    valid_urls = []
-    for url_end in url_ends:
-        try:
-            url = f"http://{ip_port}{url_end}"
-            resp = requests.get(url, timeout=5)
-            if resp.status_code == 200 and ("tsfile" in resp.text or "hls" in resp.text):
-                print(f"找到有效URL: {url}")
-                valid_urls.append(url)
-                break  # 找到一个有效URL就停止
-        except:
-            continue
-    return valid_urls
-
-# 从URL提取频道信息
-def extract_channels(url):
-    hotel_channels = []
+# 发送get请求检测url是否可访问
+def check_ip_port(ip_port, url_end):
     try:
-        # 尝试解析JSON格式
-        response = requests.get(url, timeout=5)
-        
-        # 尝试解析为JSON
-        try:
-            json_data = response.json()
-            if isinstance(json_data, dict) and 'data' in json_data:
-                for item in json_data['data']:
-                    if isinstance(item, dict):
-                        name = item.get('name', '')
-                        urlx = item.get('url', '')
-                        if name and urlx:
-                            # 构建完整的URL
-                            if urlx.startswith('/'):
-                                base_url = '/'.join(url.split('/')[:3])
-                                full_url = base_url + urlx
-                            else:
-                                full_url = urlx
-                            hotel_channels.append((name, full_url))
-        except:
-            # 如果不是JSON，尝试解析为文本格式
-            text_lines = response.text.split('\n')
-            for line in text_lines:
-                if ',' in line and ('tsfile' in line or 'hls' in line):
-                    parts = line.split(',')
-                    if len(parts) >= 2:
-                        name = parts[0].strip()
-                        channel_url = parts[1].strip()
-                        if name and channel_url:
-                            hotel_channels.append((name, channel_url))
-        
-        return hotel_channels
-    except Exception as e:
-        print(f"提取频道错误 {url}: {e}")
-        return []
+        url = f"http://{ip_port}{url_end}"
+        resp = requests.get(url, timeout=2)
+        resp.raise_for_status()
+        if "tsfile" in resp.text or "hls" in resp.text:
+            print(f"{url} 访问成功")
+            return url
+    except:
+        return None
 
-# 测速函数
-def speed_test(channels):
-    if not channels:
-        return []
-    
-    results = []
-    checked = 0
-    
-    def test_channel(channel):
-        nonlocal checked
-        name, url = channel
-        try:
-            # 简单的连通性测试
-            start_time = time.time()
-            response = requests.get(url, timeout=5, stream=True)
-            response.close()  # 立即关闭连接
-            speed = 1.0 / (time.time() - start_time)  # 简单的速度指标
-            
-            checked += 1
-            if checked % 10 == 0:
-                print(f"已测试 {checked}/{len(channels)} 个频道")
-            
-            return name, url, f"{speed:.3f}"
-        except:
-            checked += 1
-            return None
-    
-    # 使用线程池进行测速
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        futures = [executor.submit(test_channel, channel) for channel in channels]
+# 多线程检测url，获取有效ip_port
+def scan_ip_port(ip, port, url_end):
+    valid_urls = []
+    a, b, c, d = map(int, ip.split('.'))
+    ip_ports = [f"{a}.{b}.{c}.{x}:{port}" for x in range(1, 256)]
+    with ThreadPoolExecutor(max_workers=100) as executor:
+        futures = {executor.submit(check_ip_port, ip_port, url_end): ip_port for ip_port in ip_ports}
         for future in as_completed(futures):
             result = future.result()
             if result:
-                results.append(result)
+                valid_urls.append(result)
+    return valid_urls    
+
+# 发送GET请求获取JSON文件, 解析JSON文件, 获取频道信息
+def extract_channels(url):
+    hotel_channels = []
+    try:
+        json_url = f"{url}"
+        urls = url.split('/', 3)
+        url_x = f"{urls[0]}//{urls[2]}"
+        if "iptv" in json_url:
+            response = requests.get(json_url, timeout=2)
+            json_data = response.json()
+            for item in json_data['data']:
+                if isinstance(item, dict):
+                    name = item.get('name')
+                    urlx = item.get('url')
+                    if "tsfile" in urlx:
+                        urld = f"{url_x}{urlx}"
+                        hotel_channels.append((name, urld))
+        elif "ZHGXTV" in json_url:
+            response = requests.get(json_url, timeout=2)
+            json_data = response.content.decode('utf-8')
+            data_lines = json_data.split('\n')
+            for line in data_lines:
+                if "," in line and "hls" in line:
+                    name, channel_url = line.strip().split(',')
+                    parts = channel_url.split('/', 3)
+                    if len(parts) >= 4:
+                        urld = f"{url_x}/{parts[3]}"
+                        hotel_channels.append((name, urld))
+        return hotel_channels
+    except Exception:
+        return []
+
+# 测速
+def speed_test(channels):
+    def show_progress
+        while checked[0] < len(channels):
+            numberx = checked[0] / len(channels) * 100
+            print(f"已测试{checked[0]}/{len(channels)}，可用频道:{len(results)}个，进度:{numberx:.2f}%")
+            time.sleep(5)
     
+    # 定义工作线程函数
+    def worker():
+        while True:
+            try:
+                channel_name, channel_url = task_queue.get()  # 从队列中获取一个任务
+                try:
+                    channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])  # m3u8链接前缀
+                    lines = requests.get(channel_url, timeout=2).text.strip().split('\n')  # 获取m3u8文件内容
+                    ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]  # 获取m3u8文件下视频流后缀
+                    if ts_lists:
+                        ts_url = channel_url_t + ts_lists[0]  # 拼接单个视频片段下载链接
+                        ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])  # m3u8链接前缀
+                        with eventlet.Timeout(5, False):    # 获取视频数据进行5秒钟限制
+                            start_time = time.time()
+                            cont = requests.get(ts_url, timeout=2).content
+                            resp_time = (time.time() - start_time) * 1                    
+                        if cont:
+                            checked[0] += 1
+                            # 创建临时文件进行测速
+                            temp_filename = f"temp_{hash(channel_url)}.ts"
+                            with open(temp_filename, 'wb') as f:
+                                f.write(cont)  # 写入文件
+                            normalized_speed = max(len(cont) / resp_time / 1024 / 1024, 0.001)
+                            os.remove(temp_filename)
+                            result = channel_name, channel_url, f"{normalized_speed:.3f}"
+                            results.append(result)
+                except Exception as e:
+                    checked[0] += 1
+            except:
+                checked[0] += 1
+            finally:
+                task_queue.task_done()
+    
+    task_queue = Queue()
+    results = []
+    checked = [0]
+    
+    # 创建进度显示线程
+    Thread(target=show_progress, daemon=True).start()
+    
+    # 创建工作线程
+    for _ in range(min(20, len(channels))):    # 创建多个工作线程，最多20个
+        Thread(target=worker, daemon=True).start()
+    
+    # 添加任务到队列
+    for channel in channels:
+        task_queue.put(channel)
+    
+    # 等待所有任务完成
+    task_queue.join()
     return results
 
-# 规范化频道名称
-def normalize_channel_name(name):
-    # 移除多余的空格和特殊字符
-    name = re.sub(r'\s+', ' ', name).strip()
-    
-    # 统一CCTV频道命名
-    name = re.sub(r'CCTV[\-\s]?(\d+)', r'CCTV-\1', name)
-    name = re.sub(r'中央(\d+)台', r'CCTV-\1', name)
-    
-    # 统一卫视命名
-    name = re.sub(r'([\u4e00-\u9fa5]+)卫视', r'\1卫视', name)
-    
-    return name
+# 替换关键词以规范频道名
+def unify_channel_name(channels_list):
+    new_channels_list = []
+    for name, channel_url, speed in channels_list:
+        name = name.replace("cctv", "CCTV")
+        name = name.replace("中央", "CCTV")
+        name = name.replace("超清", "")
+        name = name.replace("超高清", "")
+        name = name.replace("高清", "")
+        name = name.replace("HD", "")
+        name = name.replace("标清", "")
+        name = name.replace("频道", "")
+        name = name.replace("记录", "纪录")
+        name = name.replace("-", "")
+        name = name.replace(" ", "")
+        name = name.replace("PLUS", "+")
+        name = name.replace("＋", "+")
+        name = name.replace("(", "")
+        name = name.replace(")", "")
+        name = name.replace("K1", "")
+        name = name.replace("K2", "")
+        name = name.replace("W", "")
+        name = name.replace("w", "")
+        name = re.sub(r"CCTV(\d+)台", r"CCTV\1", name)
+        name = name.replace("CCTV2", "CCTV-2")
+        name = name.replace("CCTV3", "CCTV-3")
+        name = name.replace("CCTV4国际", "CCTV-4中文国际")
+        name = name.replace("CCTV4广电", "CCTV-4中文国际")
+        name = name.replace("CCTV4", "CCTV-4")
+        name = name.replace("CCTV5", "CCTV-5")
+        name = name.replace("CCTV6", "CCTV-6")
+        name = name.replace("CCTV7军事", "CCTV-7国防军事")
+        name = name.replace("CCTV7军农", "CCTV-7国防军事")
+        name = name.replace("CCTV7农业", "CCTV-7国防军事")
+        name = name.replace("CCTV7", "CCTV-7")
+        name = name.replace("CCTV8", "CCTV-8")
+        name = name.replace("CCTV9", "CCTV-9")
+        name = name.replace("CCTV10", "CCTV-10")
+        name = name.replace("CCTV11", "CCTV-11")
+        name = name.replace("CCTV12", "CCTV-12")
+        name = name.replace("CCTV13", "CCTV-13")
+        name = name.replace("CCTV新闻", "CCTV-13新闻")
+        name = name.replace("CCTV14", "CCTV-14")
+        name = name.replace("CCTV少儿", "CCTV-14少儿")
+        name = name.replace("CCTV15", "CCTV-15")
+        name = name.replace("CCTV16", "CCTV-16")
+        name = name.replace("CCTV17农业农村", "CCTV-17农业农村")
+        name = name.replace("CCTV17农业", "CCTV-17农业农村")
+        name = name.replace("CCTV17军农", "CCTV-17农业农村")
+        name = name.replace("CCTV17军事", "CCTV-17农业农村")
+        name = name.replace("CCTV5+体育赛视", "CCTV5+")
+        name = name.replace("CCTV5+体育赛事", "CCTV5+")
+        name = name.replace("CCTV5+体育", "CCTV5+")
+        name = name.replace("CCTV赛事", "CCTV5+")
+        name = name.replace("CCTV5卡", "CCTV5")
+        name = name.replace("CCTV5赛事", "CCTV5+")
+        name = name.replace("CCTV1", "CCTV-1")       
+        name = name.replace("CCTV5+", "CCTV-5+体育赛事")
+        name = name.replace("CCTV足球", "CCTV风云足球")
+        name = name.replace("上海卫视", "东方卫视")
+        name = name.replace("奥运匹克", "")
+        name = name.replace("军农", "")
+        name = name.replace("回放", "")
+        name = name.replace("测试", "")
+        name = name.replace("CCTV教育", "CETV1")
+        name = name.replace("中国教育1", "CETV1")
+        name = name.replace("CETV1中教", "CETV1")
+        name = name.replace("中国教育2", "CETV2")
+        name = name.replace("中国教育4", "CETV4")
+        name = name.replace("CCTV教育", "CETV1")
+        name = name.replace("CCTVnews", "CGTN")
+        name = name.replace("1资讯", "凤凰资讯台")
+        name = name.replace("2中文", "凤凰台")
+        name = name.replace("3XG", "香港台")
+        name = name.replace("上海卫视", "东方卫视")
+        name = name.replace("全纪实", "乐游纪实")
+        name = name.replace("金鹰动画", "金鹰卡通")
+        name = name.replace("河南新农村", "河南乡村")
+        name = name.replace("河南法制", "河南法治")
+        name = name.replace("文物宝库", "收藏天下")
+        name = name.replace("梨园", "河南戏曲")
+        name = name.replace("梨园春", "河南戏曲")
+        name = name.replace("吉林综艺", "吉视综艺文化")
+        name = name.replace("BRTVKAKU", "卡酷少儿")
+        name = name.replace("kaku少儿", "卡酷少儿")
+        name = name.replace("北京卡通", "卡酷少儿")
+        name = name.replace("卡酷卡通", "卡酷少儿")
+        name = name.replace("卡酷动画", "卡酷少儿")
+        name = name.replace("佳佳动画", "嘉佳卡通")
+        name = name.replace("CGTN今日世界", "CGTN")
+        name = name.replace("CGTN英语", "CGTN")
+        name = name.replace("ICS", "上视ICS外语频道")
+        name = name.replace("法制天地", "法治天地")
+        name = name.replace("都市时尚", "都市剧场")
+        name = name.replace("上海炫动卡通", "哈哈炫动")
+        name = name.replace("炫动卡通", "哈哈炫动")
+        name = name.replace("回放", "")
+        name = name.replace("测试", "")
+        name = name.replace("旅游卫视", "海南卫视")
+        name = name.replace("福建东南卫视", "东南卫视")
+        name = name.replace("福建东南", "东南卫视")
+        name = name.replace("南方卫视粤语节目9", "广东大湾区频道")
+        name = name.replace("内蒙古蒙语卫视", "内蒙古蒙语频道")
+        name = name.replace("南方卫视", "广东大湾区频道")
+        name = name.replace("中国教育1", "CETV1")
+        name = name.replace("南方1", "广东经济科教")
+        name = name.replace("南方4", "广东影视频道")
+        name = name.replace("吉林市1", "吉林新闻综合")
+        name = name.replace("CHC家庭影院", "家庭影院")
+        name = name.replace("CHC动作电影", "动作电影")
+        name = name.replace("CHC影迷电影", "影迷电影")
+        name = name.replace("广播电视台", "")
+        name = name.replace("编码", "")
+        name = name.replace("XF", "")
+        new_channels_list.append(f"{name},{channel_url}\n")
+    return new_channels_list
 
-# 处理单个省份的IP
-def process_province(province_file):
-    province_name = os.path.basename(province_file).replace('.txt', '')
-    print(f"\n开始处理 {province_name} 的IP")
-    
-    # 读取该省份的所有IP
-    ips = read_province_ips(province_file)
-    if not ips:
-        print(f"{province_name} 没有IP可处理")
-        return []
-    
-    all_channels = []
-    url_ends = [
-        "/iptv/live/1000.json?key=txiptv",
-        "/ZHGXTV/Public/json/live_interface.txt",
-        "/iptv/live/1000.json"
-    ]
-    
-    # 扫描IP获取有效URL
+# 定义排序函数，提取频道名称中的数字并按数字排序
+def channel_key(channel_name):
+    match = re.search(r'\d+', channel_name)
+    return int(match.group()) if match else float('inf')
+
+# 自定义分组函数
+def classify_channels(input_file, output_file, keywords):
+    keywords_list = keywords.split(',')       # 使用 split(',') 来分割关键词
+    pattern = '|'.join(re.escape(keyword) for keyword in keywords_list)
+    extracted_lines = []
+    with open(input_file, 'r', encoding='utf-8') as f:
+        for line in f:
+            if "genre" not in line:
+                if re.search(pattern, line):
+                    extracted_lines.append(line)
+    with open(output_file, 'w', encoding='utf-8') as out_file:
+        out_file.write(f"{keywords_list[0]},#genre#\n")  # 写入头部信息
+        out_file.writelines(extracted_lines)  # 写入提取的行    
+
+# 获取酒店源流程        
+def hotel_iptv(config_file):
+    ip_configs = set(read_config(config_file))
     valid_urls = []
-    with ThreadPoolExecutor(max_workers=20) as executor:
-        futures = {executor.submit(scan_single_ip, ip, url_ends): ip for ip in ips}
-        for future in as_completed(futures):
-            result = future.result()
-            valid_urls.extend(result)
+    channels = []
+    configs = []
+    url_ends = ["/iptv/live/1000.json?key=txiptv", "/ZHGXTV/Public/json/live_interface.txt"]
     
-    print(f"{province_name} 找到 {len(valid_urls)} 个有效URL")
+    for url_end in url_ends:
+        for ip, port in ip_configs:
+            configs.append((ip, port, url_end))
     
-    # 从有效URL提取频道
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        futures = {executor.submit(extract_channels, url): url for url in valid_urls}
-        for future in as_completed(futures):
-            channels = future.result()
-            all_channels.extend(channels)
+    for ip, port, url_end in configs:
+        valid_urls.extend(scan_ip_port(ip, port, url_end))
     
-    print(f"{province_name} 提取到 {len(all_channels)} 个频道")
+    print(f"扫描完成，获取有效url共：{len(valid_urls)}个")
     
-    # 对频道进行测速
-    if all_channels:
-        # 去重
-        unique_channels = []
-        seen = set()
-        for channel in all_channels:
-            identifier = f"{channel[0]}_{channel[1]}"
-            if identifier not in seen:
-                seen.add(identifier)
-                unique_channels.append(channel)
-        
-        print(f"{province_name} 去重后剩余 {len(unique_channels)} 个频道")
-        
-        # 测速
-        speed_results = speed_test(unique_channels)
-        print(f"{province_name} 测速完成，有效频道: {len(speed_results)} 个")
-        
-        return speed_results
-    else:
-        return []
+    for valid_url in valid_urls:
+        channels.extend(extract_channels(valid_url))
+    
+    print(f"共获取频道：{len(channels)}个\n开始测速")
+    results = speed_test(channels)
+    
+    # 对频道进行排序
+    results.sort(key=lambda x: -float(x[2]))
+    results.sort(key=lambda x: channel_key(x[0]))
+    
+    with open('1.txt', 'a', encoding='utf-8') as f:
+        f.writelines(unify_channel_name(results))
+    print("测速完成")
 
 # 主函数
 def main():
+    # 第一步：获取IP并按照省份分类
     print("开始获取IP列表...")
+    ips = fetch_ips_from_urls()
+    print(f"获取到 {len(ips)} 个IP")
     
-    # 第一步：从FOFA获取IP并按照省份分类
-    ips = fetch_ips_from_fofa()
-    
-    if not ips:
-        print("未能获取到IP，退出程序")
-        return
-    
-    print(f"获取到 {len(ips)} 个IP，开始按省份分类...")
+    # 保存IP到省份文件
     save_ips_by_province(ips)
     
     # 第二步：处理每个省份的IP
-    province_files = [os.path.join(IP_DIR, f) for f in os.listdir(IP_DIR) if f.endswith('.txt')]
+    province_files = [f for f in os.listdir(IP_DIR) if f.endswith('.txt')]
     
-    all_results = []
     for province_file in province_files:
-        try:
-            results = process_province(province_file)
-            all_results.extend(results)
-        except Exception as e:
-            print(f"处理 {province_file} 时出错: {e}")
-            continue
+        province_name = province_file.replace('.txt', '')
+        print(f"\n处理 {province_name} 的IP...")
+        
+        config_file = os.path.join(IP_DIR, province_file)
+        hotel_iptv(config_file)
     
-    print(f"\n所有省份处理完成，共获取 {len(all_results)} 个频道")
+    # 第三步：分类和整理频道
+    classify_channels('1.txt', '央视.txt', keywords="央视频道,CCTV,风云剧场,怀旧剧场,第一剧场,兵器,女性,地理,央视文化,风云音乐,CHC")
+    classify_channels('1.txt', '卫视.txt', keywords="卫视频道,卫视")
+    classify_channels('1.txt', '少儿.txt', keywords="少儿频道,少儿,卡通,动漫,炫动")
+    classify_channels('1.txt', '湖南.txt', keywords="湖南频道,湖南,金鹰,潇湘,长沙,南县")
+    classify_channels('1.txt', '广东.txt', keywords="广东频道,广东,客家,广州,珠江")
+    classify_channels('1.txt', '河南.txt', keywords="河南频道,河南,信阳,漯河,郑州,驻马店,平顶山,安阳,武术世界,梨园,南阳")
+    classify_channels('1.txt', '广西.txt', keywords="广西频道,广西,南宁,玉林,桂林,北流")
+    classify_channels('1.txt', '陕西.txt', keywords="陕西频道,陕西,西安")
+    classify_channels('1.txt', '港台.txt', keywords="香港频道,凤凰,香港,明珠台,翡翠台,星河")
+    classify_channels('1.txt', '其他.txt', keywords="其他频道,tsfile")
     
-    if not all_results:
-        print("没有获取到任何频道，退出程序")
-        return
+    # 合并写入文件
+    file_contents = []
+    file_paths = ["央视.txt","卫视.txt","少儿.txt","湖南.txt","广东.txt","河南.txt","广西.txt","陕西.txt","港台.txt","其他.txt"]
     
-    # 第三步：对频道进行排序和分类
-    # 按速度排序
-    all_results.sort(key=lambda x: float(x[2]), reverse=True)
+    for file_path in file_paths:
+        if os.path.exists(file_path):
+            with open(file_path, 'r', encoding="utf-8") as f:
+                content = f.read()
+                file_contents.append(content)
     
-    # 保存所有频道到临时文件
-    with open('all_channels.txt', 'w', encoding='utf-8') as f:
-        for name, url, speed in all_results:
-            f.write(f"{name},{url}\n")
+    now = datetime.datetime.now(datetime.UTC) + datetime.timedelta(hours=8)
+    current_time = now.strftime("%Y/%m/%d %H:%M")
     
-    # 分类频道
-    classify_channels('all_channels.txt', '央视.txt', "CCTV")
-    classify_channels('all_channels.txt', '卫视.txt', "卫视")
-    classify_channels('all_channels.txt', '地方台.txt', "都市,城市,地方")
+    with open("1.txt", "w", encoding="utf-8") as f:
+        f.write(f"{current_time}更新,#genre#\n")
+        f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
+        f.write('\n'.join(file_contents))
     
-    # 生成最终的M3U文件
-    generate_m3u_file(all_results)
+    # 原始顺序去重
+    with open('1.txt', 'r', encoding="utf-8") as f:
+        lines = f.readlines()
     
-    # 清理临时文件
-    if os.path.exists('all_channels.txt'):
-        os.remove('all_channels.txt')
+    unique_lines = [] 
+    seen_lines = set() 
+    for line in lines:
+        if line not in seen_lines:
+            unique_lines.append(line)
+            seen_lines.add(line)
     
-    print("任务完成！")
-
-# 分类频道函数
-def classify_channels(input_file, output_file, keywords):
-    if not os.path.exists(input_file):
-        print(f"输入文件 {input_file} 不存在")
-        return
+    # 确保输出目录存在
+    output_dir = "Hotel"
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
     
-    keywords_list = keywords.split(',')
-    pattern = '|'.join(keywords_list)
+    with open('Hotel/iptv.txt', 'w', encoding="utf-8") as f:
+        f.writelines(unique_lines)
     
-    matched_lines = []
-    with open(input_file, 'r', encoding='utf-8') as f:
-        for line in f:
-            if re.search(pattern, line, re.IGNORECASE):
-                matched_lines.append(line)
+    # 移除过程文件
+    files_to_remove = ["1.txt","央视.txt","卫视.txt","少儿.txt","湖南.txt","广东.txt","河南.txt","广西.txt","陕西.txt","港台.txt","其他.txt"]
+    for file in files_to_remove:
+        if os.path.exists(file):
+            os.remove(file)
     
-    if matched_lines:
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.writelines(matched_lines)
-        print(f"生成 {output_file}，包含 {len(matched_lines)} 个频道")
-
-# 生成M3U文件
-def generate_m3u_file(channels):
-    with open('hotel_iptv.m3u', 'w', encoding='utf-8') as f:
-        f.write('#EXTM3U\n')
-        for name, url, speed in channels:
-            f.write(f'#EXTINF:-1,{name}\n')
-            f.write(f'{url}\n')
-    
-    print("生成 hotel_iptv.m3u 文件")
+    print("任务运行完毕，所有频道合并到iptv.txt")
 
 if __name__ == "__main__":
     main()
+    
