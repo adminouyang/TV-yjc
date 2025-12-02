@@ -191,7 +191,7 @@ def extract_channels(url):
 
 # 测速
 def speed_test(channels):
-    def show_progress
+    def show_progress():
         while checked[0] < len(channels):
             numberx = checked[0] / len(channels) * 100
             print(f"已测试{checked[0]}/{len(channels)}，可用频道:{len(results)}个，进度:{numberx:.2f}%")
