@@ -1,4 +1,4 @@
-name: test.py
+name: Update IP
 
 on:
   # schedule:
@@ -8,12 +8,14 @@ on:
 jobs:
   fetch-and-push:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 添加写入权限
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # 升级到 v4
         with:
-          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -26,13 +28,12 @@ jobs:
           pip install requests
           
       - name: Run test.py 
-        run:  python Hotel/test.py    
+        run: python Hotel/test.py    
         
       - name: Commit and push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add .
-          git commit -m "更新ip"
-          # git commit *.m3u -m "Add generated file"
-          git push --force origin main        
+          git commit -m "更新ip" || echo "没有更改可提交"
+          git push origin main
