@@ -223,6 +223,8 @@ def speed_test(channels):
                             os.remove(temp_filename)
                             result = channel_name, channel_url, f"{normalized_speed:.3f}"
                             results.append(result)
+                            # 打印测速结果
+                            print(f"✓ {channel_name}: {normalized_speed:.3f} MB/s")
                 except Exception as e:
                     checked[0] += 1
             except:
@@ -250,9 +252,16 @@ def speed_test(channels):
     return results
 
 # 替换关键词以规范频道名
-def unify_channel_name(channels_list):
+def unify_channel_name(channels_list, include_speed=False):
     new_channels_list = []
-    for name, channel_url, speed in channels_list:
+    for item in channels_list:
+        if len(item) == 3:
+            name, channel_url, speed = item
+        else:
+            name, channel_url = item
+            speed = "未知"
+            
+        name_original = name
         name = name.replace("cctv", "CCTV")
         name = name.replace("中央", "CCTV")
         name = name.replace("超清", "")
@@ -363,7 +372,11 @@ def unify_channel_name(channels_list):
         name = name.replace("广播电视台", "")
         name = name.replace("编码", "")
         name = name.replace("XF", "")
-        new_channels_list.append(f"{name},{channel_url}\n")
+        
+        if include_speed and len(item) == 3:
+            new_channels_list.append(f"{name},{channel_url} #速度:{speed}MB/s#\n")
+        else:
+            new_channels_list.append(f"{name},{channel_url}\n")
     return new_channels_list
 
 # 定义排序函数，提取频道名称中的数字并按数字排序
@@ -406,15 +419,35 @@ def hotel_iptv(config_file):
         channels.extend(extract_channels(valid_url))
     
     print(f"共获取频道：{len(channels)}个\n开始测速")
+    print("="*50)
+    print("频道测速结果:")
+    print("="*50)
     results = speed_test(channels)
+    
+    # 打印测速结果汇总
+    if results:
+        print("="*50)
+        print(f"测速完成，共获取 {len(results)} 个有效频道")
+        print("速度排名前10的频道:")
+        for i, (name, url, speed) in enumerate(sorted(results, key=lambda x: -float(x[2]))[:10], 1):
+            print(f"{i}. {name}: {speed} MB/s")
+        print("="*50)
+    else:
+        print("未找到任何有效频道")
     
     # 对频道进行排序
     results.sort(key=lambda x: -float(x[2]))
     results.sort(key=lambda x: channel_key(x[0]))
     
-    with open('1.txt', 'a', encoding='utf-8') as f:
-        f.writelines(unify_channel_name(results))
-    print("测速完成")
+    # 保存包含速度信息的版本
+    with open('1_with_speed.txt', 'w', encoding='utf-8') as f:
+        f.writelines(unify_channel_name(results, include_speed=True))
+    
+    # 保存不包含速度信息的版本（用于后续处理）
+    with open('1.txt', 'w', encoding='utf-8') as f:
+        f.writelines(unify_channel_name(results, include_speed=False))
+    
+    return results
 
 # 主函数
 def main():
@@ -429,12 +462,29 @@ def main():
     # 第二步：处理每个省份的IP
     province_files = [f for f in os.listdir(IP_DIR) if f.endswith('.txt')]
     
+    all_results = []
+    
     for province_file in province_files:
         province_name = province_file.replace('.txt', '')
         print(f"\n处理 {province_name} 的IP...")
         
         config_file = os.path.join(IP_DIR, province_file)
-        hotel_iptv(config_file)
+        results = hotel_iptv(config_file)
+        all_results.extend(results)
+    
+    # 打印所有可用频道的速度
+    if all_results:
+        print("\n" + "="*60)
+        print("所有可用频道速度汇总:")
+        print("="*60)
+        # 按速度排序
+        sorted_results = sorted(all_results, key=lambda x: -float(x[2]))
+        for i, (name, url, speed) in enumerate(sorted_results, 1):
+            print(f"{i:3d}. {name:20s}: {speed:>6s} MB/s")
+        print("="*60)
+        print(f"总计: {len(sorted_results)} 个频道")
+    else:
+        print("未找到任何可用频道")
     
     # 第三步：分类和整理频道
     classify_channels('1.txt', '央视.txt', keywords="央视频道,CCTV,风云剧场,怀旧剧场,第一剧场,兵器,女性,地理,央视文化,风云音乐,CHC")
@@ -461,8 +511,20 @@ def main():
     now = datetime.datetime.now(datetime.UTC) + datetime.timedelta(hours=8)
     current_time = now.strftime("%Y/%m/%d %H:%M")
     
+    # 写入带速度信息的版本
+    with open("1_with_speed.txt", "r", encoding="utf-8") as f:
+        with_speed_content = f.read()
+    
+    with open("Hotel/iptv_with_speed.txt", "w", encoding="utf-8") as f:
+        f.write(f"{current_time}更新,#genre#\n")
+        f.write(f"总计 {len(all_results)} 个频道\n")
+        f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
+        f.write(with_speed_content)
+    
+    # 写入标准版本
     with open("1.txt", "w", encoding="utf-8") as f:
         f.write(f"{current_time}更新,#genre#\n")
+        f.write(f"总计 {len(all_results)} 个频道\n")
         f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
         f.write('\n'.join(file_contents))
     
@@ -491,8 +553,13 @@ def main():
         if os.path.exists(file):
             os.remove(file)
     
-    print("任务运行完毕，所有频道合并到iptv.txt")
+    # 保留带速度信息的版本
+    print("\n" + "="*60)
+    print("任务运行完毕!")
+    print(f"1. 所有频道已合并到 Hotel/iptv.txt ({len(all_results)} 个频道)")
+    print(f"2. 带速度信息的版本已保存到 Hotel/iptv_with_speed.txt")
+    print(f"3. 详细的测速结果已打印在屏幕上")
+    print("="*60)
 
 if __name__ == "__main__":
     main()
-    
