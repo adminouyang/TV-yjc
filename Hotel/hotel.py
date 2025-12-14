@@ -495,7 +495,8 @@ def main():
         print("="*60)
         print(f"总计: {len(sorted_results)} 个频道")
     else:
-    print("\n开始分类频道...")
+        print("\n开始分类频道...")
+        # 第三步：分类和整理频道
     classify_channels('1.txt', '央视.txt', keywords="央视频道,CCTV,风云剧场,怀旧剧场,第一剧场,兵器,女性,地理,央视文化,风云音乐,CHC")
     classify_channels('1.txt', '卫视.txt', keywords="卫视频道,卫视")
     classify_channels('1.txt', '少儿.txt', keywords="少儿频道,少儿,卡通,动漫,炫动")
