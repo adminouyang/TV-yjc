@@ -400,14 +400,15 @@ def classify_channels(input_file, output_file, keywords):
     with open(input_file, 'r', encoding='utf-8') as f:
         for line in f:
             # 跳过标题行
-            if "genre" in line or "更新" in line or "总计" in line:
+            if "genre" in line or "更新" in line or "总计" in line or "浙江卫视" in line:
                 continue
             if re.search(pattern, line):
                 extracted_lines.append(line)
     with open(output_file, 'w', encoding='utf-8') as out_file:
         out_file.write(f"{keywords_list[0]},#genre#\n")  # 写入头部信息
         out_file.writelines(extracted_lines)  # 写入提取的行
-    print(f"分类 '{keywords_list[0]}' 提取了 {len(extracted_lines)} 个频道")  
+    print(f"分类 '{keywords_list[0]}' 提取了 {len(extracted_lines)} 个频道")
+ 
 
 # 获取酒店源流程        
 def hotel_iptv(config_file):
@@ -497,16 +498,16 @@ def main():
     else:
         print("\n开始分类频道...")
         # 第三步：分类和整理频道
-    classify_channels('1.txt', '央视.txt', keywords="央视频道,CCTV,风云剧场,怀旧剧场,第一剧场,兵器,女性,地理,央视文化,风云音乐,CHC")
-    classify_channels('1.txt', '卫视.txt', keywords="卫视频道,卫视")
-    classify_channels('1.txt', '少儿.txt', keywords="少儿频道,少儿,卡通,动漫,炫动")
-    classify_channels('1.txt', '湖南.txt', keywords="湖南频道,湖南,金鹰,潇湘,长沙,南县")
-    classify_channels('1.txt', '广东.txt', keywords="广东频道,广东,客家,广州,珠江")
-    classify_channels('1.txt', '河南.txt', keywords="河南频道,河南,信阳,漯河,郑州,驻马店,平顶山,安阳,武术世界,梨园,南阳")
-    classify_channels('1.txt', '广西.txt', keywords="广西频道,广西,南宁,玉林,桂林,北流")
-    classify_channels('1.txt', '陕西.txt', keywords="陕西频道,陕西,西安")
-    classify_channels('1.txt', '港台.txt', keywords="香港频道,凤凰,香港,明珠台,翡翠台,星河")
-    classify_channels('1.txt', '其他.txt', keywords="其他频道,tsfile")
+    classify_channels('1.txt', '央视.txt', keywords="CCTV,风云剧场,怀旧剧场,第一剧场,兵器,女性,地理,央视文化,风云音乐,CHC")
+    classify_channels('1.txt', '卫视.txt', keywords="卫视")
+    classify_channels('1.txt', '少儿.txt', keywords="少儿,卡通,动漫,炫动")
+    classify_channels('1.txt', '湖南.txt', keywords="湖南,金鹰,潇湘,长沙,南县")
+    classify_channels('1.txt', '广东.txt', keywords="广东,客家,广州,珠江")
+    classify_channels('1.txt', '河南.txt', keywords="河南,信阳,漯河,郑州,驻马店,平顶山,安阳,武术世界,梨园,南阳")
+    classify_channels('1.txt', '广西.txt', keywords="广西,南宁,玉林,桂林,北流")
+    classify_channels('1.txt', '陕西.txt', keywords="陕西,西安")
+    classify_channels('1.txt', '港台.txt', keywords="凤凰,香港,明珠台,翡翠台,星河")
+    classify_channels('1.txt', '其他.txt', keywords="tsfile")
     
     # 合并写入文件
     file_contents = []
