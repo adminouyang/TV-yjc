@@ -220,6 +220,7 @@ def speed_test(channels):
                             with open(temp_filename, 'wb') as f:
                                 f.write(cont)  # 写入文件
                             normalized_speed = max(len(cont) / resp_time / 1024 / 1024, 0.001)
+                            print(f"{normalized_speed:.3f})
                             os.remove(temp_filename)
                             result = channel_name, channel_url, f"{normalized_speed:.3f}"
                             results.append(result)
