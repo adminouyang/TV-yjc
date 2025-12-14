@@ -260,8 +260,11 @@ def unify_channel_name(channels_list, include_speed=False):
         else:
             name, channel_url = item
             speed = "未知"
-            
-        name_original = name
+        
+        # 保存原始名称用于日志
+        original_name = name
+        
+        # 替换处理
         name = name.replace("cctv", "CCTV")
         name = name.replace("中央", "CCTV")
         name = name.replace("超清", "")
@@ -373,11 +376,16 @@ def unify_channel_name(channels_list, include_speed=False):
         name = name.replace("编码", "")
         name = name.replace("XF", "")
         
+        # 如果名称变为空，使用原始名称
+        if not name.strip():
+            name = original_name
+            
         if include_speed and len(item) == 3:
             new_channels_list.append(f"{name},{channel_url} #速度:{speed}MB/s#\n")
         else:
             new_channels_list.append(f"{name},{channel_url}\n")
     return new_channels_list
+
 
 # 定义排序函数，提取频道名称中的数字并按数字排序
 def channel_key(channel_name):
@@ -391,12 +399,15 @@ def classify_channels(input_file, output_file, keywords):
     extracted_lines = []
     with open(input_file, 'r', encoding='utf-8') as f:
         for line in f:
-            if "genre" not in line:
-                if re.search(pattern, line):
-                    extracted_lines.append(line)
+            # 跳过标题行
+            if "genre" in line or "更新" in line or "总计" in line:
+                continue
+            if re.search(pattern, line):
+                extracted_lines.append(line)
     with open(output_file, 'w', encoding='utf-8') as out_file:
         out_file.write(f"{keywords_list[0]},#genre#\n")  # 写入头部信息
-        out_file.writelines(extracted_lines)  # 写入提取的行    
+        out_file.writelines(extracted_lines)  # 写入提取的行
+    print(f"分类 '{keywords_list[0]}' 提取了 {len(extracted_lines)} 个频道")  
 
 # 获取酒店源流程        
 def hotel_iptv(config_file):
@@ -484,9 +495,7 @@ def main():
         print("="*60)
         print(f"总计: {len(sorted_results)} 个频道")
     else:
-        print("未找到任何可用频道")
-    
-    # 第三步：分类和整理频道
+    print("\n开始分类频道...")
     classify_channels('1.txt', '央视.txt', keywords="央视频道,CCTV,风云剧场,怀旧剧场,第一剧场,兵器,女性,地理,央视文化,风云音乐,CHC")
     classify_channels('1.txt', '卫视.txt', keywords="卫视频道,卫视")
     classify_channels('1.txt', '少儿.txt', keywords="少儿频道,少儿,卡通,动漫,炫动")
@@ -507,19 +516,10 @@ def main():
             with open(file_path, 'r', encoding="utf-8") as f:
                 content = f.read()
                 file_contents.append(content)
+            print(f"已读取 {file_path} 内容")
     
     now = datetime.datetime.now(datetime.UTC) + datetime.timedelta(hours=8)
     current_time = now.strftime("%Y/%m/%d %H:%M")
-    
-    # 写入带速度信息的版本
-    with open("1_with_speed.txt", "r", encoding="utf-8") as f:
-        with_speed_content = f.read()
-    
-    with open("Hotel/iptv_with_speed.txt", "w", encoding="utf-8") as f:
-        f.write(f"{current_time}更新,#genre#\n")
-        f.write(f"总计 {len(all_results)} 个频道\n")
-        f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
-        f.write(with_speed_content)
     
     # 写入标准版本
     with open("1.txt", "w", encoding="utf-8") as f:
@@ -553,12 +553,15 @@ def main():
         if os.path.exists(file):
             os.remove(file)
     
-    # 保留带速度信息的版本
+    # 检查最终文件内容
+    with open('Hotel/iptv.txt', 'r', encoding="utf-8") as f:
+        content = f.read()
+        print("\n最终文件内容:")
+        print(content[:1000])  # 打印前1000个字符
+    
     print("\n" + "="*60)
     print("任务运行完毕!")
-    print(f"1. 所有频道已合并到 Hotel/iptv.txt ({len(all_results)} 个频道)")
-    print(f"2. 带速度信息的版本已保存到 Hotel/iptv_with_speed.txt")
-    print(f"3. 详细的测速结果已打印在屏幕上")
+    print(f"所有频道已合并到 Hotel/iptv.txt ({len(all_results)} 个频道)")
     print("="*60)
 
 if __name__ == "__main__":
