@@ -223,6 +223,94 @@ def save_ips_by_province(ips):
                 f.write(f"{ip_port}\n")
         print(f"保存 {len(ip_list)} 个IP到 {filename}")
 
+# 检测IP:端口可用性
+def check_ip_availability(ip_port, timeout=2):
+    """检测IP:端口是否可用"""
+    try:
+        # 尝试连接HTTP服务
+        test_urls = [
+            f"http://{ip_port}/",
+            f"http://{ip_port}/iptv/live/1000.json?key=txiptv",
+            f"http://{ip_port}/ZHGXTV/Public/json/live_interface.txt"
+        ]
+        
+        for url in test_urls:
+            try:
+                response = requests.get(url, timeout=timeout, headers=HEADERS)
+                if response.status_code == 200:
+                    return True
+            except:
+                continue
+                
+        return False
+    except Exception as e:
+        return False
+
+# 批量检测IP可用性并更新文件
+def check_and_update_ip_file(province_file):
+    """检测IP可用性并更新文件"""
+    print(f"\n开始检测 {province_file} 中的IP可用性...")
+    
+    available_ips = []
+    all_ips = []
+    
+    # 读取IP文件
+    try:
+        with open(province_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    all_ips.append(line)
+    except Exception as e:
+        print(f"读取IP文件错误: {e}")
+        return
+    
+    total_ips = len(all_ips)
+    print(f"需要检测 {total_ips} 个IP")
+    
+    # 使用线程池并行检测
+    with ThreadPoolExecutor(max_workers=50) as executor:
+        futures = {}
+        for ip_port in all_ips:
+            future = executor.submit(check_ip_availability, ip_port)
+            futures[future] = ip_port
+        
+        completed = 0
+        for future in as_completed(futures):
+            ip_port = futures[future]
+            try:
+                is_available = future.result()
+                completed += 1
+                
+                if is_available:
+                    available_ips.append(ip_port)
+                    print(f"✓ {ip_port} 可用 ({completed}/{total_ips})")
+                else:
+                    print(f"✗ {ip_port} 不可用 ({completed}/{total_ips})")
+                    
+                # 每检测10个IP显示一次进度
+                if completed % 10 == 0 or completed == total_ips:
+                    print(f"进度: {completed}/{total_ips} ({completed/total_ips*100:.1f}%) - 可用: {len(available_ips)} 个")
+                    
+            except Exception as e:
+                completed += 1
+                print(f"✗ {ip_port} 检测失败 ({completed}/{total_ips})")
+    
+    # 更新IP文件，只保留可用的IP
+    if available_ips:
+        with open(province_file, 'w', encoding='utf-8') as f:
+            for ip_port in available_ips:
+                f.write(f"{ip_port}\n")
+        
+        print(f"\n✓ 已更新 {province_file}")
+        print(f"  原始IP数量: {total_ips}")
+        print(f"  可用IP数量: {len(available_ips)}")
+        print(f"  不可用IP已删除: {total_ips - len(available_ips)}")
+    else:
+        print(f"\n✗ 没有可用的IP，文件 {province_file} 将保持不变")
+    
+    return available_ips
+
 # 读取文件并设置参数
 def read_config(config_file):
     ip_configs = []
@@ -418,6 +506,13 @@ def classify_channels_by_category(channels_data):
 
 # 获取酒店源流程        
 def hotel_iptv(config_file):
+    # 先检测并更新IP文件
+    available_ips = check_and_update_ip_file(config_file)
+    
+    if not available_ips:
+        print(f"没有可用的IP，跳过 {config_file}")
+        return
+    
     ip_configs = set(read_config(config_file))
     valid_urls = []
     channels = []
