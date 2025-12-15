@@ -548,8 +548,12 @@ def hotel_iptv(config_file):
 
 # 主函数
 def main():
+    # 显示脚本开始时间
+    start_time = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
+    print(f"脚本开始运行时间: {start_time.strftime('%Y-%m-%d %H:%M:%S')} (北京时间)")
+    
     # 第一步：获取IP并按照省份分类
-    print("开始获取IP列表...")
+    print("\n开始获取IP列表...")
     ips = fetch_ips_from_urls()
     print(f"获取到 {len(ips)} 个IP")
     
@@ -629,8 +633,9 @@ def main():
                 content = f.read()
                 file_contents.append(content)
     
-    now = datetime.datetime.now(datetime.UTC) + datetime.timedelta(hours=8)
-    current_time = now.strftime("%Y/%m/%d %H:%M")
+    # 获取北京时间
+    beijing_time = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
+    current_time = beijing_time.strftime("%Y/%m/%d %H:%M")
     
     with open("1.txt", "w", encoding="utf-8") as f:
         f.write(f"{current_time}更新,#genre#\n")
@@ -663,6 +668,15 @@ def main():
         if os.path.exists(file):
             os.remove(file)
     
+    # 显示脚本结束时间
+    end_time = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
+    print(f"\n脚本结束运行时间: {end_time.strftime('%Y-%m-%d %H:%M:%S')} (北京时间)")
+    
+    # 计算运行时间
+    run_time = end_time - start_time
+    hours, remainder = divmod(run_time.seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    print(f"总运行时间: {hours}小时{minutes}分{seconds}秒")
     print("任务运行完毕，所有频道合并到iptv.txt")
 
 if __name__ == "__main__":
