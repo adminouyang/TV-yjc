@@ -1,5 +1,5 @@
-2025/12/14 23:27更新,#genre#
-总计 248 个频道
+2025/12/15 08:51更新,#genre#
+总计 270 个频道
 浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
 CCTV,#genre#
 
@@ -11,4 +11,4 @@ CCTV,#genre#
 广西,#genre#
 陕西,#genre#
 凤凰,#genre#
-tsfile,#genre#
+其他频道,#genre#
