@@ -22,16 +22,35 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
+      
       - name: Install dependencies
         run: |
           pip install -r Hotel/requirements.txt
+      
       - name: 获取酒店源
         run: python Hotel/hotel.py
 
-      - name: Commit and push changes
+      - name: Configure Git
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+
+      - name: Pull and push changes
+        run: |
+          # 拉取远程更改
+          git pull origin main --rebase --allow-unrelated-histories || true
+          
+          # 添加文件
           git add .
-          git commit -m "更新酒店源" || exit 0
-          git push
+          
+          # 检查是否有更改
+          if git diff-index --quiet HEAD --; then
+            echo "没有更改可提交"
+            exit 0
+          fi
+          
+          # 提交更改
+          git commit -m "更新酒店源 $(date '+%Y-%m-%d %H:%M:%S')"
+          
+          # 推送更改
+          git push origin main
