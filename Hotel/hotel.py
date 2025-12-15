@@ -285,7 +285,7 @@ def unify_channel_name(channels_list, include_speed=False):
     return new_channels_list
         
         # 保存原始名称用于日志
-        original_name = name
+        #original_name = name
         
         # 替换处理
         name = name.replace("cctv", "CCTV")
