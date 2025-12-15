@@ -266,27 +266,6 @@ def unify_channel_name(channels_list, include_speed=False):
         # 记录原始名称
         original_name = name
         
-        # ... [原来的替换处理保持不变] ...
-        
-        # 在规范化处理之后，添加一个简单的频道名称
-        if not name.strip():
-            name = f"频道_{len(new_channels_list)+1}"
-        
-        if include_speed and len(item) == 3:
-            new_channels_list.append(f"{name},{channel_url} #速度:{speed}MB/s#\n")
-        else:
-            new_channels_list.append(f"{name},{channel_url}\n")
-    
-    # 打印前几个处理后的频道名称
-    print("处理后前5个频道示例:")
-    for i, channel in enumerate(new_channels_list[:5], 1):
-        print(f"  {i}. {channel.strip()}")
-    
-    return new_channels_list
-        
-        # 保存原始名称用于日志
-        #original_name = name
-        
         # 替换处理
         name = name.replace("cctv", "CCTV")
         name = name.replace("中央", "CCTV")
@@ -399,16 +378,21 @@ def unify_channel_name(channels_list, include_speed=False):
         name = name.replace("编码", "")
         name = name.replace("XF", "")
         
-        # 如果名称变为空，使用原始名称
+        # 在规范化处理之后，添加一个简单的频道名称
         if not name.strip():
-            name = original_name
-            
+            name = f"频道_{len(new_channels_list)+1}"
+        
         if include_speed and len(item) == 3:
             new_channels_list.append(f"{name},{channel_url} #速度:{speed}MB/s#\n")
         else:
             new_channels_list.append(f"{name},{channel_url}\n")
+    
+    # 打印前几个处理后的频道名称
+    print("处理后前5个频道示例:")
+    for i, channel in enumerate(new_channels_list[:5], 1):
+        print(f"  {i}. {channel.strip()}")
+    
     return new_channels_list
-
 
 # 定义排序函数，提取频道名称中的数字并按数字排序
 def channel_key(channel_name):
