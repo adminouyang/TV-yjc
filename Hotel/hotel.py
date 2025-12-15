@@ -222,6 +222,7 @@ def speed_test(channels):
                             normalized_speed = max(len(cont) / resp_time / 1024 / 1024, 0.001)
                             os.remove(temp_filename)
                             result = channel_name, channel_url, f"{normalized_speed:.3f}"
+                            print(f"✓ {channel_name}: {normalized_speed:.3f} MB/s")
                             results.append(result)
                 except Exception as e:
                     checked[0] += 1
