@@ -452,9 +452,9 @@ def speed_test(channels):
                     if ts_lists:
                         ts_url = channel_url_t + ts_lists[0]
                         ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])
-                        with eventlet.Timeout(5, False):
+                        with eventlet.Timeout(8, False):
                             start_time = time.time()
-                            cont = requests.get(ts_url, timeout=2).content
+                            cont = requests.get(ts_url, timeout=3).content
                             resp_time = (time.time() - start_time) * 1                    
                         if cont:
                             checked[0] += 1
