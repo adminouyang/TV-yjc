@@ -434,7 +434,7 @@ def extract_channels(url):
         return []
 
 # 测速
-def speed_test(channels, min_speed_threshold=0.5):
+def speed_test(channels, min_speed_threshold=0.1):
     def show_progress():
         while checked[0] < len(channels):
             numberx = checked[0] / len(channels) * 100
