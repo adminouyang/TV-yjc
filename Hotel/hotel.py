@@ -434,15 +434,7 @@ def extract_channels(url):
         return []
 
 # 测速
-def speed_test(channels, min_speed_threshold=0.001, download_size_kb=100):
-    """
-    测试频道访问速度和可用性
-    
-    Args:
-        channels: 频道列表
-        min_speed_threshold: 最小速度阈值(MB/s)
-        download_size_kb: 下载数据量(KB)，默认100KB以获得更准确的速度测量
-    """
+def speed_test(channels):
     def show_progress():
         while checked[0] < len(channels):
             numberx = checked[0] / len(channels) * 100
@@ -452,131 +444,48 @@ def speed_test(channels, min_speed_threshold=0.001, download_size_kb=100):
     def worker():
         while True:
             try:
-                channel_name, channel_url = task_queue.get(timeout=1)
+                channel_name, channel_url = task_queue.get()
                 try:
-                    # 修复URL处理：使用正确的路径拼接方法
-                    if channel_url.endswith('.m3u8'):
-                        base_url = channel_url.rsplit('/', 1)[0] + '/'
-                    else:
-                        base_url = channel_url if channel_url.endswith('/') else channel_url + '/'
-                    
-                    # 添加重试机制
-                    for retry in range(3):
-                        try:
-                            response = requests.get(channel_url, timeout=3)
-                            response.raise_for_status()
-                            lines = response.text.strip().split('\n')
-                            break
-                        except requests.exceptions.RequestException:
-                            if retry == 2:
-                                raise
-                            time.sleep(0.5)
-                    
-                    ts_lists = [line.split('/')[-1] for line in lines if not line.startswith('#')]
-                    
+                    channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])
+                    lines = requests.get(channel_url, timeout=2).text.strip().split('\n')
+                    ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]
                     if ts_lists:
-                        # 使用正确的URL拼接
-                        ts_url = base_url + ts_lists[0] if base_url.endswith('/') else base_url + '/' + ts_lists[0]
-                        
-                        # 使用上下文管理器确保资源释放
-                        with requests.get(ts_url, timeout=5, stream=True) as response:
-                            response.raise_for_status()
-                            
-                            # 增加下载数据量以获得更准确的速度测量
-                            target_size = download_size_kb * 1024  # 转换为字节
-                            content = b""
+                        ts_url = channel_url_t + ts_lists[0]
+                        ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])
+                        with eventlet.Timeout(5, False):
                             start_time = time.time()
-                            
-                            # 读取指定大小的数据
-                            for chunk in response.iter_content(chunk_size=8192):  # 8KB块
-                                content += chunk
-                                if len(content) >= target_size:
-                                    break
-                            
-                            resp_time = time.time() - start_time
-                        
-                        if content and resp_time > 0:
-                            # 计算实际下载的数据量（可能略大于目标大小）
-                            actual_size = len(content)
-                            
-                            # 计算速度 (MB/s)
-                            speed = actual_size / resp_time / 1024 / 1024
-                            print(f"调试: 下载 {actual_size/1024:.1f}KB, 耗时 {resp_time:.3f}s, 计算速度 {speed:.3f} MB/s")
-                            
-                            # 如果下载时间太短(<0.1s)，可能测量不准确，尝试重新测试
-                            if resp_time < 0.1 and actual_size < target_size * 2:
-                                # 时间太短，可能测量不准确，标记为需要验证
-                                normalized_speed = speed
-                                note = " (测量时间较短，速度可能偏高)"
-                            else:
-                                normalized_speed = speed
-                                note = ""
-                            
-                            # 应用最小阈值
-                            if normalized_speed < min_speed_threshold:
-                                normalized_speed = min_speed_threshold
-                            
-                            # 线程安全地更新计数器
-                            with lock:
-                                checked[0] += 1
-                            
+                            cont = requests.get(ts_url, timeout=2).content
+                            resp_time = (time.time() - start_time) * 1                    
+                        if cont:
+                            checked[0] += 1
+                            temp_filename = f"temp_{hash(channel_url)}.ts"
+                            with open(temp_filename, 'wb') as f:
+                                f.write(cont)
+                            normalized_speed = max(len(cont) / resp_time / 1024 / 1024, 0.1)
+                            os.remove(temp_filename)
                             result = channel_name, channel_url, f"{normalized_speed:.3f}"
-                            
-                            # 线程安全地添加结果
-                            with lock:
-                                results.append(result)
-                                print(f"✓ {channel_name}: {normalized_speed:.3f} MB/s{note}")
-                        else:
-                            raise ValueError("无响应内容或响应时间为0")
-                    else:
-                        raise ValueError("M3U8文件中没有TS文件")
+                            print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
+                            results.append(result)
                 except Exception as e:
-                    with lock:
-                        checked[0] += 1
-                    print(f"✗ {channel_name}: {str(e)[:50]}")
-            except Empty:
-                break
-            except Exception as e:
-                with lock:
                     checked[0] += 1
-                print(f"✗ 未知错误: {str(e)[:50]}")
+            except:
+                checked[0] += 1
             finally:
-                try:
-                    task_queue.task_done()
-                except ValueError:
-                    pass  # 如果task_done调用多于任务数，忽略错误
+                task_queue.task_done()
     
     task_queue = Queue()
     results = []
     checked = [0]
-    lock = Lock()
     
-    # 启动进度显示线程
-    progress_thread = Thread(target=show_progress, daemon=True)
-    progress_thread.start()
+    Thread(target=show_progress, daemon=True).start()
     
-    # 启动工作线程
-    threads = []
-    worker_count = min(20, len(channels))
-    for _ in range(worker_count):
-        t = Thread(target=worker, daemon=True)
-        t.start()
-        threads.append(t)
+    for _ in range(min(20, len(channels))):
+        Thread(target=worker, daemon=True).start()
     
-    # 添加任务到队列
     for channel in channels:
         task_queue.put(channel)
     
-    # 等待所有任务完成
     task_queue.join()
-    
-    # 等待所有工作线程结束
-    for t in threads:
-        t.join(timeout=1)
-    
-    # 等待进度线程结束
-    progress_thread.join(timeout=1)
-    
     return results
 # 统一频道名称
 def unify_channel_name(channels_list):
