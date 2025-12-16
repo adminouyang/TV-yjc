@@ -461,7 +461,7 @@ def speed_test(channels):
                             temp_filename = f"temp_{hash(channel_url)}.ts"
                             with open(temp_filename, 'wb') as f:
                                 f.write(cont)
-                            normalized_speed = max(len(cont) / resp_time / 1024 / 1024, 0.3)
+                            normalized_speed = max(len(cont) / resp_time / 1024 / 1024, 0.5)
                             os.remove(temp_filename)
                             result = channel_name, channel_url, f"{normalized_speed:.3f}"
                             print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
