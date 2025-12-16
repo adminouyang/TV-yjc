@@ -2,10 +2,10 @@ import eventlet
 eventlet.monkey_patch()
 import time
 import datetime
-from threading import Thread
+from threading import Thread, Lock  # 添加Lock导入
 import os
 import re
-from queue import Queue, Empty  # 同时导入Queue和Empty
+from queue import Queue, Empty
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from bs4 import BeautifulSoup
@@ -502,7 +502,7 @@ def speed_test(channels, min_speed_threshold=0.5):
                     with lock:
                         checked[0] += 1
                     print(f"✗ {channel_name}: {str(e)[:50]}")
-            except Queue.Empty:  # 注意这里使用 Queue.Empty
+            except Empty:  # 直接从queue模块导入的Empty
                 break
             except Exception as e:
                 with lock:
@@ -514,10 +514,10 @@ def speed_test(channels, min_speed_threshold=0.5):
                 except ValueError:
                     pass  # 如果task_done调用多于任务数，忽略错误
     
-    task_queue = Queue()  # 注意这里使用 Queue() 而不是 queue.Queue()
+    task_queue = Queue()  # 从queue模块导入的Queue
     results = []
     checked = [0]
-    lock = threading.Lock()
+    lock = Lock()  # 从threading模块导入的Lock
     
     # 启动进度显示线程
     progress_thread = Thread(target=show_progress, daemon=True)
