@@ -13,7 +13,7 @@ import json
 
 # 配置区
 FOFA_URLS = {
-    "链接1": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04i",
+    "链接1": "链接1",
 }
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
@@ -174,6 +174,24 @@ RESULTS_PER_CHANNEL = 20
 # 创建IP目录
 if not os.path.exists(IP_DIR):
     os.makedirs(IP_DIR)
+
+# 读取台标文件
+def read_logo_file():
+    logo_dict = {}
+    logo_file = "Hotel/logo.txt"
+    if os.path.exists(logo_file):
+        try:
+            with open(logo_file, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line and ',' in line:
+                        parts = line.split(',', 1)
+                        channel_name = parts[0].strip()
+                        logo_url = parts[1].strip()
+                        logo_dict[channel_name] = logo_url
+        except Exception as e:
+            print(f"读取台标文件错误: {e}")
+    return logo_dict
 
 # 从HTML文件分析获取IP（示例函数，需要根据实际HTML结构调整）
 def parse_ip_from_html(html_file):
@@ -533,6 +551,54 @@ def classify_channels_by_category(channels_data):
     
     return categorized_channels
 
+# 生成M3U文件
+def generate_m3u_file(txt_file_path, m3u_file_path):
+    """从txt文件生成m3u文件"""
+    print(f"开始生成M3U文件: {m3u_file_path}")
+    
+    # 读取台标文件
+    logo_dict = read_logo_file()
+    
+    # EPG链接
+    epg_url = "https://gh.catmak.name/https://raw.githubusercontent.com/Guovin/iptv-api/refs/heads/master/output/epg/epg.gz"
+    
+    with open(m3u_file_path, 'w', encoding='utf-8') as m3u_file:
+        # 写入M3U头部
+        m3u_file.write(f'#EXTM3U x-tvg-url="{epg_url}"\n')
+        
+        # 读取txt文件
+        with open(txt_file_path, 'r', encoding='utf-8') as txt_file:
+            current_group = ""
+            
+            for line in txt_file:
+                line = line.strip()
+                if not line:
+                    continue
+                
+                # 检查是否是分组行
+                if line.endswith(',#genre#'):
+                    current_group = line.replace(',#genre#', '')
+                    continue
+                
+                # 处理频道行
+                if ',' in line and not line.startswith('#'):
+                    try:
+                        parts = line.split(',')
+                        if len(parts) >= 2:
+                            channel_name = parts[0]
+                            channel_url = parts[1]
+                            
+                            # 获取台标
+                            logo_url = logo_dict.get(channel_name, "")
+                            
+                            # 写入M3U条目
+                            m3u_file.write(f'#EXTINF:-1 tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{current_group}",{channel_name}\n')
+                            m3u_file.write(f'{channel_url}\n')
+                    except Exception as e:
+                        print(f"处理频道行错误: {line}, 错误: {e}")
+    
+    print(f"M3U文件已生成: {m3u_file_path}")
+
 # 获取酒店源流程        
 def hotel_iptv(config_file):
     # 先检测并更新IP文件
@@ -688,8 +754,14 @@ def main():
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     
-    with open('Hotel/iptv.txt', 'w', encoding="utf-8") as f:
+    # 写入txt文件
+    txt_output_path = 'Hotel/iptv.txt'
+    with open(txt_output_path, 'w', encoding="utf-8") as f:
         f.writelines(unique_lines)
+    
+    # 生成M3U文件
+    m3u_output_path = 'Hotel/iptv.m3u'
+    generate_m3u_file(txt_output_path, m3u_output_path)
     
     # 移除过程文件
     files_to_remove = ["1.txt"] + file_paths
@@ -706,7 +778,7 @@ def main():
     hours, remainder = divmod(run_time.seconds, 3600)
     minutes, seconds = divmod(remainder, 60)
     print(f"总运行时间: {hours}小时{minutes}分{seconds}秒")
-    print("任务运行完毕，所有频道合并到iptv.txt")
+    print("任务运行完毕，所有频道合并到iptv.txt和iptv.m3u")
 
 if __name__ == "__main__":
     main()
