@@ -501,6 +501,7 @@ def speed_test(channels, min_speed_threshold=0.001, download_size_kb=100):
                             
                             # 计算速度 (MB/s)
                             speed = actual_size / resp_time / 1024 / 1024
+                            print(f"调试: 下载 {actual_size/1024:.1f}KB, 耗时 {resp_time:.3f}s, 计算速度 {speed:.3f} MB/s")
                             
                             # 如果下载时间太短(<0.1s)，可能测量不准确，尝试重新测试
                             if resp_time < 0.1 and actual_size < target_size * 2:
