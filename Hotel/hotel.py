@@ -434,7 +434,15 @@ def extract_channels(url):
         return []
 
 # 测速
-def speed_test(channels, min_speed_threshold=0.1):
+def speed_test(channels, min_speed_threshold=0.001, download_size_kb=100):
+    """
+    测试频道访问速度和可用性
+    
+    Args:
+        channels: 频道列表
+        min_speed_threshold: 最小速度阈值(MB/s)
+        download_size_kb: 下载数据量(KB)，默认100KB以获得更准确的速度测量
+    """
     def show_progress():
         while checked[0] < len(channels):
             numberx = checked[0] / len(channels) * 100
@@ -447,12 +455,15 @@ def speed_test(channels, min_speed_threshold=0.1):
                 channel_name, channel_url = task_queue.get(timeout=1)
                 try:
                     # 修复URL处理：使用正确的路径拼接方法
-                    base_url = channel_url.rsplit('/', 1)[0] + '/' if channel_url.endswith('.m3u8') else channel_url
+                    if channel_url.endswith('.m3u8'):
+                        base_url = channel_url.rsplit('/', 1)[0] + '/'
+                    else:
+                        base_url = channel_url if channel_url.endswith('/') else channel_url + '/'
                     
                     # 添加重试机制
                     for retry in range(3):
                         try:
-                            response = requests.get(channel_url, timeout=2)
+                            response = requests.get(channel_url, timeout=3)
                             response.raise_for_status()
                             lines = response.text.strip().split('\n')
                             break
@@ -468,41 +479,61 @@ def speed_test(channels, min_speed_threshold=0.1):
                         ts_url = base_url + ts_lists[0] if base_url.endswith('/') else base_url + '/' + ts_lists[0]
                         
                         # 使用上下文管理器确保资源释放
-                        with requests.get(ts_url, timeout=2, stream=True) as response:
+                        with requests.get(ts_url, timeout=5, stream=True) as response:
                             response.raise_for_status()
+                            
+                            # 增加下载数据量以获得更准确的速度测量
+                            target_size = download_size_kb * 1024  # 转换为字节
+                            content = b""
                             start_time = time.time()
                             
-                            # 只读取前1KB来测试速度
-                            content = b""
-                            for chunk in response.iter_content(chunk_size=10240):
+                            # 读取指定大小的数据
+                            for chunk in response.iter_content(chunk_size=8192):  # 8KB块
                                 content += chunk
-                                if len(content) >= 10240:  # 读取1KB
+                                if len(content) >= target_size:
                                     break
                             
                             resp_time = time.time() - start_time
                         
                         if content and resp_time > 0:
+                            # 计算实际下载的数据量（可能略大于目标大小）
+                            actual_size = len(content)
+                            
+                            # 计算速度 (MB/s)
+                            speed = actual_size / resp_time / 1024 / 1024
+                            
+                            # 如果下载时间太短(<0.1s)，可能测量不准确，尝试重新测试
+                            if resp_time < 0.1 and actual_size < target_size * 2:
+                                # 时间太短，可能测量不准确，标记为需要验证
+                                normalized_speed = speed
+                                note = " (测量时间较短，速度可能偏高)"
+                            else:
+                                normalized_speed = speed
+                                note = ""
+                            
+                            # 应用最小阈值
+                            if normalized_speed < min_speed_threshold:
+                                normalized_speed = min_speed_threshold
+                            
                             # 线程安全地更新计数器
                             with lock:
                                 checked[0] += 1
-                            
-                            # 计算速度，使用可配置的最小阈值
-                            speed = len(content) / resp_time / 1024 / 1024
-                            normalized_speed = max(speed, min_speed_threshold)
                             
                             result = channel_name, channel_url, f"{normalized_speed:.3f}"
                             
                             # 线程安全地添加结果
                             with lock:
                                 results.append(result)
-                                print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
+                                print(f"✓ {channel_name}: {normalized_speed:.3f} MB/s{note}")
                         else:
                             raise ValueError("无响应内容或响应时间为0")
+                    else:
+                        raise ValueError("M3U8文件中没有TS文件")
                 except Exception as e:
                     with lock:
                         checked[0] += 1
                     print(f"✗ {channel_name}: {str(e)[:50]}")
-            except Empty:  # 直接从queue模块导入的Empty
+            except Empty:
                 break
             except Exception as e:
                 with lock:
@@ -514,10 +545,10 @@ def speed_test(channels, min_speed_threshold=0.1):
                 except ValueError:
                     pass  # 如果task_done调用多于任务数，忽略错误
     
-    task_queue = Queue()  # 从queue模块导入的Queue
+    task_queue = Queue()
     results = []
     checked = [0]
-    lock = Lock()  # 从threading模块导入的Lock
+    lock = Lock()
     
     # 启动进度显示线程
     progress_thread = Thread(target=show_progress, daemon=True)
