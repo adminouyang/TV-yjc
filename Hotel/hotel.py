@@ -5,7 +5,7 @@ import datetime
 from threading import Thread
 import os
 import re
-from queue import Queue
+from queue import Queue, Empty  # 同时导入Queue和Empty
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from bs4 import BeautifulSoup
@@ -444,7 +444,7 @@ def speed_test(channels, min_speed_threshold=0.5):
     def worker():
         while True:
             try:
-                channel_name, channel_url = task_queue.get()
+                channel_name, channel_url = task_queue.get(timeout=1)
                 try:
                     # 修复URL处理：使用正确的路径拼接方法
                     base_url = channel_url.rsplit('/', 1)[0] + '/' if channel_url.endswith('.m3u8') else channel_url
@@ -483,45 +483,51 @@ def speed_test(channels, min_speed_threshold=0.5):
                         
                         if content and resp_time > 0:
                             # 线程安全地更新计数器
-                            with threading.Lock():
+                            with lock:
                                 checked[0] += 1
                             
                             # 计算速度，使用可配置的最小阈值
-                            normalized_speed = max(len(content) / resp_time / 1024 / 1024, min_speed_threshold)
+                            speed = len(content) / resp_time / 1024 / 1024
+                            normalized_speed = max(speed, min_speed_threshold)
                             
                             result = channel_name, channel_url, f"{normalized_speed:.3f}"
                             
                             # 线程安全地添加结果
-                            with threading.Lock():
+                            with lock:
                                 results.append(result)
                                 print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
                         else:
                             raise ValueError("无响应内容或响应时间为0")
                 except Exception as e:
-                    with threading.Lock():
+                    with lock:
                         checked[0] += 1
                     print(f"✗ {channel_name}: {str(e)[:50]}")
-            except queue.Empty:
+            except Queue.Empty:  # 注意这里使用 Queue.Empty
                 break
             except Exception as e:
-                with threading.Lock():
+                with lock:
                     checked[0] += 1
                 print(f"✗ 未知错误: {str(e)[:50]}")
             finally:
-                task_queue.task_done()
+                try:
+                    task_queue.task_done()
+                except ValueError:
+                    pass  # 如果task_done调用多于任务数，忽略错误
     
-    task_queue = queue.Queue()
+    task_queue = Queue()  # 注意这里使用 Queue() 而不是 queue.Queue()
     results = []
     checked = [0]
+    lock = threading.Lock()
     
     # 启动进度显示线程
-    progress_thread = threading.Thread(target=show_progress, daemon=True)
+    progress_thread = Thread(target=show_progress, daemon=True)
     progress_thread.start()
     
     # 启动工作线程
     threads = []
-    for _ in range(min(20, len(channels))):
-        t = threading.Thread(target=worker, daemon=True)
+    worker_count = min(20, len(channels))
+    for _ in range(worker_count):
+        t = Thread(target=worker, daemon=True)
         t.start()
         threads.append(t)
     
@@ -536,8 +542,10 @@ def speed_test(channels, min_speed_threshold=0.5):
     for t in threads:
         t.join(timeout=1)
     
+    # 等待进度线程结束
+    progress_thread.join(timeout=1)
+    
     return results
-
 # 统一频道名称
 def unify_channel_name(channels_list):
     new_channels_list = []
