@@ -474,9 +474,9 @@ def speed_test(channels, min_speed_threshold=0.1):
                             
                             # 只读取前1KB来测试速度
                             content = b""
-                            for chunk in response.iter_content(chunk_size=1024):
+                            for chunk in response.iter_content(chunk_size=10240):
                                 content += chunk
-                                if len(content) >= 1024:  # 读取1KB
+                                if len(content) >= 10240:  # 读取1KB
                                     break
                             
                             resp_time = time.time() - start_time
