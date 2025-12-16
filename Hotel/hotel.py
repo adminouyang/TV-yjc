@@ -644,7 +644,7 @@ def hotel_iptv(config_file):
 # 主函数
 def main():
     # 显示脚本开始时间
-    start_time = datetime.datetime.now() + datetime.timedelta(hours=8)
+    start_time = datetime.datetime.now() #+ datetime.timedelta(hours=8)
     print(f"脚本开始运行时间: {start_time.strftime('%Y-%m-%d %H:%M:%S')} (北京时间)")
     
     # 第一步：获取IP并按照省份分类
@@ -729,7 +729,7 @@ def main():
                 file_contents.append(content)
     
     # 获取北京时间
-    beijing_time = datetime.datetime.now() + datetime.timedelta(hours=8)
+    beijing_time = datetime.datetime.now() #+ datetime.timedelta(hours=8)
     current_time = beijing_time.strftime("%Y/%m/%d %H:%M")
     
     with open("1.txt", "w", encoding="utf-8") as f:
@@ -770,7 +770,7 @@ def main():
             os.remove(file)
     
     # 显示脚本结束时间
-    end_time = datetime.datetime.now() + datetime.timedelta(hours=8)
+    end_time = datetime.datetime.now() #+ datetime.timedelta(hours=8)
     print(f"\n脚本结束运行时间: {end_time.strftime('%Y-%m-%d %H:%M:%S')} (北京时间)")
     
     # 计算运行时间
