@@ -394,7 +394,7 @@ def main():
     
     # 查找配置文件
     config_files = []
-    ip_dir = 'ip'
+    ip_dir = 'Hotel/ip'
     if os.path.exists(ip_dir):
         for file in glob.glob(os.path.join(ip_dir, '*.txt')):
             filename = os.path.basename(file)
