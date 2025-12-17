@@ -2,13 +2,14 @@ import eventlet
 eventlet.monkey_patch()
 import time
 import datetime
+from datetime import datetime
 from threading import Thread, Lock  # 添加Lock导入
 import os
 import re
 from queue import Queue, Empty
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from bs4 import BeautifulSoup
+import concurrent.futures
 import json
 
 # 配置区
