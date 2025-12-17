@@ -129,8 +129,6 @@ def first_stage():
     
     print(f"✅ 任务完成！共处理 {len(province_isp_dict)} 个分类文件")
 
-
-
 # 按照省份分类保存IP
 def save_ips_by_province(ips):
     province_map = {}
@@ -158,6 +156,35 @@ def save_ips_by_province(ips):
             for ip_port in ip_list:
                 f.write(f"{ip_port}\n")
         print(f"保存 {len(ip_list)} 个IP到 {filename}")
+
+# 从URL获取IP信息
+def fetch_ips_from_urls():
+    all_ips = []
+    for url, filename in FOFA_URLS.items():
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=10)
+            if 'application/json' in response.headers.get('content-type', ''):
+                data = response.json()
+                for item in data.get('data', []):
+                    ip = item.get('ip')
+                    port = item.get('port')
+                    if ip and port:
+                        all_ips.append(f"{ip}:{port}")
+            else:
+                soup = BeautifulSoup(response.text, 'html.parser')
+                tables = soup.find_all('table')
+                for table in tables:
+                    rows = table.find_all('tr')
+                    for row in rows:
+                        cells = row.find_all('td')
+                        if len(cells) >= 2:
+                            ip_text = cells[0].get_text().strip()
+                            port_text = cells[1].get_text().strip()
+                            if re.match(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$', ip_text) and port_text.isdigit():
+                                all_ips.append(f"{ip_text}:{port_text}")
+        except Exception as e:
+            print(f"从URL {url} 获取IP错误: {e}")
+    return all_ips
 # 频道分类定义
 CHANNEL_CATEGORIES = {
     "央视频道": [
