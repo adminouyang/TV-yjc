@@ -16,7 +16,7 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
 }
 
-IP_DIR = "Hotel/ip"
+IP_DIR = "IP_Scan/ip"
 
 # 创建IP目录
 if not os.path.exists(IP_DIR):
