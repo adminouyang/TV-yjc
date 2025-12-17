@@ -546,7 +546,7 @@ def speed_test(channels):
                             temp_filename = f"temp_{hash(channel_url)}.ts"
                             with open(temp_filename, 'wb') as f:
                                 f.write(cont)
-                            normalized_speed = max(len(cont) / resp_time / 1024 / 1024, 0.5)
+                            normalized_speed = max(len(cont) / resp_time / 1024 / 1024, 0.001)
                             os.remove(temp_filename)
                             result = channel_name, channel_url, f"{normalized_speed:.3f}"
                             print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
@@ -865,4 +865,7 @@ def main():
     print("任务运行完毕，所有频道合并到iptv.txt和iptv.m3u")
 
 if __name__ == "__main__":
+    print("🚀 开始IP爬取和分类...")
+    print(f"📁 结果将保存到 {IP_DIR} 目录")
+    first_stage()
     main()
