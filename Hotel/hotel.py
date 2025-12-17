@@ -647,7 +647,7 @@ def unify_channel_name(channels_list):
             unified_name = name
         
         # 清理名称中的多余字符
-        unified_name = unified_name.replace(" ", "").replace("-", "").replace("+", "+")
+        #unified_name = unified_name.replace(" ", "").replace("-", "").replace("+", "+")
         new_channels_list.append(f"{unified_name},{channel_url},{speed}\n")
     
     return new_channels_list
