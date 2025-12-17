@@ -2,7 +2,7 @@ import eventlet
 eventlet.monkey_patch()
 import time
 import datetime
-from threading import Thread, Lock  # 添加Lock导入
+from threading import Thread, Lock
 import os
 import re
 from queue import Queue, Empty
@@ -23,6 +23,7 @@ IP_DIR = "Hotel/ip"
 # 创建IP目录
 if not os.path.exists(IP_DIR):
     os.makedirs(IP_DIR)
+    
 # IP 运营商判断
 def get_isp(ip):
     # 更准确的IP段匹配
@@ -77,6 +78,7 @@ def read_existing_ips(filepath):
         except Exception as e:
             print(f"❌ 读取文件 {filepath} 失败: {e}")
     return existing_ips
+    
 # 第一阶段：爬取和分类
 def first_stage():
     all_ips = set()
@@ -185,6 +187,7 @@ def fetch_ips_from_urls():
         except Exception as e:
             print(f"从URL {url} 获取IP错误: {e}")
     return all_ips
+
 # 频道分类定义
 CHANNEL_CATEGORIES = {
     "央视频道": [
@@ -352,6 +355,7 @@ def read_logo_file():
         except Exception as e:
             print(f"读取台标文件错误: {e}")
     return logo_dict
+
 # 检测IP:端口可用性
 def check_ip_availability(ip_port, timeout=2):
     """检测IP:端口是否可用"""
@@ -538,16 +542,22 @@ def speed_test(channels):
                             start_time = time.time()
                             cont = requests.get(ts_url, timeout=2).content
                             resp_time = (time.time() - start_time) * 1                    
-                        if cont:
+                        if cont and resp_time > 0:
                             checked[0] += 1
                             temp_filename = f"temp_{hash(channel_url)}.ts"
                             with open(temp_filename, 'wb') as f:
                                 f.write(cont)
-                            normalized_speed = max(len(cont) / resp_time / 1024 / 1024, 0.001)
+                            normalized_speed = len(cont) / resp_time / 1024 / 1024
                             os.remove(temp_filename)
-                            result = channel_name, channel_url, f"{normalized_speed:.3f}"
-                            print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
-                            results.append(result)
+                            # 过滤掉速度过慢的频道（≤0.001 MB/s）
+                            if normalized_speed > 0.001:
+                                result = channel_name, channel_url, f"{normalized_speed:.3f}"
+                                print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
+                                results.append(result)
+                            else:
+                                print(f"× {channel_name}, {channel_url}: 速度过慢 ({normalized_speed:.3f} MB/s)，已过滤")
+                        else:
+                            checked[0] += 1
                 except Exception as e:
                     checked[0] += 1
             except:
@@ -569,6 +579,7 @@ def speed_test(channels):
     
     task_queue.join()
     return results
+
 # 统一频道名称
 def unify_channel_name(channels_list):
     new_channels_list = []
@@ -719,13 +730,14 @@ def hotel_iptv(config_file):
     
     # 写入原始数据文件
     with open('1.txt', 'a', encoding='utf-8') as f:
-        f.writelines([line.split(',')[0] + ',' + line.split(',')[1] + '\n' for line in unified_channels])
+        for line in unified_channels:
+            f.write(line.split(',')[0] + ',' + line.split(',')[1] + '\n')
     print("测速完成")
 
 # 主函数
 def main():
     # 显示脚本开始时间
-    start_time = datetime.datetime.now() #+ datetime.timedelta(hours=8)
+    start_time = datetime.datetime.now()
     print(f"脚本开始运行时间: {start_time.strftime('%Y-%m-%d %H:%M:%S')} (北京时间)")
     
     # 第一步：获取IP并按照省份分类
@@ -810,7 +822,7 @@ def main():
                 file_contents.append(content)
     
     # 获取北京时间
-    beijing_time = datetime.datetime.now() #+ datetime.timedelta(hours=8)
+    beijing_time = datetime.datetime.now()
     current_time = beijing_time.strftime("%Y/%m/%d %H:%M")
     
     with open("1.txt", "w", encoding="utf-8") as f:
@@ -851,7 +863,7 @@ def main():
             os.remove(file)
     
     # 显示脚本结束时间
-    end_time = datetime.datetime.now() #+ datetime.timedelta(hours=8)
+    end_time = datetime.datetime.now()
     print(f"\n脚本结束运行时间: {end_time.strftime('%Y-%m-%d %H:%M:%S')} (北京时间)")
     
     # 计算运行时间
