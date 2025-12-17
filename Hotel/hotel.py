@@ -20,7 +20,144 @@ HEADERS = {
 }
 
 IP_DIR = "Hotel/ip"
+# 创建IP目录
+if not os.path.exists(IP_DIR):
+    os.makedirs(IP_DIR)
+# IP 运营商判断
+def get_isp(ip):
+    # 更准确的IP段匹配
+    telecom_pattern = r"^(1\.|14\.|27\.|36\.|39\.|42\.|49\.|58\.|60\.|101\.|106\.|110\.|111\.|112\.|113\.|114\.|115\.|116\.|117\.|118\.|119\.|120\.|121\.|122\.|123\.|124\.|125\.|126\.|171\.|175\.|182\.|183\.|202\.|203\.|210\.|211\.|218\.|219\.|220\.|221\.|222\.)"
+    unicom_pattern = r"^(42\.1[0-9]{0,2}|43\.|58\.|59\.|60\.|61\.|110\.|111\.|112\.|113\.|114\.|115\.|116\.|117\.|118\.|119\.|120\.|121\.|122\.|123\.|124\.|125\.|126\.|171\.8[0-9]|171\.9[0-9]|171\.1[0-9]{2}|175\.|182\.|183\.|210\.|211\.|218\.|219\.|220\.|221\.|222\.)"
+    mobile_pattern = r"^(36\.|37\.|38\.|39\.1[0-9]{0,2}|42\.2|42\.3|47\.|106\.|111\.|112\.|113\.|114\.|115\.|116\.|117\.|118\.|119\.|120\.|121\.|122\.|123\.|124\.|125\.|126\.|134\.|135\.|136\.|137\.|138\.|139\.|150\.|151\.|152\.|157\.|158\.|159\.|170\.|178\.|182\.|183\.|184\.|187\.|188\.|189\.)"
+    
+    if re.match(telecom_pattern, ip):
+        return "电信"
+    elif re.match(unicom_pattern, ip):
+        return "联通"
+    elif re.match(mobile_pattern, ip):
+        return "移动"
+    else:
+        return "未知"
 
+# 获取IP地理信息
+def get_ip_info(ip_port):
+    try:
+        ip = ip_port.split(":")[0]
+        # 添加重试机制
+        for attempt in range(3):
+            try:
+                res = requests.get(f"http://ip-api.com/json/{ip}?lang=zh-CN", 
+                                  timeout=10, headers=HEADERS)
+                if res.status_code == 200:
+                    data = res.json()
+                    if data.get("status") == "success":
+                        province = data.get("regionName", "未知")
+                        isp = get_isp(ip)
+                        return province, isp, ip_port
+                break
+            except requests.RequestException:
+                if attempt == 2:  # 最后一次尝试失败
+                    return None, None, ip_port
+                time.sleep(1)
+    except Exception:
+        pass
+    return None, None, ip_port
+
+# 读取现有文件内容并去重
+def read_existing_ips(filepath):
+    existing_ips = set()
+    if os.path.exists(filepath):
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                for line in f:
+                    ip = line.strip()
+                    if ip:  # 确保不是空行
+                        existing_ips.add(ip)
+            print(f"📖 从 {os.path.basename(filepath)} 读取到 {len(existing_ips)} 个现有IP")
+        except Exception as e:
+            print(f"❌ 读取文件 {filepath} 失败: {e}")
+    return existing_ips
+# 第一阶段：爬取和分类
+def first_stage():
+    all_ips = set()
+    
+    for url, filename in FOFA_URLS.items():
+        print(f"📡 正在爬取 {filename} ...")
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            print(r.text)
+            # 改进的正则表达式匹配
+            urls_all = re.findall(r'<a href="http://(.*?)"', r.text)
+            # 过滤出有效的IP:端口格式
+            all_ips.update(u.strip() for u in urls_all)
+            
+            print(f"✅ 从 {filename} 获取到 {len(urls_all)} 个IP，其中 {len(all_ips)} 个有效")
+        except Exception as e:
+            print(f"❌ 爬取失败：{e}")
+        time.sleep(3)
+    
+    print(f"🔍 总共获取到 {len(all_ips)} 个有效IP")
+    
+    # 使用多线程加速IP信息查询
+    province_isp_dict = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        future_to_ip = {executor.submit(get_ip_info, ip): ip for ip in all_ips}
+        
+        for future in concurrent.futures.as_completed(future_to_ip):
+            province, isp, ip_port = future.result()
+            if province and isp and isp != "未知":
+                fname = f"{province}{isp}.txt"
+                province_isp_dict.setdefault(fname, set()).add(ip_port)
+    
+    # 保存到文件（追加模式，不去重）
+    for fname, new_ips in province_isp_dict.items():
+        filepath = os.path.join(IP_DIR, fname)
+        
+        # 读取现有IP
+        existing_ips = read_existing_ips(filepath)
+        
+        # 合并新旧IP并去重
+        all_ips_for_file = existing_ips.union(new_ips)
+        
+        # 写入文件
+        with open(filepath, 'w', encoding='utf-8') as f:
+            for ip in all_ips_for_file:
+                f.write(ip + '\n')
+        
+        added_count = len(all_ips_for_file) - len(existing_ips)
+        print(f"💾 已更新 {fname}，新增 {added_count} 个IP，总计 {len(all_ips_for_file)} 个IP")
+    
+    print(f"✅ 任务完成！共处理 {len(province_isp_dict)} 个分类文件")
+
+
+
+# 按照省份分类保存IP
+def save_ips_by_province(ips):
+    province_map = {}
+    for ip_port in ips:
+        ip = ip_port.split(':')[0]
+        first_octet = ip.split('.')[0]
+        if first_octet in ['1', '2']:
+            province = '北京'
+        elif first_octet in ['3', '4']:
+            province = '上海'
+        elif first_octet in ['5', '6']:
+            province = '广东'
+        elif first_octet in ['7', '8']:
+            province = '浙江'
+        else:
+            province = '其他'
+        
+        if province not in province_map:
+            province_map[province] = []
+        province_map[province].append(ip_port)
+    
+    for province, ip_list in province_map.items():
+        filename = os.path.join(IP_DIR, f"{province}.txt")
+        with open(filename, 'w', encoding='utf-8') as f:
+            for ip_port in ip_list:
+                f.write(f"{ip_port}\n")
+        print(f"保存 {len(ip_list)} 个IP到 {filename}")
 # 频道分类定义
 CHANNEL_CATEGORIES = {
     "央视频道": [
@@ -171,10 +308,6 @@ CHANNEL_MAPPING = {
 
 RESULTS_PER_CHANNEL = 20
 
-# 创建IP目录
-if not os.path.exists(IP_DIR):
-    os.makedirs(IP_DIR)
-
 # 读取台标文件
 def read_logo_file():
     logo_dict = {}
@@ -192,169 +325,6 @@ def read_logo_file():
         except Exception as e:
             print(f"读取台标文件错误: {e}")
     return logo_dict
-# IP 运营商判断
-def get_isp(ip):
-    # 更准确的IP段匹配
-    telecom_pattern = r"^(1\.|14\.|27\.|36\.|39\.|42\.|49\.|58\.|60\.|101\.|106\.|110\.|111\.|112\.|113\.|114\.|115\.|116\.|117\.|118\.|119\.|120\.|121\.|122\.|123\.|124\.|125\.|126\.|171\.|175\.|182\.|183\.|202\.|203\.|210\.|211\.|218\.|219\.|220\.|221\.|222\.)"
-    unicom_pattern = r"^(42\.1[0-9]{0,2}|43\.|58\.|59\.|60\.|61\.|110\.|111\.|112\.|113\.|114\.|115\.|116\.|117\.|118\.|119\.|120\.|121\.|122\.|123\.|124\.|125\.|126\.|171\.8[0-9]|171\.9[0-9]|171\.1[0-9]{2}|175\.|182\.|183\.|210\.|211\.|218\.|219\.|220\.|221\.|222\.)"
-    mobile_pattern = r"^(36\.|37\.|38\.|39\.1[0-9]{0,2}|42\.2|42\.3|47\.|106\.|111\.|112\.|113\.|114\.|115\.|116\.|117\.|118\.|119\.|120\.|121\.|122\.|123\.|124\.|125\.|126\.|134\.|135\.|136\.|137\.|138\.|139\.|150\.|151\.|152\.|157\.|158\.|159\.|170\.|178\.|182\.|183\.|184\.|187\.|188\.|189\.)"
-    
-    if re.match(telecom_pattern, ip):
-        return "电信"
-    elif re.match(unicom_pattern, ip):
-        return "联通"
-    elif re.match(mobile_pattern, ip):
-        return "移动"
-    else:
-        return "未知"
-
-# 获取IP地理信息
-def get_ip_info(ip_port):
-    try:
-        ip = ip_port.split(":")[0]
-        # 添加重试机制
-        for attempt in range(3):
-            try:
-                res = requests.get(f"http://ip-api.com/json/{ip}?lang=zh-CN", 
-                                  timeout=10, headers=HEADERS)
-                if res.status_code == 200:
-                    data = res.json()
-                    if data.get("status") == "success":
-                        province = data.get("regionName", "未知")
-                        isp = get_isp(ip)
-                        return province, isp, ip_port
-                break
-            except requests.RequestException:
-                if attempt == 2:  # 最后一次尝试失败
-                    return None, None, ip_port
-                time.sleep(1)
-    except Exception:
-        pass
-    return None, None, ip_port
-
-# 读取现有文件内容并去重
-def read_existing_ips(filepath):
-    existing_ips = set()
-    if os.path.exists(filepath):
-        try:
-            with open(filepath, 'r', encoding='utf-8') as f:
-                for line in f:
-                    ip = line.strip()
-                    if ip:  # 确保不是空行
-                        existing_ips.add(ip)
-            print(f"📖 从 {os.path.basename(filepath)} 读取到 {len(existing_ips)} 个现有IP")
-        except Exception as e:
-            print(f"❌ 读取文件 {filepath} 失败: {e}")
-    return existing_ips
-# 第一阶段：爬取和分类
-def first_stage():
-    all_ips = set()
-    
-    for url, filename in FOFA_URLS.items():
-        print(f"📡 正在爬取 {filename} ...")
-        try:
-            r = requests.get(url, headers=HEADERS, timeout=15)
-            print(r.text)
-            # 改进的正则表达式匹配
-            urls_all = re.findall(r'<a href="http://(.*?)"', r.text)
-            # 过滤出有效的IP:端口格式
-            all_ips.update(u.strip() for u in urls_all)
-            
-            print(f"✅ 从 {filename} 获取到 {len(urls_all)} 个IP，其中 {len(all_ips)} 个有效")
-        except Exception as e:
-            print(f"❌ 爬取失败：{e}")
-        time.sleep(3)
-    
-    print(f"🔍 总共获取到 {len(all_ips)} 个有效IP")
-    
-    # 使用多线程加速IP信息查询
-    province_isp_dict = {}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        future_to_ip = {executor.submit(get_ip_info, ip): ip for ip in all_ips}
-        
-        for future in concurrent.futures.as_completed(future_to_ip):
-            province, isp, ip_port = future.result()
-            if province and isp and isp != "未知":
-                fname = f"{province}{isp}.txt"
-                province_isp_dict.setdefault(fname, set()).add(ip_port)
-    
-    # 保存到文件（追加模式，不去重）
-    for fname, new_ips in province_isp_dict.items():
-        filepath = os.path.join(IP_DIR, fname)
-        
-        # 读取现有IP
-        existing_ips = read_existing_ips(filepath)
-        
-        # 合并新旧IP并去重
-        all_ips_for_file = existing_ips.union(new_ips)
-        
-        # 写入文件
-        with open(filepath, 'w', encoding='utf-8') as f:
-            for ip in all_ips_for_file:
-                f.write(ip + '\n')
-        
-        added_count = len(all_ips_for_file) - len(existing_ips)
-        print(f"💾 已更新 {fname}，新增 {added_count} 个IP，总计 {len(all_ips_for_file)} 个IP")
-    
-    print(f"✅ 任务完成！共处理 {len(province_isp_dict)} 个分类文件")
-
-# 从URL获取IP信息
-def fetch_ips_from_urls():
-    all_ips = []
-    for url, filename in FOFA_URLS.items():
-        try:
-            response = requests.get(url, headers=HEADERS, timeout=10)
-            if 'application/json' in response.headers.get('content-type', ''):
-                data = response.json()
-                for item in data.get('data', []):
-                    ip = item.get('ip')
-                    port = item.get('port')
-                    if ip and port:
-                        all_ips.append(f"{ip}:{port}")
-            else:
-                soup = BeautifulSoup(response.text, 'html.parser')
-                tables = soup.find_all('table')
-                for table in tables:
-                    rows = table.find_all('tr')
-                    for row in rows:
-                        cells = row.find_all('td')
-                        if len(cells) >= 2:
-                            ip_text = cells[0].get_text().strip()
-                            port_text = cells[1].get_text().strip()
-                            if re.match(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$', ip_text) and port_text.isdigit():
-                                all_ips.append(f"{ip_text}:{port_text}")
-        except Exception as e:
-            print(f"从URL {url} 获取IP错误: {e}")
-    return all_ips
-
-# 按照省份分类保存IP
-def save_ips_by_province(ips):
-    province_map = {}
-    for ip_port in ips:
-        ip = ip_port.split(':')[0]
-        first_octet = ip.split('.')[0]
-        if first_octet in ['1', '2']:
-            province = '北京'
-        elif first_octet in ['3', '4']:
-            province = '上海'
-        elif first_octet in ['5', '6']:
-            province = '广东'
-        elif first_octet in ['7', '8']:
-            province = '浙江'
-        else:
-            province = '其他'
-        
-        if province not in province_map:
-            province_map[province] = []
-        province_map[province].append(ip_port)
-    
-    for province, ip_list in province_map.items():
-        filename = os.path.join(IP_DIR, f"{province}.txt")
-        with open(filename, 'w', encoding='utf-8') as f:
-            for ip_port in ip_list:
-                f.write(f"{ip_port}\n")
-        print(f"保存 {len(ip_list)} 个IP到 {filename}")
-
 # 检测IP:端口可用性
 def check_ip_availability(ip_port, timeout=2):
     """检测IP:端口是否可用"""
