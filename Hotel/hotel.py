@@ -250,9 +250,26 @@ CHANNEL_CATEGORIES = {
 }
 
 # 特殊符号映射，在匹配时将特殊符号替换为空
-SPECIAL_SYMBOLS = ["HD", "LT", "", "", "", "", "", "", "", "", "", 
-                   "", "", "", "", "", "", "", "", "", 
-                  ]
+SPECIAL_SYMBOLS = ["HD", "LT", "高清", "标清", "超清", "4K", "4k", "H265", "H264", "H.265", "H.264", 
+                   "HEVC", "AVC", "1080P", "720P", "576P", "480P", "360P", "杜比", "Dolby", 
+                   "环绕", "立体声", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", 
+                   "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道", "声道"]
 
 # 移除特殊符号的函数
 def remove_special_symbols(text):
@@ -643,7 +660,55 @@ def speed_test(channels):
     task_queue.join()
     return results
 
-# 统一频道名称 - 改进版本，移除特殊符号后再匹配
+# 精确频道名称匹配函数
+def exact_channel_match(channel_name, pattern_name):
+    """
+    精确匹配频道名称，避免CCTV1匹配到CCTV10等问题
+    规则：
+    1. 移除特殊符号
+    2. 转换为小写
+    3. 检查精确匹配或包含匹配
+    4. 对于数字频道，确保数字边界
+    """
+    # 清理名称
+    clean_name = remove_special_symbols(channel_name.strip().lower())
+    clean_pattern = remove_special_symbols(pattern_name.strip().lower())
+    
+    # 如果清理后完全相等，直接返回True
+    if clean_name == clean_pattern:
+        return True
+    
+    # 如果模式是"cctv1"，但名称是"cctv10"，应该不匹配
+    # 检查数字边界
+    if clean_pattern.startswith("cctv") and clean_name.startswith("cctv"):
+        # 提取数字部分
+        pattern_num_match = re.search(r'cctv(\d+)', clean_pattern)
+        name_num_match = re.search(r'cctv(\d+)', clean_name)
+        
+        if pattern_num_match and name_num_match:
+            pattern_num = pattern_num_match.group(1)
+            name_num = name_num_match.group(1)
+            
+            # 如果数字不同，不匹配
+            if pattern_num != name_num:
+                return False
+            
+            # 如果数字相同，检查剩余部分
+            pattern_rest = clean_pattern.replace(f"cctv{pattern_num}", "")
+            name_rest = clean_name.replace(f"cctv{name_num}", "")
+            
+            # 如果剩余部分相同或模式没有剩余部分，则匹配
+            if pattern_rest == "" or name_rest.startswith(pattern_rest):
+                return True
+            return False
+    
+    # 对于非CCTV频道，使用简单的包含匹配
+    if clean_pattern in clean_name:
+        return True
+    
+    return False
+
+# 统一频道名称 - 使用精确匹配
 def unify_channel_name(channels_list):
     new_channels_list = []
     
@@ -651,59 +716,38 @@ def unify_channel_name(channels_list):
         original_name = name
         unified_name = None
         
-        # 清理名称，移除特殊符号
-        clean_name = remove_special_symbols(name.strip())
+        # 清理原始名称
+        clean_name = remove_special_symbols(name.strip().lower())
         
-        # 首先尝试精确匹配
+        # 先尝试精确匹配
         for standard_name, variants in CHANNEL_MAPPING.items():
             for variant in variants:
-                # 移除variant中的特殊符号
-                clean_variant = remove_special_symbols(variant)
-                
-                # 进行匹配
-                if clean_variant and clean_variant.lower() in clean_name.lower():
-                    unified_name = standard_name
-                    break
-                # 如果clean_name包含variant
-                elif variant and variant.lower() in clean_name.lower():
+                if exact_channel_match(name, variant):
                     unified_name = standard_name
                     break
             if unified_name:
                 break
         
-        # 如果没有找到映射，则尝试部分匹配
+        # 如果没有找到精确匹配，尝试其他匹配策略
         if not unified_name:
-            for standard_name, variants in CHANNEL_MAPPING.items():
-                for variant in variants:
-                    clean_variant = remove_special_symbols(variant)
-                    # 检查是否有共同的部分
-                    if clean_variant and len(clean_variant) > 2:
-                        # 分割成单词
-                        variant_words = re.findall(r'[a-zA-Z0-9\u4e00-\u9fa5]+', clean_variant.lower())
-                        clean_words = re.findall(r'[a-zA-Z0-9\u4e00-\u9fa5]+', clean_name.lower())
-                        
-                        # 检查是否有足够的匹配
-                        match_count = 0
-                        for v_word in variant_words:
-                            for c_word in clean_words:
-                                if v_word in c_word or c_word in v_word:
-                                    match_count += 1
-                                    break
-                        
-                        # 如果匹配的单词数超过一半
-                        if match_count >= len(variant_words) / 2 and match_count > 0:
+            # 尝试处理CCTV数字频道
+            cctv_match = re.search(r'cctv[-_\s]?(\d+)', clean_name, re.IGNORECASE)
+            if cctv_match:
+                cctv_num = cctv_match.group(1)
+                for standard_name, variants in CHANNEL_MAPPING.items():
+                    if standard_name.startswith("CCTV"):
+                        std_match = re.search(r'cctv(\d+)', standard_name.lower())
+                        if std_match and std_match.group(1) == cctv_num:
                             unified_name = standard_name
                             break
-                if unified_name:
-                    break
         
-        # 如果还是没有找到映射，则保留原名称
+        # 如果还是没有找到，保留原名称
         if not unified_name:
             unified_name = original_name
         
         new_channels_list.append(f"{unified_name},{channel_url},{speed}\n")
         if original_name != unified_name:
-            print(f"频道名称统一: '{original_name}' -> '{unified_name}' (清理后: '{clean_name}')")
+            print(f"频道名称统一: '{original_name}' -> '{unified_name}'")
     
     return new_channels_list
 
