@@ -1,4 +1,4 @@
-name: Hotel 
+name: Hotel
 
 on:
   schedule:
@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  
 env:
   TZ: 'Asia/Shanghai'
 
@@ -14,45 +15,50 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: 检出代码
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - name: Set up Python
+      - name: 强制更新到最新
+        run: |
+          git fetch origin
+          git reset --hard origin/main
+          echo "已更新到最新代码"
+
+      - name: 设置 Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
       
-      - name: Install dependencies
+      - name: 安装依赖
         run: |
           pip install -r Hotel/requirements.txt
       
       - name: 获取酒店源
         run: python Hotel/hotel.py
 
-      - name: Configure Git
+      - name: 提交更改
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-
-      - name: Pull and push changes
-        run: |
-          # 拉取远程更改
-          git pull origin main --rebase --allow-unrelated-histories || true
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
           
-          # 添加文件
-          git add .
+          git add -A
           
-          # 检查是否有更改
-          if git diff-index --quiet HEAD --; then
-            echo "没有更改可提交"
+          if git diff --cached --quiet; then
+            echo "没有检测到更改"
             exit 0
           fi
           
-          # 提交更改
-          git commit -m "更新酒店源 $(date '+%Y-%m-%d %H:%M:%S')"
+          git commit -m "📺 更新酒店源 $(date '+%Y-%m-%d %H:%M:%S')"
+
+      - name: 强制推送
+        run: |
+          # 再次拉取最新
+          git fetch origin
           
-          # 推送更改
-          git push origin main
+          # 使用带租约的强制推送，更安全
+          git push origin main --force-with-lease
+          
+          echo "✅ 推送完成"
