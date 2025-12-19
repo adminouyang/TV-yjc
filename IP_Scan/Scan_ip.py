@@ -26,13 +26,6 @@ CITY_STREAMS = {
     "四川电信": ["udp/239.93.0.169:5140"],
 }
 
-# 通用测试流（当城市特定流不可用时使用）
-COMMON_TEST_STREAMS = [
-    "rtp/225.1.1.1:1234",
-    "udp/239.1.1.1:1234",
-    "rtp/238.1.1.1:1234",
-]
-
 def get_random_headers():
     return {
         'User-Agent': random.choice(USER_AGENTS),
@@ -67,8 +60,8 @@ def get_test_streams_for_city(city_name):
             if "移动" in key:
                 return streams
     
-    # 返回通用测试流
-    return COMMON_TEST_STREAMS
+    # 没有匹配到任何城市，返回空列表
+    return []
 
 def read_config(config_file):
     """读取配置文件，解析IP:端口和可选的option值"""
@@ -159,6 +152,11 @@ def check_single_url(ip_port, province, timeout=15):
         
         # 获取该城市对应的测试流
         test_streams = get_test_streams_for_city(province)
+        
+        if not test_streams:
+            print(f"⚠ 没有为城市 '{province}' 找到对应的测试流，跳过测试")
+            return None, 0, ""
+        
         print(f"使用测试流: {test_streams}")
         
         best_speed = 0
@@ -336,7 +334,7 @@ def multicast_province(config_file):
         os.makedirs('ip', exist_ok=True)
         with open(f"ip/{province}_ip.txt", 'w', encoding='utf-8') as f:
             for ip_port, speed, stream in unique_results:
-                f.write(f"{ip_port}\n {speed:.2f} KB/s\n")             #f.write(f"{ip_port},{speed:.2f},{stream}\n")
+                f.write(f"{ip_port}\n {speed:.2f} KB/s\n")
         
         # 生成组播文件（只包含IP:端口）
         template_file = os.path.join('template', f"template_{province}.txt")
@@ -403,29 +401,9 @@ def main():
     
     if not config_files:
         print("未找到配置文件，请在ip文件夹下创建.txt配置文件")
-        # 创建示例配置文件
-        # example_content = """# 示例配置文件
-# # 格式: IP:端口 (默认option=0)
-# # 或者: IP:端口,option (指定option值)
-
-# # 扫描D段 (option=0)
-# 114.107.2.156:2000
-
-# # 扫描C段和D段 (option=1)  
-# 114.107.2.156:2000,1
-
-# # 扫描指定C段范围 (option=2)
-# 114.107.2-10.156:2000,2
-
-# # 扫描整个B段 (option=3)
-# 114.107.2.156:2000,3
-# """
-#         with open(os.path.join(ip_dir, '示例电信.txt'), 'w', encoding='utf-8') as f:
-#             f.write(example_content)
-#         print("已创建示例配置文件: ip/示例电信.txt")
-#         return
+        return
     
-#     print(f"找到 {len(config_files)} 个配置文件: {[os.path.basename(f) for f in config_files]}")
+    print(f"找到 {len(config_files)} 个配置文件: {[os.path.basename(f) for f in config_files]}")
     
     for config_file in config_files:
         multicast_province(config_file)
