@@ -37,30 +37,9 @@ def get_random_headers():
 
 def get_test_streams_for_city(city_name):
     """根据城市名称获取测试流地址列表"""
-    # 精确匹配
+    # 只返回CITY_STREAMS中定义的城市测试流
     if city_name in CITY_STREAMS:
         return CITY_STREAMS[city_name]
-    
-    # 模糊匹配（包含关系）
-    for key, streams in CITY_STREAMS.items():
-        if key in city_name or city_name in key:
-            return streams
-    
-    # 运营商匹配
-    if "电信" in city_name:
-        for key, streams in CITY_STREAMS.items():
-            if "电信" in key:
-                return streams
-    elif "联通" in city_name:
-        for key, streams in CITY_STREAMS.items():
-            if "联通" in key:
-                return streams
-    elif "移动" in city_name:
-        for key, streams in CITY_STREAMS.items():
-            if "移动" in key:
-                return streams
-    
-    # 没有匹配到任何城市，返回空列表
     return []
 
 def read_config(config_file):
@@ -154,7 +133,7 @@ def check_single_url(ip_port, province, timeout=15):
         test_streams = get_test_streams_for_city(province)
         
         if not test_streams:
-            print(f"⚠ 没有为城市 '{province}' 找到对应的测试流，跳过测试")
+            print(f"⚠ 跳过测试: 城市 '{province}' 没有对应的测试流")
             return None, 0, ""
         
         print(f"使用测试流: {test_streams}")
@@ -390,20 +369,31 @@ def main():
     os.makedirs('template', exist_ok=True)
     os.makedirs('my_tv', exist_ok=True)
     
-    # 查找配置文件
+    # 查找配置文件，只处理CITY_STREAMS中定义的文件
     config_files = []
     ip_dir = 'ip'
+    
     if os.path.exists(ip_dir):
-        for file in glob.glob(os.path.join(ip_dir, '*.txt')):
-            filename = os.path.basename(file)
-            if not filename.endswith('_ip.txt'):
-                config_files.append(file)
+        # 获取CITY_STREAMS中定义的所有省份名称
+        supported_provinces = list(CITY_STREAMS.keys())
+        print(f"支持扫描的省份: {supported_provinces}")
+        
+        for province in supported_provinces:
+            config_file = os.path.join(ip_dir, f"{province}.txt")
+            if os.path.exists(config_file):
+                config_files.append(config_file)
+                print(f"找到配置文件: {province}.txt")
+            else:
+                print(f"⚠ 未找到配置文件: {province}.txt")
     
     if not config_files:
-        print("未找到配置文件，请在ip文件夹下创建.txt配置文件")
+        print("未找到支持的配置文件，请在ip文件夹下创建对应的.txt配置文件")
+        print("支持的配置文件名称:")
+        for province in CITY_STREAMS.keys():
+            print(f"  - {province}.txt")
         return
     
-    print(f"找到 {len(config_files)} 个配置文件: {[os.path.basename(f) for f in config_files]}")
+    print(f"找到 {len(config_files)} 个支持的配置文件")
     
     for config_file in config_files:
         multicast_province(config_file)
