@@ -4,7 +4,8 @@ on:
   schedule:
     - cron: '0 4,17 * * *'
   workflow_dispatch:
-
+env:
+  TZ: 'Asia/Shanghai'
 permissions:
   contents: write
 
@@ -34,16 +35,23 @@ jobs:
         cd IP_Scan
         python Scan_ip.py
 
+    - name: 检查是否有更改
+      id: check_changes
+      run: |
+        cd IP_Scan
+        if git diff --exit-code; then
+          echo "没有更改需要提交"
+          echo "changes=false" >> $GITHUB_OUTPUT
+        else
+          echo "检测到更改"
+          echo "changes=true" >> $GITHUB_OUTPUT
+        fi
+
     - name: 提交更改
+      if: steps.check_changes.outputs.changes == 'true'
       run: |
         git config --local user.name "github-actions[bot]"
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git add .
-        # 只有在有更改时才提交
-        git diff-index --quiet HEAD || git commit -m "自动更新组播源 $(date +'%Y-%m-%d %H:%M')"
+        git commit -m "自动更新组播源 $(date +'%Y-%m-%d %H:%M')"
         git push
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "更新组播源"
-          git push
