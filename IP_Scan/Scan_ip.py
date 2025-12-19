@@ -88,8 +88,8 @@ def test_stream_speed(stream_url, timeout=5):
         
         # 读取100KB数据用于测速
         downloaded = 0
-        chunk_size = 10 * 1024  # 10KB chunks
-        max_download = 100 * 1024  # 100KB
+        chunk_size = 100 * 1024  # 10KB chunks
+        max_download = 1000 * 1024  # 100KB
         
         for chunk in response.iter_content(chunk_size=chunk_size):
             downloaded += len(chunk)
@@ -578,7 +578,7 @@ def merge_all_files():
                 logo_url = logo_dict.get(channel_name, "")
                 
                 # 频道名称格式: 频道名称$城市
-                display_name = f"{channel_name}${city}"
+                display_name = f"{channel_name}"
                 
                 if logo_url:
                     f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{display_name}" tvg-logo="{logo_url}" group-title="{category}",{display_name}\n')
