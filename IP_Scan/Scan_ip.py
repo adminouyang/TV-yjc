@@ -404,28 +404,28 @@ def main():
     if not config_files:
         print("未找到配置文件，请在ip文件夹下创建.txt配置文件")
         # 创建示例配置文件
-        example_content = """# 示例配置文件
-# 格式: IP:端口 (默认option=0)
-# 或者: IP:端口,option (指定option值)
+        # example_content = """# 示例配置文件
+# # 格式: IP:端口 (默认option=0)
+# # 或者: IP:端口,option (指定option值)
 
-# 扫描D段 (option=0)
-114.107.2.156:2000
+# # 扫描D段 (option=0)
+# 114.107.2.156:2000
 
-# 扫描C段和D段 (option=1)  
-114.107.2.156:2000,1
+# # 扫描C段和D段 (option=1)  
+# 114.107.2.156:2000,1
 
-# 扫描指定C段范围 (option=2)
-114.107.2-10.156:2000,2
+# # 扫描指定C段范围 (option=2)
+# 114.107.2-10.156:2000,2
 
-# 扫描整个B段 (option=3)
-114.107.2.156:2000,3
-"""
-        with open(os.path.join(ip_dir, '示例电信.txt'), 'w', encoding='utf-8') as f:
-            f.write(example_content)
-        print("已创建示例配置文件: ip/示例电信.txt")
-        return
+# # 扫描整个B段 (option=3)
+# 114.107.2.156:2000,3
+# """
+#         with open(os.path.join(ip_dir, '示例电信.txt'), 'w', encoding='utf-8') as f:
+#             f.write(example_content)
+#         print("已创建示例配置文件: ip/示例电信.txt")
+#         return
     
-    print(f"找到 {len(config_files)} 个配置文件: {[os.path.basename(f) for f in config_files]}")
+#     print(f"找到 {len(config_files)} 个配置文件: {[os.path.basename(f) for f in config_files]}")
     
     for config_file in config_files:
         multicast_province(config_file)
