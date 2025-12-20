@@ -533,9 +533,9 @@ def generate_files_for_city(city_name, top_ips, logo_dict):
                     logo_url = logo_dict.get(channel_name, "")
                     
                     if logo_url:
-                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}$\n')
+                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}${city_name}\n')
                     else:
-                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}\n')
+                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}${city_name}\n')
                     m3u_f.write(f"{new_url}\n")
                     
                     channel_count += 1
@@ -547,216 +547,179 @@ def generate_files_for_city(city_name, top_ips, logo_dict):
 
 def merge_all_files():
     """合并所有城市的TXT和M3U文件，按照频道模板排序"""
-    txt_files = glob.glob("output/*.txt")
-    m3u_files = glob.glob("output/*.m3u")
-    
-    if not txt_files or not m3u_files:
-        print("没有找到输出文件可合并")
-        return
-    
-    # 按城市名称排序
-    txt_files.sort()
-    m3u_files.sort()
-    
-    # 读取频道模板
-    channel_template = read_channel_template()
-    if not channel_template:
-        print("没有读取到频道模板，使用默认排序")
-        return
-    
-    # 读取台标文件
-    logo_dict = read_logo_file()
-    
-    # 生成时间
     try:
-        now = datetime.datetime.now(timezone.utc) + timedelta(hours=8)
-    except:
-        now = datetime.datetime.utcnow() + timedelta(hours=8)
-    current_time = now.strftime("%Y/%m/%d %H:%M")
-    
-    # 收集所有频道
-    # 结构: {channel_name: {category: [(url, city), ...]}}
-    all_channels = {}
-    
-    # 先收集所有频道的源
-    for txt_file in txt_files:
-        city_name = os.path.basename(txt_file).replace('.txt', '')
+        txt_files = glob.glob("output/*.txt")
+        m3u_files = glob.glob("output/*.m3u")
         
-        with open(txt_file, 'r', encoding='utf-8') as f:
-            current_category = ""
-            for line in f:
-                line = line.strip()
-                if not line:
-                    continue
-                
-                if ",#genre#" in line:
-                    current_category = line.replace(",#genre#", "").strip()
-                elif line and "," in line and current_category:
-                    # 解析频道行，格式为: 频道名称,URL$城市
-                    parts = line.split(",", 1)
-                    if len(parts) == 2:
-                        channel_name = parts[0].strip()
-                        channel_part = parts[1].strip()
-                        
-                        # 检查是否有城市标记
-                        if "$" in channel_part:
-                            channel_url, city = channel_part.rsplit("$", 1)
-                        else:
-                            channel_url = channel_part
-                            city = city_name
-                        
-                        # 将频道添加到字典
-                        if channel_name not in all_channels:
-                            all_channels[channel_name] = {}
-                        
-                        if current_category not in all_channels[channel_name]:
-                            all_channels[channel_name][current_category] = []
-                        
-                        all_channels[channel_name][current_category].append((channel_url, city))
-    
-    # 重新组织频道，按照模板分类
-    # 结构: {category: {main_channel_name: {channel_name: [(url, city), ...]}}}
-    organized_channels = {}
-    
-    # 初始化所有分类
-    for category in channel_template.keys():
-        organized_channels[category] = {}
-    
-    # 添加"其它频道"分类
-    organized_channels["其它频道"] = {}
-    
-    # 将频道分配到模板分类中
-    for channel_name, categories_dict in all_channels.items():
-        # 根据频道名称获取分类
-        category = get_channel_category(channel_name, channel_template)
+        if not txt_files or not m3u_files:
+            print("没有找到输出文件可合并")
+            return
         
-        # 获取主频道名
-        main_channel_name = get_main_channel_name(channel_name, channel_template)
+        # 按城市名称排序
+        txt_files.sort()
+        m3u_files.sort()
         
-        if category not in organized_channels:
+        # 读取频道模板
+        channel_template = read_channel_template()
+        if not channel_template:
+            print("没有读取到频道模板，使用默认排序")
+            return
+        
+        # 读取台标文件
+        logo_dict = read_logo_file()
+        
+        # 生成时间
+        try:
+            now = datetime.datetime.now(timezone.utc) + timedelta(hours=8)
+        except:
+            now = datetime.datetime.utcnow() + timedelta(hours=8)
+        current_time = now.strftime("%Y/%m/%d %H:%M")
+        
+        # 收集所有频道
+        # 结构: {channel_name: {category: [(url, city), ...]}}
+        all_channels = {}
+        
+        # 先收集所有频道的源
+        for txt_file in txt_files:
+            city_name = os.path.basename(txt_file).replace('.txt', '')
+            
+            with open(txt_file, 'r', encoding='utf-8') as f:
+                current_category = ""
+                for line in f:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    
+                    if ",#genre#" in line:
+                        current_category = line.replace(",#genre#", "").strip()
+                    elif line and "," in line and current_category:
+                        # 解析频道行，格式为: 频道名称,URL$城市
+                        parts = line.split(",", 1)
+                        if len(parts) == 2:
+                            channel_name = parts[0].strip()
+                            channel_part = parts[1].strip()
+                            
+                            # 检查是否有城市标记
+                            if "$" in channel_part:
+                                channel_url, city = channel_part.rsplit("$", 1)
+                            else:
+                                channel_url = channel_part
+                                city = city_name
+                            
+                            # 将频道添加到字典
+                            if channel_name not in all_channels:
+                                all_channels[channel_name] = {}
+                            
+                            if current_category not in all_channels[channel_name]:
+                                all_channels[channel_name][current_category] = []
+                            
+                            all_channels[channel_name][current_category].append((channel_url, city))
+        
+        # 重新组织频道，按照模板分类
+        # 结构: {category: {main_channel_name: [(original_channel_name, url, city), ...]}}
+        organized_channels = {}
+        
+        # 初始化所有分类
+        for category in channel_template.keys():
             organized_channels[category] = {}
         
-        if main_channel_name not in organized_channels[category]:
-            organized_channels[category][main_channel_name] = {}
+        # 添加"其它频道"分类
+        organized_channels["其它频道"] = {}
         
-        if channel_name not in organized_channels[category][main_channel_name]:
-            organized_channels[category][main_channel_name][channel_name] = []
-        
-        # 添加所有源
-        for original_category, sources in categories_dict.items():
-            for url, city in sources:
-                organized_channels[category][main_channel_name][channel_name].append((url, city))
-    
-    # 写入合并的TXT文件
-    with open("zubo_all.txt", "w", encoding="utf-8") as f:
-        f.write(f"{current_time}更新,#genre#\n")
-        f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
-        
-        # 按照模板定义的分类顺序写入
-        for category in channel_template.keys():
-            if category in organized_channels and organized_channels[category]:
-                f.write(f"{category},#genre#\n")
-                
-                # 按照模板中的频道顺序写入
-                for main_channel, aliases in channel_template[category]:
-                    if main_channel in organized_channels[category]:
-                        # 先写入主频道
-                        if main_channel in organized_channels[category][main_channel]:
-                            for channel_name, sources in organized_channels[category][main_channel][main_channel].items():
-                                for url, city in sources:
-                                    f.write(f"{channel_name},{url}${city}\n")
-                        
-                        # 写入别名频道
-                        for alias in aliases:
-                            # 查找匹配的频道
-                            for channel_name in organized_channels[category][main_channel].keys():
-                                if alias and clean_channel_name(alias) in clean_channel_name(channel_name):
-                                    for url, city in organized_channels[category][main_channel][channel_name]:
-                                        f.write(f"{channel_name},{url}${city}\n")
-    
-    # 处理"其它频道"分类
-    if organized_channels.get("其它频道") and organized_channels["其它频道"]:
-        with open("zubo_all.txt", "a", encoding="utf-8") as f:
-            f.write(f"其它频道,#genre#\n")
+        # 将频道分配到模板分类中
+        for channel_name, categories_dict in all_channels.items():
+            # 根据频道名称获取分类
+            category = get_channel_category(channel_name, channel_template)
             
-            # 获取所有其它频道并按字母顺序排序
-            other_main_channels = sorted(organized_channels["其它频道"].keys())
-            for main_channel in other_main_channels:
-                for channel_name, sources in organized_channels["其它频道"][main_channel].items():
-                    for url, city in sources:
-                        f.write(f"{channel_name},{url}${city}\n")
-    
-    total_sources = 0
-    for category in organized_channels.values():
-        for main_channel in category.values():
-            for channel_name in main_channel.values():
-                for sources in channel_name:
-                    total_sources += len(sources)
-    
-    print(f"已合并TXT文件: zubo_all.txt (共{len(organized_channels)}个分类，{total_sources}个源)")
-    
-    # 合并M3U文件
-    with open("zubo_all.m3u", "w", encoding="utf-8") as f:
-        f.write("#EXTM3U\n")
+            # 获取主频道名
+            main_channel_name = get_main_channel_name(channel_name, channel_template)
+            
+            if category not in organized_channels:
+                organized_channels[category] = {}
+            
+            if main_channel_name not in organized_channels[category]:
+                organized_channels[category][main_channel_name] = []
+            
+            # 添加所有源
+            for original_category, sources in categories_dict.items():
+                for url, city in sources:
+                    organized_channels[category][main_channel_name].append((channel_name, url, city))
         
-        # 添加示例频道
-        zjws_logo = logo_dict.get("浙江卫视", "")
-        if zjws_logo:
-            f.write(f'#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="{zjws_logo}" group-title="示例频道",浙江卫视\n')
-        else:
-            f.write(f'#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" group-title="示例频道",浙江卫视\n')
-        f.write(f"http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
-        
-        # 按照模板定义的分类顺序写入
-        for category in channel_template.keys():
-            if category in organized_channels and organized_channels[category]:
-                # 按照模板中的频道顺序写入
-                for main_channel, aliases in channel_template[category]:
-                    if main_channel in organized_channels[category]:
-                        # 先写入主频道
-                        if main_channel in organized_channels[category][main_channel]:
-                            for channel_name, sources in organized_channels[category][main_channel][main_channel].items():
-                                # 查找台标
-                                logo_url = logo_dict.get(channel_name, "")
-                                
-                                # 写入该频道的所有源
-                                for url, city in sources:
-                                    display_name = f"{channel_name}"
-                                    
-                                    if logo_url:
-                                        f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{display_name}\n')
-                                    else:
-                                        f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{display_name}\n')
-                                    f.write(f"{url}\n")
-                        
-                        # 写入别名频道
-                        for alias in aliases:
-                            # 查找匹配的频道
-                            for channel_name in organized_channels[category][main_channel].keys():
-                                if alias and clean_channel_name(alias) in clean_channel_name(channel_name):
-                                    # 查找台标
-                                    logo_url = logo_dict.get(channel_name, "")
-                                    
-                                    # 写入该频道的所有源
-                                    for url, city in organized_channels[category][main_channel][channel_name]:
-                                        display_name = f"{channel_name}"
-                                        
-                                        if logo_url:
-                                            f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{display_name}\n')
-                                        else:
-                                            f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{display_name}\n')
-                                        f.write(f"{url}\n")
+        # 写入合并的TXT文件
+        with open("zubo_all.txt", "w", encoding="utf-8") as f:
+            f.write(f"{current_time}更新,#genre#\n")
+            f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
+            
+            # 按照模板定义的分类顺序写入
+            for category in channel_template.keys():
+                if category in organized_channels and organized_channels[category]:
+                    f.write(f"{category},#genre#\n")
+                    
+                    # 按照模板中的频道顺序写入
+                    for main_channel, aliases in channel_template[category]:
+                        if main_channel in organized_channels[category]:
+                            # 写入该主频道下的所有频道
+                            for channel_name, url, city in organized_channels[category][main_channel]:
+                                f.write(f"{channel_name},{url}${city}\n")
         
         # 处理"其它频道"分类
         if organized_channels.get("其它频道") and organized_channels["其它频道"]:
-            other_main_channels = sorted(organized_channels["其它频道"].keys())
-            for main_channel in other_main_channels:
-                for channel_name, sources in organized_channels["其它频道"][main_channel].items():
-                    # 查找台标
-                    logo_url = logo_dict.get(channel_name, "")
-                    
-                    # 写入该频道的所有源
-                    for url, city in sources:
+            with open("zubo_all.txt", "a", encoding="utf-8") as f:
+                f.write(f"其它频道,#genre#\n")
+                
+                # 获取所有其它频道并按字母顺序排序
+                other_channels = sorted(organized_channels["其它频道"].keys())
+                for main_channel in other_channels:
+                    for channel_name, url, city in organized_channels["其它频道"][main_channel]:
+                        f.write(f"{channel_name},{url}${city}\n")
+        
+        # 计算总源数
+        total_sources = 0
+        for category in organized_channels.values():
+            for main_channel in category.values():
+                total_sources += len(main_channel)
+        
+        print(f"已合并TXT文件: zubo_all.txt (共{len(organized_channels)}个分类，{total_sources}个源)")
+        
+        # 合并M3U文件
+        with open("zubo_all.m3u", "w", encoding="utf-8") as f:
+            f.write("#EXTM3U\n")
+            
+            # 添加示例频道
+            zjws_logo = logo_dict.get("浙江卫视", "")
+            if zjws_logo:
+                f.write(f'#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="{zjws_logo}" group-title="示例频道",浙江卫视\n')
+            else:
+                f.write(f'#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" group-title="示例频道",浙江卫视\n')
+            f.write(f"http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
+            
+            # 按照模板定义的分类顺序写入
+            for category in channel_template.keys():
+                if category in organized_channels and organized_channels[category]:
+                    # 按照模板中的频道顺序写入
+                    for main_channel, aliases in channel_template[category]:
+                        if main_channel in organized_channels[category]:
+                            # 写入该主频道下的所有频道
+                            for channel_name, url, city in organized_channels[category][main_channel]:
+                                # 查找台标
+                                logo_url = logo_dict.get(channel_name, "")
+                                
+                                display_name = f"{channel_name}"
+                                
+                                if logo_url:
+                                    f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{display_name}\n')
+                                else:
+                                    f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{display_name}\n')
+                                f.write(f"{url}\n")
+            
+            # 处理"其它频道"分类
+            if organized_channels.get("其它频道") and organized_channels["其它频道"]:
+                other_channels = sorted(organized_channels["其它频道"].keys())
+                for main_channel in other_channels:
+                    for channel_name, url, city in organized_channels["其它频道"][main_channel]:
+                        # 查找台标
+                        logo_url = logo_dict.get(channel_name, "")
+                        
                         display_name = f"{channel_name}"
                         
                         if logo_url:
@@ -764,49 +727,47 @@ def merge_all_files():
                         else:
                             f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="其它频道",{display_name}\n')
                         f.write(f"{url}\n")
-    
-    print(f"已合并M3U文件: zubo_all.m3u")
-    
-    # 同时生成一个简化版的合并文件，每个频道只保留一个源
-    with open("zubo_simple.txt", "w", encoding="utf-8") as f:
-        f.write(f"{current_time}更新,#genre#\n")
-        f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
         
-        # 按照模板定义的分类顺序写入
-        for category in channel_template.keys():
-            if category in organized_channels and organized_channels[category]:
-                f.write(f"{category},#genre#\n")
-                
-                # 按照模板中的频道顺序写入
-                for main_channel, aliases in channel_template[category]:
-                    if main_channel in organized_channels[category]:
-                        # 先写入主频道
-                        if main_channel in organized_channels[category][main_channel]:
-                            for channel_name, sources in organized_channels[category][main_channel][main_channel].items():
-                                if sources:
-                                    url, city = sources[0]
-                                    f.write(f"{channel_name},{url}\n")
-                        
-                        # 写入别名频道
-                        for alias in aliases:
-                            # 查找匹配的频道
-                            for channel_name in organized_channels[category][main_channel].keys():
-                                if alias and clean_channel_name(alias) in clean_channel_name(channel_name):
-                                    if organized_channels[category][main_channel][channel_name]:
-                                        url, city = organized_channels[category][main_channel][channel_name][0]
-                                        f.write(f"{channel_name},{url}\n")
+        print(f"已合并M3U文件: zubo_all.m3u")
         
-        # 处理"其它频道"分类
-        if organized_channels.get("其它频道") and organized_channels["其它频道"]:
-            f.write(f"其它频道,#genre#\n")
-            other_main_channels = sorted(organized_channels["其它频道"].keys())
-            for main_channel in other_main_channels:
-                for channel_name, sources in organized_channels["其它频道"][main_channel].items():
-                    if sources:
-                        url, city = sources[0]
-                        f.write(f"{channel_name},{url}\n")
+        # 同时生成一个简化版的合并文件，每个频道只保留一个源
+        with open("zubo_simple.txt", "w", encoding="utf-8") as f:
+            f.write(f"{current_time}更新,#genre#\n")
+            f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
+            
+            # 按照模板定义的分类顺序写入
+            for category in channel_template.keys():
+                if category in organized_channels and organized_channels[category]:
+                    f.write(f"{category},#genre#\n")
+                    
+                    # 按照模板中的频道顺序写入
+                    written_channels = set()  # 记录已经写入的频道
+                    for main_channel, aliases in channel_template[category]:
+                        if main_channel in organized_channels[category] and organized_channels[category][main_channel]:
+                            # 只取每个主频道的第一个源
+                            channel_name, url, city = organized_channels[category][main_channel][0]
+                            if channel_name not in written_channels:
+                                f.write(f"{channel_name},{url}\n")
+                                written_channels.add(channel_name)
+            
+            # 处理"其它频道"分类
+            if organized_channels.get("其它频道") and organized_channels["其它频道"]:
+                f.write(f"其它频道,#genre#\n")
+                written_channels = set()
+                other_channels = sorted(organized_channels["其它频道"].keys())
+                for main_channel in other_channels:
+                    if organized_channels["其它频道"][main_channel]:
+                        channel_name, url, city = organized_channels["其它频道"][main_channel][0]
+                        if channel_name not in written_channels:
+                            f.write(f"{channel_name},{url}\n")
+                            written_channels.add(channel_name)
+        
+        print(f"已生成简化版TXT文件: zubo_simple.txt")
     
-    print(f"已生成简化版TXT文件: zubo_simple.txt")
+    except Exception as e:
+        print(f"合并文件时发生错误: {e}")
+        import traceback
+        traceback.print_exc()
 
 def main():
     print("="*60)
