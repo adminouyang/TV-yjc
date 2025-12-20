@@ -30,6 +30,37 @@ def get_headers():
         'Range': 'bytes=0-',
     }
 
+def clean_ip_line(ip_line):
+    """清理IP行，移除后面的速度值和多余空格"""
+    if not ip_line:
+        return ""
+    
+    # 移除注释
+    if '#' in ip_line:
+        ip_line = ip_line.split('#')[0]
+    
+    ip_line = ip_line.strip()
+    
+    # 如果行中包含"KB/s"，则移除速度值
+    if 'KB/s' in ip_line:
+        # 找到"KB/s"的位置
+        kb_s_index = ip_line.find('KB/s')
+        if kb_s_index > 0:
+            # 向前查找数字的起始位置
+            i = kb_s_index - 1
+            while i >= 0 and (ip_line[i].isdigit() or ip_line[i] in ' .'):
+                i -= 1
+            ip_line = ip_line[:i+1].strip()
+    
+    # 如果行中包含多个空格，只保留IP:端口部分
+    if ' ' in ip_line:
+        # 按空格分割，取第一部分
+        parts = ip_line.split()
+        if parts:
+            ip_line = parts[0].strip()
+    
+    return ip_line
+
 def read_channel_template():
     """读取频道模板文件"""
     template_file = "template/demo.txt"
@@ -179,7 +210,10 @@ def read_config(config_file, city_name):
                         ip_port = line
                         option = 0
                     
-                    ip_configs.append((ip_port, option))
+                    # 清理IP:端口
+                    ip_port = clean_ip_line(ip_port)
+                    if ip_port and ":" in ip_port:
+                        ip_configs.append((ip_port, option))
         
         print(f"读取到 {len(ip_configs)} 个IP配置")
         return ip_configs
@@ -289,13 +323,15 @@ def validate_city_ips(city_name):
             for line in f:
                 line = line.strip()
                 if line and ":" in line:
-                    existing_ips.add(line.split(',')[0].strip())
+                    cleaned_ip = clean_ip_line(line)
+                    if cleaned_ip and ":" in cleaned_ip:
+                        existing_ips.add(cleaned_ip)
     
     # 添加新的可用IP
     with open(ip_file, 'a', encoding='utf-8') as f:
         for ip_port, speed in valid_ips:
             if ip_port not in existing_ips:
-                f.write(f"{ip_port}\n")
+                f.write(f"{ip_port} {speed:.2f} KB/s\n")
                 existing_ips.add(ip_port)
     
     print(f"\n{city_name} 验证完成:")
@@ -407,7 +443,10 @@ def get_top_ips_for_city(city_name, top_n=3):
         for line in f:
             line = line.strip()
             if line and ":" in line:
-                ip_configs.append(line)
+                # 清理IP行，移除速度值
+                cleaned_ip = clean_ip_line(line)
+                if cleaned_ip and ":" in cleaned_ip:
+                    ip_configs.append(cleaned_ip)
     
     if not ip_configs:
         print(f"{city_name} 没有可用的IP")
