@@ -91,25 +91,51 @@ def clean_channel_name(channel_name):
     
     return cleaned_name
 
+def is_channel_match(actual_channel, template_channel):
+    """检查实际频道是否匹配模板频道"""
+    if not actual_channel or not template_channel:
+        return False
+    
+    cleaned_actual = clean_channel_name(actual_channel)
+    cleaned_template = clean_channel_name(template_channel)
+    
+    if not cleaned_actual or not cleaned_template:
+        return False
+    
+    # 如果模板频道是"CCTV1"这样的格式，需要精确匹配，避免"CCTV1"匹配到"CCTV10"
+    if cleaned_template.startswith("CCTV"):
+        # 对于CCTV频道，需要精确匹配或前缀匹配
+        # 例如："CCTV1"应该匹配"CCTV1"或"CCTV1高清"，但不应该匹配"CCTV10"
+        if cleaned_actual == cleaned_template:
+            return True
+        
+        # 检查是否以模板频道开头，并且下一个字符不是数字
+        if cleaned_actual.startswith(cleaned_template):
+            # 获取模板后的下一个字符
+            next_char = cleaned_actual[len(cleaned_template):]
+            if not next_char or not next_char[0].isdigit():
+                return True
+        
+        return False
+    else:
+        # 对于非CCTV频道，使用包含匹配
+        return cleaned_template in cleaned_actual
+
 def get_channel_category(channel_name, channel_template):
     """根据频道名称获取对应的分类"""
-    cleaned_name = clean_channel_name(channel_name)
-    
-    if not cleaned_name:
+    if not channel_name:
         return "其它频道"
     
     # 遍历模板中的所有分类和频道
     for category, channels in channel_template.items():
         for main_channel, aliases in channels:
             # 检查主频道名
-            cleaned_main = clean_channel_name(main_channel)
-            if cleaned_main and cleaned_main in cleaned_name:
+            if is_channel_match(channel_name, main_channel):
                 return category
             
             # 检查别名
             for alias in aliases:
-                cleaned_alias = clean_channel_name(alias)
-                if cleaned_alias and cleaned_alias in cleaned_name:
+                if is_channel_match(channel_name, alias):
                     return category
     
     # 如果没有找到匹配的分类，返回"其它频道"
@@ -117,23 +143,19 @@ def get_channel_category(channel_name, channel_template):
 
 def get_main_channel_name(channel_name, channel_template):
     """根据频道名称获取对应的主频道名"""
-    cleaned_name = clean_channel_name(channel_name)
-    
-    if not cleaned_name:
+    if not channel_name:
         return channel_name
     
     # 遍历模板中的所有分类和频道
     for category, channels in channel_template.items():
         for main_channel, aliases in channels:
             # 检查主频道名
-            cleaned_main = clean_channel_name(main_channel)
-            if cleaned_main and cleaned_main in cleaned_name:
+            if is_channel_match(channel_name, main_channel):
                 return main_channel
             
             # 检查别名
             for alias in aliases:
-                cleaned_alias = clean_channel_name(alias)
-                if cleaned_alias and cleaned_alias in cleaned_name:
+                if is_channel_match(channel_name, alias):
                     return main_channel
     
     # 如果没有找到匹配，返回原频道名
@@ -710,7 +732,7 @@ def merge_all_files():
                                     f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{display_name}\n')
                                 else:
                                     f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{display_name}\n')
-                                f.write(f"{url}\n")
+                                f.write(f"{url}${city}\n")
             
             # 处理"其它频道"分类
             if organized_channels.get("其它频道") and organized_channels["其它频道"]:
@@ -726,7 +748,7 @@ def merge_all_files():
                             f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="其它频道",{display_name}\n')
                         else:
                             f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="其它频道",{display_name}\n')
-                        f.write(f"{url}\n")
+                        f.write(f"{url}${city}\n")
         
         print(f"已合并M3U文件: zubo_all.m3u")
         
@@ -745,10 +767,11 @@ def merge_all_files():
                     for main_channel, aliases in channel_template[category]:
                         if main_channel in organized_channels[category] and organized_channels[category][main_channel]:
                             # 只取每个主频道的第一个源
-                            channel_name, url, city = organized_channels[category][main_channel][0]
-                            if channel_name not in written_channels:
-                                f.write(f"{channel_name},{url}\n")
-                                written_channels.add(channel_name)
+                            for channel_name, url, city in organized_channels[category][main_channel]:
+                                if channel_name not in written_channels:
+                                    f.write(f"{channel_name},{url}\n")
+                                    written_channels.add(channel_name)
+                                    break
             
             # 处理"其它频道"分类
             if organized_channels.get("其它频道") and organized_channels["其它频道"]:
@@ -757,10 +780,11 @@ def merge_all_files():
                 other_channels = sorted(organized_channels["其它频道"].keys())
                 for main_channel in other_channels:
                     if organized_channels["其它频道"][main_channel]:
-                        channel_name, url, city = organized_channels["其它频道"][main_channel][0]
-                        if channel_name not in written_channels:
-                            f.write(f"{channel_name},{url}\n")
-                            written_channels.add(channel_name)
+                        for channel_name, url, city in organized_channels["其它频道"][main_channel]:
+                            if channel_name not in written_channels:
+                                f.write(f"{channel_name},{url}\n")
+                                written_channels.add(channel_name)
+                                break
         
         print(f"已生成简化版TXT文件: zubo_simple.txt")
     
