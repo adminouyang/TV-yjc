@@ -14,6 +14,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # 城市特定的测试流地址
 CITY_STREAMS = {
     "安徽电信": ["rtp/238.1.79.27:4328"],
+    "北京市电信": ["rtp/225.1.8.21:8002"],
+    "北京市联通": ["rtp/239.3.1.241:8000"],
     "江苏电信": ["udp/239.49.8.19:9614"],
     "四川电信": ["udp/239.93.0.169:5140"],
 }
