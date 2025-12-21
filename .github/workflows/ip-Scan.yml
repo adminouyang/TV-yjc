@@ -1,0 +1,37 @@
+name: ip-Scan
+
+on:
+  schedule:
+    - cron: '0 23,6 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0   
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: |
+          pip install -r IP_Scan/requirements.txt
+      - name: 获取ip
+        run: |
+          cd $GITHUB_WORKSPACE
+          python IP_Scan//ip-Scan.py
+      - name: 更新ip
+        run: |
+          git pull
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "更新_ip"
+          git push
