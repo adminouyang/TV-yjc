@@ -1,309 +1,803 @@
-import re
-
+from threading import Thread
+import os
+import time
+import datetime
+from datetime import timezone, timedelta
+import glob
 import requests
-import logging
-import concurrent.futures
-from collections import OrderedDict
-from datetime import datetime
-import tqdm
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import random
+import urllib3
+import re
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-import ffmpeg_util
-from config import config
+# 城市特定的测试流地址
+CITY_STREAMS = {
+    "安徽电信": ["rtp/238.1.79.27:4328"],
+    "北京电信": ["rtp/225.1.8.21:8002"],
+    "北京联通": ["rtp/239.3.1.241:8000"],
+    "江苏电信": ["udp/239.49.8.19:9614"],
+    "四川电信": ["udp/239.93.0.169:5140"],
+    # 可以根据需要添加更多城市
+}
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(threadName)s - %(message)s', handlers=[logging.FileHandler("my_tv/logs/fetch.log", "w", encoding="utf-8"), logging.StreamHandler()])
+# 远程GitHub仓库的基础URL
+GITHUB_BASE_URL = "https://raw.githubusercontent.com/q1017673817/iptvz/refs/heads/main"
 
-def parse_template(template_file):
-    template_channels = OrderedDict()
+def get_city_config(city_name):
+    """根据城市名获取配置"""
+    if city_name in CITY_STREAMS:
+        return {
+            "ip_url": f"{GITHUB_BASE_URL}/ip/{city_name}_ip.txt",
+            "template_url": f"{GITHUB_BASE_URL}/template/template_{city_name}.txt",
+            "test_streams": CITY_STREAMS[city_name]
+        }
+    return None
+
+def get_headers():
+    """获取固定的请求头"""
+    return {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Accept': '*/*',
+        'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+        'Connection': 'keep-alive',
+        'Range': 'bytes=0-',
+    }
+
+def fetch_remote_content(url, max_retries=3):
+    """从远程URL获取内容"""
+    for attempt in range(max_retries):
+        try:
+            headers = get_headers()
+            response = requests.get(url, headers=headers, timeout=10, verify=False)
+            response.raise_for_status()
+            return response.text
+        except requests.exceptions.RequestException as e:
+            if attempt < max_retries - 1:
+                print(f"获取远程内容失败 (尝试 {attempt + 1}/{max_retries}): {url}")
+                time.sleep(1)
+            else:
+                print(f"获取远程内容失败: {url}, 错误: {e}")
+                return None
+    return None
+
+def download_file_from_url(url, local_path):
+    """从URL下载文件到本地"""
+    try:
+        content = fetch_remote_content(url)
+        if content:
+            os.makedirs(os.path.dirname(local_path), exist_ok=True)
+            with open(local_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"下载文件成功: {local_path}")
+            return True
+        else:
+            print(f"下载文件失败: {url}")
+            return False
+    except Exception as e:
+        print(f"下载文件异常: {url}, 错误: {e}")
+        return False
+
+def clean_ip_line(ip_line):
+    """清理IP行，移除后面的速度值和多余空格"""
+    if not ip_line:
+        return ""
+    
+    # 移除注释
+    if '#' in ip_line:
+        ip_line = ip_line.split('#')[0]
+    
+    ip_line = ip_line.strip()
+    
+    # 如果行中包含"KB/s"，则移除速度值
+    if 'KB/s' in ip_line:
+        kb_s_index = ip_line.find('KB/s')
+        if kb_s_index > 0:
+            i = kb_s_index - 1
+            while i >= 0 and (ip_line[i].isdigit() or ip_line[i] in ' .'):
+                i -= 1
+            ip_line = ip_line[:i+1].strip()
+    
+    # 如果行中包含多个空格，只保留IP:端口部分
+    if ' ' in ip_line:
+        parts = ip_line.split()
+        if parts:
+            ip_line = parts[0].strip()
+    
+    return ip_line
+
+def read_channel_template():
+    """读取频道模板文件（从本地缓存）"""
+    template_file = "template/demo.txt"
+    if not os.path.exists(template_file):
+        print(f"频道模板文件不存在: {template_file}")
+        return {}
+    
+    print(f"读取频道模板文件: {template_file}")
+    
+    channel_template = {}
     current_category = None
+    current_channels = []
+    
+    try:
+        with open(template_file, 'r', encoding='utf-8') as f:
+            for line_num, line in enumerate(f, 1):
+                line = line.strip()
+                if not line:
+                    continue
+                
+                if ",#genre#" in line:
+                    if current_category and current_channels:
+                        channel_template[current_category] = current_channels.copy()
+                    
+                    current_category = line.replace(",#genre#", "").strip()
+                    current_channels = []
+                    print(f"  发现分类: {current_category}")
+                elif "|" in line:
+                    parts = [part.strip() for part in line.split("|") if part.strip()]
+                    if len(parts) >= 1:
+                        main_channel = parts[0]
+                        aliases = parts[1:] if len(parts) > 1 else []
+                        current_channels.append((main_channel, aliases))
+        
+        if current_category and current_channels:
+            channel_template[current_category] = current_channels.copy()
+        
+        total_categories = len(channel_template)
+        total_channels = sum(len(channels) for channels in channel_template.values())
+        print(f"  共读取到 {total_categories} 个分类，总计 {total_channels} 个频道")
+        
+        return channel_template
+    except Exception as e:
+        print(f"读取频道模板文件错误: {e}")
+        return {}
 
-    with open(template_file, "r", encoding="utf-8") as f:
+def clean_channel_name(channel_name):
+    """清理频道名称，移除特殊符号和空格"""
+    if not channel_name:
+        return ""
+    
+    cleaned_name = channel_name.strip()
+    cleaned_name = re.sub(r'\s+', '', cleaned_name)
+    cleaned_name = re.sub(r'[【】\[\]()（）]', '', cleaned_name)
+    
+    return cleaned_name
+
+def is_channel_match(actual_channel, template_channel):
+    """检查实际频道是否匹配模板频道"""
+    if not actual_channel or not template_channel:
+        return False
+    
+    cleaned_actual = clean_channel_name(actual_channel)
+    cleaned_template = clean_channel_name(template_channel)
+    
+    if not cleaned_actual or not cleaned_template:
+        return False
+    
+    if cleaned_template.startswith("CCTV"):
+        if cleaned_actual == cleaned_template:
+            return True
+        
+        if cleaned_actual.startswith(cleaned_template):
+            next_char = cleaned_actual[len(cleaned_template):]
+            if not next_char or not next_char[0].isdigit():
+                return True
+        
+        return False
+    else:
+        return cleaned_template in cleaned_actual
+
+def get_channel_category(channel_name, channel_template):
+    """根据频道名称获取对应的分类"""
+    if not channel_name:
+        return "其它频道"
+    
+    for category, channels in channel_template.items():
+        for main_channel, aliases in channels:
+            if is_channel_match(channel_name, main_channel):
+                return category
+            
+            for alias in aliases:
+                if is_channel_match(channel_name, alias):
+                    return category
+    
+    return "其它频道"
+
+def get_main_channel_name(channel_name, channel_template):
+    """根据频道名称获取对应的主频道名"""
+    if not channel_name:
+        return channel_name
+    
+    for category, channels in channel_template.items():
+        for main_channel, aliases in channels:
+            if is_channel_match(channel_name, main_channel):
+                return main_channel
+            
+            for alias in aliases:
+                if is_channel_match(channel_name, alias):
+                    return main_channel
+    
+    return channel_name
+
+def test_stream_speed(stream_url, timeout=5):
+    """测试流媒体速度，返回速度(KB/s)和是否成功"""
+    try:
+        headers = get_headers()
+        start_time = time.time()
+        
+        response = requests.get(stream_url, headers=headers, timeout=timeout, 
+                              verify=False, allow_redirects=True, stream=True)
+        
+        if response.status_code not in [200, 206]:
+            return 0, False
+        
+        downloaded = 0
+        chunk_size = 10 * 1024
+        max_download = 100 * 1024
+        
+        for chunk in response.iter_content(chunk_size=chunk_size):
+            downloaded += len(chunk)
+            if downloaded >= max_download:
+                break
+        
+        end_time = time.time()
+        duration = end_time - start_time
+        
+        if duration > 0:
+            speed_kbs = downloaded / duration / 1024
+            return speed_kbs, True
+        else:
+            return 0, False
+            
+    except Exception as e:
+        return 0, False
+
+def test_ip_single(ip_port, test_stream, timeout=5):
+    """测试单个IP，返回速度"""
+    stream_url = f"http://{ip_port}/{test_stream}"
+    
+    try:
+        time.sleep(random.uniform(0.1, 0.3))
+        speed, success = test_stream_speed(stream_url, timeout)
+        
+        if success and speed > 0:
+            print(f"✓ {ip_port} 可用 - 速度: {speed:.2f} KB/s")
+            return ip_port, speed
+        else:
+            print(f"× {ip_port} 不可用或速度过慢")
+            return None, 0
+    except Exception as e:
+        print(f"× {ip_port} 测试出错: {str(e)[:50]}")
+        return None, 0
+
+def validate_city_ips(city_name, city_config):
+    """验证城市IP文件中的IP，删除不可用的，保留可用的"""
+    ip_url = city_config["ip_url"]
+    test_stream = city_config["test_streams"][0] if city_config["test_streams"] else None
+    
+    if not test_stream:
+        print(f"{city_name} 没有测试流地址，跳过IP验证")
+        return []
+    
+    # 从远程获取IP列表
+    print(f"正在下载IP列表: {ip_url}")
+    ip_content = fetch_remote_content(ip_url)
+    if not ip_content:
+        print(f"获取IP列表失败: {ip_url}")
+        return []
+    
+    # 解析IP列表
+    ip_configs = []
+    for line in ip_content.split('\n'):
+        line = line.strip()
+        if line and ":" in line and not line.startswith('#'):
+            cleaned_ip = clean_ip_line(line)
+            if cleaned_ip and ":" in cleaned_ip:
+                ip_configs.append(cleaned_ip)
+    
+    if not ip_configs:
+        print(f"{city_name} 没有可用的IP")
+        return []
+    
+    print(f"从远程获取到 {len(ip_configs)} 个IP")
+    print(f"\n开始验证 {city_name} 的 {len(ip_configs)} 个IP...")
+    valid_ips = []
+    
+    # 使用线程池并发测试
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = []
+        for ip_port in ip_configs:
+            future = executor.submit(test_ip_single, ip_port, test_stream)
+            futures.append(future)
+        
+        for future in as_completed(futures):
+            ip_port, speed = future.result()
+            if ip_port:
+                valid_ips.append((ip_port, speed))
+    
+    # 按速度排序
+    valid_ips.sort(key=lambda x: x[1], reverse=True)
+    
+    # 保存到本地IP文件
+    local_ip_file = f"ip/{city_name}_ip.txt"
+    os.makedirs('ip', exist_ok=True)
+    with open(local_ip_file, 'w', encoding='utf-8') as f:
+        for ip_port, speed in valid_ips:
+            f.write(f"{ip_port} {speed:.2f} KB/s\n")
+    
+    print(f"\n{city_name} 验证完成:")
+    print(f"  - 总共测试: {len(ip_configs)} 个IP")
+    print(f"  - 可用IP: {len(valid_ips)} 个")
+    print(f"  - 已保存到: {local_ip_file}")
+    
+    return valid_ips
+
+def get_top_ips_for_city(city_name, city_config, top_n=3):
+    """获取城市IP列表中的前N名IP"""
+    # 从本地文件读取（由validate_city_ips生成）
+    local_ip_file = f"ip/{city_name}_ip.txt"
+    if not os.path.exists(local_ip_file):
+        print(f"本地IP文件不存在: {local_ip_file}，跳过")
+        return []
+    
+    # 读取IP列表
+    ip_configs = []
+    with open(local_ip_file, 'r', encoding='utf-8') as f:
         for line in f:
             line = line.strip()
-            if line and not line.startswith("#"):
-                if "#genre#" in line:
-                    current_category = line.split(",")[0].strip()
-                    template_channels[current_category] = []
-                elif current_category:
-                    channel_name = line.split(",")[0].strip()
-                    template_channels[current_category].append(channel_name)
+            if line and ":" in line and not line.startswith('#'):
+                cleaned_ip = clean_ip_line(line)
+                if cleaned_ip and ":" in cleaned_ip:
+                    ip_configs.append(cleaned_ip)
+    
+    if not ip_configs:
+        print(f"{city_name} 没有可用的IP")
+        return []
+    
+    test_stream = city_config["test_streams"][0] if city_config["test_streams"] else None
+    if not test_stream:
+        print(f"{city_name} 没有测试流地址")
+        return []
+    
+    print(f"\n开始测试 {city_name} 的 {len(ip_configs)} 个IP...")
+    
+    all_valid_ips = []
+    
+    # 首先测试已有的IP
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        futures = {executor.submit(test_ip_single, ip, test_stream): ip for ip in ip_configs}
+        
+        for future in as_completed(futures):
+            ip, speed = future.result()
+            if ip:
+                all_valid_ips.append((ip, speed))
+    
+    # 按速度排序
+    all_valid_ips.sort(key=lambda x: x[1], reverse=True)
+    
+    # 只取前N名
+    top_ips = all_valid_ips[:top_n]
+    
+    print(f"\n{city_name} 测试完成:")
+    for i, (ip, speed) in enumerate(top_ips, 1):
+        print(f"  第{i}名: {ip} - 速度: {speed:.2f} KB/s")
+    
+    return top_ips
 
-    return template_channels
+def download_template_file(city_name, city_config):
+    """下载城市对应的频道模板文件"""
+    template_url = city_config["template_url"]
+    local_template_file = f"template/{city_name}.txt"
+    
+    # 下载模板文件
+    print(f"正在下载频道模板: {template_url}")
+    success = download_file_from_url(template_url, local_template_file)
+    if not success:
+        return None
+    
+    return read_template_file(city_name)
 
-def fetch_channels(url, invalid_url):
-    channels = OrderedDict()
-
+def read_template_file(city_name):
+    """读取城市对应的频道模板文件（从本地）"""
+    template_file = f"template/{city_name}.txt"
+    if not os.path.exists(template_file):
+        print(f"频道模板文件不存在: {template_file}")
+        return None
+    
+    print(f"读取频道模板: {template_file}")
+    
+    categories = []
+    current_category = ""
+    current_channels = []
+    
     try:
-        response = requests.get(url)
-        response.raise_for_status()
-        response.encoding = 'utf-8'
-        lines = response.text.split("\n")
-        current_category = None
-        channel_name = None
-        is_m3u = any("#EXTINF" in line for line in lines[:15])
-        source_type = "m3u" if is_m3u else "txt"
-        logging.info(f"url: {url} 获取成功，判断为{source_type}格式")
+        with open(template_file, 'r', encoding='utf-8') as f:
+            for line_num, line in enumerate(f, 1):
+                line = line.strip()
+                if not line:
+                    continue
+                
+                if ",#genre#" in line:
+                    if current_category and current_channels:
+                        categories.append((current_category, current_channels))
+                    
+                    current_category = line.replace(",#genre#", "").strip()
+                    current_channels = []
+                    print(f"  发现分类: {current_category}")
+                elif line and "," in line:
+                    parts = line.split(",", 1)
+                    if len(parts) == 2:
+                        channel_name = parts[0].strip()
+                        channel_url = parts[1].strip()
+                        current_channels.append((channel_name, channel_url))
+        
+        if current_category and current_channels:
+            categories.append((current_category, current_channels))
+        
+        print(f"  共读取到 {len(categories)} 个分类，总计 {sum(len(channels) for _, channels in categories)} 个频道")
+        return categories
+    except Exception as e:
+        print(f"读取模板文件错误: {e}")
+        return None
 
-        if is_m3u:
-            for line in lines:
-                try:
+def read_logo_file():
+    """读取台标文件"""
+    logo_dict = {}
+    logo_url = f"{GITHUB_BASE_URL}/template/logo.txt"
+    local_logo_file = "template/logo.txt"
+    
+    # 尝试从远程下载台标文件
+    print(f"正在下载台标文件: {logo_url}")
+    download_file_from_url(logo_url, local_logo_file)
+    
+    if os.path.exists(local_logo_file):
+        try:
+            with open(local_logo_file, 'r', encoding='utf-8') as f:
+                for line in f:
                     line = line.strip()
-                    if line.startswith("#EXTINF"):
-                        match = re.search(r'group-title="(.*?)"', line)
-                        match2 = re.search(r',(.*)', line)
-                        if match:
-                            current_category = match.group(1).strip()
-                            channel_name = match2.group(1).strip()
-                            if current_category not in channels:
-                                channels[current_category] = []
-                    elif line and not line.startswith("#"):
-                        channel_url = line.strip()
-                        if current_category and channel_name:
-                            channels[current_category].append((channel_name, channel_url))
-                except Exception as e:
-                    logging.error(f"fetch_channels m3u error line {url} {line}", e)
-        else:
-            for line in lines:
-                try:
+                    if line and ',' in line:
+                        parts = line.split(',', 1)
+                        if len(parts) == 2:
+                            channel_name = parts[0].strip()
+                            logo_url = parts[1].strip()
+                            logo_dict[channel_name] = logo_url
+            print(f"读取到 {len(logo_dict)} 个台标")
+        except Exception as e:
+            print(f"读取台标文件错误: {e}")
+    else:
+        print(f"台标文件不存在: {local_logo_file}")
+    
+    return logo_dict
+
+def generate_files_for_city(city_name, top_ips, logo_dict, categories):
+    """为城市生成TXT和M3U文件，使用3个IP生成3套源"""
+    if not categories:
+        print(f"{city_name} 没有频道模板，跳过文件生成")
+        return
+    
+    if not top_ips or len(top_ips) < 3:
+        print(f"{city_name} 可用的IP数量不足3个，跳过文件生成")
+        return
+    
+    # 创建输出目录
+    os.makedirs('output', exist_ok=True)
+    
+    # 取前3个IP
+    top_3_ips = [ip for ip, _ in top_ips[:3]]
+    
+    # 生成TXT文件
+    txt_file = f"output/{city_name}.txt"
+    m3u_file = f"output/{city_name}.m3u"
+    
+    with open(txt_file, 'w', encoding='utf-8') as txt_f, \
+         open(m3u_file, 'w', encoding='utf-8') as m3u_f:
+        
+        m3u_f.write("#EXTM3U\n")
+        
+        channel_count = 0
+        
+        for category, channels in categories:
+            # 写入分类标题
+            txt_f.write(f"{category},#genre#\n")
+            
+            for channel_name, channel_url in channels:
+                # 为每个频道生成3个源，分别使用3个IP
+                for i, ip_port in enumerate(top_3_ips, 1):
+                    # 替换ipipip为实际IP:端口
+                    new_url = channel_url.replace("ipipip", ip_port)
+                    
+                    # 写入TXT文件
+                    txt_f.write(f"{channel_name},{new_url}${city_name}\n")
+                    
+                    # 写入M3U文件
+                    logo_url = logo_dict.get(channel_name, "")
+                    
+                    if logo_url:
+                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}${city_name}\n')
+                    else:
+                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}${city_name}\n')
+                    m3u_f.write(f"{new_url}\n")
+                    
+                    channel_count += 1
+        
+        print(f"  TXT文件: {txt_file} (共{channel_count}个频道，每个频道{len(top_3_ips)}个源)")
+        print(f"  M3U文件: {m3u_file}")
+    
+    return txt_file, m3u_file
+
+def merge_all_files():
+    """合并所有城市的TXT和M3U文件，按照频道模板排序"""
+    try:
+        txt_files = glob.glob("output/*.txt")
+        m3u_files = glob.glob("output/*.m3u")
+        
+        if not txt_files or not m3u_files:
+            print("没有找到输出文件可合并")
+            return
+        
+        # 按城市名称排序
+        txt_files.sort()
+        m3u_files.sort()
+        
+        # 读取频道模板
+        channel_template = read_channel_template()
+        if not channel_template:
+            print("没有读取到频道模板，使用默认排序")
+            return
+        
+        # 读取台标文件
+        logo_dict = read_logo_file()
+        
+        # 生成时间
+        try:
+            now = datetime.datetime.now(timezone.utc) + timedelta(hours=8)
+        except:
+            now = datetime.datetime.utcnow() + timedelta(hours=8)
+        current_time = now.strftime("%Y/%m/%d %H:%M")
+        
+        # 收集所有频道
+        all_channels = {}
+        
+        # 先收集所有频道的源
+        for txt_file in txt_files:
+            city_name = os.path.basename(txt_file).replace('.txt', '')
+            
+            with open(txt_file, 'r', encoding='utf-8') as f:
+                current_category = ""
+                for line in f:
                     line = line.strip()
-                    if "#genre#" in line:
-                        current_category = line.split(",")[0].strip()
-                        channels[current_category] = []
-                    elif current_category:
-                        match = re.match(r"^(.*?),(.*?)$", line)
-                        if match:
-                            channel_name = match.group(1).strip()
-                            channel_url = match.group(2).strip()
-                            channels[current_category].append((channel_name, channel_url))
-                        elif line:
-                            channels[current_category].append((line, ''))
-                except Exception as e:
-                    logging.error(f"fetch_channels txt error line {url} {line}", e)
-
-        if channels:
-            categories = ", ".join(channels.keys())
-            logging.info(f"url: {url} 读取成功✅，包含频道分类: {categories}")
-    except requests.RequestException as e:
-        logging.error(f"url: {url} 读取失败❌, Error: {e}")
-        invalid_url.write(f"{url}\n")
-
-
-    return channels
-
-def match_channels(template_channels, all_channels, rename_dic):
-    matched_channels = OrderedDict()
-    for category, channel_list in template_channels.items():
-        matched_channels[category] = OrderedDict()
-        for channel_name in channel_list:
-            if channel_name.find(';') > 0:
-                like_matched = 1
+                    if not line:
+                        continue
+                    
+                    if ",#genre#" in line:
+                        current_category = line.replace(",#genre#", "").strip()
+                    elif line and "," in line and current_category:
+                        parts = line.split(",", 1)
+                        if len(parts) == 2:
+                            channel_name = parts[0].strip()
+                            channel_part = parts[1].strip()
+                            
+                            if "$" in channel_part:
+                                channel_url, city = channel_part.rsplit("$", 1)
+                            else:
+                                channel_url = channel_part
+                                city = city_name
+                            
+                            if channel_name not in all_channels:
+                                all_channels[channel_name] = {}
+                            
+                            if current_category not in all_channels[channel_name]:
+                                all_channels[channel_name][current_category] = []
+                            
+                            all_channels[channel_name][current_category].append((channel_url, city))
+        
+        # 重新组织频道，按照模板分类
+        organized_channels = {}
+        
+        # 初始化所有分类
+        for category in channel_template.keys():
+            organized_channels[category] = {}
+        
+        # 添加"其它频道"分类
+        organized_channels["其它频道"] = {}
+        
+        # 将频道分配到模板分类中
+        for channel_name, categories_dict in all_channels.items():
+            category = get_channel_category(channel_name, channel_template)
+            main_channel_name = get_main_channel_name(channel_name, channel_template)
+            
+            if category not in organized_channels:
+                organized_channels[category] = {}
+            
+            if main_channel_name not in organized_channels[category]:
+                organized_channels[category][main_channel_name] = []
+            
+            for original_category, sources in categories_dict.items():
+                for url, city in sources:
+                    organized_channels[category][main_channel_name].append((channel_name, url, city))
+        
+        # 写入合并的TXT文件
+        with open("zubo_all.txt", "w", encoding="utf-8") as f:
+            f.write(f"{current_time}更新,#genre#\n")
+            f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
+            
+            for category in channel_template.keys():
+                if category in organized_channels and organized_channels[category]:
+                    f.write(f"{category},#genre#\n")
+                    
+                    for main_channel, aliases in channel_template[category]:
+                        if main_channel in organized_channels[category]:
+                            for channel_name, url, city in organized_channels[category][main_channel]:
+                                f.write(f"{channel_name},{url}${city}\n")
+        
+        # 处理"其它频道"分类
+        if organized_channels.get("其它频道") and organized_channels["其它频道"]:
+            with open("zubo_all.txt", "a", encoding="utf-8") as f:
+                f.write(f"其它频道,#genre#\n")
+                
+                other_channels = sorted(organized_channels["其它频道"].keys())
+                for main_channel in other_channels:
+                    for channel_name, url, city in organized_channels["其它频道"][main_channel]:
+                        f.write(f"{channel_name},{url}${city}\n")
+        
+        # 计算总源数
+        total_sources = 0
+        for category in organized_channels.values():
+            for main_channel in category.values():
+                total_sources += len(main_channel)
+        
+        print(f"已合并TXT文件: zubo_all.txt (共{len(organized_channels)}个分类，{total_sources}个源)")
+        
+        # 合并M3U文件
+        with open("zubo_all.m3u", "w", encoding="utf-8") as f:
+            f.write("#EXTM3U\n")
+            
+            # 添加示例频道
+            zjws_logo = logo_dict.get("浙江卫视", "")
+            if zjws_logo:
+                f.write(f'#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="{zjws_logo}" group-title="示例频道",浙江卫视\n')
             else:
-                like_matched = 0
-            for online_category, online_channel_list in all_channels.items():
-                for online_channel_name, online_channel_url in online_channel_list:
-                    # 如果名字中带有 ; 号 命中模糊匹配规则
-                    if like_matched == 1:
-                        split_channel_name = channel_name.split(';')
-                        if split_channel_name[0].upper() in online_channel_name.upper() and split_channel_name[1].upper() in online_channel_name.upper():
-                            matched_channels[category].setdefault(channel_name, []).append(online_channel_url + '@@' + online_channel_name)
+                f.write(f'#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" group-title="示例频道",浙江卫视\n')
+            f.write(f"http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
+            
+            for category in channel_template.keys():
+                if category in organized_channels and organized_channels[category]:
+                    for main_channel, aliases in channel_template[category]:
+                        if main_channel in organized_channels[category]:
+                            for channel_name, url, city in organized_channels[category][main_channel]:
+                                logo_url = logo_dict.get(channel_name, "")
+                                display_name = f"{channel_name}"
+                                
+                                if logo_url:
+                                    f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{display_name}\n')
+                                else:
+                                    f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{display_name}\n')
+                                f.write(f"{url}\n")
+            
+            if organized_channels.get("其它频道") and organized_channels["其它频道"]:
+                other_channels = sorted(organized_channels["其它频道"].keys())
+                for main_channel in other_channels:
+                    for channel_name, url, city in organized_channels["其它频道"][main_channel]:
+                        logo_url = logo_dict.get(channel_name, "")
+                        display_name = f"{channel_name}"
+                        
+                        if logo_url:
+                            f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="其它频道",{display_name}\n')
+                        else:
+                            f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="其它频道",{display_name}\n')
+                        f.write(f"{url}\n")
+        
+        print(f"已合并M3U文件: zubo_all.m3u")
+        
+        # 生成简化版
+        with open("zubo_simple.txt", "w", encoding="utf-8") as f:
+            f.write(f"{current_time}更新,#genre#\n")
+            f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
+            
+            for category in channel_template.keys():
+                if category in organized_channels and organized_channels[category]:
+                    f.write(f"{category},#genre#\n")
+                    
+                    written_channels = set()
+                    for main_channel, aliases in channel_template[category]:
+                        if main_channel in organized_channels[category] and organized_channels[category][main_channel]:
+                            for channel_name, url, city in organized_channels[category][main_channel]:
+                                if channel_name not in written_channels:
+                                    f.write(f"{channel_name},{url}\n")
+                                    written_channels.add(channel_name)
+                                    break
+            
+            if organized_channels.get("其它频道") and organized_channels["其它频道"]:
+                f.write(f"其它频道,#genre#\n")
+                written_channels = set()
+                other_channels = sorted(organized_channels["其它频道"].keys())
+                for main_channel in other_channels:
+                    if organized_channels["其它频道"][main_channel]:
+                        for channel_name, url, city in organized_channels["其它频道"][main_channel]:
+                            if channel_name not in written_channels:
+                                f.write(f"{channel_name},{url}\n")
+                                written_channels.add(channel_name)
+                                break
+        
+        print(f"已生成简化版TXT文件: zubo_simple.txt")
+    
+    except Exception as e:
+        print(f"合并文件时发生错误: {e}")
+        import traceback
+        traceback.print_exc()
 
-                    # 纠错频道名称
-                    if online_channel_name in rename_dic and online_channel_name != rename_dic[online_channel_name]:
-                        online_channel_name = rename_dic[online_channel_name]
-                    if channel_name == online_channel_name:
-                        matched_channels[category].setdefault(channel_name, []).append(online_channel_url)
-
-    return matched_channels
-
-def load_modify_name(filename):
-    corrections = {}
-    with open(filename, 'r', encoding='utf-8') as f:
-        for line in f:
-            parts = line.strip().split(',')
-            correct_name = parts[0]
-            for name in parts[1:]:
-                corrections[name] = correct_name
-    return corrections
-
-def filter_source_urls(template_file):
-    #读取修改字典文件
-    rename_dic: Dict[str, str] = load_modify_name('my_tv/config/rename.txt')
-    template_channels = parse_template(template_file)
-    source_urls = config.source_urls
-    future_to_url = {}
-    pbar = tqdm.tqdm(total=len(source_urls), desc="Checking channels", ncols=100, colour="green")
-
-    with open("my_tv/config/invalid_url.txt", "w", encoding="utf-8") as invalid_url:
-        with concurrent.futures.ThreadPoolExecutor(max_workers = config.threadNum) as executor:
-            all_channels = OrderedDict()
-            for url in source_urls:
-                future = executor.submit(fetch_channels, url, invalid_url)
-                future_to_url[future] = url
-            try:
-                for future in concurrent.futures.as_completed(future_to_url, timeout = config.futureTimout):
-                    url = future_to_url[future]
-                    try:
-                        for category, channel_list in future.result(config.futureTimout).items():
-                            if category in all_channels:
-                                all_channels[category].extend(channel_list)
-                            else:
-                                all_channels[category] = channel_list
-                    except concurrent.futures.TimeoutError:
-                        logging.info(f"url: {url} Processing took too long")
-                    pbar.update(1)
-                    logging.info("\n")
-                    logging.info(pbar.__str__())
-            except concurrent.futures.TimeoutError:
-                logging.info(f"url: {url} Processing took too long")
-
-            finally:
-                pbar.close()
-                logging.info("\n")
-                logging.info(pbar.__str__())
-
-    with open("my_tv/all_channels.txt", "w", encoding="utf-8") as f_all_channels:
-        if all_channels:
-            for channel in all_channels:
-                f_all_channels.write(f"{channel},#genre#\n")
-                for e in all_channels[channel]:
-                    f_all_channels.write(f"{e[0]},\n")
-    matched_channels = match_channels(template_channels, all_channels, rename_dic)
-
-    return matched_channels, template_channels
-
-def is_ipv6(url):
-    return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
-
-def update_channel_urls_m3u(channels, template_channels):
-    written_urls = set()
-    invalid_hosts = set()
-    invalid_urls = set()
-    check_return_channels = OrderedDict()
-    channel_url_time = OrderedDict()
-
-    current_date = datetime.now().strftime("%Y-%m-%d")
-    for group in config.announcements:
-        for announcement in group['entries']:
-            if announcement['name'] is None:
-                announcement['name'] = current_date
-
-    with open("my_tv/live.m3u", "w", encoding="utf-8") as f_m3u:
-        f_m3u.write(f"""#EXTM3U x-tvg-url={",".join(f'"{epg_url}"' for epg_url in config.epg_urls)}\n""")
-
-        with open("my_tv/live.txt", "w", encoding="utf-8") as f_txt:
-            add_author_info(f_m3u, f_txt)
-
-            future_concurrents = {}
-            with concurrent.futures.ThreadPoolExecutor(max_workers=config.ffmpegCheckThreadNum) as executor:
-                for category, channel_list in template_channels.items():
-                    # 分类不数据要保存的分类列表则跳过
-                    if category not in channels:
-                        continue
-                    # 将地址全部丢进去跑校验地址是否正常
-                    for channel_name in channel_list:
-                        # 渠道名字不在所需要的渠道列表上，则跳过
-                        if channel_name not in channels[category]:
-                            continue
-                        # 讲指定的数据排序到最前面 由于 ip_version_priority决定
-                        sorted_urls = channels[category][channel_name]
-                        filtered_urls = []
-                        for url in sorted_urls:
-                            if url and url not in written_urls and not any(blacklist in url for blacklist in config.url_blacklist):
-                                filtered_urls.append(url)
-                                written_urls.add(url)
-                        for index, url in enumerate(filtered_urls, start=1):
-                            future = executor.submit(ffmpeg_util.check_stream, url, channel_name, {}, invalid_hosts, invalid_urls, 60)
-                            future_concurrents[future] = (index, url, channel_name, category)
-
-                try:
-                    for future in concurrent.futures.as_completed(future_concurrents):
-                        try:
-                            (index, url, channel_name, category) = future_concurrents[future]
-                            success, error, time = future.result(config.ffmpegCheckThreadTimeout)
-                            if category not in check_return_channels:
-                                check_return_channels[category] = OrderedDict()
-
-                            if success:
-                                check_return_channels[category].setdefault(channel_name, []).append((url, time))
-                                channel_url_time[url] = time
-                            else:
-                                logging.error(f"Failed to play {url} {error}")
-
-                        except concurrent.futures.TimeoutError:
-                            logging.info(f"url: {url} for Processing took too long")
-                        except Exception as e:
-                            logging.info(f"url: {url} for Exception {e}")
-                except concurrent.futures.TimeoutError as e:
-                    logging.info(f"url: {url} TimeoutError {e}")
-                except Exception as e:
-                    logging.info(f"url: {url} Exception {e}")
-
-                for category, channel_list in check_return_channels.items():
-                    f_txt.write(f"{category},#genre#\n")
-                    # 分类不数据要保存的分类列表则跳过
-                    if category not in check_return_channels:
-                        continue
-                    # 将地址全部丢进去跑校验地址是否正常
-                    for channel_name in channel_list:
-                        # 渠道名字不在所需要的渠道列表上，则跳过
-                        if channel_name not in check_return_channels[category]:
-                            continue
-
-                        # 讲指定的数据排序到最前面 由于 ip_version_priority决定
-                        sorted_urls = sorted(check_return_channels[category][channel_name], key=lambda check_return_item:(not is_ipv6(check_return_item[0]) if config.ip_version_priority == "ipv6" else is_ipv6(check_return_item[0]), check_return_item[1]))
-                        total_urls = len(sorted_urls)
-                        if total_urls >= 1:
-                            f_m3u.write(f"#EXTINF:-1 tvg-name=\"{channel_name}\" tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"{category}\",{channel_name}\n")
-
-                        for index, url_item in enumerate(sorted_urls, start=1):
-                            url = url_item[0]
-                            req_time = round(url_item[1], 3)
-                            if is_ipv6(url):
-                                url_suffix = f"$源{req_time}" if total_urls == 1 else f"$源{index}-{req_time}"#LR•IPV6
-                            else:
-                                url_suffix = f"$源{req_time}" if total_urls == 1 else f"$源{index}-{req_time}"#LR•IPV4
-                            if '$' in url:
-                                base_url = url.split('$', 1)[0]
-                            else:
-                                base_url = url
-
-
-                            if base_url.find('@@') > 0:
-                                split_channel_name = base_url.split('@@')
-                                channel_name = split_channel_name[1]
-
-                            new_url = f"{base_url}{url_suffix}"
-
-                            if is_ipv6(url):
-                                f_txt.write(f"{channel_name}(IPV6),{new_url}\n")
-                            else:
-                                f_txt.write(f"{channel_name},{new_url}\n")
-
-                            f_m3u.write(new_url + "\n")
-            f_txt.write("\n")
-
-    with open("my_tv/config/error_host", "w", encoding="utf-8") as error_host:
-        error_host.write(f"check_return_channels len {len(channel_url_time)} \n")
-        for invalid_host in invalid_hosts:
-            error_host.write(f"{invalid_host}\n")
-
-    with open("my_tv/config/error_urls", "w", encoding="utf-8") as error_urlsf:
-        for invalid_host in invalid_urls:
-            error_urlsf.write(f"{invalid_host}\n")
-
-
-
-
-def add_author_info(f_m3u, f_txt):
-    for group in config.announcements:
-        f_txt.write(f"{group['channel']},#genre#\n")
-        for announcement in group['entries']:
-            f_m3u.write(
-                f"""#EXTINF:-1 tvg-id="1" tvg-name="{announcement['name']}" tvg-logo="{announcement['logo']}" group-title="{group['channel']}",{announcement['name']}\n""")
-            f_m3u.write(f"{announcement['url']}\n")
-            f_txt.write(f"{announcement['name']},{announcement['url']}\n")
-
+def main():
+    print("="*60)
+    print("组播源处理系统")
+    print(f"GitHub仓库: {GITHUB_BASE_URL}")
+    print("="*60)
+    
+    # 创建必要的目录
+    os.makedirs('ip', exist_ok=True)
+    os.makedirs('template', exist_ok=True)
+    os.makedirs('output', exist_ok=True)
+    
+    # 检查必要的文件
+    demo_template_url = f"{GITHUB_BASE_URL}/template/demo.txt"
+    if not os.path.exists("template/demo.txt"):
+        print("下载频道分类模板文件...")
+        download_file_from_url(demo_template_url, "template/demo.txt")
+    
+    # 处理每个城市
+    for city_name in CITY_STREAMS:
+        print(f"\n{'='*60}")
+        print(f"处理城市: {city_name}")
+        print(f"{'='*60}")
+        
+        # 获取城市配置
+        city_config = get_city_config(city_name)
+        if not city_config:
+            print(f"无法获取城市配置: {city_name}，跳过")
+            continue
+        
+        # 第一步：验证并更新IP文件
+        valid_ips = validate_city_ips(city_name, city_config)
+        
+        if not valid_ips:
+            print(f"{city_name} 没有可用的IP，跳过")
+            continue
+        
+        # 第二步：获取前3名IP
+        top_ips = get_top_ips_for_city(city_name, city_config, top_n=3)
+        
+        if not top_ips or len(top_ips) < 3:
+            print(f"{city_name} 没有找到足够的可用IP（需要3个），跳过")
+            continue
+        
+        # 第三步：下载并读取频道模板
+        categories = download_template_file(city_name, city_config)
+        
+        if not categories:
+            print(f"{city_name} 没有频道模板，跳过")
+            continue
+        
+        # 第四步：读取台标文件
+        logo_dict = read_logo_file()
+        
+        # 第五步：生成文件
+        generate_files_for_city(city_name, top_ips, logo_dict, categories)
+        
+        # 城市间延迟
+        time.sleep(2)
+    
+    # 合并所有文件
+    print(f"\n{'='*60}")
+    print("开始合并所有文件...")
+    print(f"{'='*60}")
+    merge_all_files()
+    
+    print(f"\n{'='*60}")
+    print("所有处理完成！")
+    print(f"输出文件:")
+    print(f"  - 单个城市文件: output/目录下")
+    print(f"  - 合并文件: zubo_all.txt, zubo_all.m3u")
+    print(f"  - 简化文件: zubo_simple.txt (每个频道只保留一个源)")
+    print(f"{'='*60}")
 
 if __name__ == "__main__":
-    template_file = "my_tv/config/tag.txt"
-    channels, template_channels = filter_source_urls(template_file)
-    update_channel_urls_m3u(channels, template_channels)
+    main()
