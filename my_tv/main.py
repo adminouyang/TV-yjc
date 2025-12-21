@@ -13,11 +13,11 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # 城市特定的测试流地址
 CITY_STREAMS = {
-    "template_安徽电信": ["rtp/238.1.79.27:4328"],
-    "template_北京电信": ["rtp/225.1.8.21:8002"],
-    "template_北京联通": ["rtp/239.3.1.241:8000"],
-    "template_江苏电信": ["udp/239.49.8.19:9614"],
-    "template_四川电信": ["udp/239.93.0.169:5140"],
+    "安徽电信": ["rtp/238.1.79.27:4328"],
+    "北京电信": ["rtp/225.1.8.21:8002"],
+    "北京联通": ["rtp/239.3.1.241:8000"],
+    "江苏电信": ["udp/239.49.8.19:9614"],
+    "四川电信": ["udp/239.93.0.169:5140"],
     # 可以根据需要添加更多城市
 }
 
@@ -54,10 +54,8 @@ def fetch_remote_content(url, max_retries=3):
             return response.text
         except requests.exceptions.RequestException as e:
             if attempt < max_retries - 1:
-                print(f"获取远程内容失败 (尝试 {attempt + 1}/{max_retries}): {url}")
                 time.sleep(1)
             else:
-                print(f"获取远程内容失败: {url}, 错误: {e}")
                 return None
     return None
 
@@ -69,13 +67,11 @@ def download_file_from_url(url, local_path):
             os.makedirs(os.path.dirname(local_path), exist_ok=True)
             with open(local_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"下载文件成功: {local_path}")
+            print(f"✓ 下载文件成功: {local_path}")
             return True
         else:
-            print(f"下载文件失败: {url}")
             return False
     except Exception as e:
-        print(f"下载文件异常: {url}, 错误: {e}")
         return False
 
 def clean_ip_line(ip_line):
@@ -107,7 +103,7 @@ def clean_ip_line(ip_line):
     return ip_line
 
 def read_channel_template():
-    """读取频道模板文件（从本地缓存）"""
+    """读取本地频道模板文件"""
     template_file = "template/demo.txt"
     if not os.path.exists(template_file):
         print(f"频道模板文件不存在: {template_file}")
@@ -319,7 +315,7 @@ def validate_city_ips(city_name, city_config):
     valid_ips.sort(key=lambda x: x[1], reverse=True)
     
     # 保存到本地IP文件
-    local_ip_file = f"my_tv/ip/{city_name}_ip.txt"
+    local_ip_file = f"ip/{city_name}_ip.txt"
     os.makedirs('ip', exist_ok=True)
     with open(local_ip_file, 'w', encoding='utf-8') as f:
         for ip_port, speed in valid_ips:
@@ -389,10 +385,16 @@ def download_template_file(city_name, city_config):
     template_url = city_config["template_url"]
     local_template_file = f"template/{city_name}.txt"
     
-    # 下载模板文件
+    # 先检查本地是否有模板文件
+    if os.path.exists(local_template_file):
+        print(f"使用本地模板文件: {local_template_file}")
+        return read_template_file(city_name)
+    
+    # 尝试从远程下载模板文件
     print(f"正在下载频道模板: {template_url}")
     success = download_file_from_url(template_url, local_template_file)
     if not success:
+        print(f"下载频道模板失败: {template_url}")
         return None
     
     return read_template_file(city_name)
@@ -441,14 +443,9 @@ def read_template_file(city_name):
         return None
 
 def read_logo_file():
-    """读取台标文件"""
+    """读取本地台标文件"""
     logo_dict = {}
-    logo_url = f"{GITHUB_BASE_URL}/template/logo.txt"
-    local_logo_file = "my_tv/template/logo.txt"
-    
-    # 尝试从远程下载台标文件
-    print(f"正在下载台标文件: {logo_url}")
-    download_file_from_url(logo_url, local_logo_file)
+    local_logo_file = "template/logo.txt"
     
     if os.path.exists(local_logo_file):
         try:
@@ -470,20 +467,20 @@ def read_logo_file():
     return logo_dict
 
 def generate_files_for_city(city_name, top_ips, logo_dict, categories):
-    """为城市生成TXT和M3U文件，使用3个IP生成3套源"""
+    """为城市生成TXT和M3U文件，使用可用的IP生成源（有几个用几个）"""
     if not categories:
         print(f"{city_name} 没有频道模板，跳过文件生成")
         return
     
-    if not top_ips or len(top_ips) < 3:
-        print(f"{city_name} 可用的IP数量不足3个，跳过文件生成")
+    if not top_ips:
+        print(f"{city_name} 没有可用的IP，跳过文件生成")
         return
     
     # 创建输出目录
     os.makedirs('output', exist_ok=True)
     
-    # 取前3个IP
-    top_3_ips = [ip for ip, _ in top_ips[:3]]
+    # 使用所有可用的IP
+    available_ips = [ip for ip, _ in top_ips]
     
     # 生成TXT文件
     txt_file = f"output/{city_name}.txt"
@@ -501,8 +498,8 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
             txt_f.write(f"{category},#genre#\n")
             
             for channel_name, channel_url in channels:
-                # 为每个频道生成3个源，分别使用3个IP
-                for i, ip_port in enumerate(top_3_ips, 1):
+                # 为每个频道生成源，使用所有可用的IP
+                for i, ip_port in enumerate(available_ips, 1):
                     # 替换ipipip为实际IP:端口
                     new_url = channel_url.replace("ipipip", ip_port)
                     
@@ -520,7 +517,7 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
                     
                     channel_count += 1
         
-        print(f"  TXT文件: {txt_file} (共{channel_count}个频道，每个频道{len(top_3_ips)}个源)")
+        print(f"  TXT文件: {txt_file} (共{channel_count}个频道，每个频道{len(available_ips)}个源)")
         print(f"  M3U文件: {m3u_file}")
     
     return txt_file, m3u_file
@@ -528,8 +525,8 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
 def merge_all_files():
     """合并所有城市的TXT和M3U文件，按照频道模板排序"""
     try:
-        txt_files = glob.glob("my_tv/output/*.txt")
-        m3u_files = glob.glob("my_tv/output/*.m3u")
+        txt_files = glob.glob("output/*.txt")
+        m3u_files = glob.glob("output/*.m3u")
         
         if not txt_files or not m3u_files:
             print("没有找到输出文件可合并")
@@ -737,12 +734,6 @@ def main():
     os.makedirs('template', exist_ok=True)
     os.makedirs('output', exist_ok=True)
     
-    # 检查必要的文件
-    demo_template_url = f"{GITHUB_BASE_URL}/template/demo.txt"
-    if not os.path.exists("template/demo.txt"):
-        print("下载频道分类模板文件...")
-        download_file_from_url(demo_template_url, "template/demo.txt")
-    
     # 处理每个城市
     for city_name in CITY_STREAMS:
         print(f"\n{'='*60}")
@@ -762,12 +753,14 @@ def main():
             print(f"{city_name} 没有可用的IP，跳过")
             continue
         
-        # 第二步：获取前3名IP
+        # 第二步：获取可用的IP（最多3个，但实际有多少用多少）
         top_ips = get_top_ips_for_city(city_name, city_config, top_n=3)
         
-        if not top_ips or len(top_ips) < 3:
-            print(f"{city_name} 没有找到足够的可用IP（需要3个），跳过")
+        if not top_ips:
+            print(f"{city_name} 没有可用的IP，跳过")
             continue
+        
+        print(f"{city_name} 共有 {len(top_ips)} 个可用IP，将全部使用")
         
         # 第三步：下载并读取频道模板
         categories = download_template_file(city_name, city_config)
@@ -779,7 +772,7 @@ def main():
         # 第四步：读取台标文件
         logo_dict = read_logo_file()
         
-        # 第五步：生成文件
+        # 第五步：生成文件（有多少IP就用多少）
         generate_files_for_city(city_name, top_ips, logo_dict, categories)
         
         # 城市间延迟
