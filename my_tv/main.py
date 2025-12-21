@@ -70,10 +70,8 @@ def download_file_from_url(url, local_path):
             print(f"✓ 下载文件成功: {local_path}")
             return True
         else:
-            print(f"× 下载文件失败: {url}")
             return False
     except Exception as e:
-        print(f"× 下载文件异常: {url}, 错误: {e}")
         return False
 
 def clean_ip_line(ip_line):
@@ -106,7 +104,7 @@ def clean_ip_line(ip_line):
 
 def read_channel_template():
     """读取本地频道模板文件"""
-    template_file = "template/demo.txt"
+    template_file = "my_tv/template/demo.txt"
     if not os.path.exists(template_file):
         print(f"频道模板文件不存在: {template_file}")
         return {}
@@ -230,8 +228,8 @@ def test_stream_speed(stream_url, timeout=5):
             return 0, False
         
         downloaded = 0
-        chunk_size = 10 * 1024
-        max_download = 100 * 1024
+        chunk_size = 100 * 1024
+        max_download = 1000 * 1024
         
         for chunk in response.iter_content(chunk_size=chunk_size):
             downloaded += len(chunk)
@@ -317,7 +315,7 @@ def validate_city_ips(city_name, city_config):
     valid_ips.sort(key=lambda x: x[1], reverse=True)
     
     # 保存到本地IP文件
-    local_ip_file = f"ip/{city_name}_ip.txt"
+    local_ip_file = f"my_tv/ip/{city_name}_ip.txt"
     os.makedirs('ip', exist_ok=True)
     with open(local_ip_file, 'w', encoding='utf-8') as f:
         for ip_port, speed in valid_ips:
@@ -333,7 +331,7 @@ def validate_city_ips(city_name, city_config):
 def get_top_ips_for_city(city_name, city_config, top_n=3):
     """获取城市IP列表中的前N名IP"""
     # 从本地文件读取（由validate_city_ips生成）
-    local_ip_file = f"ip/{city_name}_ip.txt"
+    local_ip_file = f"my_tv/ip/{city_name}_ip.txt"
     if not os.path.exists(local_ip_file):
         print(f"本地IP文件不存在: {local_ip_file}，跳过")
         return []
@@ -385,7 +383,7 @@ def get_top_ips_for_city(city_name, city_config, top_n=3):
 def download_template_file(city_name, city_config):
     """下载城市对应的频道模板文件"""
     template_url = city_config["template_url"]
-    local_template_file = f"template/{city_name}.txt"
+    local_template_file = f"my_tv/template/{city_name}.txt"
     
     # 先检查本地是否有模板文件
     if os.path.exists(local_template_file):
@@ -403,7 +401,7 @@ def download_template_file(city_name, city_config):
 
 def read_template_file(city_name):
     """读取城市对应的频道模板文件（从本地）"""
-    template_file = f"template/{city_name}.txt"
+    template_file = f"my_tv/template/{city_name}.txt"
     if not os.path.exists(template_file):
         print(f"频道模板文件不存在: {template_file}")
         return None
@@ -427,6 +425,7 @@ def read_template_file(city_name):
                     
                     current_category = line.replace(",#genre#", "").strip()
                     current_channels = []
+                    print(f"  发现分类: {current_category}")
                 elif line and "," in line:
                     parts = line.split(",", 1)
                     if len(parts) == 2:
@@ -446,7 +445,7 @@ def read_template_file(city_name):
 def read_logo_file():
     """读取本地台标文件"""
     logo_dict = {}
-    local_logo_file = "template/logo.txt"
+    local_logo_file = "my_tv/template/logo.txt"
     
     if os.path.exists(local_logo_file):
         try:
@@ -471,11 +470,11 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
     """为城市生成TXT和M3U文件，使用可用的IP生成源（有几个用几个）"""
     if not categories:
         print(f"{city_name} 没有频道模板，跳过文件生成")
-        return False
+        return
     
     if not top_ips:
         print(f"{city_name} 没有可用的IP，跳过文件生成")
-        return False
+        return
     
     # 创建输出目录
     os.makedirs('output', exist_ok=True)
@@ -487,44 +486,41 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
     txt_file = f"output/{city_name}.txt"
     m3u_file = f"output/{city_name}.m3u"
     
-    try:
-        with open(txt_file, 'w', encoding='utf-8') as txt_f, \
-             open(m3u_file, 'w', encoding='utf-8') as m3u_f:
-            
-            m3u_f.write("#EXTM3U\n")
-            
-            channel_count = 0
-            
-            for category, channels in categories:
-                # 写入分类标题
-                txt_f.write(f"{category},#genre#\n")
-                
-                for channel_name, channel_url in channels:
-                    # 为每个频道生成源，使用所有可用的IP
-                    for i, ip_port in enumerate(available_ips, 1):
-                        # 替换ipipip为实际IP:端口
-                        new_url = channel_url.replace("ipipip", ip_port)
-                        
-                        # 写入TXT文件
-                        txt_f.write(f"{channel_name},{new_url}${city_name}\n")
-                        
-                        # 写入M3U文件
-                        logo_url = logo_dict.get(channel_name, "")
-                        
-                        if logo_url:
-                            m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}${city_name}\n')
-                        else:
-                            m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}${city_name}\n')
-                        m3u_f.write(f"{new_url}\n")
-                        
-                        channel_count += 1
+    with open(txt_file, 'w', encoding='utf-8') as txt_f, \
+         open(m3u_file, 'w', encoding='utf-8') as m3u_f:
         
-        print(f"✓ TXT文件: {txt_file} (共{channel_count}个频道，每个频道{len(available_ips)}个源)")
-        print(f"✓ M3U文件: {m3u_file}")
-        return True
-    except Exception as e:
-        print(f"× 生成文件失败: {e}")
-        return False
+        m3u_f.write("#EXTM3U\n")
+        
+        channel_count = 0
+        
+        for category, channels in categories:
+            # 写入分类标题
+            txt_f.write(f"{category},#genre#\n")
+            
+            for channel_name, channel_url in channels:
+                # 为每个频道生成源，使用所有可用的IP
+                for i, ip_port in enumerate(available_ips, 1):
+                    # 替换ipipip为实际IP:端口
+                    new_url = channel_url.replace("ipipip", ip_port)
+                    
+                    # 写入TXT文件
+                    txt_f.write(f"{channel_name},{new_url}${city_name}\n")
+                    
+                    # 写入M3U文件
+                    logo_url = logo_dict.get(channel_name, "")
+                    
+                    if logo_url:
+                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}${city_name}\n')
+                    else:
+                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}${city_name}\n')
+                    m3u_f.write(f"{new_url}\n")
+                    
+                    channel_count += 1
+        
+        print(f"  TXT文件: {txt_file} (共{channel_count}个频道，每个频道{len(available_ips)}个源)")
+        print(f"  M3U文件: {m3u_file}")
+    
+    return txt_file, m3u_file
 
 def merge_all_files():
     """合并所有城市的TXT和M3U文件，按照频道模板排序"""
@@ -647,7 +643,7 @@ def merge_all_files():
             for main_channel in category.values():
                 total_sources += len(main_channel)
         
-        print(f"✓ 已合并TXT文件: zubo_all.txt (共{len(organized_channels)}个分类，{total_sources}个源)")
+        print(f"已合并TXT文件: zubo_all.txt (共{len(organized_channels)}个分类，{total_sources}个源)")
         
         # 合并M3U文件
         with open("zubo_all.m3u", "w", encoding="utf-8") as f:
@@ -688,7 +684,7 @@ def merge_all_files():
                             f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="其它频道",{display_name}\n')
                         f.write(f"{url}\n")
         
-        print(f"✓ 已合并M3U文件: zubo_all.m3u")
+        print(f"已合并M3U文件: zubo_all.m3u")
         
         # 生成简化版
         with open("zubo_simple.txt", "w", encoding="utf-8") as f:
@@ -720,10 +716,10 @@ def merge_all_files():
                                 written_channels.add(channel_name)
                                 break
         
-        print(f"✓ 已生成简化版TXT文件: zubo_simple.txt")
+        print(f"已生成简化版TXT文件: zubo_simple.txt")
     
     except Exception as e:
-        print(f"× 合并文件时发生错误: {e}")
+        print(f"合并文件时发生错误: {e}")
         import traceback
         traceback.print_exc()
 
@@ -738,18 +734,7 @@ def main():
     os.makedirs('template', exist_ok=True)
     os.makedirs('output', exist_ok=True)
     
-    # 检查必要的本地文件
-    if not os.path.exists("template/demo.txt"):
-        print("× 请确保 template/demo.txt 文件存在")
-        return
-    
-    if not os.path.exists("template/logo.txt"):
-        print("× 请确保 template/logo.txt 文件存在")
-        return
-    
     # 处理每个城市
-    processed_cities = []
-    
     for city_name in CITY_STREAMS:
         print(f"\n{'='*60}")
         print(f"处理城市: {city_name}")
@@ -758,59 +743,53 @@ def main():
         # 获取城市配置
         city_config = get_city_config(city_name)
         if not city_config:
-            print(f"× 无法获取城市配置: {city_name}，跳过")
+            print(f"无法获取城市配置: {city_name}，跳过")
             continue
         
         # 第一步：验证并更新IP文件
         valid_ips = validate_city_ips(city_name, city_config)
         
         if not valid_ips:
-            print(f"× {city_name} 没有可用的IP，跳过")
+            print(f"{city_name} 没有可用的IP，跳过")
             continue
         
         # 第二步：获取可用的IP（最多3个，但实际有多少用多少）
-        top_ips = valid_ips[:3]  # 取前3个，但实际可能不足3个
+        top_ips = get_top_ips_for_city(city_name, city_config, top_n=3)
         
-        print(f"✓ {city_name} 共有 {len(valid_ips)} 个可用IP，将使用前 {len(top_ips)} 个")
+        if not top_ips:
+            print(f"{city_name} 没有可用的IP，跳过")
+            continue
+        
+        print(f"{city_name} 共有 {len(top_ips)} 个可用IP，将全部使用")
         
         # 第三步：下载并读取频道模板
         categories = download_template_file(city_name, city_config)
         
         if not categories:
-            print(f"× {city_name} 没有频道模板，跳过")
+            print(f"{city_name} 没有频道模板，跳过")
             continue
         
         # 第四步：读取台标文件
         logo_dict = read_logo_file()
         
         # 第五步：生成文件（有多少IP就用多少）
-        success = generate_files_for_city(city_name, top_ips, logo_dict, categories)
-        
-        if success:
-            processed_cities.append(city_name)
+        generate_files_for_city(city_name, top_ips, logo_dict, categories)
         
         # 城市间延迟
         time.sleep(2)
     
     # 合并所有文件
-    if processed_cities:
-        print(f"\n{'='*60}")
-        print("开始合并所有文件...")
-        print(f"已处理城市: {', '.join(processed_cities)}")
-        print(f"{'='*60}")
-        merge_all_files()
-    else:
-        print(f"\n{'='*60}")
-        print("没有成功处理任何城市，无法合并文件")
-        print(f"{'='*60}")
+    print(f"\n{'='*60}")
+    print("开始合并所有文件...")
+    print(f"{'='*60}")
+    merge_all_files()
     
     print(f"\n{'='*60}")
-    print("处理完成！")
-    print(f"请检查以下目录和文件:")
-    print(f"  - IP文件: ip/目录")
-    print(f"  - 模板文件: template/目录")
-    print(f"  - 单个城市文件: output/目录")
-    print(f"  - 合并文件: 当前目录下的 zubo_all.txt, zubo_all.m3u, zubo_simple.txt")
+    print("所有处理完成！")
+    print(f"输出文件:")
+    print(f"  - 单个城市文件: output/目录下")
+    print(f"  - 合并文件: zubo_all.txt, zubo_all.m3u")
+    print(f"  - 简化文件: zubo_simple.txt (每个频道只保留一个源)")
     print(f"{'='*60}")
 
 if __name__ == "__main__":
