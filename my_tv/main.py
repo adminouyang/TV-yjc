@@ -108,7 +108,7 @@ def clean_ip_line(ip_line):
 
 def read_channel_template():
     """读取频道模板文件（从本地缓存）"""
-    template_file = "template/demo.txt"
+    template_file = "mytv_/template/demo.txt"
     if not os.path.exists(template_file):
         print(f"频道模板文件不存在: {template_file}")
         return {}
@@ -231,8 +231,8 @@ def test_stream_speed(stream_url, timeout=5):
             return 0, False
         
         downloaded = 0
-        chunk_size = 10 * 1024
-        max_download = 100 * 1024
+        chunk_size = 100 * 1024
+        max_download = 1000 * 1024
         
         for chunk in response.iter_content(chunk_size=chunk_size):
             downloaded += len(chunk)
@@ -318,7 +318,7 @@ def validate_city_ips(city_name, city_config):
     valid_ips.sort(key=lambda x: x[1], reverse=True)
     
     # 保存到本地IP文件
-    local_ip_file = f"ip/{city_name}_ip.txt"
+    local_ip_file = f"my_tv/ip/{city_name}_ip.txt"
     os.makedirs('ip', exist_ok=True)
     with open(local_ip_file, 'w', encoding='utf-8') as f:
         for ip_port, speed in valid_ips:
@@ -334,7 +334,7 @@ def validate_city_ips(city_name, city_config):
 def get_top_ips_for_city(city_name, city_config, top_n=3):
     """获取城市IP列表中的前N名IP"""
     # 从本地文件读取（由validate_city_ips生成）
-    local_ip_file = f"ip/{city_name}_ip.txt"
+    local_ip_file = f"my_tv/ip/{city_name}_ip.txt"
     if not os.path.exists(local_ip_file):
         print(f"本地IP文件不存在: {local_ip_file}，跳过")
         return []
@@ -386,7 +386,7 @@ def get_top_ips_for_city(city_name, city_config, top_n=3):
 def download_template_file(city_name, city_config):
     """下载城市对应的频道模板文件"""
     template_url = city_config["template_url"]
-    local_template_file = f"template/{city_name}.txt"
+    local_template_file = f"my_tv/template/{city_name}.txt"
     
     # 先检查本地是否有模板文件
     if os.path.exists(local_template_file):
@@ -405,7 +405,7 @@ def download_template_file(city_name, city_config):
 
 def read_template_file(city_name):
     """读取城市对应的频道模板文件（从本地）"""
-    template_file = f"template/{city_name}.txt"
+    template_file = f"my_tv/template/{city_name}.txt"
     if not os.path.exists(template_file):
         print(f"频道模板文件不存在: {template_file}")
         return None
@@ -448,7 +448,7 @@ def read_template_file(city_name):
 def read_logo_file():
     """读取本地台标文件"""
     logo_dict = {}
-    local_logo_file = "template/logo.txt"
+    local_logo_file = "my_tv/template/logo.txt"
     
     if os.path.exists(local_logo_file):
         try:
@@ -480,7 +480,7 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
         return
     
     # 创建输出目录
-    os.makedirs('output', exist_ok=True)
+    os.makedirs('my_tv/output', exist_ok=True)
     
     # 使用所有可用的IP
     available_ips = [ip for ip, _ in top_ips]
