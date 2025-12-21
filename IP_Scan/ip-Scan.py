@@ -127,8 +127,8 @@ def multicast_province(config_file):
         all_ip_ports = sorted(set(all_ip_ports))
         print(f"\n{province_name} 扫描完成，获取有效ip_port共：{len(all_ip_ports)}个\n")
         
-        # 保存扫描结果，文件名格式为：原文件名_ip.txt
-        result_filename = f"{province_name}_ip.txt"
+        # 保存扫描结果，文件名格式为：原文件名_good_ip.txt
+        result_filename = f"{province_name}_good_ip.txt"
         result_path = os.path.join("IP_Scan", "ip", result_filename)
         
         with open(result_path, 'w', encoding='utf-8') as f:
