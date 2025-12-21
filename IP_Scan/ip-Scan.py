@@ -13,25 +13,50 @@ def read_config(config_file):
         with open(config_file, 'r') as f:
             for line_num, line in enumerate(f, 1):
                 line = line.strip()
-                if line and not line.startswith("#"):
+                if not line or line.startswith("#"):
+                    continue
+                    
+                try:
                     if "," in line:
                         # 格式: IP:端口,选项
                         parts = line.split(',')
-                        ip_part, port = parts[0].strip().split(':')
+                        ip_part_port = parts[0].strip()
                         option = int(parts[1])
                     else:
                         # 格式: IP:端口 (默认选项为12)
-                        ip_part, port = line.strip().split(':')
+                        ip_part_port = line.strip()
                         option = 12
                     
-                    a, b, c, d = ip_part.split('.')
+                    # 解析IP和端口
+                    if ":" not in ip_part_port:
+                        print(f"第{line_num}行格式错误: 缺少端口号 - {line}")
+                        continue
+                        
+                    ip_part, port = ip_part_port.split(':')
+                    
+                    # 验证IP格式
+                    ip_parts = ip_part.split('.')
+                    if len(ip_parts) != 4:
+                        print(f"第{line_num}行格式错误: IP地址格式不正确 - {line}")
+                        continue
+                    
+                    a, b, c, d = ip_parts
+                    
+                    # 计算URL后缀和基础IP
                     url_end = "/status" if option >= 10 else "/stat"
                     ip = f"{a}.{b}.{c}.1" if option % 2 == 0 else f"{a}.{b}.1.1"
+                    
                     ip_configs.append((ip, port, option, url_end))
                     print(f"第{line_num}行：http://{ip}:{port}{url_end}添加到扫描列表")
+                    
+                except Exception as e:
+                    print(f"第{line_num}行格式错误: {e} - {line}")
+                    continue
+                    
         return ip_configs
     except Exception as e:
         print(f"读取文件错误: {e}")
+        return []  # 返回空列表而不是None
 
 def generate_ip_ports(ip, port, option):
     a, b, c, d = ip.split('.')
@@ -85,7 +110,12 @@ def multicast_province(config_file):
     province_name = os.path.splitext(filename)[0]
     print(f"{'='*25}\n   获取: {province_name}ip_port\n{'='*25}")
     
-    configs = sorted(set(read_config(config_file)))
+    configs = read_config(config_file)
+    if not configs:
+        print(f"配置文件 {filename} 中没有有效的配置行，跳过扫描")
+        return
+        
+    configs = sorted(set(configs))
     print(f"读取完成，共需扫描 {len(configs)}组")
     
     all_ip_ports = []
@@ -95,7 +125,7 @@ def multicast_province(config_file):
     
     if len(all_ip_ports) != 0:
         all_ip_ports = sorted(set(all_ip_ports))
-        print(f"\n{province_name} 扫描完成，获取有效ip_port共：{len(all_ip_ports)}个\n{all_ip_ports}\n")
+        print(f"\n{province_name} 扫描完成，获取有效ip_port共：{len(all_ip_ports)}个\n")
         
         # 保存扫描结果，文件名格式为：原文件名_ip.txt
         result_filename = f"{province_name}_ip.txt"
