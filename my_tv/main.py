@@ -232,8 +232,8 @@ def test_stream_speed(stream_url, timeout=5):
             return 0, False
         
         downloaded = 0
-        chunk_size = 10 * 1024
-        max_download = 100 * 1024
+        chunk_size = 100 * 1024
+        max_download = 1000 * 1024
         
         for chunk in response.iter_content(chunk_size=chunk_size):
             downloaded += len(chunk)
@@ -319,7 +319,7 @@ def validate_city_ips(city_name, city_config):
     valid_ips.sort(key=lambda x: x[1], reverse=True)
     
     # 保存到本地IP文件
-    local_ip_file = f"ip/{city_name}_ip.txt"
+    local_ip_file = f"my_tv/ip/{city_name}_ip.txt"
     os.makedirs('ip', exist_ok=True)
     with open(local_ip_file, 'w', encoding='utf-8') as f:
         for ip_port, speed in valid_ips:
@@ -444,7 +444,7 @@ def read_logo_file():
     """读取台标文件"""
     logo_dict = {}
     logo_url = f"{GITHUB_BASE_URL}/template/logo.txt"
-    local_logo_file = "template/logo.txt"
+    local_logo_file = "my_tv/template/logo.txt"
     
     # 尝试从远程下载台标文件
     print(f"正在下载台标文件: {logo_url}")
@@ -528,8 +528,8 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
 def merge_all_files():
     """合并所有城市的TXT和M3U文件，按照频道模板排序"""
     try:
-        txt_files = glob.glob("output/*.txt")
-        m3u_files = glob.glob("output/*.m3u")
+        txt_files = glob.glob("my_tv/output/*.txt")
+        m3u_files = glob.glob("my_tv/output/*.m3u")
         
         if not txt_files or not m3u_files:
             print("没有找到输出文件可合并")
