@@ -1,0 +1,75 @@
+name: IPTV Source Processor
+
+on:
+  # 每天凌晨2点自动运行
+  schedule:
+    - cron: '0 18 * * *'
+  # 支持手动触发
+  workflow_dispatch:
+  # 当代码推送时也运行
+  push:
+    branches: [ main ]
+
+jobs:
+  process-iptv-sources:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+      
+    - name: 设置Python环境
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+        
+    - name: 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+        pip install urllib3
+        
+    - name: 创建必要目录
+      run: |
+        mkdir -p my_tv/ip
+        mkdir -p my_tv/template
+        mkdir -p my_tv/output
+        
+    - name: 运行IPTV源处理脚本
+      run: python my_tv/main.py
+      continue-on-error: false
+      
+    - name: 显示生成的文件
+      run: |
+        echo "=== 生成的文件列表 ==="
+        ls -la my_tv/output/ || echo "output目录不存在"
+        ls -la *.txt *.m3u 2>/dev/null || echo "没有找到合并文件"
+        
+    - name: 上传生成的输出文件
+      uses: actions/upload-artifact@v4
+      with:
+        name: iptv-playlists
+        path: |
+          my_tv/output/
+          *.txt
+          *.m3u
+        retention-days: 7
+        
+    - name: 自动提交生成的文件
+      if: github.event_name == 'schedule'
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        
+        # 检查是否有文件需要提交
+        if git status --porcelain | grep -E '\.(txt|m3u)$' || git status --porcelain output/; then
+          echo "有新的更改，正在提交..."
+          git add my_tv/output/ *.txt *.m3u
+          git commit -m "📡 自动更新IPTV播放列表 - $(date '+%Y-%m-%d %H:%M:%S')"
+          git push
+        else
+          echo "没有需要提交的更改"
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
