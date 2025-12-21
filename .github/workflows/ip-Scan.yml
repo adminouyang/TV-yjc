@@ -1,4 +1,4 @@
-name: ip-Scan
+name: IP-Scan
 
 on:
   schedule:
@@ -14,6 +14,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0   
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -22,16 +23,19 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r IP_Scan/requirements.txt
-      - name: 获取ip
+          cd IP_Scan
+          pip install -r requirements.txt
+          
+      - name: 获取和更新IP
         run: |
           cd $GITHUB_WORKSPACE
-          python IP_Scan//ip-Scan.py
-      - name: 更新ip
+          python IP_Scan/Scan_ip.py
+          
+      - name: 提交更改
         run: |
-          git pull
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git pull origin main
           git add .
-          git commit -m "更新_ip"
-          git push
+          git commit -m "更新IP配置" || echo "没有更改可提交"
+          git push origin main
