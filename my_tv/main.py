@@ -56,6 +56,7 @@ def fetch_remote_content(url, max_retries=3):
             if attempt < max_retries - 1:
                 time.sleep(1)
             else:
+                print(f"✗ 获取远程内容失败: {url}")
                 return None
     return None
 
@@ -64,14 +65,17 @@ def download_file_from_url(url, local_path):
     try:
         content = fetch_remote_content(url)
         if content:
+            # 确保目录存在
             os.makedirs(os.path.dirname(local_path), exist_ok=True)
             with open(local_path, 'w', encoding='utf-8') as f:
                 f.write(content)
             print(f"✓ 下载文件成功: {local_path}")
             return True
         else:
+            print(f"✗ 下载文件失败: {url}")
             return False
     except Exception as e:
+        print(f"✗ 下载文件异常: {url}, 错误: {e}")
         return False
 
 def clean_ip_line(ip_line):
@@ -103,8 +107,8 @@ def clean_ip_line(ip_line):
     return ip_line
 
 def read_channel_template():
-    """读取本地频道模板文件"""
-    template_file = "my_tv/template/demo.txt"
+    """读取频道模板文件（从本地缓存）"""
+    template_file = "template/demo.txt"
     if not os.path.exists(template_file):
         print(f"频道模板文件不存在: {template_file}")
         return {}
@@ -128,7 +132,6 @@ def read_channel_template():
                     
                     current_category = line.replace(",#genre#", "").strip()
                     current_channels = []
-                    print(f"  发现分类: {current_category}")
                 elif "|" in line:
                     parts = [part.strip() for part in line.split("|") if part.strip()]
                     if len(parts) >= 1:
@@ -228,8 +231,8 @@ def test_stream_speed(stream_url, timeout=5):
             return 0, False
         
         downloaded = 0
-        chunk_size = 100 * 1024
-        max_download = 1000 * 1024
+        chunk_size = 10 * 1024
+        max_download = 100 * 1024
         
         for chunk in response.iter_content(chunk_size=chunk_size):
             downloaded += len(chunk)
@@ -315,7 +318,7 @@ def validate_city_ips(city_name, city_config):
     valid_ips.sort(key=lambda x: x[1], reverse=True)
     
     # 保存到本地IP文件
-    local_ip_file = f"my_tv/ip/{city_name}_ip.txt"
+    local_ip_file = f"ip/{city_name}_ip.txt"
     os.makedirs('ip', exist_ok=True)
     with open(local_ip_file, 'w', encoding='utf-8') as f:
         for ip_port, speed in valid_ips:
@@ -331,7 +334,7 @@ def validate_city_ips(city_name, city_config):
 def get_top_ips_for_city(city_name, city_config, top_n=3):
     """获取城市IP列表中的前N名IP"""
     # 从本地文件读取（由validate_city_ips生成）
-    local_ip_file = f"my_tv/ip/{city_name}_ip.txt"
+    local_ip_file = f"ip/{city_name}_ip.txt"
     if not os.path.exists(local_ip_file):
         print(f"本地IP文件不存在: {local_ip_file}，跳过")
         return []
@@ -383,7 +386,7 @@ def get_top_ips_for_city(city_name, city_config, top_n=3):
 def download_template_file(city_name, city_config):
     """下载城市对应的频道模板文件"""
     template_url = city_config["template_url"]
-    local_template_file = f"my_tv/template/{city_name}.txt"
+    local_template_file = f"template/{city_name}.txt"
     
     # 先检查本地是否有模板文件
     if os.path.exists(local_template_file):
@@ -394,14 +397,15 @@ def download_template_file(city_name, city_config):
     print(f"正在下载频道模板: {template_url}")
     success = download_file_from_url(template_url, local_template_file)
     if not success:
-        print(f"下载频道模板失败: {template_url}")
+        print(f"✗ 无法获取频道模板: {template_url}")
+        print(f"请确保模板文件存在，或手动创建: {local_template_file}")
         return None
     
     return read_template_file(city_name)
 
 def read_template_file(city_name):
     """读取城市对应的频道模板文件（从本地）"""
-    template_file = f"my_tv/template/{city_name}.txt"
+    template_file = f"template/{city_name}.txt"
     if not os.path.exists(template_file):
         print(f"频道模板文件不存在: {template_file}")
         return None
@@ -425,7 +429,6 @@ def read_template_file(city_name):
                     
                     current_category = line.replace(",#genre#", "").strip()
                     current_channels = []
-                    print(f"  发现分类: {current_category}")
                 elif line and "," in line:
                     parts = line.split(",", 1)
                     if len(parts) == 2:
@@ -445,7 +448,7 @@ def read_template_file(city_name):
 def read_logo_file():
     """读取本地台标文件"""
     logo_dict = {}
-    local_logo_file = "my_tv/template/logo.txt"
+    local_logo_file = "template/logo.txt"
     
     if os.path.exists(local_logo_file):
         try:
