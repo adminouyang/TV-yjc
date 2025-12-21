@@ -1,7 +1,6 @@
 from threading import Thread
 import os
 import time
-import datetime
 import glob
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -56,7 +55,7 @@ def read_config(config_file):
         return ip_configs
     except Exception as e:
         print(f"读取文件错误: {e}")
-        return []  # 返回空列表而不是None
+        return []
 
 def generate_ip_ports(ip, port, option):
     a, b, c, d = ip.split('.')
@@ -110,32 +109,94 @@ def multicast_province(config_file):
     province_name = os.path.splitext(filename)[0]
     print(f"{'='*25}\n   获取: {province_name}ip_port\n{'='*25}")
     
-    configs = read_config(config_file)
-    if not configs:
-        print(f"配置文件 {filename} 中没有有效的配置行，跳过扫描")
-        return
-        
-    configs = sorted(set(configs))
-    print(f"读取完成，共需扫描 {len(configs)}组")
-    
+    # 读取原始配置文件，并过滤可访问的IP
+    valid_configs = []
     all_ip_ports = []
-    for ip, port, option, url_end in configs:
-        print(f"\n开始扫描  http://{ip}:{port}{url_end}")
-        all_ip_ports.extend(scan_ip_port(ip, port, option, url_end))
+    
+    try:
+        with open(config_file, 'r', encoding='utf-8') as f:
+            original_lines = f.readlines()
+            
+        for line_num, line in enumerate(original_lines, 1):
+            line = line.strip()
+            if not line or line.startswith("#"):
+                # 保留注释和空行
+                valid_configs.append(line)
+                continue
+                
+            try:
+                if "," in line:
+                    # 格式: IP:端口,选项
+                    parts = line.split(',')
+                    ip_part_port = parts[0].strip()
+                    option = int(parts[1])
+                else:
+                    # 格式: IP:端口 (默认选项为12)
+                    ip_part_port = line.strip()
+                    option = 12
+                
+                # 解析IP和端口
+                if ":" not in ip_part_port:
+                    print(f"第{line_num}行格式错误: 缺少端口号 - {line}")
+                    continue
+                    
+                original_ip, port = ip_part_port.split(':')
+                
+                # 验证IP格式
+                ip_parts = original_ip.split('.')
+                if len(ip_parts) != 4:
+                    print(f"第{line_num}行格式错误: IP地址格式不正确 - {line}")
+                    continue
+                
+                a, b, c, d = ip_parts
+                
+                # 计算URL后缀和基础IP
+                url_end = "/status" if option >= 10 else "/stat"
+                ip = f"{a}.{b}.{c}.1" if option % 2 == 0 else f"{a}.{b}.1.1"
+                
+                # 扫描这个配置
+                print(f"\n开始扫描: {line}")
+                valid_ips = scan_ip_port(ip, port, option, url_end)
+                
+                if valid_ips:
+                    # 找到有效的IP，保留这个配置
+                    valid_configs.append(line)
+                    all_ip_ports.extend(valid_ips)
+                    print(f"第{line_num}行找到 {len(valid_ips)} 个有效IP")
+                else:
+                    print(f"第{line_num}行没有找到有效IP，将从配置文件中删除")
+                    
+            except Exception as e:
+                print(f"第{line_num}行处理错误: {e} - {line}")
+                # 如果解析错误，保留原行
+                valid_configs.append(line)
+                continue
+                
+    except Exception as e:
+        print(f"读取配置文件错误: {e}")
+        return
     
     if len(all_ip_ports) != 0:
         all_ip_ports = sorted(set(all_ip_ports))
         print(f"\n{province_name} 扫描完成，获取有效ip_port共：{len(all_ip_ports)}个\n")
         
-        # 保存扫描结果，文件名格式为：原文件名_good_ip.txt
+        # 1. 保存扫描结果，文件名格式为：原文件名_good_ip.txt
         result_filename = f"{province_name}_good_ip.txt"
         result_path = os.path.join("IP_Scan", "ip", result_filename)
         
         with open(result_path, 'w', encoding='utf-8') as f:
             f.write('\n'.join(all_ip_ports))
         print(f"扫描结果已保存到: {result_path}")
+        
+        # 2. 更新原配置文件，只保留可访问的IP
+        with open(config_file, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(valid_configs))
+        print(f"配置文件已更新，只保留可访问的IP配置")
     else:
         print(f"\n{province_name} 扫描完成，未扫描到有效ip_port")
+        # 清空原配置文件
+        with open(config_file, 'w', encoding='utf-8') as f:
+            f.write('')
 
 def main():
     # 确保IP_Scan/ip目录存在
@@ -144,12 +205,12 @@ def main():
         print(f"错误：目录 '{ip_dir}' 不存在！")
         return
     
-    # 获取IP_Scan/ip目录下所有的.txt文件（排除已存在的_ip.txt结果文件）
+    # 获取IP_Scan/ip目录下所有的.txt文件（排除已存在的_good_ip.txt结果文件）
     config_files = []
     for file_path in glob.glob(os.path.join(ip_dir, "*.txt")):
         filename = os.path.basename(file_path)
-        # 跳过已经是结果文件的_ip.txt
-        if "_ip.txt" not in filename:
+        # 跳过已经是结果文件的_good_ip.txt
+        if "_good_ip.txt" not in filename:
             config_files.append(file_path)
     
     if not config_files:
