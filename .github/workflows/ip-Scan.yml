@@ -5,6 +5,9 @@ on:
     - cron: '0 23,6 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -13,8 +16,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0   
-          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
       
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -23,19 +25,35 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd IP_Scan
-          pip install -r requirements.txt
+          pip install requests
           
       - name: 获取和更新IP
         run: |
-          cd $GITHUB_WORKSPACE
           python IP_Scan/ip-Scan.py
           
-      - name: 提交更改
+      - name: 配置Git
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git pull origin main
-          git add .
-          git commit -m "更新IP配置" || echo "没有更改可提交"
+          git config pull.rebase false
+          
+      - name: 拉取最新代码
+        run: |
+          git pull origin main || echo "拉取失败，继续执行"
+          
+      - name: 添加更改
+        run: |
+          git add ip/
+          
+      - name: 提交更改
+        run: |
+          if git diff --cached --quiet; then
+            echo "没有更改可提交"
+          else
+            git commit -m "自动更新IP配置 $(date '+%Y-%m-%d %H:%M:%S')"
+          fi
+          
+      - name: 推送到远程
+        run: |
+          git pull origin main --rebase
           git push origin main
