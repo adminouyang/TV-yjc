@@ -328,7 +328,7 @@ def validate_city_ips(city_name, city_config):
     valid_ips.sort(key=lambda x: x[1], reverse=True)
     
     # 只取前3个，少于3个的全部取
-    top_ips = valid_ips[:3]
+    top_ips = valid_ips[:2]
     
     # 保存到my_tv/ip目录
     local_ip_file = os.path.join(MY_TV_DIR, "ip", f"{city_name}_ip.txt")
