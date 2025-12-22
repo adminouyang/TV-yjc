@@ -1,4 +1,4 @@
-name: IP_Scan
+name: Scan_ip
 
 on:
   schedule:
