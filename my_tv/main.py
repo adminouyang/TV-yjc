@@ -24,6 +24,11 @@ CITY_STREAMS = {
 # 远程GitHub仓库的基础URL
 GITHUB_BASE_URL = "https://raw.githubusercontent.com/q1017673817/iptvz/refs/heads/main"
 
+# 设置工作目录
+WORKING_DIR = os.getcwd()  # GitHub Actions的工作目录
+MY_TV_DIR = os.path.join(WORKING_DIR, "my_tv")
+OUTPUT_DIR = os.path.join(MY_TV_DIR, "output")
+
 def get_city_config(city_name):
     """根据城市名获取配置"""
     if city_name in CITY_STREAMS:
@@ -108,7 +113,7 @@ def clean_ip_line(ip_line):
 
 def read_channel_template():
     """读取频道模板文件（从本地缓存）"""
-    template_file = "my_tv/template/demo.txt"
+    template_file = os.path.join(MY_TV_DIR, "template", "demo.txt")
     if not os.path.exists(template_file):
         print(f"频道模板文件不存在: {template_file}")
         return {}
@@ -317,9 +322,9 @@ def validate_city_ips(city_name, city_config):
     # 按速度排序
     valid_ips.sort(key=lambda x: x[1], reverse=True)
     
-    # 保存到本地IP文件
-    local_ip_file = f"my_tv/ip/{city_name}_ip.txt"
-    os.makedirs('ip', exist_ok=True)
+    # 保存到my_tv/ip目录
+    local_ip_file = os.path.join(MY_TV_DIR, "ip", f"{city_name}_ip.txt")
+    os.makedirs(os.path.dirname(local_ip_file), exist_ok=True)
     with open(local_ip_file, 'w', encoding='utf-8') as f:
         for ip_port, speed in valid_ips:
             f.write(f"{ip_port} {speed:.2f} KB/s\n")
@@ -333,8 +338,8 @@ def validate_city_ips(city_name, city_config):
 
 def get_top_ips_for_city(city_name, city_config, top_n=3):
     """获取城市IP列表中的前N名IP"""
-    # 从本地文件读取（由validate_city_ips生成）
-    local_ip_file = f"my_tv/ip/{city_name}_ip.txt"
+    # 从my_tv/ip目录读取（由validate_city_ips生成）
+    local_ip_file = os.path.join(MY_TV_DIR, "ip", f"{city_name}_ip.txt")
     if not os.path.exists(local_ip_file):
         print(f"本地IP文件不存在: {local_ip_file}，跳过")
         return []
@@ -386,7 +391,7 @@ def get_top_ips_for_city(city_name, city_config, top_n=3):
 def download_template_file(city_name, city_config):
     """下载城市对应的频道模板文件"""
     template_url = city_config["template_url"]
-    local_template_file = f"my_tv/template/{city_name}.txt"
+    local_template_file = os.path.join(MY_TV_DIR, "template", f"{city_name}.txt")
     
     # 先检查本地是否有模板文件
     if os.path.exists(local_template_file):
@@ -405,7 +410,7 @@ def download_template_file(city_name, city_config):
 
 def read_template_file(city_name):
     """读取城市对应的频道模板文件（从本地）"""
-    template_file = f"my_tv/template/{city_name}.txt"
+    template_file = os.path.join(MY_TV_DIR, "template", f"{city_name}.txt")
     if not os.path.exists(template_file):
         print(f"频道模板文件不存在: {template_file}")
         return None
@@ -448,7 +453,7 @@ def read_template_file(city_name):
 def read_logo_file():
     """读取本地台标文件"""
     logo_dict = {}
-    local_logo_file = "my_tv/template/logo.txt"
+    local_logo_file = os.path.join(MY_TV_DIR, "template", "logo.txt")
     
     if os.path.exists(local_logo_file):
         try:
@@ -480,14 +485,14 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
         return
     
     # 创建输出目录
-    os.makedirs('my_tv/output', exist_ok=True)
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
     
     # 使用所有可用的IP
     available_ips = [ip for ip, _ in top_ips]
     
     # 生成TXT文件
-    txt_file = f"output/{city_name}.txt"
-    m3u_file = f"output/{city_name}.m3u"
+    txt_file = os.path.join(OUTPUT_DIR, f"{city_name}.txt")
+    m3u_file = os.path.join(OUTPUT_DIR, f"{city_name}.m3u")
     
     with open(txt_file, 'w', encoding='utf-8') as txt_f, \
          open(m3u_file, 'w', encoding='utf-8') as m3u_f:
@@ -528,8 +533,8 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
 def merge_all_files():
     """合并所有城市的TXT和M3U文件，按照频道模板排序"""
     try:
-        txt_files = glob.glob("output/*.txt")
-        m3u_files = glob.glob("output/*.m3u")
+        txt_files = glob.glob(os.path.join(OUTPUT_DIR, "*.txt"))
+        m3u_files = glob.glob(os.path.join(OUTPUT_DIR, "*.m3u"))
         
         if not txt_files or not m3u_files:
             print("没有找到输出文件可合并")
@@ -616,8 +621,9 @@ def merge_all_files():
                 for url, city in sources:
                     organized_channels[category][main_channel_name].append((channel_name, url, city))
         
-        # 写入合并的TXT文件
-        with open("zubo_all.txt", "w", encoding="utf-8") as f:
+        # 写入合并的TXT文件 - 保存在my_tv文件夹下
+        merged_txt_file = os.path.join(MY_TV_DIR, "zubo_all.txt")
+        with open(merged_txt_file, "w", encoding="utf-8") as f:
             f.write(f"{current_time}更新,#genre#\n")
             f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
             
@@ -632,7 +638,7 @@ def merge_all_files():
         
         # 处理"其它频道"分类
         if organized_channels.get("其它频道") and organized_channels["其它频道"]:
-            with open("zubo_all.txt", "a", encoding="utf-8") as f:
+            with open(merged_txt_file, "a", encoding="utf-8") as f:
                 f.write(f"其它频道,#genre#\n")
                 
                 other_channels = sorted(organized_channels["其它频道"].keys())
@@ -646,10 +652,11 @@ def merge_all_files():
             for main_channel in category.values():
                 total_sources += len(main_channel)
         
-        print(f"已合并TXT文件: zubo_all.txt (共{len(organized_channels)}个分类，{total_sources}个源)")
+        print(f"已合并TXT文件: {merged_txt_file} (共{len(organized_channels)}个分类，{total_sources}个源)")
         
-        # 合并M3U文件
-        with open("zubo_all.m3u", "w", encoding="utf-8") as f:
+        # 合并M3U文件 - 保存在my_tv文件夹下
+        merged_m3u_file = os.path.join(MY_TV_DIR, "zubo_all.m3u")
+        with open(merged_m3u_file, "w", encoding="utf-8") as f:
             f.write("#EXTM3U\n")
             
             # 添加示例频道
@@ -687,10 +694,11 @@ def merge_all_files():
                             f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="其它频道",{display_name}\n')
                         f.write(f"{url}\n")
         
-        print(f"已合并M3U文件: zubo_all.m3u")
+        print(f"已合并M3U文件: {merged_m3u_file}")
         
-        # 生成简化版
-        with open("zubo_simple.txt", "w", encoding="utf-8") as f:
+        # 生成简化版 - 保存在my_tv文件夹下
+        simple_txt_file = os.path.join(MY_TV_DIR, "zubo_simple.txt")
+        with open(simple_txt_file, "w", encoding="utf-8") as f:
             f.write(f"{current_time}更新,#genre#\n")
             f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
             
@@ -719,7 +727,7 @@ def merge_all_files():
                                 written_channels.add(channel_name)
                                 break
         
-        print(f"已生成简化版TXT文件: zubo_simple.txt")
+        print(f"已生成简化版TXT文件: {simple_txt_file}")
     
     except Exception as e:
         print(f"合并文件时发生错误: {e}")
@@ -730,12 +738,14 @@ def main():
     print("="*60)
     print("组播源处理系统")
     print(f"GitHub仓库: {GITHUB_BASE_URL}")
+    print(f"工作目录: {WORKING_DIR}")
+    print(f"my_tv目录: {MY_TV_DIR}")
     print("="*60)
     
     # 创建必要的目录
-    os.makedirs('my_tv/ip', exist_ok=True)
-    os.makedirs('my_tv/template', exist_ok=True)
-    os.makedirs('my_tv/output', exist_ok=True)
+    os.makedirs(os.path.join(MY_TV_DIR, "ip"), exist_ok=True)
+    os.makedirs(os.path.join(MY_TV_DIR, "template"), exist_ok=True)
+    os.makedirs(os.path.join(MY_TV_DIR, "output"), exist_ok=True)
     
     # 处理每个城市
     for city_name in CITY_STREAMS:
@@ -790,10 +800,22 @@ def main():
     print(f"\n{'='*60}")
     print("所有处理完成！")
     print(f"输出文件:")
-    print(f"  - 单个城市文件: output/目录下")
-    print(f"  - 合并文件: zubo_all.txt, zubo_all.m3u")
-    print(f"  - 简化文件: zubo_simple.txt (每个频道只保留一个源)")
+    print(f"  - IP文件: {os.path.join(MY_TV_DIR, 'ip')} 目录下")
+    print(f"  - 单个城市文件: {OUTPUT_DIR} 目录下")
+    print(f"  - 合并文件: {os.path.join(MY_TV_DIR, 'zubo_all.txt')}")
+    print(f"  - 合并文件: {os.path.join(MY_TV_DIR, 'zubo_all.m3u')}")
+    print(f"  - 简化文件: {os.path.join(MY_TV_DIR, 'zubo_simple.txt')}")
     print(f"{'='*60}")
+    
+    # 打印生成的文件列表
+    print("\n生成的文件列表:")
+    for root, dirs, files in os.walk(MY_TV_DIR):
+        for file in files:
+            if file.endswith(('.txt', '.m3u')):
+                file_path = os.path.join(root, file)
+                rel_path = os.path.relpath(file_path, WORKING_DIR)
+                file_size = os.path.getsize(file_path)
+                print(f"  - {rel_path} ({file_size:,} bytes)")
 
 if __name__ == "__main__":
     main()
