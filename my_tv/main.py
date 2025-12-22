@@ -227,15 +227,17 @@ def get_main_channel_name(channel_name, channel_template):
     
     return channel_name
 
-def test_stream_speed(stream_url, timeout=5):
+def test_stream_speed(stream_url, timeout=8):
     """测试流媒体速度，返回速度(KB/s)和是否成功"""
     try:
         headers = get_headers()
         start_time = time.time()
         
+        print(f"  测试流: {stream_url}")
         response = requests.get(stream_url, headers=headers, timeout=timeout, 
                               verify=False, allow_redirects=True, stream=True)
         
+        print(f"  响应状态: {response.status_code}")
         if response.status_code not in [200, 206]:
             return 0, False
         
@@ -253,15 +255,19 @@ def test_stream_speed(stream_url, timeout=5):
         
         if duration > 0:
             speed_kbs = downloaded / duration / 1024
+            print(f"  下载速度: {speed_kbs:.2f} KB/s, 下载量: {downloaded} 字节, 时间: {duration:.2f} 秒")
             return speed_kbs, True
         else:
+            print(f"  下载时间异常: {duration}")
             return 0, False
             
     except Exception as e:
+        print(f"  测试流异常: {e}")
         return 0, False
 
-def test_ip_single(ip_port, test_stream, timeout=5):
+def test_ip_single(ip_port, test_stream, timeout=8):
     """测试单个IP，返回速度"""
+    # 构建测试URL
     stream_url = f"http://{ip_port}/{test_stream}"
     
     try:
@@ -312,7 +318,7 @@ def validate_city_ips(city_name, city_config):
     valid_ips = []
     
     # 使用线程池并发测试
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=5) as executor:  # 减少线程数
         futures = []
         for ip_port in ip_configs:
             future = executor.submit(test_ip_single, ip_port, test_stream)
@@ -329,64 +335,78 @@ def validate_city_ips(city_name, city_config):
     # 保存到my_tv/ip目录
     local_ip_file = os.path.join(MY_TV_DIR, "ip", f"{city_name}_ip.txt")
     os.makedirs(os.path.dirname(local_ip_file), exist_ok=True)
-    with open(local_ip_file, 'w', encoding='utf-8') as f:
-        for ip_port, speed in valid_ips:
-            f.write(f"{ip_port} {speed:.2f} KB/s\n")
     
-    print(f"\n{city_name} 验证完成:")
-    print(f"  - 总共测试: {len(ip_configs)} 个IP")
-    print(f"  - 可用IP: {len(valid_ips)} 个")
-    print(f"  - 已保存到: {local_ip_file}")
+    if valid_ips:
+        with open(local_ip_file, 'w', encoding='utf-8') as f:
+            for ip_port, speed in valid_ips:
+                f.write(f"{ip_port} {speed:.2f} KB/s\n")
+        
+        print(f"\n{city_name} 验证完成:")
+        print(f"  - 总共测试: {len(ip_configs)} 个IP")
+        print(f"  - 可用IP: {len(valid_ips)} 个")
+        print(f"  - 已保存到: {local_ip_file}")
+    else:
+        # 如果没有可用IP，创建一个空文件
+        with open(local_ip_file, 'w', encoding='utf-8') as f:
+            pass
+        print(f"\n{city_name} 验证完成: 没有可用的IP")
     
     return valid_ips
 
 def get_top_ips_for_city(city_name, city_config, top_n=3):
-    """获取城市IP列表中的前N名IP"""
+    """获取城市IP列表中的前N名IP - 直接从文件读取，不重新测试"""
     # 从my_tv/ip目录读取（由validate_city_ips生成）
     local_ip_file = os.path.join(MY_TV_DIR, "ip", f"{city_name}_ip.txt")
     if not os.path.exists(local_ip_file):
         print(f"本地IP文件不存在: {local_ip_file}，跳过")
         return []
     
-    # 读取IP列表
-    ip_configs = []
+    # 检查文件大小
+    file_size = os.path.getsize(local_ip_file)
+    if file_size == 0:
+        print(f"{city_name} IP文件为空，没有可用的IP")
+        return []
+    
+    # 读取IP列表和速度
+    ip_speeds = []
     with open(local_ip_file, 'r', encoding='utf-8') as f:
         for line in f:
             line = line.strip()
-            if line and ":" in line and not line.startswith('#'):
-                cleaned_ip = clean_ip_line(line)
-                if cleaned_ip and ":" in cleaned_ip:
-                    ip_configs.append(cleaned_ip)
+            if line and "KB/s" in line:
+                # 解析IP和速度
+                parts = line.split()
+                if len(parts) >= 2:
+                    ip_port = parts[0]
+                    # 提取速度值
+                    for part in parts[1:]:
+                        if 'KB/s' in part:
+                            speed_str = part.replace('KB/s', '')
+                            try:
+                                speed = float(speed_str)
+                                ip_speeds.append((ip_port, speed))
+                                break
+                            except ValueError:
+                                pass
+                    else:
+                        # 如果没有找到包含KB/s的部分，但有两个部分，尝试解析
+                        if len(parts) >= 2:
+                            try:
+                                speed = float(parts[1])
+                                ip_speeds.append((parts[0], speed))
+                            except ValueError:
+                                pass
     
-    if not ip_configs:
-        print(f"{city_name} 没有可用的IP")
+    if not ip_speeds:
+        print(f"{city_name} 没有可用的IP（无法解析IP文件）")
         return []
-    
-    test_stream = city_config["test_streams"][0] if city_config["test_streams"] else None
-    if not test_stream:
-        print(f"{city_name} 没有测试流地址")
-        return []
-    
-    print(f"\n开始测试 {city_name} 的 {len(ip_configs)} 个IP...")
-    
-    all_valid_ips = []
-    
-    # 首先测试已有的IP
-    with ThreadPoolExecutor(max_workers=5) as executor:
-        futures = {executor.submit(test_ip_single, ip, test_stream): ip for ip in ip_configs}
-        
-        for future in as_completed(futures):
-            ip, speed = future.result()
-            if ip:
-                all_valid_ips.append((ip, speed))
     
     # 按速度排序
-    all_valid_ips.sort(key=lambda x: x[1], reverse=True)
+    ip_speeds.sort(key=lambda x: x[1], reverse=True)
     
     # 只取前N名
-    top_ips = all_valid_ips[:top_n]
+    top_ips = ip_speeds[:top_n]
     
-    print(f"\n{city_name} 测试完成:")
+    print(f"\n{city_name} 读取到 {len(top_ips)} 个可用IP:")
     for i, (ip, speed) in enumerate(top_ips, 1):
         print(f"  第{i}名: {ip} - 速度: {speed:.2f} KB/s")
     
@@ -503,6 +523,15 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
         print(f"✗ {city_name} 没有可用的IP，跳过文件生成")
         return
     
+    # 清理output目录中可能的旧测试文件
+    test_file = os.path.join(OUTPUT_DIR, "1.txt")
+    if os.path.exists(test_file):
+        try:
+            os.remove(test_file)
+            print(f"已删除测试文件: {test_file}")
+        except:
+            pass
+    
     # 创建输出目录
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
@@ -515,13 +544,10 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
     m3u_file = os.path.join(OUTPUT_DIR, f"{city_name}.m3u")
     
     try:
-        with open(txt_file, 'w', encoding='utf-8') as txt_f, \
-             open(m3u_file, 'w', encoding='utf-8') as m3u_f:
-            
-            m3u_f.write("#EXTM3U\n")
-            
-            channel_count = 0
-            
+        txt_channel_count = 0
+        m3u_channel_count = 0
+        
+        with open(txt_file, 'w', encoding='utf-8') as txt_f:
             for category, channels in categories:
                 # 写入分类标题
                 txt_f.write(f"{category},#genre#\n")
@@ -534,6 +560,19 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
                         
                         # 写入TXT文件
                         txt_f.write(f"{channel_name},{new_url}${city_name}\n")
+                        txt_channel_count += 1
+        
+        print(f"✓ TXT文件生成成功: {txt_file} (共{txt_channel_count}个源)")
+        
+        with open(m3u_file, 'w', encoding='utf-8') as m3u_f:
+            m3u_f.write("#EXTM3U\n")
+            
+            for category, channels in categories:
+                for channel_name, channel_url in channels:
+                    # 为每个频道生成源，使用所有可用的IP
+                    for i, ip_port in enumerate(available_ips, 1):
+                        # 替换ipipip为实际IP:端口
+                        new_url = channel_url.replace("ipipip", ip_port)
                         
                         # 写入M3U文件
                         logo_url = logo_dict.get(channel_name, "")
@@ -543,18 +582,17 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
                         else:
                             m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}${city_name}\n')
                         m3u_f.write(f"{new_url}\n")
-                        
-                        channel_count += 1
-            
-            print(f"✓ TXT文件生成成功: {txt_file} (共{channel_count}个频道，每个频道{len(available_ips)}个源)")
-            print(f"✓ M3U文件生成成功: {m3u_file}")
+                        m3u_channel_count += 1
+        
+        print(f"✓ M3U文件生成成功: {m3u_file} (共{m3u_channel_count}个源)")
+        
+        return txt_file, m3u_file
     
     except Exception as e:
         print(f"✗ 生成文件时出错: {e}")
         import traceback
         traceback.print_exc()
-    
-    return txt_file, m3u_file
+        return None, None
 
 def merge_all_files():
     """合并所有城市的TXT和M3U文件，按照频道模板排序"""
@@ -564,13 +602,16 @@ def merge_all_files():
     try:
         # 列出输出目录中的文件
         print(f"输出目录中的文件:")
-        for file in os.listdir(OUTPUT_DIR):
-            file_path = os.path.join(OUTPUT_DIR, file)
-            if os.path.isfile(file_path):
-                print(f"  - {file} ({os.path.getsize(file_path)} bytes)")
+        output_files = []
+        if os.path.exists(OUTPUT_DIR):
+            for file in os.listdir(OUTPUT_DIR):
+                file_path = os.path.join(OUTPUT_DIR, file)
+                if os.path.isfile(file_path) and file.endswith(('.txt', '.m3u')):
+                    output_files.append(file_path)
+                    print(f"  - {file} ({os.path.getsize(file_path)} bytes)")
         
-        txt_files = glob.glob(os.path.join(OUTPUT_DIR, "*.txt"))
-        m3u_files = glob.glob(os.path.join(OUTPUT_DIR, "*.m3u"))
+        txt_files = [f for f in output_files if f.endswith('.txt')]
+        m3u_files = [f for f in output_files if f.endswith('.m3u')]
         
         print(f"找到 {len(txt_files)} 个TXT文件")
         print(f"找到 {len(m3u_files)} 个M3U文件")
@@ -784,6 +825,14 @@ def main():
     print(f"my_tv目录: {MY_TV_DIR}")
     print("="*60)
     
+    # 清理旧的输出目录
+    if os.path.exists(OUTPUT_DIR):
+        for file in os.listdir(OUTPUT_DIR):
+            try:
+                os.remove(os.path.join(OUTPUT_DIR, file))
+            except:
+                pass
+    
     # 创建必要的目录
     os.makedirs(os.path.join(MY_TV_DIR, "ip"), exist_ok=True)
     os.makedirs(os.path.join(MY_TV_DIR, "template"), exist_ok=True)
@@ -813,13 +862,17 @@ def main():
         
         # 第二步：获取可用的IP（最多3个，但实际有多少用多少）
         print(f"步骤2: 获取最佳IP...")
-        top_ips = get_top_ips_for_city(city_name, city_config, top_n=3)
-        
-        if not top_ips:
+        # 直接使用第一步的结果，不重新测试
+        if valid_ips:
+            # 按速度排序并取前N个
+            valid_ips.sort(key=lambda x: x[1], reverse=True)
+            top_ips = valid_ips[:3]
+            print(f"✓ {city_name} 共有 {len(top_ips)} 个可用IP，将全部使用")
+            for i, (ip, speed) in enumerate(top_ips, 1):
+                print(f"  第{i}名: {ip} - 速度: {speed:.2f} KB/s")
+        else:
             print(f"✗ {city_name} 没有可用的IP，跳过")
             continue
-        
-        print(f"✓ {city_name} 共有 {len(top_ips)} 个可用IP，将全部使用")
         
         # 第三步：下载并读取频道模板
         print(f"步骤3: 下载并读取频道模板...")
