@@ -9,6 +9,7 @@ permissions:
   contents: write
 env:
   TZ: 'Asia/Shanghai'
+  
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -28,10 +29,6 @@ jobs:
         run: |
           pip install requests
           
-      - name: 获取和更新IP
-        run: |
-          python IP_Scan/ip-Scan.py
-          
       - name: 配置Git
         run: |
           git config --local user.email "action@github.com"
@@ -40,21 +37,32 @@ jobs:
           
       - name: 拉取最新代码
         run: |
-          git pull origin main || echo "拉取失败，继续执行"
+          git pull origin main
           
-      - name: 添加更改
+      - name: 获取和更新IP
         run: |
-          git add IP_Scan/ip
+          python IP_Scan/ip-Scan.py
           
-      - name: 提交更改
+      - name: 检查更改
+        id: check-changes
         run: |
-          if git diff --cached --quiet; then
-            echo "没有更改可提交"
+          cd IP_Scan
+          if [ -n "$(git status --porcelain ip/ 2>/dev/null || echo 'changed')" ]; then
+            echo "有更改"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
           else
-            git commit -m "自动更新IP配置 $(date '+%Y-%m-%d %H:%M:%S')"
+            echo "没有更改可提交"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
           
-      - name: 推送到远程
+      - name: 添加和提交更改
+        if: steps.check-changes.outputs.has_changes == 'true'
         run: |
-          git pull origin main --rebase
+          git add IP_Scan/ip/
+          git commit -m "自动更新IP配置 $(date '+%Y-%m-%d %H:%M:%S')"
+          
+      - name: 推送到远程
+        if: steps.check-changes.outputs.has_changes == 'true'
+        run: |
+          git pull origin main
           git push origin main
