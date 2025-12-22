@@ -5,6 +5,9 @@ on:
     - cron: '0 */6 * * *'  # 每6小时运行一次
   workflow_dispatch:  # 支持手动触发
 
+env:
+  TZ: 'Asia/Shanghai'
+  
 permissions:
   contents: write  # 关键：添加写入权限
 
