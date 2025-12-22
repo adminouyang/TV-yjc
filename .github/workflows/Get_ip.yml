@@ -2,7 +2,7 @@ name: Get IP
 
 on:
   schedule:
-    - cron: "* */1 * * *"
+    - cron: "* */2 * * *"
   workflow_dispatch:          # 手动触发
 env:
   TZ: 'Asia/Shanghai'
