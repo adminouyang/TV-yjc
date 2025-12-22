@@ -462,10 +462,10 @@ def generate_files_for_city(city_name, top_ips, logo_dict):
                     logo_url = logo_dict.get(channel_name, "")
                     
                     if logo_url:
-                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}${city_name}\n')
+                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}\n')
                     else:
-                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}${city_name}\n')
-                    m3u_f.write(f"{new_url}\n")
+                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}\n')
+                    m3u_f.write(f"{new_url}${city_name}\n")
                     
                     channel_count += 1
         
