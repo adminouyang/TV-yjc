@@ -108,7 +108,7 @@ def clean_ip_line(ip_line):
 
 def read_channel_template():
     """读取频道模板文件（从本地缓存）"""
-    template_file = "mytv_/template/demo.txt"
+    template_file = "my_tv/template/demo.txt"
     if not os.path.exists(template_file):
         print(f"频道模板文件不存在: {template_file}")
         return {}
@@ -733,9 +733,9 @@ def main():
     print("="*60)
     
     # 创建必要的目录
-    os.makedirs('ip', exist_ok=True)
-    os.makedirs('template', exist_ok=True)
-    os.makedirs('output', exist_ok=True)
+    os.makedirs('my_tv/ip', exist_ok=True)
+    os.makedirs('my_tv/template', exist_ok=True)
+    os.makedirs('my_tv/output', exist_ok=True)
     
     # 处理每个城市
     for city_name in CITY_STREAMS:
