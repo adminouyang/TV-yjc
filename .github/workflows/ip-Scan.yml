@@ -33,11 +33,11 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git config pull.rebase false
           
-      - name: 拉取最新代码
+      - name: 拉取最新代码并重置
         run: |
-          git pull origin main
+          git fetch origin
+          git reset --hard origin/main
           
       - name: 获取和更新IP
         run: |
@@ -46,13 +46,12 @@ jobs:
       - name: 检查更改
         id: check-changes
         run: |
-          cd IP_Scan
-          if [ -n "$(git status --porcelain ip/ 2>/dev/null || echo 'changed')" ]; then
-            echo "有更改"
+          if [ -n "$(git status --porcelain IP_Scan/ip/ 2>/dev/null || echo 'changed')" ]; then
             echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "有更改"
           else
-            echo "没有更改可提交"
             echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "没有更改可提交"
           fi
           
       - name: 添加和提交更改
@@ -64,5 +63,4 @@ jobs:
       - name: 推送到远程
         if: steps.check-changes.outputs.has_changes == 'true'
         run: |
-          git pull origin main
           git push origin main
