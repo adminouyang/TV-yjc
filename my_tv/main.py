@@ -54,10 +54,13 @@ def fetch_remote_content(url, max_retries=3):
     for attempt in range(max_retries):
         try:
             headers = get_headers()
+            print(f"  尝试获取内容: {url} (尝试 {attempt+1}/{max_retries})")
             response = requests.get(url, headers=headers, timeout=10, verify=False)
             response.raise_for_status()
+            print(f"  获取内容成功: {url}, 长度: {len(response.text)} 字符")
             return response.text
         except requests.exceptions.RequestException as e:
+            print(f"  获取内容失败: {url}, 错误: {e}")
             if attempt < max_retries - 1:
                 time.sleep(1)
             else:
@@ -68,16 +71,17 @@ def fetch_remote_content(url, max_retries=3):
 def download_file_from_url(url, local_path):
     """从URL下载文件到本地"""
     try:
+        print(f"下载文件: {url} -> {local_path}")
         content = fetch_remote_content(url)
         if content:
             # 确保目录存在
             os.makedirs(os.path.dirname(local_path), exist_ok=True)
             with open(local_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"✓ 下载文件成功: {local_path}")
+            print(f"✓ 下载文件成功: {local_path}, 大小: {len(content)} 字符")
             return True
         else:
-            print(f"✗ 下载文件失败: {url}")
+            print(f"✗ 下载文件失败: {url} (内容为空)")
             return False
     except Exception as e:
         print(f"✗ 下载文件异常: {url}, 错误: {e}")
@@ -115,7 +119,7 @@ def read_channel_template():
     """读取频道模板文件（从本地缓存）"""
     template_file = os.path.join(MY_TV_DIR, "template", "demo.txt")
     if not os.path.exists(template_file):
-        print(f"频道模板文件不存在: {template_file}")
+        print(f"✗ 频道模板文件不存在: {template_file}")
         return {}
     
     print(f"读取频道模板文件: {template_file}")
@@ -149,11 +153,11 @@ def read_channel_template():
         
         total_categories = len(channel_template)
         total_channels = sum(len(channels) for channels in channel_template.values())
-        print(f"  共读取到 {total_categories} 个分类，总计 {total_channels} 个频道")
+        print(f"✓ 共读取到 {total_categories} 个分类，总计 {total_channels} 个频道")
         
         return channel_template
     except Exception as e:
-        print(f"读取频道模板文件错误: {e}")
+        print(f"✗ 读取频道模板文件错误: {e}")
         return {}
 
 def clean_channel_name(channel_name):
@@ -412,7 +416,7 @@ def read_template_file(city_name):
     """读取城市对应的频道模板文件（从本地）"""
     template_file = os.path.join(MY_TV_DIR, "template", f"{city_name}.txt")
     if not os.path.exists(template_file):
-        print(f"频道模板文件不存在: {template_file}")
+        print(f"✗ 频道模板文件不存在: {template_file}")
         return None
     
     print(f"读取频道模板: {template_file}")
@@ -444,10 +448,21 @@ def read_template_file(city_name):
         if current_category and current_channels:
             categories.append((current_category, current_channels))
         
-        print(f"  共读取到 {len(categories)} 个分类，总计 {sum(len(channels) for _, channels in categories)} 个频道")
+        print(f"✓ 共读取到 {len(categories)} 个分类，总计 {sum(len(channels) for _, channels in categories)} 个频道")
+        
+        # 打印前几个频道作为示例
+        if categories:
+            print(f"  前几个频道示例:")
+            for i, (category, channels) in enumerate(categories[:2]):  # 只显示前2个分类
+                print(f"    分类: {category}")
+                for j, (name, url) in enumerate(channels[:3]):  # 只显示前3个频道
+                    print(f"      {name} -> {url[:50]}...")
+        
         return categories
     except Exception as e:
-        print(f"读取模板文件错误: {e}")
+        print(f"✗ 读取模板文件错误: {e}")
+        import traceback
+        traceback.print_exc()
         return None
 
 def read_logo_file():
@@ -466,22 +481,26 @@ def read_logo_file():
                             channel_name = parts[0].strip()
                             logo_url = parts[1].strip()
                             logo_dict[channel_name] = logo_url
-            print(f"读取到 {len(logo_dict)} 个台标")
+            print(f"✓ 读取到 {len(logo_dict)} 个台标")
         except Exception as e:
-            print(f"读取台标文件错误: {e}")
+            print(f"✗ 读取台标文件错误: {e}")
     else:
-        print(f"台标文件不存在: {local_logo_file}")
+        print(f"✗ 台标文件不存在: {local_logo_file}")
     
     return logo_dict
 
 def generate_files_for_city(city_name, top_ips, logo_dict, categories):
     """为城市生成TXT和M3U文件，使用可用的IP生成源（有几个用几个）"""
+    print(f"\n开始为 {city_name} 生成文件...")
+    print(f"可用IP数量: {len(top_ips) if top_ips else 0}")
+    print(f"频道分类数量: {len(categories) if categories else 0}")
+    
     if not categories:
-        print(f"{city_name} 没有频道模板，跳过文件生成")
+        print(f"✗ {city_name} 没有频道模板，跳过文件生成")
         return
     
     if not top_ips:
-        print(f"{city_name} 没有可用的IP，跳过文件生成")
+        print(f"✗ {city_name} 没有可用的IP，跳过文件生成")
         return
     
     # 创建输出目录
@@ -489,55 +508,75 @@ def generate_files_for_city(city_name, top_ips, logo_dict, categories):
     
     # 使用所有可用的IP
     available_ips = [ip for ip, _ in top_ips]
+    print(f"将使用以下IP生成源: {available_ips}")
     
     # 生成TXT文件
     txt_file = os.path.join(OUTPUT_DIR, f"{city_name}.txt")
     m3u_file = os.path.join(OUTPUT_DIR, f"{city_name}.m3u")
     
-    with open(txt_file, 'w', encoding='utf-8') as txt_f, \
-         open(m3u_file, 'w', encoding='utf-8') as m3u_f:
-        
-        m3u_f.write("#EXTM3U\n")
-        
-        channel_count = 0
-        
-        for category, channels in categories:
-            # 写入分类标题
-            txt_f.write(f"{category},#genre#\n")
+    try:
+        with open(txt_file, 'w', encoding='utf-8') as txt_f, \
+             open(m3u_file, 'w', encoding='utf-8') as m3u_f:
             
-            for channel_name, channel_url in channels:
-                # 为每个频道生成源，使用所有可用的IP
-                for i, ip_port in enumerate(available_ips, 1):
-                    # 替换ipipip为实际IP:端口
-                    new_url = channel_url.replace("ipipip", ip_port)
-                    
-                    # 写入TXT文件
-                    txt_f.write(f"{channel_name},{new_url}${city_name}\n")
-                    
-                    # 写入M3U文件
-                    logo_url = logo_dict.get(channel_name, "")
-                    
-                    if logo_url:
-                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}${city_name}\n')
-                    else:
-                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}${city_name}\n')
-                    m3u_f.write(f"{new_url}\n")
-                    
-                    channel_count += 1
-        
-        print(f"  TXT文件: {txt_file} (共{channel_count}个频道，每个频道{len(available_ips)}个源)")
-        print(f"  M3U文件: {m3u_file}")
+            m3u_f.write("#EXTM3U\n")
+            
+            channel_count = 0
+            
+            for category, channels in categories:
+                # 写入分类标题
+                txt_f.write(f"{category},#genre#\n")
+                
+                for channel_name, channel_url in channels:
+                    # 为每个频道生成源，使用所有可用的IP
+                    for i, ip_port in enumerate(available_ips, 1):
+                        # 替换ipipip为实际IP:端口
+                        new_url = channel_url.replace("ipipip", ip_port)
+                        
+                        # 写入TXT文件
+                        txt_f.write(f"{channel_name},{new_url}${city_name}\n")
+                        
+                        # 写入M3U文件
+                        logo_url = logo_dict.get(channel_name, "")
+                        
+                        if logo_url:
+                            m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}${city_name}\n')
+                        else:
+                            m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}${city_name}\n')
+                        m3u_f.write(f"{new_url}\n")
+                        
+                        channel_count += 1
+            
+            print(f"✓ TXT文件生成成功: {txt_file} (共{channel_count}个频道，每个频道{len(available_ips)}个源)")
+            print(f"✓ M3U文件生成成功: {m3u_file}")
+    
+    except Exception as e:
+        print(f"✗ 生成文件时出错: {e}")
+        import traceback
+        traceback.print_exc()
     
     return txt_file, m3u_file
 
 def merge_all_files():
     """合并所有城市的TXT和M3U文件，按照频道模板排序"""
+    print(f"\n开始合并所有文件...")
+    print(f"输出目录: {OUTPUT_DIR}")
+    
     try:
+        # 列出输出目录中的文件
+        print(f"输出目录中的文件:")
+        for file in os.listdir(OUTPUT_DIR):
+            file_path = os.path.join(OUTPUT_DIR, file)
+            if os.path.isfile(file_path):
+                print(f"  - {file} ({os.path.getsize(file_path)} bytes)")
+        
         txt_files = glob.glob(os.path.join(OUTPUT_DIR, "*.txt"))
         m3u_files = glob.glob(os.path.join(OUTPUT_DIR, "*.m3u"))
         
+        print(f"找到 {len(txt_files)} 个TXT文件")
+        print(f"找到 {len(m3u_files)} 个M3U文件")
+        
         if not txt_files or not m3u_files:
-            print("没有找到输出文件可合并")
+            print("✗ 没有找到输出文件可合并")
             return
         
         # 按城市名称排序
@@ -547,7 +586,7 @@ def merge_all_files():
         # 读取频道模板
         channel_template = read_channel_template()
         if not channel_template:
-            print("没有读取到频道模板，使用默认排序")
+            print("✗ 没有读取到频道模板，使用默认排序")
             return
         
         # 读取台标文件
@@ -566,6 +605,7 @@ def merge_all_files():
         # 先收集所有频道的源
         for txt_file in txt_files:
             city_name = os.path.basename(txt_file).replace('.txt', '')
+            print(f"处理文件: {txt_file} (城市: {city_name})")
             
             with open(txt_file, 'r', encoding='utf-8') as f:
                 current_category = ""
@@ -595,6 +635,8 @@ def merge_all_files():
                                 all_channels[channel_name][current_category] = []
                             
                             all_channels[channel_name][current_category].append((channel_url, city))
+        
+        print(f"总共收集到 {len(all_channels)} 个不同的频道")
         
         # 重新组织频道，按照模板分类
         organized_channels = {}
@@ -652,7 +694,7 @@ def merge_all_files():
             for main_channel in category.values():
                 total_sources += len(main_channel)
         
-        print(f"已合并TXT文件: {merged_txt_file} (共{len(organized_channels)}个分类，{total_sources}个源)")
+        print(f"✓ 已合并TXT文件: {merged_txt_file} (共{len(organized_channels)}个分类，{total_sources}个源)")
         
         # 合并M3U文件 - 保存在my_tv文件夹下
         merged_m3u_file = os.path.join(MY_TV_DIR, "zubo_all.m3u")
@@ -694,7 +736,7 @@ def merge_all_files():
                             f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="其它频道",{display_name}\n')
                         f.write(f"{url}\n")
         
-        print(f"已合并M3U文件: {merged_m3u_file}")
+        print(f"✓ 已合并M3U文件: {merged_m3u_file}")
         
         # 生成简化版 - 保存在my_tv文件夹下
         simple_txt_file = os.path.join(MY_TV_DIR, "zubo_simple.txt")
@@ -727,10 +769,10 @@ def merge_all_files():
                                 written_channels.add(channel_name)
                                 break
         
-        print(f"已生成简化版TXT文件: {simple_txt_file}")
+        print(f"✓ 已生成简化版TXT文件: {simple_txt_file}")
     
     except Exception as e:
-        print(f"合并文件时发生错误: {e}")
+        print(f"✗ 合并文件时发生错误: {e}")
         import traceback
         traceback.print_exc()
 
@@ -748,6 +790,8 @@ def main():
     os.makedirs(os.path.join(MY_TV_DIR, "output"), exist_ok=True)
     
     # 处理每个城市
+    processed_cities = []
+    
     for city_name in CITY_STREAMS:
         print(f"\n{'='*60}")
         print(f"处理城市: {city_name}")
@@ -756,46 +800,63 @@ def main():
         # 获取城市配置
         city_config = get_city_config(city_name)
         if not city_config:
-            print(f"无法获取城市配置: {city_name}，跳过")
+            print(f"✗ 无法获取城市配置: {city_name}，跳过")
             continue
         
         # 第一步：验证并更新IP文件
+        print(f"步骤1: 验证IP...")
         valid_ips = validate_city_ips(city_name, city_config)
         
         if not valid_ips:
-            print(f"{city_name} 没有可用的IP，跳过")
+            print(f"✗ {city_name} 没有可用的IP，跳过")
             continue
         
         # 第二步：获取可用的IP（最多3个，但实际有多少用多少）
+        print(f"步骤2: 获取最佳IP...")
         top_ips = get_top_ips_for_city(city_name, city_config, top_n=3)
         
         if not top_ips:
-            print(f"{city_name} 没有可用的IP，跳过")
+            print(f"✗ {city_name} 没有可用的IP，跳过")
             continue
         
-        print(f"{city_name} 共有 {len(top_ips)} 个可用IP，将全部使用")
+        print(f"✓ {city_name} 共有 {len(top_ips)} 个可用IP，将全部使用")
         
         # 第三步：下载并读取频道模板
+        print(f"步骤3: 下载并读取频道模板...")
         categories = download_template_file(city_name, city_config)
         
         if not categories:
-            print(f"{city_name} 没有频道模板，跳过")
+            print(f"✗ {city_name} 没有频道模板，跳过")
             continue
         
         # 第四步：读取台标文件
+        print(f"步骤4: 读取台标文件...")
         logo_dict = read_logo_file()
         
         # 第五步：生成文件（有多少IP就用多少）
+        print(f"步骤5: 生成输出文件...")
         generate_files_for_city(city_name, top_ips, logo_dict, categories)
+        
+        processed_cities.append(city_name)
         
         # 城市间延迟
         time.sleep(2)
     
-    # 合并所有文件
     print(f"\n{'='*60}")
-    print("开始合并所有文件...")
+    print(f"城市处理完成:")
+    print(f"  成功处理的城市: {processed_cities}")
+    print(f"  失败的城市: {[city for city in CITY_STREAMS if city not in processed_cities]}")
     print(f"{'='*60}")
-    merge_all_files()
+    
+    # 只有成功处理了至少一个城市才进行合并
+    if processed_cities:
+        # 合并所有文件
+        print(f"\n{'='*60}")
+        print("开始合并所有文件...")
+        print(f"{'='*60}")
+        merge_all_files()
+    else:
+        print(f"\n✗ 没有成功处理任何城市，跳过合并")
     
     print(f"\n{'='*60}")
     print("所有处理完成！")
@@ -809,6 +870,7 @@ def main():
     
     # 打印生成的文件列表
     print("\n生成的文件列表:")
+    file_count = 0
     for root, dirs, files in os.walk(MY_TV_DIR):
         for file in files:
             if file.endswith(('.txt', '.m3u')):
@@ -816,6 +878,9 @@ def main():
                 rel_path = os.path.relpath(file_path, WORKING_DIR)
                 file_size = os.path.getsize(file_path)
                 print(f"  - {rel_path} ({file_size:,} bytes)")
+                file_count += 1
+    
+    print(f"\n总计生成 {file_count} 个文件")
 
 if __name__ == "__main__":
     main()
