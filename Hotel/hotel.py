@@ -366,9 +366,9 @@ def read_config(config_file):
 def check_ip_port(ip_port, url_end):
     try:
         url = f"http://{ip_port}{url_end}"
-        resp = requests.get(url, timeout=2)
+        resp = requests.get(url, timeout=2, headers=HEADERS)
         resp.raise_for_status()
-        if "tsfile" in resp.text or "hls" in resp.text:
+        if "tsfile" in resp.text or "hls" in resp.text or "m3u8" in resp.text:
             print(f"{url} 访问成功")
             return url
     except:
@@ -395,89 +395,188 @@ def extract_channels(url):
         urls = url.split('/', 3)
         url_x = f"{urls[0]}//{urls[2]}"
         if "iptv" in json_url:
-            response = requests.get(json_url, timeout=2)
+            response = requests.get(json_url, timeout=2, headers=HEADERS)
             json_data = response.json()
             for item in json_data['data']:
                 if isinstance(item, dict):
                     name = item.get('name')
                     urlx = item.get('url')
-                    if "tsfile" in urlx:
+                    if "tsfile" in urlx or "m3u8" in urlx:
                         urld = f"{url_x}{urlx}"
                         hotel_channels.append((name, urld))
         elif "ZHGXTV" in json_url:
-            response = requests.get(json_url, timeout=2)
+            response = requests.get(json_url, timeout=2, headers=HEADERS)
             json_data = response.content.decode('utf-8')
             data_lines = json_data.split('\n')
             for line in data_lines:
-                if "," in line and "hls" in line:
+                if "," in line and ("hls" in line or "m3u8" in line):
                     name, channel_url = line.strip().split(',')
                     parts = channel_url.split('/', 3)
                     if len(parts) >= 4:
                         urld = f"{url_x}/{parts[3]}"
                         hotel_channels.append((name, urld))
         return hotel_channels
-    except Exception:
+    except Exception as e:
+        print(f"提取频道错误: {e}")
         return []
 
-# 测速
-def speed_test(channels):
-    def show_progress():
-        while checked[0] < len(channels):
-            numberx = checked[0] / len(channels) * 100
-            print(f"已测试{checked[0]}/{len(channels)}，可用频道:{len(results)}个，进度:{numberx:.2f}%")
-            time.sleep(5)
+# 优化后的测速函数
+def validate_m3u8_stream(url, timeout=3):
+    """验证m3u8流是否有效"""
+    try:
+        # 尝试获取m3u8文件
+        response = requests.get(url, timeout=timeout, headers=HEADERS)
+        if response.status_code != 200:
+            return False, 0
+        
+        content = response.text
+        
+        # 检查是否为有效的m3u8
+        is_m3u8 = '#EXTM3U' in content or '.ts' in content or 'hls' in content.lower() or 'm3u8' in content.lower()
+        
+        if not is_m3u8:
+            return False, 0
+        
+        # 计算响应时间
+        response_time = response.elapsed.total_seconds()
+        
+        return True, response_time
+        
+    except Exception as e:
+        return False, 0
+
+def measure_download_speed(url, timeout=5, max_bytes=32768):  # 最多下载32KB
+    """测量下载速度"""
+    try:
+        start_time = time.time()
+        
+        # 使用流式下载，限制下载大小
+        response = requests.get(url, stream=True, timeout=timeout, headers=HEADERS)
+        
+        if response.status_code != 200:
+            return 0
+        
+        downloaded = 0
+        for chunk in response.iter_content(chunk_size=8192):  # 8KB chunks
+            downloaded += len(chunk)
+            if downloaded >= max_bytes:
+                break
+            if time.time() - start_time > timeout:
+                break
+        
+        elapsed = time.time() - start_time
+        
+        if elapsed > 0 and downloaded > 0:
+            speed = (downloaded / elapsed) / (1024 * 1024)  # MB/s
+            return speed
+        else:
+            return 0.001  # 最小速度
+            
+    except Exception as e:
+        return 0
+
+def advanced_speed_test(channels):
+    """高级测速函数，使用多种方法验证频道可用性"""
     
-    def worker():
-        while True:
-            try:
-                channel_name, channel_url = task_queue.get()
-                try:
-                    channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])
-                    lines = requests.get(channel_url, timeout=2).text.strip().split('\n')
-                    ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]
-                    if ts_lists:
-                        ts_url = channel_url_t + ts_lists[0]
-                        ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])
-                        with eventlet.Timeout(5, False):
-                            start_time = time.time()
-                            cont = requests.get(ts_url, timeout=2).content
-                            resp_time = (time.time() - start_time) * 1                    
-                        if cont and resp_time > 0:
-                            checked[0] += 1
-                            temp_filename = f"temp_{hash(channel_url)}.ts"
-                            with open(temp_filename, 'wb') as f:
-                                f.write(cont)
-                            normalized_speed = len(cont) / resp_time / 1024 / 1024
-                            os.remove(temp_filename)
-                            # 过滤掉速度过慢的频道（≤0.001 MB/s）
-                            if normalized_speed > 0.001:
-                                result = channel_name, channel_url, f"{normalized_speed:.3f}"
-                                print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
-                                results.append(result)
+    def test_channel_availability(channel_name, channel_url):
+        """测试频道可用性和速度"""
+        # 方法1: 验证m3u8流
+        is_valid, response_time = validate_m3u8_stream(channel_url, timeout=3)
+        
+        if not is_valid:
+            return None, 0
+        
+        # 方法2: 测量下载速度
+        # 尝试不同的测试URL
+        test_urls = [channel_url]  # 原始URL
+        
+        # 尝试从m3u8中提取TS片段进行测试
+        try:
+            response = requests.get(channel_url, timeout=2, headers=HEADERS)
+            if response.status_code == 200:
+                lines = response.text.split('\n')
+                for line in lines:
+                    line = line.strip()
+                    if line and not line.startswith('#') and ('.ts' in line or '.m3u8' in line):
+                        if not line.startswith('http'):
+                            # 构建完整URL
+                            base_url = '/'.join(channel_url.split('/')[:-1])
+                            if line.startswith('/'):
+                                base_url = f"{channel_url.split('//')[0]}//{channel_url.split('/')[2]}"
+                                ts_url = f"{base_url}{line}"
                             else:
-                                print(f"× {channel_name}, {channel_url}: 速度过慢 ({normalized_speed:.3f} MB/s)，已过滤")
+                                ts_url = f"{base_url}/{line}"
                         else:
-                            checked[0] += 1
-                except Exception as e:
-                    checked[0] += 1
-            except:
-                checked[0] += 1
-            finally:
-                task_queue.task_done()
+                            ts_url = line
+                        
+                        if ts_url not in test_urls:
+                            test_urls.append(ts_url)
+                        break
+        except:
+            pass
+        
+        # 测试所有可能的URL，取最佳速度
+        best_speed = 0
+        for test_url in test_urls:
+            try:
+                speed = measure_download_speed(test_url, timeout=3, max_bytes=16384)  # 16KB
+                if speed > best_speed:
+                    best_speed = speed
+                    
+                # 如果速度已经不错，可以提前退出
+                if speed > 0.1:  # 0.1 MB/s
+                    break
+                    
+            except Exception as e:
+                continue
+        
+        # 如果所有测试都失败，但有响应，则设置为最小速度
+        if best_speed <= 0 and is_valid:
+            best_speed = 0.01  # 设置为较小的默认速度
+        
+        return channel_url, best_speed
     
-    task_queue = Queue()
+    # 多线程测试
     results = []
-    checked = [0]
+    total = len(channels)
     
-    Thread(target=show_progress, daemon=True).start()
+    print(f"开始测速，共 {total} 个频道")
+    print("=" * 60)
     
-    for _ in range(min(10, len(channels))):
-        Thread(target=worker, daemon=True).start()
+    with ThreadPoolExecutor(max_workers=15) as executor:
+        future_to_channel = {}
+        
+        # 提交所有测试任务
+        for channel_name, channel_url in channels:
+            future = executor.submit(test_channel_availability, channel_name, channel_url)
+            future_to_channel[future] = (channel_name, channel_url)
+        
+        # 处理结果
+        completed = 0
+        for future in as_completed(future_to_channel):
+            channel_name, original_url = future_to_channel[future]
+            completed += 1
+            
+            try:
+                tested_url, speed = future.result()
+                
+                if tested_url and speed > 0.001:  # 过滤掉速度过慢的
+                    result = (channel_name, tested_url, f"{speed:.3f}")
+                    results.append(result)
+                    status = "✓"
+                else:
+                    status = "×"
+                
+                # 显示进度
+                progress = completed / total * 100
+                print(f"{status} [{completed:3d}/{total:3d}] {channel_name:15s}: {speed:.3f} MB/s")
+                
+            except Exception as e:
+                print(f"! [{completed:3d}/{total:3d}] {channel_name:15s}: 测试失败")
     
-    for channel in channels:
-        task_queue.put(channel)
+    print("=" * 60)
+    print(f"测速完成，可用频道: {len(results)}/{total}")
     
-    task_queue.join()
     return results
 
 # 精确频道名称匹配函数
@@ -686,10 +785,22 @@ def hotel_iptv(config_file):
     print(f"扫描完成，获取有效url共：{len(valid_urls)}个")
     
     for valid_url in valid_urls:
-        channels.extend(extract_channels(valid_url))
+        extracted_channels = extract_channels(valid_url)
+        channels.extend(extracted_channels)
+        print(f"从 {valid_url} 提取到 {len(extracted_channels)} 个频道")
+    
+    if not channels:
+        print(f"从 {config_file} 没有提取到任何频道")
+        return
     
     print(f"共获取频道：{len(channels)}个\n开始测速")
-    results = speed_test(channels)
+    
+    # 使用优化后的测速函数
+    results = advanced_speed_test(channels)
+    
+    if not results:
+        print(f"测速完成，但没有可用的频道")
+        return
     
     # 对频道进行排序
     results.sort(key=lambda x: -float(x[2]))
@@ -702,7 +813,7 @@ def hotel_iptv(config_file):
     with open('1.txt', 'a', encoding='utf-8') as f:
         for line in unified_channels:
             f.write(line.split(',')[0] + ',' + line.split(',')[1] + '\n')
-    print("测速完成")
+    print(f"测速完成，已保存 {len(unified_channels)} 个频道到临时文件")
 
 # 主函数
 def main():
@@ -710,8 +821,19 @@ def main():
     start_time = datetime.datetime.now()
     print(f"脚本开始运行时间: {start_time.strftime('%Y-%m-%d %H:%M:%S')} (北京时间)")
     
-    # 第二步：处理每个省份的IP
+    # 检查IP目录是否存在
+    if not os.path.exists(IP_DIR):
+        print(f"IP目录 {IP_DIR} 不存在，请确保已有IP文件")
+        return
+    
+    # 处理每个IP文件
     province_files = [f for f in os.listdir(IP_DIR) if f.endswith('.txt')]
+    
+    if not province_files:
+        print(f"在 {IP_DIR} 目录中没有找到IP文件")
+        return
+    
+    print(f"找到 {len(province_files)} 个IP文件")
     
     for province_file in province_files:
         province_name = province_file.replace('.txt', '')
@@ -728,6 +850,10 @@ def main():
     with open('1.txt', 'r', encoding='utf-8') as f:
         raw_lines = f.readlines()
     
+    if not raw_lines:
+        print("频道数据文件为空")
+        return
+    
     # 转换为(channel, url, speed)格式
     channels_data = []
     for line in raw_lines:
@@ -738,6 +864,10 @@ def main():
                 url = parts[1]
                 speed = parts[2] if len(parts) > 2 else "0.000"
                 channels_data.append(f"{name},{url},{speed}")
+    
+    if not channels_data:
+        print("没有可用的频道数据")
+        return
     
     # 对数据进行分类
     categorized = classify_channels_by_category(channels_data)
@@ -823,6 +953,7 @@ def main():
     for file in files_to_remove:
         if os.path.exists(file):
             os.remove(file)
+            print(f"已删除临时文件: {file}")
     
     # 显示脚本结束时间
     end_time = datetime.datetime.now()
