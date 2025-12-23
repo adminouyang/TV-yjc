@@ -1,39 +1,139 @@
 name: ip-Scan
 
 on:
-#  schedule:
-#    - cron: '0 7,22 * * *'  
+  # 定时触发（北京时间每天7:00和22:00）
+  schedule:
+    - cron: '0 23,14 * * *'  # UTC时间23:00和14:00，对应北京时间7:00和22:00
+  
+  # 手动触发
   workflow_dispatch:
 
+  # 推送触发（当配置文件或脚本更改时）
+  push:
+    paths:
+      - 'IP_Scan/ip/*.txt'
+      - 'IP_Scan/ip-Scan.py'
+
 jobs:
-  build:
+  scan-ip:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # 设置超时时间
+
+    permissions:
+      contents: write  # 添加写入权限
 
     steps:
-      - name: Checkout code
+      - name: 检出代码
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0   
+          fetch-depth: 0
+          # 使用具有写入权限的token
+          token: ${{ secrets.GITHUB_TOKEN }}
     
-      - name: Set up Python
+      - name: 设置Python环境
         uses: actions/setup-python@v4
         with:
-          python-version: 3.11
-
-      - name: Install dependencies
+          python-version: '3.11'
+    
+      - name: 安装依赖
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install requests
-
-      - name: 获取并扫描ip
+    
+      - name: 检查目录结构
         run: |
-          cd $GITHUB_WORKSPACE
-          python IP_Scan/ip-Scan.py
+          echo "当前工作目录: $(pwd)"
+          echo "目录内容:"
+          ls -la
+          echo "IP_Scan目录内容:"
+          ls -la IP_Scan/ || echo "IP_Scan目录不存在，创建目录..."
+          mkdir -p IP_Scan/ip
+          echo "配置文件列表:"
+          find IP_Scan/ip -name "*.txt" 2>/dev/null | head -20 || echo "无配置文件"
+    
+      - name: 运行IP扫描脚本
+        run: |
+          echo "运行IP扫描脚本..."
+          if [ -f "IP_Scan/ip-Scan.py" ]; then
+            echo "找到脚本: IP_Scan/ip-Scan.py"
+            python IP_Scan/ip-Scan.py
+          else
+            echo "错误: 未找到IP_Scan/ip-Scan.py脚本"
+            echo "当前目录:"
+            ls -la
+            echo "IP_Scan目录:"
+            ls -la IP_Scan/
+            exit 1
+          fi
           
-      - name: 提交更改
+          echo "扫描完成，查看结果..."
+          find IP_Scan/ip -name "*_good_ip.txt" 2>/dev/null | xargs wc -l || echo "无扫描结果"
+    
+      - name: 配置Git
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+    
+      - name: 检查变更
+        id: git-status
+        run: |
+          echo "检查Git状态..."
+          git status
+          
+          # 检查是否有文件变更
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "有文件变更"
+            echo "变更的文件列表:"
+            git status --porcelain
+            echo "::set-output name=changed::true"
+          else
+            echo "无文件变更"
+            echo "::set-output name=changed::false"
+          fi
+    
+      - name: 提交变更
+        if: steps.git-status.outputs.changed == 'true'
+        run: |
+          echo "添加变更文件..."
           git add .
-          git commit -m "更新ip $(date '+%Y-%m-%d %H:%M:%S')"
+          
+          # 获取当前时间
+          CURRENT_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+          
+          # 提交消息
+          COMMIT_MESSAGE="自动更新IP扫描结果 - $CURRENT_TIME"
+          echo "提交消息: $COMMIT_MESSAGE"
+          
+          # 提交变更
+          git commit -m "$COMMIT_MESSAGE"
+    
+      - name: 推送变更
+        if: steps.git-status.outputs.changed == 'true'
+        run: |
+          echo "推送变更到仓库..."
           git push
+          echo "推送完成"
+        env:
+          # 使用具有写入权限的token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+      - name: 显示结果摘要
+        run: |
+          echo "========== IP扫描结果汇总 =========="
+          echo "扫描时间: $(date '+%Y-%m-%d %H:%M:%S')"
+          echo ""
+          echo "配置文件:"
+          find IP_Scan/ip -name "*.txt" ! -name "*_good_ip.txt" 2>/dev/null | xargs -I {} basename {} | head -10 || echo "无配置文件"
+          echo ""
+          echo "扫描结果:"
+          RESULTS=$(find IP_Scan/ip -name "*_good_ip.txt" 2>/dev/null)
+          if [ -n "$RESULTS" ]; then
+            echo "找到以下结果文件:"
+            for file in $RESULTS; do
+              FILE_SIZE=$(wc -l < "$file" 2>/dev/null || echo "0")
+              echo "  $(basename "$file"): $FILE_SIZE 个有效IP"
+            done
+          else
+            echo "无扫描结果"
+          fi
+          echo "=================================="
