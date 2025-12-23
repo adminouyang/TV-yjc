@@ -147,10 +147,6 @@ http://114.100.195.238:4022/rtp/238.1.78.160:7152
 http://114.107.44.229:8188/rtp/238.1.78.163:7176
 #EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$安徽电信
 http://114.100.195.238:4022/rtp/238.1.78.163:7176
-#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$安徽电信
-http://114.107.44.229:8188/rtp/238.1.78.150:7072
-#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$安徽电信
-http://114.100.195.238:4022/rtp/238.1.78.150:7072
 #EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$安徽电信
 http://114.107.44.229:8188/rtp/238.1.78.165:7192
 #EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$安徽电信
