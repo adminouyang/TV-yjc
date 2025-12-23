@@ -457,7 +457,7 @@ def measure_download_speed(url, timeout=5, max_bytes=32768):  # 最多下载32KB
             return 0
         
         downloaded = 0
-        for chunk in response.iter_content(chunk_size=8192):  # 8KB chunks
+        for chunk in response.iter_content(chunk_size=102400):  # 8KB chunks
             downloaded += len(chunk)
             if downloaded >= max_bytes:
                 break
@@ -519,7 +519,7 @@ def advanced_speed_test(channels):
         best_speed = 0
         for test_url in test_urls:
             try:
-                speed = measure_download_speed(test_url, timeout=3, max_bytes=16384)  # 16KB
+                speed = measure_download_speed(test_url, timeout=3, max_bytes=1024000)  # 16KB
                 if speed > best_speed:
                     best_speed = speed
                     
