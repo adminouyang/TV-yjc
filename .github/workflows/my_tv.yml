@@ -50,10 +50,17 @@ jobs:
         git config --global user.name "GitHub Actions"
         git config --global user.email "github-actions@github.com"
     
+    - name: Get current time
+      id: time
+      run: |
+        echo "date=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
+        echo "short_date=$(date '+%Y-%m-%d')" >> $GITHUB_OUTPUT
+        echo "timestamp=$(date +%s)" >> $GITHUB_OUTPUT
+    
     - name: Commit and push
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: "自动更新ip - $(date '+%Y-%m-%d %H:%M:%S')"
+        commit_message: "自动更新IPTV源 - ${{ steps.time.outputs.date }}"
         commit_options: '--no-verify'
         file_pattern: 'my_tv/* *.txt *.m3u'
         push_options: '--force'
