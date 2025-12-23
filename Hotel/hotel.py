@@ -651,6 +651,39 @@ def speed_test(channels):
         worker_thread.join(timeout=1)
     
     return results
+
+# 调试函数：测试URL是否可以正确解析
+def test_url_parsing(url):
+    print(f"\n调试：测试URL {url}")
+    try:
+        response = requests.get(url, timeout=5, headers=HEADERS)
+        print(f"响应状态码: {response.status_code}")
+        print(f"内容类型: {response.headers.get('content-type')}")
+        
+        # 尝试解析为JSON
+        try:
+            data = response.json()
+            print(f"JSON解析成功")
+            print(f"数据结构类型: {type(data)}")
+            
+            if isinstance(data, dict):
+                print(f"字典键: {list(data.keys())}")
+                if 'data' in data:
+                    print(f"data字段类型: {type(data['data'])}")
+                    if isinstance(data['data'], list) and len(data['data']) > 0:
+                        print(f"第一个频道示例: {data['data'][0]}")
+            elif isinstance(data, list):
+                print(f"列表长度: {len(data)}")
+                if len(data) > 0:
+                    print(f"第一个元素: {data[0]}")
+                    
+        except json.JSONDecodeError:
+            print(f"不是有效的JSON，尝试解析为文本")
+            content = response.text[:200]  # 只显示前200个字符
+            print(f"内容预览: {content}")
+            
+    except Exception as e:
+        print(f"请求失败: {e}")
 # 精确频道名称匹配函数
 def exact_channel_match(channel_name, pattern_name):
     """
