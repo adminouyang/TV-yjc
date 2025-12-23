@@ -366,9 +366,9 @@ def read_config(config_file):
 def check_ip_port(ip_port, url_end):
     try:
         url = f"http://{ip_port}{url_end}"
-        resp = requests.get(url, timeout=2)
+        resp = requests.get(url, timeout=3)
         resp.raise_for_status()
-        if "tsfile" in resp.text or "hls" in resp.text:
+        if "tsfile" in resp.text or "hls" in resp.text or "m3u8" in resp.text:
             print(f"{url} 访问成功")
             return url
     except:
@@ -395,13 +395,13 @@ def extract_channels(url):
         urls = url.split('/', 3)
         url_x = f"{urls[0]}//{urls[2]}"
         if "iptv" in json_url:
-            response = requests.get(json_url, timeout=2)
+            response = requests.get(json_url, timeout=3)
             json_data = response.json()
             for item in json_data['data']:
                 if isinstance(item, dict):
                     name = item.get('name')
                     urlx = item.get('url')
-                    if "tsfile" in urlx:
+                    if "tsfile" in urlx or "m3u8" in urlx:
                         urld = f"{url_x}{urlx}"
                         hotel_channels.append((name, urld))
         elif "ZHGXTV" in json_url:
@@ -409,7 +409,7 @@ def extract_channels(url):
             json_data = response.content.decode('utf-8')
             data_lines = json_data.split('\n')
             for line in data_lines:
-                if "," in line and "hls" in line:
+                if "," in line and ("hls" in line or "m3u8" in line):
                     name, channel_url = line.strip().split(',')
                     parts = channel_url.split('/', 3)
                     if len(parts) >= 4:
