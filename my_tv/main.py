@@ -742,7 +742,8 @@ def merge_all_files(channel_template):
                     for main_channel, aliases in channel_template[category]:
                         if main_channel in organized_channels[category]:
                             for original_channel_name, url, city in organized_channels[category][main_channel]:
-                                f.write(f"{original_channel_name},{url}${city}\n")
+                                # 这里的关键：使用主频道名而不是原始频道名
+                                f.write(f"{main_channel},{url}${city}\n")
         
         # 处理"其它频道"分类
         if organized_channels.get("其它频道") and organized_channels["其它频道"]:
@@ -752,7 +753,7 @@ def merge_all_files(channel_template):
                 other_channels = sorted(organized_channels["其它频道"].keys())
                 for main_channel in other_channels:
                     for original_channel_name, url, city in organized_channels["其它频道"][main_channel]:
-                        f.write(f"{original_channel_name},{url}${city}\n")
+                        f.write(f"{main_channel},{url}${city}\n")
         
         # 计算总源数
         total_sources = 0
@@ -781,12 +782,13 @@ def merge_all_files(channel_template):
                         if main_channel in organized_channels[category]:
                             for original_channel_name, url, city in organized_channels[category][main_channel]:
                                 logo_url = logo_dict.get(original_channel_name, "")
-                                display_name = f"{original_channel_name}"
+                                # 使用主频道名
+                                display_name = f"{main_channel}"
                                 
                                 if logo_url:
-                                    f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{original_channel_name}" tvg-logo="{logo_url}" group-title="{category}",{display_name}\n')
+                                    f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{main_channel}" tvg-logo="{logo_url}" group-title="{category}",{display_name}\n')
                                 else:
-                                    f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{original_channel_name}" group-title="{category}",{display_name}\n')
+                                    f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{main_channel}" group-title="{category}",{display_name}\n')
                                 f.write(f"{url}\n")
             
             if organized_channels.get("其它频道") and organized_channels["其它频道"]:
@@ -794,12 +796,12 @@ def merge_all_files(channel_template):
                 for main_channel in other_channels:
                     for original_channel_name, url, city in organized_channels["其它频道"][main_channel]:
                         logo_url = logo_dict.get(original_channel_name, "")
-                        display_name = f"{original_channel_name}"
+                        display_name = f"{main_channel}"
                         
                         if logo_url:
-                            f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{original_channel_name}" tvg-logo="{logo_url}" group-title="其它频道",{display_name}\n')
+                            f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{main_channel}" tvg-logo="{logo_url}" group-title="其它频道",{display_name}\n')
                         else:
-                            f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{original_channel_name}" group-title="其它频道",{display_name}\n')
+                            f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{main_channel}" group-title="其它频道",{display_name}\n')
                         f.write(f"{url}\n")
         
         print(f"✓ 已合并M3U文件: {merged_m3u_file}")
