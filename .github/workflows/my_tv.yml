@@ -1,4 +1,4 @@
-name: Update IPTV Sources
+name: my_tv
 
 on:
   schedule:
