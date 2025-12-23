@@ -1,497 +1,497 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.1:8008
-#EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.1:8008
-#EXTINF:-1 tvg-id="" tvg-name="CCTV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV2.png" group-title="央视频道",CCTV2$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.2:8084
+#EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.1:8008
 #EXTINF:-1 tvg-id="" tvg-name="CCTV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV2.png" group-title="央视频道",CCTV2$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.2:8084
-#EXTINF:-1 tvg-id="" tvg-name="CCTV3" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV3.png" group-title="央视频道",CCTV3$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.88:8000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV2.png" group-title="央视频道",CCTV2$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.2:8084
 #EXTINF:-1 tvg-id="" tvg-name="CCTV3" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV3.png" group-title="央视频道",CCTV3$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.88:8000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV4.png" group-title="央视频道",CCTV4$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.4:8092
+#EXTINF:-1 tvg-id="" tvg-name="CCTV3" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV3.png" group-title="央视频道",CCTV3$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.88:8000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV4.png" group-title="央视频道",CCTV4$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.4:8092
-#EXTINF:-1 tvg-id="" tvg-name="CCTV5" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5.png" group-title="央视频道",CCTV5$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.89:8000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV4.png" group-title="央视频道",CCTV4$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.4:8092
 #EXTINF:-1 tvg-id="" tvg-name="CCTV5" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5.png" group-title="央视频道",CCTV5$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.89:8000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV5+" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5%2B.png" group-title="央视频道",CCTV5+$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.20:8004
+#EXTINF:-1 tvg-id="" tvg-name="CCTV5" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5.png" group-title="央视频道",CCTV5$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.89:8000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV5+" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5%2B.png" group-title="央视频道",CCTV5+$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.20:8004
-#EXTINF:-1 tvg-id="" tvg-name="CCTV6" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV6.png" group-title="央视频道",CCTV6$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.84:8000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV5+" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5%2B.png" group-title="央视频道",CCTV5+$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.20:8004
 #EXTINF:-1 tvg-id="" tvg-name="CCTV6" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV6.png" group-title="央视频道",CCTV6$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.84:8000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV7" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV7.png" group-title="央视频道",CCTV7$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.7:8104
+#EXTINF:-1 tvg-id="" tvg-name="CCTV6" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV6.png" group-title="央视频道",CCTV6$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.84:8000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV7" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV7.png" group-title="央视频道",CCTV7$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.7:8104
-#EXTINF:-1 tvg-id="" tvg-name="CCTV8" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV8.png" group-title="央视频道",CCTV8$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.85:8000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV7" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV7.png" group-title="央视频道",CCTV7$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.7:8104
 #EXTINF:-1 tvg-id="" tvg-name="CCTV8" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV8.png" group-title="央视频道",CCTV8$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.85:8000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV9" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV9.png" group-title="央视频道",CCTV9$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.9:8112
+#EXTINF:-1 tvg-id="" tvg-name="CCTV8" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV8.png" group-title="央视频道",CCTV8$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.85:8000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV9" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV9.png" group-title="央视频道",CCTV9$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.9:8112
-#EXTINF:-1 tvg-id="" tvg-name="CCTV10" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV10.png" group-title="央视频道",CCTV10$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.10:8116
+#EXTINF:-1 tvg-id="" tvg-name="CCTV9" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV9.png" group-title="央视频道",CCTV9$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.9:8112
 #EXTINF:-1 tvg-id="" tvg-name="CCTV10" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV10.png" group-title="央视频道",CCTV10$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.10:8116
-#EXTINF:-1 tvg-id="" tvg-name="CCTV11" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV11.png" group-title="央视频道",CCTV11$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.73:8120
+#EXTINF:-1 tvg-id="" tvg-name="CCTV10" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV10.png" group-title="央视频道",CCTV10$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.10:8116
 #EXTINF:-1 tvg-id="" tvg-name="CCTV11" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV11.png" group-title="央视频道",CCTV11$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.73:8120
-#EXTINF:-1 tvg-id="" tvg-name="CCTV12" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV12.png" group-title="央视频道",CCTV12$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.12:8124
+#EXTINF:-1 tvg-id="" tvg-name="CCTV11" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV11.png" group-title="央视频道",CCTV11$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.73:8120
 #EXTINF:-1 tvg-id="" tvg-name="CCTV12" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV12.png" group-title="央视频道",CCTV12$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.12:8124
-#EXTINF:-1 tvg-id="" tvg-name="CCTV13" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV13.png" group-title="央视频道",CCTV13$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.168:8130
+#EXTINF:-1 tvg-id="" tvg-name="CCTV12" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV12.png" group-title="央视频道",CCTV12$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.12:8124
 #EXTINF:-1 tvg-id="" tvg-name="CCTV13" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV13.png" group-title="央视频道",CCTV13$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.168:8130
-#EXTINF:-1 tvg-id="" tvg-name="CCTV14" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV14.png" group-title="央视频道",CCTV14$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.14:8132
+#EXTINF:-1 tvg-id="" tvg-name="CCTV13" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV13.png" group-title="央视频道",CCTV13$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.168:8130
 #EXTINF:-1 tvg-id="" tvg-name="CCTV14" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV14.png" group-title="央视频道",CCTV14$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.14:8132
-#EXTINF:-1 tvg-id="" tvg-name="CCTV15" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV15.png" group-title="央视频道",CCTV15$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.74:8136
+#EXTINF:-1 tvg-id="" tvg-name="CCTV14" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV14.png" group-title="央视频道",CCTV14$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.14:8132
 #EXTINF:-1 tvg-id="" tvg-name="CCTV15" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV15.png" group-title="央视频道",CCTV15$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.74:8136
-#EXTINF:-1 tvg-id="" tvg-name="CCTV17" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV17.png" group-title="央视频道",CCTV17$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.17:8144
+#EXTINF:-1 tvg-id="" tvg-name="CCTV15" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV15.png" group-title="央视频道",CCTV15$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.74:8136
 #EXTINF:-1 tvg-id="" tvg-name="CCTV17" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV17.png" group-title="央视频道",CCTV17$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.17:8144
-#EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.33:8002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV17" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV17.png" group-title="央视频道",CCTV17$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.17:8144
 #EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.33:8002
 #EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.53:8060
+http://106.120.13.232:4022/rtp/225.1.8.33:8002
 #EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.53:8060
 #EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.81:8176
+http://106.120.13.232:4022/rtp/225.1.8.53:8060
 #EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.81:8176
 #EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.126:8002
+http://106.120.13.232:4022/rtp/225.1.8.81:8176
 #EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.126:8002
 #EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.194:4120
+http://106.120.13.232:4022/rtp/225.1.8.126:8002
 #EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.194:4120
 #EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.210:8068
+http://106.120.13.232:4022/rtp/225.1.8.194:4120
 #EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.210:8068
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$北京电信
-http://106.120.13.232:4022/udp/225.1.8.32:8152
+#EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.210:8068
 #EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$北京电信
 http://115.171.80.250:1688/udp/225.1.8.32:8152
-#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.193:4120
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$北京电信
+http://106.120.13.232:4022/udp/225.1.8.32:8152
 #EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.193:4120
-#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.195:4120
+#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.193:4120
 #EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.195:4120
-#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.116:8056
+#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.195:4120
 #EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.116:8056
-#EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.154:8140
+#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.116:8056
 #EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.154:8140
-#EXTINF:-1 tvg-id="" tvg-name="朝阳融媒" group-title="其它频道",朝阳融媒$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.69:8002
+#EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.154:8140
 #EXTINF:-1 tvg-id="" tvg-name="朝阳融媒" group-title="其它频道",朝阳融媒$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.69:8002
-#EXTINF:-1 tvg-id="" tvg-name="华数动画" group-title="其它频道",华数动画$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.240:4120
+#EXTINF:-1 tvg-id="" tvg-name="朝阳融媒" group-title="其它频道",朝阳融媒$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.69:8002
 #EXTINF:-1 tvg-id="" tvg-name="华数动画" group-title="其它频道",华数动画$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.240:4120
-#EXTINF:-1 tvg-id="" tvg-name="华数喜剧影院" group-title="其它频道",华数喜剧影院$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.251:4120
+#EXTINF:-1 tvg-id="" tvg-name="华数动画" group-title="其它频道",华数动画$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.240:4120
 #EXTINF:-1 tvg-id="" tvg-name="华数喜剧影院" group-title="其它频道",华数喜剧影院$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.251:4120
-#EXTINF:-1 tvg-id="" tvg-name="华数动作影院" group-title="其它频道",华数动作影院$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.252:4120
+#EXTINF:-1 tvg-id="" tvg-name="华数喜剧影院" group-title="其它频道",华数喜剧影院$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.251:4120
 #EXTINF:-1 tvg-id="" tvg-name="华数动作影院" group-title="其它频道",华数动作影院$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.252:4120
-#EXTINF:-1 tvg-id="" tvg-name="华数家庭影院" group-title="其它频道",华数家庭影院$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.253:4120
+#EXTINF:-1 tvg-id="" tvg-name="华数动作影院" group-title="其它频道",华数动作影院$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.252:4120
 #EXTINF:-1 tvg-id="" tvg-name="华数家庭影院" group-title="其它频道",华数家庭影院$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.253:4120
-#EXTINF:-1 tvg-id="" tvg-name="华数星影" group-title="其它频道",华数星影$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.254:4120
+#EXTINF:-1 tvg-id="" tvg-name="华数家庭影院" group-title="其它频道",华数家庭影院$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.253:4120
 #EXTINF:-1 tvg-id="" tvg-name="华数星影" group-title="其它频道",华数星影$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.254:4120
-#EXTINF:-1 tvg-id="" tvg-name="华数精选" group-title="其它频道",华数精选$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.234:4120
+#EXTINF:-1 tvg-id="" tvg-name="华数星影" group-title="其它频道",华数星影$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.254:4120
 #EXTINF:-1 tvg-id="" tvg-name="华数精选" group-title="其它频道",华数精选$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.234:4120
-#EXTINF:-1 tvg-id="" tvg-name="华数经典电影" group-title="其它频道",华数经典电影$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.203:9024
+#EXTINF:-1 tvg-id="" tvg-name="华数精选" group-title="其它频道",华数精选$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.234:4120
 #EXTINF:-1 tvg-id="" tvg-name="华数经典电影" group-title="其它频道",华数经典电影$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.203:9024
-#EXTINF:-1 tvg-id="" tvg-name="华数热播剧场" group-title="其它频道",华数热播剧场$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.202:9020
+#EXTINF:-1 tvg-id="" tvg-name="华数经典电影" group-title="其它频道",华数经典电影$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.203:9024
 #EXTINF:-1 tvg-id="" tvg-name="华数热播剧场" group-title="其它频道",华数热播剧场$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.202:9020
-#EXTINF:-1 tvg-id="" tvg-name="华数魅力时尚" group-title="其它频道",华数魅力时尚$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.204:9012
+#EXTINF:-1 tvg-id="" tvg-name="华数热播剧场" group-title="其它频道",华数热播剧场$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.202:9020
 #EXTINF:-1 tvg-id="" tvg-name="华数魅力时尚" group-title="其它频道",华数魅力时尚$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.204:9012
-#EXTINF:-1 tvg-id="" tvg-name="华数城市剧场" group-title="其它频道",华数城市剧场$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.227:4120
+#EXTINF:-1 tvg-id="" tvg-name="华数魅力时尚" group-title="其它频道",华数魅力时尚$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.204:9012
 #EXTINF:-1 tvg-id="" tvg-name="华数城市剧场" group-title="其它频道",华数城市剧场$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.227:4120
-#EXTINF:-1 tvg-id="" tvg-name="华数军旅剧场" group-title="其它频道",华数军旅剧场$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.228:4120
+#EXTINF:-1 tvg-id="" tvg-name="华数城市剧场" group-title="其它频道",华数城市剧场$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.227:4120
 #EXTINF:-1 tvg-id="" tvg-name="华数军旅剧场" group-title="其它频道",华数军旅剧场$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.228:4120
-#EXTINF:-1 tvg-id="" tvg-name="华数古装剧场" group-title="其它频道",华数古装剧场$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.229:4120
+#EXTINF:-1 tvg-id="" tvg-name="华数军旅剧场" group-title="其它频道",华数军旅剧场$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.228:4120
 #EXTINF:-1 tvg-id="" tvg-name="华数古装剧场" group-title="其它频道",华数古装剧场$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.229:4120
-#EXTINF:-1 tvg-id="" tvg-name="武侠剧场" group-title="其它频道",武侠剧场$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.250:4120
+#EXTINF:-1 tvg-id="" tvg-name="华数古装剧场" group-title="其它频道",华数古装剧场$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.229:4120
 #EXTINF:-1 tvg-id="" tvg-name="武侠剧场" group-title="其它频道",武侠剧场$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.250:4120
-#EXTINF:-1 tvg-id="" tvg-name="光影" group-title="其它频道",光影$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.244:4120
+#EXTINF:-1 tvg-id="" tvg-name="武侠剧场" group-title="其它频道",武侠剧场$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.250:4120
 #EXTINF:-1 tvg-id="" tvg-name="光影" group-title="其它频道",光影$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.244:4120
-#EXTINF:-1 tvg-id="" tvg-name="高网" group-title="其它频道",高网$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.248:4120
+#EXTINF:-1 tvg-id="" tvg-name="光影" group-title="其它频道",光影$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.244:4120
 #EXTINF:-1 tvg-id="" tvg-name="高网" group-title="其它频道",高网$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.248:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV收视指南" group-title="其它频道",IPTV收视指南$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.201:8012
+#EXTINF:-1 tvg-id="" tvg-name="高网" group-title="其它频道",高网$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.248:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV收视指南" group-title="其它频道",IPTV收视指南$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.201:8012
-#EXTINF:-1 tvg-id="" tvg-name="IPTV地理" group-title="其它频道",IPTV地理$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.231:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV收视指南" group-title="其它频道",IPTV收视指南$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.201:8012
 #EXTINF:-1 tvg-id="" tvg-name="IPTV地理" group-title="其它频道",IPTV地理$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.231:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV美妆" group-title="其它频道",IPTV美妆$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.232:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV地理" group-title="其它频道",IPTV地理$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.231:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV美妆" group-title="其它频道",IPTV美妆$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.232:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV好学生" group-title="其它频道",IPTV好学生$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.241:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV美妆" group-title="其它频道",IPTV美妆$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.232:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV好学生" group-title="其它频道",IPTV好学生$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.241:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV国学" group-title="其它频道",IPTV国学$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.237:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV好学生" group-title="其它频道",IPTV好学生$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.241:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV国学" group-title="其它频道",IPTV国学$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.237:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV美人" group-title="其它频道",IPTV美人$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.233:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV国学" group-title="其它频道",IPTV国学$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.237:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV美人" group-title="其它频道",IPTV美人$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.233:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV5足球" group-title="其它频道",IPTV5足球$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.249:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV美人" group-title="其它频道",IPTV美人$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.233:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV5足球" group-title="其它频道",IPTV5足球$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.249:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV7军事" group-title="其它频道",IPTV7军事$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.236:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV5足球" group-title="其它频道",IPTV5足球$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.249:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV7军事" group-title="其它频道",IPTV7军事$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.236:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV10解密" group-title="其它频道",IPTV10解密$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.235:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV7军事" group-title="其它频道",IPTV7军事$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.236:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV10解密" group-title="其它频道",IPTV10解密$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.235:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV11戏曲" group-title="其它频道",IPTV11戏曲$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.238:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV10解密" group-title="其它频道",IPTV10解密$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.235:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV11戏曲" group-title="其它频道",IPTV11戏曲$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.238:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV14早教" group-title="其它频道",IPTV14早教$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.239:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV11戏曲" group-title="其它频道",IPTV11戏曲$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.238:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV14早教" group-title="其它频道",IPTV14早教$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.239:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV15音乐现场" group-title="其它频道",IPTV15音乐现场$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.230:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV14早教" group-title="其它频道",IPTV14早教$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.239:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV15音乐现场" group-title="其它频道",IPTV15音乐现场$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.230:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV鉴赏" group-title="其它频道",IPTV鉴赏$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.242:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV15音乐现场" group-title="其它频道",IPTV15音乐现场$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.230:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV鉴赏" group-title="其它频道",IPTV鉴赏$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.242:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV墨宝" group-title="其它频道",IPTV墨宝$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.243:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV鉴赏" group-title="其它频道",IPTV鉴赏$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.242:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV墨宝" group-title="其它频道",IPTV墨宝$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.243:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV爱生活" group-title="其它频道",IPTV爱生活$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.246:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV墨宝" group-title="其它频道",IPTV墨宝$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.243:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV爱生活" group-title="其它频道",IPTV爱生活$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.246:4120
-#EXTINF:-1 tvg-id="" tvg-name="IPTV武术" group-title="其它频道",IPTV武术$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.247:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV爱生活" group-title="其它频道",IPTV爱生活$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.246:4120
 #EXTINF:-1 tvg-id="" tvg-name="IPTV武术" group-title="其它频道",IPTV武术$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.247:4120
-#EXTINF:-1 tvg-id="" tvg-name="台球" group-title="其它频道",台球$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.245:4120
+#EXTINF:-1 tvg-id="" tvg-name="IPTV武术" group-title="其它频道",IPTV武术$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.247:4120
 #EXTINF:-1 tvg-id="" tvg-name="台球" group-title="其它频道",台球$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.245:4120
-#EXTINF:-1 tvg-id="" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="其它频道",茶频道$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.72:8002
+#EXTINF:-1 tvg-id="" tvg-name="台球" group-title="其它频道",台球$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.245:4120
 #EXTINF:-1 tvg-id="" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="其它频道",茶频道$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.72:8002
-#EXTINF:-1 tvg-id="" tvg-name="重温经典" group-title="卫视频道",重温经典$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.39:8002
+#EXTINF:-1 tvg-id="" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="其它频道",茶频道$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.72:8002
 #EXTINF:-1 tvg-id="" tvg-name="重温经典" group-title="卫视频道",重温经典$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.39:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.21:8002
+#EXTINF:-1 tvg-id="" tvg-name="重温经典" group-title="卫视频道",重温经典$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.39:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.21:8002
-#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.41:8012
+#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.21:8002
 #EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.41:8012
-#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.43:8020
+#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.41:8012
 #EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.43:8020
-#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.44:8028
+#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.43:8020
 #EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.44:8028
-#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.45:8032
+#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.44:8028
 #EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.45:8032
-#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.46:8036
+#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.45:8032
 #EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.46:8036
-#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.47:8044
+#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.46:8036
 #EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.47:8044
-#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.48:8044
+#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.47:8044
 #EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.48:8044
-#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.49:8048
+#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.48:8044
 #EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.49:8048
-#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.50:8052
+#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.49:8048
 #EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.50:8052
-#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.51:8056
+#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.50:8052
 #EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.51:8056
-#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.52:8064
+#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.51:8056
 #EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.52:8064
-#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.76:8002
+#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.52:8064
 #EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.76:8002
-#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.77:8076
+#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.76:8002
 #EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.77:8076
-#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.79:8148
+#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.77:8076
 #EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.79:8148
-#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.171:8166
+#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.79:8148
 #EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.171:8166
-#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.172:8162
+#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.171:8166
 #EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.172:8162
-#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.1.9:8164
+#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.172:8162
 #EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.1.9:8164
-#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$北京电信
-http://106.120.13.232:4022/udp/225.1.8.42:8016
+#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.1.9:8164
 #EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$北京电信
 http://115.171.80.250:1688/udp/225.1.8.42:8016
-#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.139:8108
+#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$北京电信
+http://106.120.13.232:4022/udp/225.1.8.42:8016
 #EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.139:8108
-#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.140:8128
+#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.139:8108
 #EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.140:8128
-#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.142:8288
+#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.140:8128
 #EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.142:8288
-#EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.152:8300
+#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.142:8288
 #EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.152:8300
-#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.153:8200
+#EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.152:8300
 #EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.153:8200
-#EXTINF:-1 tvg-id="" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.155:8172
+#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.153:8200
 #EXTINF:-1 tvg-id="" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.155:8172
-#EXTINF:-1 tvg-id="" tvg-name="内蒙古卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",内蒙古卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.156:8176
+#EXTINF:-1 tvg-id="" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.155:8172
 #EXTINF:-1 tvg-id="" tvg-name="内蒙古卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",内蒙古卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.156:8176
-#EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.157:8184
+#EXTINF:-1 tvg-id="" tvg-name="内蒙古卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",内蒙古卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.156:8176
 #EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.157:8184
-#EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.158:8304
+#EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.157:8184
 #EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.158:8304
-#EXTINF:-1 tvg-id="" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.159:8124
+#EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.158:8304
 #EXTINF:-1 tvg-id="" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.159:8124
-#EXTINF:-1 tvg-id="" tvg-name="西藏卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",西藏卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.160:8164
+#EXTINF:-1 tvg-id="" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.159:8124
 #EXTINF:-1 tvg-id="" tvg-name="西藏卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",西藏卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.160:8164
-#EXTINF:-1 tvg-id="" tvg-name="新疆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",新疆卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.161:8160
+#EXTINF:-1 tvg-id="" tvg-name="西藏卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",西藏卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.160:8164
 #EXTINF:-1 tvg-id="" tvg-name="新疆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",新疆卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.161:8160
-#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.162:8188
+#EXTINF:-1 tvg-id="" tvg-name="新疆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",新疆卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.161:8160
 #EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.162:8188
-#EXTINF:-1 tvg-id="" tvg-name="厦门卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8E%A6%E9%97%A8%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",厦门卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.166:4120
+#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.162:8188
 #EXTINF:-1 tvg-id="" tvg-name="厦门卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8E%A6%E9%97%A8%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",厦门卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.166:4120
-#EXTINF:-1 tvg-id="" tvg-name="兵团卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",兵团卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.167:4120
+#EXTINF:-1 tvg-id="" tvg-name="厦门卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8E%A6%E9%97%A8%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",厦门卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.166:4120
 #EXTINF:-1 tvg-id="" tvg-name="兵团卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",兵团卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.167:4120
-#EXTINF:-1 tvg-id="" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.190:4120
+#EXTINF:-1 tvg-id="" tvg-name="兵团卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",兵团卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.167:4120
 #EXTINF:-1 tvg-id="" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.190:4120
-#EXTINF:-1 tvg-id="" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.78:4120
+#EXTINF:-1 tvg-id="" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.190:4120
 #EXTINF:-1 tvg-id="" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.78:4120
-#EXTINF:-1 tvg-id="" tvg-name="北京卫视4K超高清" group-title="卫视频道",北京卫视4K超高清$北京电信
-http://106.120.13.232:4022/udp/225.1.8.120:8002
+#EXTINF:-1 tvg-id="" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.78:4120
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视4K超高清" group-title="卫视频道",北京卫视4K超高清$北京电信
 http://115.171.80.250:1688/udp/225.1.8.120:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视4K超高清" group-title="卫视频道",北京卫视4K超高清$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.128:8002
+http://106.120.13.232:4022/udp/225.1.8.120:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视4K超高清" group-title="卫视频道",北京卫视4K超高清$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.128:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京文艺频道" group-title="☘️北京市",北京文艺频道$北京电信
-http://106.120.13.232:4022/udp/225.1.8.22:8002
+#EXTINF:-1 tvg-id="" tvg-name="北京卫视4K超高清" group-title="卫视频道",北京卫视4K超高清$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.128:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京文艺频道" group-title="☘️北京市",北京文艺频道$北京电信
 http://115.171.80.250:1688/udp/225.1.8.22:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京影视频道" group-title="☘️北京市",北京影视频道$北京电信
-http://106.120.13.232:4022/udp/225.1.8.82:8000
+#EXTINF:-1 tvg-id="" tvg-name="北京文艺频道" group-title="☘️北京市",北京文艺频道$北京电信
+http://106.120.13.232:4022/udp/225.1.8.22:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京影视频道" group-title="☘️北京市",北京影视频道$北京电信
 http://115.171.80.250:1688/udp/225.1.8.82:8000
-#EXTINF:-1 tvg-id="" tvg-name="北京财经频道" group-title="☘️北京市",北京财经频道$北京电信
-http://106.120.13.232:4022/udp/225.1.8.106:8002
+#EXTINF:-1 tvg-id="" tvg-name="北京影视频道" group-title="☘️北京市",北京影视频道$北京电信
+http://106.120.13.232:4022/udp/225.1.8.82:8000
 #EXTINF:-1 tvg-id="" tvg-name="北京财经频道" group-title="☘️北京市",北京财经频道$北京电信
 http://115.171.80.250:1688/udp/225.1.8.106:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京体育休闲" group-title="☘️北京市",北京体育休闲$北京电信
-http://106.120.13.232:4022/udp/225.1.8.23:8002
+#EXTINF:-1 tvg-id="" tvg-name="北京财经频道" group-title="☘️北京市",北京财经频道$北京电信
+http://106.120.13.232:4022/udp/225.1.8.106:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京体育休闲" group-title="☘️北京市",北京体育休闲$北京电信
 http://115.171.80.250:1688/udp/225.1.8.23:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京生活频道" group-title="☘️北京市",北京生活频道$北京电信
-http://106.120.13.232:4022/udp/225.1.8.108:8002
+#EXTINF:-1 tvg-id="" tvg-name="北京体育休闲" group-title="☘️北京市",北京体育休闲$北京电信
+http://106.120.13.232:4022/udp/225.1.8.23:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京生活频道" group-title="☘️北京市",北京生活频道$北京电信
 http://115.171.80.250:1688/udp/225.1.8.108:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京新闻频道" group-title="☘️北京市",北京新闻频道$北京电信
-http://106.120.13.232:4022/udp/225.1.8.83:8000
+#EXTINF:-1 tvg-id="" tvg-name="北京生活频道" group-title="☘️北京市",北京生活频道$北京电信
+http://106.120.13.232:4022/udp/225.1.8.108:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京新闻频道" group-title="☘️北京市",北京新闻频道$北京电信
 http://115.171.80.250:1688/udp/225.1.8.83:8000
-#EXTINF:-1 tvg-id="" tvg-name="北京国际频道" group-title="☘️北京市",北京国际频道$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.131:8002
+#EXTINF:-1 tvg-id="" tvg-name="北京新闻频道" group-title="☘️北京市",北京新闻频道$北京电信
+http://106.120.13.232:4022/udp/225.1.8.83:8000
 #EXTINF:-1 tvg-id="" tvg-name="北京国际频道" group-title="☘️北京市",北京国际频道$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.131:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京IPTV淘BABY" group-title="☘️北京市",北京IPTV淘BABY$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.36:8002
+#EXTINF:-1 tvg-id="" tvg-name="北京国际频道" group-title="☘️北京市",北京国际频道$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.131:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京IPTV淘BABY" group-title="☘️北京市",北京IPTV淘BABY$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.36:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京IPTV淘剧场" group-title="☘️北京市",北京IPTV淘剧场$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.37:8002
+#EXTINF:-1 tvg-id="" tvg-name="北京IPTV淘BABY" group-title="☘️北京市",北京IPTV淘BABY$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.36:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京IPTV淘剧场" group-title="☘️北京市",北京IPTV淘剧场$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.37:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京IPTV淘电影" group-title="☘️北京市",北京IPTV淘电影$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.38:8002
+#EXTINF:-1 tvg-id="" tvg-name="北京IPTV淘剧场" group-title="☘️北京市",北京IPTV淘剧场$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.37:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京IPTV淘电影" group-title="☘️北京市",北京IPTV淘电影$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.38:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京IPTV淘娱乐" group-title="☘️北京市",北京IPTV淘娱乐$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.61:8002
+#EXTINF:-1 tvg-id="" tvg-name="北京IPTV淘电影" group-title="☘️北京市",北京IPTV淘电影$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.38:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京IPTV淘娱乐" group-title="☘️北京市",北京IPTV淘娱乐$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.61:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京IPTV萌宠TV" group-title="☘️北京市",北京IPTV萌宠TV$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.63:8002
+#EXTINF:-1 tvg-id="" tvg-name="北京IPTV淘娱乐" group-title="☘️北京市",北京IPTV淘娱乐$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.61:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京IPTV萌宠TV" group-title="☘️北京市",北京IPTV萌宠TV$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.63:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京IPTV4K超清" group-title="☘️北京市",北京IPTV4K超清$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.211:8002
+#EXTINF:-1 tvg-id="" tvg-name="北京IPTV萌宠TV" group-title="☘️北京市",北京IPTV萌宠TV$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.63:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京IPTV4K超清" group-title="☘️北京市",北京IPTV4K超清$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.211:8002
-#EXTINF:-1 tvg-id="" tvg-name="房山电视台" group-title="☘️北京市",房山电视台$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.68:8002
+#EXTINF:-1 tvg-id="" tvg-name="北京IPTV4K超清" group-title="☘️北京市",北京IPTV4K超清$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.211:8002
 #EXTINF:-1 tvg-id="" tvg-name="房山电视台" group-title="☘️北京市",房山电视台$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.68:8002
-#EXTINF:-1 tvg-id="" tvg-name="密云电视台" group-title="☘️北京市",密云电视台$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.75:8002
+#EXTINF:-1 tvg-id="" tvg-name="房山电视台" group-title="☘️北京市",房山电视台$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.68:8002
 #EXTINF:-1 tvg-id="" tvg-name="密云电视台" group-title="☘️北京市",密云电视台$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.75:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教$北京电信
-http://106.120.13.232:4022/udp/225.1.8.105:8002
+#EXTINF:-1 tvg-id="" tvg-name="密云电视台" group-title="☘️北京市",密云电视台$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.75:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教$北京电信
 http://115.171.80.250:1688/udp/225.1.8.105:8002
-#EXTINF:-1 tvg-id="" tvg-name="北京卡酷少儿" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BF.png" group-title="数字频道",北京卡酷少儿$北京电信
-http://106.120.13.232:4022/udp/225.1.8.35:8000
+#EXTINF:-1 tvg-id="" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教$北京电信
+http://106.120.13.232:4022/udp/225.1.8.105:8002
 #EXTINF:-1 tvg-id="" tvg-name="北京卡酷少儿" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BF.png" group-title="数字频道",北京卡酷少儿$北京电信
 http://115.171.80.250:1688/udp/225.1.8.35:8000
-#EXTINF:-1 tvg-id="" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.207:9000
+#EXTINF:-1 tvg-id="" tvg-name="北京卡酷少儿" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BF.png" group-title="数字频道",北京卡酷少儿$北京电信
+http://106.120.13.232:4022/udp/225.1.8.35:8000
 #EXTINF:-1 tvg-id="" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.207:9000
-#EXTINF:-1 tvg-id="" tvg-name="华数爱上4K电影" group-title="数字频道",华数爱上4K电影$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.80:2000
+#EXTINF:-1 tvg-id="" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.207:9000
 #EXTINF:-1 tvg-id="" tvg-name="华数爱上4K电影" group-title="数字频道",华数爱上4K电影$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.80:2000
-#EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.31:8156
+#EXTINF:-1 tvg-id="" tvg-name="华数爱上4K电影" group-title="数字频道",华数爱上4K电影$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.80:2000
 #EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.31:8156
-#EXTINF:-1 tvg-id="" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.71:8002
+#EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.31:8156
 #EXTINF:-1 tvg-id="" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.71:8002
-#EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.163:9252
+#EXTINF:-1 tvg-id="" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.71:8002
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.163:9252
-#EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通$北京电信
-http://106.120.13.232:4022/rtp/225.1.8.170:9268
+#EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.163:9252
 #EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通$北京电信
 http://115.171.80.250:1688/rtp/225.1.8.170:9268
+#EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通$北京电信
+http://106.120.13.232:4022/rtp/225.1.8.170:9268
