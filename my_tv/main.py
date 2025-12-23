@@ -809,6 +809,26 @@ def merge_all_files(channel_template):
         import traceback
         traceback.print_exc()
 
+def write_update_info():
+    """写入更新时间信息"""
+    try:
+        now = datetime.datetime.now(timezone.utc) + timedelta(hours=8)
+        update_time = now.strftime("%Y-%m-%d %H:%M:%S")
+        
+        # 写入文件供GitHub Actions读取
+        with open("update_info.txt", "w", encoding="utf-8") as f:
+            f.write(f"UPDATE_TIME={update_time}\n")
+            f.write(f"UPDATE_DATE={now.strftime('%Y-%m-%d')}\n")
+            f.write(f"UPDATE_TIMESTAMP={int(now.timestamp())}\n")
+        
+        print(f"✓ 更新时间信息已保存: {update_time}")
+        return update_time
+    except:
+        return None
+
+if __name__ == "__main__":
+    update_time = write_update_info()
+    main()
 def main():
     print("="*60)
     print("组播源处理系统")
@@ -925,4 +945,6 @@ def main():
     print(f"\n总计生成 {file_count} 个文件")
 
 if __name__ == "__main__":
+    update_time = write_update_info()
+    main()
     main()
