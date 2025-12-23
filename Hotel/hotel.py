@@ -388,164 +388,38 @@ def scan_ip_port(ip, port, url_end):
     return valid_urls    
 
 # 发送GET请求获取JSON文件, 解析JSON文件, 获取频道信息
-# def extract_channels(url):
-#     hotel_channels = []
-#     try:
-#         json_url = f"{url}"
-#         urls = url.split('/', 3)
-#         url_x = f"{urls[0]}//{urls[2]}"
-#         if "iptv" in json_url:
-#             response = requests.get(json_url, timeout=3)
-#             json_data = response.json()
-#             for item in json_data['data']:
-#                 if isinstance(item, dict):
-#                     name = item.get('name')
-#                     urlx = item.get('url')
-#                     if "tsfile" in urlx or "m3u8" in urlx:
-#                         urld = f"{url_x}{urlx}"
-#                         hotel_channels.append((name, urld))
-#         elif "ZHGXTV" in json_url:
-#             response = requests.get(json_url, timeout=2)
-#             json_data = response.content.decode('utf-8')
-#             data_lines = json_data.split('\n')
-#             for line in data_lines:
-#                 if "," in line and ("hls" in line or "m3u8" in line):
-#                     name, channel_url = line.strip().split(',')
-#                     parts = channel_url.split('/', 3)
-#                     if len(parts) >= 4:
-#                         urld = f"{url_x}/{parts[3]}"
-#                         hotel_channels.append((name, urld))
-#         return hotel_channels
-#     except Exception:
-#         return []
-# 发送GET请求获取JSON文件, 解析JSON文件, 获取频道信息
 def extract_channels(url):
     hotel_channels = []
     try:
         json_url = f"{url}"
         urls = url.split('/', 3)
         url_x = f"{urls[0]}//{urls[2]}"
-        
-        response = requests.get(json_url, timeout=2)
-        
-        # 尝试解析为JSON
-        try:
+        if "iptv" in json_url:
+            response = requests.get(json_url, timeout=3)
             json_data = response.json()
-            
-            # 处理第一种格式：包含'data'字段的JSON
-            if isinstance(json_data, dict) and 'data' in json_data:
-                data_list = json_data['data']
-                for item in data_list:
-                    if isinstance(item, dict):
-                        name = item.get('name', '').strip()
-                        urlx = item.get('url', '').strip()
-                        if name and urlx:
-                            # 处理相对路径
-                            if urlx.startswith('/'):
-                                urld = f"{url_x}{urlx}"
-                            else:
-                                urld = f"{url_x}/{urlx}"
-                            hotel_channels.append((name, urld))
-                
-            # 处理第二种格式：直接是数组的JSON
-            elif isinstance(json_data, list):
-                for item in json_data:
-                    if isinstance(item, dict):
-                        name = item.get('name', '').strip()
-                        urlx = item.get('url', '').strip()
-                        if name and urlx:
-                            if urlx.startswith('/'):
-                                urld = f"{url_x}{urlx}"
-                            else:
-                                urld = f"{url_x}/{urlx}"
-                            hotel_channels.append((name, urld))
-                            
-        except json.JSONDecodeError:
-            # 如果不是JSON，尝试解析为文本格式
-            try:
-                json_data = response.content.decode('utf-8')
-                data_lines = json_data.split('\n')
-                for line in data_lines:
-                    if line.strip() and "," in line and "hls" in line:
-                        parts = line.strip().split(',')
-                        if len(parts) >= 2:
-                            name = parts[0].strip()
-                            channel_url = parts[1].strip()
-                            if name and channel_url:
-                                # 处理路径
-                                if channel_url.startswith('/'):
-                                    urld = f"{url_x}{channel_url}"
-                                else:
-                                    urld = f"{url_x}/{channel_url}"
-                                hotel_channels.append((name, urld))
-            except:
-                pass
-        
+            for item in json_data['data']:
+                if isinstance(item, dict):
+                    name = item.get('name')
+                    urlx = item.get('url')
+                    if "tsfile" in urlx or "m3u8" in urlx:
+                        urld = f"{url_x}{urlx}"
+                        hotel_channels.append((name, urld))
+        elif "ZHGXTV" in json_url:
+            response = requests.get(json_url, timeout=2)
+            json_data = response.content.decode('utf-8')
+            data_lines = json_data.split('\n')
+            for line in data_lines:
+                if "," in line and ("hls" in line or "m3u8" in line):
+                    name, channel_url = line.strip().split(',')
+                    parts = channel_url.split('/', 3)
+                    if len(parts) >= 4:
+                        urld = f"{url_x}/{parts[3]}"
+                        hotel_channels.append((name, urld))
         return hotel_channels
-    except Exception as e:
-        print(f"提取频道时出错: {e}")
+    except Exception:
         return []
-# 测速
-# def speed_test(channels):
-#     def show_progress():
-#         while checked[0] < len(channels):
-#             numberx = checked[0] / len(channels) * 100
-#             print(f"已测试{checked[0]}/{len(channels)}，可用频道:{len(results)}个，进度:{numberx:.2f}%")
-#             time.sleep(5)
-    
-#     def worker():
-#         while True:
-#             try:
-#                 channel_name, channel_url = task_queue.get()
-#                 try:
-#                     channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])
-#                     lines = requests.get(channel_url, timeout=2).text.strip().split('\n')
-#                     ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]
-#                     if ts_lists:
-#                         ts_url = channel_url_t + ts_lists[0]
-#                         ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])
-#                         with eventlet.Timeout(5, False):
-#                             start_time = time.time()
-#                             cont = requests.get(ts_url, timeout=6).content
-#                             resp_time = (time.time() - start_time) * 1                    
-#                         if cont and resp_time > 0:
-#                             checked[0] += 1
-#                             temp_filename = f"temp_{hash(channel_url)}.ts"
-#                             with open(temp_filename, 'wb') as f:
-#                                 f.write(cont)
-#                             normalized_speed = len(cont) / resp_time / 1024 / 1024
-#                             os.remove(temp_filename)
-#                             # 过滤掉速度过慢的频道（≤0.001 MB/s）
-#                             if normalized_speed > 0.001:
-#                                 result = channel_name, channel_url, f"{normalized_speed:.3f}"
-#                                 print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
-#                                 results.append(result)
-#                             else:
-#                                 print(f"× {channel_name}, {channel_url}: 速度过慢 ({normalized_speed:.3f} MB/s)，已过滤")
-#                         else:
-#                             checked[0] += 1
-#                 except Exception as e:
-#                     checked[0] += 1
-#             except:
-#                 checked[0] += 1
-#             finally:
-#                 task_queue.task_done()
-    
-#     task_queue = Queue()
-#     results = []
-#     checked = [0]
-    
-#     Thread(target=show_progress, daemon=True).start()
-    
-#     for _ in range(min(10, len(channels))):
-#         Thread(target=worker, daemon=True).start()
-    
-#     for channel in channels:
-#         task_queue.put(channel)
-    
-#     task_queue.join()
-#     return results
-# 测速
+
+#测速
 def speed_test(channels):
     def show_progress():
         while checked[0] < len(channels):
@@ -558,69 +432,36 @@ def speed_test(channels):
             try:
                 channel_name, channel_url = task_queue.get()
                 try:
-                    # 先测试m3u8文件是否能访问
-                    response = requests.get(channel_url, timeout=3, headers=HEADERS)
-                    if response.status_code != 200:
-                        print(f"✗ {channel_name}: 无法访问 ({response.status_code})")
-                        checked[0] += 1
-                        continue
-                    
-                    # 解析m3u8内容
-                    content = response.text
-                    lines = content.strip().split('\n')
-                    
-                    # 查找TS文件
-                    ts_lines = [line for line in lines if line.strip() and not line.startswith('#')]
-                    
-                    if not ts_lines:
-                        print(f"✗ {channel_name}: 没有找到TS文件")
-                        checked[0] += 1
-                        continue
-                    
-                    # 获取第一个TS文件的URL
-                    ts_filename = ts_lines[0].strip()
-                    if ts_filename.startswith('http'):
-                        ts_url = ts_filename
-                    else:
-                        # 构建完整的TS URL
-                        base_url = channel_url.rsplit('/', 1)[0] + '/' if '/' in channel_url else channel_url + '/'
-                        ts_url = base_url + ts_filename
-                    
-                    # 下载TS文件测速
-                    with eventlet.Timeout(5, False):
-                        start_time = time.time()
-                        ts_response = requests.get(ts_url, timeout=3, headers=HEADERS)
-                        if ts_response.status_code == 200:
-                            resp_time = (time.time() - start_time) * 1
-                            cont = ts_response.content
-                            
-                            if cont and resp_time > 0:
-                                checked[0] += 1
-                                normalized_speed = len(cont) / resp_time / 1024 / 1024
-                                
-                                # 过滤掉速度过慢的频道（≤0.001 MB/s）
-                                if normalized_speed > 0.001:
-                                    result = channel_name, channel_url, f"{normalized_speed:.3f}"
-                                    print(f"✓ {channel_name}: {normalized_speed:.3f} MB/s")
-                                    results.append(result)
-                                else:
-                                    print(f"× {channel_name}: 速度过慢 ({normalized_speed:.3f} MB/s)，已过滤")
+                    channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])
+                    lines = requests.get(channel_url, timeout=2).text.strip().split('\n')
+                    ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]
+                    if ts_lists:
+                        ts_url = channel_url_t + ts_lists[0]
+                        ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])
+                        with eventlet.Timeout(5, False):
+                            start_time = time.time()
+                            cont = requests.get(ts_url, timeout=6).content
+                            resp_time = (time.time() - start_time) * 1                    
+                        if cont and resp_time > 0:
+                            checked[0] += 1
+                            temp_filename = f"temp_{hash(channel_url)}.ts"
+                            with open(temp_filename, 'wb') as f:
+                                f.write(cont)
+                            normalized_speed = len(cont) / resp_time / 1024 / 1024
+                            os.remove(temp_filename)
+                            # 过滤掉速度过慢的频道（≤0.001 MB/s）
+                            if normalized_speed > 0.001:
+                                result = channel_name, channel_url, f"{normalized_speed:.3f}"
+                                print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
+                                results.append(result)
                             else:
-                                checked[0] += 1
-                                print(f"× {channel_name}: 下载失败或无内容")
+                                print(f"× {channel_name}, {channel_url}: 速度过慢 ({normalized_speed:.3f} MB/s)，已过滤")
                         else:
                             checked[0] += 1
-                            print(f"× {channel_name}: TS文件无法访问 ({ts_response.status_code})")
-                    
-                except requests.RequestException as e:
-                    checked[0] += 1
-                    print(f"× {channel_name}: 请求失败 - {str(e)[:50]}")
                 except Exception as e:
                     checked[0] += 1
-                    print(f"× {channel_name}: 测速异常 - {str(e)[:50]}")
-                    
-            except Empty:
-                break
+            except:
+                checked[0] += 1
             finally:
                 task_queue.task_done()
     
@@ -628,62 +469,17 @@ def speed_test(channels):
     results = []
     checked = [0]
     
-    # 启动进度显示线程
-    progress_thread = Thread(target=show_progress, daemon=True)
-    progress_thread.start()
+    Thread(target=show_progress, daemon=True).start()
     
-    # 启动工作线程
-    workers = []
-    for _ in range(min(20, len(channels))):  # 增加线程数
-        worker_thread = Thread(target=worker, daemon=True)
-        worker_thread.start()
-        workers.append(worker_thread)
+    for _ in range(min(10, len(channels))):
+        Thread(target=worker, daemon=True).start()
     
-    # 添加频道到队列
     for channel in channels:
         task_queue.put(channel)
     
-    # 等待所有任务完成
     task_queue.join()
-    
-    # 等待工作线程结束
-    for worker_thread in workers:
-        worker_thread.join(timeout=1)
-    
     return results
 
-# 调试函数：测试URL是否可以正确解析
-def test_url_parsing(url):
-    print(f"\n调试：测试URL {url}")
-    try:
-        response = requests.get(url, timeout=5, headers=HEADERS)
-        print(f"响应状态码: {response.status_code}")
-        print(f"内容类型: {response.headers.get('content-type')}")
-        
-        # 尝试解析为JSON
-        try:
-            data = response.json()
-            print(f"JSON解析成功")
-            print(f"数据结构类型: {type(data)}")
-            
-            if isinstance(data, dict):
-                print(f"字典键: {list(data.keys())}")
-                if 'data' in data:
-                    print(f"data字段类型: {type(data['data'])}")
-                    if isinstance(data['data'], list) and len(data['data']) > 0:
-                        print(f"第一个频道示例: {data['data'][0]}")
-            elif isinstance(data, list):
-                print(f"列表长度: {len(data)}")
-                if len(data) > 0:
-                    print(f"第一个元素: {data[0]}")
-                    
-        except json.JSONDecodeError:
-            print(f"不是有效的JSON，尝试解析为文本")
-            content = response.text[:200]  # 只显示前200个字符
-            print(f"内容预览: {content}")
-            
-    except Exception as e:
-        print(f"请求失败: {e}")
 # 精确频道名称匹配函数
 def exact_channel_match(channel_name, pattern_name):
     """
@@ -866,48 +662,6 @@ def generate_m3u_file(txt_file_path, m3u_file_path):
     print(f"M3U文件已生成: {m3u_file_path}")
 
 # 获取酒店源流程        
-# def hotel_iptv(config_file):
-#     # 先检测并更新IP文件
-#     available_ips = check_and_update_ip_file(config_file)
-    
-#     if not available_ips:
-#         print(f"没有可用的IP，跳过 {config_file}")
-#         return
-    
-#     ip_configs = set(read_config(config_file))
-#     valid_urls = []
-#     channels = []
-#     configs = []
-#     url_ends = ["/iptv/live/1000.json?key=txiptv", "/ZHGXTV/Public/json/live_interface.txt"]
-    
-#     for url_end in url_ends:
-#         for ip, port in ip_configs:
-#             configs.append((ip, port, url_end))
-    
-#     for ip, port, url_end in configs:
-#         valid_urls.extend(scan_ip_port(ip, port, url_end))
-    
-#     print(f"扫描完成，获取有效url共：{len(valid_urls)}个")
-    
-#     for valid_url in valid_urls:
-#         channels.extend(extract_channels(valid_url))
-    
-#     print(f"共获取频道：{len(channels)}个\n开始测速")
-#     results = speed_test(channels)
-    
-#     # 对频道进行排序
-#     results.sort(key=lambda x: -float(x[2]))
-#     results.sort(key=lambda x: channel_key(x[0]))
-    
-#     # 统一频道名称
-#     unified_channels = unify_channel_name(results)
-    
-#     # 写入原始数据文件
-#     with open('1.txt', 'a', encoding='utf-8') as f:
-#         for line in unified_channels:
-#             f.write(line.split(',')[0] + ',' + line.split(',')[1] + '\n')
-#     print("测速完成")
-# 获取酒店源流程        
 def hotel_iptv(config_file):
     # 先检测并更新IP文件
     available_ips = check_and_update_ip_file(config_file)
@@ -931,22 +685,10 @@ def hotel_iptv(config_file):
     
     print(f"扫描完成，获取有效url共：{len(valid_urls)}个")
     
-    # 调试：测试第一个URL
-    if valid_urls:
-        test_url_parsing(valid_urls[0])
-    
     for valid_url in valid_urls:
         channels.extend(extract_channels(valid_url))
     
-    print(f"共获取频道：{len(channels)}个")
-    
-    # 显示前几个频道
-    if channels:
-        print("前5个频道:")
-        for i, (name, url) in enumerate(channels[:5]):
-            print(f"  {i+1}. {name} -> {url[:80]}...")
-    
-    print("\n开始测速")
+    print(f"共获取频道：{len(channels)}个\n开始测速")
     results = speed_test(channels)
     
     # 对频道进行排序
@@ -960,7 +702,8 @@ def hotel_iptv(config_file):
     with open('1.txt', 'a', encoding='utf-8') as f:
         for line in unified_channels:
             f.write(line.split(',')[0] + ',' + line.split(',')[1] + '\n')
-    print(f"测速完成，找到 {len(results)} 个可用频道")
+    print("测速完成")
+
 # 主函数
 def main():
     # 显示脚本开始时间
