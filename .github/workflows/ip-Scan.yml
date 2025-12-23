@@ -34,33 +34,34 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-      - name: 拉取最新代码并重置
-        run: |
-          git fetch origin
-          git reset --hard origin/main
-          
       - name: 获取和更新IP
         run: |
+          # 首先获取最新的远程代码
+          git fetch origin
+          # 合并或重置到远程分支
+          git merge origin/main --strategy-option theirs || \
+            git reset --hard origin/main
+          
+          # 运行扫描脚本
           python IP_Scan/ip-Scan.py
           
-      - name: 检查更改
-        id: check-changes
-        run: |
-          if [ -n "$(git status --porcelain IP_Scan/ip/ 2>/dev/null || echo 'changed')" ]; then
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-            echo "有更改"
-          else
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-            echo "没有更改可提交"
-          fi
-          
-      - name: 添加和提交更改
-        if: steps.check-changes.outputs.has_changes == 'true'
+      - name: 添加更改
         run: |
           git add IP_Scan/ip/
-          git commit -m "自动更新IP配置 $(date '+%Y-%m-%d %H:%M:%S')"
           
-      - name: 推送到远程
-        if: steps.check-changes.outputs.has_changes == 'true'
+      - name: 提交更改
+        run: |
+          if git diff --cached --quiet; then
+            echo "没有更改可提交"
+          else
+            git commit -m "自动更新IP配置 $(date '+%Y-%m-%d %H:%M:%S')"
+          fi
+          
+      - name: 推送前拉取
+        run: |
+          # 尝试拉取最新代码，如果有冲突，强制使用本地版本
+          git pull origin main --strategy-option theirs || echo "拉取失败，继续推送"
+          
+      - name: 强制推送到远程
         run: |
           git push origin main
