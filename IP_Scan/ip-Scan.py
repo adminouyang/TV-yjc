@@ -30,7 +30,7 @@ def read_config(config_file):
                     option = int(parts[1])
                 else:
                     ip_part_port = line.strip()
-                    option = 0
+                    option = 12
                 
                 if ":" not in ip_part_port:
                     print(f"第{line_num}行格式错误: 缺少端口号 - {line}")
