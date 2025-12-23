@@ -1,4 +1,4 @@
-name: ip-Scan
+name: ip-Scan_1
 
 on:
   schedule:
