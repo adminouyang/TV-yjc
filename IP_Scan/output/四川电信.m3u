@@ -1,0 +1,769 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$四川电信
+http://183.161.172.115:7000/udp/239.93.0.184:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$四川电信
+http://183.164.55.78:5000/udp/239.93.0.184:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$四川电信
+http://60.168.109.197:4000/udp/239.93.0.184:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV2.png" group-title="央视频道",CCTV2$四川电信
+http://183.161.172.115:7000/udp/239.93.1.23:6000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV2.png" group-title="央视频道",CCTV2$四川电信
+http://183.164.55.78:5000/udp/239.93.1.23:6000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV2.png" group-title="央视频道",CCTV2$四川电信
+http://60.168.109.197:4000/udp/239.93.1.23:6000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV3" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV3.png" group-title="央视频道",CCTV3$四川电信
+http://183.161.172.115:7000/udp/239.93.1.11:2223
+#EXTINF:-1 tvg-id="" tvg-name="CCTV3" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV3.png" group-title="央视频道",CCTV3$四川电信
+http://183.164.55.78:5000/udp/239.93.1.11:2223
+#EXTINF:-1 tvg-id="" tvg-name="CCTV3" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV3.png" group-title="央视频道",CCTV3$四川电信
+http://60.168.109.197:4000/udp/239.93.1.11:2223
+#EXTINF:-1 tvg-id="" tvg-name="CCTV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV4.png" group-title="央视频道",CCTV4$四川电信
+http://183.161.172.115:7000/udp/239.93.1.105:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV4.png" group-title="央视频道",CCTV4$四川电信
+http://183.164.55.78:5000/udp/239.93.1.105:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV4.png" group-title="央视频道",CCTV4$四川电信
+http://60.168.109.197:4000/udp/239.93.1.105:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV5" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5.png" group-title="央视频道",CCTV5$四川电信
+http://183.161.172.115:7000/udp/239.93.42.37:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV5" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5.png" group-title="央视频道",CCTV5$四川电信
+http://183.164.55.78:5000/udp/239.93.42.37:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV5" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5.png" group-title="央视频道",CCTV5$四川电信
+http://60.168.109.197:4000/udp/239.93.42.37:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV6" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV6.png" group-title="央视频道",CCTV6$四川电信
+http://183.161.172.115:7000/udp/239.93.1.13:2226
+#EXTINF:-1 tvg-id="" tvg-name="CCTV6" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV6.png" group-title="央视频道",CCTV6$四川电信
+http://183.164.55.78:5000/udp/239.93.1.13:2226
+#EXTINF:-1 tvg-id="" tvg-name="CCTV6" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV6.png" group-title="央视频道",CCTV6$四川电信
+http://60.168.109.197:4000/udp/239.93.1.13:2226
+#EXTINF:-1 tvg-id="" tvg-name="CCTV7" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV7.png" group-title="央视频道",CCTV7$四川电信
+http://183.161.172.115:7000/udp/239.93.1.67:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV7" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV7.png" group-title="央视频道",CCTV7$四川电信
+http://183.164.55.78:5000/udp/239.93.1.67:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV7" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV7.png" group-title="央视频道",CCTV7$四川电信
+http://60.168.109.197:4000/udp/239.93.1.67:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV8" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV8.png" group-title="央视频道",CCTV8$四川电信
+http://183.161.172.115:7000/udp/239.93.42.39:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV8" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV8.png" group-title="央视频道",CCTV8$四川电信
+http://183.164.55.78:5000/udp/239.93.42.39:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV8" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV8.png" group-title="央视频道",CCTV8$四川电信
+http://60.168.109.197:4000/udp/239.93.42.39:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV9" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV9.png" group-title="央视频道",CCTV9$四川电信
+http://183.161.172.115:7000/udp/239.93.1.24:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV9" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV9.png" group-title="央视频道",CCTV9$四川电信
+http://183.164.55.78:5000/udp/239.93.1.24:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV9" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV9.png" group-title="央视频道",CCTV9$四川电信
+http://60.168.109.197:4000/udp/239.93.1.24:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV10" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV10.png" group-title="央视频道",CCTV10$四川电信
+http://183.161.172.115:7000/udp/239.93.1.28:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV10" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV10.png" group-title="央视频道",CCTV10$四川电信
+http://183.164.55.78:5000/udp/239.93.1.28:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV10" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV10.png" group-title="央视频道",CCTV10$四川电信
+http://60.168.109.197:4000/udp/239.93.1.28:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV11" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV11.png" group-title="央视频道",CCTV11$四川电信
+http://183.161.172.115:7000/udp/239.93.0.102:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV11" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV11.png" group-title="央视频道",CCTV11$四川电信
+http://183.164.55.78:5000/udp/239.93.0.102:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV11" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV11.png" group-title="央视频道",CCTV11$四川电信
+http://60.168.109.197:4000/udp/239.93.0.102:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV12" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV12.png" group-title="央视频道",CCTV12$四川电信
+http://183.161.172.115:7000/udp/239.93.1.30:8124
+#EXTINF:-1 tvg-id="" tvg-name="CCTV12" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV12.png" group-title="央视频道",CCTV12$四川电信
+http://183.164.55.78:5000/udp/239.93.1.30:8124
+#EXTINF:-1 tvg-id="" tvg-name="CCTV12" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV12.png" group-title="央视频道",CCTV12$四川电信
+http://60.168.109.197:4000/udp/239.93.1.30:8124
+#EXTINF:-1 tvg-id="" tvg-name="CCTV13" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV13.png" group-title="央视频道",CCTV13$四川电信
+http://183.161.172.115:7000/udp/239.93.0.66:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV13" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV13.png" group-title="央视频道",CCTV13$四川电信
+http://183.164.55.78:5000/udp/239.93.0.66:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV13" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV13.png" group-title="央视频道",CCTV13$四川电信
+http://60.168.109.197:4000/udp/239.93.0.66:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV14" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV14.png" group-title="央视频道",CCTV14$四川电信
+http://183.161.172.115:7000/udp/239.93.1.29:6000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV14" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV14.png" group-title="央视频道",CCTV14$四川电信
+http://183.164.55.78:5000/udp/239.93.1.29:6000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV14" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV14.png" group-title="央视频道",CCTV14$四川电信
+http://60.168.109.197:4000/udp/239.93.1.29:6000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV15" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV15.png" group-title="央视频道",CCTV15$四川电信
+http://183.161.172.115:7000/udp/239.93.0.103:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV15" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV15.png" group-title="央视频道",CCTV15$四川电信
+http://183.164.55.78:5000/udp/239.93.0.103:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV15" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV15.png" group-title="央视频道",CCTV15$四川电信
+http://60.168.109.197:4000/udp/239.93.0.103:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV17" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV17.png" group-title="央视频道",CCTV17$四川电信
+http://183.161.172.115:7000/udp/239.93.0.92:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV17" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV17.png" group-title="央视频道",CCTV17$四川电信
+http://183.164.55.78:5000/udp/239.93.0.92:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV17" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV17.png" group-title="央视频道",CCTV17$四川电信
+http://60.168.109.197:4000/udp/239.93.0.92:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV5+" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5%2B.png" group-title="央视频道",CCTV5+$四川电信
+http://183.161.172.115:7000/udp/239.93.1.36:8004
+#EXTINF:-1 tvg-id="" tvg-name="CCTV5+" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5%2B.png" group-title="央视频道",CCTV5+$四川电信
+http://183.164.55.78:5000/udp/239.93.1.36:8004
+#EXTINF:-1 tvg-id="" tvg-name="CCTV5+" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5%2B.png" group-title="央视频道",CCTV5+$四川电信
+http://60.168.109.197:4000/udp/239.93.1.36:8004
+#EXTINF:-1 tvg-id="" tvg-name="高尔夫网球" group-title="央视频道",高尔夫网球$四川电信
+http://183.161.172.115:7000/udp/239.93.1.54:5140
+#EXTINF:-1 tvg-id="" tvg-name="高尔夫网球" group-title="央视频道",高尔夫网球$四川电信
+http://183.164.55.78:5000/udp/239.93.1.54:5140
+#EXTINF:-1 tvg-id="" tvg-name="高尔夫网球" group-title="央视频道",高尔夫网球$四川电信
+http://60.168.109.197:4000/udp/239.93.1.54:5140
+#EXTINF:-1 tvg-id="" tvg-name="怀旧剧场" group-title="央视频道",怀旧剧场$四川电信
+http://183.161.172.115:7000/udp/239.93.1.198:5140
+#EXTINF:-1 tvg-id="" tvg-name="怀旧剧场" group-title="央视频道",怀旧剧场$四川电信
+http://183.164.55.78:5000/udp/239.93.1.198:5140
+#EXTINF:-1 tvg-id="" tvg-name="怀旧剧场" group-title="央视频道",怀旧剧场$四川电信
+http://60.168.109.197:4000/udp/239.93.1.198:5140
+#EXTINF:-1 tvg-id="" tvg-name="第一剧场" group-title="央视频道",第一剧场$四川电信
+http://183.161.172.115:7000/udp/239.93.1.197:5140
+#EXTINF:-1 tvg-id="" tvg-name="第一剧场" group-title="央视频道",第一剧场$四川电信
+http://183.164.55.78:5000/udp/239.93.1.197:5140
+#EXTINF:-1 tvg-id="" tvg-name="第一剧场" group-title="央视频道",第一剧场$四川电信
+http://60.168.109.197:4000/udp/239.93.1.197:5140
+#EXTINF:-1 tvg-id="" tvg-name="风云剧场" group-title="央视频道",风云剧场$四川电信
+http://183.161.172.115:7000/udp/239.93.1.156:5140
+#EXTINF:-1 tvg-id="" tvg-name="风云剧场" group-title="央视频道",风云剧场$四川电信
+http://183.164.55.78:5000/udp/239.93.1.156:5140
+#EXTINF:-1 tvg-id="" tvg-name="风云剧场" group-title="央视频道",风云剧场$四川电信
+http://60.168.109.197:4000/udp/239.93.1.156:5140
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$四川电信
+http://183.161.172.115:7000/udp/239.93.1.111:5140
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$四川电信
+http://183.164.55.78:5000/udp/239.93.1.111:5140
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$四川电信
+http://60.168.109.197:4000/udp/239.93.1.111:5140
+#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="央视频道",CGTN英语$四川电信
+http://183.161.172.115:7000/udp/239.93.0.104:5140
+#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="央视频道",CGTN英语$四川电信
+http://183.164.55.78:5000/udp/239.93.0.104:5140
+#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="央视频道",CGTN英语$四川电信
+http://60.168.109.197:4000/udp/239.93.0.104:5140
+#EXTINF:-1 tvg-id="" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语$四川电信
+http://183.161.172.115:7000/udp/239.93.42.49:5140
+#EXTINF:-1 tvg-id="" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语$四川电信
+http://183.164.55.78:5000/udp/239.93.42.49:5140
+#EXTINF:-1 tvg-id="" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语$四川电信
+http://60.168.109.197:4000/udp/239.93.42.49:5140
+#EXTINF:-1 tvg-id="" tvg-name="CGTN法语" group-title="央视频道",CGTN法语$四川电信
+http://183.161.172.115:7000/udp/239.93.42.50:5140
+#EXTINF:-1 tvg-id="" tvg-name="CGTN法语" group-title="央视频道",CGTN法语$四川电信
+http://183.164.55.78:5000/udp/239.93.42.50:5140
+#EXTINF:-1 tvg-id="" tvg-name="CGTN法语" group-title="央视频道",CGTN法语$四川电信
+http://60.168.109.197:4000/udp/239.93.42.50:5140
+#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.88:5140
+#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.88:5140
+#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.88:5140
+#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.89:5140
+#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.89:5140
+#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.89:5140
+#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.124:5140
+#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.124:5140
+#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.124:5140
+#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.123:5140
+#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.123:5140
+#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.123:5140
+#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.180:5140
+#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.180:5140
+#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.180:5140
+#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.182:5140
+#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.182:5140
+#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.182:5140
+#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.181:5140
+#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.181:5140
+#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.181:5140
+#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.167:5140
+#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.167:5140
+#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.167:5140
+#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.168:5140
+#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.168:5140
+#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.168:5140
+#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.134:5140
+#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.134:5140
+#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.134:5140
+#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.42:5140
+#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.42:5140
+#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.42:5140
+#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.183:5140
+#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.183:5140
+#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.183:5140
+#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.1.107:5140
+#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.1.107:5140
+#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.1.107:5140
+#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.131:5140
+#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.131:5140
+#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.131:5140
+#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.250:5140
+#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.250:5140
+#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.250:5140
+#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.1.106:5140
+#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.1.106:5140
+#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.1.106:5140
+#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.132:5140
+#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.132:5140
+#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.132:5140
+#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.1.108:5140
+#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.1.108:5140
+#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.1.108:5140
+#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.1.174:5140
+#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.1.174:5140
+#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.1.174:5140
+#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.42.45:5140
+#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.42.45:5140
+#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.42.45:5140
+#EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.42.46:5140
+#EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.42.46:5140
+#EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.42.46:5140
+#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.174:5140
+#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.174:5140
+#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.174:5140
+#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.248:5140
+#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.248:5140
+#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.248:5140
+#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.81:5140
+#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.81:5140
+#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.81:5140
+#EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.143:5140
+#EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.143:5140
+#EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.143:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.169:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.169:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.169:5140
+#EXTINF:-1 tvg-id="" tvg-name="康巴卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BA%B7%E5%B7%B4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",康巴卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.41:5140
+#EXTINF:-1 tvg-id="" tvg-name="康巴卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BA%B7%E5%B7%B4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",康巴卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.41:5140
+#EXTINF:-1 tvg-id="" tvg-name="康巴卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BA%B7%E5%B7%B4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",康巴卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.41:5140
+#EXTINF:-1 tvg-id="" tvg-name="凤凰中文" group-title="卫视频道",凤凰中文$四川电信
+http://183.161.172.115:7000/udp/239.93.0.162:2192
+#EXTINF:-1 tvg-id="" tvg-name="凤凰中文" group-title="卫视频道",凤凰中文$四川电信
+http://183.164.55.78:5000/udp/239.93.0.162:2192
+#EXTINF:-1 tvg-id="" tvg-name="凤凰中文" group-title="卫视频道",凤凰中文$四川电信
+http://60.168.109.197:4000/udp/239.93.0.162:2192
+#EXTINF:-1 tvg-id="" tvg-name="凤凰资讯" group-title="卫视频道",凤凰资讯$四川电信
+http://183.161.172.115:7000/udp/239.93.0.118:2191
+#EXTINF:-1 tvg-id="" tvg-name="凤凰资讯" group-title="卫视频道",凤凰资讯$四川电信
+http://183.164.55.78:5000/udp/239.93.0.118:2191
+#EXTINF:-1 tvg-id="" tvg-name="凤凰资讯" group-title="卫视频道",凤凰资讯$四川电信
+http://60.168.109.197:4000/udp/239.93.0.118:2191
+#EXTINF:-1 tvg-id="" tvg-name="星空卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%98%9F%E7%A9%BA%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",星空卫视$四川电信
+http://183.161.172.115:7000/udp/239.93.0.156:2193
+#EXTINF:-1 tvg-id="" tvg-name="星空卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%98%9F%E7%A9%BA%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",星空卫视$四川电信
+http://183.164.55.78:5000/udp/239.93.0.156:2193
+#EXTINF:-1 tvg-id="" tvg-name="星空卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%98%9F%E7%A9%BA%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",星空卫视$四川电信
+http://60.168.109.197:4000/udp/239.93.0.156:2193
+#EXTINF:-1 tvg-id="" tvg-name="CHANNEL-V" group-title="卫视频道",CHANNEL-V$四川电信
+http://183.161.172.115:7000/udp/239.93.0.157:2194
+#EXTINF:-1 tvg-id="" tvg-name="CHANNEL-V" group-title="卫视频道",CHANNEL-V$四川电信
+http://183.164.55.78:5000/udp/239.93.0.157:2194
+#EXTINF:-1 tvg-id="" tvg-name="CHANNEL-V" group-title="卫视频道",CHANNEL-V$四川电信
+http://60.168.109.197:4000/udp/239.93.0.157:2194
+#EXTINF:-1 tvg-id="" tvg-name="红色经典" group-title="卫视频道",红色经典$四川电信
+http://183.161.172.115:7000/udp/239.93.1.176:5140
+#EXTINF:-1 tvg-id="" tvg-name="红色经典" group-title="卫视频道",红色经典$四川电信
+http://183.164.55.78:5000/udp/239.93.1.176:5140
+#EXTINF:-1 tvg-id="" tvg-name="红色经典" group-title="卫视频道",红色经典$四川电信
+http://60.168.109.197:4000/udp/239.93.1.176:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川影视文艺" group-title="四川频道",四川影视文艺$四川电信
+http://183.161.172.115:7000/udp/239.93.0.166:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川影视文艺" group-title="四川频道",四川影视文艺$四川电信
+http://183.164.55.78:5000/udp/239.93.0.166:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川影视文艺" group-title="四川频道",四川影视文艺$四川电信
+http://60.168.109.197:4000/udp/239.93.0.166:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川经济频道" group-title="四川频道",四川经济频道$四川电信
+http://183.161.172.115:7000/udp/239.93.1.101:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川经济频道" group-title="四川频道",四川经济频道$四川电信
+http://183.164.55.78:5000/udp/239.93.1.101:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川经济频道" group-title="四川频道",四川经济频道$四川电信
+http://60.168.109.197:4000/udp/239.93.1.101:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川新闻频道" group-title="四川频道",四川新闻频道$四川电信
+http://183.161.172.115:7000/udp/239.93.0.47:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川新闻频道" group-title="四川频道",四川新闻频道$四川电信
+http://183.164.55.78:5000/udp/239.93.0.47:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川新闻频道" group-title="四川频道",四川新闻频道$四川电信
+http://60.168.109.197:4000/udp/239.93.0.47:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川乡村频道" group-title="四川频道",四川乡村频道$四川电信
+http://183.161.172.115:7000/udp/239.93.0.52:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川乡村频道" group-title="四川频道",四川乡村频道$四川电信
+http://183.164.55.78:5000/udp/239.93.0.52:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川乡村频道" group-title="四川频道",四川乡村频道$四川电信
+http://60.168.109.197:4000/udp/239.93.0.52:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川文化旅游" group-title="四川频道",四川文化旅游$四川电信
+http://183.161.172.115:7000/udp/239.93.1.102:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川文化旅游" group-title="四川频道",四川文化旅游$四川电信
+http://183.164.55.78:5000/udp/239.93.1.102:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川文化旅游" group-title="四川频道",四川文化旅游$四川电信
+http://60.168.109.197:4000/udp/239.93.1.102:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川科教频道" group-title="四川频道",四川科教频道$四川电信
+http://183.161.172.115:7000/udp/239.93.42.44:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川科教频道" group-title="四川频道",四川科教频道$四川电信
+http://183.164.55.78:5000/udp/239.93.42.44:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川科教频道" group-title="四川频道",四川科教频道$四川电信
+http://60.168.109.197:4000/udp/239.93.42.44:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川峨眉电影" group-title="四川频道",四川峨眉电影$四川电信
+http://183.161.172.115:7000/udp/239.93.0.252:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川峨眉电影" group-title="四川频道",四川峨眉电影$四川电信
+http://183.164.55.78:5000/udp/239.93.0.252:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川峨眉电影" group-title="四川频道",四川峨眉电影$四川电信
+http://60.168.109.197:4000/udp/239.93.0.252:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川妇女儿童" group-title="四川频道",四川妇女儿童$四川电信
+http://183.161.172.115:7000/udp/239.93.0.219:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川妇女儿童" group-title="四川频道",四川妇女儿童$四川电信
+http://183.164.55.78:5000/udp/239.93.0.219:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川妇女儿童" group-title="四川频道",四川妇女儿童$四川电信
+http://60.168.109.197:4000/udp/239.93.0.219:5140
+#EXTINF:-1 tvg-id="" tvg-name="成都综合频道" group-title="四川频道",成都综合频道$四川电信
+http://183.161.172.115:7000/udp/239.93.0.16:5140
+#EXTINF:-1 tvg-id="" tvg-name="成都综合频道" group-title="四川频道",成都综合频道$四川电信
+http://183.164.55.78:5000/udp/239.93.0.16:5140
+#EXTINF:-1 tvg-id="" tvg-name="成都综合频道" group-title="四川频道",成都综合频道$四川电信
+http://60.168.109.197:4000/udp/239.93.0.16:5140
+#EXTINF:-1 tvg-id="" tvg-name="成都经济频道" group-title="四川频道",成都经济频道$四川电信
+http://183.161.172.115:7000/udp/239.93.0.17:1239
+#EXTINF:-1 tvg-id="" tvg-name="成都经济频道" group-title="四川频道",成都经济频道$四川电信
+http://183.164.55.78:5000/udp/239.93.0.17:1239
+#EXTINF:-1 tvg-id="" tvg-name="成都经济频道" group-title="四川频道",成都经济频道$四川电信
+http://60.168.109.197:4000/udp/239.93.0.17:1239
+#EXTINF:-1 tvg-id="" tvg-name="成都生活频道" group-title="四川频道",成都生活频道$四川电信
+http://183.161.172.115:7000/udp/239.93.0.18:1238
+#EXTINF:-1 tvg-id="" tvg-name="成都生活频道" group-title="四川频道",成都生活频道$四川电信
+http://183.164.55.78:5000/udp/239.93.0.18:1238
+#EXTINF:-1 tvg-id="" tvg-name="成都生活频道" group-title="四川频道",成都生活频道$四川电信
+http://60.168.109.197:4000/udp/239.93.0.18:1238
+#EXTINF:-1 tvg-id="" tvg-name="成都影视频道" group-title="四川频道",成都影视频道$四川电信
+http://183.161.172.115:7000/udp/239.93.0.19:1250
+#EXTINF:-1 tvg-id="" tvg-name="成都影视频道" group-title="四川频道",成都影视频道$四川电信
+http://183.164.55.78:5000/udp/239.93.0.19:1250
+#EXTINF:-1 tvg-id="" tvg-name="成都影视频道" group-title="四川频道",成都影视频道$四川电信
+http://60.168.109.197:4000/udp/239.93.0.19:1250
+#EXTINF:-1 tvg-id="" tvg-name="成都公共频道" group-title="四川频道",成都公共频道$四川电信
+http://183.161.172.115:7000/udp/239.93.1.231:5140
+#EXTINF:-1 tvg-id="" tvg-name="成都公共频道" group-title="四川频道",成都公共频道$四川电信
+http://183.164.55.78:5000/udp/239.93.1.231:5140
+#EXTINF:-1 tvg-id="" tvg-name="成都公共频道" group-title="四川频道",成都公共频道$四川电信
+http://60.168.109.197:4000/udp/239.93.1.231:5140
+#EXTINF:-1 tvg-id="" tvg-name="成都少儿频道" group-title="四川频道",成都少儿频道$四川电信
+http://183.161.172.115:7000/udp/239.93.0.21:1251
+#EXTINF:-1 tvg-id="" tvg-name="成都少儿频道" group-title="四川频道",成都少儿频道$四川电信
+http://183.164.55.78:5000/udp/239.93.0.21:1251
+#EXTINF:-1 tvg-id="" tvg-name="成都少儿频道" group-title="四川频道",成都少儿频道$四川电信
+http://60.168.109.197:4000/udp/239.93.0.21:1251
+#EXTINF:-1 tvg-id="" tvg-name="蓉城先锋" group-title="四川频道",蓉城先锋$四川电信
+http://183.161.172.115:7000/udp/239.93.0.91:2101
+#EXTINF:-1 tvg-id="" tvg-name="蓉城先锋" group-title="四川频道",蓉城先锋$四川电信
+http://183.164.55.78:5000/udp/239.93.0.91:2101
+#EXTINF:-1 tvg-id="" tvg-name="蓉城先锋" group-title="四川频道",蓉城先锋$四川电信
+http://60.168.109.197:4000/udp/239.93.0.91:2101
+#EXTINF:-1 tvg-id="" tvg-name="绚影4K" group-title="数字频道",绚影4K$四川电信
+http://183.161.172.115:7000/udp/239.93.42.33:5140
+#EXTINF:-1 tvg-id="" tvg-name="绚影4K" group-title="数字频道",绚影4K$四川电信
+http://183.164.55.78:5000/udp/239.93.42.33:5140
+#EXTINF:-1 tvg-id="" tvg-name="绚影4K" group-title="数字频道",绚影4K$四川电信
+http://60.168.109.197:4000/udp/239.93.42.33:5140
+#EXTINF:-1 tvg-id="" tvg-name="爱上4K" group-title="数字频道",爱上4K$四川电信
+http://183.161.172.115:7000/udp/239.93.0.97:5140
+#EXTINF:-1 tvg-id="" tvg-name="爱上4K" group-title="数字频道",爱上4K$四川电信
+http://183.164.55.78:5000/udp/239.93.0.97:5140
+#EXTINF:-1 tvg-id="" tvg-name="爱上4K" group-title="数字频道",爱上4K$四川电信
+http://60.168.109.197:4000/udp/239.93.0.97:5140
+#EXTINF:-1 tvg-id="" tvg-name="4K乐享超清" group-title="数字频道",4K乐享超清$四川电信
+http://183.161.172.115:7000/udp/239.93.0.43:5140
+#EXTINF:-1 tvg-id="" tvg-name="4K乐享超清" group-title="数字频道",4K乐享超清$四川电信
+http://183.164.55.78:5000/udp/239.93.0.43:5140
+#EXTINF:-1 tvg-id="" tvg-name="4K乐享超清" group-title="数字频道",4K乐享超清$四川电信
+http://60.168.109.197:4000/udp/239.93.0.43:5140
+#EXTINF:-1 tvg-id="" tvg-name="中录动漫4K" group-title="数字频道",中录动漫4K$四川电信
+http://183.161.172.115:7000/udp/239.93.1.188:5140
+#EXTINF:-1 tvg-id="" tvg-name="中录动漫4K" group-title="数字频道",中录动漫4K$四川电信
+http://183.164.55.78:5000/udp/239.93.1.188:5140
+#EXTINF:-1 tvg-id="" tvg-name="中录动漫4K" group-title="数字频道",中录动漫4K$四川电信
+http://60.168.109.197:4000/udp/239.93.1.188:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通华语影院" group-title="数字频道",百视通华语影院$四川电信
+http://183.161.172.115:7000/udp/239.93.0.138:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通华语影院" group-title="数字频道",百视通华语影院$四川电信
+http://183.164.55.78:5000/udp/239.93.0.138:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通华语影院" group-title="数字频道",百视通华语影院$四川电信
+http://60.168.109.197:4000/udp/239.93.0.138:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通星光院线" group-title="数字频道",百视通星光院线$四川电信
+http://183.161.172.115:7000/udp/239.93.0.139:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通星光院线" group-title="数字频道",百视通星光院线$四川电信
+http://183.164.55.78:5000/udp/239.93.0.139:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通星光院线" group-title="数字频道",百视通星光院线$四川电信
+http://60.168.109.197:4000/udp/239.93.0.139:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通全球大片" group-title="数字频道",百视通全球大片$四川电信
+http://183.161.172.115:7000/udp/239.93.0.105:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通全球大片" group-title="数字频道",百视通全球大片$四川电信
+http://183.164.55.78:5000/udp/239.93.0.105:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通全球大片" group-title="数字频道",百视通全球大片$四川电信
+http://60.168.109.197:4000/udp/239.93.0.105:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通热门剧场" group-title="数字频道",百视通热门剧场$四川电信
+http://183.161.172.115:7000/udp/239.93.0.140:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通热门剧场" group-title="数字频道",百视通热门剧场$四川电信
+http://183.164.55.78:5000/udp/239.93.0.140:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通热门剧场" group-title="数字频道",百视通热门剧场$四川电信
+http://60.168.109.197:4000/udp/239.93.0.140:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通谍战剧场" group-title="数字频道",百视通谍战剧场$四川电信
+http://183.161.172.115:7000/udp/239.93.0.95:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通谍战剧场" group-title="数字频道",百视通谍战剧场$四川电信
+http://183.164.55.78:5000/udp/239.93.0.95:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通谍战剧场" group-title="数字频道",百视通谍战剧场$四川电信
+http://60.168.109.197:4000/udp/239.93.0.95:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通青春动漫" group-title="数字频道",百视通青春动漫$四川电信
+http://183.161.172.115:7000/udp/239.93.0.146:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通青春动漫" group-title="数字频道",百视通青春动漫$四川电信
+http://183.164.55.78:5000/udp/239.93.0.146:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通青春动漫" group-title="数字频道",百视通青春动漫$四川电信
+http://60.168.109.197:4000/udp/239.93.0.146:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通宝宝动画" group-title="数字频道",百视通宝宝动画$四川电信
+http://183.161.172.115:7000/udp/239.93.0.147:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通宝宝动画" group-title="数字频道",百视通宝宝动画$四川电信
+http://183.164.55.78:5000/udp/239.93.0.147:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通宝宝动画" group-title="数字频道",百视通宝宝动画$四川电信
+http://60.168.109.197:4000/udp/239.93.0.147:5140
+#EXTINF:-1 tvg-id="" tvg-name="少儿天地" group-title="数字频道",少儿天地$四川电信
+http://183.161.172.115:7000/udp/239.93.42.34:5140
+#EXTINF:-1 tvg-id="" tvg-name="少儿天地" group-title="数字频道",少儿天地$四川电信
+http://183.164.55.78:5000/udp/239.93.42.34:5140
+#EXTINF:-1 tvg-id="" tvg-name="少儿天地" group-title="数字频道",少儿天地$四川电信
+http://60.168.109.197:4000/udp/239.93.42.34:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通热门综艺" group-title="数字频道",百视通热门综艺$四川电信
+http://183.161.172.115:7000/udp/239.93.0.151:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通热门综艺" group-title="数字频道",百视通热门综艺$四川电信
+http://183.164.55.78:5000/udp/239.93.0.151:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通热门综艺" group-title="数字频道",百视通热门综艺$四川电信
+http://60.168.109.197:4000/udp/239.93.0.151:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通戏曲精选" group-title="数字频道",百视通戏曲精选$四川电信
+http://183.161.172.115:7000/udp/239.93.0.144:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通戏曲精选" group-title="数字频道",百视通戏曲精选$四川电信
+http://183.164.55.78:5000/udp/239.93.0.144:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通戏曲精选" group-title="数字频道",百视通戏曲精选$四川电信
+http://60.168.109.197:4000/udp/239.93.0.144:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通电竞天堂" group-title="数字频道",百视通电竞天堂$四川电信
+http://183.161.172.115:7000/udp/239.93.1.135:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通电竞天堂" group-title="数字频道",百视通电竞天堂$四川电信
+http://183.164.55.78:5000/udp/239.93.1.135:5140
+#EXTINF:-1 tvg-id="" tvg-name="百视通电竞天堂" group-title="数字频道",百视通电竞天堂$四川电信
+http://60.168.109.197:4000/udp/239.93.1.135:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱浪漫" group-title="数字频道",iHOT爱浪漫$四川电信
+http://183.161.172.115:7000/udp/239.93.42.21:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱浪漫" group-title="数字频道",iHOT爱浪漫$四川电信
+http://183.164.55.78:5000/udp/239.93.42.21:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱浪漫" group-title="数字频道",iHOT爱浪漫$四川电信
+http://60.168.109.197:4000/udp/239.93.42.21:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱喜剧" group-title="数字频道",iHOT爱喜剧$四川电信
+http://183.161.172.115:7000/udp/239.93.42.9:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱喜剧" group-title="数字频道",iHOT爱喜剧$四川电信
+http://183.164.55.78:5000/udp/239.93.42.9:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱喜剧" group-title="数字频道",iHOT爱喜剧$四川电信
+http://60.168.109.197:4000/udp/239.93.42.9:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱奇谈" group-title="数字频道",iHOT爱奇谈$四川电信
+http://183.161.172.115:7000/udp/239.93.42.22:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱奇谈" group-title="数字频道",iHOT爱奇谈$四川电信
+http://183.164.55.78:5000/udp/239.93.42.22:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱奇谈" group-title="数字频道",iHOT爱奇谈$四川电信
+http://60.168.109.197:4000/udp/239.93.42.22:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱科幻" group-title="数字频道",iHOT爱科幻$四川电信
+http://183.161.172.115:7000/udp/239.93.42.10:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱科幻" group-title="数字频道",iHOT爱科幻$四川电信
+http://183.164.55.78:5000/udp/239.93.42.10:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱科幻" group-title="数字频道",iHOT爱科幻$四川电信
+http://60.168.109.197:4000/udp/239.93.42.10:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱院线" group-title="数字频道",iHOT爱院线$四川电信
+http://183.161.172.115:7000/udp/239.93.42.11:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱院线" group-title="数字频道",iHOT爱院线$四川电信
+http://183.164.55.78:5000/udp/239.93.42.11:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱院线" group-title="数字频道",iHOT爱院线$四川电信
+http://60.168.109.197:4000/udp/239.93.42.11:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱谍战" group-title="数字频道",iHOT爱谍战$四川电信
+http://183.161.172.115:7000/udp/239.93.42.14:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱谍战" group-title="数字频道",iHOT爱谍战$四川电信
+http://183.164.55.78:5000/udp/239.93.42.14:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱谍战" group-title="数字频道",iHOT爱谍战$四川电信
+http://60.168.109.197:4000/udp/239.93.42.14:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱历史" group-title="数字频道",iHOT爱历史$四川电信
+http://183.161.172.115:7000/udp/239.93.42.13:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱历史" group-title="数字频道",iHOT爱历史$四川电信
+http://183.164.55.78:5000/udp/239.93.42.13:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱历史" group-title="数字频道",iHOT爱历史$四川电信
+http://60.168.109.197:4000/udp/239.93.42.13:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱悬疑" group-title="数字频道",iHOT爱悬疑$四川电信
+http://183.161.172.115:7000/udp/239.93.42.12:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱悬疑" group-title="数字频道",iHOT爱悬疑$四川电信
+http://183.164.55.78:5000/udp/239.93.42.12:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱悬疑" group-title="数字频道",iHOT爱悬疑$四川电信
+http://60.168.109.197:4000/udp/239.93.42.12:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱都市" group-title="数字频道",iHOT爱都市$四川电信
+http://183.161.172.115:7000/udp/239.93.42.15:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱都市" group-title="数字频道",iHOT爱都市$四川电信
+http://183.164.55.78:5000/udp/239.93.42.15:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱都市" group-title="数字频道",iHOT爱都市$四川电信
+http://60.168.109.197:4000/udp/239.93.42.15:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱旅行" group-title="数字频道",iHOT爱旅行$四川电信
+http://183.161.172.115:7000/udp/239.93.42.16:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱旅行" group-title="数字频道",iHOT爱旅行$四川电信
+http://183.164.55.78:5000/udp/239.93.42.16:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱旅行" group-title="数字频道",iHOT爱旅行$四川电信
+http://60.168.109.197:4000/udp/239.93.42.16:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱体育" group-title="数字频道",iHOT爱体育$四川电信
+http://183.161.172.115:7000/udp/239.93.42.19:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱体育" group-title="数字频道",iHOT爱体育$四川电信
+http://183.164.55.78:5000/udp/239.93.42.19:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱体育" group-title="数字频道",iHOT爱体育$四川电信
+http://60.168.109.197:4000/udp/239.93.42.19:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱赛车" group-title="数字频道",iHOT爱赛车$四川电信
+http://183.161.172.115:7000/udp/239.93.42.20:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱赛车" group-title="数字频道",iHOT爱赛车$四川电信
+http://183.164.55.78:5000/udp/239.93.42.20:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱赛车" group-title="数字频道",iHOT爱赛车$四川电信
+http://60.168.109.197:4000/udp/239.93.42.20:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱动漫" group-title="数字频道",iHOT爱动漫$四川电信
+http://183.161.172.115:7000/udp/239.93.42.23:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱动漫" group-title="数字频道",iHOT爱动漫$四川电信
+http://183.164.55.78:5000/udp/239.93.42.23:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱动漫" group-title="数字频道",iHOT爱动漫$四川电信
+http://60.168.109.197:4000/udp/239.93.42.23:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱幼教" group-title="数字频道",iHOT爱幼教$四川电信
+http://183.161.172.115:7000/udp/239.93.42.17:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱幼教" group-title="数字频道",iHOT爱幼教$四川电信
+http://183.164.55.78:5000/udp/239.93.42.17:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱幼教" group-title="数字频道",iHOT爱幼教$四川电信
+http://60.168.109.197:4000/udp/239.93.42.17:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱玩具" group-title="数字频道",iHOT爱玩具$四川电信
+http://183.161.172.115:7000/udp/239.93.42.18:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱玩具" group-title="数字频道",iHOT爱玩具$四川电信
+http://183.164.55.78:5000/udp/239.93.42.18:5140
+#EXTINF:-1 tvg-id="" tvg-name="iHOT爱玩具" group-title="数字频道",iHOT爱玩具$四川电信
+http://60.168.109.197:4000/udp/239.93.42.18:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海都市剧场" group-title="其他频道",上海都市剧场$四川电信
+http://183.161.172.115:7000/udp/239.93.42.30:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海都市剧场" group-title="其他频道",上海都市剧场$四川电信
+http://183.164.55.78:5000/udp/239.93.42.30:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海都市剧场" group-title="其他频道",上海都市剧场$四川电信
+http://60.168.109.197:4000/udp/239.93.42.30:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海纪实人文" group-title="其他频道",上海纪实人文$四川电信
+http://183.161.172.115:7000/udp/239.93.1.137:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海纪实人文" group-title="其他频道",上海纪实人文$四川电信
+http://183.164.55.78:5000/udp/239.93.1.137:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海纪实人文" group-title="其他频道",上海纪实人文$四川电信
+http://60.168.109.197:4000/udp/239.93.1.137:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海生活时尚" group-title="其他频道",上海生活时尚$四川电信
+http://183.161.172.115:7000/udp/239.93.42.29:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海生活时尚" group-title="其他频道",上海生活时尚$四川电信
+http://183.164.55.78:5000/udp/239.93.42.29:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海生活时尚" group-title="其他频道",上海生活时尚$四川电信
+http://60.168.109.197:4000/udp/239.93.42.29:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海东方财经" group-title="其他频道",上海东方财经$四川电信
+http://183.161.172.115:7000/udp/239.93.1.165:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海东方财经" group-title="其他频道",上海东方财经$四川电信
+http://183.164.55.78:5000/udp/239.93.1.165:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海东方财经" group-title="其他频道",上海东方财经$四川电信
+http://60.168.109.197:4000/udp/239.93.1.165:5140
+#EXTINF:-1 tvg-id="" tvg-name="湖南快乐垂钓" group-title="其他频道",湖南快乐垂钓$四川电信
+http://183.161.172.115:7000/udp/239.93.1.151:5140
+#EXTINF:-1 tvg-id="" tvg-name="湖南快乐垂钓" group-title="其他频道",湖南快乐垂钓$四川电信
+http://183.164.55.78:5000/udp/239.93.1.151:5140
+#EXTINF:-1 tvg-id="" tvg-name="湖南快乐垂钓" group-title="其他频道",湖南快乐垂钓$四川电信
+http://60.168.109.197:4000/udp/239.93.1.151:5140
+#EXTINF:-1 tvg-id="" tvg-name="湖南茶频道" group-title="其他频道",湖南茶频道$四川电信
+http://183.161.172.115:7000/udp/239.93.0.114:5140
+#EXTINF:-1 tvg-id="" tvg-name="湖南茶频道" group-title="其他频道",湖南茶频道$四川电信
+http://183.164.55.78:5000/udp/239.93.0.114:5140
+#EXTINF:-1 tvg-id="" tvg-name="湖南茶频道" group-title="其他频道",湖南茶频道$四川电信
+http://60.168.109.197:4000/udp/239.93.0.114:5140
+#EXTINF:-1 tvg-id="" tvg-name="求索频道" group-title="其他频道",求索频道$四川电信
+http://183.161.172.115:7000/udp/239.93.42.24:5140
+#EXTINF:-1 tvg-id="" tvg-name="求索频道" group-title="其他频道",求索频道$四川电信
+http://183.164.55.78:5000/udp/239.93.42.24:5140
+#EXTINF:-1 tvg-id="" tvg-name="求索频道" group-title="其他频道",求索频道$四川电信
+http://60.168.109.197:4000/udp/239.93.42.24:5140
+#EXTINF:-1 tvg-id="" tvg-name="i成都" group-title="其他频道",i成都$四川电信
+http://183.161.172.115:7000/udp/239.93.1.104:1234
+#EXTINF:-1 tvg-id="" tvg-name="i成都" group-title="其他频道",i成都$四川电信
+http://183.164.55.78:5000/udp/239.93.1.104:1234
+#EXTINF:-1 tvg-id="" tvg-name="i成都" group-title="其他频道",i成都$四川电信
+http://60.168.109.197:4000/udp/239.93.1.104:1234
+#EXTINF:-1 tvg-id="" tvg-name="亲子趣学4K" group-title="其他频道",亲子趣学4K$四川电信
+http://183.161.172.115:7000/udp/239.93.1.191:5140
+#EXTINF:-1 tvg-id="" tvg-name="亲子趣学4K" group-title="其他频道",亲子趣学4K$四川电信
+http://183.164.55.78:5000/udp/239.93.1.191:5140
+#EXTINF:-1 tvg-id="" tvg-name="亲子趣学4K" group-title="其他频道",亲子趣学4K$四川电信
+http://60.168.109.197:4000/udp/239.93.1.191:5140
+#EXTINF:-1 tvg-id="" tvg-name="爱宠宠物" group-title="其他频道",爱宠宠物$四川电信
+http://183.161.172.115:7000/udp/239.93.42.32:5140
+#EXTINF:-1 tvg-id="" tvg-name="爱宠宠物" group-title="其他频道",爱宠宠物$四川电信
+http://183.164.55.78:5000/udp/239.93.42.32:5140
+#EXTINF:-1 tvg-id="" tvg-name="爱宠宠物" group-title="其他频道",爱宠宠物$四川电信
+http://60.168.109.197:4000/udp/239.93.42.32:5140
+#EXTINF:-1 tvg-id="" tvg-name="来钓鱼吧" group-title="其他频道",来钓鱼吧$四川电信
+http://183.161.172.115:7000/udp/239.93.42.8:5140
+#EXTINF:-1 tvg-id="" tvg-name="来钓鱼吧" group-title="其他频道",来钓鱼吧$四川电信
+http://183.164.55.78:5000/udp/239.93.42.8:5140
+#EXTINF:-1 tvg-id="" tvg-name="来钓鱼吧" group-title="其他频道",来钓鱼吧$四川电信
+http://60.168.109.197:4000/udp/239.93.42.8:5140
+#EXTINF:-1 tvg-id="" tvg-name="麻辣体育" group-title="其他频道",麻辣体育$四川电信
+http://183.161.172.115:7000/udp/239.93.42.2:5140
+#EXTINF:-1 tvg-id="" tvg-name="麻辣体育" group-title="其他频道",麻辣体育$四川电信
+http://183.164.55.78:5000/udp/239.93.42.2:5140
+#EXTINF:-1 tvg-id="" tvg-name="麻辣体育" group-title="其他频道",麻辣体育$四川电信
+http://60.168.109.197:4000/udp/239.93.42.2:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫体娱" group-title="其他频道",熊猫体娱$四川电信
+http://183.161.172.115:7000/udp/239.93.0.94:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫体娱" group-title="其他频道",熊猫体娱$四川电信
+http://183.164.55.78:5000/udp/239.93.0.94:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫体娱" group-title="其他频道",熊猫体娱$四川电信
+http://60.168.109.197:4000/udp/239.93.0.94:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫少儿" group-title="其他频道",熊猫少儿$四川电信
+http://183.161.172.115:7000/udp/239.93.1.189:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫少儿" group-title="其他频道",熊猫少儿$四川电信
+http://183.164.55.78:5000/udp/239.93.1.189:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫少儿" group-title="其他频道",熊猫少儿$四川电信
+http://60.168.109.197:4000/udp/239.93.1.189:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫影院" group-title="其他频道",熊猫影院$四川电信
+http://183.161.172.115:7000/udp/239.93.0.214:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫影院" group-title="其他频道",熊猫影院$四川电信
+http://183.164.55.78:5000/udp/239.93.0.214:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫影院" group-title="其他频道",熊猫影院$四川电信
+http://60.168.109.197:4000/udp/239.93.0.214:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫卡通" group-title="其他频道",熊猫卡通$四川电信
+http://183.161.172.115:7000/udp/239.93.1.172:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫卡通" group-title="其他频道",熊猫卡通$四川电信
+http://183.164.55.78:5000/udp/239.93.1.172:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫卡通" group-title="其他频道",熊猫卡通$四川电信
+http://60.168.109.197:4000/udp/239.93.1.172:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫频道" group-title="其他频道",熊猫频道$四川电信
+http://183.161.172.115:7000/udp/239.93.0.211:9148
+#EXTINF:-1 tvg-id="" tvg-name="熊猫频道" group-title="其他频道",熊猫频道$四川电信
+http://183.164.55.78:5000/udp/239.93.0.211:9148
+#EXTINF:-1 tvg-id="" tvg-name="熊猫频道" group-title="其他频道",熊猫频道$四川电信
+http://60.168.109.197:4000/udp/239.93.0.211:9148
+#EXTINF:-1 tvg-id="" tvg-name="熊猫24小时" group-title="其他频道",熊猫24小时$四川电信
+http://183.161.172.115:7000/udp/239.93.1.178:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫24小时" group-title="其他频道",熊猫24小时$四川电信
+http://183.164.55.78:5000/udp/239.93.1.178:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫24小时" group-title="其他频道",熊猫24小时$四川电信
+http://60.168.109.197:4000/udp/239.93.1.178:5140
+#EXTINF:-1 tvg-id="" tvg-name="收视导视" group-title="其他频道",收视导视$四川电信
+http://183.161.172.115:7000/udp/239.93.1.39:5140
+#EXTINF:-1 tvg-id="" tvg-name="收视导视" group-title="其他频道",收视导视$四川电信
+http://183.164.55.78:5000/udp/239.93.1.39:5140
+#EXTINF:-1 tvg-id="" tvg-name="收视导视" group-title="其他频道",收视导视$四川电信
+http://60.168.109.197:4000/udp/239.93.1.39:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫爱生活" group-title="其他频道",熊猫爱生活$四川电信
+http://183.161.172.115:7000/udp/239.93.1.190:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫爱生活" group-title="其他频道",熊猫爱生活$四川电信
+http://183.164.55.78:5000/udp/239.93.1.190:5140
+#EXTINF:-1 tvg-id="" tvg-name="熊猫爱生活" group-title="其他频道",熊猫爱生活$四川电信
+http://60.168.109.197:4000/udp/239.93.1.190:5140
+#EXTINF:-1 tvg-id="" tvg-name="大爱四川" group-title="其他频道",大爱四川$四川电信
+http://183.161.172.115:7000/udp/239.93.1.110:5140
+#EXTINF:-1 tvg-id="" tvg-name="大爱四川" group-title="其他频道",大爱四川$四川电信
+http://183.164.55.78:5000/udp/239.93.1.110:5140
+#EXTINF:-1 tvg-id="" tvg-name="大爱四川" group-title="其他频道",大爱四川$四川电信
+http://60.168.109.197:4000/udp/239.93.1.110:5140
+#EXTINF:-1 tvg-id="" tvg-name="大爱旅游" group-title="其他频道",大爱旅游$四川电信
+http://183.161.172.115:7000/udp/239.93.42.70:5140
+#EXTINF:-1 tvg-id="" tvg-name="大爱旅游" group-title="其他频道",大爱旅游$四川电信
+http://183.164.55.78:5000/udp/239.93.42.70:5140
+#EXTINF:-1 tvg-id="" tvg-name="大爱旅游" group-title="其他频道",大爱旅游$四川电信
+http://60.168.109.197:4000/udp/239.93.42.70:5140
+#EXTINF:-1 tvg-id="" tvg-name="大爱生活" group-title="其他频道",大爱生活$四川电信
+http://183.161.172.115:7000/udp/239.93.42.71:5140
+#EXTINF:-1 tvg-id="" tvg-name="大爱生活" group-title="其他频道",大爱生活$四川电信
+http://183.164.55.78:5000/udp/239.93.42.71:5140
+#EXTINF:-1 tvg-id="" tvg-name="大爱生活" group-title="其他频道",大爱生活$四川电信
+http://60.168.109.197:4000/udp/239.93.42.71:5140
+#EXTINF:-1 tvg-id="" tvg-name="大爱时尚" group-title="其他频道",大爱时尚$四川电信
+http://183.161.172.115:7000/udp/239.93.42.72:5140
+#EXTINF:-1 tvg-id="" tvg-name="大爱时尚" group-title="其他频道",大爱时尚$四川电信
+http://183.164.55.78:5000/udp/239.93.42.72:5140
+#EXTINF:-1 tvg-id="" tvg-name="大爱时尚" group-title="其他频道",大爱时尚$四川电信
+http://60.168.109.197:4000/udp/239.93.42.72:5140
+#EXTINF:-1 tvg-id="" tvg-name="天元围棋" group-title="其他频道",天元围棋$四川电信
+http://183.161.172.115:7000/udp/239.93.42.55:5140
+#EXTINF:-1 tvg-id="" tvg-name="天元围棋" group-title="其他频道",天元围棋$四川电信
+http://183.164.55.78:5000/udp/239.93.42.55:5140
+#EXTINF:-1 tvg-id="" tvg-name="天元围棋" group-title="其他频道",天元围棋$四川电信
+http://60.168.109.197:4000/udp/239.93.42.55:5140
+#EXTINF:-1 tvg-id="" tvg-name="乐龄学堂" group-title="其他频道",乐龄学堂$四川电信
+http://183.161.172.115:7000/udp/239.93.1.179:5140
+#EXTINF:-1 tvg-id="" tvg-name="乐龄学堂" group-title="其他频道",乐龄学堂$四川电信
+http://183.164.55.78:5000/udp/239.93.1.179:5140
+#EXTINF:-1 tvg-id="" tvg-name="乐龄学堂" group-title="其他频道",乐龄学堂$四川电信
+http://60.168.109.197:4000/udp/239.93.1.179:5140
