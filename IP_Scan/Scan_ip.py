@@ -595,30 +595,30 @@ def main():
                 f.write("60.168.109.197:4000\n")
         
         if not os.path.exists(template_file):
-            print(f"警告: 频道模板文件 {template_file} 不存在，正在创建示例模板")
-            with open(template_file, 'w', encoding='utf-8') as f:
-                f.write("# 频道模板文件格式\n")
-                f.write("# 分类名称,#genre#\n")
-                f.write("# 频道名称,http://ipipip/频道地址\n\n")
-                f.write("央视频道,#genre#\n")
-                f.write("CCTV1,http://ipipip/rtp/238.1.78.166:7200\n")
-                f.write("CCTV2,http://ipipip/rtp/238.1.78.235:7752\n")
-                f.write("卫视频道,#genre#\n")
-                f.write(f"{city}卫视,http://ipipip/{CITY_STREAMS[city][0]}\n")
+            # print(f"警告: 频道模板文件 {template_file} 不存在，正在创建示例模板")
+            # with open(template_file, 'w', encoding='utf-8') as f:
+            #     f.write("# 频道模板文件格式\n")
+            #     f.write("# 分类名称,#genre#\n")
+            #     f.write("# 频道名称,http://ipipip/频道地址\n\n")
+            #     f.write("央视频道,#genre#\n")
+            #     f.write("CCTV1,http://ipipip/rtp/238.1.78.166:7200\n")
+            #     f.write("CCTV2,http://ipipip/rtp/238.1.78.235:7752\n")
+            #     f.write("卫视频道,#genre#\n")
+            #     f.write(f"{city}卫视,http://ipipip/{CITY_STREAMS[city][0]}\n")
         
         if not os.path.exists(demo_file):
-            print(f"警告: 频道分类模板文件 {demo_file} 不存在，正在创建示例模板")
-            with open(demo_file, 'w', encoding='utf-8') as f:
-                f.write("# 频道分类模板文件格式\n")
-                f.write("# 分类名称,#genre#\n")
-                f.write("# 主频道名|别名1|别名2|...\n\n")
-                f.write("央视频道,#genre#\n")
-                f.write("CCTV1|CCTV1-综合|CCTV-1综合|CCTV-1|\n")
-                f.write("CCTV2|CCTV2-财经|CCTV-2财经|CCTV-2|\n")
-                f.write("CCTV3|CCTV3-综艺|CCTV-3综艺|CCTV-3|\n")
-                f.write("卫视频道,#genre#\n")
-                f.write("湖南卫视|湖南卫视高清|湖南卫视HD|\n")
-                f.write("浙江卫视|浙江卫视高清|浙江卫视HD|\n")
+            # print(f"警告: 频道分类模板文件 {demo_file} 不存在，正在创建示例模板")
+            # with open(demo_file, 'w', encoding='utf-8') as f:
+            #     f.write("# 频道分类模板文件格式\n")
+            #     f.write("# 分类名称,#genre#\n")
+            #     f.write("# 主频道名|别名1|别名2|...\n\n")
+            #     f.write("央视频道,#genre#\n")
+            #     f.write("CCTV1|CCTV1-综合|CCTV-1综合|CCTV-1|\n")
+            #     f.write("CCTV2|CCTV2-财经|CCTV-2财经|CCTV-2|\n")
+            #     f.write("CCTV3|CCTV3-综艺|CCTV-3综艺|CCTV-3|\n")
+            #     f.write("卫视频道,#genre#\n")
+            #     f.write("湖南卫视|湖南卫视高清|湖南卫视HD|\n")
+            #     f.write("浙江卫视|浙江卫视高清|浙江卫视HD|\n")
     
     # 处理每个城市
     for city_name in CITY_STREAMS:
