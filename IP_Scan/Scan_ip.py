@@ -579,52 +579,23 @@ def main():
     os.makedirs('template', exist_ok=True)
     os.makedirs('output', exist_ok=True)
     
-    # 检查必要的目录和文件
-    for city in CITY_STREAMS:
-        ip_file = f"result_ip/{city}.txt"
-        template_file = f"template/{city}.txt"
-        demo_file = "template/demo.txt"
-        
-        if not os.path.exists(ip_file):
-            print(f"警告: IP文件 {ip_file} 不存在，正在创建示例文件")
-            with open(ip_file, 'w', encoding='utf-8') as f:
-                f.write("# IP文件格式: IP:端口\n")
-                f.write("# 示例:\n")
-                f.write("183.161.172.115:7000\n")
-                f.write("183.164.55.78:5000\n")
-                f.write("60.168.109.197:4000\n")
-        
-        if not os.path.exists(template_file):
-            # print(f"警告: 频道模板文件 {template_file} 不存在，正在创建示例模板")
-            # with open(template_file, 'w', encoding='utf-8') as f:
-            #     f.write("# 频道模板文件格式\n")
-            #     f.write("# 分类名称,#genre#\n")
-            #     f.write("# 频道名称,http://ipipip/频道地址\n\n")
-            #     f.write("央视频道,#genre#\n")
-            #     f.write("CCTV1,http://ipipip/rtp/238.1.78.166:7200\n")
-            #     f.write("CCTV2,http://ipipip/rtp/238.1.78.235:7752\n")
-            #     f.write("卫视频道,#genre#\n")
-            #     f.write(f"{city}卫视,http://ipipip/{CITY_STREAMS[city][0]}\n")
-        
-        if not os.path.exists(demo_file):
-            # print(f"警告: 频道分类模板文件 {demo_file} 不存在，正在创建示例模板")
-            # with open(demo_file, 'w', encoding='utf-8') as f:
-            #     f.write("# 频道分类模板文件格式\n")
-            #     f.write("# 分类名称,#genre#\n")
-            #     f.write("# 主频道名|别名1|别名2|...\n\n")
-            #     f.write("央视频道,#genre#\n")
-            #     f.write("CCTV1|CCTV1-综合|CCTV-1综合|CCTV-1|\n")
-            #     f.write("CCTV2|CCTV2-财经|CCTV-2财经|CCTV-2|\n")
-            #     f.write("CCTV3|CCTV3-综艺|CCTV-3综艺|CCTV-3|\n")
-            #     f.write("卫视频道,#genre#\n")
-            #     f.write("湖南卫视|湖南卫视高清|湖南卫视HD|\n")
-            #     f.write("浙江卫视|浙江卫视高清|浙江卫视HD|\n")
-    
     # 处理每个城市
     for city_name in CITY_STREAMS:
         print(f"\n{'='*60}")
         print(f"处理城市: {city_name}")
         print(f"{'='*60}")
+        
+        # 检查IP文件是否存在
+        ip_file = f"result_ip/{city_name}.txt"
+        if not os.path.exists(ip_file):
+            print(f"IP文件不存在: {ip_file}，跳过此城市")
+            continue
+        
+        # 检查频道模板文件是否存在
+        template_file = f"template/{city_name}.txt"
+        if not os.path.exists(template_file):
+            print(f"频道模板文件不存在: {template_file}，跳过此城市")
+            continue
         
         # 第一步：从IP_Scan/result_ip/读取IP文件
         ip_list = get_ips_for_city(city_name)
@@ -643,6 +614,12 @@ def main():
         
         # 城市间延迟
         time.sleep(2)
+    
+    # 检查频道分类模板文件是否存在
+    demo_file = "template/demo.txt"
+    if not os.path.exists(demo_file):
+        print(f"频道分类模板文件不存在: {demo_file}，无法进行文件合并")
+        return
     
     # 合并所有文件
     print(f"\n{'='*60}")
