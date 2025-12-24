@@ -1,0 +1,235 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.111:5002
+#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.127:5002
+#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.113:5002
+#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.112:5002
+#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.31:5002
+#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.116:5002
+#EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.81:5002
+#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.147:5002
+#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.114:5002
+#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.26:5002
+#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.126:5002
+#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.123:5002
+#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.155:5002
+#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.29:5002
+#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.154:5002
+#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.117:5002
+#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.28:5002
+#EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.82:5002
+#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.27:5002
+#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.61:5002
+#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.115:5002
+#EXTINF:-1 tvg-id="" tvg-name="内蒙古卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",内蒙古卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.32:5002
+#EXTINF:-1 tvg-id="" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.56:5002
+#EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.54:5002
+#EXTINF:-1 tvg-id="" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.50:5002
+#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.30:5002
+#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.61:5002
+#EXTINF:-1 tvg-id="" tvg-name="西藏卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",西藏卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.51:5002
+#EXTINF:-1 tvg-id="" tvg-name="新疆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",新疆卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.35:5002
+#EXTINF:-1 tvg-id="" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.181:5002
+#EXTINF:-1 tvg-id="" tvg-name="兵团卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",兵团卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.57:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.118:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津新闻频道" group-title="其它频道",天津新闻频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.130:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津影视频道" group-title="其它频道",天津影视频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.149:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津体育频道" group-title="其它频道",天津体育频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.122:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津教育频道" group-title="其它频道",天津教育频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.129:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津购物频道" group-title="其它频道",天津购物频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.151:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津文旅频道" group-title="其它频道",天津文旅频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.123:5002
+#EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.41:5002
+#EXTINF:-1 tvg-id="" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="其它频道",茶频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.19:5002
+#EXTINF:-1 tvg-id="" tvg-name="上海游戏风云" group-title="其它频道",上海游戏风云$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.135:5002
+#EXTINF:-1 tvg-id="" tvg-name="河南文物宝库" group-title="其它频道",河南文物宝库$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.105:5002
+#EXTINF:-1 tvg-id="" tvg-name="河南武术世界" group-title="其它频道",河南武术世界$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.129:5002
+#EXTINF:-1 tvg-id="" tvg-name="中国交通" group-title="其它频道",中国交通$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.57:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.27:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.55:5002
+#EXTINF:-1 tvg-id="" tvg-name="蓟州电视台" group-title="其它频道",蓟州电视台$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.82:5002
+#EXTINF:-1 tvg-id="" tvg-name="静海电视台" group-title="其它频道",静海电视台$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.110:5002
+#EXTINF:-1 tvg-id="" tvg-name="河东频道" group-title="其它频道",河东频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.2:5002
+#EXTINF:-1 tvg-id="" tvg-name="河西频道" group-title="其它频道",河西频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.4:5002
+#EXTINF:-1 tvg-id="" tvg-name="滨海1" group-title="其它频道",滨海1$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.7:5002
+#EXTINF:-1 tvg-id="" tvg-name="滨海2" group-title="其它频道",滨海2$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.8:5002
+#EXTINF:-1 tvg-id="" tvg-name="保定电视台" group-title="其它频道",保定电视台$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.83:5002
+#EXTINF:-1 tvg-id="" tvg-name="大港油田企业" group-title="其它频道",大港油田企业$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.14:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津经济广播" group-title="其它频道",天津经济广播$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.172:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津新闻广播" group-title="其它频道",天津新闻广播$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.173:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津生活广播" group-title="其它频道",天津生活广播$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.174:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津交通广播" group-title="其它频道",天津交通广播$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.175:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津相声广播" group-title="其它频道",天津相声广播$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.176:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津小说广播" group-title="其它频道",天津小说广播$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.177:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津滨海广播" group-title="其它频道",天津滨海广播$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.178:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津音乐广播" group-title="其它频道",天津音乐广播$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.179:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津农村广播" group-title="其它频道",天津农村广播$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.180:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津文艺频道" group-title="☘️天津市",天津文艺频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.131:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津都市频道" group-title="☘️天津市",天津都市频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.128:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津文艺广播" group-title="☘️天津市",天津文艺广播$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.171:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.120:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.133:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.158:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.150:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.160:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.121:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.195:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.138:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.196:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.119:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.140:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.192:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.142:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.193:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.144:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.194:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.237:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.52:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV第一剧场" group-title="央视频道",CCTV第一剧场$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.175:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV怀旧剧场" group-title="央视频道",CCTV怀旧剧场$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.173:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV风云剧场" group-title="央视频道",CCTV风云剧场$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.174:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV风云音乐" group-title="央视频道",CCTV风云音乐$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.176:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV风云足球" group-title="央视频道",CCTV风云足球$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.168:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV高尔夫网球" group-title="央视频道",CCTV高尔夫网球$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.169:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV女性时尚" group-title="央视频道",CCTV女性时尚$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.172:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV兵器科技" group-title="央视频道",CCTV兵器科技$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.166:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV世界地理" group-title="央视频道",CCTV世界地理$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.171:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV央视文化精品" group-title="央视频道",CCTV央视文化精品$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.177:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV央视台球" group-title="央视频道",CCTV央视台球$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.170:5002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV电视指南" group-title="央视频道",CCTV电视指南$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.167:5002
+#EXTINF:-1 tvg-id="" tvg-name="CETV早期教育" group-title="央视频道",CETV早期教育$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.207:5002
+#EXTINF:-1 tvg-id="" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.215:5002
+#EXTINF:-1 tvg-id="" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.214:5002
+#EXTINF:-1 tvg-id="" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.213:5002
+#EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.124:5002
+#EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.236:5002
+#EXTINF:-1 tvg-id="" tvg-name="精彩影视" group-title="数字频道",精彩影视$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.141:5002
+#EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.134:5002
+#EXTINF:-1 tvg-id="" tvg-name="上海都市剧场" group-title="数字频道",上海都市剧场$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.146:5002
+#EXTINF:-1 tvg-id="" tvg-name="上海欢笑剧场" group-title="数字频道",上海欢笑剧场$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.139:5002
+#EXTINF:-1 tvg-id="" tvg-name="上海法治天地" group-title="数字频道",上海法治天地$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.237:5002
+#EXTINF:-1 tvg-id="" tvg-name="上海生活时尚" group-title="数字频道",上海生活时尚$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.143:5002
+#EXTINF:-1 tvg-id="" tvg-name="上海乐游频道" group-title="数字频道",上海乐游频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.145:5002
+#EXTINF:-1 tvg-id="" tvg-name="上海金色学堂" group-title="数字频道",上海金色学堂$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.236:5002
+#EXTINF:-1 tvg-id="" tvg-name="河南梨园频道" group-title="数字频道",河南梨园频道$天津联通
+http://111.162.207.175:8686/rtp/225.1.2.104:5002
+#EXTINF:-1 tvg-id="" tvg-name="魅力足球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%AD%85%E5%8A%9B%E8%B6%B3%E7%90%83.png" group-title="数字频道",魅力足球$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.137:5002
+#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" group-title="数字频道",卡酷少儿$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.58:5002
+#EXTINF:-1 tvg-id="" tvg-name="哈哈炫动" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%93%88%E5%93%88%E7%82%AB%E5%8A%A8.png" group-title="数字频道",哈哈炫动$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.62:5002
+#EXTINF:-1 tvg-id="" tvg-name="新动漫" group-title="数字频道",新动漫$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.216:5002
+#EXTINF:-1 tvg-id="" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.247:5002
+#EXTINF:-1 tvg-id="" tvg-name="重庆汽摩" tvg-logo="https://tb.zbds.top/logo/重庆汽摩.png" group-title="☘️重庆市",重庆汽摩$天津联通
+http://111.162.207.175:8686/rtp/225.1.1.205:5002
