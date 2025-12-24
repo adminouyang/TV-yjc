@@ -197,7 +197,7 @@ def get_ips_for_city(city_name):
     # 从CITY_STREAMS中获取对应的省份/城市名称映射
     # 注意：这里假设CITY_STREAMS中的键与IP_Scan/result_ip/下的文件名一致
     # 例如："安徽电信"对应"安徽电信.txt"
-    ip_file = f"IP_Scan/result_ip/{city_name}.txt"
+    ip_file = f"result_ip/{city_name}.txt"
     
     if not os.path.exists(ip_file):
         print(f"IP文件不存在: {ip_file}")
@@ -575,13 +575,13 @@ def main():
     print("="*60)
     
     # 创建必要的目录
-    os.makedirs('IP_Scan/result_ip', exist_ok=True)
+    os.makedirs('result_ip', exist_ok=True)
     os.makedirs('template', exist_ok=True)
     os.makedirs('output', exist_ok=True)
     
     # 检查必要的目录和文件
     for city in CITY_STREAMS:
-        ip_file = f"IP_Scan/result_ip/{city}.txt"
+        ip_file = f"result_ip/{city}.txt"
         template_file = f"template/{city}.txt"
         demo_file = "template/demo.txt"
         
