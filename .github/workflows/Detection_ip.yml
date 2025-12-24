@@ -1,8 +1,8 @@
 name: Detection_ip
 
 on:
-  schedule:
-    - cron: "* */3 * * *"
+  # schedule:
+  #   - cron: "* */3 * * *"
   workflow_dispatch:          # 手动触发
 
 jobs:
