@@ -192,158 +192,30 @@ def get_main_channel_name(channel_name, channel_template):
     # 如果没有找到匹配，返回原频道名
     return channel_name
 
-def test_stream_speed(stream_url, timeout=5):
-    """测试流媒体速度，返回速度(KB/s)和是否成功"""
-    try:
-        headers = get_headers()
-        start_time = time.time()
-        
-        response = requests.get(stream_url, headers=headers, timeout=timeout, 
-                              verify=False, allow_redirects=True, stream=True)
-        
-        if response.status_code not in [200, 206]:
-            return 0, False
-        
-        # 读取100KB数据用于测速
-        downloaded = 0
-        chunk_size = 100 * 1024  # 10KB chunks
-        max_download = 1000 * 1024  # 100KB
-        
-        for chunk in response.iter_content(chunk_size=chunk_size):
-            downloaded += len(chunk)
-            if downloaded >= max_download:
-                break
-        
-        end_time = time.time()
-        duration = end_time - start_time
-        
-        if duration > 0:
-            speed_kbs = downloaded / duration / 1024
-            return speed_kbs, True
-        else:
-            return 0, False
-            
-    except Exception as e:
-        return 0, False
-
-def test_ip_single(ip_port, city_name, timeout=5):
-    """测试单个IP，返回速度"""
-    if city_name not in CITY_STREAMS:
-        return None, 0
+def get_ips_for_city(city_name):
+    """从IP_Scan/result_ip/路径读取IP地址"""
+    # 从CITY_STREAMS中获取对应的省份/城市名称映射
+    # 注意：这里假设CITY_STREAMS中的键与IP_Scan/result_ip/下的文件名一致
+    # 例如："安徽电信"对应"安徽电信.txt"
+    ip_file = f"IP_Scan/result_ip/{city_name}.txt"
     
-    test_stream = CITY_STREAMS[city_name][0]  # 只使用第一个测试流
-    stream_url = f"http://{ip_port}/{test_stream}"
-    
-    try:
-        time.sleep(random.uniform(0.1, 0.3))  # 随机延迟
-        speed, success = test_stream_speed(stream_url, timeout)
-        
-        if success and speed > 0:
-            print(f"✓ {ip_port} 可用 - 速度: {speed:.2f} KB/s")
-            return ip_port, speed
-        else:
-            print(f"× {ip_port} 不可用或速度过慢")
-            return None, 0
-    except Exception as e:
-        print(f"× {ip_port} 测试出错: {str(e)[:50]}")
-        return None, 0
-
-def validate_city_ips(city_name):
-    """验证城市IP文件中的IP，删除不可用的，保留可用的"""
-    ip_file = f"ip/{city_name}_ip.txt"
     if not os.path.exists(ip_file):
         print(f"IP文件不存在: {ip_file}")
         return []
     
-    # 读取IP列表
-    ip_configs = []
-    with open(ip_file, 'r', encoding='utf-8') as f:
-        for line in f:
-            line = line.strip()
-            if line and ":" in line:
-                # 清理IP行，移除速度值
-                cleaned_ip = clean_ip_line(line)
+    ip_list = []
+    try:
+        with open(ip_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                cleaned_ip = clean_ip_line(line.strip())
                 if cleaned_ip and ":" in cleaned_ip:
-                    ip_configs.append(cleaned_ip)
-    
-    if not ip_configs:
-        print(f"{city_name} 没有可用的IP")
-        return []
-    
-    print(f"\n开始验证 {city_name} 的IP...")
-    valid_ips = []
-    
-    # 使用线程池并发测试
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        futures = []
-        for ip_port in ip_configs:
-            future = executor.submit(test_ip_single, ip_port, city_name)
-            futures.append(future)
+                    ip_list.append(cleaned_ip)
         
-        for future in as_completed(futures):
-            ip_port, speed = future.result()
-            if ip_port:
-                valid_ips.append((ip_port, speed))
-    
-    # 按速度排序
-    valid_ips.sort(key=lambda x: x[1], reverse=True)
-    
-    # 更新_ip.txt文件（只保留可用的IP）
-    with open(ip_file, 'w', encoding='utf-8') as f:
-        for ip_port, speed in valid_ips:
-            f.write(f"{ip_port} {speed:.2f} KB/s\n")
-    
-    print(f"\n{city_name} 验证完成:")
-    print(f"  - 保留: {len(valid_ips)} 个可用IP")
-    
-    return valid_ips
-
-def get_top_ips_for_city(city_name, top_n=3):
-    """获取城市IP列表中的前N名IP"""
-    ip_file = f"ip/{city_name}_ip.txt"
-    if not os.path.exists(ip_file):
-        print(f"IP文件不存在: {ip_file}")
+        print(f"从 {ip_file} 读取到 {len(ip_list)} 个IP地址")
+        return ip_list
+    except Exception as e:
+        print(f"读取IP文件错误: {e}")
         return []
-    
-    # 读取IP列表
-    ip_configs = []
-    with open(ip_file, 'r', encoding='utf-8') as f:
-        for line in f:
-            line = line.strip()
-            if line and ":" in line:
-                # 清理IP行，移除速度值
-                cleaned_ip = clean_ip_line(line)
-                if cleaned_ip and ":" in cleaned_ip:
-                    ip_configs.append(cleaned_ip)
-    
-    if not ip_configs:
-        print(f"{city_name} 没有可用的IP")
-        return []
-    
-    print(f"\n开始测试 {city_name} 的 {len(ip_configs)} 个IP...")
-    
-    all_valid_ips = []
-    
-    # 首先测试已有的IP
-    with ThreadPoolExecutor(max_workers=5) as executor:
-        futures = {executor.submit(test_ip_single, ip, city_name): ip for ip in ip_configs}
-        
-        for future in as_completed(futures):
-            ip, speed = future.result()
-            if ip:
-                all_valid_ips.append((ip, speed))
-    
-    # 按速度排序
-    all_valid_ips.sort(key=lambda x: x[1], reverse=True)
-    
-    # 只取前N名
-    top_ips = all_valid_ips[:top_n]
-    
-    print(f"\n{city_name} 测试完成:")
-    for i, (ip, speed) in enumerate(top_ips, 1):
-        print(f"  第{i}名: {ip} - 速度: {speed:.2f} KB/s")
-    
-    return top_ips
 
 def read_template_file(city_name):
     """读取城市对应的频道模板文件"""
@@ -415,10 +287,10 @@ def read_logo_file():
     
     return logo_dict
 
-def generate_files_for_city(city_name, top_ips, logo_dict):
-    """为城市生成TXT和M3U文件，使用3个IP生成3套源"""
-    if not top_ips or len(top_ips) < 3:
-        print(f"{city_name} 可用的IP数量不足3个，跳过文件生成")
+def generate_files_for_city(city_name, ip_list, logo_dict):
+    """为城市生成TXT和M3U文件，使用IP列表中的所有IP生成多个源"""
+    if not ip_list or len(ip_list) < 1:
+        print(f"{city_name} 没有可用的IP，跳过文件生成")
         return
     
     # 读取频道模板
@@ -429,9 +301,6 @@ def generate_files_for_city(city_name, top_ips, logo_dict):
     
     # 创建输出目录
     os.makedirs('output', exist_ok=True)
-    
-    # 取前3个IP
-    top_3_ips = [ip for ip, _ in top_ips[:3]]
     
     # 生成TXT文件
     txt_file = f"output/{city_name}.txt"
@@ -449,8 +318,8 @@ def generate_files_for_city(city_name, top_ips, logo_dict):
             txt_f.write(f"{category},#genre#\n")
             
             for channel_name, channel_url in channels:
-                # 为每个频道生成3个源，分别使用3个IP
-                for i, ip_port in enumerate(top_3_ips, 1):
+                # 为每个频道生成多个源，使用IP列表中的所有IP
+                for i, ip_port in enumerate(ip_list, 1):
                     # 替换ipipip为实际IP:端口
                     new_url = channel_url.replace("ipipip", ip_port)
                     
@@ -462,14 +331,14 @@ def generate_files_for_city(city_name, top_ips, logo_dict):
                     logo_url = logo_dict.get(channel_name, "")
                     
                     if logo_url:
-                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}\n')
+                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}${city_name}\n')
                     else:
-                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}\n')
-                    m3u_f.write(f"{new_url}${city_name}\n")
+                        m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}${city_name}\n')
+                    m3u_f.write(f"{new_url}\n")
                     
                     channel_count += 1
         
-        print(f"  TXT文件: {txt_file} (共{channel_count}个频道，每个频道{len(top_3_ips)}个源)")
+        print(f"  TXT文件: {txt_file} (共{channel_count}个频道，每个频道{len(ip_list)}个源)")
         print(f"  M3U文件: {m3u_file}")
     
     return txt_file, m3u_file
@@ -706,20 +575,20 @@ def main():
     print("="*60)
     
     # 创建必要的目录
-    os.makedirs('ip', exist_ok=True)
+    os.makedirs('IP_Scan/result_ip', exist_ok=True)
     os.makedirs('template', exist_ok=True)
     os.makedirs('output', exist_ok=True)
     
     # 检查必要的目录和文件
     for city in CITY_STREAMS:
-        ip_file = f"ip/{city}_ip.txt"
+        ip_file = f"IP_Scan/result_ip/{city}.txt"
         template_file = f"template/{city}.txt"
         demo_file = "template/demo.txt"
         
         if not os.path.exists(ip_file):
             print(f"警告: IP文件 {ip_file} 不存在，正在创建示例文件")
             with open(ip_file, 'w', encoding='utf-8') as f:
-                f.write("# IP文件格式: IP:端口 (可带速度值)\n")
+                f.write("# IP文件格式: IP:端口\n")
                 f.write("# 示例:\n")
                 f.write("183.161.172.115:7000\n")
                 f.write("183.164.55.78:5000\n")
@@ -727,7 +596,6 @@ def main():
         
         if not os.path.exists(template_file):
             print(f"警告: 频道模板文件 {template_file} 不存在，正在创建示例模板")
-            os.makedirs('template', exist_ok=True)
             with open(template_file, 'w', encoding='utf-8') as f:
                 f.write("# 频道模板文件格式\n")
                 f.write("# 分类名称,#genre#\n")
@@ -740,7 +608,6 @@ def main():
         
         if not os.path.exists(demo_file):
             print(f"警告: 频道分类模板文件 {demo_file} 不存在，正在创建示例模板")
-            os.makedirs('template', exist_ok=True)
             with open(demo_file, 'w', encoding='utf-8') as f:
                 f.write("# 频道分类模板文件格式\n")
                 f.write("# 分类名称,#genre#\n")
@@ -753,31 +620,26 @@ def main():
                 f.write("湖南卫视|湖南卫视高清|湖南卫视HD|\n")
                 f.write("浙江卫视|浙江卫视高清|浙江卫视HD|\n")
     
-    # 处理每个城市的IP
+    # 处理每个城市
     for city_name in CITY_STREAMS:
         print(f"\n{'='*60}")
         print(f"处理城市: {city_name}")
         print(f"{'='*60}")
         
-        # 第一步：验证并更新IP文件
-        valid_ips = validate_city_ips(city_name)
+        # 第一步：从IP_Scan/result_ip/读取IP文件
+        ip_list = get_ips_for_city(city_name)
         
-        if not valid_ips:
+        if not ip_list:
             print(f"{city_name} 没有可用的IP，跳过")
             continue
         
-        # 第二步：获取前3名IP
-        top_ips = get_top_ips_for_city(city_name, top_n=3)
+        print(f"获取到 {len(ip_list)} 个IP地址")
         
-        if not top_ips or len(top_ips) < 3:
-            print(f"{city_name} 没有找到足够的可用IP（需要3个），跳过")
-            continue
-        
-        # 第三步：读取台标文件
+        # 第二步：读取台标文件
         logo_dict = read_logo_file()
         
-        # 第四步：生成文件
-        generate_files_for_city(city_name, top_ips, logo_dict)
+        # 第三步：生成文件
+        generate_files_for_city(city_name, ip_list, logo_dict)
         
         # 城市间延迟
         time.sleep(2)
