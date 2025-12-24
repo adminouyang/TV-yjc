@@ -29,7 +29,9 @@ jobs:
           pip install requests
           
       - name: Run 获取IP 
-        run: python IP_Scan/Get_ip.py    
+        run: | 
+          python IP_Scan/Get_ip.py
+          python IP_Scan/Detection_ip.py
         
       - name: Commit and push changes
         run: |
