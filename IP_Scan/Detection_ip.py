@@ -51,7 +51,7 @@ def test_single_url(url: str, timeout: int = 3) -> Tuple[float, str]:
         
         # 下载一小段数据来计算速度
         downloaded = 0
-        chunk_size = 10240
+        chunk_size = 102400
         max_size = 1024 * 1024  # 最多下载1MB
         
         for chunk in response.iter_content(chunk_size=chunk_size):
