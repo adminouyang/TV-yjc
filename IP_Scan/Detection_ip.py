@@ -58,7 +58,7 @@ def test_single_url(url: str, timeout: int = 3) -> Tuple[float, str]:
             if chunk:
                 downloaded += len(chunk)
             
-            if downloaded >= chunk_size * 10:  # 下载大约40KB就够判断速度了
+            if downloaded >= chunk_size * 100:  # 下载大约400KB就够判断速度了
                 break
             
             if downloaded >= max_size:
