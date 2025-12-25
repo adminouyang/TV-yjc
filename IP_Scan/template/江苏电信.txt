@@ -17,12 +17,6 @@ CCTV14,http://ipipip/rtp/239.49.8.136:6000
 CCTV15,http://ipipip/rtp/239.49.1.15:6000
 CCTV17,http://ipipip/rtp/239.49.8.132:6000
 
-CCTV1,http://ipipip/rtp/239.49.8.19:9614
-CCTV2,http://ipipip/rtp/239.49.8.50:9802
-CCTV10,http://ipipip/rtp/239.49.8.54:9818
-CCTV12,http://ipipip/rtp/239.49.8.55:9822
-CCTV14,http://ipipip/rtp/239.49.8.56:9826
-CCTV17,http://ipipip/rtp/239.49.8.52:9810
 GCTN英语,http://ipipip/rtp/239.49.0.9:8064
 卫视频道,#genre#
 浙江卫视,http://ipipip/rtp/239.49.8.139:6000
