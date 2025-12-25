@@ -575,10 +575,10 @@ def speed_test(channels):
                                     
                                     if normalized_speed > 0.001:
                                         result = clean_name, channel_url, f"{normalized_speed:.3f}"
-                                        print(f"✓ {clean_name}, 速度: {normalized_speed:.3f} MB/s")
+                                        print(f"✓ {clean_name}, channel_url 速度: {normalized_speed:.3f} MB/s")
                                         results.append(result)
                                     else:
-                                        print(f"× {clean_name}, 速度过慢: {normalized_speed:.3f} MB/s")
+                                        print(f"× {clean_name}, channel_url 速度过慢: {normalized_speed:.3f} MB/s")
                                 else:
                                     print(f"× {clean_name}, HTTP错误: {response.status_code}")
                         except eventlet.Timeout:
