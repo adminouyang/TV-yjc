@@ -471,17 +471,18 @@ def extract_channels(url):
                         channel_url = f"{base_url}/{url_standby.lstrip('/')}"
                     
                     hotel_channels.append((name, channel_url))
-        elif "ZHGXTV" in json_url:
-            response = requests.get(json_url, timeout=2)
-            json_data = response.content.decode('utf-8')
-            data_lines = json_data.split('\n')
-            for line in data_lines:
-                if "," in line and ("hls" in line or "m3u8" in line):
-                    name, channel_url = line.strip().split(',')
-                    parts = channel_url.split('/', 3)
-                    if len(parts) >= 4:
-                        urld = f"{url_x}/{parts[3]}"
-                        hotel_channels.append((name, urld))
+                elif "ZHGXTV" in json_url:
+                    response = requests.get(json_url, timeout=2)
+                    json_data = response.content.decode('utf-8')
+                    data_lines = json_data.split('\n')
+                    for line in data_lines:
+                      if "," in line and ("hls" in line or "m3u8" in line):
+                          name, channel_url = line.strip().split(',')
+                          parts = channel_url.split('/', 3)
+                          if len(parts) >= 4:
+                              urld = f"{url_x}/{parts[3]}"
+                              hotel_channels.append((name, urld))
+ 
         
         print(f"从 {url} 解析到 {len(hotel_channels)} 个频道")
         return hotel_channels
