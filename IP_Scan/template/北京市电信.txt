@@ -16,12 +16,7 @@ CCTV13,http://ipipip/rtp/225.1.8.168:8130
 CCTV14,http://ipipip/rtp/225.1.8.14:8132
 CCTV15,http://ipipip/rtp/225.1.8.74:8136
 CCTV17,http://ipipip/rtp/225.1.8.17:8144
-CCTV1,http://ipipip/rtp/225.1.8.33:8002
-CCTV1,http://ipipip/rtp/225.1.8.53:8060
-CCTV1,http://ipipip/rtp/225.1.8.81:8176
-CCTV1,http://ipipip/rtp/225.1.8.126:8002
-CCTV1,http://ipipip/rtp/225.1.8.194:4120
-CCTV1,http://ipipip/rtp/225.1.8.210:8068
+
 CETV1,http://ipipip/udp/225.1.8.32:8152
 CETV2,http://ipipip/rtp/225.1.8.193:4120
 CETV4,http://ipipip/rtp/225.1.8.195:4120
