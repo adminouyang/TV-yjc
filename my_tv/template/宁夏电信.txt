@@ -1,12 +1,4 @@
-宁夏卫视,http://ipipip/rtp/239.121.4.94:8538
-宁夏公共频道,http://ipipip/rtp/239.121.4.97:8556
-宁夏教育频道,http://ipipip/rtp/239.121.4.200:9184
-宁夏经济频道,http://ipipip/rtp/239.121.4.91:8520
-宁夏少儿频道,http://ipipip/rtp/239.121.4.63:8352
-宁夏文旅频道,http://ipipip/rtp/239.121.4.93:8532
-银川公共频道,http://ipipip/rtp/239.121.4.21:8100
-银川生活频道,http://ipipip/rtp/239.121.4.106:8610
-银川文体频道,http://ipipip/rtp/239.121.4.22:8106
+央视频道,#genre#
 CCTV-1综合,http://ipipip/rtp/239.121.4.113:8636
 CCTV-2财经,http://ipipip/rtp/239.121.4.155:8914
 CCTV-3综艺,http://ipipip/rtp/239.121.4.151:8890
@@ -25,6 +17,21 @@ CCTV-15音乐,http://ipipip/rtp/239.121.4.202:9208
 CCTV-16奥林匹克,http://ipipip/rtp/239.121.4.122:8008
 CCTV-17农业农村,http://ipipip/rtp/239.121.4.61:8340
 CCTV-5+体育赛事,http://ipipip/rtp/239.121.4.140:8852
+CETV1,http://ipipip/rtp/239.121.4.180:9064
+CETV4,http://ipipip/rtp/239.121.4.199:9178
+CCTV-4 美洲,http://ipipip/rtp/239.121.4.124:8002
+CCTV-4 欧洲,http://ipipip/rtp/239.121.4.123:8000
+中国天气,http://ipipip/rtp/239.121.4.112:8654
+CGTN阿拉伯语,http://ipipip/rtp/239.121.4.207:8026
+CGTN俄语,http://ipipip/rtp/239.121.4.208:8030
+CGTN法语,http://ipipip/rtp/239.121.4.206:8024
+CGTN西班牙语,http://ipipip/rtp/239.121.4.137:8020
+CGTN纪录,http://ipipip/rtp/239.121.4.136:8018
+CGTN英语,http://ipipip/rtp/239.121.4.125:8014
+数字频道,#genre#
+上海欢笑剧场,http://ipipip/rtp/239.121.4.64:8358
+卫视频道,#genre#
+宁夏卫视,http://ipipip/rtp/239.121.4.94:8538
 安徽卫视,http://ipipip/rtp/239.121.4.161:8950
 北京卫视,http://ipipip/rtp/239.121.4.117:8684
 东方卫视,http://ipipip/rtp/239.121.4.109:8636
@@ -44,19 +51,18 @@ CCTV-5+体育赛事,http://ipipip/rtp/239.121.4.140:8852
 重庆卫视,http://ipipip/rtp/239.121.4.36:8190
 辽宁卫视,http://ipipip/rtp/239.121.4.163:8962
 吉林卫视,http://ipipip/rtp/239.121.4.43:8232
-CETV1,http://ipipip/rtp/239.121.4.180:9064
-CETV4,http://ipipip/rtp/239.121.4.199:9178
-湖南金鹰纪实,http://ipipip/rtp/239.121.4.167:8986
-上海欢笑剧场,http://ipipip/rtp/239.121.4.64:8358
+宁夏频道,#genre#
+宁夏公共频道,http://ipipip/rtp/239.121.4.97:8556
+宁夏教育频道,http://ipipip/rtp/239.121.4.200:9184
+宁夏经济频道,http://ipipip/rtp/239.121.4.91:8520
+宁夏少儿频道,http://ipipip/rtp/239.121.4.63:8352
+宁夏文旅频道,http://ipipip/rtp/239.121.4.93:8532
+银川公共频道,http://ipipip/rtp/239.121.4.21:8100
+银川生活频道,http://ipipip/rtp/239.121.4.106:8610
+银川文体频道,http://ipipip/rtp/239.121.4.22:8106
+儿童频道,#genre#
 上海动漫秀场,http://ipipip/rtp/239.121.4.74:8418
+其它频道,#genre#
+湖南金鹰纪实,http://ipipip/rtp/239.121.4.167:8986
 上海纪实人文,http://ipipip/rtp/239.121.4.164:8968
 上海东方财经,http://ipipip/rtp/239.121.4.71:8400
-中国天气,http://ipipip/rtp/239.121.4.112:8654
-CCTV-4 美洲,http://ipipip/rtp/239.121.4.124:8002
-CCTV-4 欧洲,http://ipipip/rtp/239.121.4.123:8000
-CGTN阿拉伯语,http://ipipip/rtp/239.121.4.207:8026
-CGTN俄语,http://ipipip/rtp/239.121.4.208:8030
-CGTN法语,http://ipipip/rtp/239.121.4.206:8024
-CGTN西班牙语,http://ipipip/rtp/239.121.4.137:8020
-CGTN纪录,http://ipipip/rtp/239.121.4.136:8018
-CGTN英语,http://ipipip/rtp/239.121.4.125:8014
