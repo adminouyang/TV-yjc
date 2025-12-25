@@ -42,7 +42,7 @@ CHANNEL_CATEGORIES = {
          "海看大片", "经典电影", "精彩影视", "喜剧影院", "动作影院", "精品剧场","IPTV戏曲", "求索纪录", "求索科学",
         "求索生活", "求索动物", "纪实人文", "金鹰纪实", "纪实科教", "睛彩青少", "睛彩竞技", "睛彩篮球", "睛彩广场舞", "魅力足球", "五星体育", "体育赛事",
         "劲爆体育", "快乐垂钓", "茶频道", "先锋乒羽", "天元围棋", "汽摩", "车迷频道", "梨园频道", "文物宝库", "武术世界",
-        "乐游", "生活时尚", "都市剧场", "欢笑剧场", "游戏风云", "金色学堂", "动漫秀场", "新动漫", "卡酷少儿", "金鹰卡通", "优漫卡通", "哈哈炫动", "嘉佳卡通", 
+        "乐游", "生活时尚", "都市剧场", "欢笑剧场", "金色学堂", "动漫秀场", "新动漫", "卡酷少儿", "金鹰卡通", "优漫卡通", "哈哈炫动", "嘉佳卡通", 
         "优优宝贝", "中国交通", "中国天气",  "网络棋牌", 
     ],
     "港澳台频道": [
@@ -661,6 +661,55 @@ def generate_m3u_file(txt_file_path, m3u_file_path):
     
     print(f"M3U文件已生成: {m3u_file_path}")
 
+# 分组并排序频道
+def group_and_sort_channels_by_category(categorized_channels):
+    """对分类后的频道进行分组和排序"""
+    processed_categories = {}
+    
+    for category, channels in categorized_channels.items():
+        if category == "央视频道":
+            # 央视频道保持原有逻辑
+            channels.sort(key=lambda x: channel_key(x[0]))
+            
+            # 限制每个频道的结果数量
+            channel_count = {}
+            filtered_channels = []
+            
+            for name, url, speed in channels:
+                if name not in channel_count:
+                    channel_count[name] = 0
+                
+                if channel_count[name] < RESULTS_PER_CHANNEL:
+                    filtered_channels.append((name, url, speed))
+                    channel_count[name] += 1
+            
+            # 按照速度排序
+            filtered_channels.sort(key=lambda x: -float(x[2]))
+            processed_categories[category] = filtered_channels
+        else:
+            # 其他分类：将同一频道名称的多个URL放在一起
+            # 按频道名称分组
+            channel_groups = {}
+            for name, url, speed in channels:
+                if name not in channel_groups:
+                    channel_groups[name] = []
+                channel_groups[name].append((name, url, speed))
+            
+            # 对每个频道的URL按速度排序
+            grouped_channels = []
+            for channel_name, url_list in channel_groups.items():
+                # 按速度从高到低排序
+                url_list.sort(key=lambda x: -float(x[2]))
+                # 限制每个频道最多RESULTS_PER_CHANNEL个URL
+                url_list = url_list[:RESULTS_PER_CHANNEL]
+                grouped_channels.extend(url_list)
+            
+            # 按频道名称排序
+            grouped_channels.sort(key=lambda x: channel_key(x[0]))
+            processed_categories[category] = grouped_channels
+    
+    return processed_categories
+
 # 获取酒店源流程        
 def hotel_iptv(config_file):
     # 先检测并更新IP文件
@@ -742,37 +791,22 @@ def main():
     # 对数据进行分类
     categorized = classify_channels_by_category(channels_data)
     
+    # 对分类后的数据进行分组和排序处理
+    processed_categories = group_and_sort_channels_by_category(categorized)
+    
     # 写入分类文件
     file_paths = []
-    for category, channels in categorized.items():
+    for category, channels in processed_categories.items():
         if channels:
-            # 对每个分类内的频道进行排序
-            channels.sort(key=lambda x: channel_key(x[0]))
-            
-            # 限制每个频道的结果数量
-            channel_count = {}
-            filtered_channels = []
-            
-            for name, url, speed in channels:
-                if name not in channel_count:
-                    channel_count[name] = 0
-                
-                if channel_count[name] < RESULTS_PER_CHANNEL:
-                    filtered_channels.append((name, url, speed))
-                    channel_count[name] += 1
-            
-            # 按照速度排序
-            filtered_channels.sort(key=lambda x: -float(x[2]))
-            
             # 写入文件
             filename = f"{category.replace('频道', '')}.txt"
             with open(filename, 'w', encoding='utf-8') as f:
                 f.write(f"{category},#genre#\n")
-                for name, url, speed in filtered_channels:
+                for name, url, speed in channels:
                     f.write(f"{name},{url}\n")
             
             file_paths.append(filename)
-            print(f"已保存 {len(filtered_channels)} 个频道到 {filename}")
+            print(f"已保存 {len(channels)} 个频道到 {filename}")
     
     # 合并写入文件
     file_contents = []
