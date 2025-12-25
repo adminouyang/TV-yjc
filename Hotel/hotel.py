@@ -388,174 +388,37 @@ def scan_ip_port(ip, port, url_end):
     return valid_urls    
 
 # 发送GET请求获取JSON文件, 解析JSON文件, 获取频道信息
-# def extract_channels(url):
-#     hotel_channels = []
-#     try:
-#         json_url = f"{url}"
-#         urls = url.split('/', 3)
-#         url_x = f"{urls[0]}//{urls[2]}"
-#         if "iptv" in json_url:
-#             response = requests.get(json_url, timeout=3)
-#             json_data = response.json()
-#             for item in json_data['data']:
-#                 if isinstance(item, dict):
-#                     name = item.get('name')
-#                     urlx = item.get('url')
-#                     if "tsfile" in urlx or "m3u8" in urlx:
-#                         urld = f"{url_x}{urlx}"
-#                         hotel_channels.append((name, urld))
-#         elif "ZHGXTV" in json_url:
-#             response = requests.get(json_url, timeout=2)
-#             json_data = response.content.decode('utf-8')
-#             data_lines = json_data.split('\n')
-#             for line in data_lines:
-#                 if "," in line and ("hls" in line or "m3u8" in line):
-#                     name, channel_url = line.strip().split(',')
-#                     parts = channel_url.split('/', 3)
-#                     if len(parts) >= 4:
-#                         urld = f"{url_x}/{parts[3]}"
-#                         hotel_channels.append((name, urld))
-#         return hotel_channels
-#     except Exception:
-#         return []
-# 发送GET请求获取JSON文件, 解析JSON文件, 获取频道信息
 def extract_channels(url):
     hotel_channels = []
     try:
         json_url = f"{url}"
-        # 提取基础URL（协议+主机+端口）
-        parts = url.split('/')
-        base_url = f"{parts[0]}//{parts[2]}"
-        
-        response = requests.get(json_url, timeout=3)
-        if response.status_code != 200:
-            return []
-            
-        json_data = response.json()
-        
-        # 检查JSON结构
-        if "data" not in json_data or not isinstance(json_data["data"], list):
-            print(f"JSON格式异常: {url}")
-            return []
-        
-        for item in json_data['data']:
-            if isinstance(item, dict):
-                name = item.get('name', '')
-                url_path = item.get('url', '')
-                
-                if not name or not url_path:
-                    continue
-                
-                # 处理多种URL格式
-                if "tsfile" in url_path or "m3u8" in url_path:
-                    # 如果是相对路径
-                    if url_path.startswith('/'):
-                        channel_url = f"{base_url}{url_path}"
-                    # 如果是完整URL
-                    elif url_path.startswith('http'):
-                        channel_url = url_path
-                    else:
-                        # 其他格式，加上基础URL
-                        channel_url = f"{base_url}/{url_path.lstrip('/')}"
-                    
-                    hotel_channels.append((name, channel_url))
-                
-                # 检查备用URL
-                url_standby = item.get('url_standby', '')
-                if url_standby and ("tsfile" in url_standby or "m3u8" in url_standby):
-                    if url_standby.startswith('/'):
-                        channel_url = f"{base_url}{url_standby}"
-                    elif url_standby.startswith('http'):
-                        channel_url = url_standby
-                    else:
-                        channel_url = f"{base_url}/{url_standby.lstrip('/')}"
-                    
-                    hotel_channels.append((name, channel_url))
-                elif "ZHGXTV" in json_url:
-                    response = requests.get(json_url, timeout=2)
-                    json_data = response.content.decode('utf-8')
-                    data_lines = json_data.split('\n')
-                    for line in data_lines:
-                      if "," in line and ("hls" in line or "m3u8" in line):
-                          name, channel_url = line.strip().split(',')
-                          parts = channel_url.split('/', 3)
-                          if len(parts) >= 4:
-                              urld = f"{url_x}/{parts[3]}"
-                              hotel_channels.append((name, urld))
- 
-        
-        print(f"从 {url} 解析到 {len(hotel_channels)} 个频道")
+        urls = url.split('/', 3)
+        url_x = f"{urls[0]}//{urls[2]}"
+        if "iptv" in json_url:
+            response = requests.get(json_url, timeout=3)
+            json_data = response.json()
+            for item in json_data['data']:
+                if isinstance(item, dict):
+                    name = item.get('name')
+                    urlx = item.get('url')
+                    if "tsfile" in urlx or "m3u8" in urlx:
+                        urld = f"{url_x}{urlx}"
+                        hotel_channels.append((name, urld))
+        elif "ZHGXTV" in json_url:
+            response = requests.get(json_url, timeout=2)
+            json_data = response.content.decode('utf-8')
+            data_lines = json_data.split('\n')
+            for line in data_lines:
+                if "," in line and ("hls" in line or "m3u8" in line):
+                    name, channel_url = line.strip().split(',')
+                    parts = channel_url.split('/', 3)
+                    if len(parts) >= 4:
+                        urld = f"{url_x}/{parts[3]}"
+                        hotel_channels.append((name, urld))
         return hotel_channels
-        
-    except requests.exceptions.RequestException as e:
-        print(f"请求错误: {e}")
+    except Exception:
         return []
-    except json.JSONDecodeError as e:
-        print(f"JSON解析错误: {e}")
-        return []
-    except Exception as e:
-        print(f"解析频道时发生未知错误: {e}")
-        return []
-#测速
-# def speed_test(channels):
-#     def show_progress():
-#         while checked[0] < len(channels):
-#             numberx = checked[0] / len(channels) * 100
-#             print(f"已测试{checked[0]}/{len(channels)}，可用频道:{len(results)}个，进度:{numberx:.2f}%")
-#             time.sleep(5)
-    
-#     def worker():
-#         while True:
-#             try:
-#                 channel_name, channel_url = task_queue.get()
-#                 try:
-#                     channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])
-#                     lines = requests.get(channel_url, timeout=2).text.strip().split('\n')
-#                     ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]
-#                     if ts_lists:
-#                         ts_url = channel_url_t + ts_lists[0]
-#                         ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])
-#                         with eventlet.Timeout(5, False):
-#                             start_time = time.time()
-#                             cont = requests.get(ts_url, timeout=6).content
-#                             resp_time = (time.time() - start_time) * 1                    
-#                         if cont and resp_time > 0:
-#                             checked[0] += 1
-#                             temp_filename = f"temp_{hash(channel_url)}.ts"
-#                             with open(temp_filename, 'wb') as f:
-#                                 f.write(cont)
-#                             normalized_speed = len(cont) / resp_time / 1024 / 1024
-#                             os.remove(temp_filename)
-#                             # 过滤掉速度过慢的频道（≤0.001 MB/s）
-#                             if normalized_speed > 0.001:
-#                                 result = channel_name, channel_url, f"{normalized_speed:.3f}"
-#                                 print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
-#                                 results.append(result)
-#                             else:
-#                                 print(f"× {channel_name}, {channel_url}: 速度过慢 ({normalized_speed:.3f} MB/s)，已过滤")
-#                         else:
-#                             checked[0] += 1
-#                 except Exception as e:
-#                     checked[0] += 1
-#             except:
-#                 checked[0] += 1
-#             finally:
-#                 task_queue.task_done()
-    
-#     task_queue = Queue()
-#     results = []
-#     checked = [0]
-    
-#     Thread(target=show_progress, daemon=True).start()
-    
-#     for _ in range(min(10, len(channels))):
-#         Thread(target=worker, daemon=True).start()
-    
-#     for channel in channels:
-#         task_queue.put(channel)
-    
-#     task_queue.join()
-#     return results
+
 #测速
 def speed_test(channels):
     def show_progress():
@@ -569,73 +432,54 @@ def speed_test(channels):
             try:
                 channel_name, channel_url = task_queue.get()
                 try:
-                    # 清理频道名称（移除'-'后面的内容）
-                    clean_name = channel_name.split('-')[0].strip() if '-' in channel_name else channel_name.strip()
-                    
-                    # 判断URL类型并相应处理
-                    if channel_url.endswith('.m3u8') or '/hls/' in channel_url or '/live/' in channel_url:
-                        # 处理m3u8文件
-                        try:
-                            with eventlet.Timeout(5, False):
-                                start_time = time.time()
-                                response = requests.get(channel_url, timeout=6, headers=HEADERS)
-                                resp_time = (time.time() - start_time)
-                                
-                                if response.status_code == 200:
-                                    content = response.content
-                                    normalized_speed = len(content) / (resp_time + 0.001) / 1024 / 1024
-                                    
-                                    if normalized_speed > 0.001:
-                                        result = clean_name, channel_url, f"{normalized_speed:.3f}"
-                                        print(f"✓ {clean_name}, channel_url 速度: {normalized_speed:.3f} MB/s")
-                                        results.append(result)
-                                    else:
-                                        print(f"× {clean_name}, channel_url 速度过慢: {normalized_speed:.3f} MB/s")
-                                else:
-                                    print(f"× {clean_name}, HTTP错误: {response.status_code}")
-                        except eventlet.Timeout:
-                            print(f"× {clean_name}, 请求超时")
-                        except Exception as e:
-                            print(f"× {clean_name}, 错误: {str(e)[:50]}")
-                    else:
-                        # 其他类型的URL，跳过
-                        print(f"× {clean_name}, 不支持的类型")
-                    
+                    channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])
+                    lines = requests.get(channel_url, timeout=2).text.strip().split('\n')
+                    ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]
+                    if ts_lists:
+                        ts_url = channel_url_t + ts_lists[0]
+                        ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])
+                        with eventlet.Timeout(5, False):
+                            start_time = time.time()
+                            cont = requests.get(ts_url, timeout=6).content
+                            resp_time = (time.time() - start_time) * 1                    
+                        if cont and resp_time > 0:
+                            checked[0] += 1
+                            temp_filename = f"temp_{hash(channel_url)}.ts"
+                            with open(temp_filename, 'wb') as f:
+                                f.write(cont)
+                            normalized_speed = len(cont) / resp_time / 1024 / 1024
+                            os.remove(temp_filename)
+                            # 过滤掉速度过慢的频道（≤0.001 MB/s）
+                            if normalized_speed > 0.001:
+                                result = channel_name, channel_url, f"{normalized_speed:.3f}"
+                                print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
+                                results.append(result)
+                            else:
+                                print(f"× {channel_name}, {channel_url}: 速度过慢 ({normalized_speed:.3f} MB/s)，已过滤")
+                        else:
+                            checked[0] += 1
                 except Exception as e:
-                    print(f"× 处理频道时出错: {str(e)[:50]}")
-                finally:
                     checked[0] += 1
-                    task_queue.task_done()
-                    
-            except Empty:
-                break
+            except:
+                checked[0] += 1
+            finally:
+                task_queue.task_done()
     
     task_queue = Queue()
     results = []
     checked = [0]
     
-    # 添加频道到队列
+    Thread(target=show_progress, daemon=True).start()
+    
+    for _ in range(min(10, len(channels))):
+        Thread(target=worker, daemon=True).start()
+    
     for channel in channels:
         task_queue.put(channel)
     
-    # 启动进度显示线程
-    Thread(target=show_progress, daemon=True).start()
-    
-    # 启动工作线程
-    worker_threads = []
-    for _ in range(min(20, len(channels))):  # 增加线程数
-        t = Thread(target=worker, daemon=True)
-        t.start()
-        worker_threads.append(t)
-    
-    # 等待所有任务完成
     task_queue.join()
-    
-    # 等待所有线程完成
-    for t in worker_threads:
-        t.join(timeout=1)
-    
     return results
+
 # 精确频道名称匹配函数
 def exact_channel_match(channel_name, pattern_name):
     """
@@ -685,47 +529,6 @@ def exact_channel_match(channel_name, pattern_name):
     return False
 
 # 统一频道名称 - 使用精确匹配
-# def unify_channel_name(channels_list):
-#     new_channels_list = []
-    
-#     for name, channel_url, speed in channels_list:
-#         original_name = name
-#         unified_name = None
-        
-#         # 清理原始名称
-#         clean_name = remove_special_symbols(name.strip().lower())
-        
-#         # 先尝试精确匹配
-#         for standard_name, variants in CHANNEL_MAPPING.items():
-#             for variant in variants:
-#                 if exact_channel_match(name, variant):
-#                     unified_name = standard_name
-#                     break
-#             if unified_name:
-#                 break
-        
-#         # 如果没有找到精确匹配，尝试其他匹配策略
-#         if not unified_name:
-#             # 尝试处理CCTV数字频道
-#             cctv_match = re.search(r'cctv[-_\s]?(\d+)', clean_name, re.IGNORECASE)
-#             if cctv_match:
-#                 cctv_num = cctv_match.group(1)
-#                 for standard_name, variants in CHANNEL_MAPPING.items():
-#                     if standard_name.startswith("CCTV"):
-#                         std_match = re.search(r'cctv(\d+)', standard_name.lower())
-#                         if std_match and std_match.group(1) == cctv_num:
-#                             unified_name = standard_name
-#                             break
-        
-#         # 如果还是没有找到，保留原名称
-#         if not unified_name:
-#             unified_name = original_name
-        
-#         new_channels_list.append(f"{unified_name},{channel_url},{speed}\n")
-#         if original_name != unified_name:
-#             print(f"频道名称统一: '{original_name}' -> '{unified_name}'")
-    
-#     return new_channels_list
 def unify_channel_name(channels_list):
     new_channels_list = []
     
@@ -733,15 +536,13 @@ def unify_channel_name(channels_list):
         original_name = name
         unified_name = None
         
-        # 清理原始名称：移除"-"后面的描述，并移除特殊符号
-        clean_name = remove_special_symbols(name.strip())
-        if '-' in clean_name:
-            clean_name = clean_name.split('-')[0].strip()
+        # 清理原始名称
+        clean_name = remove_special_symbols(name.strip().lower())
         
         # 先尝试精确匹配
         for standard_name, variants in CHANNEL_MAPPING.items():
             for variant in variants:
-                if exact_channel_match(clean_name, variant):
+                if exact_channel_match(name, variant):
                     unified_name = standard_name
                     break
             if unified_name:
@@ -750,7 +551,7 @@ def unify_channel_name(channels_list):
         # 如果没有找到精确匹配，尝试其他匹配策略
         if not unified_name:
             # 尝试处理CCTV数字频道
-            cctv_match = re.search(r'cctv[-_\s]?(\d+)', clean_name.lower(), re.IGNORECASE)
+            cctv_match = re.search(r'cctv[-_\s]?(\d+)', clean_name, re.IGNORECASE)
             if cctv_match:
                 cctv_num = cctv_match.group(1)
                 for standard_name, variants in CHANNEL_MAPPING.items():
@@ -760,9 +561,9 @@ def unify_channel_name(channels_list):
                             unified_name = standard_name
                             break
         
-        # 如果还是没有找到，保留清理后的名称
+        # 如果还是没有找到，保留原名称
         if not unified_name:
-            unified_name = clean_name
+            unified_name = original_name
         
         new_channels_list.append(f"{unified_name},{channel_url},{speed}\n")
         if original_name != unified_name:
