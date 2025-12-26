@@ -1,4 +1,74 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.113:8636
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.155:8914
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.151:8890
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.134:8786
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.152:8896
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.153:8902
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.156:8920
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.154:8908
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.157:8926
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.158:8932
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.150:9202
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.159:8938
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.13:8028
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.160:8944
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.202:9208
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.122:8008
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.61:8340
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.140:8852
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.180:9064
+#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.199:9178
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4 美洲" group-title="央视频道",CCTV-4 美洲$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.124:8002
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4 欧洲" group-title="央视频道",CCTV-4 欧洲$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.123:8000
+#EXTINF:-1 tvg-id="" tvg-name="中国天气" group-title="央视频道",中国天气$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.112:8654
+#EXTINF:-1 tvg-id="" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.207:8026
+#EXTINF:-1 tvg-id="" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.208:8030
+#EXTINF:-1 tvg-id="" tvg-name="CGTN法语" group-title="其它频道",CGTN法语$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.206:8024
+#EXTINF:-1 tvg-id="" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.137:8020
+#EXTINF:-1 tvg-id="" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.136:8018
+#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.125:8014
+#EXTINF:-1 tvg-id="" tvg-name="宁夏教育频道" group-title="其它频道",宁夏教育频道$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.200:9184
+#EXTINF:-1 tvg-id="" tvg-name="宁夏文旅频道" group-title="其它频道",宁夏文旅频道$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.93:8532
+#EXTINF:-1 tvg-id="" tvg-name="上海欢笑剧场" group-title="数字频道",上海欢笑剧场$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.64:8358
+#EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.74:8418
+#EXTINF:-1 tvg-id="" tvg-name="湖南金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",湖南金鹰纪实$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.167:8986
+#EXTINF:-1 tvg-id="" tvg-name="上海纪实人文" group-title="数字频道",上海纪实人文$宁夏电信
+http://111.113.88.146:2000/rtp/239.121.4.164:8968
 #EXTINF:-1 tvg-id="" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视$宁夏电信
 http://111.113.88.146:2000/rtp/239.121.4.94:8538
 #EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$宁夏电信
@@ -51,75 +121,5 @@ http://111.113.88.146:2000/rtp/239.121.4.21:8100
 http://111.113.88.146:2000/rtp/239.121.4.106:8610
 #EXTINF:-1 tvg-id="" tvg-name="银川文体频道" group-title="☘️宁夏回族自治区",银川文体频道$宁夏电信
 http://111.113.88.146:2000/rtp/239.121.4.22:8106
-#EXTINF:-1 tvg-id="" tvg-name="宁夏教育频道" group-title="其它频道",宁夏教育频道$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.200:9184
-#EXTINF:-1 tvg-id="" tvg-name="宁夏文旅频道" group-title="其它频道",宁夏文旅频道$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.93:8532
-#EXTINF:-1 tvg-id="" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.207:8026
-#EXTINF:-1 tvg-id="" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.208:8030
-#EXTINF:-1 tvg-id="" tvg-name="CGTN法语" group-title="其它频道",CGTN法语$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.206:8024
-#EXTINF:-1 tvg-id="" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.137:8020
-#EXTINF:-1 tvg-id="" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.136:8018
-#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.125:8014
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.113:8636
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.155:8914
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.151:8890
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.134:8786
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.152:8896
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.153:8902
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.156:8920
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.154:8908
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.157:8926
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.158:8932
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.150:9202
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.159:8938
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.13:8028
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.160:8944
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.202:9208
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.122:8008
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.61:8340
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.140:8852
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.180:9064
-#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.199:9178
-#EXTINF:-1 tvg-id="" tvg-name="中国天气" group-title="央视频道",中国天气$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.112:8654
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-4 美洲" group-title="央视频道",CCTV-4 美洲$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.124:8002
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-4 欧洲" group-title="央视频道",CCTV-4 欧洲$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.123:8000
-#EXTINF:-1 tvg-id="" tvg-name="湖南金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",湖南金鹰纪实$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.167:8986
-#EXTINF:-1 tvg-id="" tvg-name="上海欢笑剧场" group-title="数字频道",上海欢笑剧场$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.64:8358
-#EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.74:8418
-#EXTINF:-1 tvg-id="" tvg-name="上海纪实人文" group-title="数字频道",上海纪实人文$宁夏电信
-http://111.113.88.146:2000/rtp/239.121.4.164:8968
 #EXTINF:-1 tvg-id="" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经$宁夏电信
 http://111.113.88.146:2000/rtp/239.121.4.71:8400

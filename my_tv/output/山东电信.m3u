@@ -1,212 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.87:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.87:5002
-#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.89:5002
-#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.89:5002
-#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.158:5002
-#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.158:5002
-#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.90:5002
-#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.90:5002
-#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.93:5002
-#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.93:5002
-#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.163:5002
-#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.163:5002
-#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.88:5002
-#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.88:5002
-#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.113:5002
-#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.113:5002
-#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.111:5002
-#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.111:5002
-#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.92:5002
-#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.92:5002
-#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.2.15:5002
-#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.2.15:5002
-#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.233:5002
-#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.233:5002
-#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.165:5002
-#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.165:5002
-#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.159:5002
-#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.159:5002
-#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.167:5002
-#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.167:5002
-#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.168:5002
-#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.168:5002
-#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.2.37:5002
-#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.2.37:5002
-#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.2.49:5002
-#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.2.49:5002
-#EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.2.14:5002
-#EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.2.14:5002
-#EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.2.51:5002
-#EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.2.51:5002
-#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.2.22:5002
-#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.2.22:5002
-#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.166:5002
-#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.166:5002
-#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.164:5002
-#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.164:5002
-#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.28:5002
-#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.28:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东体育频道" group-title="☘️山东省",山东体育频道$山东电信
-http://144.255.31.40:6688/udp/239.21.1.141:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东体育频道" group-title="☘️山东省",山东体育频道$山东电信
-http://144.255.32.94:8288/udp/239.21.1.141:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东农科频道" group-title="☘️山东省",山东农科频道$山东电信
-http://144.255.31.40:6688/udp/239.21.1.183:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东农科频道" group-title="☘️山东省",山东农科频道$山东电信
-http://144.255.32.94:8288/udp/239.21.1.183:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东少儿频道" group-title="☘️山东省",山东少儿频道$山东电信
-http://144.255.31.40:6688/udp/239.21.1.208:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东少儿频道" group-title="☘️山东省",山东少儿频道$山东电信
-http://144.255.32.94:8288/udp/239.21.1.208:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东教育频道" group-title="☘️山东省",山东教育频道$山东电信
-http://144.255.31.40:6688/udp/239.21.1.169:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东教育频道" group-title="☘️山东省",山东教育频道$山东电信
-http://144.255.32.94:8288/udp/239.21.1.169:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东文旅频道" group-title="☘️山东省",山东文旅频道$山东电信
-http://144.255.31.40:6688/udp/239.21.1.176:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东文旅频道" group-title="☘️山东省",山东文旅频道$山东电信
-http://144.255.32.94:8288/udp/239.21.1.176:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东新闻频道" group-title="☘️山东省",山东新闻频道$山东电信
-http://144.255.31.40:6688/udp/239.21.1.140:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东新闻频道" group-title="☘️山东省",山东新闻频道$山东电信
-http://144.255.32.94:8288/udp/239.21.1.140:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东生活频道" group-title="☘️山东省",山东生活频道$山东电信
-http://144.255.31.40:6688/udp/239.21.1.175:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东生活频道" group-title="☘️山东省",山东生活频道$山东电信
-http://144.255.32.94:8288/udp/239.21.1.175:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东综艺频道" group-title="☘️山东省",山东综艺频道$山东电信
-http://144.255.31.40:6688/udp/239.21.1.177:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东综艺频道" group-title="☘️山东省",山东综艺频道$山东电信
-http://144.255.32.94:8288/udp/239.21.1.177:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东齐鲁频道" group-title="☘️山东省",山东齐鲁频道$山东电信
-http://144.255.31.40:6688/udp/239.21.1.134:5002
-#EXTINF:-1 tvg-id="" tvg-name="山东齐鲁频道" group-title="☘️山东省",山东齐鲁频道$山东电信
-http://144.255.32.94:8288/udp/239.21.1.134:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%8E%E5%8D%97%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️山东省",济南新闻综合$山东电信
-http://144.255.31.40:6688/udp/239.21.1.94:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%8E%E5%8D%97%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️山东省",济南新闻综合$山东电信
-http://144.255.32.94:8288/udp/239.21.1.94:5002
-#EXTINF:-1 tvg-id="" tvg-name="济宁综合频道" group-title="☘️山东省",济宁综合频道$山东电信
-http://144.255.31.40:6688/udp/239.21.2.19:5002
-#EXTINF:-1 tvg-id="" tvg-name="济宁综合频道" group-title="☘️山东省",济宁综合频道$山东电信
-http://144.255.32.94:8288/udp/239.21.2.19:5002
-#EXTINF:-1 tvg-id="" tvg-name="潍坊新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%BD%8D%E5%9D%8A%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️山东省",潍坊新闻综合$山东电信
-http://144.255.31.40:6688/udp/239.21.1.77:5002
-#EXTINF:-1 tvg-id="" tvg-name="潍坊新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%BD%8D%E5%9D%8A%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️山东省",潍坊新闻综合$山东电信
-http://144.255.32.94:8288/udp/239.21.1.77:5002
-#EXTINF:-1 tvg-id="" tvg-name="烟台新闻综合" tvg-logo="https://tb.zbds.top/logo/烟台新闻综合.png" group-title="☘️山东省",烟台新闻综合$山东电信
-http://144.255.31.40:6688/udp/239.21.1.116:5002
-#EXTINF:-1 tvg-id="" tvg-name="烟台新闻综合" tvg-logo="https://tb.zbds.top/logo/烟台新闻综合.png" group-title="☘️山东省",烟台新闻综合$山东电信
-http://144.255.32.94:8288/udp/239.21.1.116:5002
-#EXTINF:-1 tvg-id="" tvg-name="烟台经济科技" tvg-logo="https://tb.zbds.top/logo/烟台经济科技.png" group-title="☘️山东省",烟台经济科技$山东电信
-http://144.255.31.40:6688/udp/239.21.1.205:5002
-#EXTINF:-1 tvg-id="" tvg-name="烟台经济科技" tvg-logo="https://tb.zbds.top/logo/烟台经济科技.png" group-title="☘️山东省",烟台经济科技$山东电信
-http://144.255.32.94:8288/udp/239.21.1.205:5002
-#EXTINF:-1 tvg-id="" tvg-name="青州综合频道" group-title="☘️山东省",青州综合频道$山东电信
-http://144.255.31.40:6688/udp/239.21.1.232:5002
-#EXTINF:-1 tvg-id="" tvg-name="青州综合频道" group-title="☘️山东省",青州综合频道$山东电信
-http://144.255.32.94:8288/udp/239.21.1.232:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南教育频道" group-title="☘️山东省",济南教育频道$山东电信
-http://144.255.31.40:6688/udp/239.21.1.133:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南教育频道" group-title="☘️山东省",济南教育频道$山东电信
-http://144.255.32.94:8288/udp/239.21.1.133:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南娱乐" group-title="☘️山东省",济南娱乐$山东电信
-http://144.255.31.40:6688/udp/239.21.1.66:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南娱乐" group-title="☘️山东省",济南娱乐$山东电信
-http://144.255.32.94:8288/udp/239.21.1.66:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南少儿" group-title="☘️山东省",济南少儿$山东电信
-http://144.255.31.40:6688/udp/239.21.1.68:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南少儿" group-title="☘️山东省",济南少儿$山东电信
-http://144.255.32.94:8288/udp/239.21.1.68:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南影视" group-title="☘️山东省",济南影视$山东电信
-http://144.255.31.40:6688/udp/239.21.1.65:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南影视" group-title="☘️山东省",济南影视$山东电信
-http://144.255.32.94:8288/udp/239.21.1.65:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南生活" group-title="☘️山东省",济南生活$山东电信
-http://144.255.31.40:6688/udp/239.21.1.64:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南生活" group-title="☘️山东省",济南生活$山东电信
-http://144.255.32.94:8288/udp/239.21.1.64:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南都市" group-title="☘️山东省",济南都市$山东电信
-http://144.255.31.40:6688/udp/239.21.1.63:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南都市" group-title="☘️山东省",济南都市$山东电信
-http://144.255.32.94:8288/udp/239.21.1.63:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南鲁中" group-title="☘️山东省",济南鲁中$山东电信
-http://144.255.31.40:6688/udp/239.21.1.149:5002
-#EXTINF:-1 tvg-id="" tvg-name="济南鲁中" group-title="☘️山东省",济南鲁中$山东电信
-http://144.255.32.94:8288/udp/239.21.1.149:5002
-#EXTINF:-1 tvg-id="" tvg-name="烟台公共" group-title="☘️山东省",烟台公共$山东电信
-http://144.255.31.40:6688/udp/239.21.1.117:5002
-#EXTINF:-1 tvg-id="" tvg-name="烟台公共" group-title="☘️山东省",烟台公共$山东电信
-http://144.255.32.94:8288/udp/239.21.1.117:5002
-#EXTINF:-1 tvg-id="" tvg-name="济宁公共" group-title="☘️山东省",济宁公共$山东电信
-http://144.255.31.40:6688/udp/239.21.2.20:5002
-#EXTINF:-1 tvg-id="" tvg-name="济宁公共" group-title="☘️山东省",济宁公共$山东电信
-http://144.255.32.94:8288/udp/239.21.2.20:5002
-#EXTINF:-1 tvg-id="" tvg-name="淄博生活" group-title="☘️山东省",淄博生活$山东电信
-http://144.255.31.40:6688/udp/239.21.1.109:5002
-#EXTINF:-1 tvg-id="" tvg-name="淄博生活" group-title="☘️山东省",淄博生活$山东电信
-http://144.255.32.94:8288/udp/239.21.1.109:5002
-#EXTINF:-1 tvg-id="" tvg-name="淄博都市" group-title="☘️山东省",淄博都市$山东电信
-http://144.255.31.40:6688/udp/239.21.1.83:5002
-#EXTINF:-1 tvg-id="" tvg-name="淄博都市" group-title="☘️山东省",淄博都市$山东电信
-http://144.255.32.94:8288/udp/239.21.1.83:5002
-#EXTINF:-1 tvg-id="" tvg-name="日照科教" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%97%A5%E7%85%A7%E7%A7%91%E6%95%99.png" group-title="☘️山东省",日照科教$山东电信
-http://144.255.31.40:6688/udp/239.21.1.80:5002
-#EXTINF:-1 tvg-id="" tvg-name="日照科教" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%97%A5%E7%85%A7%E7%A7%91%E6%95%99.png" group-title="☘️山东省",日照科教$山东电信
-http://144.255.32.94:8288/udp/239.21.1.80:5002
-#EXTINF:-1 tvg-id="" tvg-name="滨州公共" group-title="☘️山东省",滨州公共$山东电信
-http://144.255.31.40:6688/udp/239.21.1.119:5002
-#EXTINF:-1 tvg-id="" tvg-name="滨州公共" group-title="☘️山东省",滨州公共$山东电信
-http://144.255.32.94:8288/udp/239.21.1.119:5002
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$山东电信
 http://144.255.31.40:6688/udp/239.21.1.120:5002
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$山东电信
@@ -287,6 +79,38 @@ http://144.255.32.94:8288/udp/239.21.2.29:5002
 http://144.255.31.40:6688/udp/239.21.2.28:5002
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4 欧洲" group-title="央视频道",CCTV-4 欧洲$山东电信
 http://144.255.32.94:8288/udp/239.21.2.28:5002
+#EXTINF:-1 tvg-id="" tvg-name="中国交通" group-title="其它频道",中国交通$山东电信
+http://144.255.31.40:6688/udp/239.21.1.115:5002
+#EXTINF:-1 tvg-id="" tvg-name="中国交通" group-title="其它频道",中国交通$山东电信
+http://144.255.32.94:8288/udp/239.21.1.115:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN" group-title="其它频道",CGTN$山东电信
+http://144.255.31.40:6688/udp/239.21.2.30:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN" group-title="其它频道",CGTN$山东电信
+http://144.255.32.94:8288/udp/239.21.2.30:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语$山东电信
+http://144.255.31.40:6688/udp/239.21.2.35:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语$山东电信
+http://144.255.32.94:8288/udp/239.21.2.35:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN法语" group-title="其它频道",CGTN法语$山东电信
+http://144.255.31.40:6688/udp/239.21.2.33:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN法语" group-title="其它频道",CGTN法语$山东电信
+http://144.255.32.94:8288/udp/239.21.2.33:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录$山东电信
+http://144.255.31.40:6688/udp/239.21.2.31:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录$山东电信
+http://144.255.32.94:8288/udp/239.21.2.31:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语$山东电信
+http://144.255.31.40:6688/udp/239.21.2.32:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语$山东电信
+http://144.255.32.94:8288/udp/239.21.2.32:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语$山东电信
+http://144.255.31.40:6688/udp/239.21.2.34:5002
+#EXTINF:-1 tvg-id="" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语$山东电信
+http://144.255.32.94:8288/udp/239.21.2.34:5002
+#EXTINF:-1 tvg-id="" tvg-name="海看剧场" group-title="其它频道",海看剧场$山东电信
+http://144.255.31.40:6688/udp/239.21.1.98:5002
+#EXTINF:-1 tvg-id="" tvg-name="海看剧场" group-title="其它频道",海看剧场$山东电信
+http://144.255.32.94:8288/udp/239.21.1.98:5002
 #EXTINF:-1 tvg-id="" tvg-name="宁阳综合频道" group-title="其它频道",宁阳综合频道$山东电信
 http://144.255.31.40:6688/udp/239.21.1.143:5002
 #EXTINF:-1 tvg-id="" tvg-name="宁阳综合频道" group-title="其它频道",宁阳综合频道$山东电信
@@ -531,38 +355,6 @@ http://144.255.32.94:8288/udp/239.21.1.139:5002
 http://144.255.31.40:6688/udp/239.21.1.114:5002
 #EXTINF:-1 tvg-id="" tvg-name="沂源新闻" group-title="其它频道",沂源新闻$山东电信
 http://144.255.32.94:8288/udp/239.21.1.114:5002
-#EXTINF:-1 tvg-id="" tvg-name="中国交通" group-title="其它频道",中国交通$山东电信
-http://144.255.31.40:6688/udp/239.21.1.115:5002
-#EXTINF:-1 tvg-id="" tvg-name="中国交通" group-title="其它频道",中国交通$山东电信
-http://144.255.32.94:8288/udp/239.21.1.115:5002
-#EXTINF:-1 tvg-id="" tvg-name="海看剧场" group-title="其它频道",海看剧场$山东电信
-http://144.255.31.40:6688/udp/239.21.1.98:5002
-#EXTINF:-1 tvg-id="" tvg-name="海看剧场" group-title="其它频道",海看剧场$山东电信
-http://144.255.32.94:8288/udp/239.21.1.98:5002
-#EXTINF:-1 tvg-id="" tvg-name="CGTN" group-title="其它频道",CGTN$山东电信
-http://144.255.31.40:6688/udp/239.21.2.30:5002
-#EXTINF:-1 tvg-id="" tvg-name="CGTN" group-title="其它频道",CGTN$山东电信
-http://144.255.32.94:8288/udp/239.21.2.30:5002
-#EXTINF:-1 tvg-id="" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语$山东电信
-http://144.255.31.40:6688/udp/239.21.2.35:5002
-#EXTINF:-1 tvg-id="" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语$山东电信
-http://144.255.32.94:8288/udp/239.21.2.35:5002
-#EXTINF:-1 tvg-id="" tvg-name="CGTN法语" group-title="其它频道",CGTN法语$山东电信
-http://144.255.31.40:6688/udp/239.21.2.33:5002
-#EXTINF:-1 tvg-id="" tvg-name="CGTN法语" group-title="其它频道",CGTN法语$山东电信
-http://144.255.32.94:8288/udp/239.21.2.33:5002
-#EXTINF:-1 tvg-id="" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录$山东电信
-http://144.255.31.40:6688/udp/239.21.2.31:5002
-#EXTINF:-1 tvg-id="" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录$山东电信
-http://144.255.32.94:8288/udp/239.21.2.31:5002
-#EXTINF:-1 tvg-id="" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语$山东电信
-http://144.255.31.40:6688/udp/239.21.2.32:5002
-#EXTINF:-1 tvg-id="" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语$山东电信
-http://144.255.32.94:8288/udp/239.21.2.32:5002
-#EXTINF:-1 tvg-id="" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语$山东电信
-http://144.255.31.40:6688/udp/239.21.2.34:5002
-#EXTINF:-1 tvg-id="" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语$山东电信
-http://144.255.32.94:8288/udp/239.21.2.34:5002
 #EXTINF:-1 tvg-id="" tvg-name="东明1" group-title="其它频道",东明1$山东电信
 http://144.255.31.40:6688/udp/239.21.1.246:5002
 #EXTINF:-1 tvg-id="" tvg-name="东明1" group-title="其它频道",东明1$山东电信
@@ -627,6 +419,214 @@ http://144.255.32.94:8288/udp/239.21.1.217:5002
 http://144.255.31.40:6688/udp/239.21.1.107:5002
 #EXTINF:-1 tvg-id="" tvg-name="长清新闻" group-title="其它频道",长清新闻$山东电信
 http://144.255.32.94:8288/udp/239.21.1.107:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.87:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.87:5002
+#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.89:5002
+#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.89:5002
+#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.158:5002
+#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.158:5002
+#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.90:5002
+#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.90:5002
+#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.93:5002
+#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.93:5002
+#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.163:5002
+#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.163:5002
+#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.88:5002
+#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.88:5002
+#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.113:5002
+#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.113:5002
+#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.111:5002
+#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.111:5002
+#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.92:5002
+#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.92:5002
+#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.2.15:5002
+#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.2.15:5002
+#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.233:5002
+#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.233:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.165:5002
+#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.165:5002
+#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.159:5002
+#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.159:5002
+#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.167:5002
+#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.167:5002
+#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.168:5002
+#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.168:5002
+#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.2.37:5002
+#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.2.37:5002
+#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.2.49:5002
+#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.2.49:5002
+#EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.2.14:5002
+#EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.2.14:5002
+#EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.2.51:5002
+#EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.2.51:5002
+#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.2.22:5002
+#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.2.22:5002
+#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.166:5002
+#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.166:5002
+#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.164:5002
+#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.164:5002
+#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.28:5002
+#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.28:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东体育频道" group-title="☘️山东省",山东体育频道$山东电信
+http://144.255.31.40:6688/udp/239.21.1.141:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东体育频道" group-title="☘️山东省",山东体育频道$山东电信
+http://144.255.32.94:8288/udp/239.21.1.141:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东农科频道" group-title="☘️山东省",山东农科频道$山东电信
+http://144.255.31.40:6688/udp/239.21.1.183:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东农科频道" group-title="☘️山东省",山东农科频道$山东电信
+http://144.255.32.94:8288/udp/239.21.1.183:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东少儿频道" group-title="☘️山东省",山东少儿频道$山东电信
+http://144.255.31.40:6688/udp/239.21.1.208:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东少儿频道" group-title="☘️山东省",山东少儿频道$山东电信
+http://144.255.32.94:8288/udp/239.21.1.208:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东教育频道" group-title="☘️山东省",山东教育频道$山东电信
+http://144.255.31.40:6688/udp/239.21.1.169:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东教育频道" group-title="☘️山东省",山东教育频道$山东电信
+http://144.255.32.94:8288/udp/239.21.1.169:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东文旅频道" group-title="☘️山东省",山东文旅频道$山东电信
+http://144.255.31.40:6688/udp/239.21.1.176:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东文旅频道" group-title="☘️山东省",山东文旅频道$山东电信
+http://144.255.32.94:8288/udp/239.21.1.176:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东新闻频道" group-title="☘️山东省",山东新闻频道$山东电信
+http://144.255.31.40:6688/udp/239.21.1.140:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东新闻频道" group-title="☘️山东省",山东新闻频道$山东电信
+http://144.255.32.94:8288/udp/239.21.1.140:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东生活频道" group-title="☘️山东省",山东生活频道$山东电信
+http://144.255.31.40:6688/udp/239.21.1.175:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东生活频道" group-title="☘️山东省",山东生活频道$山东电信
+http://144.255.32.94:8288/udp/239.21.1.175:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东综艺频道" group-title="☘️山东省",山东综艺频道$山东电信
+http://144.255.31.40:6688/udp/239.21.1.177:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东综艺频道" group-title="☘️山东省",山东综艺频道$山东电信
+http://144.255.32.94:8288/udp/239.21.1.177:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东齐鲁频道" group-title="☘️山东省",山东齐鲁频道$山东电信
+http://144.255.31.40:6688/udp/239.21.1.134:5002
+#EXTINF:-1 tvg-id="" tvg-name="山东齐鲁频道" group-title="☘️山东省",山东齐鲁频道$山东电信
+http://144.255.32.94:8288/udp/239.21.1.134:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%8E%E5%8D%97%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️山东省",济南新闻综合$山东电信
+http://144.255.31.40:6688/udp/239.21.1.94:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%8E%E5%8D%97%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️山东省",济南新闻综合$山东电信
+http://144.255.32.94:8288/udp/239.21.1.94:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南娱乐" group-title="☘️山东省",济南娱乐$山东电信
+http://144.255.31.40:6688/udp/239.21.1.66:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南娱乐" group-title="☘️山东省",济南娱乐$山东电信
+http://144.255.32.94:8288/udp/239.21.1.66:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南少儿" group-title="☘️山东省",济南少儿$山东电信
+http://144.255.31.40:6688/udp/239.21.1.68:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南少儿" group-title="☘️山东省",济南少儿$山东电信
+http://144.255.32.94:8288/udp/239.21.1.68:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南影视" group-title="☘️山东省",济南影视$山东电信
+http://144.255.31.40:6688/udp/239.21.1.65:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南影视" group-title="☘️山东省",济南影视$山东电信
+http://144.255.32.94:8288/udp/239.21.1.65:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南生活" group-title="☘️山东省",济南生活$山东电信
+http://144.255.31.40:6688/udp/239.21.1.64:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南生活" group-title="☘️山东省",济南生活$山东电信
+http://144.255.32.94:8288/udp/239.21.1.64:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南都市" group-title="☘️山东省",济南都市$山东电信
+http://144.255.31.40:6688/udp/239.21.1.63:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南都市" group-title="☘️山东省",济南都市$山东电信
+http://144.255.32.94:8288/udp/239.21.1.63:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南鲁中" group-title="☘️山东省",济南鲁中$山东电信
+http://144.255.31.40:6688/udp/239.21.1.149:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南鲁中" group-title="☘️山东省",济南鲁中$山东电信
+http://144.255.32.94:8288/udp/239.21.1.149:5002
+#EXTINF:-1 tvg-id="" tvg-name="济宁综合频道" group-title="☘️山东省",济宁综合频道$山东电信
+http://144.255.31.40:6688/udp/239.21.2.19:5002
+#EXTINF:-1 tvg-id="" tvg-name="济宁综合频道" group-title="☘️山东省",济宁综合频道$山东电信
+http://144.255.32.94:8288/udp/239.21.2.19:5002
+#EXTINF:-1 tvg-id="" tvg-name="潍坊新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%BD%8D%E5%9D%8A%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️山东省",潍坊新闻综合$山东电信
+http://144.255.31.40:6688/udp/239.21.1.77:5002
+#EXTINF:-1 tvg-id="" tvg-name="潍坊新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%BD%8D%E5%9D%8A%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️山东省",潍坊新闻综合$山东电信
+http://144.255.32.94:8288/udp/239.21.1.77:5002
+#EXTINF:-1 tvg-id="" tvg-name="烟台新闻综合" tvg-logo="https://tb.zbds.top/logo/烟台新闻综合.png" group-title="☘️山东省",烟台新闻综合$山东电信
+http://144.255.31.40:6688/udp/239.21.1.116:5002
+#EXTINF:-1 tvg-id="" tvg-name="烟台新闻综合" tvg-logo="https://tb.zbds.top/logo/烟台新闻综合.png" group-title="☘️山东省",烟台新闻综合$山东电信
+http://144.255.32.94:8288/udp/239.21.1.116:5002
+#EXTINF:-1 tvg-id="" tvg-name="烟台经济科技" tvg-logo="https://tb.zbds.top/logo/烟台经济科技.png" group-title="☘️山东省",烟台经济科技$山东电信
+http://144.255.31.40:6688/udp/239.21.1.205:5002
+#EXTINF:-1 tvg-id="" tvg-name="烟台经济科技" tvg-logo="https://tb.zbds.top/logo/烟台经济科技.png" group-title="☘️山东省",烟台经济科技$山东电信
+http://144.255.32.94:8288/udp/239.21.1.205:5002
+#EXTINF:-1 tvg-id="" tvg-name="青州综合频道" group-title="☘️山东省",青州综合频道$山东电信
+http://144.255.31.40:6688/udp/239.21.1.232:5002
+#EXTINF:-1 tvg-id="" tvg-name="青州综合频道" group-title="☘️山东省",青州综合频道$山东电信
+http://144.255.32.94:8288/udp/239.21.1.232:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南教育频道" group-title="☘️山东省",济南教育频道$山东电信
+http://144.255.31.40:6688/udp/239.21.1.133:5002
+#EXTINF:-1 tvg-id="" tvg-name="济南教育频道" group-title="☘️山东省",济南教育频道$山东电信
+http://144.255.32.94:8288/udp/239.21.1.133:5002
+#EXTINF:-1 tvg-id="" tvg-name="烟台公共" group-title="☘️山东省",烟台公共$山东电信
+http://144.255.31.40:6688/udp/239.21.1.117:5002
+#EXTINF:-1 tvg-id="" tvg-name="烟台公共" group-title="☘️山东省",烟台公共$山东电信
+http://144.255.32.94:8288/udp/239.21.1.117:5002
+#EXTINF:-1 tvg-id="" tvg-name="济宁公共" group-title="☘️山东省",济宁公共$山东电信
+http://144.255.31.40:6688/udp/239.21.2.20:5002
+#EXTINF:-1 tvg-id="" tvg-name="济宁公共" group-title="☘️山东省",济宁公共$山东电信
+http://144.255.32.94:8288/udp/239.21.2.20:5002
+#EXTINF:-1 tvg-id="" tvg-name="淄博生活" group-title="☘️山东省",淄博生活$山东电信
+http://144.255.31.40:6688/udp/239.21.1.109:5002
+#EXTINF:-1 tvg-id="" tvg-name="淄博生活" group-title="☘️山东省",淄博生活$山东电信
+http://144.255.32.94:8288/udp/239.21.1.109:5002
+#EXTINF:-1 tvg-id="" tvg-name="淄博都市" group-title="☘️山东省",淄博都市$山东电信
+http://144.255.31.40:6688/udp/239.21.1.83:5002
+#EXTINF:-1 tvg-id="" tvg-name="淄博都市" group-title="☘️山东省",淄博都市$山东电信
+http://144.255.32.94:8288/udp/239.21.1.83:5002
+#EXTINF:-1 tvg-id="" tvg-name="日照科教" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%97%A5%E7%85%A7%E7%A7%91%E6%95%99.png" group-title="☘️山东省",日照科教$山东电信
+http://144.255.31.40:6688/udp/239.21.1.80:5002
+#EXTINF:-1 tvg-id="" tvg-name="日照科教" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%97%A5%E7%85%A7%E7%A7%91%E6%95%99.png" group-title="☘️山东省",日照科教$山东电信
+http://144.255.32.94:8288/udp/239.21.1.80:5002
+#EXTINF:-1 tvg-id="" tvg-name="滨州公共" group-title="☘️山东省",滨州公共$山东电信
+http://144.255.31.40:6688/udp/239.21.1.119:5002
+#EXTINF:-1 tvg-id="" tvg-name="滨州公共" group-title="☘️山东省",滨州公共$山东电信
+http://144.255.32.94:8288/udp/239.21.1.119:5002
 #EXTINF:-1 tvg-id="" tvg-name="BRTV纪实科教" group-title="数字频道",BRTV纪实科教$山东电信
 http://144.255.31.40:6688/udp/239.21.1.172:5002
 #EXTINF:-1 tvg-id="" tvg-name="BRTV纪实科教" group-title="数字频道",BRTV纪实科教$山东电信

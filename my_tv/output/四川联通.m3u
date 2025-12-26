@@ -1,4 +1,92 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.10:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.11:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.12:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.13:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.14:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.22:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.15:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.16:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.17:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.18:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.19:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.187:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.20:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.190:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.21:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.188:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.152:5140
+#EXTINF:-1 tvg-id="" tvg-name="CCTV4K超高清" group-title="央视频道",CCTV4K超高清$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.184:5140
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.51:5140
+#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.196:5140
+#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.98:5140
+#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.49:5140
+#EXTINF:-1 tvg-id="" tvg-name="中国交通" group-title="其它频道",中国交通$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.143:5140
+#EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.53:5140
+#EXTINF:-1 tvg-id="" tvg-name="西藏藏语频道" group-title="其它频道",西藏藏语频道$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.105:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川文化旅游" group-title="其它频道",四川文化旅游$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.3:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川妇女儿童" group-title="其它频道",四川妇女儿童$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.7:5140
+#EXTINF:-1 tvg-id="" tvg-name="四川乡村频道" group-title="其它频道",四川乡村频道$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.8:5140
+#EXTINF:-1 tvg-id="" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="其它频道",茶频道$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.36:5140
+#EXTINF:-1 tvg-id="" tvg-name="先锋乒羽" group-title="其它频道",先锋乒羽$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.37:5140
+#EXTINF:-1 tvg-id="" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.23:5140
+#EXTINF:-1 tvg-id="" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.24:5140
+#EXTINF:-1 tvg-id="" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.25:5140
+#EXTINF:-1 tvg-id="" tvg-name="精彩影视" group-title="数字频道",精彩影视$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.26:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海欢笑剧场4K" group-title="数字频道",上海欢笑剧场4K$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.201:5140
+#EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.95:5140
+#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" group-title="数字频道",卡酷少儿$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.75:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.28:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海金色学堂" group-title="数字频道",上海金色学堂$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.32:5140
+#EXTINF:-1 tvg-id="" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.77:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海乐游频道" group-title="数字频道",上海乐游频道$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.30:5140
+#EXTINF:-1 tvg-id="" tvg-name="上海法治天地" group-title="数字频道",上海法治天地$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.33:5140
+#EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.69:5140
+#EXTINF:-1 tvg-id="" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.40:5140
 #EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.1:5140
 #EXTINF:-1 tvg-id="" tvg-name="康巴卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BA%B7%E5%B7%B4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",康巴卫视$四川联通
@@ -43,6 +131,8 @@ http://221.10.226.195:5000/rtp/239.0.0.63:5140
 http://221.10.226.195:5000/rtp/239.0.0.56:5140
 #EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.66:5140
+#EXTINF:-1 tvg-id="" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视$四川联通
+http://221.10.226.195:5000/rtp/239.0.0.197:5140
 #EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.71:5140
 #EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$四川联通
@@ -71,8 +161,6 @@ http://221.10.226.195:5000/rtp/239.0.0.195:5140
 http://221.10.226.195:5000/rtp/239.0.0.109:5140
 #EXTINF:-1 tvg-id="" tvg-name="兵团卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",兵团卫视$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.183:5140
-#EXTINF:-1 tvg-id="" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.197:5140
 #EXTINF:-1 tvg-id="" tvg-name="延边卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BB%B6%E8%BE%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",延边卫视$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.76:5140
 #EXTINF:-1 tvg-id="" tvg-name="四川经济频道" group-title="☘️四川省",四川经济频道$四川联通
@@ -85,95 +173,3 @@ http://221.10.226.195:5000/rtp/239.0.0.5:5140
 http://221.10.226.195:5000/rtp/239.0.0.186:5140
 #EXTINF:-1 tvg-id="" tvg-name="四川峨眉电影" group-title="☘️四川省",四川峨眉电影$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.9:5140
-#EXTINF:-1 tvg-id="" tvg-name="四川文化旅游" group-title="其它频道",四川文化旅游$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.3:5140
-#EXTINF:-1 tvg-id="" tvg-name="四川妇女儿童" group-title="其它频道",四川妇女儿童$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.7:5140
-#EXTINF:-1 tvg-id="" tvg-name="四川乡村频道" group-title="其它频道",四川乡村频道$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.8:5140
-#EXTINF:-1 tvg-id="" tvg-name="四川星空购物" group-title="其它频道",四川星空购物$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.6:5140
-#EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.53:5140
-#EXTINF:-1 tvg-id="" tvg-name="西藏藏语频道" group-title="其它频道",西藏藏语频道$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.105:5140
-#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.49:5140
-#EXTINF:-1 tvg-id="" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="其它频道",茶频道$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.36:5140
-#EXTINF:-1 tvg-id="" tvg-name="中国交通" group-title="其它频道",中国交通$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.143:5140
-#EXTINF:-1 tvg-id="" tvg-name="财富天下" group-title="其它频道",财富天下$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.34:5140
-#EXTINF:-1 tvg-id="" tvg-name="先锋乒羽" group-title="其它频道",先锋乒羽$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.37:5140
-#EXTINF:-1 tvg-id="" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.23:5140
-#EXTINF:-1 tvg-id="" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.24:5140
-#EXTINF:-1 tvg-id="" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.25:5140
-#EXTINF:-1 tvg-id="" tvg-name="精彩影视" group-title="数字频道",精彩影视$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.26:5140
-#EXTINF:-1 tvg-id="" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.77:5140
-#EXTINF:-1 tvg-id="" tvg-name="上海欢笑剧场4K" group-title="数字频道",上海欢笑剧场4K$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.201:5140
-#EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.28:5140
-#EXTINF:-1 tvg-id="" tvg-name="上海乐游频道" group-title="数字频道",上海乐游频道$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.30:5140
-#EXTINF:-1 tvg-id="" tvg-name="上海金色学堂" group-title="数字频道",上海金色学堂$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.32:5140
-#EXTINF:-1 tvg-id="" tvg-name="上海法治天地" group-title="数字频道",上海法治天地$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.33:5140
-#EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.69:5140
-#EXTINF:-1 tvg-id="" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.40:5140
-#EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.95:5140
-#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" group-title="数字频道",卡酷少儿$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.75:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.10:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.11:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.12:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.13:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.14:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.22:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.15:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.16:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.17:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.18:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.19:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.187:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.20:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.190:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.21:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.188:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.152:5140
-#EXTINF:-1 tvg-id="" tvg-name="CCTV4K超高清" group-title="央视频道",CCTV4K超高清$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.184:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.51:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.196:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$四川联通
-http://221.10.226.195:5000/rtp/239.0.0.98:5140
