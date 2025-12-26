@@ -191,12 +191,8 @@ def main():
                 f.write('\n'.join(valid_ip_ports))
             print(f"{province_name}: 保存 {len(valid_ip_ports)} 个有效IP到 {result_filename}")
         else:
-            # 如果没有有效IP，也创建一个空的_good_ip.txt文件
-            result_filename = f"{province_name}_good_ip.txt"
-            result_path = os.path.join(ip_dir, result_filename)
-            with open(result_path, 'w', encoding='utf-8') as f:
-                f.write("")
-            print(f"{province_name}: 没有找到有效IP")
+            # 修改：不创建空的_good_ip.txt文件
+            print(f"{province_name}: 没有找到有效IP，不生成结果文件")
         
         print("-" * 50)
     
