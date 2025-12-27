@@ -18,46 +18,7 @@ CITY_STREAMS = {
     "北京联通": ["rtp/239.3.1.241:8000"],
     "江苏电信": ["udp/239.49.8.19:9614"],
     "四川电信": ["udp/239.93.0.169:5140"],
-    "四川移动": ["rtp/239.11.0.78:5140"],
-    "四川联通": ["rtp/239.0.0.1:5140"],
     "上海电信": ["rtp/239.45.3.146:5140"],
-    "云南电信": ["rtp/239.200.200.145:8840"],
-    "内蒙古电信": ["rtp/239.29.0.2:5000"],
-    "吉林电信": ["rtp/239.37.0.125:5540"],
-    "天津电信": ["rtp/239.5.1.1:5000"],
-    "天津联通": ["rtp/225.1.1.111:5002"],
-    "宁夏电信": ["rtp/239.121.4.94:8538"],
-    "山东电信": ["udp/239.21.1.87:5002"],
-    "山东联通": ["rtp/239.253.254.78:8000"],
-    "山西电信": ["udp/239.1.1.1:8001"],
-    "山西联通": ["rtp/226.0.2.152:9128"],
-    "广东电信": ["udp/239.77.1.19:5146"],
-    "广东移动": ["rtp/239.20.0.101:2000"],
-    "广东联通": ["udp/239.0.1.1:5001"],
-    "广西电信": ["udp/239.81.0.107:4056"],
-    "新疆电信": ["udp/238.125.3.174:5140"],
-    "江西电信": ["udp/239.252.220.63:5140"],
-    "河北电信": ["rtp/239.254.200.174:6000"],
-    "河北联通": ["rtp/239.253.92.154:6011"],
-    "河南电信": ["rtp/239.16.20.21:10210"],    
-    "河南联通": ["rtp/225.1.4.98:1127"],
-    "浙江电信": ["udp/233.50.201.100:5140"],
-    "海南电信": ["rtp/239.253.64.253:5140"],
-    "海南联通": ["rtp/239.254.96.179:7154"],
-    "湖北电信": ["rtp/239.254.96.115:8664"],
-    "湖北联通": ["rtp/228.0.0.60:6108"],
-    "湖南电信": ["udp/239.76.253.101:9000"],
-    "甘肃电信": ["udp/239.255.30.249:8231"],
-    "福建电信": ["rtp/239.61.2.132:8708"],
-    "福建联通": ["rtp/239.255.40.149:8208"],
-    "贵州电信": ["rtp/238.255.2.1:5999"],
-    "辽宁联通": ["rtp/232.0.0.126:1234"],
-    "重庆电信": ["rtp/235.254.196.249:1268"],
-    "重庆联通": ["udp/225.0.4.187:7980"],
-    "陕西电信": ["rtp/239.111.205.35:5140"],
-    "青海电信": ["rtp/239.120.1.64:8332"],
-    "黑龙江联通": ["rtp/229.58.190.150:5000"],
-    "": [""],
     # 可以根据需要添加更多城市
 }
 
@@ -662,10 +623,36 @@ def generate_files_for_city(city_name, top_ips, logo_dict, channels, channel_tem
         traceback.print_exc()
         return None, None
 
-def merge_all_files(channel_template):
-    """合并所有城市的TXT和M3U文件，按照频道模板排序"""
+def get_ip_speed(ip_port, city_name):
+    """从IP文件中获取IP的速度"""
+    ip_file = os.path.join(MY_TV_DIR, "ip", f"{city_name}_ip.txt")
+    if not os.path.exists(ip_file):
+        return 0
+    
+    try:
+        with open(ip_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if ip_port in line and "KB/s" in line:
+                    # 解析速度
+                    parts = line.split()
+                    for part in parts[1:]:
+                        if 'KB/s' in part:
+                            speed_str = part.replace('KB/s', '')
+                            try:
+                                return float(speed_str)
+                            except ValueError:
+                                pass
+    except:
+        pass
+    
+    return 0
+
+def merge_all_files(channel_template, max_sources_per_channel=10):
+    """合并所有城市的TXT和M3U文件，按照频道模板排序，每个频道最多保留max_sources_per_channel个源"""
     print(f"\n开始合并所有文件...")
     print(f"输出目录: {OUTPUT_DIR}")
+    print(f"每个频道最多保留 {max_sources_per_channel} 个最快的源")
     
     try:
         # 列出输出目录中的文件
@@ -702,8 +689,8 @@ def merge_all_files(channel_template):
             now = datetime.datetime.utcnow() + timedelta(hours=8)
         current_time = now.strftime("%Y/%m/%d %H:%M")
         
-        # 收集所有频道
-        all_channels = {}
+        # 收集所有频道及其源
+        all_channels_with_sources = {}  # 格式: {main_channel: [(speed, original_channel_name, url, city, ip_port), ...]}
         
         # 先收集所有频道的源
         for txt_file in txt_files:
@@ -731,20 +718,25 @@ def merge_all_files(channel_template):
                                 channel_url = channel_part
                                 city = city_name
                             
-                            # 将频道名称转换为主频道名
-                            main_channel_name = get_main_channel_name(channel_name, channel_template)
-                            
-                            if main_channel_name not in all_channels:
-                                all_channels[main_channel_name] = {}
-                            
-                            if current_category not in all_channels[main_channel_name]:
-                                all_channels[main_channel_name][current_category] = []
-                            
-                            all_channels[main_channel_name][current_category].append((channel_name, channel_url, city))
+                            # 从URL中提取IP:端口
+                            url_parts = channel_url.split('/')
+                            if len(url_parts) >= 3:
+                                ip_port = url_parts[2]  # http://ip_port/...
+                                
+                                # 获取IP速度
+                                speed = get_ip_speed(ip_port, city)
+                                
+                                # 将频道名称转换为主频道名
+                                main_channel_name = get_main_channel_name(channel_name, channel_template)
+                                
+                                if main_channel_name not in all_channels_with_sources:
+                                    all_channels_with_sources[main_channel_name] = []
+                                
+                                all_channels_with_sources[main_channel_name].append((speed, channel_name, channel_url, city, ip_port))
         
-        print(f"总共收集到 {len(all_channels)} 个不同的频道（已转换为主频道）")
+        print(f"总共收集到 {len(all_channels_with_sources)} 个不同的频道（已转换为主频道）")
         
-        # 重新组织频道，按照模板分类
+        # 对每个频道的源按速度排序，并限制数量
         organized_channels = {}
         
         # 初始化所有分类
@@ -754,8 +746,15 @@ def merge_all_files(channel_template):
         # 添加"其它频道"分类
         organized_channels["其它频道"] = {}
         
-        # 将频道分配到模板分类中
-        for main_channel_name, categories_dict in all_channels.items():
+        # 将频道分配到模板分类中，并对每个频道的源进行排序和限制
+        for main_channel_name, sources in all_channels_with_sources.items():
+            # 按速度排序（从高到低）
+            sources.sort(key=lambda x: x[0], reverse=True)
+            
+            # 限制每个频道的源数量
+            limited_sources = sources[:max_sources_per_channel]
+            
+            # 获取频道分类
             category = get_channel_category(main_channel_name, channel_template)
             
             if category not in organized_channels:
@@ -764,9 +763,8 @@ def merge_all_files(channel_template):
             if main_channel_name not in organized_channels[category]:
                 organized_channels[category][main_channel_name] = []
             
-            for original_category, sources in categories_dict.items():
-                for original_channel_name, url, city in sources:
-                    organized_channels[category][main_channel_name].append((original_channel_name, url, city))
+            for speed, original_channel_name, url, city, ip_port in limited_sources:
+                organized_channels[category][main_channel_name].append((original_channel_name, url, city))
         
         # 写入合并的TXT文件 - 保存在my_tv文件夹下
         merged_txt_file = os.path.join(MY_TV_DIR, "zubo_all.txt")
@@ -781,7 +779,7 @@ def merge_all_files(channel_template):
                     for main_channel, aliases in channel_template[category]:
                         if main_channel in organized_channels[category]:
                             for original_channel_name, url, city in organized_channels[category][main_channel]:
-                                # 这里的关键：使用主频道名而不是原始频道名
+                                # 使用主频道名
                                 f.write(f"{main_channel},{url}${city}\n")
         
         # 处理"其它频道"分类
@@ -969,7 +967,8 @@ def main():
         print(f"\n{'='*60}")
         print("开始合并所有文件...")
         print(f"{'='*60}")
-        merge_all_files(channel_template)
+        # 每个频道最多10个源
+        merge_all_files(channel_template, max_sources_per_channel=10)
     else:
         print(f"\n✗ 没有成功处理任何城市，跳过合并")
     
@@ -978,9 +977,9 @@ def main():
     print(f"输出文件:")
     print(f"  - IP文件: {os.path.join(MY_TV_DIR, 'ip')} 目录下")
     print(f"  - 单个城市文件: {OUTPUT_DIR} 目录下")
-    print(f"  - 合并文件: {os.path.join(MY_TV_DIR, 'zubo_all.txt')}")
-    print(f"  - 合并文件: {os.path.join(MY_TV_DIR, 'zubo_all.m3u')}")
-    print(f"  - 简化文件: {os.path.join(MY_TV_DIR, 'zubo_simple.txt')}")
+    print(f"  - 合并文件: {os.path.join(MY_TV_DIR, 'zubo_all.txt')} (每个频道最多10个最快的源)")
+    print(f"  - 合并文件: {os.path.join(MY_TV_DIR, 'zubo_all.m3u')} (每个频道最多10个最快的源)")
+    print(f"  - 简化文件: {os.path.join(MY_TV_DIR, 'zubo_simple.txt')} (每个频道1个最快的源)")
     print(f"{'='*60}")
     
     # 打印生成的文件列表
