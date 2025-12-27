@@ -1,689 +1,689 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="" tvg-name="九画面" group-title="其它频道",九画面$湖南电信
-http://58.46.71.197:8188/udp/239.76.245.131:1234
-#EXTINF:-1 tvg-id="" tvg-name="九画面" group-title="其它频道",九画面$湖南电信
 http://175.8.183.5:7878/udp/239.76.245.131:1234
-#EXTINF:-1 tvg-id="" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="其它频道",茶频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.239:9000
+#EXTINF:-1 tvg-id="" tvg-name="九画面" group-title="其它频道",九画面$湖南电信
+http://58.46.71.197:8188/udp/239.76.245.131:1234
 #EXTINF:-1 tvg-id="" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="其它频道",茶频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.239:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-文化精品" group-title="其它频道",CCTV-文化精品$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.56:9000
+#EXTINF:-1 tvg-id="" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="其它频道",茶频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.239:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-文化精品" group-title="其它频道",CCTV-文化精品$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.56:9000
-#EXTINF:-1 tvg-id="" tvg-name="试播4K超高清" group-title="其它频道",试播4K超高清$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.214:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-文化精品" group-title="其它频道",CCTV-文化精品$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.56:9000
 #EXTINF:-1 tvg-id="" tvg-name="试播4K超高清" group-title="其它频道",试播4K超高清$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.214:9000
-#EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.76:9000
+#EXTINF:-1 tvg-id="" tvg-name="试播4K超高清" group-title="其它频道",试播4K超高清$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.214:9000
 #EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.76:9000
-#EXTINF:-1 tvg-id="" tvg-name="北京KAKU少儿" group-title="其它频道",北京KAKU少儿$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.81:9000
+#EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.76:9000
 #EXTINF:-1 tvg-id="" tvg-name="北京KAKU少儿" group-title="其它频道",北京KAKU少儿$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.81:9000
-#EXTINF:-1 tvg-id="" tvg-name="上海游戏风云" group-title="其它频道",上海游戏风云$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.71:9000
+#EXTINF:-1 tvg-id="" tvg-name="北京KAKU少儿" group-title="其它频道",北京KAKU少儿$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.81:9000
 #EXTINF:-1 tvg-id="" tvg-name="上海游戏风云" group-title="其它频道",上海游戏风云$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.71:9000
-#EXTINF:-1 tvg-id="" tvg-name="河南文物宝库" group-title="其它频道",河南文物宝库$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.180:9000
+#EXTINF:-1 tvg-id="" tvg-name="上海游戏风云" group-title="其它频道",上海游戏风云$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.71:9000
 #EXTINF:-1 tvg-id="" tvg-name="河南文物宝库" group-title="其它频道",河南文物宝库$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.180:9000
-#EXTINF:-1 tvg-id="" tvg-name="河南武术世界" group-title="其它频道",河南武术世界$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.181:9000
+#EXTINF:-1 tvg-id="" tvg-name="河南文物宝库" group-title="其它频道",河南文物宝库$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.180:9000
 #EXTINF:-1 tvg-id="" tvg-name="河南武术世界" group-title="其它频道",河南武术世界$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.181:9000
-#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.66:9000
+#EXTINF:-1 tvg-id="" tvg-name="河南武术世界" group-title="其它频道",河南武术世界$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.181:9000
 #EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.66:9000
-#EXTINF:-1 tvg-id="" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.67:9000
+#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.66:9000
 #EXTINF:-1 tvg-id="" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.67:9000
-#EXTINF:-1 tvg-id="" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.86:9000
+#EXTINF:-1 tvg-id="" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.67:9000
 #EXTINF:-1 tvg-id="" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.86:9000
-#EXTINF:-1 tvg-id="" tvg-name="CGTN法语" group-title="其它频道",CGTN法语$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.87:9000
+#EXTINF:-1 tvg-id="" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.86:9000
 #EXTINF:-1 tvg-id="" tvg-name="CGTN法语" group-title="其它频道",CGTN法语$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.87:9000
-#EXTINF:-1 tvg-id="" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.88:9000
+#EXTINF:-1 tvg-id="" tvg-name="CGTN法语" group-title="其它频道",CGTN法语$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.87:9000
 #EXTINF:-1 tvg-id="" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.88:9000
-#EXTINF:-1 tvg-id="" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.97:9000
+#EXTINF:-1 tvg-id="" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.88:9000
 #EXTINF:-1 tvg-id="" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.97:9000
-#EXTINF:-1 tvg-id="" tvg-name="天元围棋" group-title="其它频道",天元围棋$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.2:9000
+#EXTINF:-1 tvg-id="" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.97:9000
 #EXTINF:-1 tvg-id="" tvg-name="天元围棋" group-title="其它频道",天元围棋$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.2:9000
-#EXTINF:-1 tvg-id="" tvg-name="长沙文旅频道" group-title="其它频道",长沙文旅频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.42:9000
+#EXTINF:-1 tvg-id="" tvg-name="天元围棋" group-title="其它频道",天元围棋$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.2:9000
 #EXTINF:-1 tvg-id="" tvg-name="长沙文旅频道" group-title="其它频道",长沙文旅频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.42:9000
-#EXTINF:-1 tvg-id="" tvg-name="岳阳新闻综合" group-title="其它频道",岳阳新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.7:9000
+#EXTINF:-1 tvg-id="" tvg-name="长沙文旅频道" group-title="其它频道",长沙文旅频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.42:9000
 #EXTINF:-1 tvg-id="" tvg-name="岳阳新闻综合" group-title="其它频道",岳阳新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.7:9000
-#EXTINF:-1 tvg-id="" tvg-name="岳阳文旅都市" group-title="其它频道",岳阳文旅都市$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.8:9000
+#EXTINF:-1 tvg-id="" tvg-name="岳阳新闻综合" group-title="其它频道",岳阳新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.7:9000
 #EXTINF:-1 tvg-id="" tvg-name="岳阳文旅都市" group-title="其它频道",岳阳文旅都市$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.8:9000
-#EXTINF:-1 tvg-id="" tvg-name="张家界1新闻综合" group-title="其它频道",张家界1新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.234:9000
+#EXTINF:-1 tvg-id="" tvg-name="岳阳文旅都市" group-title="其它频道",岳阳文旅都市$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.8:9000
 #EXTINF:-1 tvg-id="" tvg-name="张家界1新闻综合" group-title="其它频道",张家界1新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.234:9000
-#EXTINF:-1 tvg-id="" tvg-name="张家界2公共频道" group-title="其它频道",张家界2公共频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.235:9000
+#EXTINF:-1 tvg-id="" tvg-name="张家界1新闻综合" group-title="其它频道",张家界1新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.234:9000
 #EXTINF:-1 tvg-id="" tvg-name="张家界2公共频道" group-title="其它频道",张家界2公共频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.235:9000
-#EXTINF:-1 tvg-id="" tvg-name="湘西新闻综合" group-title="其它频道",湘西新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.208:9000
+#EXTINF:-1 tvg-id="" tvg-name="张家界2公共频道" group-title="其它频道",张家界2公共频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.235:9000
 #EXTINF:-1 tvg-id="" tvg-name="湘西新闻综合" group-title="其它频道",湘西新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.208:9000
-#EXTINF:-1 tvg-id="" tvg-name="湘西文化旅游" group-title="其它频道",湘西文化旅游$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.209:9000
+#EXTINF:-1 tvg-id="" tvg-name="湘西新闻综合" group-title="其它频道",湘西新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.208:9000
 #EXTINF:-1 tvg-id="" tvg-name="湘西文化旅游" group-title="其它频道",湘西文化旅游$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.209:9000
-#EXTINF:-1 tvg-id="" tvg-name="株洲新闻综合" group-title="其它频道",株洲新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.1:9000
+#EXTINF:-1 tvg-id="" tvg-name="湘西文化旅游" group-title="其它频道",湘西文化旅游$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.209:9000
 #EXTINF:-1 tvg-id="" tvg-name="株洲新闻综合" group-title="其它频道",株洲新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.1:9000
-#EXTINF:-1 tvg-id="" tvg-name="永州新闻综合" group-title="其它频道",永州新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.23:9000
+#EXTINF:-1 tvg-id="" tvg-name="株洲新闻综合" group-title="其它频道",株洲新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.1:9000
 #EXTINF:-1 tvg-id="" tvg-name="永州新闻综合" group-title="其它频道",永州新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.23:9000
-#EXTINF:-1 tvg-id="" tvg-name="永州经济生活" group-title="其它频道",永州经济生活$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.24:9000
+#EXTINF:-1 tvg-id="" tvg-name="永州新闻综合" group-title="其它频道",永州新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.23:9000
 #EXTINF:-1 tvg-id="" tvg-name="永州经济生活" group-title="其它频道",永州经济生活$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.24:9000
-#EXTINF:-1 tvg-id="" tvg-name="湘潭县电视台" group-title="其它频道",湘潭县电视台$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.41:9000
+#EXTINF:-1 tvg-id="" tvg-name="永州经济生活" group-title="其它频道",永州经济生活$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.24:9000
 #EXTINF:-1 tvg-id="" tvg-name="湘潭县电视台" group-title="其它频道",湘潭县电视台$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.41:9000
-#EXTINF:-1 tvg-id="" tvg-name="衡阳文旅法治" group-title="其它频道",衡阳文旅法治$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.14:9000
+#EXTINF:-1 tvg-id="" tvg-name="湘潭县电视台" group-title="其它频道",湘潭县电视台$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.41:9000
 #EXTINF:-1 tvg-id="" tvg-name="衡阳文旅法治" group-title="其它频道",衡阳文旅法治$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.14:9000
-#EXTINF:-1 tvg-id="" tvg-name="衡阳县电视台" group-title="其它频道",衡阳县电视台$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.26:9000
+#EXTINF:-1 tvg-id="" tvg-name="衡阳文旅法治" group-title="其它频道",衡阳文旅法治$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.14:9000
 #EXTINF:-1 tvg-id="" tvg-name="衡阳县电视台" group-title="其它频道",衡阳县电视台$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.26:9000
-#EXTINF:-1 tvg-id="" tvg-name="邵阳新闻综合" group-title="其它频道",邵阳新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.21:9000
+#EXTINF:-1 tvg-id="" tvg-name="衡阳县电视台" group-title="其它频道",衡阳县电视台$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.26:9000
 #EXTINF:-1 tvg-id="" tvg-name="邵阳新闻综合" group-title="其它频道",邵阳新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.21:9000
-#EXTINF:-1 tvg-id="" tvg-name="邵阳文旅民生" group-title="其它频道",邵阳文旅民生$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.22:9000
+#EXTINF:-1 tvg-id="" tvg-name="邵阳新闻综合" group-title="其它频道",邵阳新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.21:9000
 #EXTINF:-1 tvg-id="" tvg-name="邵阳文旅民生" group-title="其它频道",邵阳文旅民生$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.22:9000
-#EXTINF:-1 tvg-id="" tvg-name="郴州综合频道" group-title="其它频道",郴州综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.75:9000
+#EXTINF:-1 tvg-id="" tvg-name="邵阳文旅民生" group-title="其它频道",邵阳文旅民生$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.22:9000
 #EXTINF:-1 tvg-id="" tvg-name="郴州综合频道" group-title="其它频道",郴州综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.75:9000
-#EXTINF:-1 tvg-id="" tvg-name="郴州公共频道" group-title="其它频道",郴州公共频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.39:9000
+#EXTINF:-1 tvg-id="" tvg-name="郴州综合频道" group-title="其它频道",郴州综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.75:9000
 #EXTINF:-1 tvg-id="" tvg-name="郴州公共频道" group-title="其它频道",郴州公共频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.39:9000
-#EXTINF:-1 tvg-id="" tvg-name="怀化新闻综合" group-title="其它频道",怀化新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.12:9000
+#EXTINF:-1 tvg-id="" tvg-name="郴州公共频道" group-title="其它频道",郴州公共频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.39:9000
 #EXTINF:-1 tvg-id="" tvg-name="怀化新闻综合" group-title="其它频道",怀化新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.12:9000
-#EXTINF:-1 tvg-id="" tvg-name="常德新闻综合" group-title="其它频道",常德新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.10:9000
+#EXTINF:-1 tvg-id="" tvg-name="怀化新闻综合" group-title="其它频道",怀化新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.12:9000
 #EXTINF:-1 tvg-id="" tvg-name="常德新闻综合" group-title="其它频道",常德新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.10:9000
-#EXTINF:-1 tvg-id="" tvg-name="常德公共频道" group-title="其它频道",常德公共频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.11:9000
+#EXTINF:-1 tvg-id="" tvg-name="常德新闻综合" group-title="其它频道",常德新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.10:9000
 #EXTINF:-1 tvg-id="" tvg-name="常德公共频道" group-title="其它频道",常德公共频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.11:9000
-#EXTINF:-1 tvg-id="" tvg-name="娄底公共频道" group-title="其它频道",娄底公共频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.19:9000
+#EXTINF:-1 tvg-id="" tvg-name="常德公共频道" group-title="其它频道",常德公共频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.11:9000
 #EXTINF:-1 tvg-id="" tvg-name="娄底公共频道" group-title="其它频道",娄底公共频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.19:9000
-#EXTINF:-1 tvg-id="" tvg-name="娄底教育频道" group-title="其它频道",娄底教育频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.20:9000
+#EXTINF:-1 tvg-id="" tvg-name="娄底公共频道" group-title="其它频道",娄底公共频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.19:9000
 #EXTINF:-1 tvg-id="" tvg-name="娄底教育频道" group-title="其它频道",娄底教育频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.20:9000
-#EXTINF:-1 tvg-id="" tvg-name="东安新闻综合" group-title="其它频道",东安新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.32:9000
+#EXTINF:-1 tvg-id="" tvg-name="娄底教育频道" group-title="其它频道",娄底教育频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.20:9000
 #EXTINF:-1 tvg-id="" tvg-name="东安新闻综合" group-title="其它频道",东安新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.32:9000
-#EXTINF:-1 tvg-id="" tvg-name="桃源综合频道" group-title="其它频道",桃源综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.36:9000
+#EXTINF:-1 tvg-id="" tvg-name="东安新闻综合" group-title="其它频道",东安新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.32:9000
 #EXTINF:-1 tvg-id="" tvg-name="桃源综合频道" group-title="其它频道",桃源综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.36:9000
-#EXTINF:-1 tvg-id="" tvg-name="双牌新闻综合" group-title="其它频道",双牌新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.33:9000
+#EXTINF:-1 tvg-id="" tvg-name="桃源综合频道" group-title="其它频道",桃源综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.36:9000
 #EXTINF:-1 tvg-id="" tvg-name="双牌新闻综合" group-title="其它频道",双牌新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.33:9000
-#EXTINF:-1 tvg-id="" tvg-name="麻阳综合频道" group-title="其它频道",麻阳综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.45:9000
+#EXTINF:-1 tvg-id="" tvg-name="双牌新闻综合" group-title="其它频道",双牌新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.33:9000
 #EXTINF:-1 tvg-id="" tvg-name="麻阳综合频道" group-title="其它频道",麻阳综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.45:9000
-#EXTINF:-1 tvg-id="" tvg-name="宁远综合频道" group-title="其它频道",宁远综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.34:9000
+#EXTINF:-1 tvg-id="" tvg-name="麻阳综合频道" group-title="其它频道",麻阳综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.45:9000
 #EXTINF:-1 tvg-id="" tvg-name="宁远综合频道" group-title="其它频道",宁远综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.34:9000
-#EXTINF:-1 tvg-id="" tvg-name="汨罗综合频道" group-title="其它频道",汨罗综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.47:9000
+#EXTINF:-1 tvg-id="" tvg-name="宁远综合频道" group-title="其它频道",宁远综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.34:9000
 #EXTINF:-1 tvg-id="" tvg-name="汨罗综合频道" group-title="其它频道",汨罗综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.47:9000
-#EXTINF:-1 tvg-id="" tvg-name="新化电视台" group-title="其它频道",新化电视台$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.31:9000
+#EXTINF:-1 tvg-id="" tvg-name="汨罗综合频道" group-title="其它频道",汨罗综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.47:9000
 #EXTINF:-1 tvg-id="" tvg-name="新化电视台" group-title="其它频道",新化电视台$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.31:9000
-#EXTINF:-1 tvg-id="" tvg-name="津市电视台" group-title="其它频道",津市电视台$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.30:9000
+#EXTINF:-1 tvg-id="" tvg-name="新化电视台" group-title="其它频道",新化电视台$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.31:9000
 #EXTINF:-1 tvg-id="" tvg-name="津市电视台" group-title="其它频道",津市电视台$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.30:9000
-#EXTINF:-1 tvg-id="" tvg-name="武冈综合频道" group-title="其它频道",武冈综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.29:9000
+#EXTINF:-1 tvg-id="" tvg-name="津市电视台" group-title="其它频道",津市电视台$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.30:9000
 #EXTINF:-1 tvg-id="" tvg-name="武冈综合频道" group-title="其它频道",武冈综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.29:9000
-#EXTINF:-1 tvg-id="" tvg-name="未知频道" group-title="其它频道",未知频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.46:9000
+#EXTINF:-1 tvg-id="" tvg-name="武冈综合频道" group-title="其它频道",武冈综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.29:9000
 #EXTINF:-1 tvg-id="" tvg-name="未知频道" group-title="其它频道",未知频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.46:9000
-#EXTINF:-1 tvg-id="" tvg-name="江永新闻频道" group-title="其它频道",江永新闻频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.35:9000
+#EXTINF:-1 tvg-id="" tvg-name="未知频道" group-title="其它频道",未知频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.46:9000
 #EXTINF:-1 tvg-id="" tvg-name="江永新闻频道" group-title="其它频道",江永新闻频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.35:9000
-#EXTINF:-1 tvg-id="" tvg-name="洪江新闻频道" group-title="其它频道",洪江新闻频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.37:9000
+#EXTINF:-1 tvg-id="" tvg-name="江永新闻频道" group-title="其它频道",江永新闻频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.35:9000
 #EXTINF:-1 tvg-id="" tvg-name="洪江新闻频道" group-title="其它频道",洪江新闻频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.37:9000
-#EXTINF:-1 tvg-id="" tvg-name="涟源综合频道" group-title="其它频道",涟源综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.48:9000
+#EXTINF:-1 tvg-id="" tvg-name="洪江新闻频道" group-title="其它频道",洪江新闻频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.37:9000
 #EXTINF:-1 tvg-id="" tvg-name="涟源综合频道" group-title="其它频道",涟源综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.48:9000
-#EXTINF:-1 tvg-id="" tvg-name="溆浦综合频道" group-title="其它频道",溆浦综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.25:9000
+#EXTINF:-1 tvg-id="" tvg-name="涟源综合频道" group-title="其它频道",涟源综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.48:9000
 #EXTINF:-1 tvg-id="" tvg-name="溆浦综合频道" group-title="其它频道",溆浦综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.25:9000
-#EXTINF:-1 tvg-id="" tvg-name="蓝山综合频道" group-title="其它频道",蓝山综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.38:9000
+#EXTINF:-1 tvg-id="" tvg-name="溆浦综合频道" group-title="其它频道",溆浦综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.25:9000
 #EXTINF:-1 tvg-id="" tvg-name="蓝山综合频道" group-title="其它频道",蓝山综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.38:9000
-#EXTINF:-1 tvg-id="" tvg-name="新田综合频道" group-title="其它频道",新田综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.44:9000
+#EXTINF:-1 tvg-id="" tvg-name="蓝山综合频道" group-title="其它频道",蓝山综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.38:9000
 #EXTINF:-1 tvg-id="" tvg-name="新田综合频道" group-title="其它频道",新田综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.44:9000
-#EXTINF:-1 tvg-id="" tvg-name="道县综合频道" group-title="其它频道",道县综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.28:9000
+#EXTINF:-1 tvg-id="" tvg-name="新田综合频道" group-title="其它频道",新田综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.44:9000
 #EXTINF:-1 tvg-id="" tvg-name="道县综合频道" group-title="其它频道",道县综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.28:9000
-#EXTINF:-1 tvg-id="" tvg-name="中方台" group-title="其它频道",中方台$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.43:9000
+#EXTINF:-1 tvg-id="" tvg-name="道县综合频道" group-title="其它频道",道县综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.28:9000
 #EXTINF:-1 tvg-id="" tvg-name="中方台" group-title="其它频道",中方台$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.43:9000
-#EXTINF:-1 tvg-id="" tvg-name="桂东融媒" group-title="其它频道",桂东融媒$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.231:9000
+#EXTINF:-1 tvg-id="" tvg-name="中方台" group-title="其它频道",中方台$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.43:9000
 #EXTINF:-1 tvg-id="" tvg-name="桂东融媒" group-title="其它频道",桂东融媒$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.231:9000
-#EXTINF:-1 tvg-id="" tvg-name="张家界新闻综合" group-title="其它频道",张家界新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.245.234:1234
+#EXTINF:-1 tvg-id="" tvg-name="桂东融媒" group-title="其它频道",桂东融媒$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.231:9000
 #EXTINF:-1 tvg-id="" tvg-name="张家界新闻综合" group-title="其它频道",张家界新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.245.234:1234
-#EXTINF:-1 tvg-id="" tvg-name="张家界公共频道" group-title="其它频道",张家界公共频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.245.235:1234
+#EXTINF:-1 tvg-id="" tvg-name="张家界新闻综合" group-title="其它频道",张家界新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.245.234:1234
 #EXTINF:-1 tvg-id="" tvg-name="张家界公共频道" group-title="其它频道",张家界公共频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.245.235:1234
-#EXTINF:-1 tvg-id="" tvg-name="未知新闻综合" group-title="其它频道",未知新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.248.27:1234
+#EXTINF:-1 tvg-id="" tvg-name="张家界公共频道" group-title="其它频道",张家界公共频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.245.235:1234
 #EXTINF:-1 tvg-id="" tvg-name="未知新闻综合" group-title="其它频道",未知新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.248.27:1234
-#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.101:9000
+#EXTINF:-1 tvg-id="" tvg-name="未知新闻综合" group-title="其它频道",未知新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.248.27:1234
 #EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.101:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南卫视FHD" group-title="卫视频道",湖南卫视FHD$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.115:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.101:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南卫视FHD" group-title="卫视频道",湖南卫视FHD$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.115:9000
-#EXTINF:-1 tvg-id="" tvg-name="凤凰中文" group-title="卫视频道",凤凰中文$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.134:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南卫视FHD" group-title="卫视频道",湖南卫视FHD$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.115:9000
 #EXTINF:-1 tvg-id="" tvg-name="凤凰中文" group-title="卫视频道",凤凰中文$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.134:9000
-#EXTINF:-1 tvg-id="" tvg-name="凤凰资讯" group-title="卫视频道",凤凰资讯$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.135:9000
+#EXTINF:-1 tvg-id="" tvg-name="凤凰中文" group-title="卫视频道",凤凰中文$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.134:9000
 #EXTINF:-1 tvg-id="" tvg-name="凤凰资讯" group-title="卫视频道",凤凰资讯$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.135:9000
-#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.184:9000
+#EXTINF:-1 tvg-id="" tvg-name="凤凰资讯" group-title="卫视频道",凤凰资讯$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.135:9000
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.184:9000
-#EXTINF:-1 tvg-id="" tvg-name="北京卫视4K超高清" group-title="卫视频道",北京卫视4K超高清$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.246:9000
+#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.184:9000
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视4K超高清" group-title="卫视频道",北京卫视4K超高清$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.246:9000
-#EXTINF:-1 tvg-id="" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.74:9000
+#EXTINF:-1 tvg-id="" tvg-name="北京卫视4K超高清" group-title="卫视频道",北京卫视4K超高清$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.246:9000
 #EXTINF:-1 tvg-id="" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.74:9000
-#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.186:9000
+#EXTINF:-1 tvg-id="" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.74:9000
 #EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.186:9000
-#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.201:9000
+#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.186:9000
 #EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.201:9000
-#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.91:9000
+#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.201:9000
 #EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.91:9000
-#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.185:9000
+#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.91:9000
 #EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.185:9000
-#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.195:9000
+#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.185:9000
 #EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.195:9000
-#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.181:9000
+#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.195:9000
 #EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.181:9000
-#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.202:9000
+#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.181:9000
 #EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.202:9000
-#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.182:9000
+#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.202:9000
 #EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.182:9000
-#EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.203:9000
+#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.182:9000
 #EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.203:9000
-#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.188:9000
+#EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.203:9000
 #EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.188:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.193:9000
+#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.188:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.193:9000
-#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.94:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.193:9000
 #EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.94:9000
-#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.92:9000
+#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.94:9000
 #EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.92:9000
-#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.189:9000
+#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.92:9000
 #EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.189:9000
-#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.199:9000
+#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.189:9000
 #EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.199:9000
-#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.196:9000
+#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.199:9000
 #EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.196:9000
-#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.225:9000
+#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.196:9000
 #EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.225:9000
-#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.190:9000
+#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.225:9000
 #EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.190:9000
-#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.197:9000
+#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.190:9000
 #EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.197:9000
-#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.198:9000
+#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.197:9000
 #EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.198:9000
-#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.200:9000
+#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.198:9000
 #EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.200:9000
-#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.60:9000
+#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.200:9000
 #EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.60:9000
-#EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.54:9000
+#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.60:9000
 #EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.54:9000
-#EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.132:9000
+#EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.54:9000
 #EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.132:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南经视频道" group-title="☘️湖南省",湖南经视频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.103:9000
+#EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.132:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南经视频道" group-title="☘️湖南省",湖南经视频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.103:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南都市频道" group-title="☘️湖南省",湖南都市频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.104:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南经视频道" group-title="☘️湖南省",湖南经视频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.103:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南都市频道" group-title="☘️湖南省",湖南都市频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.104:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南国际频道" tvg-logo="http://tv.haoqu99.com/d/file/2016/0614/20160614032623217.jpg" group-title="☘️湖南省",湖南国际频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.102:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南都市频道" group-title="☘️湖南省",湖南都市频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.104:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南国际频道" tvg-logo="http://tv.haoqu99.com/d/file/2016/0614/20160614032623217.jpg" group-title="☘️湖南省",湖南国际频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.102:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南公共频道" group-title="☘️湖南省",湖南公共频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.109:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南国际频道" tvg-logo="http://tv.haoqu99.com/d/file/2016/0614/20160614032623217.jpg" group-title="☘️湖南省",湖南国际频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.102:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南公共频道" group-title="☘️湖南省",湖南公共频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.109:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南娱乐频道" tvg-logo="http://tv.haoqu99.com/d/file/2015/0417/20150417125630263.jpg" group-title="☘️湖南省",湖南娱乐频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.105:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南公共频道" group-title="☘️湖南省",湖南公共频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.109:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南娱乐频道" tvg-logo="http://tv.haoqu99.com/d/file/2015/0417/20150417125630263.jpg" group-title="☘️湖南省",湖南娱乐频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.105:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南电影频道" group-title="☘️湖南省",湖南电影频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.106:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南娱乐频道" tvg-logo="http://tv.haoqu99.com/d/file/2015/0417/20150417125630263.jpg" group-title="☘️湖南省",湖南娱乐频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.105:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南电影频道" group-title="☘️湖南省",湖南电影频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.106:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南电视剧频道" group-title="☘️湖南省",湖南电视剧频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.108:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南电影频道" group-title="☘️湖南省",湖南电影频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.106:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南电视剧频道" group-title="☘️湖南省",湖南电视剧频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.108:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南教育台" group-title="☘️湖南省",湖南教育台$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.233:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南电视剧频道" group-title="☘️湖南省",湖南电视剧频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.108:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南教育台" group-title="☘️湖南省",湖南教育台$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.233:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南经视FHD" group-title="☘️湖南省",湖南经视FHD$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.116:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南教育台" group-title="☘️湖南省",湖南教育台$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.233:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南经视FHD" group-title="☘️湖南省",湖南经视FHD$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.116:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南都市FHD" group-title="☘️湖南省",湖南都市FHD$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.117:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南经视FHD" group-title="☘️湖南省",湖南经视FHD$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.116:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南都市FHD" group-title="☘️湖南省",湖南都市FHD$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.117:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南电视剧FHD" group-title="☘️湖南省",湖南电视剧FHD$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.118:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南都市FHD" group-title="☘️湖南省",湖南都市FHD$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.117:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南电视剧FHD" group-title="☘️湖南省",湖南电视剧FHD$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.118:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南电影FHD" group-title="☘️湖南省",湖南电影FHD$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.119:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南电视剧FHD" group-title="☘️湖南省",湖南电视剧FHD$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.118:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南电影FHD" group-title="☘️湖南省",湖南电影FHD$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.119:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南娱乐FHD" group-title="☘️湖南省",湖南娱乐FHD$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.121:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南电影FHD" group-title="☘️湖南省",湖南电影FHD$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.119:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南娱乐FHD" group-title="☘️湖南省",湖南娱乐FHD$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.121:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南公共FHD" group-title="☘️湖南省",湖南公共FHD$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.123:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南娱乐FHD" group-title="☘️湖南省",湖南娱乐FHD$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.121:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南公共FHD" group-title="☘️湖南省",湖南公共FHD$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.123:9000
-#EXTINF:-1 tvg-id="" tvg-name="湖南国际FHD" group-title="☘️湖南省",湖南国际FHD$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.124:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南公共FHD" group-title="☘️湖南省",湖南公共FHD$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.123:9000
 #EXTINF:-1 tvg-id="" tvg-name="湖南国际FHD" group-title="☘️湖南省",湖南国际FHD$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.124:9000
-#EXTINF:-1 tvg-id="" tvg-name="长沙新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%95%BF%E6%B2%99%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️湖南省",长沙新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.121:9000
+#EXTINF:-1 tvg-id="" tvg-name="湖南国际FHD" group-title="☘️湖南省",湖南国际FHD$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.124:9000
 #EXTINF:-1 tvg-id="" tvg-name="长沙新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%95%BF%E6%B2%99%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️湖南省",长沙新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.121:9000
-#EXTINF:-1 tvg-id="" tvg-name="长沙政法频道" group-title="☘️湖南省",长沙政法频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.122:9000
+#EXTINF:-1 tvg-id="" tvg-name="长沙新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%95%BF%E6%B2%99%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️湖南省",长沙新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.121:9000
 #EXTINF:-1 tvg-id="" tvg-name="长沙政法频道" group-title="☘️湖南省",长沙政法频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.122:9000
-#EXTINF:-1 tvg-id="" tvg-name="益阳新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%9B%8A%E9%98%B3%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️湖南省",益阳新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.15:9000
+#EXTINF:-1 tvg-id="" tvg-name="长沙政法频道" group-title="☘️湖南省",长沙政法频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.122:9000
 #EXTINF:-1 tvg-id="" tvg-name="益阳新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%9B%8A%E9%98%B3%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️湖南省",益阳新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.15:9000
-#EXTINF:-1 tvg-id="" tvg-name="益阳公共频道" group-title="☘️湖南省",益阳公共频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.16:9000
+#EXTINF:-1 tvg-id="" tvg-name="益阳新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%9B%8A%E9%98%B3%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️湖南省",益阳新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.15:9000
 #EXTINF:-1 tvg-id="" tvg-name="益阳公共频道" group-title="☘️湖南省",益阳公共频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.16:9000
-#EXTINF:-1 tvg-id="" tvg-name="湘潭新闻综合" group-title="☘️湖南省",湘潭新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.4:9000
+#EXTINF:-1 tvg-id="" tvg-name="益阳公共频道" group-title="☘️湖南省",益阳公共频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.16:9000
 #EXTINF:-1 tvg-id="" tvg-name="湘潭新闻综合" group-title="☘️湖南省",湘潭新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.4:9000
-#EXTINF:-1 tvg-id="" tvg-name="衡阳新闻综合" group-title="☘️湖南省",衡阳新闻综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.13:9000
+#EXTINF:-1 tvg-id="" tvg-name="湘潭新闻综合" group-title="☘️湖南省",湘潭新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.4:9000
 #EXTINF:-1 tvg-id="" tvg-name="衡阳新闻综合" group-title="☘️湖南省",衡阳新闻综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.13:9000
-#EXTINF:-1 tvg-id="" tvg-name="娄底综合频道" group-title="☘️湖南省",娄底综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.255.18:9000
+#EXTINF:-1 tvg-id="" tvg-name="衡阳新闻综合" group-title="☘️湖南省",衡阳新闻综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.13:9000
 #EXTINF:-1 tvg-id="" tvg-name="娄底综合频道" group-title="☘️湖南省",娄底综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.255.18:9000
-#EXTINF:-1 tvg-id="" tvg-name="长沙新闻频道" tvg-logo="http://tv.haoqu99.com/d/file/2021/0215/small7ff3d34c5627b5c263817abeff70e23d.gif" group-title="☘️湖南省",长沙新闻频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.246.121:1234
+#EXTINF:-1 tvg-id="" tvg-name="娄底综合频道" group-title="☘️湖南省",娄底综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.255.18:9000
 #EXTINF:-1 tvg-id="" tvg-name="长沙新闻频道" tvg-logo="http://tv.haoqu99.com/d/file/2021/0215/small7ff3d34c5627b5c263817abeff70e23d.gif" group-title="☘️湖南省",长沙新闻频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.246.121:1234
-#EXTINF:-1 tvg-id="" tvg-name="宁乡综合频道" group-title="☘️湖南省",宁乡综合频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.248.57:1234
+#EXTINF:-1 tvg-id="" tvg-name="长沙新闻频道" tvg-logo="http://tv.haoqu99.com/d/file/2021/0215/small7ff3d34c5627b5c263817abeff70e23d.gif" group-title="☘️湖南省",长沙新闻频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.246.121:1234
 #EXTINF:-1 tvg-id="" tvg-name="宁乡综合频道" group-title="☘️湖南省",宁乡综合频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.248.57:1234
-#EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.107:9000
+#EXTINF:-1 tvg-id="" tvg-name="宁乡综合频道" group-title="☘️湖南省",宁乡综合频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.248.57:1234
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.107:9000
-#EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.110:9000
+#EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.107:9000
 #EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.110:9000
-#EXTINF:-1 tvg-id="" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.5:9000
+#EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.110:9000
 #EXTINF:-1 tvg-id="" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.5:9000
-#EXTINF:-1 tvg-id="" tvg-name="金鹰卡通FHD" group-title="数字频道",金鹰卡通FHD$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.120:9000
+#EXTINF:-1 tvg-id="" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.5:9000
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通FHD" group-title="数字频道",金鹰卡通FHD$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.120:9000
-#EXTINF:-1 tvg-id="" tvg-name="金鹰纪实FHD" group-title="数字频道",金鹰纪实FHD$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.122:9000
+#EXTINF:-1 tvg-id="" tvg-name="金鹰卡通FHD" group-title="数字频道",金鹰卡通FHD$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.120:9000
 #EXTINF:-1 tvg-id="" tvg-name="金鹰纪实FHD" group-title="数字频道",金鹰纪实FHD$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.122:9000
-#EXTINF:-1 tvg-id="" tvg-name="快乐垂钓FHD" group-title="数字频道",快乐垂钓FHD$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.127:9000
+#EXTINF:-1 tvg-id="" tvg-name="金鹰纪实FHD" group-title="数字频道",金鹰纪实FHD$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.122:9000
 #EXTINF:-1 tvg-id="" tvg-name="快乐垂钓FHD" group-title="数字频道",快乐垂钓FHD$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.127:9000
-#EXTINF:-1 tvg-id="" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.241:9000
+#EXTINF:-1 tvg-id="" tvg-name="快乐垂钓FHD" group-title="数字频道",快乐垂钓FHD$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.127:9000
 #EXTINF:-1 tvg-id="" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.241:9000
-#EXTINF:-1 tvg-id="" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.242:9000
+#EXTINF:-1 tvg-id="" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.241:9000
 #EXTINF:-1 tvg-id="" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.242:9000
-#EXTINF:-1 tvg-id="" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.243:9000
+#EXTINF:-1 tvg-id="" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.242:9000
 #EXTINF:-1 tvg-id="" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.243:9000
-#EXTINF:-1 tvg-id="" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.65:9000
+#EXTINF:-1 tvg-id="" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.243:9000
 #EXTINF:-1 tvg-id="" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.65:9000
-#EXTINF:-1 tvg-id="" tvg-name="上海欢笑剧场4K" group-title="数字频道",上海欢笑剧场4K$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.66:9000
+#EXTINF:-1 tvg-id="" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.65:9000
 #EXTINF:-1 tvg-id="" tvg-name="上海欢笑剧场4K" group-title="数字频道",上海欢笑剧场4K$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.66:9000
-#EXTINF:-1 tvg-id="" tvg-name="上海乐游频道" group-title="数字频道",上海乐游频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.68:9000
+#EXTINF:-1 tvg-id="" tvg-name="上海欢笑剧场4K" group-title="数字频道",上海欢笑剧场4K$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.66:9000
 #EXTINF:-1 tvg-id="" tvg-name="上海乐游频道" group-title="数字频道",上海乐游频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.68:9000
-#EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.70:9000
+#EXTINF:-1 tvg-id="" tvg-name="上海乐游频道" group-title="数字频道",上海乐游频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.68:9000
 #EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.70:9000
-#EXTINF:-1 tvg-id="" tvg-name="上海法治天地" group-title="数字频道",上海法治天地$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.67:9000
+#EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.70:9000
 #EXTINF:-1 tvg-id="" tvg-name="上海法治天地" group-title="数字频道",上海法治天地$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.67:9000
-#EXTINF:-1 tvg-id="" tvg-name="上海生活时尚" group-title="数字频道",上海生活时尚$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.73:9000
+#EXTINF:-1 tvg-id="" tvg-name="上海法治天地" group-title="数字频道",上海法治天地$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.67:9000
 #EXTINF:-1 tvg-id="" tvg-name="上海生活时尚" group-title="数字频道",上海生活时尚$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.73:9000
-#EXTINF:-1 tvg-id="" tvg-name="上海都市剧场" group-title="数字频道",上海都市剧场$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.74:9000
+#EXTINF:-1 tvg-id="" tvg-name="上海生活时尚" group-title="数字频道",上海生活时尚$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.73:9000
 #EXTINF:-1 tvg-id="" tvg-name="上海都市剧场" group-title="数字频道",上海都市剧场$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.74:9000
-#EXTINF:-1 tvg-id="" tvg-name="上海金色学堂" group-title="数字频道",上海金色学堂$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.75:9000
+#EXTINF:-1 tvg-id="" tvg-name="上海都市剧场" group-title="数字频道",上海都市剧场$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.74:9000
 #EXTINF:-1 tvg-id="" tvg-name="上海金色学堂" group-title="数字频道",上海金色学堂$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.75:9000
-#EXTINF:-1 tvg-id="" tvg-name="河南梨园频道" group-title="数字频道",河南梨园频道$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.179:9000
+#EXTINF:-1 tvg-id="" tvg-name="上海金色学堂" group-title="数字频道",上海金色学堂$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.75:9000
 #EXTINF:-1 tvg-id="" tvg-name="河南梨园频道" group-title="数字频道",河南梨园频道$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.179:9000
-#EXTINF:-1 tvg-id="" tvg-name="魅力足球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%AD%85%E5%8A%9B%E8%B6%B3%E7%90%83.png" group-title="数字频道",魅力足球$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.72:9000
+#EXTINF:-1 tvg-id="" tvg-name="河南梨园频道" group-title="数字频道",河南梨园频道$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.179:9000
 #EXTINF:-1 tvg-id="" tvg-name="魅力足球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%AD%85%E5%8A%9B%E8%B6%B3%E7%90%83.png" group-title="数字频道",魅力足球$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.72:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.151:9000
+#EXTINF:-1 tvg-id="" tvg-name="魅力足球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%AD%85%E5%8A%9B%E8%B6%B3%E7%90%83.png" group-title="数字频道",魅力足球$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.72:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.151:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.152:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.151:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.152:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.153:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.152:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.153:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.154:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.153:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.154:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.155:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.154:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.155:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.168:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.155:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.168:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.156:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.168:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.156:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.157:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.156:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.157:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.158:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.157:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.158:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.159:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.158:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.159:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.160:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.159:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.160:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.251:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.160:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.251:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.162:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.251:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.162:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.93:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.162:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.93:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.164:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.93:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.164:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.252:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.164:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.252:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.98:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.252:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.98:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.238:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.98:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.238:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克4K" group-title="央视频道",CCTV-16奥林匹克4K$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.230:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.238:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克4K" group-title="央视频道",CCTV-16奥林匹克4K$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.230:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-4K超高清" group-title="央视频道",CCTV-4K超高清$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.101:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克4K" group-title="央视频道",CCTV-16奥林匹克4K$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.230:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4K超高清" group-title="央视频道",CCTV-4K超高清$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.101:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-第一剧场" group-title="央视频道",CCTV-第一剧场$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.49:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4K超高清" group-title="央视频道",CCTV-4K超高清$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.101:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-第一剧场" group-title="央视频道",CCTV-第一剧场$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.49:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-风云剧场" group-title="央视频道",CCTV-风云剧场$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.50:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-第一剧场" group-title="央视频道",CCTV-第一剧场$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.49:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-风云剧场" group-title="央视频道",CCTV-风云剧场$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.50:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-怀旧剧场" group-title="央视频道",CCTV-怀旧剧场$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.53:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-风云剧场" group-title="央视频道",CCTV-风云剧场$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.50:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-怀旧剧场" group-title="央视频道",CCTV-怀旧剧场$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.53:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-电视指南" group-title="央视频道",CCTV-电视指南$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.61:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-怀旧剧场" group-title="央视频道",CCTV-怀旧剧场$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.53:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-电视指南" group-title="央视频道",CCTV-电视指南$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.61:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-世界地理" group-title="央视频道",CCTV-世界地理$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.57:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-电视指南" group-title="央视频道",CCTV-电视指南$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.61:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-世界地理" group-title="央视频道",CCTV-世界地理$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.57:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-兵器科技" group-title="央视频道",CCTV-兵器科技$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.59:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-世界地理" group-title="央视频道",CCTV-世界地理$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.57:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-兵器科技" group-title="央视频道",CCTV-兵器科技$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.59:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-央视台球" group-title="央视频道",CCTV-央视台球$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.58:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-兵器科技" group-title="央视频道",CCTV-兵器科技$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.59:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-央视台球" group-title="央视频道",CCTV-央视台球$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.58:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-女性时尚" group-title="央视频道",CCTV-女性时尚$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.55:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-央视台球" group-title="央视频道",CCTV-央视台球$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.58:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-女性时尚" group-title="央视频道",CCTV-女性时尚$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.55:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-风云足球" group-title="央视频道",CCTV-风云足球$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.52:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-女性时尚" group-title="央视频道",CCTV-女性时尚$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.55:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-风云足球" group-title="央视频道",CCTV-风云足球$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.52:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-风云音乐" group-title="央视频道",CCTV-风云音乐$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.51:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-风云足球" group-title="央视频道",CCTV-风云足球$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.52:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-风云音乐" group-title="央视频道",CCTV-风云音乐$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.51:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-高尔夫网球" group-title="央视频道",CCTV-高尔夫网球$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.62:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-风云音乐" group-title="央视频道",CCTV-风云音乐$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.51:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-高尔夫网球" group-title="央视频道",CCTV-高尔夫网球$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.62:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际 欧洲" group-title="央视频道",CCTV-4中文国际 欧洲$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.95:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-高尔夫网球" group-title="央视频道",CCTV-高尔夫网球$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.62:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际 欧洲" group-title="央视频道",CCTV-4中文国际 欧洲$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.95:9000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际 美洲" group-title="央视频道",CCTV-4中文国际 美洲$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.96:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际 欧洲" group-title="央视频道",CCTV-4中文国际 欧洲$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.95:9000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际 美洲" group-title="央视频道",CCTV-4中文国际 美洲$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.96:9000
-#EXTINF:-1 tvg-id="" tvg-name="CETV-1" group-title="央视频道",CETV-1$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.192:9000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际 美洲" group-title="央视频道",CCTV-4中文国际 美洲$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.96:9000
 #EXTINF:-1 tvg-id="" tvg-name="CETV-1" group-title="央视频道",CETV-1$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.192:9000
-#EXTINF:-1 tvg-id="" tvg-name="CETV-4" group-title="央视频道",CETV-4$湖南电信
-http://58.46.71.197:8188/udp/239.76.252.254:9000
+#EXTINF:-1 tvg-id="" tvg-name="CETV-1" group-title="央视频道",CETV-1$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.192:9000
 #EXTINF:-1 tvg-id="" tvg-name="CETV-4" group-title="央视频道",CETV-4$湖南电信
 http://175.8.183.5:7878/udp/239.76.252.254:9000
-#EXTINF:-1 tvg-id="" tvg-name="CETV早期教育" group-title="央视频道",CETV早期教育$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.202:9000
+#EXTINF:-1 tvg-id="" tvg-name="CETV-4" group-title="央视频道",CETV-4$湖南电信
+http://58.46.71.197:8188/udp/239.76.252.254:9000
 #EXTINF:-1 tvg-id="" tvg-name="CETV早期教育" group-title="央视频道",CETV早期教育$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.202:9000
-#EXTINF:-1 tvg-id="" tvg-name="中国天气" group-title="央视频道",中国天气$湖南电信
-http://58.46.71.197:8188/udp/239.76.253.61:9000
+#EXTINF:-1 tvg-id="" tvg-name="CETV早期教育" group-title="央视频道",CETV早期教育$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.202:9000
 #EXTINF:-1 tvg-id="" tvg-name="中国天气" group-title="央视频道",中国天气$湖南电信
 http://175.8.183.5:7878/udp/239.76.253.61:9000
-#EXTINF:-1 tvg-id="" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经$湖南电信
-http://58.46.71.197:8188/udp/239.76.254.69:9000
+#EXTINF:-1 tvg-id="" tvg-name="中国天气" group-title="央视频道",中国天气$湖南电信
+http://58.46.71.197:8188/udp/239.76.253.61:9000
 #EXTINF:-1 tvg-id="" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经$湖南电信
 http://175.8.183.5:7878/udp/239.76.254.69:9000
+#EXTINF:-1 tvg-id="" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经$湖南电信
+http://58.46.71.197:8188/udp/239.76.254.69:9000
