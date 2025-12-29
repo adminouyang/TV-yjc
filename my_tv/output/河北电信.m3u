@@ -831,9 +831,9 @@ http://27.191.203.237:19999/rtp/239.254.201.225:7249
 http://106.116.240.126:9999/rtp/239.254.201.226:7254
 #EXTINF:-1 tvg-id="" tvg-name="CCTV世界地理" group-title="央视频道",CCTV世界地理$河北电信
 http://27.191.203.237:19999/rtp/239.254.201.226:7254
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$河北电信
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$河北电信
 http://106.116.240.126:9999/rtp/239.254.200.225:6259
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$河北电信
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$河北电信
 http://27.191.203.237:19999/rtp/239.254.200.225:6259
 #EXTINF:-1 tvg-id="" tvg-name="CETV-2" group-title="央视频道",CETV-2$河北电信
 http://106.116.240.126:9999/rtp/239.254.200.226:6260
@@ -875,9 +875,9 @@ http://27.191.203.237:19999/rtp/239.254.200.149:6000
 http://106.116.240.126:9999/rtp/239.254.200.92:9252
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$河北电信
 http://27.191.203.237:19999/rtp/239.254.200.92:9252
-#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" group-title="数字频道",卡酷少儿$河北电信
+#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿$河北电信
 http://106.116.240.126:9999/rtp/239.254.200.91:9248
-#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" group-title="数字频道",卡酷少儿$河北电信
+#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿$河北电信
 http://27.191.203.237:19999/rtp/239.254.200.91:9248
 #EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通$河北电信
 http://106.116.240.126:9999/rtp/239.254.201.201:7269

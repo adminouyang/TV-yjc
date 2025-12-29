@@ -35,9 +35,9 @@ http://183.220.107.138:4022/rtp/239.11.0.26:5140
 http://183.220.107.138:4022/rtp/239.10.0.187:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$四川移动
 http://183.220.107.138:4022/rtp/239.11.0.107:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$四川移动
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$四川移动
 http://183.220.107.138:4022/rtp/239.11.0.139:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$四川移动
+#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$四川移动
 http://183.220.107.138:4022/rtp/239.11.0.246:5140
 #EXTINF:-1 tvg-id="" tvg-name="中国天气" group-title="央视频道",中国天气$四川移动
 http://183.220.107.138:4022/rtp/239.10.0.177:5140
@@ -127,7 +127,7 @@ http://183.220.107.138:4022/rtp/239.10.0.224:5140
 http://183.220.107.138:4022/rtp/239.10.0.131:5140
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$四川移动
 http://183.220.107.138:4022/rtp/239.11.0.127:5140
-#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" group-title="数字频道",卡酷少儿$四川移动
+#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿$四川移动
 http://183.220.107.138:4022/rtp/239.11.0.129:5140
 #EXTINF:-1 tvg-id="" tvg-name="优漫卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BC%98%E6%BC%AB%E5%8D%A1%E9%80%9A.png" group-title="数字频道",优漫卡通$四川移动
 http://183.220.107.138:4022/rtp/239.11.0.63:5140
@@ -135,7 +135,7 @@ http://183.220.107.138:4022/rtp/239.11.0.63:5140
 http://183.220.107.138:4022/rtp/239.11.0.64:5140
 #EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通$四川移动
 http://183.220.107.138:4022/rtp/239.11.0.203:5140
-#EXTINF:-1 tvg-id="" tvg-name="新动漫" group-title="数字频道",新动漫$四川移动
+#EXTINF:-1 tvg-id="" tvg-name="新动漫" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/xindongman.png" group-title="数字频道",新动漫$四川移动
 http://183.220.107.138:4022/rtp/239.10.0.159:5140
 #EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$四川移动
 http://183.220.107.138:4022/rtp/239.10.0.101:5140

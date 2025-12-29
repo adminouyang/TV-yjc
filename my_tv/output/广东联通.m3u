@@ -195,9 +195,9 @@ http://27.42.215.160:2222/udp/239.0.1.41:9252
 http://58.253.171.71:8188/udp/239.0.1.42:5090
 #EXTINF:-1 tvg-id="" tvg-name="哈哈炫动" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%93%88%E5%93%88%E7%82%AB%E5%8A%A8.png" group-title="数字频道",哈哈炫动$广东联通
 http://27.42.215.160:2222/udp/239.0.1.42:5090
-#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" group-title="数字频道",卡酷少儿$广东联通
+#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿$广东联通
 http://58.253.171.71:8188/udp/239.0.1.40:9248
-#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" group-title="数字频道",卡酷少儿$广东联通
+#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿$广东联通
 http://27.42.215.160:2222/udp/239.0.1.40:9248
 #EXTINF:-1 tvg-id="" tvg-name="广东移动频道" group-title="其它频道",广东移动频道$广东联通
 http://58.253.171.71:8188/udp/239.0.1.63:5101
@@ -287,17 +287,17 @@ http://27.42.215.160:2222/udp/239.0.1.75:8052
 http://58.253.171.71:8188/udp/239.0.1.192:9264
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$广东联通
 http://27.42.215.160:2222/udp/239.0.1.192:9264
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$广东联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$广东联通
 http://58.253.171.71:8188/udp/239.0.1.240:4120
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$广东联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$广东联通
 http://27.42.215.160:2222/udp/239.0.1.240:4120
-#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$广东联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$广东联通
 http://58.253.171.71:8188/udp/239.0.1.210:4120
-#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$广东联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$广东联通
 http://27.42.215.160:2222/udp/239.0.1.210:4120
-#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$广东联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4$广东联通
 http://58.253.171.71:8188/udp/239.0.1.211:4121
-#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$广东联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4$广东联通
 http://27.42.215.160:2222/udp/239.0.1.211:4121
 #EXTINF:-1 tvg-id="" tvg-name="IPTV5体育" group-title="央视频道",IPTV5体育$广东联通
 http://58.253.171.71:8188/udp/239.0.1.102:4120

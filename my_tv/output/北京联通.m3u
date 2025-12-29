@@ -1,49 +1,49 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV1" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV1.png" group-title="央视频道",CCTV1$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.129:8008
-#EXTINF:-1 tvg-id="" tvg-name="CCTV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV2.png" group-title="央视频道",CCTV2$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV2" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV2.png" group-title="央视频道",CCTV2$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.60:8084
-#EXTINF:-1 tvg-id="" tvg-name="CCTV3" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV3.png" group-title="央视频道",CCTV3$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV3" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV3.png" group-title="央视频道",CCTV3$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.172:8001
-#EXTINF:-1 tvg-id="" tvg-name="CCTV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV4.png" group-title="央视频道",CCTV4$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV4" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV4.png" group-title="央视频道",CCTV4$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.105:8092
-#EXTINF:-1 tvg-id="" tvg-name="CCTV4欧洲" group-title="央视频道",CCTV4欧洲$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV4欧洲" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV4EUO.png" group-title="央视频道",CCTV4欧洲$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.213:4220
-#EXTINF:-1 tvg-id="" tvg-name="CCTV4美洲" group-title="央视频道",CCTV4美洲$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV4美洲" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV4AME.png" group-title="央视频道",CCTV4美洲$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.214:4220
-#EXTINF:-1 tvg-id="" tvg-name="CCTV5" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5.png" group-title="央视频道",CCTV5$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV5" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV5.png" group-title="央视频道",CCTV5$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.173:8001
-#EXTINF:-1 tvg-id="" tvg-name="CCTV5+" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5%2B.png" group-title="央视频道",CCTV5+$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV5+" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV5+.png" group-title="央视频道",CCTV5+$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.130:8004
-#EXTINF:-1 tvg-id="" tvg-name="CCTV6" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV6.png" group-title="央视频道",CCTV6$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV6" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV6.png" group-title="央视频道",CCTV6$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.174:8001
-#EXTINF:-1 tvg-id="" tvg-name="CCTV7" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV7.png" group-title="央视频道",CCTV7$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV7" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV7.png" group-title="央视频道",CCTV7$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.61:8104
-#EXTINF:-1 tvg-id="" tvg-name="CCTV8" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV8.png" group-title="央视频道",CCTV8$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV8" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV8.png" group-title="央视频道",CCTV8$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.175:8001
-#EXTINF:-1 tvg-id="" tvg-name="CCTV9" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV9.png" group-title="央视频道",CCTV9$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV9" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV9.png" group-title="央视频道",CCTV9$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.62:8112
-#EXTINF:-1 tvg-id="" tvg-name="CCTV10" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV10.png" group-title="央视频道",CCTV10$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV10" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV10.png" group-title="央视频道",CCTV10$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.63:8116
-#EXTINF:-1 tvg-id="" tvg-name="CCTV11" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV11.png" group-title="央视频道",CCTV11$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV11" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV11.png" group-title="央视频道",CCTV11$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.152:8120
-#EXTINF:-1 tvg-id="" tvg-name="CCTV12" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV12.png" group-title="央视频道",CCTV12$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV12" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV12.png" group-title="央视频道",CCTV12$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.64:8124
-#EXTINF:-1 tvg-id="" tvg-name="CCTV13" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV13.png" group-title="央视频道",CCTV13$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV13" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV13.png" group-title="央视频道",CCTV13$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.124:8128
-#EXTINF:-1 tvg-id="" tvg-name="CCTV14" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV14.png" group-title="央视频道",CCTV14$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV14" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV14.png" group-title="央视频道",CCTV14$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.65:8132
-#EXTINF:-1 tvg-id="" tvg-name="CCTV15" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV15.png" group-title="央视频道",CCTV15$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV15" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV15.png" group-title="央视频道",CCTV15$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.153:8136
-#EXTINF:-1 tvg-id="" tvg-name="CCTV16" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV16.png" group-title="央视频道",CCTV16$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV16" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV16.png" group-title="央视频道",CCTV16$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.184:8001
-#EXTINF:-1 tvg-id="" tvg-name="CCTV17" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV17.png" group-title="央视频道",CCTV17$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CCTV17" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV17.png" group-title="央视频道",CCTV17$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.151:8144
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.57:8152
-#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.54:4120
-#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$北京联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.56:4120
 #EXTINF:-1 tvg-id="" tvg-name="中国交通" group-title="其它频道",中国交通$北京联通
 http://114.254.37.254:18888/rtp/239.3.1.188:8001

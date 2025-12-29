@@ -173,11 +173,11 @@ http://112.109.206.190:9999/rtp/239.255.40.4:8208
 http://112.109.206.190:9999/rtp/239.255.40.194:8208
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$福建联通
 http://112.109.206.190:9999/rtp/239.255.40.143:8208
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$福建联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$福建联通
 http://112.109.206.190:9999/rtp/239.255.40.201:8208
-#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$福建联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$福建联通
 http://112.109.206.190:9999/rtp/239.255.40.30:8208
-#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$福建联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4$福建联通
 http://112.109.206.190:9999/rtp/239.255.40.31:8208
 #EXTINF:-1 tvg-id="" tvg-name="中国天气" group-title="央视频道",中国天气$福建联通
 http://112.109.206.190:9999/rtp/239.255.40.89:8208
@@ -191,7 +191,7 @@ http://112.109.206.190:9999/rtp/239.255.40.209:8208
 http://112.109.206.190:9999/rtp/239.255.40.210:8208
 #EXTINF:-1 tvg-id="" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画$福建联通
 http://112.109.206.190:9999/rtp/239.255.40.66:8208
-#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" group-title="数字频道",卡酷少儿$福建联通
+#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿$福建联通
 http://112.109.206.190:9999/rtp/239.255.40.24:8208
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$福建联通
 http://112.109.206.190:9999/rtp/239.255.40.25:8208

@@ -231,11 +231,11 @@ http://220.176.218.76:9000/udp/239.252.219.97:5140
 http://220.176.218.76:9000/udp/239.252.219.93:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV兵器科技" group-title="央视频道",CCTV兵器科技$江西电信
 http://220.176.218.76:9000/udp/239.252.219.98:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$江西电信
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$江西电信
 http://220.176.218.76:9000/udp/239.252.220.198:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$江西电信
+#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$江西电信
 http://220.176.218.76:9000/rtp/239.252.219.73:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$江西电信
+#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4$江西电信
 http://220.176.218.76:9000/rtp/239.252.219.169:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4欧洲" group-title="央视频道",CCTV-4欧洲$江西电信
 http://220.176.218.76:9000/udp/239.252.219.192:5140
@@ -265,11 +265,11 @@ http://220.176.218.76:9000/udp/239.252.220.179:5140
 http://220.176.218.76:9000/udp/239.252.220.212:5140
 #EXTINF:-1 tvg-id="" tvg-name="哈哈炫动" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%93%88%E5%93%88%E7%82%AB%E5%8A%A8.png" group-title="数字频道",哈哈炫动$江西电信
 http://220.176.218.76:9000/rtp/239.252.219.43:5140
-#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" group-title="数字频道",卡酷少儿$江西电信
+#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿$江西电信
 http://220.176.218.76:9000/rtp/239.252.219.109:5140
 #EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通$江西电信
 http://220.176.218.76:9000/rtp/239.252.219.92:5140
-#EXTINF:-1 tvg-id="" tvg-name="新动漫" group-title="数字频道",新动漫$江西电信
+#EXTINF:-1 tvg-id="" tvg-name="新动漫" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/xindongman.png" group-title="数字频道",新动漫$江西电信
 http://220.176.218.76:9000/rtp/239.252.220.132:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画$江西电信
 http://220.176.218.76:9000/rtp/239.252.220.136:5140

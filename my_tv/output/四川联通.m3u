@@ -35,11 +35,11 @@ http://221.10.226.195:5000/rtp/239.0.0.188:5140
 http://221.10.226.195:5000/rtp/239.0.0.152:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV4K超高清" group-title="央视频道",CCTV4K超高清$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.184:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$四川联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.51:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$四川联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.196:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$四川联通
+#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.98:5140
 #EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.49:5140
@@ -57,7 +57,7 @@ http://221.10.226.195:5000/rtp/239.0.0.7:5140
 http://221.10.226.195:5000/rtp/239.0.0.8:5140
 #EXTINF:-1 tvg-id="" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="其它频道",茶频道$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.36:5140
-#EXTINF:-1 tvg-id="" tvg-name="先锋乒羽" group-title="其它频道",先锋乒羽$四川联通
+#EXTINF:-1 tvg-id="" tvg-name="先锋乒羽" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/XFBY.png" group-title="其它频道",先锋乒羽$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.37:5140
 #EXTINF:-1 tvg-id="" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.23:5140
@@ -71,7 +71,7 @@ http://221.10.226.195:5000/rtp/239.0.0.26:5140
 http://221.10.226.195:5000/rtp/239.0.0.201:5140
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.95:5140
-#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" group-title="数字频道",卡酷少儿$四川联通
+#EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.75:5140
 #EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$四川联通
 http://221.10.226.195:5000/rtp/239.0.0.28:5140

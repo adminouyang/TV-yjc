@@ -109,9 +109,9 @@ http://222.82.200.70:8188/udp/238.125.4.84:5140
 http://222.82.200.70:8188/udp/238.125.5.34:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$新疆电信
 http://222.82.200.70:8188/udp/238.125.5.74:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$新疆电信
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$新疆电信
 http://222.82.200.70:8188/udp/238.125.5.51:5140
-#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$新疆电信
+#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4$新疆电信
 http://222.82.200.70:8188/udp/238.125.4.98:5140
 #EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$新疆电信
 http://222.82.200.70:8188/udp/238.125.5.121:5140

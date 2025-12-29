@@ -35,9 +35,9 @@ http://111.113.88.146:2000/rtp/239.121.4.122:8008
 http://111.113.88.146:2000/rtp/239.121.4.61:8340
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$宁夏电信
 http://111.113.88.146:2000/rtp/239.121.4.140:8852
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$宁夏电信
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$宁夏电信
 http://111.113.88.146:2000/rtp/239.121.4.180:9064
-#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$宁夏电信
+#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4$宁夏电信
 http://111.113.88.146:2000/rtp/239.121.4.199:9178
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4 美洲" group-title="央视频道",CCTV-4 美洲$宁夏电信
 http://111.113.88.146:2000/rtp/239.121.4.124:8002

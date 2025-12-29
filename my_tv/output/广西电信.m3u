@@ -149,11 +149,11 @@ http://171.104.106.97:50112/udp/239.81.0.230:4056
 http://171.104.106.97:50112/udp/239.81.0.228:4056
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$广西电信
 http://171.104.106.97:50112/udp/239.81.0.101:4056
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1$广西电信
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$广西电信
 http://171.104.106.97:50112/udp/239.81.0.92:4056
-#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV2.png" group-title="央视频道",CETV2$广西电信
+#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$广西电信
 http://171.104.106.97:50112/udp/239.81.0.245:4056
-#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV4.png" group-title="央视频道",CETV4$广西电信
+#EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4$广西电信
 http://171.104.106.97:50112/udp/239.81.0.246:4056
 #EXTINF:-1 tvg-id="" tvg-name="IPTV5体育" group-title="央视频道",IPTV5体育$广西电信
 http://171.104.106.97:50112/udp/239.81.0.12:4056
@@ -163,7 +163,7 @@ http://171.104.106.97:50112/udp/239.81.0.64:4056
 http://171.104.106.97:50112/udp/239.81.0.62:4056
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$广西电信
 http://171.104.106.97:50112/udp/239.81.0.61:4056
-#EXTINF:-1 tvg-id="" tvg-name="新动漫" group-title="数字频道",新动漫$广西电信
+#EXTINF:-1 tvg-id="" tvg-name="新动漫" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/xindongman.png" group-title="数字频道",新动漫$广西电信
 http://171.104.106.97:50112/udp/239.81.0.235:4056
 #EXTINF:-1 tvg-id="" tvg-name="华数爱上4K" group-title="数字频道",华数爱上4K$广西电信
 http://171.104.106.97:50112/udp/239.81.0.123:4056
