@@ -406,21 +406,25 @@ def scan_ip_port(ip, port, url_end):
 def extract_channels(url):
     hotel_channels = []
     try:
-        json_url = f"{url}"
+        # 分割URL，获取协议和域名部分
         urls = url.split('/', 3)
         url_x = f"{urls[0]}//{urls[2]}"
-        if "iptv" in json_url:
-            response = requests.get(json_url, timeout=3)
+        
+        if "iptv" in url:
+            response = requests.get(url, timeout=3)
             json_data = response.json()
-            for item in json_data['data']:
+            for item in json_data.get('data', []):
                 if isinstance(item, dict):
                     name = item.get('name')
                     urlx = item.get('url')
-                    if "tsfile" in urlx or "m3u8" in urlx:
+                    if urlx and ("tsfile" in urlx or "m3u8" in urlx):
+                        # 确保urlx以斜杠开头，避免双斜杠
+                        if not urlx.startswith('/'):
+                            urlx = '/' + urlx
                         urld = f"{url_x}{urlx}"
                         hotel_channels.append((name, urld))
-        elif "ZHGXTV" in json_url:
-            response = requests.get(json_url, timeout=2)
+        elif "ZHGXTV" in url:
+            response = requests.get(url, timeout=2)
             json_data = response.content.decode('utf-8')
             data_lines = json_data.split('\n')
             for line in data_lines:
