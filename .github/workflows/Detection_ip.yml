@@ -2,38 +2,43 @@ name: Detection_ip
 
 on:
   # schedule:
-  #   - cron: "* */3 * * *"
-  workflow_dispatch:          # 手动触发
+  #   - cron: '0 */3 * * *'  # 每3小时运行一次
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
-  fetch-and-push:
+  test-speed:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # 添加写入权限
-
+    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4  # 升级到 v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests
-          
-      - name: 检测ip 
-        run: python IP_Scan/Detection_ip.py    
-        
-      - name: 提交更新
-        run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -m "更新result_ip" || echo "没有更改可提交"
-          git push origin main
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # 获取完整历史
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+    
+    - name: 检测ip 
+      run: python IP_Scan/Detection_ip.py
+    
+    - name: Configure Git
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+    
+    - name: Pull latest changes
+      run: |
+        git pull origin main --rebase || git pull origin main --strategy-option ours
+    
+    - name: Commit and Push
+      run: |
+        git add .
+        git commit -m "更新result_ip和清理失败IP" || echo "无更改可提交"
+        git push origin main
