@@ -1,7 +1,7 @@
 import requests
 import os
 import time
-from typing import List, Tuple
+from typing import List, Tuple, Set
 import logging
 
 # 配置日志
@@ -57,7 +57,6 @@ CITY_STREAMS = {
     "陕西电信": ["rtp/239.111.205.35:5140"],
     "青海电信": ["rtp/239.120.1.64:8332"],
     "黑龙江联通": ["rtp/229.58.190.150:5000"],
-
 }
 
 
@@ -78,6 +77,16 @@ def read_ip_file(filepath: str) -> List[str]:
         logger.error(f"读取文件失败: {e}")
     
     return ips
+
+
+def write_ip_file(filepath: str, ips: List[str]):
+    """写入IP文件"""
+    try:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            for ip in ips:
+                f.write(f"{ip}\n")
+    except Exception as e:
+        logger.error(f"写入文件失败 {filepath}: {e}")
 
 
 def test_single_url(url: str, timeout: int = 3) -> Tuple[float, str]:
@@ -120,41 +129,74 @@ def test_single_url(url: str, timeout: int = 3) -> Tuple[float, str]:
 
 
 def process_city_simple(city: str, streams: List[str]):
-    """简化版的城市处理函数"""
-    logger.info(f"处理: {city}")
+    """处理单个城市/运营商的测试，删除失败的IP"""
+    logger.info(f"开始处理: {city}")
     
-    # 读取IP
+    # 读取IP文件
     ip_file = f"IP_Scan/ip/{city}_good_ip.txt"
-    ips = read_ip_file(ip_file)
+    all_ips = read_ip_file(ip_file)
     
-    if not ips:
+    if not all_ips:
         logger.warning(f"无IP地址: {ip_file}")
         return
     
-    logger.info(f"找到 {len(ips)} 个IP")
+    logger.info(f"找到 {len(all_ips)} 个IP")
+    
+    # 记录成功和失败的IP
+    successful_ips = []  # 存储(ip, speed)元组
+    failed_ips = set()   # 存储失败的IP
     
     # 测试所有IP
-    results = []
-    
-    for ip in ips:
+    for ip in all_ips:
+        ip_success = False
+        ip_speed = 0
+        
+        # 尝试所有流地址，直到成功一个
         for stream in streams:
             url = f"http://{ip}/{stream}"
             speed, error = test_single_url(url)
             
             if error:
-                logger.debug(f"测试失败 {ip}: {error}")
+                logger.debug(f"{city} - {ip} 测试失败: {error} (流: {stream})")
             else:
-                results.append((ip, speed))
-                logger.info(f"测试成功 {ip}: {speed:.2f} KB/s")
+                successful_ips.append((ip, speed))
+                logger.info(f"{city} - {ip} 测试成功: {speed:.2f} KB/s (流: {stream})")
+                ip_success = True
                 break  # 成功一个就继续下一个IP
+        
+        # 如果所有流都失败，记录失败IP
+        if not ip_success:
+            failed_ips.add(ip)
+            logger.info(f"{city} - {ip} 所有流测试失败")
     
-    # 排序并取前2
-    results.sort(key=lambda x: x[1], reverse=True)
-    top_ips = results[:2]
+    # 从原文件中删除失败的IP
+    if failed_ips:
+        remaining_ips = [ip for ip in all_ips if ip not in failed_ips]
+        
+        if remaining_ips:
+            write_ip_file(ip_file, remaining_ips)
+            logger.info(f"{city} - 删除 {len(failed_ips)} 个失败IP，剩余 {len(remaining_ips)} 个IP")
+        else:
+            # 如果所有IP都失败，保留原文件但写入注释
+            write_ip_file(ip_file, ["# 所有IP测试失败，请检查网络或重新扫描"])
+            logger.warning(f"{city} - 所有IP测试失败，文件已清空")
+    else:
+        logger.info(f"{city} - 无失败IP")
     
-    if not top_ips:
-        logger.warning(f"无有效IP: {city}")
+    # 如果没有成功的IP，直接返回
+    if not successful_ips:
+        logger.warning(f"{city} - 无成功IP")
+        
+        # 如果原文件被清空，创建一个空的结果文件
+        os.makedirs("IP_Scan/result_ip", exist_ok=True)
+        output_file = f"IP_Scan/result_ip/{city}.txt"
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(f"# {city} 无可用IP\n")
         return
+    
+    # 按速度排序并取前2
+    successful_ips.sort(key=lambda x: x[1], reverse=True)
+    top_ips = successful_ips[:2]
     
     # 保存结果
     os.makedirs("IP_Scan/result_ip", exist_ok=True)
@@ -163,14 +205,14 @@ def process_city_simple(city: str, streams: List[str]):
     with open(output_file, 'w', encoding='utf-8') as f:
         for ip, speed in top_ips:
             f.write(f"{ip}\n")
-            logger.info(f"保存: {ip} (速度: {speed:.2f} KB/s)")
+            logger.info(f"{city} - 保存最快IP: {ip} (速度: {speed:.2f} KB/s)")
     
-    logger.info(f"结果已保存: {output_file}")
+    logger.info(f"{city} - 结果已保存: {output_file}")
 
 
 def main_simple():
-    """简化版主函数"""
-    logger.info("开始组播流测速...")
+    """主函数"""
+    logger.info("开始组播流测速并清理失败IP...")
     
     for city, streams in CITY_STREAMS.items():
         try:
@@ -182,5 +224,4 @@ def main_simple():
 
 
 if __name__ == "__main__":
-    # 使用简化版
     main_simple()
