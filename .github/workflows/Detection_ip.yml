@@ -9,11 +9,14 @@ jobs:
   test-speed:
     runs-on: ubuntu-latest
     
+    permissions:
+      contents: write  # 关键：给予写入权限
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        fetch-depth: 0  # 获取完整历史
+        token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -22,23 +25,16 @@ jobs:
     
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install requests
+       python -m pip install --upgrade pip
+       pip install requests
     
-    - name: 检测ip 
+    - name: 检测ip
       run: python IP_Scan/Detection_ip.py
-    
-    - name: Configure Git
-      run: |
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-    
-    - name: Pull latest changes
-      run: |
-        git pull origin main --rebase || git pull origin main --strategy-option ours
     
     - name: Commit and Push
       run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         git add .
         git commit -m "更新result_ip和清理失败IP" || echo "无更改可提交"
         git push origin main
