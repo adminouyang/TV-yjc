@@ -1,27 +1,26 @@
 name: Detection_ip
 
 on:
-  # schedule:
-  #   - cron: '0 */3 * * *'  # 每3小时运行一次
+  schedule:
+    - cron: '0 */3 * * *'  # 每3小时运行一次
   workflow_dispatch:  # 允许手动触发
 
 jobs:
   test-speed:
     runs-on: ubuntu-latest
-    
     permissions:
-      contents: write  # 关键：给予写入权限
+      contents: write
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.x'
+        python-version: '3.10'
     
     - name: Install dependencies
       run: |
@@ -31,10 +30,32 @@ jobs:
     - name: 检测ip
       run: python IP_Scan/Detection_ip.py
     
-    - name: Commit and Push
+    - name: Configure Git
       run: |
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+    
+    - name: Check for changes
+      id: git-check
+      run: |
+        git status --porcelain
+        if [[ -n $(git status --porcelain) ]]; then
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Pull and merge changes
+      if: steps.git-check.outputs.has_changes == 'true'
+      run: |
+        # 先尝试拉取最新更改
+        git fetch origin
+        git config pull.rebase false
+        git pull origin main --no-ff --no-edit || git pull origin main --strategy-option ours
+        
+    - name: Commit and push
+      if: steps.git-check.outputs.has_changes == 'true'
+      run: |
         git add .
-        git commit -m "更新result_ip和清理失败IP" || echo "无更改可提交"
+        git commit -m "更新result_ip和清理失败IP $(date +'%Y-%m-%d %H:%M:%S') [skip ci]"
         git push origin main
