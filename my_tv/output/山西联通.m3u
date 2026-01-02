@@ -1,189 +1,189 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.153:9136
+http://118.78.196.26:55555/rtp/226.0.2.153:9136
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.154:9144
+http://118.78.196.26:55555/rtp/226.0.2.154:9144
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.208:9576
+http://118.78.196.26:55555/rtp/226.0.2.208:9576
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.156:9160
+http://118.78.196.26:55555/rtp/226.0.2.156:9160
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.209:9584
+http://118.78.196.26:55555/rtp/226.0.2.209:9584
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.210:9592
+http://118.78.196.26:55555/rtp/226.0.2.210:9592
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.159:9184
+http://118.78.196.26:55555/rtp/226.0.2.159:9184
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.211:9600
+http://118.78.196.26:55555/rtp/226.0.2.211:9600
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.161:9200
+http://118.78.196.26:55555/rtp/226.0.2.161:9200
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.162:9208
+http://118.78.196.26:55555/rtp/226.0.2.162:9208
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.164:9224
+http://118.78.196.26:55555/rtp/226.0.2.164:9224
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.165:9232
+http://118.78.196.26:55555/rtp/226.0.2.165:9232
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.166:9240
+http://118.78.196.26:55555/rtp/226.0.2.166:9240
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.169:9264
+http://118.78.196.26:55555/rtp/226.0.2.169:9264
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.170:9272
+http://118.78.196.26:55555/rtp/226.0.2.170:9272
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.168:9256
+http://118.78.196.26:55555/rtp/226.0.2.168:9256
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-风云足球" group-title="央视频道",CCTV-风云足球$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.225:9712
+http://118.78.196.26:55555/rtp/226.0.2.225:9712
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-高尔夫网球" group-title="央视频道",CCTV-高尔夫网球$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.217:9648
+http://118.78.196.26:55555/rtp/226.0.2.217:9648
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-风云剧场" group-title="央视频道",CCTV-风云剧场$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.227:9728
+http://118.78.196.26:55555/rtp/226.0.2.227:9728
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-第一剧场" group-title="央视频道",CCTV-第一剧场$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.221:9680
+http://118.78.196.26:55555/rtp/226.0.2.221:9680
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-怀旧剧场" group-title="央视频道",CCTV-怀旧剧场$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.224:9704
+http://118.78.196.26:55555/rtp/226.0.2.224:9704
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-世界地理" group-title="央视频道",CCTV-世界地理$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.222:9688
+http://118.78.196.26:55555/rtp/226.0.2.222:9688
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-兵器科技" group-title="央视频道",CCTV-兵器科技$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.223:9696
+http://118.78.196.26:55555/rtp/226.0.2.223:9696
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-电视指南" group-title="央视频道",CCTV-电视指南$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.218:9656
+http://118.78.196.26:55555/rtp/226.0.2.218:9656
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-央视台球" group-title="央视频道",CCTV-央视台球$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.216:9640
+http://118.78.196.26:55555/rtp/226.0.2.216:9640
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-风云音乐" group-title="央视频道",CCTV-风云音乐$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.220:9672
+http://118.78.196.26:55555/rtp/226.0.2.220:9672
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-女性时尚" group-title="央视频道",CCTV-女性时尚$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.226:9720
+http://118.78.196.26:55555/rtp/226.0.2.226:9720
 #EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.181:9360
+http://118.78.196.26:55555/rtp/226.0.2.181:9360
 #EXTINF:-1 tvg-id="" tvg-name="CETV早期教育" group-title="央视频道",CETV早期教育$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.99:8704
+http://118.78.196.26:55555/rtp/226.0.2.99:8704
 #EXTINF:-1 tvg-id="" tvg-name="中国天气" group-title="央视频道",中国天气$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.103:8736
+http://118.78.196.26:55555/rtp/226.0.2.103:8736
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-文化精品" group-title="其它频道",CCTV-文化精品$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.219:9664
+http://118.78.196.26:55555/rtp/226.0.2.219:9664
 #EXTINF:-1 tvg-id="" tvg-name="山西黄河频道" group-title="其它频道",山西黄河频道$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.235:9792
+http://118.78.196.26:55555/rtp/226.0.2.235:9792
 #EXTINF:-1 tvg-id="" tvg-name="清徐" group-title="其它频道",清徐$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.191:9440
+http://118.78.196.26:55555/rtp/226.0.2.191:9440
 #EXTINF:-1 tvg-id="" tvg-name="朔州-1" group-title="其它频道",朔州-1$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.185:9392
+http://118.78.196.26:55555/rtp/226.0.2.185:9392
 #EXTINF:-1 tvg-id="" tvg-name="朔州-2" group-title="其它频道",朔州-2$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.186:9400
+http://118.78.196.26:55555/rtp/226.0.2.186:9400
 #EXTINF:-1 tvg-id="" tvg-name="孝义电视台" group-title="其它频道",孝义电视台$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.189:9424
+http://118.78.196.26:55555/rtp/226.0.2.189:9424
 #EXTINF:-1 tvg-id="" tvg-name="古交电视台" group-title="其它频道",古交电视台$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.192:9448
+http://118.78.196.26:55555/rtp/226.0.2.192:9448
 #EXTINF:-1 tvg-id="" tvg-name="阳曲" group-title="其它频道",阳曲$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.196:9480
+http://118.78.196.26:55555/rtp/226.0.2.196:9480
 #EXTINF:-1 tvg-id="" tvg-name="九屏测试" group-title="其它频道",九屏测试$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.197:9488
+http://118.78.196.26:55555/rtp/226.0.2.197:9488
 #EXTINF:-1 tvg-id="" tvg-name="太原1" group-title="其它频道",太原1$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.201:9520
+http://118.78.196.26:55555/rtp/226.0.2.201:9520
 #EXTINF:-1 tvg-id="" tvg-name="太原2" group-title="其它频道",太原2$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.202:9528
+http://118.78.196.26:55555/rtp/226.0.2.202:9528
 #EXTINF:-1 tvg-id="" tvg-name="太原3" group-title="其它频道",太原3$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.203:9536
+http://118.78.196.26:55555/rtp/226.0.2.203:9536
 #EXTINF:-1 tvg-id="" tvg-name="太原4" group-title="其它频道",太原4$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.204:9544
+http://118.78.196.26:55555/rtp/226.0.2.204:9544
 #EXTINF:-1 tvg-id="" tvg-name="太原5" group-title="其它频道",太原5$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.205:9552
+http://118.78.196.26:55555/rtp/226.0.2.205:9552
 #EXTINF:-1 tvg-id="" tvg-name="太原教育" group-title="其它频道",太原教育$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.206:9560
+http://118.78.196.26:55555/rtp/226.0.2.206:9560
 #EXTINF:-1 tvg-id="" tvg-name="晋能控股" group-title="其它频道",晋能控股$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.229:9744
+http://118.78.196.26:55555/rtp/226.0.2.229:9744
 #EXTINF:-1 tvg-id="" tvg-name="大同教育" group-title="其它频道",大同教育$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.232:9772
+http://118.78.196.26:55555/rtp/226.0.2.232:9772
 #EXTINF:-1 tvg-id="" tvg-name="阳泉-1新闻综合" group-title="其它频道",阳泉-1新闻综合$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.233:9776
+http://118.78.196.26:55555/rtp/226.0.2.233:9776
 #EXTINF:-1 tvg-id="" tvg-name="阳泉-2科教" group-title="其它频道",阳泉-2科教$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.234:9784
+http://118.78.196.26:55555/rtp/226.0.2.234:9784
 #EXTINF:-1 tvg-id="" tvg-name="上海游戏风云" group-title="其它频道",上海游戏风云$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.78:8536
+http://118.78.196.26:55555/rtp/226.0.2.78:8536
 #EXTINF:-1 tvg-id="" tvg-name="河南文物宝库" group-title="其它频道",河南文物宝库$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.110:8792
+http://118.78.196.26:55555/rtp/226.0.2.110:8792
 #EXTINF:-1 tvg-id="" tvg-name="河南武术世界" group-title="其它频道",河南武术世界$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.97:8688
+http://118.78.196.26:55555/rtp/226.0.2.97:8688
 #EXTINF:-1 tvg-id="" tvg-name="CHC高清电影" group-title="数字频道",CHC高清电影$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.93:8004
+http://118.78.196.26:55555/rtp/226.0.2.93:8004
 #EXTINF:-1 tvg-id="" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.94:8012
+http://118.78.196.26:55555/rtp/226.0.2.94:8012
 #EXTINF:-1 tvg-id="" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.240:9820
+http://118.78.196.26:55555/rtp/226.0.2.240:9820
 #EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.183:9376
+http://118.78.196.26:55555/rtp/226.0.2.183:9376
 #EXTINF:-1 tvg-id="" tvg-name="上海都市剧场" group-title="数字频道",上海都市剧场$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.81:8560
+http://118.78.196.26:55555/rtp/226.0.2.81:8560
 #EXTINF:-1 tvg-id="" tvg-name="河南梨园频道" group-title="数字频道",河南梨园频道$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.115:8832
+http://118.78.196.26:55555/rtp/226.0.2.115:8832
 #EXTINF:-1 tvg-id="" tvg-name="湖南金鹰卡通" group-title="数字频道",湖南金鹰卡通$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.172:9288
+http://118.78.196.26:55555/rtp/226.0.2.172:9288
 #EXTINF:-1 tvg-id="" tvg-name="上海金色学堂" group-title="数字频道",上海金色学堂$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.182:9368
+http://118.78.196.26:55555/rtp/226.0.2.182:9368
 #EXTINF:-1 tvg-id="" tvg-name="湖南金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",湖南金鹰纪实$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.194:9464
+http://118.78.196.26:55555/rtp/226.0.2.194:9464
 #EXTINF:-1 tvg-id="" tvg-name="上海纪实人文" group-title="数字频道",上海纪实人文$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.193:9456
+http://118.78.196.26:55555/rtp/226.0.2.193:9456
 #EXTINF:-1 tvg-id="" tvg-name="上海法治天地" group-title="数字频道",上海法治天地$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.83:8576
+http://118.78.196.26:55555/rtp/226.0.2.83:8576
 #EXTINF:-1 tvg-id="" tvg-name="上海乐游纪实" group-title="数字频道",上海乐游纪实$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.77:8528
+http://118.78.196.26:55555/rtp/226.0.2.77:8528
 #EXTINF:-1 tvg-id="" tvg-name="上海生活时尚" group-title="数字频道",上海生活时尚$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.84:8584
+http://118.78.196.26:55555/rtp/226.0.2.84:8584
 #EXTINF:-1 tvg-id="" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.152:9128
+http://118.78.196.26:55555/rtp/226.0.2.152:9128
 #EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.143:9056
+http://118.78.196.26:55555/rtp/226.0.2.143:9056
 #EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.144:9064
+http://118.78.196.26:55555/rtp/226.0.2.144:9064
 #EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.145:9072
+http://118.78.196.26:55555/rtp/226.0.2.145:9072
 #EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.146:9080
+http://118.78.196.26:55555/rtp/226.0.2.146:9080
 #EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.147:9088
+http://118.78.196.26:55555/rtp/226.0.2.147:9088
 #EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.148:9096
+http://118.78.196.26:55555/rtp/226.0.2.148:9096
 #EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.149:9104
+http://118.78.196.26:55555/rtp/226.0.2.149:9104
 #EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.150:9112
+http://118.78.196.26:55555/rtp/226.0.2.150:9112
 #EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.188:9416
+http://118.78.196.26:55555/rtp/226.0.2.188:9416
 #EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.151:9120
+http://118.78.196.26:55555/rtp/226.0.2.151:9120
 #EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.173:9296
+http://118.78.196.26:55555/rtp/226.0.2.173:9296
 #EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.174:9304
+http://118.78.196.26:55555/rtp/226.0.2.174:9304
 #EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.175:9312
+http://118.78.196.26:55555/rtp/226.0.2.175:9312
 #EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.176:9320
+http://118.78.196.26:55555/rtp/226.0.2.176:9320
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.177:9328
+http://118.78.196.26:55555/rtp/226.0.2.177:9328
 #EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.178:9336
+http://118.78.196.26:55555/rtp/226.0.2.178:9336
 #EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.179:9344
+http://118.78.196.26:55555/rtp/226.0.2.179:9344
 #EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.180:9352
+http://118.78.196.26:55555/rtp/226.0.2.180:9352
 #EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.231:9760
+http://118.78.196.26:55555/rtp/226.0.2.231:9760
 #EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.52:8328
+http://118.78.196.26:55555/rtp/226.0.2.52:8328
 #EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.54:8344
+http://118.78.196.26:55555/rtp/226.0.2.54:8344
 #EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.58:8376
+http://118.78.196.26:55555/rtp/226.0.2.58:8376
 #EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.212:9608
+http://118.78.196.26:55555/rtp/226.0.2.212:9608
 #EXTINF:-1 tvg-id="" tvg-name="山西经济与科技" group-title="☘️山西省",山西经济与科技$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.236:9800
+http://118.78.196.26:55555/rtp/226.0.2.236:9800
 #EXTINF:-1 tvg-id="" tvg-name="山西影视频道" group-title="☘️山西省",山西影视频道$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.237:9808
+http://118.78.196.26:55555/rtp/226.0.2.237:9808
 #EXTINF:-1 tvg-id="" tvg-name="山西社会与法治" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E7%A4%BE%E4%BC%9A%E4%B8%8E%E6%B3%95%E6%B2%BB.png" group-title="☘️山西省",山西社会与法治$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.238:9816
+http://118.78.196.26:55555/rtp/226.0.2.238:9816
 #EXTINF:-1 tvg-id="" tvg-name="山西文体生活" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E6%96%87%E4%BD%93%E7%94%9F%E6%B4%BB.png" group-title="☘️山西省",山西文体生活$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.16:8040
+http://118.78.196.26:55555/rtp/226.0.2.16:8040
 #EXTINF:-1 tvg-id="" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经$山西联通
-http://118.78.196.24:55555/rtp/226.0.2.76:8520
+http://118.78.196.26:55555/rtp/226.0.2.76:8520
