@@ -1,175 +1,175 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="" tvg-name="九画面" group-title="其它频道",九画面$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.131:8268
+http://220.167.170.254:4000/rtp/239.120.1.131:8268
 #EXTINF:-1 tvg-id="" tvg-name="海东综合频道" group-title="其它频道",海东综合频道$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.102:8328
+http://220.167.170.254:4000/rtp/239.120.1.102:8328
 #EXTINF:-1 tvg-id="" tvg-name="海北电视台" group-title="其它频道",海北电视台$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.123:8266
+http://220.167.170.254:4000/rtp/239.120.1.123:8266
 #EXTINF:-1 tvg-id="" tvg-name="海西电视台" group-title="其它频道",海西电视台$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.184:9160
+http://220.167.170.254:4000/rtp/239.120.1.184:9160
 #EXTINF:-1 tvg-id="" tvg-name="上海游戏风云" group-title="其它频道",上海游戏风云$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.215:9312
+http://220.167.170.254:4000/rtp/239.120.1.215:9312
 #EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.117:8694
+http://220.167.170.254:4000/rtp/239.120.1.117:8694
 #EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.161:9024
+http://220.167.170.254:4000/rtp/239.120.1.161:9024
 #EXTINF:-1 tvg-id="" tvg-name="天元围棋" group-title="其它频道",天元围棋$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.59:8320
+http://220.167.170.254:4000/rtp/239.120.1.59:8320
 #EXTINF:-1 tvg-id="" tvg-name="久治" group-title="其它频道",久治$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.34:9534
+http://220.167.170.254:4000/rtp/239.120.1.34:9534
 #EXTINF:-1 tvg-id="" tvg-name="青海油田" group-title="其它频道",青海油田$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.144:8416
+http://220.167.170.254:4000/rtp/239.120.1.144:8416
 #EXTINF:-1 tvg-id="" tvg-name="矿区生活" group-title="其它频道",矿区生活$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.145:8420
+http://220.167.170.254:4000/rtp/239.120.1.145:8420
 #EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.64:8332
+http://220.167.170.254:4000/rtp/239.120.1.64:8332
 #EXTINF:-1 tvg-id="" tvg-name="安多卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%A4%9A%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安多卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.40:8214
+http://220.167.170.254:4000/rtp/239.120.1.40:8214
 #EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.118:8700
+http://220.167.170.254:4000/rtp/239.120.1.118:8700
 #EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.121:8784
+http://220.167.170.254:4000/rtp/239.120.1.121:8784
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.122:8790
+http://220.167.170.254:4000/rtp/239.120.1.122:8790
 #EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.124:8802
+http://220.167.170.254:4000/rtp/239.120.1.124:8802
 #EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.125:8808
+http://220.167.170.254:4000/rtp/239.120.1.125:8808
 #EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.126:8814
+http://220.167.170.254:4000/rtp/239.120.1.126:8814
 #EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.127:8820
+http://220.167.170.254:4000/rtp/239.120.1.127:8820
 #EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.128:8826
+http://220.167.170.254:4000/rtp/239.120.1.128:8826
 #EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.129:8832
+http://220.167.170.254:4000/rtp/239.120.1.129:8832
 #EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.137:8880
+http://220.167.170.254:4000/rtp/239.120.1.137:8880
 #EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.142:8910
+http://220.167.170.254:4000/rtp/239.120.1.142:8910
 #EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.146:8934
+http://220.167.170.254:4000/rtp/239.120.1.146:8934
 #EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.147:8940
+http://220.167.170.254:4000/rtp/239.120.1.147:8940
 #EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.148:8946
+http://220.167.170.254:4000/rtp/239.120.1.148:8946
 #EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.151:8964
+http://220.167.170.254:4000/rtp/239.120.1.151:8964
 #EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.155:8988
+http://220.167.170.254:4000/rtp/239.120.1.155:8988
 #EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.211:9294
+http://220.167.170.254:4000/rtp/239.120.1.211:9294
 #EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.212:9300
+http://220.167.170.254:4000/rtp/239.120.1.212:9300
 #EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.226:9348
+http://220.167.170.254:4000/rtp/239.120.1.226:9348
 #EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.228:9356
+http://220.167.170.254:4000/rtp/239.120.1.228:9356
 #EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.229:9360
+http://220.167.170.254:4000/rtp/239.120.1.229:9360
 #EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.232:9372
+http://220.167.170.254:4000/rtp/239.120.1.232:9372
 #EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.233:9514
+http://220.167.170.254:4000/rtp/239.120.1.233:9514
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视4K超高清" group-title="卫视频道",北京卫视4K超高清$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.111:8254
+http://220.167.170.254:4000/rtp/239.120.1.111:8254
 #EXTINF:-1 tvg-id="" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.130:8838
+http://220.167.170.254:4000/rtp/239.120.1.130:8838
 #EXTINF:-1 tvg-id="" tvg-name="新疆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",新疆卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.134:8862
+http://220.167.170.254:4000/rtp/239.120.1.134:8862
 #EXTINF:-1 tvg-id="" tvg-name="内蒙古卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",内蒙古卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.135:8868
+http://220.167.170.254:4000/rtp/239.120.1.135:8868
 #EXTINF:-1 tvg-id="" tvg-name="西藏卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",西藏卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.136:8874
+http://220.167.170.254:4000/rtp/239.120.1.136:8874
 #EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.141:8904
+http://220.167.170.254:4000/rtp/239.120.1.141:8904
 #EXTINF:-1 tvg-id="" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.143:8916
+http://220.167.170.254:4000/rtp/239.120.1.143:8916
 #EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.156:8994
+http://220.167.170.254:4000/rtp/239.120.1.156:8994
 #EXTINF:-1 tvg-id="" tvg-name="延边卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BB%B6%E8%BE%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",延边卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.132:8354
+http://220.167.170.254:4000/rtp/239.120.1.132:8354
 #EXTINF:-1 tvg-id="" tvg-name="兵团卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",兵团卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.240:9404
+http://220.167.170.254:4000/rtp/239.120.1.240:9404
 #EXTINF:-1 tvg-id="" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.177:8272
+http://220.167.170.254:4000/rtp/239.120.1.177:8272
 #EXTINF:-1 tvg-id="" tvg-name="青海都市" group-title="☘️青海省",青海都市$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.41:8220
+http://220.167.170.254:4000/rtp/239.120.1.41:8220
 #EXTINF:-1 tvg-id="" tvg-name="青海经视" group-title="☘️青海省",青海经视$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.42:8226
+http://220.167.170.254:4000/rtp/239.120.1.42:8226
 #EXTINF:-1 tvg-id="" tvg-name="西宁生活服务" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E5%AE%81%E7%94%9F%E6%B4%BB%E6%9C%8D%E5%8A%A1.png" group-title="☘️青海省",西宁生活服务$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.248:9440
+http://220.167.170.254:4000/rtp/239.120.1.248:9440
 #EXTINF:-1 tvg-id="" tvg-name="西宁新闻综合" tvg-logo="https://tb.zbds.top/logo/西宁新闻综合.png" group-title="☘️青海省",西宁新闻综合$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.249:9444
+http://220.167.170.254:4000/rtp/239.120.1.249:9444
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.119:8260
+http://220.167.170.254:4000/rtp/239.120.1.119:8260
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.223:9484
+http://220.167.170.254:4000/rtp/239.120.1.223:9484
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.88:9420
+http://220.167.170.254:4000/rtp/239.120.1.88:9420
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.159:9012
+http://220.167.170.254:4000/rtp/239.120.1.159:9012
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.46:8248
+http://220.167.170.254:4000/rtp/239.120.1.46:8248
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.49:8252
+http://220.167.170.254:4000/rtp/239.120.1.49:8252
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.224:9490
+http://220.167.170.254:4000/rtp/239.120.1.224:9490
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.50:8308
+http://220.167.170.254:4000/rtp/239.120.1.50:8308
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.227:9496
+http://220.167.170.254:4000/rtp/239.120.1.227:9496
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.250:9448
+http://220.167.170.254:4000/rtp/239.120.1.250:9448
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.163:9036
+http://220.167.170.254:4000/rtp/239.120.1.163:9036
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.230:9502
+http://220.167.170.254:4000/rtp/239.120.1.230:9502
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.165:9048
+http://220.167.170.254:4000/rtp/239.120.1.165:9048
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.193:8284
+http://220.167.170.254:4000/rtp/239.120.1.193:8284
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.167:9060
+http://220.167.170.254:4000/rtp/239.120.1.167:9060
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.252:9554
+http://220.167.170.254:4000/rtp/239.120.1.252:9554
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.68:8370
+http://220.167.170.254:4000/rtp/239.120.1.68:8370
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.245:9428
+http://220.167.170.254:4000/rtp/239.120.1.245:9428
 #EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.133:8856
+http://220.167.170.254:4000/rtp/239.120.1.133:8856
 #EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.44:8238
+http://220.167.170.254:4000/rtp/239.120.1.44:8238
 #EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.45:8244
+http://220.167.170.254:4000/rtp/239.120.1.45:8244
 #EXTINF:-1 tvg-id="" tvg-name="中国天气" group-title="央视频道",中国天气$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.241:9408
+http://220.167.170.254:4000/rtp/239.120.1.241:9408
 #EXTINF:-1 tvg-id="" tvg-name="上海欢笑剧场" group-title="数字频道",上海欢笑剧场$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.216:9316
+http://220.167.170.254:4000/rtp/239.120.1.216:9316
 #EXTINF:-1 tvg-id="" tvg-name="上海乐游频道" group-title="数字频道",上海乐游频道$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.217:9320
+http://220.167.170.254:4000/rtp/239.120.1.217:9320
 #EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.219:9328
+http://220.167.170.254:4000/rtp/239.120.1.219:9328
 #EXTINF:-1 tvg-id="" tvg-name="上海生活时尚" group-title="数字频道",上海生活时尚$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.220:9332
+http://220.167.170.254:4000/rtp/239.120.1.220:9332
 #EXTINF:-1 tvg-id="" tvg-name="上海都市剧场" group-title="数字频道",上海都市剧场$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.221:9336
+http://220.167.170.254:4000/rtp/239.120.1.221:9336
 #EXTINF:-1 tvg-id="" tvg-name="上海法治天地" group-title="数字频道",上海法治天地$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.54:8298
+http://220.167.170.254:4000/rtp/239.120.1.54:8298
 #EXTINF:-1 tvg-id="" tvg-name="上海金色学堂" group-title="数字频道",上海金色学堂$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.69:8374
+http://220.167.170.254:4000/rtp/239.120.1.69:8374
 #EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.73:8412
+http://220.167.170.254:4000/rtp/239.120.1.73:8412
 #EXTINF:-1 tvg-id="" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.225:9346
+http://220.167.170.254:4000/rtp/239.120.1.225:9346
 #EXTINF:-1 tvg-id="" tvg-name="哈哈炫动" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%93%88%E5%93%88%E7%82%AB%E5%8A%A8.png" group-title="数字频道",哈哈炫动$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.140:8898
+http://220.167.170.254:4000/rtp/239.120.1.140:8898
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.139:8892
+http://220.167.170.254:4000/rtp/239.120.1.139:8892
 #EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.138:8886
+http://220.167.170.254:4000/rtp/239.120.1.138:8886
 #EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.108:8640
+http://220.167.170.254:4000/rtp/239.120.1.108:8640
 #EXTINF:-1 tvg-id="" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经$青海电信
-http://220.167.170.214:4000/rtp/239.120.1.55:8304
+http://220.167.170.254:4000/rtp/239.120.1.55:8304
