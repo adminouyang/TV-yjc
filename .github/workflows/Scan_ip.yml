@@ -2,7 +2,7 @@ name: Scan_ip
 
 on:
   schedule:
-    - cron: '0 4,17 * * *'  # 每天UTC时间4点和17点运行（北京时间12点和次日1点）
+    - cron: '0 0,11 * * *'  # 每天UTC时间4点和17点运行（北京时间12点和次日1点）
   workflow_dispatch:
 env:
   TZ: 'Asia/Shanghai'
