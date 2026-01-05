@@ -1,255 +1,255 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.253:5140
+http://223.198.241.119:4000/rtp/239.253.64.253:5140
 #EXTINF:-1 tvg-id="" tvg-name="海南三沙卫视" group-title="卫视频道",海南三沙卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.112:5140
+http://223.198.241.119:4000/rtp/239.253.64.112:5140
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.204:5140
+http://223.198.241.119:4000/rtp/239.253.64.204:5140
 #EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.201:5140
+http://223.198.241.119:4000/rtp/239.253.64.201:5140
 #EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.66:5140
+http://223.198.241.119:4000/rtp/239.253.64.66:5140
 #EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.202:5140
+http://223.198.241.119:4000/rtp/239.253.64.202:5140
 #EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.200:5140
+http://223.198.241.119:4000/rtp/239.253.64.200:5140
 #EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.210:5140
+http://223.198.241.119:4000/rtp/239.253.64.210:5140
 #EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.197:5140
+http://223.198.241.119:4000/rtp/239.253.64.197:5140
 #EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.207:5140
+http://223.198.241.119:4000/rtp/239.253.64.207:5140
 #EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.114:5140
+http://223.198.241.119:4000/rtp/239.253.64.114:5140
 #EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.208:5140
+http://223.198.241.119:4000/rtp/239.253.64.208:5140
 #EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.203:5140
+http://223.198.241.119:4000/rtp/239.253.64.203:5140
 #EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.198:5140
+http://223.198.241.119:4000/rtp/239.253.64.198:5140
 #EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.206:5140
+http://223.198.241.119:4000/rtp/239.253.64.206:5140
 #EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.55:5140
+http://223.198.241.119:4000/rtp/239.253.64.55:5140
 #EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.57:5140
+http://223.198.241.119:4000/rtp/239.253.64.57:5140
 #EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.129:5140
+http://223.198.241.119:4000/rtp/239.253.64.129:5140
 #EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.205:5140
+http://223.198.241.119:4000/rtp/239.253.64.205:5140
 #EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.56:5140
+http://223.198.241.119:4000/rtp/239.253.64.56:5140
 #EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.150:5140
+http://223.198.241.119:4000/rtp/239.253.64.150:5140
 #EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.140:5140
+http://223.198.241.119:4000/rtp/239.253.64.140:5140
 #EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.45:5140
+http://223.198.241.119:4000/rtp/239.253.64.45:5140
 #EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.38:5140
+http://223.198.241.119:4000/rtp/239.253.64.38:5140
 #EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.36:5140
+http://223.198.241.119:4000/rtp/239.253.64.36:5140
 #EXTINF:-1 tvg-id="" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.31:5140
+http://223.198.241.119:4000/rtp/239.253.64.31:5140
 #EXTINF:-1 tvg-id="" tvg-name="内蒙古卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",内蒙古卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.144:5140
+http://223.198.241.119:4000/rtp/239.253.64.144:5140
 #EXTINF:-1 tvg-id="" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.89:5140
+http://223.198.241.119:4000/rtp/239.253.64.89:5140
 #EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.46:5140
+http://223.198.241.119:4000/rtp/239.253.64.46:5140
 #EXTINF:-1 tvg-id="" tvg-name="厦门卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8E%A6%E9%97%A8%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",厦门卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.179:5140
+http://223.198.241.119:4000/rtp/239.253.64.179:5140
 #EXTINF:-1 tvg-id="" tvg-name="西藏卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",西藏卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.143:5140
+http://223.198.241.119:4000/rtp/239.253.64.143:5140
 #EXTINF:-1 tvg-id="" tvg-name="新疆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",新疆卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.146:5140
+http://223.198.241.119:4000/rtp/239.253.64.146:5140
 #EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.147:5140
+http://223.198.241.119:4000/rtp/239.253.64.147:5140
 #EXTINF:-1 tvg-id="" tvg-name="兵团卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",兵团卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.178:5140
+http://223.198.241.119:4000/rtp/239.253.64.178:5140
 #EXTINF:-1 tvg-id="" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.241:5140
+http://223.198.241.119:4000/rtp/239.253.64.241:5140
 #EXTINF:-1 tvg-id="" tvg-name="海南公共频道" group-title="☘️海南省",海南公共频道$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.14:5140
+http://223.198.241.119:4000/rtp/239.253.64.14:5140
 #EXTINF:-1 tvg-id="" tvg-name="海南少儿频道" group-title="☘️海南省",海南少儿频道$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.124:5140
+http://223.198.241.119:4000/rtp/239.253.64.124:5140
 #EXTINF:-1 tvg-id="" tvg-name="海南文旅频道" group-title="☘️海南省",海南文旅频道$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.122:5140
+http://223.198.241.119:4000/rtp/239.253.64.122:5140
 #EXTINF:-1 tvg-id="" tvg-name="海南新闻频道" group-title="☘️海南省",海南新闻频道$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.121:5140
+http://223.198.241.119:4000/rtp/239.253.64.121:5140
 #EXTINF:-1 tvg-id="" tvg-name="海南自贸频道" group-title="☘️海南省",海南自贸频道$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.119:5140
+http://223.198.241.119:4000/rtp/239.253.64.119:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.120:5140
+http://223.198.241.119:4000/rtp/239.253.64.120:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.195:5140
+http://223.198.241.119:4000/rtp/239.253.64.195:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.244:5140
+http://223.198.241.119:4000/rtp/239.253.64.244:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.196:5140
+http://223.198.241.119:4000/rtp/239.253.64.196:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.245:5140
+http://223.198.241.119:4000/rtp/239.253.64.245:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.100:5140
+http://223.198.241.119:4000/rtp/239.253.64.100:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.246:5140
+http://223.198.241.119:4000/rtp/239.253.64.246:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防科技" group-title="央视频道",CCTV-7国防科技$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.54:5140
+http://223.198.241.119:4000/rtp/239.253.64.54:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.247:5140
+http://223.198.241.119:4000/rtp/239.253.64.247:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.76:5140
+http://223.198.241.119:4000/rtp/239.253.64.76:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.87:5140
+http://223.198.241.119:4000/rtp/239.253.64.87:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.70:5140
+http://223.198.241.119:4000/rtp/239.253.64.70:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.97:5140
+http://223.198.241.119:4000/rtp/239.253.64.97:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.59:5140
+http://223.198.241.119:4000/rtp/239.253.64.59:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.115:5140
+http://223.198.241.119:4000/rtp/239.253.64.115:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.72:5140
+http://223.198.241.119:4000/rtp/239.253.64.72:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.251:5140
+http://223.198.241.119:4000/rtp/239.253.64.251:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克4K" group-title="央视频道",CCTV-16奥林匹克4K$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.126:5140
+http://223.198.241.119:4000/rtp/239.253.64.126:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.67:5140
+http://223.198.241.119:4000/rtp/239.253.64.67:5140
 #EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.169:5140
+http://223.198.241.119:4000/rtp/239.253.64.169:5140
 #EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.128:5140
+http://223.198.241.119:4000/rtp/239.253.64.128:5140
 #EXTINF:-1 tvg-id="" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.139:5140
+http://223.198.241.119:4000/rtp/239.253.64.139:5140
 #EXTINF:-1 tvg-id="" tvg-name="中国天气" group-title="央视频道",中国天气$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.79:5140
+http://223.198.241.119:4000/rtp/239.253.64.79:5140
 #EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.37:5140
+http://223.198.241.119:4000/rtp/239.253.64.37:5140
 #EXTINF:-1 tvg-id="" tvg-name="上海纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%8A%E6%B5%B7%E7%BA%AA%E5%AE%9E.png" group-title="其它频道",上海纪实$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.149:5140
+http://223.198.241.119:4000/rtp/239.253.64.149:5140
 #EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.17:5140
+http://223.198.241.119:4000/rtp/239.253.64.17:5140
 #EXTINF:-1 tvg-id="" tvg-name="CGTN记录" group-title="其它频道",CGTN记录$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.58:5140
+http://223.198.241.119:4000/rtp/239.253.64.58:5140
 #EXTINF:-1 tvg-id="" tvg-name="海口1台" group-title="其它频道",海口1台$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.80:5140
+http://223.198.241.119:4000/rtp/239.253.64.80:5140
 #EXTINF:-1 tvg-id="" tvg-name="海口2台" group-title="其它频道",海口2台$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.82:5140
+http://223.198.241.119:4000/rtp/239.253.64.82:5140
 #EXTINF:-1 tvg-id="" tvg-name="海口3台" group-title="其它频道",海口3台$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.83:5140
+http://223.198.241.119:4000/rtp/239.253.64.83:5140
 #EXTINF:-1 tvg-id="" tvg-name="白沙TV" group-title="其它频道",白沙TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.118:5140
+http://223.198.241.119:4000/rtp/239.253.64.118:5140
 #EXTINF:-1 tvg-id="" tvg-name="保亭TV" group-title="其它频道",保亭TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.159:5140
+http://223.198.241.119:4000/rtp/239.253.64.159:5140
 #EXTINF:-1 tvg-id="" tvg-name="澄迈TV" group-title="其它频道",澄迈TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.109:5140
+http://223.198.241.119:4000/rtp/239.253.64.109:5140
 #EXTINF:-1 tvg-id="" tvg-name="儋州TV" group-title="其它频道",儋州TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.107:5140
+http://223.198.241.119:4000/rtp/239.253.64.107:5140
 #EXTINF:-1 tvg-id="" tvg-name="定安TV" group-title="其它频道",定安TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.110:5140
+http://223.198.241.119:4000/rtp/239.253.64.110:5140
 #EXTINF:-1 tvg-id="" tvg-name="东方TV" group-title="其它频道",东方TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.111:5140
+http://223.198.241.119:4000/rtp/239.253.64.111:5140
 #EXTINF:-1 tvg-id="" tvg-name="临高" group-title="其它频道",临高$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.155:5140
+http://223.198.241.119:4000/rtp/239.253.64.155:5140
 #EXTINF:-1 tvg-id="" tvg-name="陵水TV" group-title="其它频道",陵水TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.116:5140
+http://223.198.241.119:4000/rtp/239.253.64.116:5140
 #EXTINF:-1 tvg-id="" tvg-name="琼海TV" group-title="其它频道",琼海TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.106:5140
+http://223.198.241.119:4000/rtp/239.253.64.106:5140
 #EXTINF:-1 tvg-id="" tvg-name="琼中TV" group-title="其它频道",琼中TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.165:5140
+http://223.198.241.119:4000/rtp/239.253.64.165:5140
 #EXTINF:-1 tvg-id="" tvg-name="三亚1台" group-title="其它频道",三亚1台$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.9:5140
+http://223.198.241.119:4000/rtp/239.253.64.9:5140
 #EXTINF:-1 tvg-id="" tvg-name="乐东TV" group-title="其它频道",乐东TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.166:5140
+http://223.198.241.119:4000/rtp/239.253.64.166:5140
 #EXTINF:-1 tvg-id="" tvg-name="屯昌TV" group-title="其它频道",屯昌TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.117:5140
+http://223.198.241.119:4000/rtp/239.253.64.117:5140
 #EXTINF:-1 tvg-id="" tvg-name="昌江TV" group-title="其它频道",昌江TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.108:5140
+http://223.198.241.119:4000/rtp/239.253.64.108:5140
 #EXTINF:-1 tvg-id="" tvg-name="万宁综合" group-title="其它频道",万宁综合$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.167:5140
+http://223.198.241.119:4000/rtp/239.253.64.167:5140
 #EXTINF:-1 tvg-id="" tvg-name="文昌TV" group-title="其它频道",文昌TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.105:5140
+http://223.198.241.119:4000/rtp/239.253.64.105:5140
 #EXTINF:-1 tvg-id="" tvg-name="五指山TV" group-title="其它频道",五指山TV$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.69:5140
+http://223.198.241.119:4000/rtp/239.253.64.69:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数谍战剧场" group-title="其它频道",华数谍战剧场$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.212:5140
+http://223.198.241.119:4000/rtp/239.253.64.212:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数经典电影" group-title="其它频道",华数经典电影$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.227:5140
+http://223.198.241.119:4000/rtp/239.253.64.227:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数魅力时尚" group-title="其它频道",华数魅力时尚$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.231:5140
+http://223.198.241.119:4000/rtp/239.253.64.231:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数热播剧场" group-title="其它频道",华数热播剧场$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.211:5140
+http://223.198.241.119:4000/rtp/239.253.64.211:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数影视" group-title="其它频道",华数影视$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.49:5140
+http://223.198.241.119:4000/rtp/239.253.64.49:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数喜剧影院" group-title="其它频道",华数喜剧影院$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.233:5140
+http://223.198.241.119:4000/rtp/239.253.64.233:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数武侠剧场" group-title="其它频道",华数武侠剧场$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.254:5140
+http://223.198.241.119:4000/rtp/239.253.64.254:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数军旅剧场" group-title="其它频道",华数军旅剧场$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.228:5140
+http://223.198.241.119:4000/rtp/239.253.64.228:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数精选" group-title="其它频道",华数精选$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.224:5140
+http://223.198.241.119:4000/rtp/239.253.64.224:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数家庭影院" group-title="其它频道",华数家庭影院$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.225:5140
+http://223.198.241.119:4000/rtp/239.253.64.225:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数古装剧场" group-title="其它频道",华数古装剧场$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.221:5140
+http://223.198.241.119:4000/rtp/239.253.64.221:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数动作影院" group-title="其它频道",华数动作影院$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.220:5140
+http://223.198.241.119:4000/rtp/239.253.64.220:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数城市剧场" group-title="其它频道",华数城市剧场$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.218:5140
+http://223.198.241.119:4000/rtp/239.253.64.218:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV法治" group-title="其它频道",IPTV法治$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.213:5140
+http://223.198.241.119:4000/rtp/239.253.64.213:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV地理" group-title="其它频道",IPTV地理$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.219:5140
+http://223.198.241.119:4000/rtp/239.253.64.219:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV相声小品" group-title="其它频道",IPTV相声小品$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.214:5140
+http://223.198.241.119:4000/rtp/239.253.64.214:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV野外" group-title="其它频道",IPTV野外$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.215:5140
+http://223.198.241.119:4000/rtp/239.253.64.215:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV足球" group-title="其它频道",IPTV足球$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.237:5140
+http://223.198.241.119:4000/rtp/239.253.64.237:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV早教" group-title="其它频道",IPTV早教$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.236:5140
+http://223.198.241.119:4000/rtp/239.253.64.236:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV音乐现场" group-title="其它频道",IPTV音乐现场$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.235:5140
+http://223.198.241.119:4000/rtp/239.253.64.235:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV戏曲" group-title="其它频道",IPTV戏曲$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.234:5140
+http://223.198.241.119:4000/rtp/239.253.64.234:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV武术" group-title="其它频道",IPTV武术$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.170:5140
+http://223.198.241.119:4000/rtp/239.253.64.170:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV台球" group-title="其它频道",IPTV台球$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.164:5140
+http://223.198.241.119:4000/rtp/239.253.64.164:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV收视指南" group-title="其它频道",IPTV收视指南$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.238:5140
+http://223.198.241.119:4000/rtp/239.253.64.238:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV墨宝" group-title="其它频道",IPTV墨宝$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.158:5140
+http://223.198.241.119:4000/rtp/239.253.64.158:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV美人" group-title="其它频道",IPTV美人$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.123:5140
+http://223.198.241.119:4000/rtp/239.253.64.123:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV军事" group-title="其它频道",IPTV军事$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.229:5140
+http://223.198.241.119:4000/rtp/239.253.64.229:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV解密" group-title="其它频道",IPTV解密$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.141:5140
+http://223.198.241.119:4000/rtp/239.253.64.141:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV好学生" group-title="其它频道",IPTV好学生$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.223:5140
+http://223.198.241.119:4000/rtp/239.253.64.223:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV国学" group-title="其它频道",IPTV国学$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.222:5140
+http://223.198.241.119:4000/rtp/239.253.64.222:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV爱生活" group-title="其它频道",IPTV爱生活$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.216:5140
+http://223.198.241.119:4000/rtp/239.253.64.216:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV3+" group-title="其它频道",IPTV3+$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.10:5140
+http://223.198.241.119:4000/rtp/239.253.64.10:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV5+" group-title="其它频道",IPTV5+$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.125:5140
+http://223.198.241.119:4000/rtp/239.253.64.125:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV8+" group-title="其它频道",IPTV8+$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.160:5140
+http://223.198.241.119:4000/rtp/239.253.64.160:5140
 #EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.168:5140
+http://223.198.241.119:4000/rtp/239.253.64.168:5140
 #EXTINF:-1 tvg-id="" tvg-name="爱上4K" group-title="数字频道",爱上4K$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.243:5140
+http://223.198.241.119:4000/rtp/239.253.64.243:5140
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.148:5140
+http://223.198.241.119:4000/rtp/239.253.64.148:5140
 #EXTINF:-1 tvg-id="" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.230:5140
+http://223.198.241.119:4000/rtp/239.253.64.230:5140
 #EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.127:5140
+http://223.198.241.119:4000/rtp/239.253.64.127:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画$海南电信
-http://223.198.241.161:4000/rtp/239.253.64.232:5140
+http://223.198.241.119:4000/rtp/239.253.64.232:5140
