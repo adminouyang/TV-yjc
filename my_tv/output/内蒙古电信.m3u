@@ -1,597 +1,597 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.113:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.113:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.116:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.113:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.116:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.133:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.116:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.133:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.87:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.133:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.87:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.134:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.87:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.134:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.10:5001
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.134:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.10:5001
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.135:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.10:5001
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.135:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.117:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.135:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.117:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.136:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.117:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.136:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.118:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.136:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.118:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.119:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.118:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.119:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.205:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.119:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.205:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.120:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.205:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.120:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.123:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.120:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.123:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.121:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.123:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.121:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.206:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.121:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.206:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.146:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.206:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.146:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克4K" group-title="央视频道",CCTV-16奥林匹克4K$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.149:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.146:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克4K" group-title="央视频道",CCTV-16奥林匹克4K$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.149:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.145:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克4K" group-title="央视频道",CCTV-16奥林匹克4K$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.149:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.145:5000
-#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.95:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.145:5000
 #EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.95:5000
-#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.139:5000
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.95:5000
 #EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.139:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-4欧洲" group-title="央视频道",CCTV-4欧洲$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.144:5000
+#EXTINF:-1 tvg-id="" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.139:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4欧洲" group-title="央视频道",CCTV-4欧洲$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.144:5000
-#EXTINF:-1 tvg-id="" tvg-name="CCTV-4美洲" group-title="央视频道",CCTV-4美洲$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.142:5000
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4欧洲" group-title="央视频道",CCTV-4欧洲$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.144:5000
 #EXTINF:-1 tvg-id="" tvg-name="CCTV-4美洲" group-title="央视频道",CCTV-4美洲$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.142:5000
-#EXTINF:-1 tvg-id="" tvg-name="IPTV5体育" group-title="央视频道",IPTV5体育$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.10:5001
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4美洲" group-title="央视频道",CCTV-4美洲$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.142:5000
 #EXTINF:-1 tvg-id="" tvg-name="IPTV5体育" group-title="央视频道",IPTV5体育$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.10:5001
-#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.143:5000
+#EXTINF:-1 tvg-id="" tvg-name="IPTV5体育" group-title="央视频道",IPTV5体育$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.10:5001
 #EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.143:5000
-#EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.86:5001
+#EXTINF:-1 tvg-id="" tvg-name="CGTN英语" group-title="其它频道",CGTN英语$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.143:5000
 #EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.86:5001
-#EXTINF:-1 tvg-id="" tvg-name="IPTV3综艺" group-title="其它频道",IPTV3综艺$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.18:5001
+#EXTINF:-1 tvg-id="" tvg-name="陕西卫视" group-title="其它频道",陕西卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.86:5001
 #EXTINF:-1 tvg-id="" tvg-name="IPTV3综艺" group-title="其它频道",IPTV3综艺$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.18:5001
-#EXTINF:-1 tvg-id="" tvg-name="IPTV6华数电影" group-title="其它频道",IPTV6华数电影$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.20:5001
+#EXTINF:-1 tvg-id="" tvg-name="IPTV3综艺" group-title="其它频道",IPTV3综艺$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.18:5001
 #EXTINF:-1 tvg-id="" tvg-name="IPTV6华数电影" group-title="其它频道",IPTV6华数电影$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.20:5001
-#EXTINF:-1 tvg-id="" tvg-name="IPTV8电视剧" group-title="其它频道",IPTV8电视剧$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.21:5001
+#EXTINF:-1 tvg-id="" tvg-name="IPTV6华数电影" group-title="其它频道",IPTV6华数电影$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.20:5001
 #EXTINF:-1 tvg-id="" tvg-name="IPTV8电视剧" group-title="其它频道",IPTV8电视剧$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.21:5001
-#EXTINF:-1 tvg-id="" tvg-name="内蒙古蒙语频道" group-title="其它频道",内蒙古蒙语频道$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.210:5000
+#EXTINF:-1 tvg-id="" tvg-name="IPTV8电视剧" group-title="其它频道",IPTV8电视剧$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.21:5001
 #EXTINF:-1 tvg-id="" tvg-name="内蒙古蒙语频道" group-title="其它频道",内蒙古蒙语频道$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.210:5000
-#EXTINF:-1 tvg-id="" tvg-name="内蒙古新闻综合" group-title="其它频道",内蒙古新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.208:5000
+#EXTINF:-1 tvg-id="" tvg-name="内蒙古蒙语频道" group-title="其它频道",内蒙古蒙语频道$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.210:5000
 #EXTINF:-1 tvg-id="" tvg-name="内蒙古新闻综合" group-title="其它频道",内蒙古新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.208:5000
-#EXTINF:-1 tvg-id="" tvg-name="呼市新闻综合" group-title="其它频道",呼市新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.35:5000
+#EXTINF:-1 tvg-id="" tvg-name="内蒙古新闻综合" group-title="其它频道",内蒙古新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.208:5000
 #EXTINF:-1 tvg-id="" tvg-name="呼市新闻综合" group-title="其它频道",呼市新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.35:5000
-#EXTINF:-1 tvg-id="" tvg-name="呼市影视娱乐" group-title="其它频道",呼市影视娱乐$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.37:5000
+#EXTINF:-1 tvg-id="" tvg-name="呼市新闻综合" group-title="其它频道",呼市新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.35:5000
 #EXTINF:-1 tvg-id="" tvg-name="呼市影视娱乐" group-title="其它频道",呼市影视娱乐$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.37:5000
-#EXTINF:-1 tvg-id="" tvg-name="包头经济频道" group-title="其它频道",包头经济频道$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.204:5000
+#EXTINF:-1 tvg-id="" tvg-name="呼市影视娱乐" group-title="其它频道",呼市影视娱乐$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.37:5000
 #EXTINF:-1 tvg-id="" tvg-name="包头经济频道" group-title="其它频道",包头经济频道$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.204:5000
-#EXTINF:-1 tvg-id="" tvg-name="包头生活服务" group-title="其它频道",包头生活服务$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.112:5000
+#EXTINF:-1 tvg-id="" tvg-name="包头经济频道" group-title="其它频道",包头经济频道$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.204:5000
 #EXTINF:-1 tvg-id="" tvg-name="包头生活服务" group-title="其它频道",包头生活服务$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.112:5000
-#EXTINF:-1 tvg-id="" tvg-name="包头新闻综合" group-title="其它频道",包头新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.111:5000
+#EXTINF:-1 tvg-id="" tvg-name="包头生活服务" group-title="其它频道",包头生活服务$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.112:5000
 #EXTINF:-1 tvg-id="" tvg-name="包头新闻综合" group-title="其它频道",包头新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.111:5000
-#EXTINF:-1 tvg-id="" tvg-name="乌海新闻综合" group-title="其它频道",乌海新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.11:5000
+#EXTINF:-1 tvg-id="" tvg-name="包头新闻综合" group-title="其它频道",包头新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.111:5000
 #EXTINF:-1 tvg-id="" tvg-name="乌海新闻综合" group-title="其它频道",乌海新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.11:5000
-#EXTINF:-1 tvg-id="" tvg-name="乌海都市生活" group-title="其它频道",乌海都市生活$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.12:5000
+#EXTINF:-1 tvg-id="" tvg-name="乌海新闻综合" group-title="其它频道",乌海新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.11:5000
 #EXTINF:-1 tvg-id="" tvg-name="乌海都市生活" group-title="其它频道",乌海都市生活$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.12:5000
-#EXTINF:-1 tvg-id="" tvg-name="赤峰新闻综合" group-title="其它频道",赤峰新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.13:5000
+#EXTINF:-1 tvg-id="" tvg-name="乌海都市生活" group-title="其它频道",乌海都市生活$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.12:5000
 #EXTINF:-1 tvg-id="" tvg-name="赤峰新闻综合" group-title="其它频道",赤峰新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.13:5000
-#EXTINF:-1 tvg-id="" tvg-name="赤峰经济服务" group-title="其它频道",赤峰经济服务$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.14:5000
+#EXTINF:-1 tvg-id="" tvg-name="赤峰新闻综合" group-title="其它频道",赤峰新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.13:5000
 #EXTINF:-1 tvg-id="" tvg-name="赤峰经济服务" group-title="其它频道",赤峰经济服务$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.14:5000
-#EXTINF:-1 tvg-id="" tvg-name="赤峰影视娱乐" group-title="其它频道",赤峰影视娱乐$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.15:5000
+#EXTINF:-1 tvg-id="" tvg-name="赤峰经济服务" group-title="其它频道",赤峰经济服务$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.14:5000
 #EXTINF:-1 tvg-id="" tvg-name="赤峰影视娱乐" group-title="其它频道",赤峰影视娱乐$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.15:5000
-#EXTINF:-1 tvg-id="" tvg-name="通辽城市服务" group-title="其它频道",通辽城市服务$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.42:5000
+#EXTINF:-1 tvg-id="" tvg-name="赤峰影视娱乐" group-title="其它频道",赤峰影视娱乐$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.15:5000
 #EXTINF:-1 tvg-id="" tvg-name="通辽城市服务" group-title="其它频道",通辽城市服务$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.42:5000
-#EXTINF:-1 tvg-id="" tvg-name="通辽新闻综合" group-title="其它频道",通辽新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.41:5000
+#EXTINF:-1 tvg-id="" tvg-name="通辽城市服务" group-title="其它频道",通辽城市服务$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.42:5000
 #EXTINF:-1 tvg-id="" tvg-name="通辽新闻综合" group-title="其它频道",通辽新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.41:5000
-#EXTINF:-1 tvg-id="" tvg-name="通辽蒙语频道" group-title="其它频道",通辽蒙语频道$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.40:5000
+#EXTINF:-1 tvg-id="" tvg-name="通辽新闻综合" group-title="其它频道",通辽新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.41:5000
 #EXTINF:-1 tvg-id="" tvg-name="通辽蒙语频道" group-title="其它频道",通辽蒙语频道$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.40:5000
-#EXTINF:-1 tvg-id="" tvg-name="呼伦贝尔新闻综合" group-title="其它频道",呼伦贝尔新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.19:5000
+#EXTINF:-1 tvg-id="" tvg-name="通辽蒙语频道" group-title="其它频道",通辽蒙语频道$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.40:5000
 #EXTINF:-1 tvg-id="" tvg-name="呼伦贝尔新闻综合" group-title="其它频道",呼伦贝尔新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.19:5000
-#EXTINF:-1 tvg-id="" tvg-name="呼伦贝尔文化旅游" group-title="其它频道",呼伦贝尔文化旅游$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.20:5000
+#EXTINF:-1 tvg-id="" tvg-name="呼伦贝尔新闻综合" group-title="其它频道",呼伦贝尔新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.19:5000
 #EXTINF:-1 tvg-id="" tvg-name="呼伦贝尔文化旅游" group-title="其它频道",呼伦贝尔文化旅游$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.20:5000
-#EXTINF:-1 tvg-id="" tvg-name="呼伦贝尔生活资讯" group-title="其它频道",呼伦贝尔生活资讯$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.21:5000
+#EXTINF:-1 tvg-id="" tvg-name="呼伦贝尔文化旅游" group-title="其它频道",呼伦贝尔文化旅游$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.20:5000
 #EXTINF:-1 tvg-id="" tvg-name="呼伦贝尔生活资讯" group-title="其它频道",呼伦贝尔生活资讯$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.21:5000
-#EXTINF:-1 tvg-id="" tvg-name="巴彦淖尔新闻综合" group-title="其它频道",巴彦淖尔新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.25:5000
+#EXTINF:-1 tvg-id="" tvg-name="呼伦贝尔生活资讯" group-title="其它频道",呼伦贝尔生活资讯$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.21:5000
 #EXTINF:-1 tvg-id="" tvg-name="巴彦淖尔新闻综合" group-title="其它频道",巴彦淖尔新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.25:5000
-#EXTINF:-1 tvg-id="" tvg-name="巴彦淖尔经济生活" group-title="其它频道",巴彦淖尔经济生活$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.26:5000
+#EXTINF:-1 tvg-id="" tvg-name="巴彦淖尔新闻综合" group-title="其它频道",巴彦淖尔新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.25:5000
 #EXTINF:-1 tvg-id="" tvg-name="巴彦淖尔经济生活" group-title="其它频道",巴彦淖尔经济生活$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.26:5000
-#EXTINF:-1 tvg-id="" tvg-name="巴彦淖尔影视娱乐" group-title="其它频道",巴彦淖尔影视娱乐$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.27:5000
+#EXTINF:-1 tvg-id="" tvg-name="巴彦淖尔经济生活" group-title="其它频道",巴彦淖尔经济生活$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.26:5000
 #EXTINF:-1 tvg-id="" tvg-name="巴彦淖尔影视娱乐" group-title="其它频道",巴彦淖尔影视娱乐$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.27:5000
-#EXTINF:-1 tvg-id="" tvg-name="鄂尔多斯新闻综合" group-title="其它频道",鄂尔多斯新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.30:5000
+#EXTINF:-1 tvg-id="" tvg-name="巴彦淖尔影视娱乐" group-title="其它频道",巴彦淖尔影视娱乐$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.27:5000
 #EXTINF:-1 tvg-id="" tvg-name="鄂尔多斯新闻综合" group-title="其它频道",鄂尔多斯新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.30:5000
-#EXTINF:-1 tvg-id="" tvg-name="鄂尔多斯经济服务" group-title="其它频道",鄂尔多斯经济服务$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.31:5000
+#EXTINF:-1 tvg-id="" tvg-name="鄂尔多斯新闻综合" group-title="其它频道",鄂尔多斯新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.30:5000
 #EXTINF:-1 tvg-id="" tvg-name="鄂尔多斯经济服务" group-title="其它频道",鄂尔多斯经济服务$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.31:5000
-#EXTINF:-1 tvg-id="" tvg-name="鄂尔多斯蒙语频道" group-title="其它频道",鄂尔多斯蒙语频道$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.33:5000
+#EXTINF:-1 tvg-id="" tvg-name="鄂尔多斯经济服务" group-title="其它频道",鄂尔多斯经济服务$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.31:5000
 #EXTINF:-1 tvg-id="" tvg-name="鄂尔多斯蒙语频道" group-title="其它频道",鄂尔多斯蒙语频道$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.33:5000
-#EXTINF:-1 tvg-id="" tvg-name="锡林郭勒1" group-title="其它频道",锡林郭勒1$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.38:5000
+#EXTINF:-1 tvg-id="" tvg-name="鄂尔多斯蒙语频道" group-title="其它频道",鄂尔多斯蒙语频道$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.33:5000
 #EXTINF:-1 tvg-id="" tvg-name="锡林郭勒1" group-title="其它频道",锡林郭勒1$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.38:5000
-#EXTINF:-1 tvg-id="" tvg-name="锡林郭勒2" group-title="其它频道",锡林郭勒2$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.39:5000
+#EXTINF:-1 tvg-id="" tvg-name="锡林郭勒1" group-title="其它频道",锡林郭勒1$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.38:5000
 #EXTINF:-1 tvg-id="" tvg-name="锡林郭勒2" group-title="其它频道",锡林郭勒2$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.39:5000
-#EXTINF:-1 tvg-id="" tvg-name="杭后电视台" group-title="其它频道",杭后电视台$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.149:5000
+#EXTINF:-1 tvg-id="" tvg-name="锡林郭勒2" group-title="其它频道",锡林郭勒2$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.39:5000
 #EXTINF:-1 tvg-id="" tvg-name="杭后电视台" group-title="其它频道",杭后电视台$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.149:5000
-#EXTINF:-1 tvg-id="" tvg-name="达茂电视台" group-title="其它频道",达茂电视台$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.101:5000
+#EXTINF:-1 tvg-id="" tvg-name="杭后电视台" group-title="其它频道",杭后电视台$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.149:5000
 #EXTINF:-1 tvg-id="" tvg-name="达茂电视台" group-title="其它频道",达茂电视台$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.101:5000
-#EXTINF:-1 tvg-id="" tvg-name="库伦电视台" group-title="其它频道",库伦电视台$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.100:5000
+#EXTINF:-1 tvg-id="" tvg-name="达茂电视台" group-title="其它频道",达茂电视台$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.101:5000
 #EXTINF:-1 tvg-id="" tvg-name="库伦电视台" group-title="其它频道",库伦电视台$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.100:5000
-#EXTINF:-1 tvg-id="" tvg-name="丰镇电视台" group-title="其它频道",丰镇电视台$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.103:5000
+#EXTINF:-1 tvg-id="" tvg-name="库伦电视台" group-title="其它频道",库伦电视台$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.100:5000
 #EXTINF:-1 tvg-id="" tvg-name="丰镇电视台" group-title="其它频道",丰镇电视台$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.103:5000
-#EXTINF:-1 tvg-id="" tvg-name="突泉电视台" group-title="其它频道",突泉电视台$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.174:5000
+#EXTINF:-1 tvg-id="" tvg-name="丰镇电视台" group-title="其它频道",丰镇电视台$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.103:5000
 #EXTINF:-1 tvg-id="" tvg-name="突泉电视台" group-title="其它频道",突泉电视台$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.174:5000
-#EXTINF:-1 tvg-id="" tvg-name="阿尔山电视台" group-title="其它频道",阿尔山电视台$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.112:5000
+#EXTINF:-1 tvg-id="" tvg-name="突泉电视台" group-title="其它频道",突泉电视台$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.174:5000
 #EXTINF:-1 tvg-id="" tvg-name="阿尔山电视台" group-title="其它频道",阿尔山电视台$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.112:5000
-#EXTINF:-1 tvg-id="" tvg-name="托克托电视台" group-title="其它频道",托克托电视台$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.146:5000
+#EXTINF:-1 tvg-id="" tvg-name="阿尔山电视台" group-title="其它频道",阿尔山电视台$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.112:5000
 #EXTINF:-1 tvg-id="" tvg-name="托克托电视台" group-title="其它频道",托克托电视台$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.146:5000
-#EXTINF:-1 tvg-id="" tvg-name="额济纳新闻综合" group-title="其它频道",额济纳新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.177:5000
+#EXTINF:-1 tvg-id="" tvg-name="托克托电视台" group-title="其它频道",托克托电视台$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.146:5000
 #EXTINF:-1 tvg-id="" tvg-name="额济纳新闻综合" group-title="其它频道",额济纳新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.177:5000
-#EXTINF:-1 tvg-id="" tvg-name="西乌电视台" group-title="其它频道",西乌电视台$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.181:5000
+#EXTINF:-1 tvg-id="" tvg-name="额济纳新闻综合" group-title="其它频道",额济纳新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.177:5000
 #EXTINF:-1 tvg-id="" tvg-name="西乌电视台" group-title="其它频道",西乌电视台$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.181:5000
-#EXTINF:-1 tvg-id="" tvg-name="准格尔综合频道" group-title="其它频道",准格尔综合频道$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.192:5000
+#EXTINF:-1 tvg-id="" tvg-name="西乌电视台" group-title="其它频道",西乌电视台$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.181:5000
 #EXTINF:-1 tvg-id="" tvg-name="准格尔综合频道" group-title="其它频道",准格尔综合频道$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.192:5000
-#EXTINF:-1 tvg-id="" tvg-name="伊金霍洛旗综合" group-title="其它频道",伊金霍洛旗综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.105:5000
+#EXTINF:-1 tvg-id="" tvg-name="准格尔综合频道" group-title="其它频道",准格尔综合频道$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.192:5000
 #EXTINF:-1 tvg-id="" tvg-name="伊金霍洛旗综合" group-title="其它频道",伊金霍洛旗综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.105:5000
-#EXTINF:-1 tvg-id="" tvg-name="苏尼特左旗" group-title="其它频道",苏尼特左旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.190:5000
+#EXTINF:-1 tvg-id="" tvg-name="伊金霍洛旗综合" group-title="其它频道",伊金霍洛旗综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.105:5000
 #EXTINF:-1 tvg-id="" tvg-name="苏尼特左旗" group-title="其它频道",苏尼特左旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.190:5000
-#EXTINF:-1 tvg-id="" tvg-name="苏尼特右旗" group-title="其它频道",苏尼特右旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.191:5000
+#EXTINF:-1 tvg-id="" tvg-name="苏尼特左旗" group-title="其它频道",苏尼特左旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.190:5000
 #EXTINF:-1 tvg-id="" tvg-name="苏尼特右旗" group-title="其它频道",苏尼特右旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.191:5000
-#EXTINF:-1 tvg-id="" tvg-name="乌拉特前旗" group-title="其它频道",乌拉特前旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.150:5000
+#EXTINF:-1 tvg-id="" tvg-name="苏尼特右旗" group-title="其它频道",苏尼特右旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.191:5000
 #EXTINF:-1 tvg-id="" tvg-name="乌拉特前旗" group-title="其它频道",乌拉特前旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.150:5000
-#EXTINF:-1 tvg-id="" tvg-name="乌拉特中旗" group-title="其它频道",乌拉特中旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.152:5000
+#EXTINF:-1 tvg-id="" tvg-name="乌拉特前旗" group-title="其它频道",乌拉特前旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.150:5000
 #EXTINF:-1 tvg-id="" tvg-name="乌拉特中旗" group-title="其它频道",乌拉特中旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.152:5000
-#EXTINF:-1 tvg-id="" tvg-name="乌拉特后旗" group-title="其它频道",乌拉特后旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.151:5000
+#EXTINF:-1 tvg-id="" tvg-name="乌拉特中旗" group-title="其它频道",乌拉特中旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.152:5000
 #EXTINF:-1 tvg-id="" tvg-name="乌拉特后旗" group-title="其它频道",乌拉特后旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.151:5000
-#EXTINF:-1 tvg-id="" tvg-name="乌盟经济生活" group-title="其它频道",乌盟经济生活$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.23:5000
+#EXTINF:-1 tvg-id="" tvg-name="乌拉特后旗" group-title="其它频道",乌拉特后旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.151:5000
 #EXTINF:-1 tvg-id="" tvg-name="乌盟经济生活" group-title="其它频道",乌盟经济生活$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.23:5000
-#EXTINF:-1 tvg-id="" tvg-name="乌盟新闻综合" group-title="其它频道",乌盟新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.22:5000
+#EXTINF:-1 tvg-id="" tvg-name="乌盟经济生活" group-title="其它频道",乌盟经济生活$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.23:5000
 #EXTINF:-1 tvg-id="" tvg-name="乌盟新闻综合" group-title="其它频道",乌盟新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.22:5000
-#EXTINF:-1 tvg-id="" tvg-name="兴安新闻综合" group-title="其它频道",兴安新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.16:5000
+#EXTINF:-1 tvg-id="" tvg-name="乌盟新闻综合" group-title="其它频道",乌盟新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.22:5000
 #EXTINF:-1 tvg-id="" tvg-name="兴安新闻综合" group-title="其它频道",兴安新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.16:5000
-#EXTINF:-1 tvg-id="" tvg-name="兴安文化旅游" group-title="其它频道",兴安文化旅游$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.17:5000
+#EXTINF:-1 tvg-id="" tvg-name="兴安新闻综合" group-title="其它频道",兴安新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.16:5000
 #EXTINF:-1 tvg-id="" tvg-name="兴安文化旅游" group-title="其它频道",兴安文化旅游$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.17:5000
-#EXTINF:-1 tvg-id="" tvg-name="兴安影视娱乐" group-title="其它频道",兴安影视娱乐$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.18:5000
+#EXTINF:-1 tvg-id="" tvg-name="兴安文化旅游" group-title="其它频道",兴安文化旅游$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.17:5000
 #EXTINF:-1 tvg-id="" tvg-name="兴安影视娱乐" group-title="其它频道",兴安影视娱乐$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.18:5000
-#EXTINF:-1 tvg-id="" tvg-name="阿拉善新闻综合" group-title="其它频道",阿拉善新闻综合$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.28:5000
+#EXTINF:-1 tvg-id="" tvg-name="兴安影视娱乐" group-title="其它频道",兴安影视娱乐$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.18:5000
 #EXTINF:-1 tvg-id="" tvg-name="阿拉善新闻综合" group-title="其它频道",阿拉善新闻综合$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.28:5000
-#EXTINF:-1 tvg-id="" tvg-name="XHTV" group-title="其它频道",XHTV$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.187:5000
+#EXTINF:-1 tvg-id="" tvg-name="阿拉善新闻综合" group-title="其它频道",阿拉善新闻综合$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.28:5000
 #EXTINF:-1 tvg-id="" tvg-name="XHTV" group-title="其它频道",XHTV$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.187:5000
-#EXTINF:-1 tvg-id="" tvg-name="ELTV" group-title="其它频道",ELTV$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.113:5000
+#EXTINF:-1 tvg-id="" tvg-name="XHTV" group-title="其它频道",XHTV$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.187:5000
 #EXTINF:-1 tvg-id="" tvg-name="ELTV" group-title="其它频道",ELTV$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.113:5000
-#EXTINF:-1 tvg-id="" tvg-name="五原" group-title="其它频道",五原$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.148:5000
+#EXTINF:-1 tvg-id="" tvg-name="ELTV" group-title="其它频道",ELTV$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.113:5000
 #EXTINF:-1 tvg-id="" tvg-name="五原" group-title="其它频道",五原$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.148:5000
-#EXTINF:-1 tvg-id="" tvg-name="磴口" group-title="其它频道",磴口$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.156:5000
+#EXTINF:-1 tvg-id="" tvg-name="五原" group-title="其它频道",五原$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.148:5000
 #EXTINF:-1 tvg-id="" tvg-name="磴口" group-title="其它频道",磴口$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.156:5000
-#EXTINF:-1 tvg-id="" tvg-name="武川" group-title="其它频道",武川$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.182:5000
+#EXTINF:-1 tvg-id="" tvg-name="磴口" group-title="其它频道",磴口$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.156:5000
 #EXTINF:-1 tvg-id="" tvg-name="武川" group-title="其它频道",武川$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.182:5000
-#EXTINF:-1 tvg-id="" tvg-name="扎兰屯" group-title="其它频道",扎兰屯$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.109:5000
+#EXTINF:-1 tvg-id="" tvg-name="武川" group-title="其它频道",武川$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.182:5000
 #EXTINF:-1 tvg-id="" tvg-name="扎兰屯" group-title="其它频道",扎兰屯$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.109:5000
-#EXTINF:-1 tvg-id="" tvg-name="阿巴嘎" group-title="其它频道",阿巴嘎$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.184:5000
+#EXTINF:-1 tvg-id="" tvg-name="扎兰屯" group-title="其它频道",扎兰屯$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.109:5000
 #EXTINF:-1 tvg-id="" tvg-name="阿巴嘎" group-title="其它频道",阿巴嘎$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.184:5000
-#EXTINF:-1 tvg-id="" tvg-name="翁牛特" group-title="其它频道",翁牛特$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.186:5000
+#EXTINF:-1 tvg-id="" tvg-name="阿巴嘎" group-title="其它频道",阿巴嘎$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.184:5000
 #EXTINF:-1 tvg-id="" tvg-name="翁牛特" group-title="其它频道",翁牛特$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.186:5000
-#EXTINF:-1 tvg-id="" tvg-name="满洲里" group-title="其它频道",满洲里$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.34:5000
+#EXTINF:-1 tvg-id="" tvg-name="翁牛特" group-title="其它频道",翁牛特$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.186:5000
 #EXTINF:-1 tvg-id="" tvg-name="满洲里" group-title="其它频道",满洲里$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.34:5000
-#EXTINF:-1 tvg-id="" tvg-name="阿右旗" group-title="其它频道",阿右旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.175:5000
+#EXTINF:-1 tvg-id="" tvg-name="满洲里" group-title="其它频道",满洲里$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.34:5000
 #EXTINF:-1 tvg-id="" tvg-name="阿右旗" group-title="其它频道",阿右旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.175:5000
-#EXTINF:-1 tvg-id="" tvg-name="正蓝旗" group-title="其它频道",正蓝旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.147:5000
+#EXTINF:-1 tvg-id="" tvg-name="阿右旗" group-title="其它频道",阿右旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.175:5000
 #EXTINF:-1 tvg-id="" tvg-name="正蓝旗" group-title="其它频道",正蓝旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.147:5000
-#EXTINF:-1 tvg-id="" tvg-name="东乌旗" group-title="其它频道",东乌旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.180:5000
+#EXTINF:-1 tvg-id="" tvg-name="正蓝旗" group-title="其它频道",正蓝旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.147:5000
 #EXTINF:-1 tvg-id="" tvg-name="东乌旗" group-title="其它频道",东乌旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.180:5000
-#EXTINF:-1 tvg-id="" tvg-name="土左旗" group-title="其它频道",土左旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.188:5000
+#EXTINF:-1 tvg-id="" tvg-name="东乌旗" group-title="其它频道",东乌旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.180:5000
 #EXTINF:-1 tvg-id="" tvg-name="土左旗" group-title="其它频道",土左旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.188:5000
-#EXTINF:-1 tvg-id="" tvg-name="太仆寺旗" group-title="其它频道",太仆寺旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.154:5000
+#EXTINF:-1 tvg-id="" tvg-name="土左旗" group-title="其它频道",土左旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.188:5000
 #EXTINF:-1 tvg-id="" tvg-name="太仆寺旗" group-title="其它频道",太仆寺旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.154:5000
-#EXTINF:-1 tvg-id="" tvg-name="科右中旗" group-title="其它频道",科右中旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.178:5000
+#EXTINF:-1 tvg-id="" tvg-name="太仆寺旗" group-title="其它频道",太仆寺旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.154:5000
 #EXTINF:-1 tvg-id="" tvg-name="科右中旗" group-title="其它频道",科右中旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.178:5000
-#EXTINF:-1 tvg-id="" tvg-name="正镶白旗" group-title="其它频道",正镶白旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.153:5000
+#EXTINF:-1 tvg-id="" tvg-name="科右中旗" group-title="其它频道",科右中旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.178:5000
 #EXTINF:-1 tvg-id="" tvg-name="正镶白旗" group-title="其它频道",正镶白旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.153:5000
-#EXTINF:-1 tvg-id="" tvg-name="扎赉特旗" group-title="其它频道",扎赉特旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.185:5000
+#EXTINF:-1 tvg-id="" tvg-name="正镶白旗" group-title="其它频道",正镶白旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.153:5000
 #EXTINF:-1 tvg-id="" tvg-name="扎赉特旗" group-title="其它频道",扎赉特旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.185:5000
-#EXTINF:-1 tvg-id="" tvg-name="察右中旗" group-title="其它频道",察右中旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.106:5000
+#EXTINF:-1 tvg-id="" tvg-name="扎赉特旗" group-title="其它频道",扎赉特旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.185:5000
 #EXTINF:-1 tvg-id="" tvg-name="察右中旗" group-title="其它频道",察右中旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.106:5000
-#EXTINF:-1 tvg-id="" tvg-name="喀喇沁县" group-title="其它频道",喀喇沁县$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.150:5000
+#EXTINF:-1 tvg-id="" tvg-name="察右中旗" group-title="其它频道",察右中旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.106:5000
 #EXTINF:-1 tvg-id="" tvg-name="喀喇沁县" group-title="其它频道",喀喇沁县$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.150:5000
-#EXTINF:-1 tvg-id="" tvg-name="额尔古纳" group-title="其它频道",额尔古纳$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.132:5000
+#EXTINF:-1 tvg-id="" tvg-name="喀喇沁县" group-title="其它频道",喀喇沁县$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.150:5000
 #EXTINF:-1 tvg-id="" tvg-name="额尔古纳" group-title="其它频道",额尔古纳$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.132:5000
-#EXTINF:-1 tvg-id="" tvg-name="和林格尔" group-title="其它频道",和林格尔$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.183:5000
+#EXTINF:-1 tvg-id="" tvg-name="额尔古纳" group-title="其它频道",额尔古纳$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.132:5000
 #EXTINF:-1 tvg-id="" tvg-name="和林格尔" group-title="其它频道",和林格尔$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.183:5000
-#EXTINF:-1 tvg-id="" tvg-name="克什克腾旗" group-title="其它频道",克什克腾旗$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.110:5000
+#EXTINF:-1 tvg-id="" tvg-name="和林格尔" group-title="其它频道",和林格尔$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.183:5000
 #EXTINF:-1 tvg-id="" tvg-name="克什克腾旗" group-title="其它频道",克什克腾旗$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.110:5000
-#EXTINF:-1 tvg-id="" tvg-name="内蒙古购物" group-title="其它频道",内蒙古购物$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.1:5000
+#EXTINF:-1 tvg-id="" tvg-name="克什克腾旗" group-title="其它频道",克什克腾旗$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.110:5000
 #EXTINF:-1 tvg-id="" tvg-name="内蒙古购物" group-title="其它频道",内蒙古购物$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.1:5000
-#EXTINF:-1 tvg-id="" tvg-name="内蒙古频道八分屏" group-title="其它频道",内蒙古频道八分屏$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.118:5000
+#EXTINF:-1 tvg-id="" tvg-name="内蒙古购物" group-title="其它频道",内蒙古购物$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.1:5000
 #EXTINF:-1 tvg-id="" tvg-name="内蒙古频道八分屏" group-title="其它频道",内蒙古频道八分屏$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.118:5000
-#EXTINF:-1 tvg-id="" tvg-name="十分屏1" group-title="其它频道",十分屏1$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.119:5000
+#EXTINF:-1 tvg-id="" tvg-name="内蒙古频道八分屏" group-title="其它频道",内蒙古频道八分屏$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.118:5000
 #EXTINF:-1 tvg-id="" tvg-name="十分屏1" group-title="其它频道",十分屏1$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.119:5000
-#EXTINF:-1 tvg-id="" tvg-name="十分屏2" group-title="其它频道",十分屏2$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.117:5000
+#EXTINF:-1 tvg-id="" tvg-name="十分屏1" group-title="其它频道",十分屏1$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.119:5000
 #EXTINF:-1 tvg-id="" tvg-name="十分屏2" group-title="其它频道",十分屏2$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.117:5000
-#EXTINF:-1 tvg-id="" tvg-name="十分屏3" group-title="其它频道",十分屏3$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.116:5000
+#EXTINF:-1 tvg-id="" tvg-name="十分屏2" group-title="其它频道",十分屏2$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.117:5000
 #EXTINF:-1 tvg-id="" tvg-name="十分屏3" group-title="其它频道",十分屏3$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.116:5000
-#EXTINF:-1 tvg-id="" tvg-name="内蒙古卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",内蒙古卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.2:5000
+#EXTINF:-1 tvg-id="" tvg-name="十分屏3" group-title="其它频道",十分屏3$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.116:5000
 #EXTINF:-1 tvg-id="" tvg-name="内蒙古卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",内蒙古卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.2:5000
-#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.108:5000
+#EXTINF:-1 tvg-id="" tvg-name="内蒙古卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",内蒙古卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.2:5000
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.108:5000
-#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.98:5000
+#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.108:5000
 #EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.98:5000
-#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.90:5000
+#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.98:5000
 #EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.90:5000
-#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.107:5000
+#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.90:5000
 #EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.107:5000
-#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.97:5000
+#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.107:5000
 #EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.97:5000
-#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.102:5000
+#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.97:5000
 #EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.102:5000
-#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.96:5000
+#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.102:5000
 #EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.96:5000
-#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.106:5000
+#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.96:5000
 #EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.106:5000
-#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.81:5000
+#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.106:5000
 #EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.81:5000
-#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.103:5000
+#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.81:5000
 #EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.103:5000
-#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.123:5000
+#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.103:5000
 #EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.123:5000
-#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.109:5000
+#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.123:5000
 #EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.109:5000
-#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.125:5000
+#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.109:5000
 #EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.125:5000
-#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.104:5000
+#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.125:5000
 #EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.104:5000
-#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.100:5000
+#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.104:5000
 #EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.100:5000
-#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.105:5000
+#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.100:5000
 #EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.105:5000
-#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.99:5000
+#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.105:5000
 #EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.99:5000
-#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.124:5000
+#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.99:5000
 #EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.124:5000
-#EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.126:5000
+#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.124:5000
 #EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.126:5000
-#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.124:5000
+#EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.126:5000
 #EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.124:5000
-#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.91:5000
+#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.124:5000
 #EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.91:5000
-#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.69:5001
+#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.91:5000
 #EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.69:5001
-#EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.57:5001
+#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.69:5001
 #EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.57:5001
-#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.125:5000
+#EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.57:5001
 #EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.125:5000
-#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.76:5000
+#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.125:5000
 #EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.76:5000
-#EXTINF:-1 tvg-id="" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.55:5001
+#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.76:5000
 #EXTINF:-1 tvg-id="" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.55:5001
-#EXTINF:-1 tvg-id="" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.80:5000
+#EXTINF:-1 tvg-id="" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.55:5001
 #EXTINF:-1 tvg-id="" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.80:5000
-#EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.87:5001
+#EXTINF:-1 tvg-id="" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.80:5000
 #EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.87:5001
-#EXTINF:-1 tvg-id="" tvg-name="西藏卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",西藏卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.79:5001
+#EXTINF:-1 tvg-id="" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.87:5001
 #EXTINF:-1 tvg-id="" tvg-name="西藏卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",西藏卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.79:5001
-#EXTINF:-1 tvg-id="" tvg-name="新疆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",新疆卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.59:5001
+#EXTINF:-1 tvg-id="" tvg-name="西藏卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",西藏卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.79:5001
 #EXTINF:-1 tvg-id="" tvg-name="新疆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",新疆卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.59:5001
-#EXTINF:-1 tvg-id="" tvg-name="兵团卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",兵团卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.34:5001
+#EXTINF:-1 tvg-id="" tvg-name="新疆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",新疆卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.59:5001
 #EXTINF:-1 tvg-id="" tvg-name="兵团卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",兵团卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.34:5001
-#EXTINF:-1 tvg-id="" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.121:5000
+#EXTINF:-1 tvg-id="" tvg-name="兵团卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",兵团卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.34:5001
 #EXTINF:-1 tvg-id="" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.121:5000
-#EXTINF:-1 tvg-id="" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.96:5001
+#EXTINF:-1 tvg-id="" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.121:5000
 #EXTINF:-1 tvg-id="" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.96:5001
-#EXTINF:-1 tvg-id="" tvg-name="内蒙古经济生活" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E7%BB%8F%E6%B5%8E%E7%94%9F%E6%B4%BB.png" group-title="☘️内蒙古",内蒙古经济生活$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.212:5000
+#EXTINF:-1 tvg-id="" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.96:5001
 #EXTINF:-1 tvg-id="" tvg-name="内蒙古经济生活" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E7%BB%8F%E6%B5%8E%E7%94%9F%E6%B4%BB.png" group-title="☘️内蒙古",内蒙古经济生活$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.212:5000
-#EXTINF:-1 tvg-id="" tvg-name="内蒙古文体娱乐" group-title="☘️内蒙古",内蒙古文体娱乐$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.211:5000
+#EXTINF:-1 tvg-id="" tvg-name="内蒙古经济生活" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E7%BB%8F%E6%B5%8E%E7%94%9F%E6%B4%BB.png" group-title="☘️内蒙古",内蒙古经济生活$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.212:5000
 #EXTINF:-1 tvg-id="" tvg-name="内蒙古文体娱乐" group-title="☘️内蒙古",内蒙古文体娱乐$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.211:5000
-#EXTINF:-1 tvg-id="" tvg-name="内蒙古农牧频道" group-title="☘️内蒙古",内蒙古农牧频道$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.209:5000
+#EXTINF:-1 tvg-id="" tvg-name="内蒙古文体娱乐" group-title="☘️内蒙古",内蒙古文体娱乐$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.211:5000
 #EXTINF:-1 tvg-id="" tvg-name="内蒙古农牧频道" group-title="☘️内蒙古",内蒙古农牧频道$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.209:5000
-#EXTINF:-1 tvg-id="" tvg-name="内蒙古少儿频道" group-title="☘️内蒙古",内蒙古少儿频道$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.207:5000
+#EXTINF:-1 tvg-id="" tvg-name="内蒙古农牧频道" group-title="☘️内蒙古",内蒙古农牧频道$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.209:5000
 #EXTINF:-1 tvg-id="" tvg-name="内蒙古少儿频道" group-title="☘️内蒙古",内蒙古少儿频道$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.207:5000
-#EXTINF:-1 tvg-id="" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.110:5000
+#EXTINF:-1 tvg-id="" tvg-name="内蒙古少儿频道" group-title="☘️内蒙古",内蒙古少儿频道$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.207:5000
 #EXTINF:-1 tvg-id="" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.110:5000
-#EXTINF:-1 tvg-id="" tvg-name="北京卡酷少儿" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BF.png" group-title="数字频道",北京卡酷少儿$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.41:5001
+#EXTINF:-1 tvg-id="" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.110:5000
 #EXTINF:-1 tvg-id="" tvg-name="北京卡酷少儿" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BF.png" group-title="数字频道",北京卡酷少儿$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.41:5001
-#EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.92:5000
+#EXTINF:-1 tvg-id="" tvg-name="北京卡酷少儿" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BF.png" group-title="数字频道",北京卡酷少儿$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.41:5001
 #EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.92:5000
-#EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.1.85:5001
+#EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.92:5000
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.1.85:5001
-#EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.126:5000
+#EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.1.85:5001
 #EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.126:5000
-#EXTINF:-1 tvg-id="" tvg-name="优漫卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BC%98%E6%BC%AB%E5%8D%A1%E9%80%9A.png" group-title="数字频道",优漫卡通$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.127:5000
+#EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.126:5000
 #EXTINF:-1 tvg-id="" tvg-name="优漫卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BC%98%E6%BC%AB%E5%8D%A1%E9%80%9A.png" group-title="数字频道",优漫卡通$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.127:5000
-#EXTINF:-1 tvg-id="" tvg-name="哈哈炫动" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%93%88%E5%93%88%E7%82%AB%E5%8A%A8.png" group-title="数字频道",哈哈炫动$内蒙古电信
-http://111.127.157.187:51234/rtp/239.29.0.128:5000
+#EXTINF:-1 tvg-id="" tvg-name="优漫卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BC%98%E6%BC%AB%E5%8D%A1%E9%80%9A.png" group-title="数字频道",优漫卡通$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.127:5000
 #EXTINF:-1 tvg-id="" tvg-name="哈哈炫动" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%93%88%E5%93%88%E7%82%AB%E5%8A%A8.png" group-title="数字频道",哈哈炫动$内蒙古电信
 http://123.179.63.80:4022/rtp/239.29.0.128:5000
+#EXTINF:-1 tvg-id="" tvg-name="哈哈炫动" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%93%88%E5%93%88%E7%82%AB%E5%8A%A8.png" group-title="数字频道",哈哈炫动$内蒙古电信
+http://111.127.157.187:51234/rtp/239.29.0.128:5000
