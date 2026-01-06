@@ -1,4 +1,4 @@
-2026/01/05 19:24更新,#genre#
+2026/01/06 10:02更新,#genre#
 浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
 央视频道,#genre#
 CCTV1,http://115.171.80.52:1688/rtp/225.1.8.1:8008$北京市电信
