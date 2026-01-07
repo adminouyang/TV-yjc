@@ -17,7 +17,7 @@ on:
 jobs:
   scan-ip:
     runs-on: ubuntu-latest
-    timeout-minutes: 120  # 设置超时时间
+    timeout-minutes: 240  # 设置超时时间
 
     permissions:
       contents: write  # 添加写入权限
