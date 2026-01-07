@@ -1,0 +1,163 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name="凤凰中文" group-title="卫视频道",凤凰中文$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.50:8231
+#EXTINF:-1 tvg-id="" tvg-name="凤凰资讯" group-title="卫视频道",凤凰资讯$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.70:8231
+#EXTINF:-1 tvg-id="" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.249:8231
+#EXTINF:-1 tvg-id="" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.136:8231
+#EXTINF:-1 tvg-id="" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.130:8231
+#EXTINF:-1 tvg-id="" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.131:8231
+#EXTINF:-1 tvg-id="" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.132:8231
+#EXTINF:-1 tvg-id="" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.133:8231
+#EXTINF:-1 tvg-id="" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.134:8231
+#EXTINF:-1 tvg-id="" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.135:8231
+#EXTINF:-1 tvg-id="" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.137:8231
+#EXTINF:-1 tvg-id="" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.138:8231
+#EXTINF:-1 tvg-id="" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.139:8231
+#EXTINF:-1 tvg-id="" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.67:8231
+#EXTINF:-1 tvg-id="" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.69:8231
+#EXTINF:-1 tvg-id="" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.71:8231
+#EXTINF:-1 tvg-id="" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.98:8231
+#EXTINF:-1 tvg-id="" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.99:8231
+#EXTINF:-1 tvg-id="" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.84:8231
+#EXTINF:-1 tvg-id="" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.85:8231
+#EXTINF:-1 tvg-id="" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.86:8231
+#EXTINF:-1 tvg-id="" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.91:8231
+#EXTINF:-1 tvg-id="" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.89:8231
+#EXTINF:-1 tvg-id="" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.2:8231
+#EXTINF:-1 tvg-id="" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.3:8231
+#EXTINF:-1 tvg-id="" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.4:8231
+#EXTINF:-1 tvg-id="" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.5:8231
+#EXTINF:-1 tvg-id="" tvg-name="凤凰香港" group-title="卫视频道",凤凰香港$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.123:8231
+#EXTINF:-1 tvg-id="" tvg-name="甘肃文化影视" group-title="☘️甘肃省",甘肃文化影视$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.250:8231
+#EXTINF:-1 tvg-id="" tvg-name="甘肃公共频道" group-title="☘️甘肃省",甘肃公共频道$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.251:8231
+#EXTINF:-1 tvg-id="" tvg-name="甘肃经济频道" group-title="☘️甘肃省",甘肃经济频道$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.253:8231
+#EXTINF:-1 tvg-id="" tvg-name="甘肃少儿频道" group-title="☘️甘肃省",甘肃少儿频道$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.254:8231
+#EXTINF:-1 tvg-id="" tvg-name="甘肃科教频道" group-title="其它频道",甘肃科教频道$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.252:8231
+#EXTINF:-1 tvg-id="" tvg-name="陇尚生活" group-title="其它频道",陇尚生活$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.73:8231
+#EXTINF:-1 tvg-id="" tvg-name="临夏新闻综合" group-title="其它频道",临夏新闻综合$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.107:8231
+#EXTINF:-1 tvg-id="" tvg-name="临夏文旅频道" group-title="其它频道",临夏文旅频道$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.108:8231
+#EXTINF:-1 tvg-id="" tvg-name="皋兰电视台" group-title="其它频道",皋兰电视台$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.236:8231
+#EXTINF:-1 tvg-id="" tvg-name="BesTV戏曲精选" group-title="其它频道",BesTV戏曲精选$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.118:8231
+#EXTINF:-1 tvg-id="" tvg-name="BesTV谍战剧场" group-title="其它频道",BesTV谍战剧场$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.166:8231
+#EXTINF:-1 tvg-id="" tvg-name="BesTV华语电影" group-title="其它频道",BesTV华语电影$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.193:8231
+#EXTINF:-1 tvg-id="" tvg-name="BesTV星光影院" group-title="其它频道",BesTV星光影院$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.194:8231
+#EXTINF:-1 tvg-id="" tvg-name="BesTV全球大片" group-title="其它频道",BesTV全球大片$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.196:8231
+#EXTINF:-1 tvg-id="" tvg-name="BesTV看天下" group-title="其它频道",BesTV看天下$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.217:8231
+#EXTINF:-1 tvg-id="" tvg-name="BesTV电视剧" group-title="其它频道",BesTV电视剧$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.100:8231
+#EXTINF:-1 tvg-id="" tvg-name="BesTV动漫" group-title="其它频道",BesTV动漫$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.150:8231
+#EXTINF:-1 tvg-id="" tvg-name="BesTV少儿" group-title="其它频道",BesTV少儿$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.151:8231
+#EXTINF:-1 tvg-id="" tvg-name="BesTV文化" group-title="其它频道",BesTV文化$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.160:8231
+#EXTINF:-1 tvg-id="" tvg-name="BesTV健康" group-title="其它频道",BesTV健康$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.197:8231
+#EXTINF:-1 tvg-id="" tvg-name="羽毛球精品赛事" group-title="其它频道",羽毛球精品赛事$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.31:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.101:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.179:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.12:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.83:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.13:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.184:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.14:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.178:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.15:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.180:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.181:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.62:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.182:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.28:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.183:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.68:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.88:8231
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.96:8231
+#EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.90:8231
+#EXTINF:-1 tvg-id="" tvg-name="IPTV5体育" group-title="央视频道",IPTV5体育$甘肃电信
+http://118.180.142.247:65535/udp/239.255.30.115:8231
+#EXTINF:-1 tvg-id="" tvg-name="北京卡酷少儿" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BF.png" group-title="数字频道",北京卡酷少儿$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.38:8231
+#EXTINF:-1 tvg-id="" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.39:8231
+#EXTINF:-1 tvg-id="" tvg-name="上海哈哈炫动" group-title="数字频道",上海哈哈炫动$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.37:8231
+#EXTINF:-1 tvg-id="" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.16:8231
+#EXTINF:-1 tvg-id="" tvg-name="上海欢笑剧场" group-title="数字频道",上海欢笑剧场$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.19:8231
+#EXTINF:-1 tvg-id="" tvg-name="上海欢笑剧场4K" group-title="数字频道",上海欢笑剧场4K$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.7:8231
+#EXTINF:-1 tvg-id="" tvg-name="上海乐游频道" group-title="数字频道",上海乐游频道$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.17:8231
+#EXTINF:-1 tvg-id="" tvg-name="上海生活时尚" group-title="数字频道",上海生活时尚$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.18:8231
+#EXTINF:-1 tvg-id="" tvg-name="上海都市剧场" group-title="数字频道",上海都市剧场$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.41:8231
+#EXTINF:-1 tvg-id="" tvg-name="上海金色学堂" group-title="数字频道",上海金色学堂$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.23:8231
+#EXTINF:-1 tvg-id="" tvg-name="上海法治天地" group-title="数字频道",上海法治天地$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.24:8231
+#EXTINF:-1 tvg-id="" tvg-name="上海都市频道" group-title="☘️上海市",上海都市频道$甘肃电信
+http://118.180.142.247:65535/udp/239.255.29.22:8231
