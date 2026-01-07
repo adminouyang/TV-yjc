@@ -645,9 +645,9 @@ def generate_files_for_city(city_name, top_ips, logo_dict, channels, channel_tem
                         logo_url = logo_dict.get(channel_name, "")
                         
                         if logo_url:
-                            m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}${city_name}\n')
+                            m3u_f.write(f'#EXTINF:-1 tvg-id="{channel_name}" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{channel_name}\n')
                         else:
-                            m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}${city_name}\n')
+                            m3u_f.write(f'#EXTINF:-1 tvg-id="{channel_name}" tvg-name="{channel_name}" group-title="{category}",{channel_name}\n')
                         m3u_f.write(f"{new_url}\n")
                         m3u_channel_count += 1
         
@@ -861,9 +861,9 @@ def merge_all_files(channel_template, max_sources_per_channel=10):
                                 display_name = f"{main_channel}"
                                 
                                 if logo_url:
-                                    f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{main_channel}" tvg-logo="{logo_url}" group-title="{category}",{display_name}\n')
+                                    f.write(f'#EXTINF:-1 tvg-id="{main_channel}" tvg-name="{main_channel}" tvg-logo="{logo_url}" group-title="{category}",{display_name}\n')
                                 else:
-                                    f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{main_channel}" group-title="{category}",{display_name}\n')
+                                    f.write(f'#EXTINF:-1 tvg-id="{main_channel}" tvg-name="{main_channel}" group-title="{category}",{display_name}\n')
                                 f.write(f"{url}\n")
             
             if organized_channels.get("其它频道") and organized_channels["其它频道"]:
