@@ -2,17 +2,17 @@ name: ip-Scan
 
 on:
   # 定时触发（北京时间每天7:00和22:00）
-  schedule:
-    - cron: '0 */12 * * *'  # UTC时间23:00和14:00，对应北京时间7:00和22:00
+  # schedule:
+  #   - cron: '0 */12 * * *'  # UTC时间23:00和14:00，对应北京时间7:00和22:00
   
   # 手动触发
   workflow_dispatch:
 
   # 推送触发（当配置文件或脚本更改时）
-  push:
-    paths:
-      - 'IP_Scan/ip/*.txt'
-      - 'IP_Scan/ip-Scan.py'
+  # push:
+  #   paths:
+  #     - 'IP_Scan/ip/*.txt'
+  #     - 'IP_Scan/ip-Scan.py'
 
 jobs:
   scan-ip:
