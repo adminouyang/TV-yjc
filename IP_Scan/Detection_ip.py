@@ -132,8 +132,8 @@ def process_city_simple(city: str, streams: List[str]):
     """处理单个城市/运营商的测试，删除失败的IP"""
     logger.info(f"开始处理: {city}")
     
-    # 读取IP文件
-    ip_file = f"IP_Scan/ip/{city}_good_ip.txt"
+    # 读取IP文件f"IP_Scan/ip/{city}_good_ip.txt"
+    ip_file = f"IP_Scan/ip/{city}.txt"
     all_ips = read_ip_file(ip_file)
     
     if not all_ips:
