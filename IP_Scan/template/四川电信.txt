@@ -76,7 +76,7 @@ CGTN法语,http://ipipip/udp/239.94.1.66:5140
 
 星空卫视,http://ipipip/udp/239.94.2.53:5140
 CHANNEL-V,http://ipipip/udp/239.94.2.55:5140
-红色经典,http://ipipip/udp/239.93.1.176:5140
+红色经典,http://ipipip/udp/239.94.1.48:5140
 
 四川频道,#genre#
 绚影4K,http://ipipip/udp/239.94.1.150:5140
