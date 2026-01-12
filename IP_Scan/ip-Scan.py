@@ -164,9 +164,9 @@ def main():
     
     # 获取ip目录下所有的.txt文件（排除已存在的_good_ip.txt结果文件）
     config_files = []
-    for file_path in glob.glob(os.path.join(ip_dir, "*.txt")):
+    for file_path in glob.glob(os.path.join(ip_dir, "*_good_ip.txt")):    #for file_path in glob.glob(os.path.join(ip_dir, "*.txt")):
         filename = os.path.basename(file_path)
-        if "_good_ip.txt" not in filename:
+        if "_Scan_ip.txt" not in filename:                              #if "_good_ip.txt" not in filename:
             config_files.append(file_path)
     
     if not config_files:
@@ -184,14 +184,14 @@ def main():
         
         if valid_ip_ports:
             valid_ip_ports = sorted(set(valid_ip_ports))
-            result_filename = f"{province_name}_good_ip.txt"
+            result_filename = f"{province_name}_Scan_ip.txt"
             result_path = os.path.join(ip_dir, result_filename)
             
             with open(result_path, 'w', encoding='utf-8') as f:
                 f.write('\n'.join(valid_ip_ports))
             print(f"{province_name}: 保存 {len(valid_ip_ports)} 个有效IP到 {result_filename}")
         else:
-            # 修改：不创建空的_good_ip.txt文件
+            # 修改：不创建空的_Scan_ip.txt文件
             print(f"{province_name}: 没有找到有效IP，不生成结果文件")
         
         print("-" * 50)
