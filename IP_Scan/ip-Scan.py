@@ -147,11 +147,11 @@ def process_config_file(config_file):
         with open(config_file, 'w', encoding='utf-8') as f:
             f.write('\n'.join(new_lines))
         print(f"\n已清理配置文件，保留 {len(valid_lines)} 个有效配置")
-    else:
-        # 如果没有找到任何有效IP，清空文件
-        with open(config_file, 'w', encoding='utf-8') as f:
-            f.write("")
-        print(f"\n没有找到任何有效IP，已清空配置文件")
+    # else:
+    #     # 如果没有找到任何有效IP，清空文件
+    #     with open(config_file, 'w', encoding='utf-8') as f:
+    #         f.write("")
+    #     print(f"\n没有找到任何有效IP，已清空配置文件")
     
     return all_valid_ip_ports
 
