@@ -85,7 +85,7 @@ def scan_ip_port(ip, port, option, url_end):
     """扫描IP端口"""
     def show_progress():
         while checked[0] < len(ip_ports) and option % 2 == 1:
-            time.sleep(30)
+            time.sleep(5)
     
     valid_ip_ports = []
     ip_ports = generate_ip_ports(ip, port, option)
