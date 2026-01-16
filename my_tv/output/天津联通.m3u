@@ -61,16 +61,18 @@ http://111.162.207.111:8686/rtp/225.1.2.170:5002
 http://111.162.207.111:8686/rtp/225.1.2.167:5002
 #EXTINF:-1 tvg-id="CETV早期教育" tvg-name="CETV早期教育" group-title="央视频道",CETV早期教育
 http://111.162.207.111:8686/rtp/225.1.2.207:5002
+#EXTINF:-1 tvg-id="中国交通" tvg-name="中国交通" group-title="央视频道",中国交通
+http://111.162.207.111:8686/rtp/225.1.2.57:5002
 #EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="其它频道",CGTN英语
 http://111.162.207.111:8686/rtp/225.1.1.27:5002
 #EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录
 http://111.162.207.111:8686/rtp/225.1.1.55:5002
-#EXTINF:-1 tvg-id="中国交通" tvg-name="中国交通" group-title="其它频道",中国交通
-http://111.162.207.111:8686/rtp/225.1.2.57:5002
 #EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
 http://111.162.207.111:8686/rtp/225.1.1.41:5002
 #EXTINF:-1 tvg-id="天津新闻频道" tvg-name="天津新闻频道" group-title="其它频道",天津新闻频道
 http://111.162.207.111:8686/rtp/225.1.1.130:5002
+#EXTINF:-1 tvg-id="天津文艺频道" tvg-name="天津文艺频道" group-title="其它频道",天津文艺频道
+http://111.162.207.111:8686/rtp/225.1.1.131:5002
 #EXTINF:-1 tvg-id="天津影视频道" tvg-name="天津影视频道" group-title="其它频道",天津影视频道
 http://111.162.207.111:8686/rtp/225.1.1.149:5002
 #EXTINF:-1 tvg-id="天津体育频道" tvg-name="天津体育频道" group-title="其它频道",天津体育频道
@@ -105,6 +107,8 @@ http://111.162.207.111:8686/rtp/225.1.2.105:5002
 http://111.162.207.111:8686/rtp/225.1.2.129:5002
 #EXTINF:-1 tvg-id="大港油田企业" tvg-name="大港油田企业" group-title="其它频道",大港油田企业
 http://111.162.207.111:8686/rtp/225.1.2.14:5002
+#EXTINF:-1 tvg-id="重庆汽摩" tvg-name="重庆汽摩" tvg-logo="https://tb.zbds.top/logo/重庆汽摩.png" group-title="其它频道",重庆汽摩
+http://111.162.207.111:8686/rtp/225.1.1.205:5002
 #EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影
 http://111.162.207.111:8686/rtp/225.1.1.215:5002
 #EXTINF:-1 tvg-id="CHC影迷电影" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影
@@ -205,11 +209,7 @@ http://111.162.207.111:8686/rtp/225.1.2.181:5002
 http://111.162.207.111:8686/rtp/225.1.1.57:5002
 #EXTINF:-1 tvg-id="山东教育卫视" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视
 http://111.162.207.111:8686/rtp/225.1.2.118:5002
-#EXTINF:-1 tvg-id="天津文艺频道" tvg-name="天津文艺频道" group-title="☘️天津市",天津文艺频道
-http://111.162.207.111:8686/rtp/225.1.1.131:5002
-#EXTINF:-1 tvg-id="天津都市频道" tvg-name="天津都市频道" group-title="☘️天津市",天津都市频道
+#EXTINF:-1 tvg-id="天津都市频道" tvg-name="天津都市频道" group-title="☘️上海市",天津都市频道
 http://111.162.207.111:8686/rtp/225.1.1.128:5002
 #EXTINF:-1 tvg-id="上海东方财经" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经
 http://111.162.207.111:8686/rtp/225.1.1.247:5002
-#EXTINF:-1 tvg-id="重庆汽摩" tvg-name="重庆汽摩" tvg-logo="https://tb.zbds.top/logo/重庆汽摩.png" group-title="☘️重庆市",重庆汽摩
-http://111.162.207.111:8686/rtp/225.1.1.205:5002

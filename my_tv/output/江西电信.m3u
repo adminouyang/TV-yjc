@@ -65,7 +65,7 @@ http://220.176.218.76:9000/rtp/239.252.219.100:5140
 http://220.176.218.76:9000/rtp/239.252.219.107:5140
 #EXTINF:-1 tvg-id="山东教育卫视" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视
 http://220.176.218.76:9000/rtp/239.252.219.74:5140
-#EXTINF:-1 tvg-id="江西都市频道" tvg-name="江西都市频道" group-title="其它频道",江西都市频道
+#EXTINF:-1 tvg-id="江西都市频道" tvg-name="江西都市频道" group-title="☘️上海市",江西都市频道
 http://220.176.218.76:9000/udp/239.252.220.238:5140
 #EXTINF:-1 tvg-id="江西经济生活" tvg-name="江西经济生活" group-title="其它频道",江西经济生活
 http://220.176.218.76:9000/udp/239.252.219.173:5140
@@ -101,64 +101,20 @@ http://220.176.218.76:9000/udp/239.252.219.67:5140
 http://220.176.218.76:9000/udp/239.252.219.66:5140
 #EXTINF:-1 tvg-id="昌飞航空" tvg-name="昌飞航空" group-title="其它频道",昌飞航空
 http://220.176.218.76:9000/udp/239.252.220.47:5140
-#EXTINF:-1 tvg-id="华数动画" tvg-name="华数动画" group-title="其它频道",华数动画
-http://220.176.218.76:9000/rtp/239.252.219.165:5140
-#EXTINF:-1 tvg-id="华数魅力时尚" tvg-name="华数魅力时尚" group-title="其它频道",华数魅力时尚
-http://220.176.218.76:9000/rtp/239.252.220.137:5140
-#EXTINF:-1 tvg-id="华数热播剧场" tvg-name="华数热播剧场" group-title="其它频道",华数热播剧场
-http://220.176.218.76:9000/rtp/239.252.220.138:5140
-#EXTINF:-1 tvg-id="华数经典电影" tvg-name="华数经典电影" group-title="其它频道",华数经典电影
-http://220.176.218.76:9000/rtp/239.252.220.139:5140
-#EXTINF:-1 tvg-id="华数城市剧场" tvg-name="华数城市剧场" group-title="其它频道",华数城市剧场
-http://220.176.218.76:9000/rtp/239.252.220.75:5140
-#EXTINF:-1 tvg-id="华数军旅剧场" tvg-name="华数军旅剧场" group-title="其它频道",华数军旅剧场
-http://220.176.218.76:9000/rtp/239.252.220.76:5140
-#EXTINF:-1 tvg-id="华数古装剧场" tvg-name="华数古装剧场" group-title="其它频道",华数古装剧场
-http://220.176.218.76:9000/rtp/239.252.220.77:5140
-#EXTINF:-1 tvg-id="华数武侠剧场" tvg-name="华数武侠剧场" group-title="其它频道",华数武侠剧场
-http://220.176.218.76:9000/rtp/239.252.220.88:5140
-#EXTINF:-1 tvg-id="华数喜剧影院" tvg-name="华数喜剧影院" group-title="其它频道",华数喜剧影院
-http://220.176.218.76:9000/rtp/239.252.220.79:5140
-#EXTINF:-1 tvg-id="华数动作影院" tvg-name="华数动作影院" group-title="其它频道",华数动作影院
-http://220.176.218.76:9000/rtp/239.252.220.85:5140
 #EXTINF:-1 tvg-id="华数碟战剧场" tvg-name="华数碟战剧场" group-title="其它频道",华数碟战剧场
 http://220.176.218.76:9000/rtp/239.252.220.145:5140
-#EXTINF:-1 tvg-id="华数星影" tvg-name="华数星影" group-title="其它频道",华数星影
-http://220.176.218.76:9000/rtp/239.252.220.210:5140
-#EXTINF:-1 tvg-id="华数精选" tvg-name="华数精选" group-title="其它频道",华数精选
-http://220.176.218.76:9000/rtp/239.252.219.161:5140
 #EXTINF:-1 tvg-id="家庭影院" tvg-name="家庭影院" group-title="其它频道",家庭影院
 http://220.176.218.76:9000/rtp/239.252.220.86:5140
-#EXTINF:-1 tvg-id="IPTV6华数电影" tvg-name="IPTV6华数电影" group-title="其它频道",IPTV6华数电影
-http://220.176.218.76:9000/rtp/239.252.220.142:5140
-#EXTINF:-1 tvg-id="IPTV3综艺" tvg-name="IPTV3综艺" group-title="其它频道",IPTV3综艺
-http://220.176.218.76:9000/rtp/239.252.220.140:5140
-#EXTINF:-1 tvg-id="IPTV7军事" tvg-name="IPTV7军事" group-title="其它频道",IPTV7军事
-http://220.176.218.76:9000/rtp/239.252.220.206:5140
-#EXTINF:-1 tvg-id="IPTV8电视剧" tvg-name="IPTV8电视剧" group-title="其它频道",IPTV8电视剧
-http://220.176.218.76:9000/rtp/239.252.220.143:5140
 #EXTINF:-1 tvg-id="IPTV收视指南" tvg-name="IPTV收视指南" group-title="其它频道",IPTV收视指南
 http://220.176.218.76:9000/rtp/239.252.220.144:5140
 #EXTINF:-1 tvg-id="IPTV相声小品" tvg-name="IPTV相声小品" group-title="其它频道",IPTV相声小品
 http://220.176.218.76:9000/rtp/239.252.220.146:5140
-#EXTINF:-1 tvg-id="IPTV10野外" tvg-name="IPTV10野外" group-title="其它频道",IPTV10野外
-http://220.176.218.76:9000/rtp/239.252.220.73:5140
-#EXTINF:-1 tvg-id="IPTV11戏曲" tvg-name="IPTV11戏曲" group-title="其它频道",IPTV11戏曲
-http://220.176.218.76:9000/rtp/239.252.219.163:5140
-#EXTINF:-1 tvg-id="IPTV12法治" tvg-name="IPTV12法治" group-title="其它频道",IPTV12法治
-http://220.176.218.76:9000/rtp/239.252.220.74:5140
-#EXTINF:-1 tvg-id="IPTV14早教" tvg-name="IPTV14早教" group-title="其它频道",IPTV14早教
-http://220.176.218.76:9000/rtp/239.252.219.164:5140
-#EXTINF:-1 tvg-id="IPTV15音乐" tvg-name="IPTV15音乐" group-title="其它频道",IPTV15音乐
-http://220.176.218.76:9000/rtp/239.252.220.87:5140
 #EXTINF:-1 tvg-id="IPTV爱生活" tvg-name="IPTV爱生活" group-title="其它频道",IPTV爱生活
 http://220.176.218.76:9000/rtp/239.252.220.89:5140
 #EXTINF:-1 tvg-id="IPTV好学生" tvg-name="IPTV好学生" group-title="其它频道",IPTV好学生
 http://220.176.218.76:9000/rtp/239.252.220.90:5140
 #EXTINF:-1 tvg-id="IPTV鉴赏" tvg-name="IPTV鉴赏" group-title="其它频道",IPTV鉴赏
 http://220.176.218.76:9000/rtp/239.252.219.166:5140
-#EXTINF:-1 tvg-id="IPTV墨宝" tvg-name="IPTV墨宝" group-title="其它频道",IPTV墨宝
-http://220.176.218.76:9000/rtp/239.252.219.168:5140
 #EXTINF:-1 tvg-id="IPTV美人" tvg-name="IPTV美人" group-title="其它频道",IPTV美人
 http://220.176.218.76:9000/rtp/239.252.220.202:5140
 #EXTINF:-1 tvg-id="IPTV足球" tvg-name="IPTV足球" group-title="其它频道",IPTV足球
@@ -167,10 +123,6 @@ http://220.176.218.76:9000/rtp/239.252.220.205:5140
 http://220.176.218.76:9000/rtp/239.252.220.207:5140
 #EXTINF:-1 tvg-id="IPTV美妆" tvg-name="IPTV美妆" group-title="其它频道",IPTV美妆
 http://220.176.218.76:9000/rtp/239.252.220.208:5140
-#EXTINF:-1 tvg-id="IPTV解密" tvg-name="IPTV解密" group-title="其它频道",IPTV解密
-http://220.176.218.76:9000/rtp/239.252.220.209:5140
-#EXTINF:-1 tvg-id="光影" tvg-name="光影" group-title="其它频道",光影
-http://220.176.218.76:9000/rtp/239.252.220.200:5140
 #EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
 http://220.176.218.76:9000/udp/239.252.219.200:5140
 #EXTINF:-1 tvg-id="CCTV-2财经" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经
@@ -261,8 +213,6 @@ http://220.176.218.76:9000/udp/239.252.220.155:5140
 http://220.176.218.76:9000/udp/239.252.220.177:5140
 #EXTINF:-1 tvg-id="河南梨园频道" tvg-name="河南梨园频道" group-title="数字频道",河南梨园频道
 http://220.176.218.76:9000/udp/239.252.220.179:5140
-#EXTINF:-1 tvg-id="华数4K电影" tvg-name="华数4K电影" group-title="数字频道",华数4K电影
-http://220.176.218.76:9000/udp/239.252.220.212:5140
 #EXTINF:-1 tvg-id="哈哈炫动" tvg-name="哈哈炫动" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%93%88%E5%93%88%E7%82%AB%E5%8A%A8.png" group-title="数字频道",哈哈炫动
 http://220.176.218.76:9000/rtp/239.252.219.43:5140
 #EXTINF:-1 tvg-id="卡酷少儿" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿
@@ -273,3 +223,53 @@ http://220.176.218.76:9000/rtp/239.252.219.92:5140
 http://220.176.218.76:9000/rtp/239.252.220.132:5140
 #EXTINF:-1 tvg-id="华数少儿动画" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画
 http://220.176.218.76:9000/rtp/239.252.220.136:5140
+#EXTINF:-1 tvg-id="华数热播剧场" tvg-name="华数热播剧场" group-title="数字频道",华数热播剧场
+http://220.176.218.76:9000/rtp/239.252.220.138:5140
+#EXTINF:-1 tvg-id="华数经典电影" tvg-name="华数经典电影" group-title="数字频道",华数经典电影
+http://220.176.218.76:9000/rtp/239.252.220.139:5140
+#EXTINF:-1 tvg-id="IPTV6华数电影" tvg-name="IPTV6华数电影" group-title="数字频道",IPTV6华数电影
+http://220.176.218.76:9000/rtp/239.252.220.142:5140
+#EXTINF:-1 tvg-id="IPTV3综艺" tvg-name="IPTV3综艺" group-title="数字频道",IPTV3综艺
+http://220.176.218.76:9000/rtp/239.252.220.140:5140
+#EXTINF:-1 tvg-id="IPTV7军事" tvg-name="IPTV7军事" group-title="数字频道",IPTV7军事
+http://220.176.218.76:9000/rtp/239.252.220.206:5140
+#EXTINF:-1 tvg-id="IPTV8电视剧" tvg-name="IPTV8电视剧" group-title="数字频道",IPTV8电视剧
+http://220.176.218.76:9000/rtp/239.252.220.143:5140
+#EXTINF:-1 tvg-id="IPTV10野外" tvg-name="IPTV10野外" group-title="数字频道",IPTV10野外
+http://220.176.218.76:9000/rtp/239.252.220.73:5140
+#EXTINF:-1 tvg-id="IPTV11戏曲" tvg-name="IPTV11戏曲" group-title="数字频道",IPTV11戏曲
+http://220.176.218.76:9000/rtp/239.252.219.163:5140
+#EXTINF:-1 tvg-id="IPTV12法治" tvg-name="IPTV12法治" group-title="数字频道",IPTV12法治
+http://220.176.218.76:9000/rtp/239.252.220.74:5140
+#EXTINF:-1 tvg-id="IPTV14早教" tvg-name="IPTV14早教" group-title="数字频道",IPTV14早教
+http://220.176.218.76:9000/rtp/239.252.219.164:5140
+#EXTINF:-1 tvg-id="IPTV15音乐" tvg-name="IPTV15音乐" group-title="数字频道",IPTV15音乐
+http://220.176.218.76:9000/rtp/239.252.220.87:5140
+#EXTINF:-1 tvg-id="IPTV墨宝" tvg-name="IPTV墨宝" group-title="数字频道",IPTV墨宝
+http://220.176.218.76:9000/rtp/239.252.219.168:5140
+#EXTINF:-1 tvg-id="IPTV解密" tvg-name="IPTV解密" group-title="数字频道",IPTV解密
+http://220.176.218.76:9000/rtp/239.252.220.209:5140
+#EXTINF:-1 tvg-id="华数4K电影" tvg-name="华数4K电影" group-title="4K频道",华数4K电影
+http://220.176.218.76:9000/udp/239.252.220.212:5140
+#EXTINF:-1 tvg-id="华数动画" tvg-name="华数动画" group-title="☘️重庆市",华数动画
+http://220.176.218.76:9000/rtp/239.252.219.165:5140
+#EXTINF:-1 tvg-id="华数魅力时尚" tvg-name="华数魅力时尚" group-title="☘️重庆市",华数魅力时尚
+http://220.176.218.76:9000/rtp/239.252.220.137:5140
+#EXTINF:-1 tvg-id="华数城市剧场" tvg-name="华数城市剧场" group-title="☘️重庆市",华数城市剧场
+http://220.176.218.76:9000/rtp/239.252.220.75:5140
+#EXTINF:-1 tvg-id="华数军旅剧场" tvg-name="华数军旅剧场" group-title="☘️重庆市",华数军旅剧场
+http://220.176.218.76:9000/rtp/239.252.220.76:5140
+#EXTINF:-1 tvg-id="华数古装剧场" tvg-name="华数古装剧场" group-title="☘️重庆市",华数古装剧场
+http://220.176.218.76:9000/rtp/239.252.220.77:5140
+#EXTINF:-1 tvg-id="华数武侠剧场" tvg-name="华数武侠剧场" group-title="☘️重庆市",华数武侠剧场
+http://220.176.218.76:9000/rtp/239.252.220.88:5140
+#EXTINF:-1 tvg-id="华数喜剧影院" tvg-name="华数喜剧影院" group-title="☘️重庆市",华数喜剧影院
+http://220.176.218.76:9000/rtp/239.252.220.79:5140
+#EXTINF:-1 tvg-id="华数动作影院" tvg-name="华数动作影院" group-title="☘️重庆市",华数动作影院
+http://220.176.218.76:9000/rtp/239.252.220.85:5140
+#EXTINF:-1 tvg-id="华数星影" tvg-name="华数星影" group-title="☘️重庆市",华数星影
+http://220.176.218.76:9000/rtp/239.252.220.210:5140
+#EXTINF:-1 tvg-id="华数精选" tvg-name="华数精选" group-title="☘️重庆市",华数精选
+http://220.176.218.76:9000/rtp/239.252.219.161:5140
+#EXTINF:-1 tvg-id="光影" tvg-name="光影" group-title="☘️重庆市",光影
+http://220.176.218.76:9000/rtp/239.252.220.200:5140

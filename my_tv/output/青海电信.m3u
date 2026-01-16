@@ -1,12 +1,18 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="九画面" tvg-name="九画面" group-title="其它频道",九画面
 http://220.167.170.124:4000/rtp/239.120.1.131:8268
+#EXTINF:-1 tvg-id="青海都市" tvg-name="青海都市" group-title="其它频道",青海都市
+http://220.167.170.124:4000/rtp/239.120.1.41:8220
+#EXTINF:-1 tvg-id="青海经视" tvg-name="青海经视" group-title="其它频道",青海经视
+http://220.167.170.124:4000/rtp/239.120.1.42:8226
 #EXTINF:-1 tvg-id="海东综合频道" tvg-name="海东综合频道" group-title="其它频道",海东综合频道
 http://220.167.170.124:4000/rtp/239.120.1.102:8328
 #EXTINF:-1 tvg-id="海北电视台" tvg-name="海北电视台" group-title="其它频道",海北电视台
 http://220.167.170.124:4000/rtp/239.120.1.123:8266
 #EXTINF:-1 tvg-id="海西电视台" tvg-name="海西电视台" group-title="其它频道",海西电视台
 http://220.167.170.124:4000/rtp/239.120.1.184:9160
+#EXTINF:-1 tvg-id="西宁生活服务" tvg-name="西宁生活服务" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E5%AE%81%E7%94%9F%E6%B4%BB%E6%9C%8D%E5%8A%A1.png" group-title="其它频道",西宁生活服务
+http://220.167.170.124:4000/rtp/239.120.1.248:9440
 #EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="其它频道",上海游戏风云
 http://220.167.170.124:4000/rtp/239.120.1.215:9312
 #EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
@@ -93,14 +99,10 @@ http://220.167.170.124:4000/rtp/239.120.1.132:8354
 http://220.167.170.124:4000/rtp/239.120.1.240:9404
 #EXTINF:-1 tvg-id="山东教育卫视" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视
 http://220.167.170.124:4000/rtp/239.120.1.177:8272
-#EXTINF:-1 tvg-id="青海都市" tvg-name="青海都市" group-title="☘️青海省",青海都市
-http://220.167.170.124:4000/rtp/239.120.1.41:8220
-#EXTINF:-1 tvg-id="青海经视" tvg-name="青海经视" group-title="☘️青海省",青海经视
-http://220.167.170.124:4000/rtp/239.120.1.42:8226
-#EXTINF:-1 tvg-id="西宁生活服务" tvg-name="西宁生活服务" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E5%AE%81%E7%94%9F%E6%B4%BB%E6%9C%8D%E5%8A%A1.png" group-title="☘️青海省",西宁生活服务
-http://220.167.170.124:4000/rtp/239.120.1.248:9440
-#EXTINF:-1 tvg-id="西宁新闻综合" tvg-name="西宁新闻综合" tvg-logo="https://tb.zbds.top/logo/西宁新闻综合.png" group-title="☘️青海省",西宁新闻综合
+#EXTINF:-1 tvg-id="西宁新闻综合" tvg-name="西宁新闻综合" tvg-logo="https://tb.zbds.top/logo/西宁新闻综合.png" group-title="☘️上海市",西宁新闻综合
 http://220.167.170.124:4000/rtp/239.120.1.249:9444
+#EXTINF:-1 tvg-id="上海东方财经" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经
+http://220.167.170.124:4000/rtp/239.120.1.55:8304
 #EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
 http://220.167.170.124:4000/rtp/239.120.1.119:8260
 #EXTINF:-1 tvg-id="CCTV-2财经" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经
@@ -171,5 +173,3 @@ http://220.167.170.124:4000/rtp/239.120.1.139:8892
 http://220.167.170.124:4000/rtp/239.120.1.138:8886
 #EXTINF:-1 tvg-id="嘉佳卡通" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通
 http://220.167.170.124:4000/rtp/239.120.1.108:8640
-#EXTINF:-1 tvg-id="上海东方财经" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经
-http://220.167.170.124:4000/rtp/239.120.1.55:8304

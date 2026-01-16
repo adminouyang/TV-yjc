@@ -69,16 +69,86 @@ http://223.198.243.134:4000/rtp/239.253.64.147:5140
 http://223.198.243.134:4000/rtp/239.253.64.178:5140
 #EXTINF:-1 tvg-id="山东教育卫视" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视
 http://223.198.243.134:4000/rtp/239.253.64.241:5140
-#EXTINF:-1 tvg-id="海南公共频道" tvg-name="海南公共频道" group-title="☘️海南省",海南公共频道
+#EXTINF:-1 tvg-id="海南公共频道" tvg-name="海南公共频道" group-title="其它频道",海南公共频道
 http://223.198.243.134:4000/rtp/239.253.64.14:5140
-#EXTINF:-1 tvg-id="海南少儿频道" tvg-name="海南少儿频道" group-title="☘️海南省",海南少儿频道
+#EXTINF:-1 tvg-id="海南少儿频道" tvg-name="海南少儿频道" group-title="其它频道",海南少儿频道
 http://223.198.243.134:4000/rtp/239.253.64.124:5140
-#EXTINF:-1 tvg-id="海南文旅频道" tvg-name="海南文旅频道" group-title="☘️海南省",海南文旅频道
+#EXTINF:-1 tvg-id="海南文旅频道" tvg-name="海南文旅频道" group-title="其它频道",海南文旅频道
 http://223.198.243.134:4000/rtp/239.253.64.122:5140
-#EXTINF:-1 tvg-id="海南新闻频道" tvg-name="海南新闻频道" group-title="☘️海南省",海南新闻频道
+#EXTINF:-1 tvg-id="海南新闻频道" tvg-name="海南新闻频道" group-title="其它频道",海南新闻频道
 http://223.198.243.134:4000/rtp/239.253.64.121:5140
-#EXTINF:-1 tvg-id="海南自贸频道" tvg-name="海南自贸频道" group-title="☘️海南省",海南自贸频道
+#EXTINF:-1 tvg-id="海南自贸频道" tvg-name="海南自贸频道" group-title="其它频道",海南自贸频道
 http://223.198.243.134:4000/rtp/239.253.64.119:5140
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
+http://223.198.243.134:4000/rtp/239.253.64.37:5140
+#EXTINF:-1 tvg-id="上海纪实" tvg-name="上海纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%8A%E6%B5%B7%E7%BA%AA%E5%AE%9E.png" group-title="其它频道",上海纪实
+http://223.198.243.134:4000/rtp/239.253.64.149:5140
+#EXTINF:-1 tvg-id="爱上4K" tvg-name="爱上4K" group-title="其它频道",爱上4K
+http://223.198.243.134:4000/rtp/239.253.64.243:5140
+#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="其它频道",CGTN英语
+http://223.198.243.134:4000/rtp/239.253.64.17:5140
+#EXTINF:-1 tvg-id="CGTN记录" tvg-name="CGTN记录" group-title="其它频道",CGTN记录
+http://223.198.243.134:4000/rtp/239.253.64.58:5140
+#EXTINF:-1 tvg-id="海口1台" tvg-name="海口1台" group-title="其它频道",海口1台
+http://223.198.243.134:4000/rtp/239.253.64.80:5140
+#EXTINF:-1 tvg-id="海口2台" tvg-name="海口2台" group-title="其它频道",海口2台
+http://223.198.243.134:4000/rtp/239.253.64.82:5140
+#EXTINF:-1 tvg-id="海口3台" tvg-name="海口3台" group-title="其它频道",海口3台
+http://223.198.243.134:4000/rtp/239.253.64.83:5140
+#EXTINF:-1 tvg-id="白沙TV" tvg-name="白沙TV" group-title="其它频道",白沙TV
+http://223.198.243.134:4000/rtp/239.253.64.118:5140
+#EXTINF:-1 tvg-id="保亭TV" tvg-name="保亭TV" group-title="其它频道",保亭TV
+http://223.198.243.134:4000/rtp/239.253.64.159:5140
+#EXTINF:-1 tvg-id="澄迈TV" tvg-name="澄迈TV" group-title="其它频道",澄迈TV
+http://223.198.243.134:4000/rtp/239.253.64.109:5140
+#EXTINF:-1 tvg-id="儋州TV" tvg-name="儋州TV" group-title="其它频道",儋州TV
+http://223.198.243.134:4000/rtp/239.253.64.107:5140
+#EXTINF:-1 tvg-id="定安TV" tvg-name="定安TV" group-title="其它频道",定安TV
+http://223.198.243.134:4000/rtp/239.253.64.110:5140
+#EXTINF:-1 tvg-id="东方TV" tvg-name="东方TV" group-title="其它频道",东方TV
+http://223.198.243.134:4000/rtp/239.253.64.111:5140
+#EXTINF:-1 tvg-id="临高" tvg-name="临高" group-title="其它频道",临高
+http://223.198.243.134:4000/rtp/239.253.64.155:5140
+#EXTINF:-1 tvg-id="陵水TV" tvg-name="陵水TV" group-title="其它频道",陵水TV
+http://223.198.243.134:4000/rtp/239.253.64.116:5140
+#EXTINF:-1 tvg-id="琼海TV" tvg-name="琼海TV" group-title="其它频道",琼海TV
+http://223.198.243.134:4000/rtp/239.253.64.106:5140
+#EXTINF:-1 tvg-id="琼中TV" tvg-name="琼中TV" group-title="其它频道",琼中TV
+http://223.198.243.134:4000/rtp/239.253.64.165:5140
+#EXTINF:-1 tvg-id="三亚1台" tvg-name="三亚1台" group-title="其它频道",三亚1台
+http://223.198.243.134:4000/rtp/239.253.64.9:5140
+#EXTINF:-1 tvg-id="乐东TV" tvg-name="乐东TV" group-title="其它频道",乐东TV
+http://223.198.243.134:4000/rtp/239.253.64.166:5140
+#EXTINF:-1 tvg-id="屯昌TV" tvg-name="屯昌TV" group-title="其它频道",屯昌TV
+http://223.198.243.134:4000/rtp/239.253.64.117:5140
+#EXTINF:-1 tvg-id="昌江TV" tvg-name="昌江TV" group-title="其它频道",昌江TV
+http://223.198.243.134:4000/rtp/239.253.64.108:5140
+#EXTINF:-1 tvg-id="万宁综合" tvg-name="万宁综合" group-title="其它频道",万宁综合
+http://223.198.243.134:4000/rtp/239.253.64.167:5140
+#EXTINF:-1 tvg-id="文昌TV" tvg-name="文昌TV" group-title="其它频道",文昌TV
+http://223.198.243.134:4000/rtp/239.253.64.105:5140
+#EXTINF:-1 tvg-id="五指山TV" tvg-name="五指山TV" group-title="其它频道",五指山TV
+http://223.198.243.134:4000/rtp/239.253.64.69:5140
+#EXTINF:-1 tvg-id="IPTV地理" tvg-name="IPTV地理" group-title="其它频道",IPTV地理
+http://223.198.243.134:4000/rtp/239.253.64.219:5140
+#EXTINF:-1 tvg-id="IPTV相声小品" tvg-name="IPTV相声小品" group-title="其它频道",IPTV相声小品
+http://223.198.243.134:4000/rtp/239.253.64.214:5140
+#EXTINF:-1 tvg-id="IPTV足球" tvg-name="IPTV足球" group-title="其它频道",IPTV足球
+http://223.198.243.134:4000/rtp/239.253.64.237:5140
+#EXTINF:-1 tvg-id="IPTV武术" tvg-name="IPTV武术" group-title="其它频道",IPTV武术
+http://223.198.243.134:4000/rtp/239.253.64.170:5140
+#EXTINF:-1 tvg-id="IPTV台球" tvg-name="IPTV台球" group-title="其它频道",IPTV台球
+http://223.198.243.134:4000/rtp/239.253.64.164:5140
+#EXTINF:-1 tvg-id="IPTV收视指南" tvg-name="IPTV收视指南" group-title="其它频道",IPTV收视指南
+http://223.198.243.134:4000/rtp/239.253.64.238:5140
+#EXTINF:-1 tvg-id="IPTV美人" tvg-name="IPTV美人" group-title="其它频道",IPTV美人
+http://223.198.243.134:4000/rtp/239.253.64.123:5140
+#EXTINF:-1 tvg-id="IPTV好学生" tvg-name="IPTV好学生" group-title="其它频道",IPTV好学生
+http://223.198.243.134:4000/rtp/239.253.64.223:5140
+#EXTINF:-1 tvg-id="IPTV爱生活" tvg-name="IPTV爱生活" group-title="其它频道",IPTV爱生活
+http://223.198.243.134:4000/rtp/239.253.64.216:5140
+#EXTINF:-1 tvg-id="IPTV5+" tvg-name="IPTV5+" group-title="其它频道",IPTV5+
+http://223.198.243.134:4000/rtp/239.253.64.125:5140
 #EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
 http://223.198.243.134:4000/rtp/239.253.64.120:5140
 #EXTINF:-1 tvg-id="CCTV-2财经" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经
@@ -125,131 +195,61 @@ http://223.198.243.134:4000/rtp/239.253.64.128:5140
 http://223.198.243.134:4000/rtp/239.253.64.139:5140
 #EXTINF:-1 tvg-id="中国天气" tvg-name="中国天气" group-title="央视频道",中国天气
 http://223.198.243.134:4000/rtp/239.253.64.79:5140
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://223.198.243.134:4000/rtp/239.253.64.37:5140
-#EXTINF:-1 tvg-id="上海纪实" tvg-name="上海纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%8A%E6%B5%B7%E7%BA%AA%E5%AE%9E.png" group-title="其它频道",上海纪实
-http://223.198.243.134:4000/rtp/239.253.64.149:5140
-#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="其它频道",CGTN英语
-http://223.198.243.134:4000/rtp/239.253.64.17:5140
-#EXTINF:-1 tvg-id="CGTN记录" tvg-name="CGTN记录" group-title="其它频道",CGTN记录
-http://223.198.243.134:4000/rtp/239.253.64.58:5140
-#EXTINF:-1 tvg-id="海口1台" tvg-name="海口1台" group-title="其它频道",海口1台
-http://223.198.243.134:4000/rtp/239.253.64.80:5140
-#EXTINF:-1 tvg-id="海口2台" tvg-name="海口2台" group-title="其它频道",海口2台
-http://223.198.243.134:4000/rtp/239.253.64.82:5140
-#EXTINF:-1 tvg-id="海口3台" tvg-name="海口3台" group-title="其它频道",海口3台
-http://223.198.243.134:4000/rtp/239.253.64.83:5140
-#EXTINF:-1 tvg-id="白沙TV" tvg-name="白沙TV" group-title="其它频道",白沙TV
-http://223.198.243.134:4000/rtp/239.253.64.118:5140
-#EXTINF:-1 tvg-id="保亭TV" tvg-name="保亭TV" group-title="其它频道",保亭TV
-http://223.198.243.134:4000/rtp/239.253.64.159:5140
-#EXTINF:-1 tvg-id="澄迈TV" tvg-name="澄迈TV" group-title="其它频道",澄迈TV
-http://223.198.243.134:4000/rtp/239.253.64.109:5140
-#EXTINF:-1 tvg-id="儋州TV" tvg-name="儋州TV" group-title="其它频道",儋州TV
-http://223.198.243.134:4000/rtp/239.253.64.107:5140
-#EXTINF:-1 tvg-id="定安TV" tvg-name="定安TV" group-title="其它频道",定安TV
-http://223.198.243.134:4000/rtp/239.253.64.110:5140
-#EXTINF:-1 tvg-id="东方TV" tvg-name="东方TV" group-title="其它频道",东方TV
-http://223.198.243.134:4000/rtp/239.253.64.111:5140
-#EXTINF:-1 tvg-id="临高" tvg-name="临高" group-title="其它频道",临高
-http://223.198.243.134:4000/rtp/239.253.64.155:5140
-#EXTINF:-1 tvg-id="陵水TV" tvg-name="陵水TV" group-title="其它频道",陵水TV
-http://223.198.243.134:4000/rtp/239.253.64.116:5140
-#EXTINF:-1 tvg-id="琼海TV" tvg-name="琼海TV" group-title="其它频道",琼海TV
-http://223.198.243.134:4000/rtp/239.253.64.106:5140
-#EXTINF:-1 tvg-id="琼中TV" tvg-name="琼中TV" group-title="其它频道",琼中TV
-http://223.198.243.134:4000/rtp/239.253.64.165:5140
-#EXTINF:-1 tvg-id="三亚1台" tvg-name="三亚1台" group-title="其它频道",三亚1台
-http://223.198.243.134:4000/rtp/239.253.64.9:5140
-#EXTINF:-1 tvg-id="乐东TV" tvg-name="乐东TV" group-title="其它频道",乐东TV
-http://223.198.243.134:4000/rtp/239.253.64.166:5140
-#EXTINF:-1 tvg-id="屯昌TV" tvg-name="屯昌TV" group-title="其它频道",屯昌TV
-http://223.198.243.134:4000/rtp/239.253.64.117:5140
-#EXTINF:-1 tvg-id="昌江TV" tvg-name="昌江TV" group-title="其它频道",昌江TV
-http://223.198.243.134:4000/rtp/239.253.64.108:5140
-#EXTINF:-1 tvg-id="万宁综合" tvg-name="万宁综合" group-title="其它频道",万宁综合
-http://223.198.243.134:4000/rtp/239.253.64.167:5140
-#EXTINF:-1 tvg-id="文昌TV" tvg-name="文昌TV" group-title="其它频道",文昌TV
-http://223.198.243.134:4000/rtp/239.253.64.105:5140
-#EXTINF:-1 tvg-id="五指山TV" tvg-name="五指山TV" group-title="其它频道",五指山TV
-http://223.198.243.134:4000/rtp/239.253.64.69:5140
-#EXTINF:-1 tvg-id="华数谍战剧场" tvg-name="华数谍战剧场" group-title="其它频道",华数谍战剧场
-http://223.198.243.134:4000/rtp/239.253.64.212:5140
-#EXTINF:-1 tvg-id="华数经典电影" tvg-name="华数经典电影" group-title="其它频道",华数经典电影
-http://223.198.243.134:4000/rtp/239.253.64.227:5140
-#EXTINF:-1 tvg-id="华数魅力时尚" tvg-name="华数魅力时尚" group-title="其它频道",华数魅力时尚
-http://223.198.243.134:4000/rtp/239.253.64.231:5140
-#EXTINF:-1 tvg-id="华数热播剧场" tvg-name="华数热播剧场" group-title="其它频道",华数热播剧场
-http://223.198.243.134:4000/rtp/239.253.64.211:5140
-#EXTINF:-1 tvg-id="华数影视" tvg-name="华数影视" group-title="其它频道",华数影视
-http://223.198.243.134:4000/rtp/239.253.64.49:5140
-#EXTINF:-1 tvg-id="华数喜剧影院" tvg-name="华数喜剧影院" group-title="其它频道",华数喜剧影院
-http://223.198.243.134:4000/rtp/239.253.64.233:5140
-#EXTINF:-1 tvg-id="华数武侠剧场" tvg-name="华数武侠剧场" group-title="其它频道",华数武侠剧场
-http://223.198.243.134:4000/rtp/239.253.64.254:5140
-#EXTINF:-1 tvg-id="华数军旅剧场" tvg-name="华数军旅剧场" group-title="其它频道",华数军旅剧场
-http://223.198.243.134:4000/rtp/239.253.64.228:5140
-#EXTINF:-1 tvg-id="华数精选" tvg-name="华数精选" group-title="其它频道",华数精选
-http://223.198.243.134:4000/rtp/239.253.64.224:5140
-#EXTINF:-1 tvg-id="华数家庭影院" tvg-name="华数家庭影院" group-title="其它频道",华数家庭影院
-http://223.198.243.134:4000/rtp/239.253.64.225:5140
-#EXTINF:-1 tvg-id="华数古装剧场" tvg-name="华数古装剧场" group-title="其它频道",华数古装剧场
-http://223.198.243.134:4000/rtp/239.253.64.221:5140
-#EXTINF:-1 tvg-id="华数动作影院" tvg-name="华数动作影院" group-title="其它频道",华数动作影院
-http://223.198.243.134:4000/rtp/239.253.64.220:5140
-#EXTINF:-1 tvg-id="华数城市剧场" tvg-name="华数城市剧场" group-title="其它频道",华数城市剧场
-http://223.198.243.134:4000/rtp/239.253.64.218:5140
-#EXTINF:-1 tvg-id="IPTV法治" tvg-name="IPTV法治" group-title="其它频道",IPTV法治
-http://223.198.243.134:4000/rtp/239.253.64.213:5140
-#EXTINF:-1 tvg-id="IPTV地理" tvg-name="IPTV地理" group-title="其它频道",IPTV地理
-http://223.198.243.134:4000/rtp/239.253.64.219:5140
-#EXTINF:-1 tvg-id="IPTV相声小品" tvg-name="IPTV相声小品" group-title="其它频道",IPTV相声小品
-http://223.198.243.134:4000/rtp/239.253.64.214:5140
-#EXTINF:-1 tvg-id="IPTV野外" tvg-name="IPTV野外" group-title="其它频道",IPTV野外
-http://223.198.243.134:4000/rtp/239.253.64.215:5140
-#EXTINF:-1 tvg-id="IPTV足球" tvg-name="IPTV足球" group-title="其它频道",IPTV足球
-http://223.198.243.134:4000/rtp/239.253.64.237:5140
-#EXTINF:-1 tvg-id="IPTV早教" tvg-name="IPTV早教" group-title="其它频道",IPTV早教
-http://223.198.243.134:4000/rtp/239.253.64.236:5140
-#EXTINF:-1 tvg-id="IPTV音乐现场" tvg-name="IPTV音乐现场" group-title="其它频道",IPTV音乐现场
-http://223.198.243.134:4000/rtp/239.253.64.235:5140
-#EXTINF:-1 tvg-id="IPTV戏曲" tvg-name="IPTV戏曲" group-title="其它频道",IPTV戏曲
-http://223.198.243.134:4000/rtp/239.253.64.234:5140
-#EXTINF:-1 tvg-id="IPTV武术" tvg-name="IPTV武术" group-title="其它频道",IPTV武术
-http://223.198.243.134:4000/rtp/239.253.64.170:5140
-#EXTINF:-1 tvg-id="IPTV台球" tvg-name="IPTV台球" group-title="其它频道",IPTV台球
-http://223.198.243.134:4000/rtp/239.253.64.164:5140
-#EXTINF:-1 tvg-id="IPTV收视指南" tvg-name="IPTV收视指南" group-title="其它频道",IPTV收视指南
-http://223.198.243.134:4000/rtp/239.253.64.238:5140
-#EXTINF:-1 tvg-id="IPTV墨宝" tvg-name="IPTV墨宝" group-title="其它频道",IPTV墨宝
-http://223.198.243.134:4000/rtp/239.253.64.158:5140
-#EXTINF:-1 tvg-id="IPTV美人" tvg-name="IPTV美人" group-title="其它频道",IPTV美人
-http://223.198.243.134:4000/rtp/239.253.64.123:5140
-#EXTINF:-1 tvg-id="IPTV军事" tvg-name="IPTV军事" group-title="其它频道",IPTV军事
-http://223.198.243.134:4000/rtp/239.253.64.229:5140
-#EXTINF:-1 tvg-id="IPTV解密" tvg-name="IPTV解密" group-title="其它频道",IPTV解密
-http://223.198.243.134:4000/rtp/239.253.64.141:5140
-#EXTINF:-1 tvg-id="IPTV好学生" tvg-name="IPTV好学生" group-title="其它频道",IPTV好学生
-http://223.198.243.134:4000/rtp/239.253.64.223:5140
-#EXTINF:-1 tvg-id="IPTV国学" tvg-name="IPTV国学" group-title="其它频道",IPTV国学
-http://223.198.243.134:4000/rtp/239.253.64.222:5140
-#EXTINF:-1 tvg-id="IPTV爱生活" tvg-name="IPTV爱生活" group-title="其它频道",IPTV爱生活
-http://223.198.243.134:4000/rtp/239.253.64.216:5140
-#EXTINF:-1 tvg-id="IPTV3+" tvg-name="IPTV3+" group-title="其它频道",IPTV3+
-http://223.198.243.134:4000/rtp/239.253.64.10:5140
-#EXTINF:-1 tvg-id="IPTV5+" tvg-name="IPTV5+" group-title="其它频道",IPTV5+
-http://223.198.243.134:4000/rtp/239.253.64.125:5140
-#EXTINF:-1 tvg-id="IPTV8+" tvg-name="IPTV8+" group-title="其它频道",IPTV8+
-http://223.198.243.134:4000/rtp/239.253.64.160:5140
 #EXTINF:-1 tvg-id="金鹰纪实" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实
 http://223.198.243.134:4000/rtp/239.253.64.168:5140
-#EXTINF:-1 tvg-id="爱上4K" tvg-name="爱上4K" group-title="数字频道",爱上4K
-http://223.198.243.134:4000/rtp/239.253.64.243:5140
 #EXTINF:-1 tvg-id="金鹰卡通" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通
 http://223.198.243.134:4000/rtp/239.253.64.148:5140
 #EXTINF:-1 tvg-id="卡酷少儿" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿
 http://223.198.243.134:4000/rtp/239.253.64.230:5140
 #EXTINF:-1 tvg-id="嘉佳卡通" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通
 http://223.198.243.134:4000/rtp/239.253.64.127:5140
+#EXTINF:-1 tvg-id="华数经典电影" tvg-name="华数经典电影" group-title="数字频道",华数经典电影
+http://223.198.243.134:4000/rtp/239.253.64.227:5140
+#EXTINF:-1 tvg-id="华数热播剧场" tvg-name="华数热播剧场" group-title="数字频道",华数热播剧场
+http://223.198.243.134:4000/rtp/239.253.64.211:5140
 #EXTINF:-1 tvg-id="华数少儿动画" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画
 http://223.198.243.134:4000/rtp/239.253.64.232:5140
+#EXTINF:-1 tvg-id="IPTV法治" tvg-name="IPTV法治" group-title="数字频道",IPTV法治
+http://223.198.243.134:4000/rtp/239.253.64.213:5140
+#EXTINF:-1 tvg-id="IPTV野外" tvg-name="IPTV野外" group-title="数字频道",IPTV野外
+http://223.198.243.134:4000/rtp/239.253.64.215:5140
+#EXTINF:-1 tvg-id="IPTV早教" tvg-name="IPTV早教" group-title="数字频道",IPTV早教
+http://223.198.243.134:4000/rtp/239.253.64.236:5140
+#EXTINF:-1 tvg-id="IPTV音乐现场" tvg-name="IPTV音乐现场" group-title="数字频道",IPTV音乐现场
+http://223.198.243.134:4000/rtp/239.253.64.235:5140
+#EXTINF:-1 tvg-id="IPTV戏曲" tvg-name="IPTV戏曲" group-title="数字频道",IPTV戏曲
+http://223.198.243.134:4000/rtp/239.253.64.234:5140
+#EXTINF:-1 tvg-id="IPTV墨宝" tvg-name="IPTV墨宝" group-title="数字频道",IPTV墨宝
+http://223.198.243.134:4000/rtp/239.253.64.158:5140
+#EXTINF:-1 tvg-id="IPTV军事" tvg-name="IPTV军事" group-title="数字频道",IPTV军事
+http://223.198.243.134:4000/rtp/239.253.64.229:5140
+#EXTINF:-1 tvg-id="IPTV解密" tvg-name="IPTV解密" group-title="数字频道",IPTV解密
+http://223.198.243.134:4000/rtp/239.253.64.141:5140
+#EXTINF:-1 tvg-id="IPTV国学" tvg-name="IPTV国学" group-title="数字频道",IPTV国学
+http://223.198.243.134:4000/rtp/239.253.64.222:5140
+#EXTINF:-1 tvg-id="IPTV3+" tvg-name="IPTV3+" group-title="数字频道",IPTV3+
+http://223.198.243.134:4000/rtp/239.253.64.10:5140
+#EXTINF:-1 tvg-id="IPTV8+" tvg-name="IPTV8+" group-title="数字频道",IPTV8+
+http://223.198.243.134:4000/rtp/239.253.64.160:5140
+#EXTINF:-1 tvg-id="华数谍战剧场" tvg-name="华数谍战剧场" group-title="☘️重庆市",华数谍战剧场
+http://223.198.243.134:4000/rtp/239.253.64.212:5140
+#EXTINF:-1 tvg-id="华数魅力时尚" tvg-name="华数魅力时尚" group-title="☘️重庆市",华数魅力时尚
+http://223.198.243.134:4000/rtp/239.253.64.231:5140
+#EXTINF:-1 tvg-id="华数喜剧影院" tvg-name="华数喜剧影院" group-title="☘️重庆市",华数喜剧影院
+http://223.198.243.134:4000/rtp/239.253.64.233:5140
+#EXTINF:-1 tvg-id="华数武侠剧场" tvg-name="华数武侠剧场" group-title="☘️重庆市",华数武侠剧场
+http://223.198.243.134:4000/rtp/239.253.64.254:5140
+#EXTINF:-1 tvg-id="华数军旅剧场" tvg-name="华数军旅剧场" group-title="☘️重庆市",华数军旅剧场
+http://223.198.243.134:4000/rtp/239.253.64.228:5140
+#EXTINF:-1 tvg-id="华数精选" tvg-name="华数精选" group-title="☘️重庆市",华数精选
+http://223.198.243.134:4000/rtp/239.253.64.224:5140
+#EXTINF:-1 tvg-id="华数家庭影院" tvg-name="华数家庭影院" group-title="☘️重庆市",华数家庭影院
+http://223.198.243.134:4000/rtp/239.253.64.225:5140
+#EXTINF:-1 tvg-id="华数古装剧场" tvg-name="华数古装剧场" group-title="☘️重庆市",华数古装剧场
+http://223.198.243.134:4000/rtp/239.253.64.221:5140
+#EXTINF:-1 tvg-id="华数动作影院" tvg-name="华数动作影院" group-title="☘️重庆市",华数动作影院
+http://223.198.243.134:4000/rtp/239.253.64.220:5140
+#EXTINF:-1 tvg-id="华数城市剧场" tvg-name="华数城市剧场" group-title="☘️重庆市",华数城市剧场
+http://223.198.243.134:4000/rtp/239.253.64.218:5140
+#EXTINF:-1 tvg-id="华数影视" tvg-name="华数影视" group-title="☘️福建省",华数影视
+http://223.198.243.134:4000/rtp/239.253.64.49:5140

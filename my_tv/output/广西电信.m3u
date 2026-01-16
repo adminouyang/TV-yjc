@@ -69,26 +69,14 @@ http://171.104.106.89:50112/udp/239.81.0.212:4056
 http://171.104.106.89:50112/udp/239.81.0.213:4056
 #EXTINF:-1 tvg-id="山东教育卫视" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视
 http://171.104.106.89:50112/udp/239.81.0.93:4056
-#EXTINF:-1 tvg-id="广西综艺旅游" tvg-name="广西综艺旅游" group-title="☘️广西省",广西综艺旅游
+#EXTINF:-1 tvg-id="广西综艺旅游" tvg-name="广西综艺旅游" group-title="其它频道",广西综艺旅游
 http://171.104.106.89:50112/udp/239.81.0.214:4056
-#EXTINF:-1 tvg-id="广西影视频道" tvg-name="广西影视频道" group-title="☘️广西省",广西影视频道
+#EXTINF:-1 tvg-id="广西影视频道" tvg-name="广西影视频道" group-title="其它频道",广西影视频道
 http://171.104.106.89:50112/udp/239.81.0.250:4056
-#EXTINF:-1 tvg-id="广西新闻频道" tvg-name="广西新闻频道" group-title="☘️广西省",广西新闻频道
+#EXTINF:-1 tvg-id="广西新闻频道" tvg-name="广西新闻频道" group-title="其它频道",广西新闻频道
 http://171.104.106.89:50112/udp/239.81.0.248:4056
-#EXTINF:-1 tvg-id="广西都市频道" tvg-name="广西都市频道" group-title="☘️广西省",广西都市频道
-http://171.104.106.89:50112/udp/239.81.0.247:4056
-#EXTINF:-1 tvg-id="广西国际频道" tvg-name="广西国际频道" group-title="☘️广西省",广西国际频道
+#EXTINF:-1 tvg-id="广西国际频道" tvg-name="广西国际频道" group-title="其它频道",广西国际频道
 http://171.104.106.89:50112/udp/239.81.0.8:4056
-#EXTINF:-1 tvg-id="南宁新闻综合" tvg-name="南宁新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8D%97%E5%AE%81%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️广西省",南宁新闻综合
-http://171.104.106.89:50112/udp/239.81.0.241:4056
-#EXTINF:-1 tvg-id="南宁影视娱乐" tvg-name="南宁影视娱乐" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8D%97%E5%AE%81%E5%BD%B1%E8%A7%86%E5%A8%B1%E4%B9%90.png" group-title="☘️广西省",南宁影视娱乐
-http://171.104.106.89:50112/udp/239.81.0.128:4056
-#EXTINF:-1 tvg-id="南宁公共频道" tvg-name="南宁公共频道" group-title="☘️广西省",南宁公共频道
-http://171.104.106.89:50112/udp/239.81.0.129:4056
-#EXTINF:-1 tvg-id="北海新闻" tvg-name="北海新闻" group-title="☘️广西省",北海新闻
-http://171.104.106.89:50112/udp/239.81.0.136:4056
-#EXTINF:-1 tvg-id="桂林新闻" tvg-name="桂林新闻" group-title="☘️广西省",桂林新闻
-http://171.104.106.89:50112/udp/239.81.0.135:4056
 #EXTINF:-1 tvg-id="广西移动电视" tvg-name="广西移动电视" group-title="其它频道",广西移动电视
 http://171.104.106.89:50112/udp/239.81.0.10:4056
 #EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
@@ -99,14 +87,22 @@ http://171.104.106.89:50112/udp/239.81.0.32:4056
 http://171.104.106.89:50112/udp/239.81.0.202:4056
 #EXTINF:-1 tvg-id="CGTN" tvg-name="CGTN" group-title="其它频道",CGTN
 http://171.104.106.89:50112/udp/239.81.0.28:4056
+#EXTINF:-1 tvg-id="南宁影视娱乐" tvg-name="南宁影视娱乐" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8D%97%E5%AE%81%E5%BD%B1%E8%A7%86%E5%A8%B1%E4%B9%90.png" group-title="其它频道",南宁影视娱乐
+http://171.104.106.89:50112/udp/239.81.0.128:4056
+#EXTINF:-1 tvg-id="南宁公共频道" tvg-name="南宁公共频道" group-title="其它频道",南宁公共频道
+http://171.104.106.89:50112/udp/239.81.0.129:4056
 #EXTINF:-1 tvg-id="南宁文旅生活" tvg-name="南宁文旅生活" group-title="其它频道",南宁文旅生活
 http://171.104.106.89:50112/udp/239.81.0.127:4056
 #EXTINF:-1 tvg-id="柳州新闻" tvg-name="柳州新闻" group-title="其它频道",柳州新闻
 http://171.104.106.89:50112/udp/239.81.0.134:4056
+#EXTINF:-1 tvg-id="北海新闻" tvg-name="北海新闻" group-title="其它频道",北海新闻
+http://171.104.106.89:50112/udp/239.81.0.136:4056
 #EXTINF:-1 tvg-id="玉林新闻" tvg-name="玉林新闻" group-title="其它频道",玉林新闻
 http://171.104.106.89:50112/udp/239.81.0.138:4056
 #EXTINF:-1 tvg-id="贺州新闻" tvg-name="贺州新闻" group-title="其它频道",贺州新闻
 http://171.104.106.89:50112/udp/239.81.0.137:4056
+#EXTINF:-1 tvg-id="桂林新闻" tvg-name="桂林新闻" group-title="其它频道",桂林新闻
+http://171.104.106.89:50112/udp/239.81.0.135:4056
 #EXTINF:-1 tvg-id="广西IPTV7" tvg-name="广西IPTV7" group-title="其它频道",广西IPTV7
 http://171.104.106.89:50112/udp/239.81.0.253:4056
 #EXTINF:-1 tvg-id="广西IPTV8" tvg-name="广西IPTV8" group-title="其它频道",广西IPTV8
@@ -115,6 +111,10 @@ http://171.104.106.89:50112/udp/239.81.0.208:4056
 http://171.104.106.89:50112/udp/239.81.0.100:4056
 #EXTINF:-1 tvg-id="IPTV12" tvg-name="IPTV12" group-title="其它频道",IPTV12
 http://171.104.106.89:50112/udp/239.81.0.124:4056
+#EXTINF:-1 tvg-id="广西都市频道" tvg-name="广西都市频道" group-title="☘️上海市",广西都市频道
+http://171.104.106.89:50112/udp/239.81.0.247:4056
+#EXTINF:-1 tvg-id="南宁新闻综合" tvg-name="南宁新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8D%97%E5%AE%81%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️上海市",南宁新闻综合
+http://171.104.106.89:50112/udp/239.81.0.241:4056
 #EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
 http://171.104.106.89:50112/udp/239.81.0.102:4056
 #EXTINF:-1 tvg-id="CCTV-2财经" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经
@@ -165,5 +165,5 @@ http://171.104.106.89:50112/udp/239.81.0.62:4056
 http://171.104.106.89:50112/udp/239.81.0.61:4056
 #EXTINF:-1 tvg-id="新动漫" tvg-name="新动漫" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/xindongman.png" group-title="数字频道",新动漫
 http://171.104.106.89:50112/udp/239.81.0.235:4056
-#EXTINF:-1 tvg-id="华数爱上4K" tvg-name="华数爱上4K" group-title="数字频道",华数爱上4K
+#EXTINF:-1 tvg-id="华数爱上4K" tvg-name="华数爱上4K" group-title="☘️重庆市",华数爱上4K
 http://171.104.106.89:50112/udp/239.81.0.123:4056

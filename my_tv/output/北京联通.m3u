@@ -45,7 +45,7 @@ http://114.254.38.86:18888/rtp/239.3.1.57:8152
 http://114.254.38.86:18888/rtp/239.3.1.54:4120
 #EXTINF:-1 tvg-id="CETV4" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4
 http://114.254.38.86:18888/rtp/239.3.1.56:4120
-#EXTINF:-1 tvg-id="中国交通" tvg-name="中国交通" group-title="其它频道",中国交通
+#EXTINF:-1 tvg-id="中国交通" tvg-name="中国交通" group-title="央视频道",中国交通
 http://114.254.38.86:18888/rtp/239.3.1.188:8001
 #EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="其它频道",CGTN英语
 http://114.254.38.86:18888/rtp/239.3.1.215:4220
@@ -67,54 +67,16 @@ http://114.254.38.86:18888/rtp/239.3.1.163:8001
 http://114.254.38.86:18888/rtp/239.3.1.221:8001
 #EXTINF:-1 tvg-id="延庆电视台" tvg-name="延庆电视台" group-title="其它频道",延庆电视台
 http://114.254.38.86:18888/rtp/239.3.1.187:8001
-#EXTINF:-1 tvg-id="华数星影" tvg-name="华数星影" group-title="其它频道",华数星影
-http://114.254.38.86:18888/rtp/239.3.1.94:4120
-#EXTINF:-1 tvg-id="华数动作影院" tvg-name="华数动作影院" group-title="其它频道",华数动作影院
-http://114.254.38.86:18888/rtp/239.3.1.92:4120
-#EXTINF:-1 tvg-id="华数喜剧影院" tvg-name="华数喜剧影院" group-title="其它频道",华数喜剧影院
-http://114.254.38.86:18888/rtp/239.3.1.91:4120
-#EXTINF:-1 tvg-id="华数家庭影院" tvg-name="华数家庭影院" group-title="其它频道",华数家庭影院
-http://114.254.38.86:18888/rtp/239.3.1.93:4120
-#EXTINF:-1 tvg-id="华数精选" tvg-name="华数精选" group-title="其它频道",华数精选
-http://114.254.38.86:18888/rtp/239.3.1.74:4120
-#EXTINF:-1 tvg-id="华数经典电影" tvg-name="华数经典电影" group-title="其它频道",华数经典电影
-http://114.254.38.86:18888/rtp/239.3.1.195:9024
-#EXTINF:-1 tvg-id="华数热播剧场" tvg-name="华数热播剧场" group-title="其它频道",华数热播剧场
-http://114.254.38.86:18888/rtp/239.3.1.194:9020
-#EXTINF:-1 tvg-id="华数军旅剧场" tvg-name="华数军旅剧场" group-title="其它频道",华数军旅剧场
-http://114.254.38.86:18888/rtp/239.3.1.68:4120
-#EXTINF:-1 tvg-id="华数城市剧场" tvg-name="华数城市剧场" group-title="其它频道",华数城市剧场
-http://114.254.38.86:18888/rtp/239.3.1.67:4120
-#EXTINF:-1 tvg-id="华数武侠剧场" tvg-name="华数武侠剧场" group-title="其它频道",华数武侠剧场
-http://114.254.38.86:18888/rtp/239.3.1.90:4120
-#EXTINF:-1 tvg-id="华数魅力时尚" tvg-name="华数魅力时尚" group-title="其它频道",华数魅力时尚
-http://114.254.38.86:18888/rtp/239.3.1.196:9012
-#EXTINF:-1 tvg-id="古装剧场" tvg-name="古装剧场" group-title="其它频道",古装剧场
-http://114.254.38.86:18888/rtp/239.3.1.69:4120
-#EXTINF:-1 tvg-id="华数动画" tvg-name="华数动画" group-title="其它频道",华数动画
-http://114.254.38.86:18888/rtp/239.3.1.80:4120
 #EXTINF:-1 tvg-id="睛彩羽毛球" tvg-name="睛彩羽毛球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%9D%9B%E5%BD%A9%E7%BE%BD%E6%AF%9B%E7%90%83.png" group-title="其它频道",睛彩羽毛球
 http://114.254.38.86:18888/rtp/239.3.1.127:8001
 #EXTINF:-1 tvg-id="IPTV地理" tvg-name="IPTV地理" group-title="其它频道",IPTV地理
 http://114.254.38.86:18888/rtp/239.3.1.71:4120
-#EXTINF:-1 tvg-id="IPTV10解密" tvg-name="IPTV10解密" group-title="其它频道",IPTV10解密
-http://114.254.38.86:18888/rtp/239.3.1.75:4120
-#EXTINF:-1 tvg-id="IPTV7军事" tvg-name="IPTV7军事" group-title="其它频道",IPTV7军事
-http://114.254.38.86:18888/rtp/239.3.1.76:4120
 #EXTINF:-1 tvg-id="IPTV台球" tvg-name="IPTV台球" group-title="其它频道",IPTV台球
 http://114.254.38.86:18888/rtp/239.3.1.85:4120
-#EXTINF:-1 tvg-id="IPTV国学" tvg-name="IPTV国学" group-title="其它频道",IPTV国学
-http://114.254.38.86:18888/rtp/239.3.1.77:4120
-#EXTINF:-1 tvg-id="IPTV墨宝" tvg-name="IPTV墨宝" group-title="其它频道",IPTV墨宝
-http://114.254.38.86:18888/rtp/239.3.1.83:4120
 #EXTINF:-1 tvg-id="IPTV好学生" tvg-name="IPTV好学生" group-title="其它频道",IPTV好学生
 http://114.254.38.86:18888/rtp/239.3.1.81:4120
-#EXTINF:-1 tvg-id="IPTV11戏曲" tvg-name="IPTV11戏曲" group-title="其它频道",IPTV11戏曲
-http://114.254.38.86:18888/rtp/239.3.1.78:4120
 #EXTINF:-1 tvg-id="IPTV收视指南" tvg-name="IPTV收视指南" group-title="其它频道",IPTV收视指南
 http://114.254.38.86:18888/rtp/239.3.1.193:8012
-#EXTINF:-1 tvg-id="IPTV14早教" tvg-name="IPTV14早教" group-title="其它频道",IPTV14早教
-http://114.254.38.86:18888/rtp/239.3.1.79:4120
 #EXTINF:-1 tvg-id="IPTV武术" tvg-name="IPTV武术" group-title="其它频道",IPTV武术
 http://114.254.38.86:18888/rtp/239.3.1.87:4120
 #EXTINF:-1 tvg-id="IPTV爱生活" tvg-name="IPTV爱生活" group-title="其它频道",IPTV爱生活
@@ -127,10 +89,6 @@ http://114.254.38.86:18888/rtp/239.3.1.72:4120
 http://114.254.38.86:18888/rtp/239.3.1.89:4120
 #EXTINF:-1 tvg-id="IPTV鉴赏" tvg-name="IPTV鉴赏" group-title="其它频道",IPTV鉴赏
 http://114.254.38.86:18888/rtp/239.3.1.82:4120
-#EXTINF:-1 tvg-id="IPTV15音乐现场" tvg-name="IPTV15音乐现场" group-title="其它频道",IPTV15音乐现场
-http://114.254.38.86:18888/rtp/239.3.1.70:4120
-#EXTINF:-1 tvg-id="光影" tvg-name="光影" group-title="其它频道",光影
-http://114.254.38.86:18888/rtp/239.3.1.84:4120
 #EXTINF:-1 tvg-id="湖南茶频道" tvg-name="湖南茶频道" group-title="其它频道",湖南茶频道
 http://114.254.38.86:18888/rtp/239.3.1.165:8001
 #EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视
@@ -237,8 +195,10 @@ http://114.254.38.86:18888/rtp/239.3.1.154:8001
 http://114.254.38.86:18888/rtp/239.3.1.115:8000
 #EXTINF:-1 tvg-id="北京卡酷少儿" tvg-name="北京卡酷少儿" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BF.png" group-title="数字频道",北京卡酷少儿
 http://114.254.38.86:18888/rtp/239.3.1.189:8000
-#EXTINF:-1 tvg-id="华数爱上4K" tvg-name="华数爱上4K" group-title="数字频道",华数爱上4K
-http://114.254.38.86:18888/rtp/239.3.1.236:2000
+#EXTINF:-1 tvg-id="华数经典电影" tvg-name="华数经典电影" group-title="数字频道",华数经典电影
+http://114.254.38.86:18888/rtp/239.3.1.195:9024
+#EXTINF:-1 tvg-id="华数热播剧场" tvg-name="华数热播剧场" group-title="数字频道",华数热播剧场
+http://114.254.38.86:18888/rtp/239.3.1.194:9020
 #EXTINF:-1 tvg-id="华数少儿动画" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画
 http://114.254.38.86:18888/rtp/239.3.1.199:9000
 #EXTINF:-1 tvg-id="睛彩竞技" tvg-name="睛彩竞技" group-title="数字频道",睛彩竞技
@@ -247,6 +207,20 @@ http://114.254.38.86:18888/rtp/239.3.1.125:8001
 http://114.254.38.86:18888/rtp/239.3.1.126:8001
 #EXTINF:-1 tvg-id="睛彩广场舞" tvg-name="睛彩广场舞" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%9D%9B%E5%BD%A9%E5%B9%BF%E5%9C%BA%E8%88%9E.png" group-title="数字频道",睛彩广场舞
 http://114.254.38.86:18888/rtp/239.3.1.128:8001
+#EXTINF:-1 tvg-id="IPTV10解密" tvg-name="IPTV10解密" group-title="数字频道",IPTV10解密
+http://114.254.38.86:18888/rtp/239.3.1.75:4120
+#EXTINF:-1 tvg-id="IPTV7军事" tvg-name="IPTV7军事" group-title="数字频道",IPTV7军事
+http://114.254.38.86:18888/rtp/239.3.1.76:4120
+#EXTINF:-1 tvg-id="IPTV国学" tvg-name="IPTV国学" group-title="数字频道",IPTV国学
+http://114.254.38.86:18888/rtp/239.3.1.77:4120
+#EXTINF:-1 tvg-id="IPTV墨宝" tvg-name="IPTV墨宝" group-title="数字频道",IPTV墨宝
+http://114.254.38.86:18888/rtp/239.3.1.83:4120
+#EXTINF:-1 tvg-id="IPTV11戏曲" tvg-name="IPTV11戏曲" group-title="数字频道",IPTV11戏曲
+http://114.254.38.86:18888/rtp/239.3.1.78:4120
+#EXTINF:-1 tvg-id="IPTV14早教" tvg-name="IPTV14早教" group-title="数字频道",IPTV14早教
+http://114.254.38.86:18888/rtp/239.3.1.79:4120
+#EXTINF:-1 tvg-id="IPTV15音乐现场" tvg-name="IPTV15音乐现场" group-title="数字频道",IPTV15音乐现场
+http://114.254.38.86:18888/rtp/239.3.1.70:4120
 #EXTINF:-1 tvg-id="金鹰卡通" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通
 http://114.254.38.86:18888/rtp/239.3.1.51:9252
 #EXTINF:-1 tvg-id="嘉佳卡通" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通
@@ -255,3 +229,29 @@ http://114.254.38.86:18888/rtp/239.3.1.147:9268
 http://114.254.38.86:18888/rtp/239.3.1.58:8156
 #EXTINF:-1 tvg-id="湖南快乐垂钓" tvg-name="湖南快乐垂钓" group-title="数字频道",湖南快乐垂钓
 http://114.254.38.86:18888/rtp/239.3.1.164:8001
+#EXTINF:-1 tvg-id="华数爱上4K" tvg-name="华数爱上4K" group-title="☘️重庆市",华数爱上4K
+http://114.254.38.86:18888/rtp/239.3.1.236:2000
+#EXTINF:-1 tvg-id="华数星影" tvg-name="华数星影" group-title="☘️重庆市",华数星影
+http://114.254.38.86:18888/rtp/239.3.1.94:4120
+#EXTINF:-1 tvg-id="华数动作影院" tvg-name="华数动作影院" group-title="☘️重庆市",华数动作影院
+http://114.254.38.86:18888/rtp/239.3.1.92:4120
+#EXTINF:-1 tvg-id="华数喜剧影院" tvg-name="华数喜剧影院" group-title="☘️重庆市",华数喜剧影院
+http://114.254.38.86:18888/rtp/239.3.1.91:4120
+#EXTINF:-1 tvg-id="华数家庭影院" tvg-name="华数家庭影院" group-title="☘️重庆市",华数家庭影院
+http://114.254.38.86:18888/rtp/239.3.1.93:4120
+#EXTINF:-1 tvg-id="华数精选" tvg-name="华数精选" group-title="☘️重庆市",华数精选
+http://114.254.38.86:18888/rtp/239.3.1.74:4120
+#EXTINF:-1 tvg-id="华数军旅剧场" tvg-name="华数军旅剧场" group-title="☘️重庆市",华数军旅剧场
+http://114.254.38.86:18888/rtp/239.3.1.68:4120
+#EXTINF:-1 tvg-id="华数城市剧场" tvg-name="华数城市剧场" group-title="☘️重庆市",华数城市剧场
+http://114.254.38.86:18888/rtp/239.3.1.67:4120
+#EXTINF:-1 tvg-id="华数武侠剧场" tvg-name="华数武侠剧场" group-title="☘️重庆市",华数武侠剧场
+http://114.254.38.86:18888/rtp/239.3.1.90:4120
+#EXTINF:-1 tvg-id="华数魅力时尚" tvg-name="华数魅力时尚" group-title="☘️重庆市",华数魅力时尚
+http://114.254.38.86:18888/rtp/239.3.1.196:9012
+#EXTINF:-1 tvg-id="古装剧场" tvg-name="古装剧场" group-title="☘️重庆市",古装剧场
+http://114.254.38.86:18888/rtp/239.3.1.69:4120
+#EXTINF:-1 tvg-id="华数动画" tvg-name="华数动画" group-title="☘️重庆市",华数动画
+http://114.254.38.86:18888/rtp/239.3.1.80:4120
+#EXTINF:-1 tvg-id="光影" tvg-name="光影" group-title="☘️重庆市",光影
+http://114.254.38.86:18888/rtp/239.3.1.84:4120
