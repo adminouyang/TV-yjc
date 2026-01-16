@@ -511,7 +511,7 @@ class IPManager:
     def save_stats(self):
         """保存统计数据"""
         try:
-            os.makedirs('logs', exist_ok=True)
+            os.makedirs('IP_Scan/backup/logs', exist_ok=True)
             stats_file = f"logs/stats_{datetime.now().strftime('%Y%m%d')}.json"
             stats_data = {
                 'stats': self.stats,
