@@ -64,8 +64,8 @@ CITY_STREAMS = {
 CONFIG = {
     'timeout': 3,
     'max_workers': 20,
-    'result_dir': 'IP_Scan/result_ip',
-    'ip_dir': 'IP_Scan/ip',
+    'result_dir': 'result_ip',
+    'ip_dir': 'ip',
 }
 
 # 信号处理
@@ -209,7 +209,7 @@ class IPManager:
         failed_ips = set()   # 存储失败的IP
         
         # 1. 首先测试上一次保存的最快IP
-        result_file = os.path.join(self.config['result_dir'], f"{city}.txt")
+        result_file = f"{self.config['result_dir']}/{city}.txt"
         previous_fast_ips = self.read_ip_file(result_file)
         
         if previous_fast_ips:
@@ -243,7 +243,7 @@ class IPManager:
                         failed_ips.add(ip)
         
         # 2. 如果上一次的IP不足，从原始文件中测试更多IP
-        ip_file = os.path.join(self.config['ip_dir'], f"{city}.txt")
+        ip_file = f"{self.config['ip_dir']}/{city}.txt"
         all_ips = self.read_ip_file(ip_file)
         
         if not all_ips:
@@ -570,9 +570,8 @@ def get_main_channel_name(channel_name, channel_template):
     return channel_name
 
 def get_ips_for_city(city_name, max_ips=2):
-    """从IP_Scan/result_ip/路径读取IP地址，只读取最快的2个IP"""
-    # 从CITY_STREAMS中获取对应的省份/城市名称映射
-    ip_file = f"IP_Scan/result_ip/{city_name}.txt"
+    """从result_ip/路径读取IP地址，只读取最快的2个IP"""
+    ip_file = f"result_ip/{city_name}.txt"
     
     if not os.path.exists(ip_file):
         print(f"IP文件不存在: {ip_file}")
@@ -959,25 +958,17 @@ def main():
     print("="*60)
     
     # 创建必要的目录
-    os.makedirs('IP_Scan/result_ip', exist_ok=True)
-    os.makedirs('IP_Scan/ip', exist_ok=True)
+    os.makedirs('result_ip', exist_ok=True)
+    os.makedirs('ip', exist_ok=True)
     os.makedirs('template', exist_ok=True)
     os.makedirs('output', exist_ok=True)
     
-    # 询问是否进行IP测速
-    # print("\n是否先进行IP测速？(y/n)")
-    # choice = input("y").strip().lower()
-    
-    # if choice == 'y':
-    #     print("\n开始IP测速...")
-    #     run_ip_test()
-    #     print("\nIP测速完成！")
-    #     time.sleep(2)
     # 不询问，直接进行IP测速
     print("\n开始IP测速...")
     run_ip_test()
     print("\nIP测速完成！")
-    time.sleep(2)    
+    time.sleep(2)
+    
     # 处理每个城市
     for city_name in CITY_STREAMS:
         print(f"\n{'='*60}")
@@ -985,7 +976,7 @@ def main():
         print(f"{'='*60}")
         
         # 检查IP文件是否存在
-        ip_file = f"IP_Scan/result_ip/{city_name}.txt"
+        ip_file = f"result_ip/{city_name}.txt"
         if not os.path.exists(ip_file):
             print(f"IP文件不存在: {ip_file}，跳过此城市")
             continue
@@ -996,7 +987,7 @@ def main():
             print(f"频道模板文件不存在: {template_file}，跳过此城市")
             continue
         
-        # 第一步：从IP_Scan/result_ip/读取最快的2个IP
+        # 第一步：从result_ip/读取最快的2个IP
         ip_list = get_ips_for_city(city_name, max_ips=2)
         
         if not ip_list:
