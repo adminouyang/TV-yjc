@@ -966,7 +966,7 @@ def main():
     
     # 询问是否进行IP测速
     print("\n是否先进行IP测速？(y/n)")
-    choice = input("请输入选择: ").strip().lower()
+    choice = input("请输入选择: y ").strip().lower()
     
     if choice == 'y':
         print("\n开始IP测速...")
