@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 
 # 组播流配置
 CITY_STREAMS = {
-    "安徽电信": ["rtp/238.1.79.27:4328"],
+    "安徽电信": ["udp/238.1.78.150:7072"],
     "北京市电信": ["rtp/225.1.8.21:8002"],
     "北京市联通": ["rtp/239.3.1.241:8000"],
     "江苏电信": ["udp/239.49.8.19:9614"],
@@ -69,17 +69,14 @@ CITY_STREAMS = {
 
 # 配置参数
 CONFIG = {
-    'timeout': 5,  # 超时时间
+    'timeout': 3,  # 超时时间
     'max_workers': 20,  # 最大并发线程数
-    'max_retries': 2,  # 重试次数
     'chunk_size': 102400,  # 每次下载块大小
     'max_download_size': 1024 * 1024,  # 最大下载大小 1MB
-    'min_speed_kbps': 10,  # 最小速度阈值(KB/s)
     'result_dir': 'IP_Scan/result_ip',
     'ip_dir': 'IP_Scan/ip',
     'backup_dir': 'IP_Scan/backup',
-    'cache_dir': '.cache',
-    'max_test_per_city': 50,  # 每个城市最大测试IP数量
+    'max_retry_times': 2,  # 失败重试次数
 }
 
 # 信号处理
@@ -119,24 +116,13 @@ class IPManager:
         """获取或创建requests session"""
         if self.session is None:
             self.session = requests.Session()
-            # 配置session
             adapter = requests.adapters.HTTPAdapter(
                 pool_connections=100,
-                pool_maxsize=100,
-                max_retries=self.config.get('max_retries', 2)
+                pool_maxsize=100
             )
             self.session.mount('http://', adapter)
             self.session.mount('https://', adapter)
         return self.session
-    
-    def normalize_stream_url(self, ip: str, stream: str) -> str:
-        """标准化流URL"""
-        # 去除协议前缀，统一使用http
-        if stream.startswith(('rtp/', 'udp/')):
-            # 提取IP:端口部分
-            stream_addr = stream.split('/')[1]
-            return f"http://{ip}/{stream_addr}"
-        return f"http://{ip}/{stream}"
     
     def read_ip_file(self, filepath: str) -> List[str]:
         """读取IP文件"""
@@ -184,143 +170,253 @@ class IPManager:
             logger.error(f"写入文件 {filepath} 失败: {e}")
             return False
     
-    def test_single_url(self, ip: str, stream: str) -> TestResult:
-        """测试单个URL的速度"""
-        url = self.normalize_stream_url(ip, stream)
-        result = TestResult(
-            ip=ip,
-            speed_kbps=0,
-            stream=stream,
-            success=False,
-            timestamp=time.time()
-        )
-        
+    def test_single_url(self, url: str, timeout: int = 3) -> Tuple[float, str]:
+        """测试单个URL的速度 - 按照原代码逻辑"""
         try:
-            session = self.get_session()
             start_time = time.time()
+            response = requests.get(url, timeout=timeout, stream=True)
             
-            with session.get(
-                url, 
-                timeout=self.config['timeout'], 
-                stream=True,
-                headers={'User-Agent': 'Mozilla/5.0'}
-            ) as response:
-                
-                if response.status_code != 200:
-                    result.error_msg = f"HTTP {response.status_code}"
-                    return result
-                
-                # 下载数据测试速度
-                downloaded = 0
-                for chunk in response.iter_content(
-                    chunk_size=self.config['chunk_size']
-                ):
-                    if not chunk or shutdown_flag:
-                        break
-                    
+            if response.status_code != 200:
+                return 0, f"HTTP {response.status_code}"
+            
+            # 下载一小段数据来计算速度
+            downloaded = 0
+            chunk_size = 102400
+            max_size = 1024 * 1024  # 最多下载1MB
+            
+            for chunk in response.iter_content(chunk_size=chunk_size):
+                if chunk:
                     downloaded += len(chunk)
-                    if downloaded >= self.config['max_download_size']:
-                        break
                 
-                elapsed = time.time() - start_time
-                if elapsed > 0:
-                    speed_kbps = (downloaded / 1024) / elapsed
-                    if speed_kbps >= self.config['min_speed_kbps']:
-                        result.speed_kbps = speed_kbps
-                        result.success = True
-                    else:
-                        result.error_msg = f"速度过低: {speed_kbps:.2f} KB/s"
-                else:
-                    result.error_msg = "time error"
-                        
+                if downloaded >= chunk_size * 10:  # 下载大约1000KB就够判断速度了
+                    break
+                
+                if downloaded >= max_size:
+                    break
+            
+            response.close()
+            
+            elapsed = time.time() - start_time
+            if elapsed <= 0:
+                return 0, "time error"
+            
+            speed_kbps = (downloaded / 1024) / elapsed
+            return speed_kbps, ""
+            
         except requests.exceptions.Timeout:
-            result.error_msg = "timeout"
-        except requests.exceptions.ConnectionError:
-            result.error_msg = "connection error"
+            return 0, "timeout"
         except Exception as e:
-            result.error_msg = str(e)
-        
-        return result
+            return 0, str(e)
     
     def test_ip_with_streams(self, ip: str, streams: List[str]) -> TestResult:
-        """测试单个IP的所有流，返回最佳结果"""
-        best_result = None
+        """测试单个IP的所有流，返回是否成功、速度和使用的流地址 - 按照原代码逻辑"""
+        ip_speed = 0
+        used_stream = ""
+        error_msg = ""
+        success = False
         
         for stream in streams:
             if shutdown_flag:
                 break
                 
-            result = self.test_single_url(ip, stream)
+            url = f"http://{ip}/{stream}"
+            speed, error = self.test_single_url(url, timeout=self.config['timeout'])
             
-            if result.success:
-                if best_result is None or result.speed_kbps > best_result.speed_kbps:
-                    best_result = result
-                # 如果速度足够好，提前返回
-                if result.speed_kbps > 1000:  # 1MB/s以上的速度就很好了
-                    break
+            if error:
+                logger.debug(f"{ip} 测试失败: {error} (流: {stream})")
+                if not error_msg:
+                    error_msg = error
+            else:
+                ip_speed = speed
+                used_stream = stream
+                success = True
+                error_msg = ""
+                logger.info(f"{ip} 测试成功: {speed:.2f} KB/s (流: {stream})")
+                break  # 成功就停止测试其他流
         
-        if best_result is None:
-            # 所有流都失败，返回第一个错误
-            result = self.test_single_url(ip, streams[0])
-            return result
-        else:
-            return best_result
+        if not success:
+            logger.info(f"{ip} 所有流测试失败")
+        
+        return TestResult(
+            ip=ip,
+            speed_kbps=ip_speed,
+            stream=used_stream,
+            success=success,
+            error_msg=error_msg,
+            timestamp=time.time()
+        )
     
-    def process_city_ips(self, city: str, 
-                        result_ips: List[str], 
-                        original_ips: List[str],
-                        streams: List[str]) -> Dict:
-        """处理单个城市的IP测试"""
-        logger.info(f"开始处理城市: {city}")
-        logger.info(f"结果IP文件有 {len(result_ips)} 个IP")
-        logger.info(f"原始IP文件有 {len(original_ips)} 个IP")
+    def process_city_single_thread(self, city: str, streams: List[str]) -> Dict:
+        """单线程处理单个城市 - 按照原代码逻辑优化版"""
+        logger.info(f"开始处理: {city}")
+        
+        successful_ips = []  # 存储(ip, speed, stream)元组
+        failed_ips = set()   # 存储失败的IP
+        
+        # 1. 读取上一次保存的最快IP
+        result_file = os.path.join(self.config['result_dir'], f"{city}.txt")
+        previous_fast_ips = self.read_ip_file(result_file)
+        
+        if previous_fast_ips:
+            logger.info(f"找到上一次的最快IP: {len(previous_fast_ips)} 个")
+            for ip in previous_fast_ips:
+                if shutdown_flag:
+                    break
+                    
+                result = self.test_ip_with_streams(ip, streams)
+                self.stats['total_tested'] += 1
+                
+                if result.success:
+                    successful_ips.append((result.ip, result.speed_kbps, result.stream))
+                    self.stats['successful'] += 1
+                    logger.info(f"上一次的IP {result.ip} 仍然有效: {result.speed_kbps:.2f} KB/s")
+                else:
+                    failed_ips.add(result.ip)
+                    self.stats['failed'] += 1
+                    logger.info(f"上一次的IP {result.ip} 已失效: {result.error_msg}")
+        
+        # 2. 读取原始IP文件
+        ip_file = os.path.join(self.config['ip_dir'], f"{city}.txt")
+        all_ips = self.read_ip_file(ip_file)
+        
+        if not all_ips:
+            logger.warning(f"无原始IP地址: {ip_file}")
+        else:
+            logger.info(f"从原始文件读取到 {len(all_ips)} 个IP")
+            
+            # 排除已经测试过的IP（包括成功和失败的）
+            remaining_ips = [
+                ip for ip in all_ips 
+                if ip not in [item[0] for item in successful_ips] 
+                and ip not in failed_ips
+            ]
+            logger.info(f"需要测试的新IP: {len(remaining_ips)} 个")
+            
+            # 测试剩余的IP
+            for ip in remaining_ips:
+                if shutdown_flag:
+                    break
+                    
+                result = self.test_ip_with_streams(ip, streams)
+                self.stats['total_tested'] += 1
+                
+                if result.success:
+                    successful_ips.append((result.ip, result.speed_kbps, result.stream))
+                    self.stats['successful'] += 1
+                else:
+                    failed_ips.add(result.ip)
+                    self.stats['failed'] += 1
+        
+        # 3. 从原始IP文件中删除失败的IP
+        if all_ips and failed_ips:
+            # 从原始IP列表中移除失败的IP
+            original_count = len(all_ips)
+            all_ips = [ip for ip in all_ips if ip not in failed_ips]
+            remaining_count = len(all_ips)
+            
+            if remaining_count > 0:
+                self.write_ip_file(ip_file, all_ips)
+                logger.info(f"{city} - 从原始文件中删除 {original_count - remaining_count} 个失败IP，剩余 {remaining_count} 个IP")
+            else:
+                # 如果所有IP都失败，保留原文件但写入注释
+                self.write_ip_file(ip_file, ["# 所有IP测试失败，请检查网络或重新扫描"])
+                logger.warning(f"{city} - 所有IP测试失败，文件已清空")
+        
+        # 4. 保存所有有效的IP到结果文件（按速度排序）
+        os.makedirs(self.config['result_dir'], exist_ok=True)
+        
+        if successful_ips:
+            # 按速度排序
+            successful_ips.sort(key=lambda x: x[1], reverse=True)
+            
+            # 写入IP文件
+            with open(result_file, 'w', encoding='utf-8') as f:
+                for ip, speed, stream in successful_ips:
+                    f.write(f"{ip}\n")
+                    logger.info(f"{city} - 保存IP: {ip} (速度: {speed:.2f} KB/s, 流: {stream})")
+            
+            logger.info(f"{city} - 结果已保存: {result_file}，共 {len(successful_ips)} 个有效IP")
+        else:
+            with open(result_file, 'w', encoding='utf-8') as f:
+                f.write(f"# {city} 无可用IP\n")
+            logger.warning(f"{city} - 无可用IP，已保存空结果")
+        
+        self.stats['cities_processed'] += 1
+        
+        return {
+            'city': city,
+            'total_tested': len(previous_fast_ips) + (len(all_ips) if all_ips else 0),
+            'valid_count': len(successful_ips),
+            'best_speed': successful_ips[0][1] if successful_ips else 0,
+            'valid_ips': [ip for ip, _, _ in successful_ips]
+        }
+    
+    def process_city_multi_thread(self, city: str, streams: List[str]) -> Dict:
+        """多线程处理单个城市 - 优化版"""
+        logger.info(f"开始处理: {city}")
+        
+        successful_ips = []  # 存储(ip, speed, stream)元组
+        failed_ips = set()   # 存储失败的IP
+        
+        # 1. 读取上一次保存的IP
+        result_file = os.path.join(self.config['result_dir'], f"{city}.txt")
+        previous_fast_ips = self.read_ip_file(result_file)
         
         all_results = []
-        tested_ips = set()
-        valid_ips = []
         
-        # 1. 测试result_ip文件中的IP
-        if result_ips:
-            logger.info(f"开始测试结果IP文件中的IP...")
-            result_ips_to_test = result_ips[:self.config['max_test_per_city']]
+        # 如果有上一次的IP，先测试它们
+        if previous_fast_ips:
+            logger.info(f"找到上一次的IP: {len(previous_fast_ips)} 个，开始测试...")
             
-            with ThreadPoolExecutor(max_workers=self.config['max_workers']) as executor:
+            with ThreadPoolExecutor(max_workers=min(self.config['max_workers'], len(previous_fast_ips))) as executor:
                 future_to_ip = {
                     executor.submit(self.test_ip_with_streams, ip, streams): ip 
-                    for ip in result_ips_to_test
+                    for ip in previous_fast_ips
                 }
                 
                 for future in as_completed(future_to_ip):
+                    if shutdown_flag:
+                        break
+                        
                     ip = future_to_ip[future]
                     try:
                         result = future.result()
                         all_results.append(result)
-                        tested_ips.add(ip)
+                        self.stats['total_tested'] += 1
                         
                         if result.success:
+                            successful_ips.append((result.ip, result.speed_kbps, result.stream))
                             self.stats['successful'] += 1
-                            logger.info(f"✓ {city} - {ip}: {result.speed_kbps:.2f} KB/s "
-                                      f"(流: {result.stream.split('/')[-1]})")
+                            logger.info(f"上一次的IP {result.ip} 仍然有效: {result.speed_kbps:.2f} KB/s")
                         else:
+                            failed_ips.add(result.ip)
                             self.stats['failed'] += 1
-                            logger.warning(f"✗ {city} - {ip}: {result.error_msg}")
+                            logger.info(f"上一次的IP {result.ip} 已失效: {result.error_msg}")
                             
                     except Exception as e:
                         logger.error(f"测试IP {ip} 时发生错误: {e}")
                         self.stats['failed'] += 1
         
-        # 2. 测试原始IP文件中的IP（排除已测试的）
-        if original_ips and not shutdown_flag:
-            # 过滤掉已经测试过的IP
-            remaining_ips = [
-                ip for ip in original_ips 
-                if ip not in tested_ips
-            ][:self.config['max_test_per_city']]
+        # 2. 读取原始IP文件
+        ip_file = os.path.join(self.config['ip_dir'], f"{city}.txt")
+        all_ips = self.read_ip_file(ip_file)
+        
+        if not all_ips:
+            logger.warning(f"无原始IP地址: {ip_file}")
+        else:
+            logger.info(f"从原始文件读取到 {len(all_ips)} 个IP")
             
-            if remaining_ips:
-                logger.info(f"开始测试原始IP文件中的IP，共{len(remaining_ips)}个...")
-                
-                with ThreadPoolExecutor(max_workers=self.config['max_workers']) as executor:
+            # 排除已经测试过的IP（包括成功和失败的）
+            remaining_ips = [
+                ip for ip in all_ips 
+                if ip not in [item[0] for item in successful_ips] 
+                and ip not in failed_ips
+            ]
+            logger.info(f"需要测试的新IP: {len(remaining_ips)} 个")
+            
+            if remaining_ips and not shutdown_flag:
+                # 测试剩余的IP
+                with ThreadPoolExecutor(max_workers=min(self.config['max_workers'], len(remaining_ips))) as executor:
                     future_to_ip = {
                         executor.submit(self.test_ip_with_streams, ip, streams): ip 
                         for ip in remaining_ips
@@ -334,118 +430,95 @@ class IPManager:
                         try:
                             result = future.result()
                             all_results.append(result)
-                            tested_ips.add(ip)
+                            self.stats['total_tested'] += 1
                             
                             if result.success:
+                                successful_ips.append((result.ip, result.speed_kbps, result.stream))
                                 self.stats['successful'] += 1
-                                logger.info(f"✓ {city} - {ip}: {result.speed_kbps:.2f} KB/s "
-                                          f"(流: {result.stream.split('/')[-1]})")
+                                logger.info(f"新IP {result.ip} 测试成功: {result.speed_kbps:.2f} KB/s")
                             else:
+                                failed_ips.add(result.ip)
                                 self.stats['failed'] += 1
-                                logger.warning(f"✗ {city} - {ip}: {result.error_msg}")
+                                logger.debug(f"新IP {result.ip} 测试失败: {result.error_msg}")
                                 
                         except Exception as e:
                             logger.error(f"测试IP {ip} 时发生错误: {e}")
                             self.stats['failed'] += 1
         
-        # 3. 筛选有效IP并排序
-        valid_results = [r for r in all_results if r.success]
-        valid_results.sort(key=lambda x: x.speed_kbps, reverse=True)
-        
-        # 提取IP地址列表
-        valid_ips = [r.ip for r in valid_results]
-        
-        # 4. 更新原始IP文件（删除失效IP）
-        if original_ips:
-            # 保留未测试的IP和有效的IP
-            updated_original_ips = []
-            for ip in original_ips:
-                if ip not in tested_ips:
-                    updated_original_ips.append(ip)
-                else:
-                    # 检查这个IP是否有效
-                    result = next((r for r in valid_results if r.ip == ip), None)
-                    if result and result.success:
-                        updated_original_ips.append(ip)
+        # 3. 从原始IP文件中删除失败的IP
+        if all_ips and failed_ips:
+            # 从原始IP列表中移除失败的IP
+            original_count = len(all_ips)
+            all_ips = [ip for ip in all_ips if ip not in failed_ips]
+            remaining_count = len(all_ips)
             
-            original_file = os.path.join(self.config['ip_dir'], f"{city}.txt")
-            if self.write_ip_file(original_file, updated_original_ips):
-                logger.info(f"已更新原始IP文件: {len(updated_original_ips)} 个IP")
+            if remaining_count > 0:
+                self.write_ip_file(ip_file, all_ips)
+                logger.info(f"{city} - 从原始文件中删除 {original_count - remaining_count} 个失败IP，剩余 {remaining_count} 个IP")
+            else:
+                # 如果所有IP都失败，保留原文件但写入注释
+                self.write_ip_file(ip_file, ["# 所有IP测试失败，请检查网络或重新扫描"])
+                logger.warning(f"{city} - 所有IP测试失败，文件已清空")
         
-        # 5. 更新结果IP文件（保存所有有效IP，已排序）
-        if valid_results:
-            result_file = os.path.join(self.config['result_dir'], f"{city}.txt")
-            
-            # 保存详细结果
-            detailed_results = []
-            for result in valid_results:
-                detailed_results.append({
-                    'ip': result.ip,
-                    'speed_kbps': result.speed_kbps,
-                    'stream': result.stream,
-                    'timestamp': result.timestamp
-                })
+        # 4. 保存所有有效的IP到结果文件（按速度排序）
+        os.makedirs(self.config['result_dir'], exist_ok=True)
+        
+        if successful_ips:
+            # 按速度排序
+            successful_ips.sort(key=lambda x: x[1], reverse=True)
             
             # 写入IP文件
-            ip_list = [r.ip for r in valid_results]
-            if self.write_ip_file(result_file, ip_list):
-                logger.info(f"已保存结果: {len(ip_list)} 个有效IP到 {result_file}")
+            with open(result_file, 'w', encoding='utf-8') as f:
+                for ip, speed, stream in successful_ips:
+                    f.write(f"{ip}\n")
             
-            # 保存详细结果到JSON
+            # 同时保存详细结果到JSON文件
             json_file = os.path.join(self.config['result_dir'], f"{city}_details.json")
+            detailed_results = []
+            for ip, speed, stream in successful_ips:
+                detailed_results.append({
+                    'ip': ip,
+                    'speed_kbps': speed,
+                    'stream': stream
+                })
             try:
                 with open(json_file, 'w', encoding='utf-8') as f:
                     json.dump(detailed_results, f, indent=2, ensure_ascii=False)
-                logger.debug(f"详细结果已保存到: {json_file}")
             except Exception as e:
                 logger.error(f"保存详细结果失败: {e}")
+            
+            # 记录前5个最快IP
+            for i, (ip, speed, stream) in enumerate(successful_ips[:5]):
+                if i == 0:
+                    logger.info(f"{city} - 最快IP: {ip} (速度: {speed:.2f} KB/s, 流: {stream})")
+            
+            logger.info(f"{city} - 结果已保存: 共 {len(successful_ips)} 个有效IP")
+        else:
+            with open(result_file, 'w', encoding='utf-8') as f:
+                f.write(f"# {city} 无可用IP\n")
+            logger.warning(f"{city} - 无可用IP，已保存空结果")
         
         self.stats['cities_processed'] += 1
-        self.stats['total_tested'] += len(all_results)
         
         return {
             'city': city,
-            'total_tested': len(all_results),
-            'valid_count': len(valid_results),
-            'best_speed': valid_results[0].speed_kbps if valid_results else 0,
-            'valid_ips': valid_ips
+            'total_tested': len(previous_fast_ips) + (len(all_ips) if all_ips else 0),
+            'valid_count': len(successful_ips),
+            'best_speed': successful_ips[0][1] if successful_ips else 0,
+            'valid_ips': [ip for ip, _, _ in successful_ips]
         }
-    
-    def process_city(self, city: str, streams: List[str]) -> Optional[Dict]:
-        """处理单个城市"""
-        if shutdown_flag:
-            return None
-            
-        try:
-            # 确保目录存在
-            os.makedirs(self.config['result_dir'], exist_ok=True)
-            os.makedirs(self.config['ip_dir'], exist_ok=True)
-            
-            # 读取IP文件
-            result_file = os.path.join(self.config['result_dir'], f"{city}.txt")
-            original_file = os.path.join(self.config['ip_dir'], f"{city}.txt")
-            
-            result_ips = self.read_ip_file(result_file)
-            original_ips = self.read_ip_file(original_file)
-            
-            # 处理IP测试
-            return self.process_city_ips(city, result_ips, original_ips, streams)
-            
-        except Exception as e:
-            logger.error(f"处理城市 {city} 时发生错误: {e}")
-            return None
     
     def save_stats(self):
         """保存统计数据"""
-        stats_file = os.path.join(self.config.get('cache_dir', '.'), 'stats.json')
-        stats_data = {
-            'stats': self.stats,
-            'timestamp': time.time(),
-            'date': datetime.now().isoformat()
-        }
-        
         try:
-            os.makedirs(os.path.dirname(stats_file), exist_ok=True)
+            os.makedirs('logs', exist_ok=True)
+            stats_file = f"logs/stats_{datetime.now().strftime('%Y%m%d')}.json"
+            stats_data = {
+                'stats': self.stats,
+                'timestamp': time.time(),
+                'date': datetime.now().isoformat()
+            }
+            
             with open(stats_file, 'w', encoding='utf-8') as f:
                 json.dump(stats_data, f, indent=2, ensure_ascii=False)
         except Exception as e:
@@ -482,27 +555,40 @@ def main():
             logger.info("收到停止信号，提前结束")
             break
             
-        result = ip_manager.process_city(city, streams)
+        # 检查目录是否存在
+        result_dir = CONFIG['result_dir']
+        ip_dir = CONFIG['ip_dir']
+        os.makedirs(result_dir, exist_ok=True)
+        os.makedirs(ip_dir, exist_ok=True)
+        os.makedirs(CONFIG['backup_dir'], exist_ok=True)
+        
+        logger.info(f"处理城市: {city}")
+        logger.info(f"流地址: {streams}")
+        
+        # 使用多线程版本
+        result = ip_manager.process_city_multi_thread(city, streams)
         if result:
             all_results.append(result)
         
-        # 每处理5个城市保存一次进度
-        if len(all_results) % 5 == 0:
+        # 每处理2个城市保存一次进度
+        if len(all_results) % 2 == 0:
             ip_manager.save_stats()
+            logger.info(f"已处理 {len(all_results)} 个城市，当前进度已保存")
     
     # 保存最终统计
     ip_manager.save_stats()
     ip_manager.print_summary()
     
     # 打印各城市结果摘要
-    logger.info("\n各城市测试结果:")
-    logger.info("-" * 80)
-    logger.info(f"{'城市':<15} {'测试数':<8} {'有效数':<8} {'最快速度(KB/s)':<15}")
-    logger.info("-" * 80)
-    
-    for result in all_results:
-        logger.info(f"{result['city']:<15} {result['total_tested']:<8} "
-                   f"{result['valid_count']:<8} {result['best_speed']:<15.2f}")
+    if all_results:
+        logger.info("\n各城市测试结果:")
+        logger.info("-" * 80)
+        logger.info(f"{'城市':<15} {'测试数':<8} {'有效数':<8} {'最快速度(KB/s)':<15}")
+        logger.info("-" * 80)
+        
+        for result in all_results:
+            logger.info(f"{result['city']:<15} {result['total_tested']:<8} "
+                       f"{result['valid_count']:<8} {result['best_speed']:<15.2f}")
     
     logger.info("=" * 50)
     logger.info(f"结束时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
