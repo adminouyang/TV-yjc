@@ -965,15 +965,19 @@ def main():
     os.makedirs('output', exist_ok=True)
     
     # 询问是否进行IP测速
-    print("\n是否先进行IP测速？(y/n)")
-    choice = input("y").strip().lower()
+    # print("\n是否先进行IP测速？(y/n)")
+    # choice = input("y").strip().lower()
     
-    if choice == 'y':
-        print("\n开始IP测速...")
-        run_ip_test()
-        print("\nIP测速完成！")
-        time.sleep(2)
-    
+    # if choice == 'y':
+    #     print("\n开始IP测速...")
+    #     run_ip_test()
+    #     print("\nIP测速完成！")
+    #     time.sleep(2)
+    # 不询问，直接进行IP测速
+    print("\n开始IP测速...")
+    run_ip_test()
+    print("\nIP测速完成！")
+    time.sleep(2)    
     # 处理每个城市
     for city_name in CITY_STREAMS:
         print(f"\n{'='*60}")
