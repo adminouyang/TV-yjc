@@ -5,10 +5,14 @@ import datetime
 from datetime import timezone, timedelta
 import glob
 import requests
+import concurrent.futures
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import random
 import urllib3
 import re
+import signal
+import sys
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # 城市特定的测试流地址
@@ -16,9 +20,382 @@ CITY_STREAMS = {
     "安徽电信": ["udp/238.1.78.150:7072"],
     "北京市电信": ["rtp/225.1.8.21:8002"],
     "北京市联通": ["rtp/239.3.1.241:8000"],
-    "江苏电信": ["rtp/239.49.8.138:6000"],
+    "江苏电信": ["udp/239.49.8.19:9614"],
     "四川电信": ["udp/239.94.0.59:5140"],
+    "四川移动": ["rtp/239.11.0.78:5140"],
+    "四川联通": ["rtp/239.0.0.1:5140"],
+    "上海市电信": ["rtp/233.18.204.51:5140"],
+    "云南电信": ["rtp/239.200.200.145:8840"],
+    "内蒙古电信": ["rtp/239.29.0.2:5000"],
+    "吉林电信": ["rtp/239.37.0.125:5540"],
+    "天津市电信": ["rtp/239.5.1.1:5000"],
+    "天津市联通": ["rtp/225.1.1.111:5002"],
+    "宁夏电信": ["rtp/239.121.4.94:8538"],
+    "山东电信": ["udp/239.21.1.87:5002"],
+    "山东联通": ["rtp/239.253.254.78:8000"],
+    "山西电信": ["udp/239.1.1.1:8001"],
+    "山西联通": ["rtp/226.0.2.152:9128"],
+    "广东电信": ["udp/239.77.1.19:5146"],
+    "广东移动": ["rtp/239.20.0.101:2000"],
+    "广东联通": ["udp/239.0.1.1:5001"],
+    "广西电信": ["udp/239.81.0.107:4056"],
+    "新疆电信": ["udp/238.125.3.174:5140"],
+    "江西电信": ["udp/239.252.220.63:5140"],
+    "河北省电信": ["rtp/239.254.200.174:6000"],
+    "河南电信": ["rtp/239.16.20.21:10210"],    
+    "河南联通": ["rtp/225.1.4.98:1127"],
+    "浙江电信": ["udp/233.50.201.100:5140"],
+    "海南电信": ["rtp/239.253.64.253:5140"],
+    "湖北电信": ["rtp/239.254.96.115:8664"],
+    "湖北联通": ["rtp/228.0.0.60:6108"],
+    "湖南电信": ["udp/239.76.253.101:9000"],
+    "甘肃电信": ["udp/239.255.30.249:8231"],
+    "福建省电信": ["rtp/239.61.2.132:8708"],
+    "贵州电信": ["rtp/238.255.2.1:5999"],
+    "辽宁联通": ["rtp/232.0.0.126:1234"],
+    "重庆市电信": ["rtp/235.254.196.249:1268"],
+    "重庆市联通": ["udp/225.0.4.187:7980"],
+    "陕西电信": ["rtp/239.111.205.35:5140"],
+    "青海电信": ["rtp/239.120.1.64:8332"],
+    "黑龙江联通": ["rtp/229.58.190.150:5000"],
 }
+
+# 配置参数
+CONFIG = {
+    'timeout': 3,
+    'max_workers': 20,
+    'result_dir': 'IP_Scan/result_ip',
+    'ip_dir': 'IP_Scan/ip',
+}
+
+# 信号处理
+shutdown_flag = False
+
+def signal_handler(signum, frame):
+    global shutdown_flag
+    shutdown_flag = True
+    print("收到停止信号，正在保存当前进度...")
+
+signal.signal(signal.SIGINT, signal_handler)
+signal.signal(signal.SIGTERM, signal_handler)
+
+# ==================== 测速模块开始 ====================
+
+class IPManager:
+    """IP管理器"""
+    
+    def __init__(self, config: dict):
+        self.config = config
+        self.session = None
+        self.stats = {
+            'total_tested': 0,
+            'successful': 0,
+            'failed': 0,
+            'cities_processed': 0
+        }
+        
+    def get_session(self):
+        """获取或创建requests session"""
+        if self.session is None:
+            self.session = requests.Session()
+            adapter = requests.adapters.HTTPAdapter(
+                pool_connections=100,
+                pool_maxsize=100
+            )
+            self.session.mount('http://', adapter)
+            self.session.mount('https://', adapter)
+        return self.session
+    
+    def read_ip_file(self, filepath: str):
+        """读取IP文件"""
+        ips = []
+        if not os.path.exists(filepath):
+            print(f"文件不存在: {filepath}")
+            return ips
+        
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith('#'):
+                        # 移除可能的速度信息
+                        ip = line.split('#')[0].strip()
+                        if ':' in ip:  # 确保是IP:PORT格式
+                            ips.append(ip)
+        except Exception as e:
+            print(f"读取文件 {filepath} 失败: {e}")
+        
+        return ips
+    
+    def write_ip_file(self, filepath: str, ips: list):
+        """写入IP文件"""
+        try:
+            os.makedirs(os.path.dirname(filepath), exist_ok=True)
+            with open(filepath, 'w', encoding='utf-8') as f:
+                for ip in ips:
+                    f.write(f"{ip}\n")
+            return True
+        except Exception as e:
+            print(f"写入文件 {filepath} 失败: {e}")
+            return False
+    
+    def test_single_url(self, url: str, timeout: int = 3):
+        """测试单个URL的速度"""
+        try:
+            start_time = time.time()
+            response = requests.get(url, timeout=timeout, stream=True)
+            
+            if response.status_code != 200:
+                return 0, f"HTTP {response.status_code}"
+            
+            # 下载一小段数据来计算速度
+            downloaded = 0
+            chunk_size = 102400
+            max_size = 1024 * 1024  # 最多下载1MB
+            
+            for chunk in response.iter_content(chunk_size=chunk_size):
+                if chunk:
+                    downloaded += len(chunk)
+                
+                if downloaded >= chunk_size * 10:  # 下载大约1000KB就够判断速度了
+                    break
+                
+                if downloaded >= max_size:
+                    break
+            
+            response.close()
+            
+            elapsed = time.time() - start_time
+            if elapsed <= 0:
+                return 0, "time error"
+            
+            speed_kbps = (downloaded / 1024) / elapsed
+            return speed_kbps, ""
+            
+        except requests.exceptions.Timeout:
+            return 0, "timeout"
+        except Exception as e:
+            return 0, str(e)
+    
+    def test_ip_with_streams(self, ip: str, streams: list):
+        """测试单个IP的所有流，返回是否成功、速度和使用的流地址"""
+        ip_speed = 0
+        used_stream = ""
+        
+        for stream in streams:
+            if shutdown_flag:
+                break
+                
+            url = f"http://{ip}/{stream}"
+            speed, error = self.test_single_url(url, timeout=self.config['timeout'])
+            
+            if error:
+                print(f"{ip} 测试失败: {error} (流: {stream})")
+            else:
+                ip_speed = speed
+                used_stream = stream
+                print(f"{ip} 测试成功: {speed:.2f} KB/s (流: {stream})")
+                return True, ip_speed, used_stream
+        
+        # 如果所有流都失败
+        print(f"{ip} 所有流测试失败")
+        return False, 0, ""
+    
+    def process_city(self, city: str, streams: list):
+        """处理单个城市/运营商的测试"""
+        print(f"开始处理: {city}")
+        
+        successful_ips = []  # 存储(ip, speed, stream)元组
+        failed_ips = set()   # 存储失败的IP
+        
+        # 1. 首先测试上一次保存的最快IP
+        result_file = os.path.join(self.config['result_dir'], f"{city}.txt")
+        previous_fast_ips = self.read_ip_file(result_file)
+        
+        if previous_fast_ips:
+            print(f"找到上一次的最快IP: {len(previous_fast_ips)} 个")
+            
+            # 使用多线程测试上一次的IP
+            with ThreadPoolExecutor(max_workers=min(self.config['max_workers'], len(previous_fast_ips))) as executor:
+                future_to_ip = {executor.submit(self.test_ip_with_streams, ip, streams): ip for ip in previous_fast_ips}
+                
+                for future in concurrent.futures.as_completed(future_to_ip):
+                    if shutdown_flag:
+                        break
+                        
+                    ip = future_to_ip[future]
+                    try:
+                        success, speed, stream = future.result()
+                        self.stats['total_tested'] += 1
+                        
+                        if success:
+                            successful_ips.append((ip, speed, stream))
+                            self.stats['successful'] += 1
+                            print(f"上一次的IP {ip} 仍然有效: {speed:.2f} KB/s")
+                        else:
+                            failed_ips.add(ip)
+                            self.stats['failed'] += 1
+                            print(f"上一次的IP {ip} 已失效")
+                            
+                    except Exception as e:
+                        print(f"测试IP {ip} 时发生错误: {e}")
+                        self.stats['failed'] += 1
+                        failed_ips.add(ip)
+        
+        # 2. 如果上一次的IP不足，从原始文件中测试更多IP
+        ip_file = os.path.join(self.config['ip_dir'], f"{city}.txt")
+        all_ips = self.read_ip_file(ip_file)
+        
+        if not all_ips:
+            print(f"无原始IP地址: {ip_file}")
+        else:
+            print(f"从原始文件读取到 {len(all_ips)} 个IP")
+            
+            # 排除已经测试过的IP（包括成功和失败的）
+            remaining_ips = [
+                ip for ip in all_ips 
+                if ip not in [item[0] for item in successful_ips] 
+                and ip not in failed_ips
+            ]
+            
+            print(f"需要测试的新IP: {len(remaining_ips)} 个")
+            
+            if remaining_ips and not shutdown_flag:
+                # 使用多线程测试剩余的IP
+                with ThreadPoolExecutor(max_workers=min(self.config['max_workers'], len(remaining_ips))) as executor:
+                    future_to_ip = {executor.submit(self.test_ip_with_streams, ip, streams): ip for ip in remaining_ips}
+                    
+                    for future in concurrent.futures.as_completed(future_to_ip):
+                        if shutdown_flag:
+                            break
+                            
+                        ip = future_to_ip[future]
+                        try:
+                            success, speed, stream = future.result()
+                            self.stats['total_tested'] += 1
+                            
+                            if success:
+                                successful_ips.append((ip, speed, stream))
+                                self.stats['successful'] += 1
+                                print(f"新IP {ip} 测试成功: {speed:.2f} KB/s")
+                            else:
+                                failed_ips.add(ip)
+                                self.stats['failed'] += 1
+                                
+                        except Exception as e:
+                            print(f"测试IP {ip} 时发生错误: {e}")
+                            self.stats['failed'] += 1
+                            failed_ips.add(ip)
+        
+        # 3. 从原始IP文件中删除失败的IP
+        if all_ips and failed_ips:
+            # 从原始IP列表中移除失败的IP
+            original_count = len(all_ips)
+            all_ips = [ip for ip in all_ips if ip not in failed_ips]
+            remaining_count = len(all_ips)
+            
+            if remaining_count > 0:
+                self.write_ip_file(ip_file, all_ips)
+                print(f"{city} - 从原始文件中删除 {original_count - remaining_count} 个失败IP，剩余 {remaining_count} 个IP")
+            else:
+                # 如果所有IP都失败，保留原文件但写入注释
+                self.write_ip_file(ip_file, ["# 所有IP测试失败，请检查网络或重新扫描"])
+                print(f"{city} - 所有IP测试失败，文件已清空")
+        
+        # 4. 保存所有有效的IP到结果文件（按速度排序）
+        os.makedirs(self.config['result_dir'], exist_ok=True)
+        
+        if successful_ips:
+            # 按速度排序
+            successful_ips.sort(key=lambda x: x[1], reverse=True)
+            
+            # 写入IP文件
+            with open(result_file, 'w', encoding='utf-8') as f:
+                for ip, speed, stream in successful_ips:
+                    f.write(f"{ip}\n")
+            
+            # 记录前5个最快IP
+            for i, (ip, speed, stream) in enumerate(successful_ips[:5]):
+                if i == 0:
+                    print(f"{city} - 最快IP: {ip} (速度: {speed:.2f} KB/s, 流: {stream})")
+                elif i < 5:
+                    print(f"{city} - 第{i+1}快IP: {ip} (速度: {speed:.2f} KB/s)")
+            
+            print(f"{city} - 结果已保存: 共 {len(successful_ips)} 个有效IP")
+        else:
+            with open(result_file, 'w', encoding='utf-8') as f:
+                f.write(f"# {city} 无可用IP\n")
+            print(f"{city} - 无可用IP，已保存空结果")
+        
+        self.stats['cities_processed'] += 1
+        
+        return {
+            'city': city,
+            'total_tested': len(previous_fast_ips) + (len(all_ips) if all_ips else 0),
+            'valid_count': len(successful_ips),
+            'best_speed': successful_ips[0][1] if successful_ips else 0
+        }
+    
+    def print_summary(self):
+        """打印统计摘要"""
+        print("=" * 50)
+        print("测试完成！")
+        print(f"已处理城市: {self.stats['cities_processed']}")
+        print(f"总测试IP数: {self.stats['total_tested']}")
+        print(f"成功IP数: {self.stats['successful']}")
+        print(f"失败IP数: {self.stats['failed']}")
+        if self.stats['total_tested'] > 0:
+            success_rate = (self.stats['successful'] / self.stats['total_tested']) * 100
+            print(f"成功率: {success_rate:.1f}%")
+        print("=" * 50)
+
+def run_ip_test():
+    """运行IP测速"""
+    print("=" * 50)
+    print("组播流IP测试工具启动")
+    print(f"开始时间: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"配置: 超时={CONFIG['timeout']}s, 并发数={CONFIG['max_workers']}")
+    print("=" * 50)
+    
+    # 创建管理器
+    ip_manager = IPManager(CONFIG)
+    
+    # 确保目录存在
+    os.makedirs(CONFIG['result_dir'], exist_ok=True)
+    os.makedirs(CONFIG['ip_dir'], exist_ok=True)
+    
+    # 处理所有城市
+    all_results = []
+    for city, streams in CITY_STREAMS.items():
+        if shutdown_flag:
+            print("收到停止信号，提前结束")
+            break
+            
+        print(f"处理城市: {city}")
+        print(f"流地址: {streams}")
+        
+        result = ip_manager.process_city(city, streams)
+        all_results.append(result)
+    
+    # 打印摘要
+    ip_manager.print_summary()
+    
+    # 打印各城市结果摘要
+    if all_results:
+        print("\n各城市测试结果:")
+        print("-" * 80)
+        print(f"{'城市':<15} {'测试数':<8} {'有效数':<8} {'最快速度(KB/s)':<15}")
+        print("-" * 80)
+        
+        for result in all_results:
+            print(f"{result['city']:<15} {result['total_tested']:<8} "
+                   f"{result['valid_count']:<8} {result['best_speed']:<15.2f}")
+    
+    print("=" * 50)
+    print(f"结束时间: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+    print("=" * 50)
+
+# ==================== 测速模块结束 ====================
 
 def get_headers():
     """获取固定的请求头"""
@@ -192,12 +569,10 @@ def get_main_channel_name(channel_name, channel_template):
     # 如果没有找到匹配，返回原频道名
     return channel_name
 
-def get_ips_for_city(city_name):
-    """从IP_Scan/result_ip/路径读取IP地址"""
+def get_ips_for_city(city_name, max_ips=2):
+    """从IP_Scan/result_ip/路径读取IP地址，只读取最快的2个IP"""
     # 从CITY_STREAMS中获取对应的省份/城市名称映射
-    # 注意：这里假设CITY_STREAMS中的键与IP_Scan/result_ip/下的文件名一致
-    # 例如："安徽电信"对应"安徽电信.txt"
-    ip_file = f"result_ip/{city_name}.txt"
+    ip_file = f"IP_Scan/result_ip/{city_name}.txt"
     
     if not os.path.exists(ip_file):
         print(f"IP文件不存在: {ip_file}")
@@ -206,12 +581,16 @@ def get_ips_for_city(city_name):
     ip_list = []
     try:
         with open(ip_file, 'r', encoding='utf-8') as f:
-            for line in f:
+            lines = f.readlines()
+            
+            # 只取前max_ips个IP（因为文件已经是按速度排序的）
+            for i, line in enumerate(lines[:max_ips]):
                 cleaned_ip = clean_ip_line(line.strip())
                 if cleaned_ip and ":" in cleaned_ip:
                     ip_list.append(cleaned_ip)
+                    print(f"  读取第{i+1}个IP: {cleaned_ip}")
         
-        print(f"从 {ip_file} 读取到 {len(ip_list)} 个IP地址")
+        print(f"从 {ip_file} 读取到 {len(ip_list)} 个最快IP地址")
         return ip_list
     except Exception as e:
         print(f"读取IP文件错误: {e}")
@@ -287,17 +666,17 @@ def read_logo_file():
     
     return logo_dict
 
-def generate_files_for_city(city_name, ip_list, logo_dict):
-    """为城市生成TXT和M3U文件，使用IP列表中的所有IP生成多个源"""
+def generate_files_for_city(city_name, ip_list, logo_dict, max_sources_per_channel=2):
+    """为城市生成TXT和M3U文件，使用IP列表中最快的2个IP生成多个源"""
     if not ip_list or len(ip_list) < 1:
         print(f"{city_name} 没有可用的IP，跳过文件生成")
-        return
+        return None, None
     
     # 读取频道模板
     categories = read_template_file(city_name)
     if not categories:
         print(f"{city_name} 没有频道模板，跳过文件生成")
-        return
+        return None, None
     
     # 创建输出目录
     os.makedirs('output', exist_ok=True)
@@ -312,14 +691,16 @@ def generate_files_for_city(city_name, ip_list, logo_dict):
         m3u_f.write("#EXTM3U\n")
         
         channel_count = 0
+        source_count = 0
         
         for category, channels in categories:
             # 写入分类标题
             txt_f.write(f"{category},#genre#\n")
             
             for channel_name, channel_url in channels:
-                # 为每个频道生成多个源，使用IP列表中的所有IP
-                for i, ip_port in enumerate(ip_list, 1):
+                # 为每个频道生成多个源，但最多使用max_sources_per_channel个IP
+                used_ips = 0
+                for i, ip_port in enumerate(ip_list[:max_sources_per_channel]):
                     # 替换ipipip为实际IP:端口
                     new_url = channel_url.replace("ipipip", ip_port)
                     
@@ -336,9 +717,12 @@ def generate_files_for_city(city_name, ip_list, logo_dict):
                         m3u_f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{channel_name}\n')
                     m3u_f.write(f"{new_url}\n")
                     
-                    channel_count += 1
+                    source_count += 1
+                    used_ips += 1
+                
+                channel_count += 1
         
-        print(f"  TXT文件: {txt_file} (共{channel_count}个频道，每个频道{len(ip_list)}个源)")
+        print(f"  TXT文件: {txt_file} (共{channel_count}个频道，每个频道最多{min(len(ip_list), max_sources_per_channel)}个源，总计{source_count}个源)")
         print(f"  M3U文件: {m3u_file}")
     
     return txt_file, m3u_file
@@ -575,9 +959,20 @@ def main():
     print("="*60)
     
     # 创建必要的目录
-    os.makedirs('result_ip', exist_ok=True)
+    os.makedirs('IP_Scan/result_ip', exist_ok=True)
+    os.makedirs('IP_Scan/ip', exist_ok=True)
     os.makedirs('template', exist_ok=True)
     os.makedirs('output', exist_ok=True)
+    
+    # 询问是否进行IP测速
+    print("\n是否先进行IP测速？(y/n)")
+    choice = input("请输入选择: ").strip().lower()
+    
+    if choice == 'y':
+        print("\n开始IP测速...")
+        run_ip_test()
+        print("\nIP测速完成！")
+        time.sleep(2)
     
     # 处理每个城市
     for city_name in CITY_STREAMS:
@@ -586,7 +981,7 @@ def main():
         print(f"{'='*60}")
         
         # 检查IP文件是否存在
-        ip_file = f"result_ip/{city_name}.txt"
+        ip_file = f"IP_Scan/result_ip/{city_name}.txt"
         if not os.path.exists(ip_file):
             print(f"IP文件不存在: {ip_file}，跳过此城市")
             continue
@@ -597,20 +992,20 @@ def main():
             print(f"频道模板文件不存在: {template_file}，跳过此城市")
             continue
         
-        # 第一步：从IP_Scan/result_ip/读取IP文件
-        ip_list = get_ips_for_city(city_name)
+        # 第一步：从IP_Scan/result_ip/读取最快的2个IP
+        ip_list = get_ips_for_city(city_name, max_ips=2)
         
         if not ip_list:
             print(f"{city_name} 没有可用的IP，跳过")
             continue
         
-        print(f"获取到 {len(ip_list)} 个IP地址")
+        print(f"获取到 {len(ip_list)} 个最快IP地址")
         
         # 第二步：读取台标文件
         logo_dict = read_logo_file()
         
         # 第三步：生成文件
-        generate_files_for_city(city_name, ip_list, logo_dict)
+        generate_files_for_city(city_name, ip_list, logo_dict, max_sources_per_channel=2)
         
         # 城市间延迟
         time.sleep(2)
@@ -636,4 +1031,15 @@ def main():
     print(f"{'='*60}")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("程序被用户中断")
+    except Exception as e:
+        print(f"程序运行错误: {e}")
+        import traceback
+        traceback.print_exc()
+    finally:
+        if shutdown_flag:
+            print("程序已安全停止")
+        sys.exit(0)
