@@ -1,0 +1,10 @@
+{
+  "stats": {
+    "total_tested": 112,
+    "successful": 48,
+    "failed": 64,
+    "cities_processed": 41
+  },
+  "timestamp": 1768566506.6852083,
+  "date": "2026-01-16T12:28:26.685208"
+}
