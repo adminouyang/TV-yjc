@@ -3,6 +3,8 @@
 http://58.253.171.137:8188/udp/239.0.1.1:5001
 #EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视
 http://58.253.171.137:8188/udp/239.0.1.84:8020
+#EXTINF:-1 tvg-id="广东大湾区卫视" tvg-name="广东大湾区卫视" group-title="卫视频道",广东大湾区卫视
+http://58.253.171.137:8188/udp/239.0.1.52:5009
 #EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视
 http://58.253.171.137:8188/udp/239.0.1.79:1234
 #EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视
@@ -53,6 +55,8 @@ http://58.253.171.137:8188/udp/239.0.1.37:8188
 http://58.253.171.137:8188/udp/239.0.1.35:8164
 #EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视
 http://58.253.171.137:8188/udp/239.0.1.20:8120
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://58.253.171.137:8188/udp/239.0.1.29:8140
 #EXTINF:-1 tvg-id="青海卫视" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视
 http://58.253.171.137:8188/udp/239.0.1.32:8184
 #EXTINF:-1 tvg-id="宁夏卫视" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视
@@ -77,16 +81,18 @@ http://58.253.171.137:8188/udp/239.0.1.95:5057
 http://58.253.171.137:8188/udp/239.0.1.48:5005
 #EXTINF:-1 tvg-id="广东新闻频道" tvg-name="广东新闻频道" group-title="☘️广东省",广东新闻频道
 http://58.253.171.137:8188/udp/239.0.1.47:5006
-#EXTINF:-1 tvg-id="广东大湾区卫视" tvg-name="广东大湾区卫视" group-title="☘️广东省",广东大湾区卫视
-http://58.253.171.137:8188/udp/239.0.1.52:5009
 #EXTINF:-1 tvg-id="广东影视频道" tvg-name="广东影视频道" group-title="☘️广东省",广东影视频道
 http://58.253.171.137:8188/udp/239.0.1.54:5011
 #EXTINF:-1 tvg-id="广东少儿频道" tvg-name="广东少儿频道" group-title="☘️广东省",广东少儿频道
 http://58.253.171.137:8188/udp/239.0.1.55:5012
+#EXTINF:-1 tvg-id="广东移动频道" tvg-name="广东移动频道" group-title="☘️广东省",广东移动频道
+http://58.253.171.137:8188/udp/239.0.1.63:5101
 #EXTINF:-1 tvg-id="广东岭南戏曲" tvg-name="广东岭南戏曲" group-title="☘️广东省",广东岭南戏曲
 http://58.253.171.137:8188/udp/239.0.1.59:5073
 #EXTINF:-1 tvg-id="广东现代教育" tvg-name="广东现代教育" group-title="☘️广东省",广东现代教育
 http://58.253.171.137:8188/udp/239.0.1.61:5103
+#EXTINF:-1 tvg-id="广东南方购物" tvg-name="广东南方购物" group-title="☘️广东省",广东南方购物
+http://58.253.171.137:8188/udp/239.0.1.57:5087
 #EXTINF:-1 tvg-id="广东4K超高清" tvg-name="广东4K超高清" group-title="4K频道",广东4K超高清
 http://58.253.171.137:8188/udp/239.0.1.169:6030
 #EXTINF:-1 tvg-id="广东嘉佳卡通" tvg-name="广东嘉佳卡通" group-title="数字频道",广东嘉佳卡通
@@ -99,14 +105,6 @@ http://58.253.171.137:8188/udp/239.0.1.41:9252
 http://58.253.171.137:8188/udp/239.0.1.42:5090
 #EXTINF:-1 tvg-id="卡酷少儿" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿
 http://58.253.171.137:8188/udp/239.0.1.40:9248
-#EXTINF:-1 tvg-id="广东移动频道" tvg-name="广东移动频道" group-title="其它频道",广东移动频道
-http://58.253.171.137:8188/udp/239.0.1.63:5101
-#EXTINF:-1 tvg-id="广东南方购物" tvg-name="广东南方购物" group-title="其它频道",广东南方购物
-http://58.253.171.137:8188/udp/239.0.1.57:5087
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://58.253.171.137:8188/udp/239.0.1.29:8140
-#EXTINF:-1 tvg-id="GCTN英语" tvg-name="GCTN英语" group-title="其它频道",GCTN英语
-http://58.253.171.137:8188/udp/239.0.1.76:8056
 #EXTINF:-1 tvg-id="河源生活频道" tvg-name="河源生活频道" group-title="☘️吉林省",河源生活频道
 http://58.253.171.137:8188/udp/239.0.1.236:5225
 #EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
@@ -151,3 +149,5 @@ http://58.253.171.137:8188/udp/239.0.1.210:4120
 http://58.253.171.137:8188/udp/239.0.1.211:4121
 #EXTINF:-1 tvg-id="IPTV5体育" tvg-name="IPTV5体育" group-title="央视频道",IPTV5体育
 http://58.253.171.137:8188/udp/239.0.1.102:4120
+#EXTINF:-1 tvg-id="GCTN英语" tvg-name="GCTN英语" group-title="其它频道",GCTN英语
+http://58.253.171.137:8188/udp/239.0.1.76:8056

@@ -119,6 +119,8 @@ http://114.254.36.28:18888/rtp/239.3.1.27:8128
 http://114.254.36.28:18888/rtp/239.3.1.49:8188
 #EXTINF:-1 tvg-id="西藏卫视" tvg-name="西藏卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",西藏卫视
 http://114.254.36.28:18888/rtp/239.3.1.47:8164
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://114.254.36.28:18888/rtp/239.3.1.41:8140
 #EXTINF:-1 tvg-id="青海卫视" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视
 http://114.254.36.28:18888/rtp/239.3.1.44:8184
 #EXTINF:-1 tvg-id="内蒙古卫视" tvg-name="内蒙古卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",内蒙古卫视
@@ -129,16 +131,6 @@ http://114.254.36.28:18888/rtp/239.3.1.155:4120
 http://114.254.36.28:18888/rtp/239.3.1.143:4120
 #EXTINF:-1 tvg-id="兵团卫视" tvg-name="兵团卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",兵团卫视
 http://114.254.36.28:18888/rtp/239.3.1.144:4120
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://114.254.36.28:18888/rtp/239.3.1.41:8140
-#EXTINF:-1 tvg-id="朝阳融媒" tvg-name="朝阳融媒" group-title="其它频道",朝阳融媒
-http://114.254.36.28:18888/rtp/239.3.1.163:8001
-#EXTINF:-1 tvg-id="通州融媒" tvg-name="通州融媒" group-title="其它频道",通州融媒
-http://114.254.36.28:18888/rtp/239.3.1.221:8001
-#EXTINF:-1 tvg-id="延庆电视台" tvg-name="延庆电视台" group-title="其它频道",延庆电视台
-http://114.254.36.28:18888/rtp/239.3.1.187:8001
-#EXTINF:-1 tvg-id="睛彩羽毛球" tvg-name="睛彩羽毛球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%9D%9B%E5%BD%A9%E7%BE%BD%E6%AF%9B%E7%90%83.png" group-title="其它频道",睛彩羽毛球
-http://114.254.36.28:18888/rtp/239.3.1.127:8001
 #EXTINF:-1 tvg-id="北京新闻频道" tvg-name="北京新闻频道" group-title="☘️北京市",北京新闻频道
 http://114.254.36.28:18888/rtp/239.3.1.159:8000
 #EXTINF:-1 tvg-id="北京影视频道" tvg-name="北京影视频道" group-title="☘️北京市",北京影视频道
@@ -153,8 +145,6 @@ http://114.254.36.28:18888/rtp/239.3.1.117:8000
 http://114.254.36.28:18888/rtp/239.3.1.243:8000
 #EXTINF:-1 tvg-id="北京国际频道" tvg-name="北京国际频道" group-title="☘️北京市",北京国际频道
 http://114.254.36.28:18888/rtp/239.3.1.235:8000
-#EXTINF:-1 tvg-id="北京IPTV4K超清" tvg-name="北京IPTV4K超清" group-title="☘️北京市",北京IPTV4K超清
-http://114.254.36.28:18888/rtp/239.3.1.249:8001
 #EXTINF:-1 tvg-id="北京IPTV淘电影" tvg-name="北京IPTV淘电影" group-title="☘️北京市",北京IPTV淘电影
 http://114.254.36.28:18888/rtp/239.3.1.250:8001
 #EXTINF:-1 tvg-id="北京IPTV淘剧场" tvg-name="北京IPTV淘剧场" group-title="☘️北京市",北京IPTV淘剧场
@@ -165,14 +155,20 @@ http://114.254.36.28:18888/rtp/239.3.1.100:8001
 http://114.254.36.28:18888/rtp/239.3.1.238:8001
 #EXTINF:-1 tvg-id="北京IPTV萌宠TV" tvg-name="北京IPTV萌宠TV" group-title="☘️北京市",北京IPTV萌宠TV
 http://114.254.36.28:18888/rtp/239.3.1.102:8001
+#EXTINF:-1 tvg-id="朝阳融媒" tvg-name="朝阳融媒" group-title="☘️北京市",朝阳融媒
+http://114.254.36.28:18888/rtp/239.3.1.163:8001
 #EXTINF:-1 tvg-id="房山电视台" tvg-name="房山电视台" group-title="☘️北京市",房山电视台
 http://114.254.36.28:18888/rtp/239.3.1.96:8001
 #EXTINF:-1 tvg-id="密云电视台" tvg-name="密云电视台" group-title="☘️北京市",密云电视台
 http://114.254.36.28:18888/rtp/239.3.1.154:8001
+#EXTINF:-1 tvg-id="延庆电视台" tvg-name="延庆电视台" group-title="☘️北京市",延庆电视台
+http://114.254.36.28:18888/rtp/239.3.1.187:8001
 #EXTINF:-1 tvg-id="北京纪实科教" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教
 http://114.254.36.28:18888/rtp/239.3.1.115:8000
 #EXTINF:-1 tvg-id="北京卡酷少儿" tvg-name="北京卡酷少儿" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BF.png" group-title="数字频道",北京卡酷少儿
 http://114.254.36.28:18888/rtp/239.3.1.189:8000
+#EXTINF:-1 tvg-id="北京IPTV4K超清" tvg-name="北京IPTV4K超清" group-title="数字频道",北京IPTV4K超清
+http://114.254.36.28:18888/rtp/239.3.1.249:8001
 #EXTINF:-1 tvg-id="华数星影" tvg-name="华数星影" group-title="数字频道",华数星影
 http://114.254.36.28:18888/rtp/239.3.1.94:4120
 #EXTINF:-1 tvg-id="华数动作影院" tvg-name="华数动作影院" group-title="数字频道",华数动作影院
@@ -203,6 +199,8 @@ http://114.254.36.28:18888/rtp/239.3.1.80:4120
 http://114.254.36.28:18888/rtp/239.3.1.125:8001
 #EXTINF:-1 tvg-id="睛彩篮球" tvg-name="睛彩篮球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%9D%9B%E5%BD%A9%E7%AF%AE%E7%90%83.png" group-title="数字频道",睛彩篮球
 http://114.254.36.28:18888/rtp/239.3.1.126:8001
+#EXTINF:-1 tvg-id="睛彩羽毛球" tvg-name="睛彩羽毛球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%9D%9B%E5%BD%A9%E7%BE%BD%E6%AF%9B%E7%90%83.png" group-title="数字频道",睛彩羽毛球
+http://114.254.36.28:18888/rtp/239.3.1.127:8001
 #EXTINF:-1 tvg-id="睛彩广场舞" tvg-name="睛彩广场舞" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%9D%9B%E5%BD%A9%E5%B9%BF%E5%9C%BA%E8%88%9E.png" group-title="数字频道",睛彩广场舞
 http://114.254.36.28:18888/rtp/239.3.1.128:8001
 #EXTINF:-1 tvg-id="IPTV地理" tvg-name="IPTV地理" group-title="数字频道",IPTV地理
@@ -253,5 +251,7 @@ http://114.254.36.28:18888/rtp/239.3.1.165:8001
 http://114.254.36.28:18888/rtp/239.3.1.164:8001
 #EXTINF:-1 tvg-id="华数爱上4K" tvg-name="华数爱上4K" group-title="4K频道",华数爱上4K
 http://114.254.36.28:18888/rtp/239.3.1.236:2000
+#EXTINF:-1 tvg-id="通州融媒" tvg-name="通州融媒" group-title="其它频道",通州融媒
+http://114.254.36.28:18888/rtp/239.3.1.221:8001
 #EXTINF:-1 tvg-id="古装剧场" tvg-name="古装剧场" group-title="☘️重庆市",古装剧场
 http://114.254.36.28:18888/rtp/239.3.1.69:4120

@@ -247,6 +247,10 @@ http://112.192.73.56:8484/rtp/239.0.0.66:5140
 http://112.192.73.53:8484/rtp/239.0.0.197:5140
 #EXTINF:-1 tvg-id="山东教育卫视" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视
 http://112.192.73.56:8484/rtp/239.0.0.197:5140
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://112.192.73.53:8484/rtp/239.0.0.53:5140
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://112.192.73.56:8484/rtp/239.0.0.53:5140
 #EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视
 http://112.192.73.53:8484/rtp/239.0.0.71:5140
 #EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视
@@ -303,18 +307,14 @@ http://112.192.73.56:8484/rtp/239.0.0.109:5140
 http://112.192.73.53:8484/rtp/239.0.0.183:5140
 #EXTINF:-1 tvg-id="兵团卫视" tvg-name="兵团卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",兵团卫视
 http://112.192.73.56:8484/rtp/239.0.0.183:5140
+#EXTINF:-1 tvg-id="西藏藏语频道" tvg-name="西藏藏语频道" group-title="卫视频道",西藏藏语频道
+http://112.192.73.53:8484/rtp/239.0.0.105:5140
+#EXTINF:-1 tvg-id="西藏藏语频道" tvg-name="西藏藏语频道" group-title="卫视频道",西藏藏语频道
+http://112.192.73.56:8484/rtp/239.0.0.105:5140
 #EXTINF:-1 tvg-id="延边卫视" tvg-name="延边卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BB%B6%E8%BE%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",延边卫视
 http://112.192.73.53:8484/rtp/239.0.0.76:5140
 #EXTINF:-1 tvg-id="延边卫视" tvg-name="延边卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BB%B6%E8%BE%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",延边卫视
 http://112.192.73.56:8484/rtp/239.0.0.76:5140
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://112.192.73.53:8484/rtp/239.0.0.53:5140
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://112.192.73.56:8484/rtp/239.0.0.53:5140
-#EXTINF:-1 tvg-id="西藏藏语频道" tvg-name="西藏藏语频道" group-title="其它频道",西藏藏语频道
-http://112.192.73.53:8484/rtp/239.0.0.105:5140
-#EXTINF:-1 tvg-id="西藏藏语频道" tvg-name="西藏藏语频道" group-title="其它频道",西藏藏语频道
-http://112.192.73.56:8484/rtp/239.0.0.105:5140
 #EXTINF:-1 tvg-id="四川经济频道" tvg-name="四川经济频道" group-title="☘️四川省",四川经济频道
 http://112.192.73.53:8484/rtp/239.0.0.2:5140
 #EXTINF:-1 tvg-id="四川经济频道" tvg-name="四川经济频道" group-title="☘️四川省",四川经济频道

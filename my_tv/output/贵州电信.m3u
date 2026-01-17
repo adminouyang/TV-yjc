@@ -65,6 +65,8 @@ http://61.159.134.64:18000/rtp/238.255.2.63:5999
 http://61.159.134.64:18000/rtp/238.255.2.79:5999
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视
 http://61.159.134.64:18000/rtp/238.255.2.71:5999
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://61.159.134.64:18000/rtp/238.255.2.72:5999
 #EXTINF:-1 tvg-id="宁夏卫视" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视
 http://61.159.134.64:18000/rtp/238.255.2.75:5999
 #EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视
@@ -221,8 +223,6 @@ http://61.159.134.64:18000/rtp/238.255.2.210:5999
 http://61.159.134.64:18000/rtp/238.255.2.208:5999
 #EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语
 http://61.159.134.64:18000/rtp/238.255.2.209:5999
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://61.159.134.64:18000/rtp/238.255.2.72:5999
 #EXTINF:-1 tvg-id="北京纪实科教" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教
 http://61.159.134.64:18000/rtp/238.255.2.107:5999
 #EXTINF:-1 tvg-id="北京卡酷少儿" tvg-name="北京卡酷少儿" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BF.png" group-title="数字频道",北京卡酷少儿

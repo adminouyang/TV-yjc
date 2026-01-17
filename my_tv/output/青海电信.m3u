@@ -1,10 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="九画面" tvg-name="九画面" group-title="其它频道",九画面
 http://220.167.170.149:4000/rtp/239.120.1.131:8268
-#EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="其它频道",上海游戏风云
-http://220.167.170.149:4000/rtp/239.120.1.215:9312
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://220.167.170.149:4000/rtp/239.120.1.117:8694
 #EXTINF:-1 tvg-id="青海卫视" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视
 http://220.167.170.149:4000/rtp/239.120.1.64:8332
 #EXTINF:-1 tvg-id="安多卫视" tvg-name="安多卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%A4%9A%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安多卫视
@@ -57,6 +53,8 @@ http://220.167.170.149:4000/rtp/239.120.1.232:9372
 http://220.167.170.149:4000/rtp/239.120.1.233:9514
 #EXTINF:-1 tvg-id="北京卫视4K超高清" tvg-name="北京卫视4K超高清" group-title="卫视频道",北京卫视4K超高清
 http://220.167.170.149:4000/rtp/239.120.1.111:8254
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://220.167.170.149:4000/rtp/239.120.1.117:8694
 #EXTINF:-1 tvg-id="宁夏卫视" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视
 http://220.167.170.149:4000/rtp/239.120.1.130:8838
 #EXTINF:-1 tvg-id="新疆卫视" tvg-name="新疆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",新疆卫视
@@ -97,6 +95,8 @@ http://220.167.170.149:4000/rtp/239.120.1.144:8416
 http://220.167.170.149:4000/rtp/239.120.1.145:8420
 #EXTINF:-1 tvg-id="西宁新闻综合" tvg-name="西宁新闻综合" tvg-logo="https://tb.zbds.top/logo/西宁新闻综合.png" group-title="☘️上海市",西宁新闻综合
 http://220.167.170.149:4000/rtp/239.120.1.249:9444
+#EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="☘️上海市",上海游戏风云
+http://220.167.170.149:4000/rtp/239.120.1.215:9312
 #EXTINF:-1 tvg-id="上海东方财经" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经
 http://220.167.170.149:4000/rtp/239.120.1.55:8304
 #EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合

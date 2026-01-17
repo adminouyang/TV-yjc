@@ -47,6 +47,8 @@ http://118.78.196.112:55555/rtp/226.0.2.222:9688
 http://118.78.196.112:55555/rtp/226.0.2.223:9696
 #EXTINF:-1 tvg-id="CCTV-电视指南" tvg-name="CCTV-电视指南" group-title="央视频道",CCTV-电视指南
 http://118.78.196.112:55555/rtp/226.0.2.218:9656
+#EXTINF:-1 tvg-id="CCTV-文化精品" tvg-name="CCTV-文化精品" group-title="央视频道",CCTV-文化精品
+http://118.78.196.112:55555/rtp/226.0.2.219:9664
 #EXTINF:-1 tvg-id="CCTV-央视台球" tvg-name="CCTV-央视台球" group-title="央视频道",CCTV-央视台球
 http://118.78.196.112:55555/rtp/226.0.2.216:9640
 #EXTINF:-1 tvg-id="CCTV-风云音乐" tvg-name="CCTV-风云音乐" group-title="央视频道",CCTV-风云音乐
@@ -59,10 +61,6 @@ http://118.78.196.112:55555/rtp/226.0.2.181:9360
 http://118.78.196.112:55555/rtp/226.0.2.99:8704
 #EXTINF:-1 tvg-id="中国天气" tvg-name="中国天气" group-title="央视频道",中国天气
 http://118.78.196.112:55555/rtp/226.0.2.103:8736
-#EXTINF:-1 tvg-id="CCTV-文化精品" tvg-name="CCTV-文化精品" group-title="其它频道",CCTV-文化精品
-http://118.78.196.112:55555/rtp/226.0.2.219:9664
-#EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="其它频道",上海游戏风云
-http://118.78.196.112:55555/rtp/226.0.2.78:8536
 #EXTINF:-1 tvg-id="CHC高清电影" tvg-name="CHC高清电影" group-title="数字频道",CHC高清电影
 http://118.78.196.112:55555/rtp/226.0.2.93:8004
 #EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影
@@ -183,6 +181,8 @@ http://118.78.196.112:55555/rtp/226.0.2.234:9784
 http://118.78.196.112:55555/rtp/226.0.2.233:9776
 #EXTINF:-1 tvg-id="上海东方财经" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经
 http://118.78.196.112:55555/rtp/226.0.2.76:8520
+#EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="☘️上海市",上海游戏风云
+http://118.78.196.112:55555/rtp/226.0.2.78:8536
 #EXTINF:-1 tvg-id="河南文物宝库" tvg-name="河南文物宝库" group-title="☘️河南省",河南文物宝库
 http://118.78.196.112:55555/rtp/226.0.2.110:8792
 #EXTINF:-1 tvg-id="河南武术世界" tvg-name="河南武术世界" group-title="☘️河南省",河南武术世界

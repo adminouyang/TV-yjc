@@ -155,6 +155,8 @@ http://111.162.207.138:8686/rtp/225.1.1.56:5002
 http://111.162.207.138:8686/rtp/225.1.1.54:5002
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视
 http://111.162.207.138:8686/rtp/225.1.1.50:5002
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://111.162.207.138:8686/rtp/225.1.1.41:5002
 #EXTINF:-1 tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视
 http://111.162.207.138:8686/rtp/225.1.1.30:5002
 #EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视
@@ -169,10 +171,6 @@ http://111.162.207.138:8686/rtp/225.1.2.181:5002
 http://111.162.207.138:8686/rtp/225.1.1.57:5002
 #EXTINF:-1 tvg-id="山东教育卫视" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视
 http://111.162.207.138:8686/rtp/225.1.2.118:5002
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://111.162.207.138:8686/rtp/225.1.1.41:5002
-#EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="其它频道",上海游戏风云
-http://111.162.207.138:8686/rtp/225.1.1.135:5002
 #EXTINF:-1 tvg-id="天津新闻频道" tvg-name="天津新闻频道" group-title="☘️天津市",天津新闻频道
 http://111.162.207.138:8686/rtp/225.1.1.130:5002
 #EXTINF:-1 tvg-id="天津文艺频道" tvg-name="天津文艺频道" group-title="☘️天津市",天津文艺频道
@@ -207,6 +205,8 @@ http://111.162.207.138:8686/rtp/225.1.2.14:5002
 http://111.162.207.138:8686/rtp/225.1.1.205:5002
 #EXTINF:-1 tvg-id="天津都市频道" tvg-name="天津都市频道" group-title="☘️上海市",天津都市频道
 http://111.162.207.138:8686/rtp/225.1.1.128:5002
+#EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="☘️上海市",上海游戏风云
+http://111.162.207.138:8686/rtp/225.1.1.135:5002
 #EXTINF:-1 tvg-id="上海东方财经" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经
 http://111.162.207.138:8686/rtp/225.1.1.247:5002
 #EXTINF:-1 tvg-id="河南文物宝库" tvg-name="河南文物宝库" group-title="☘️河南省",河南文物宝库

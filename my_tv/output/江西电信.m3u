@@ -53,6 +53,8 @@ http://220.176.218.76:9000/udp/239.252.220.189:5140
 http://220.176.218.76:9000/rtp/239.252.219.27:5140
 #EXTINF:-1 tvg-id="青海卫视" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视
 http://220.176.218.76:9000/rtp/239.252.219.46:5140
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://220.176.218.76:9000/rtp/239.252.219.105:5140
 #EXTINF:-1 tvg-id="内蒙古卫视" tvg-name="内蒙古卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",内蒙古卫视
 http://220.176.218.76:9000/rtp/239.252.219.48:5140
 #EXTINF:-1 tvg-id="厦门卫视" tvg-name="厦门卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8E%A6%E9%97%A8%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",厦门卫视
@@ -265,8 +267,6 @@ http://220.176.218.76:9000/rtp/239.252.220.208:5140
 http://220.176.218.76:9000/rtp/239.252.220.209:5140
 #EXTINF:-1 tvg-id="光影" tvg-name="光影" group-title="数字频道",光影
 http://220.176.218.76:9000/rtp/239.252.220.200:5140
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://220.176.218.76:9000/rtp/239.252.219.105:5140
 #EXTINF:-1 tvg-id="河南武术世界" tvg-name="河南武术世界" group-title="☘️河南省",河南武术世界
 http://220.176.218.76:9000/udp/239.252.220.180:5140
 #EXTINF:-1 tvg-id="河南文物宝库" tvg-name="河南文物宝库" group-title="☘️河南省",河南文物宝库

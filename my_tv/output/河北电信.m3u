@@ -31,6 +31,10 @@ http://27.191.203.209:19999/rtp/239.254.200.27:6000
 http://27.184.29.239:12312/rtp/239.254.201.139:7203
 #EXTINF:-1 tvg-id="河北杂技频道" tvg-name="河北杂技频道" group-title="☘️河北省",河北杂技频道
 http://27.191.203.209:19999/rtp/239.254.201.139:7203
+#EXTINF:-1 tvg-id="河北三佳购物" tvg-name="河北三佳购物" group-title="☘️河北省",河北三佳购物
+http://27.184.29.239:12312/rtp/239.254.200.143:6000
+#EXTINF:-1 tvg-id="河北三佳购物" tvg-name="河北三佳购物" group-title="☘️河北省",河北三佳购物
+http://27.191.203.209:19999/rtp/239.254.200.143:6000
 #EXTINF:-1 tvg-id="羽毛球专区" tvg-name="羽毛球专区" group-title="☘️河北省",羽毛球专区
 http://27.184.29.239:12312/rtp/239.254.201.214:7264
 #EXTINF:-1 tvg-id="羽毛球专区" tvg-name="羽毛球专区" group-title="☘️河北省",羽毛球专区
@@ -563,6 +567,10 @@ http://27.191.203.209:19999/rtp/239.254.201.125:6288
 http://27.184.29.239:12312/rtp/239.254.201.15:6339
 #EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视
 http://27.191.203.209:19999/rtp/239.254.201.15:6339
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://27.184.29.239:12312/rtp/239.254.200.82:8140
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://27.191.203.209:19999/rtp/239.254.200.82:8140
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视
 http://27.184.29.239:12312/rtp/239.254.200.83:8172
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视
@@ -647,6 +655,10 @@ http://27.191.203.209:19999/rtp/239.254.200.147:6000
 http://27.184.29.239:12312/rtp/239.254.200.153:6000
 #EXTINF:-1 tvg-id="邯郸新闻综合" tvg-name="邯郸新闻综合" group-title="☘️上海市",邯郸新闻综合
 http://27.191.203.209:19999/rtp/239.254.200.153:6000
+#EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="☘️上海市",上海游戏风云
+http://27.184.29.239:12312/rtp/239.254.201.163:6354
+#EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="☘️上海市",上海游戏风云
+http://27.191.203.209:19999/rtp/239.254.201.163:6354
 #EXTINF:-1 tvg-id="上海东方财经" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经
 http://27.184.29.239:12312/rtp/239.254.201.181:7214
 #EXTINF:-1 tvg-id="上海东方财经" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经
@@ -675,22 +687,6 @@ http://27.191.203.209:19999/rtp/239.254.200.35:6000
 http://27.184.29.239:12312/rtp/239.254.200.42:6000
 #EXTINF:-1 tvg-id="沧州新闻综合" tvg-name="沧州新闻综合" group-title="☘️上海市",沧州新闻综合
 http://27.191.203.209:19999/rtp/239.254.200.42:6000
-#EXTINF:-1 tvg-id="河北三佳购物" tvg-name="河北三佳购物" group-title="其它频道",河北三佳购物
-http://27.184.29.239:12312/rtp/239.254.200.143:6000
-#EXTINF:-1 tvg-id="河北三佳购物" tvg-name="河北三佳购物" group-title="其它频道",河北三佳购物
-http://27.191.203.209:19999/rtp/239.254.200.143:6000
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://27.184.29.239:12312/rtp/239.254.200.82:8140
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://27.191.203.209:19999/rtp/239.254.200.82:8140
-#EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="其它频道",上海游戏风云
-http://27.184.29.239:12312/rtp/239.254.201.163:6354
-#EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="其它频道",上海游戏风云
-http://27.191.203.209:19999/rtp/239.254.201.163:6354
-#EXTINF:-1 tvg-id="CGTN记录" tvg-name="CGTN记录" group-title="其它频道",CGTN记录
-http://27.184.29.239:12312/rtp/239.254.201.208:4220
-#EXTINF:-1 tvg-id="CGTN记录" tvg-name="CGTN记录" group-title="其它频道",CGTN记录
-http://27.191.203.209:19999/rtp/239.254.201.208:4220
 #EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
 http://27.184.29.239:12312/rtp/239.254.200.45:8008
 #EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
@@ -839,6 +835,10 @@ http://27.191.203.209:19999/rtp/239.254.201.206:4220
 http://27.184.29.239:12312/rtp/239.254.200.12:8056
 #EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
 http://27.191.203.209:19999/rtp/239.254.200.12:8056
+#EXTINF:-1 tvg-id="CGTN记录" tvg-name="CGTN记录" group-title="央视频道",CGTN记录
+http://27.184.29.239:12312/rtp/239.254.201.208:4220
+#EXTINF:-1 tvg-id="CGTN记录" tvg-name="CGTN记录" group-title="央视频道",CGTN记录
+http://27.191.203.209:19999/rtp/239.254.201.208:4220
 #EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语
 http://27.184.29.239:12312/rtp/239.254.201.209:4220
 #EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语

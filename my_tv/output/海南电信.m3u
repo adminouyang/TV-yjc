@@ -51,6 +51,8 @@ http://223.198.243.6:4000/rtp/239.253.64.38:5140
 http://223.198.243.6:4000/rtp/239.253.64.36:5140
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山西卫视
 http://223.198.243.6:4000/rtp/239.253.64.31:5140
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://223.198.243.6:4000/rtp/239.253.64.37:5140
 #EXTINF:-1 tvg-id="内蒙古卫视" tvg-name="内蒙古卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",内蒙古卫视
 http://223.198.243.6:4000/rtp/239.253.64.144:5140
 #EXTINF:-1 tvg-id="宁夏卫视" tvg-name="宁夏卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",宁夏卫视
@@ -165,16 +167,14 @@ http://223.198.243.6:4000/rtp/239.253.64.128:5140
 http://223.198.243.6:4000/rtp/239.253.64.139:5140
 #EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
 http://223.198.243.6:4000/rtp/239.253.64.17:5140
+#EXTINF:-1 tvg-id="CGTN记录" tvg-name="CGTN记录" group-title="央视频道",CGTN记录
+http://223.198.243.6:4000/rtp/239.253.64.58:5140
 #EXTINF:-1 tvg-id="中国天气" tvg-name="中国天气" group-title="央视频道",中国天气
 http://223.198.243.6:4000/rtp/239.253.64.79:5140
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://223.198.243.6:4000/rtp/239.253.64.37:5140
-#EXTINF:-1 tvg-id="上海纪实" tvg-name="上海纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%8A%E6%B5%B7%E7%BA%AA%E5%AE%9E.png" group-title="其它频道",上海纪实
-http://223.198.243.6:4000/rtp/239.253.64.149:5140
-#EXTINF:-1 tvg-id="CGTN记录" tvg-name="CGTN记录" group-title="其它频道",CGTN记录
-http://223.198.243.6:4000/rtp/239.253.64.58:5140
 #EXTINF:-1 tvg-id="金鹰纪实" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实
 http://223.198.243.6:4000/rtp/239.253.64.168:5140
+#EXTINF:-1 tvg-id="上海纪实" tvg-name="上海纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%8A%E6%B5%B7%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",上海纪实
+http://223.198.243.6:4000/rtp/239.253.64.149:5140
 #EXTINF:-1 tvg-id="金鹰卡通" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通
 http://223.198.243.6:4000/rtp/239.253.64.148:5140
 #EXTINF:-1 tvg-id="卡酷少儿" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿
