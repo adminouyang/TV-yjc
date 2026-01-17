@@ -147,6 +147,30 @@ http://106.59.3.168:55555/rtp/239.200.201.121:8780
 http://106.59.2.106:55555/rtp/239.200.201.122:8784
 #EXTINF:-1 tvg-id="CETV4" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4
 http://106.59.3.168:55555/rtp/239.200.201.122:8784
+#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
+http://106.59.2.106:55555/udp/239.200.200.30:8500
+#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
+http://106.59.3.168:55555/udp/239.200.200.30:8500
+#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="央视频道",CGTN纪录
+http://106.59.2.106:55555/udp/239.200.201.183:4220
+#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="央视频道",CGTN纪录
+http://106.59.3.168:55555/udp/239.200.201.183:4220
+#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="央视频道",CGTN阿拉伯语
+http://106.59.2.106:55555/udp/239.200.201.186:4220
+#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="央视频道",CGTN阿拉伯语
+http://106.59.3.168:55555/udp/239.200.201.186:4220
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="央视频道",CGTN俄语
+http://106.59.2.106:55555/udp/239.200.201.187:4220
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="央视频道",CGTN俄语
+http://106.59.3.168:55555/udp/239.200.201.187:4220
+#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语
+http://106.59.2.106:55555/udp/239.200.201.184:4220
+#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语
+http://106.59.3.168:55555/udp/239.200.201.184:4220
+#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="央视频道",CGTN法语
+http://106.59.2.106:55555/rtp/239.200.201.185:4220
+#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="央视频道",CGTN法语
+http://106.59.3.168:55555/rtp/239.200.201.185:4220
 #EXTINF:-1 tvg-id="中国交通" tvg-name="中国交通" group-title="央视频道",中国交通
 http://106.59.2.106:55555/udp/239.200.201.138:8556
 #EXTINF:-1 tvg-id="中国交通" tvg-name="中国交通" group-title="央视频道",中国交通
@@ -171,6 +195,10 @@ http://106.59.3.168:55555/udp/239.200.200.77:9016
 http://106.59.2.106:55555/udp/239.200.200.73:9024
 #EXTINF:-1 tvg-id="华数电影2" tvg-name="华数电影2" group-title="数字频道",华数电影2
 http://106.59.3.168:55555/udp/239.200.200.73:9024
+#EXTINF:-1 tvg-id="先锋乒羽" tvg-name="先锋乒羽" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/XFBY.png" group-title="数字频道",先锋乒羽
+http://106.59.2.106:55555/rtp/239.200.201.33:4120
+#EXTINF:-1 tvg-id="先锋乒羽" tvg-name="先锋乒羽" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/XFBY.png" group-title="数字频道",先锋乒羽
+http://106.59.3.168:55555/rtp/239.200.201.33:4120
 #EXTINF:-1 tvg-id="卡酷少儿" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿
 http://106.59.2.106:55555/rtp/239.200.200.64:8324
 #EXTINF:-1 tvg-id="卡酷少儿" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿
@@ -195,130 +223,14 @@ http://106.59.3.168:55555/rtp/239.200.200.65:8328
 http://106.59.2.106:55555/rtp/239.200.200.103:8400
 #EXTINF:-1 tvg-id="快乐垂钓" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓
 http://106.59.3.168:55555/rtp/239.200.200.103:8400
+#EXTINF:-1 tvg-id="茶频道" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="数字频道",茶频道
+http://106.59.2.106:55555/rtp/239.200.201.36:8404
+#EXTINF:-1 tvg-id="茶频道" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="数字频道",茶频道
+http://106.59.3.168:55555/rtp/239.200.201.36:8404
 #EXTINF:-1 tvg-id="河南梨园频道" tvg-name="河南梨园频道" group-title="数字频道",河南梨园频道
 http://106.59.2.106:55555/rtp/239.200.200.101:8048
 #EXTINF:-1 tvg-id="河南梨园频道" tvg-name="河南梨园频道" group-title="数字频道",河南梨园频道
 http://106.59.3.168:55555/rtp/239.200.200.101:8048
-#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="其它频道",CGTN英语
-http://106.59.2.106:55555/udp/239.200.200.30:8500
-#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="其它频道",CGTN英语
-http://106.59.3.168:55555/udp/239.200.200.30:8500
-#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录
-http://106.59.2.106:55555/udp/239.200.201.183:4220
-#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录
-http://106.59.3.168:55555/udp/239.200.201.183:4220
-#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语
-http://106.59.2.106:55555/udp/239.200.201.186:4220
-#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语
-http://106.59.3.168:55555/udp/239.200.201.186:4220
-#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语
-http://106.59.2.106:55555/udp/239.200.201.187:4220
-#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语
-http://106.59.3.168:55555/udp/239.200.201.187:4220
-#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语
-http://106.59.2.106:55555/udp/239.200.201.184:4220
-#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语
-http://106.59.3.168:55555/udp/239.200.201.184:4220
-#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="其它频道",CGTN法语
-http://106.59.2.106:55555/rtp/239.200.201.185:4220
-#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="其它频道",CGTN法语
-http://106.59.3.168:55555/rtp/239.200.201.185:4220
-#EXTINF:-1 tvg-id="内蒙卫视" tvg-name="内蒙卫视" group-title="其它频道",内蒙卫视
-http://106.59.2.106:55555/rtp/239.200.200.57:8296
-#EXTINF:-1 tvg-id="内蒙卫视" tvg-name="内蒙卫视" group-title="其它频道",内蒙卫视
-http://106.59.3.168:55555/rtp/239.200.200.57:8296
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://106.59.2.106:55555/rtp/239.200.200.55:8288
-#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
-http://106.59.3.168:55555/rtp/239.200.200.55:8288
-#EXTINF:-1 tvg-id="云南娱乐频道" tvg-name="云南娱乐频道" group-title="其它频道",云南娱乐频道
-http://106.59.2.106:55555/rtp/239.200.200.13:8848
-#EXTINF:-1 tvg-id="云南娱乐频道" tvg-name="云南娱乐频道" group-title="其它频道",云南娱乐频道
-http://106.59.3.168:55555/rtp/239.200.200.13:8848
-#EXTINF:-1 tvg-id="云南影视频道" tvg-name="云南影视频道" group-title="其它频道",云南影视频道
-http://106.59.2.106:55555/rtp/239.200.200.15:8856
-#EXTINF:-1 tvg-id="云南影视频道" tvg-name="云南影视频道" group-title="其它频道",云南影视频道
-http://106.59.3.168:55555/rtp/239.200.200.15:8856
-#EXTINF:-1 tvg-id="云南康旅频道" tvg-name="云南康旅频道" group-title="其它频道",云南康旅频道
-http://106.59.2.106:55555/rtp/239.200.200.31:8860
-#EXTINF:-1 tvg-id="云南康旅频道" tvg-name="云南康旅频道" group-title="其它频道",云南康旅频道
-http://106.59.3.168:55555/rtp/239.200.200.31:8860
-#EXTINF:-1 tvg-id="云南少儿频道" tvg-name="云南少儿频道" group-title="其它频道",云南少儿频道
-http://106.59.2.106:55555/rtp/239.200.200.32:8864
-#EXTINF:-1 tvg-id="云南少儿频道" tvg-name="云南少儿频道" group-title="其它频道",云南少儿频道
-http://106.59.3.168:55555/rtp/239.200.200.32:8864
-#EXTINF:-1 tvg-id="澜湄国际频道" tvg-name="澜湄国际频道" group-title="其它频道",澜湄国际频道
-http://106.59.2.106:55555/rtp/239.200.200.33:8024
-#EXTINF:-1 tvg-id="澜湄国际频道" tvg-name="澜湄国际频道" group-title="其它频道",澜湄国际频道
-http://106.59.3.168:55555/rtp/239.200.200.33:8024
-#EXTINF:-1 tvg-id="云南4K频道" tvg-name="云南4K频道" group-title="其它频道",云南4K频道
-http://106.59.2.106:55555/rtp/239.200.200.178:8884
-#EXTINF:-1 tvg-id="云南4K频道" tvg-name="云南4K频道" group-title="其它频道",云南4K频道
-http://106.59.3.168:55555/rtp/239.200.200.178:8884
-#EXTINF:-1 tvg-id="楚雄新闻频道" tvg-name="楚雄新闻频道" group-title="其它频道",楚雄新闻频道
-http://106.59.2.106:55555/rtp/239.200.200.116:8708
-#EXTINF:-1 tvg-id="楚雄新闻频道" tvg-name="楚雄新闻频道" group-title="其它频道",楚雄新闻频道
-http://106.59.3.168:55555/rtp/239.200.200.116:8708
-#EXTINF:-1 tvg-id="禄丰市电视台" tvg-name="禄丰市电视台" group-title="其它频道",禄丰市电视台
-http://106.59.2.106:55555/rtp/239.200.200.163:8798
-#EXTINF:-1 tvg-id="禄丰市电视台" tvg-name="禄丰市电视台" group-title="其它频道",禄丰市电视台
-http://106.59.3.168:55555/rtp/239.200.200.163:8798
-#EXTINF:-1 tvg-id="华数动漫" tvg-name="华数动漫" group-title="其它频道",华数动漫
-http://106.59.2.106:55555/rtp/239.200.200.75:9000
-#EXTINF:-1 tvg-id="华数动漫" tvg-name="华数动漫" group-title="其它频道",华数动漫
-http://106.59.3.168:55555/rtp/239.200.200.75:9000
-#EXTINF:-1 tvg-id="先锋乒羽" tvg-name="先锋乒羽" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/XFBY.png" group-title="其它频道",先锋乒羽
-http://106.59.2.106:55555/rtp/239.200.201.33:4120
-#EXTINF:-1 tvg-id="先锋乒羽" tvg-name="先锋乒羽" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/XFBY.png" group-title="其它频道",先锋乒羽
-http://106.59.3.168:55555/rtp/239.200.201.33:4120
-#EXTINF:-1 tvg-id="重庆汽摩" tvg-name="重庆汽摩" tvg-logo="https://tb.zbds.top/logo/重庆汽摩.png" group-title="其它频道",重庆汽摩
-http://106.59.2.106:55555/rtp/239.200.200.98:8052
-#EXTINF:-1 tvg-id="重庆汽摩" tvg-name="重庆汽摩" tvg-logo="https://tb.zbds.top/logo/重庆汽摩.png" group-title="其它频道",重庆汽摩
-http://106.59.3.168:55555/rtp/239.200.200.98:8052
-#EXTINF:-1 tvg-id="IPTV1" tvg-name="IPTV1" group-title="其它频道",IPTV1
-http://106.59.2.106:55555/udp/239.200.200.81:1234
-#EXTINF:-1 tvg-id="IPTV1" tvg-name="IPTV1" group-title="其它频道",IPTV1
-http://106.59.3.168:55555/udp/239.200.200.81:1234
-#EXTINF:-1 tvg-id="IPTV2" tvg-name="IPTV2" group-title="其它频道",IPTV2
-http://106.59.2.106:55555/rtp/239.200.200.79:1234
-#EXTINF:-1 tvg-id="IPTV2" tvg-name="IPTV2" group-title="其它频道",IPTV2
-http://106.59.3.168:55555/rtp/239.200.200.79:1234
-#EXTINF:-1 tvg-id="IPTV3" tvg-name="IPTV3" group-title="其它频道",IPTV3
-http://106.59.2.106:55555/udp/239.200.200.76:9004
-#EXTINF:-1 tvg-id="IPTV3" tvg-name="IPTV3" group-title="其它频道",IPTV3
-http://106.59.3.168:55555/udp/239.200.200.76:9004
-#EXTINF:-1 tvg-id="IPTV4" tvg-name="IPTV4" group-title="其它频道",IPTV4
-http://106.59.2.106:55555/rtp/239.200.200.71:8012
-#EXTINF:-1 tvg-id="IPTV4" tvg-name="IPTV4" group-title="其它频道",IPTV4
-http://106.59.3.168:55555/rtp/239.200.200.71:8012
-#EXTINF:-1 tvg-id="IPTV5" tvg-name="IPTV5" group-title="其它频道",IPTV5
-http://106.59.2.106:55555/udp/239.200.201.5:4120
-#EXTINF:-1 tvg-id="IPTV5" tvg-name="IPTV5" group-title="其它频道",IPTV5
-http://106.59.3.168:55555/udp/239.200.201.5:4120
-#EXTINF:-1 tvg-id="IPTV6" tvg-name="IPTV6" group-title="其它频道",IPTV6
-http://106.59.2.106:55555/udp/239.200.201.81:4120
-#EXTINF:-1 tvg-id="IPTV6" tvg-name="IPTV6" group-title="其它频道",IPTV6
-http://106.59.3.168:55555/udp/239.200.201.81:4120
-#EXTINF:-1 tvg-id="IPTV7" tvg-name="IPTV7" group-title="其它频道",IPTV7
-http://106.59.2.106:55555/rtp/239.200.200.10:9008
-#EXTINF:-1 tvg-id="IPTV7" tvg-name="IPTV7" group-title="其它频道",IPTV7
-http://106.59.3.168:55555/rtp/239.200.200.10:9008
-#EXTINF:-1 tvg-id="IPTV10" tvg-name="IPTV10" group-title="其它频道",IPTV10
-http://106.59.2.106:55555/rtp/239.200.200.80:1234
-#EXTINF:-1 tvg-id="IPTV10" tvg-name="IPTV10" group-title="其它频道",IPTV10
-http://106.59.3.168:55555/rtp/239.200.200.80:1234
-#EXTINF:-1 tvg-id="茶频道" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="其它频道",茶频道
-http://106.59.2.106:55555/rtp/239.200.201.36:8404
-#EXTINF:-1 tvg-id="茶频道" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="其它频道",茶频道
-http://106.59.3.168:55555/rtp/239.200.201.36:8404
-#EXTINF:-1 tvg-id="河南文物宝库" tvg-name="河南文物宝库" group-title="其它频道",河南文物宝库
-http://106.59.2.106:55555/rtp/239.200.200.96:8112
-#EXTINF:-1 tvg-id="河南文物宝库" tvg-name="河南文物宝库" group-title="其它频道",河南文物宝库
-http://106.59.3.168:55555/rtp/239.200.200.96:8112
-#EXTINF:-1 tvg-id="河南武术世界" tvg-name="河南武术世界" group-title="其它频道",河南武术世界
-http://106.59.2.106:55555/rtp/239.200.200.90:8064
-#EXTINF:-1 tvg-id="河南武术世界" tvg-name="河南武术世界" group-title="其它频道",河南武术世界
-http://106.59.3.168:55555/rtp/239.200.200.90:8064
 #EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视
 http://106.59.2.106:55555/rtp/239.200.200.145:8840
 #EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视
@@ -443,10 +355,78 @@ http://106.59.3.168:55555/rtp/239.200.201.136:8140
 http://106.59.2.106:55555/rtp/239.200.201.77:8132
 #EXTINF:-1 tvg-id="山东教育卫视" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视
 http://106.59.3.168:55555/rtp/239.200.201.77:8132
+#EXTINF:-1 tvg-id="内蒙卫视" tvg-name="内蒙卫视" group-title="其它频道",内蒙卫视
+http://106.59.2.106:55555/rtp/239.200.200.57:8296
+#EXTINF:-1 tvg-id="内蒙卫视" tvg-name="内蒙卫视" group-title="其它频道",内蒙卫视
+http://106.59.3.168:55555/rtp/239.200.200.57:8296
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
+http://106.59.2.106:55555/rtp/239.200.200.55:8288
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
+http://106.59.3.168:55555/rtp/239.200.200.55:8288
+#EXTINF:-1 tvg-id="IPTV2" tvg-name="IPTV2" group-title="其它频道",IPTV2
+http://106.59.2.106:55555/rtp/239.200.200.79:1234
+#EXTINF:-1 tvg-id="IPTV2" tvg-name="IPTV2" group-title="其它频道",IPTV2
+http://106.59.3.168:55555/rtp/239.200.200.79:1234
+#EXTINF:-1 tvg-id="IPTV3" tvg-name="IPTV3" group-title="其它频道",IPTV3
+http://106.59.2.106:55555/udp/239.200.200.76:9004
+#EXTINF:-1 tvg-id="IPTV3" tvg-name="IPTV3" group-title="其它频道",IPTV3
+http://106.59.3.168:55555/udp/239.200.200.76:9004
+#EXTINF:-1 tvg-id="IPTV4" tvg-name="IPTV4" group-title="其它频道",IPTV4
+http://106.59.2.106:55555/rtp/239.200.200.71:8012
+#EXTINF:-1 tvg-id="IPTV4" tvg-name="IPTV4" group-title="其它频道",IPTV4
+http://106.59.3.168:55555/rtp/239.200.200.71:8012
+#EXTINF:-1 tvg-id="IPTV5" tvg-name="IPTV5" group-title="其它频道",IPTV5
+http://106.59.2.106:55555/udp/239.200.201.5:4120
+#EXTINF:-1 tvg-id="IPTV5" tvg-name="IPTV5" group-title="其它频道",IPTV5
+http://106.59.3.168:55555/udp/239.200.201.5:4120
+#EXTINF:-1 tvg-id="IPTV6" tvg-name="IPTV6" group-title="其它频道",IPTV6
+http://106.59.2.106:55555/udp/239.200.201.81:4120
+#EXTINF:-1 tvg-id="IPTV6" tvg-name="IPTV6" group-title="其它频道",IPTV6
+http://106.59.3.168:55555/udp/239.200.201.81:4120
+#EXTINF:-1 tvg-id="IPTV7" tvg-name="IPTV7" group-title="其它频道",IPTV7
+http://106.59.2.106:55555/rtp/239.200.200.10:9008
+#EXTINF:-1 tvg-id="IPTV7" tvg-name="IPTV7" group-title="其它频道",IPTV7
+http://106.59.3.168:55555/rtp/239.200.200.10:9008
 #EXTINF:-1 tvg-id="云南都市频道" tvg-name="云南都市频道" group-title="☘️上海市",云南都市频道
 http://106.59.2.106:55555/rtp/239.200.200.12:8844
 #EXTINF:-1 tvg-id="云南都市频道" tvg-name="云南都市频道" group-title="☘️上海市",云南都市频道
 http://106.59.3.168:55555/rtp/239.200.200.12:8844
+#EXTINF:-1 tvg-id="云南娱乐频道" tvg-name="云南娱乐频道" group-title="☘️云南省",云南娱乐频道
+http://106.59.2.106:55555/rtp/239.200.200.13:8848
+#EXTINF:-1 tvg-id="云南娱乐频道" tvg-name="云南娱乐频道" group-title="☘️云南省",云南娱乐频道
+http://106.59.3.168:55555/rtp/239.200.200.13:8848
+#EXTINF:-1 tvg-id="云南影视频道" tvg-name="云南影视频道" group-title="☘️云南省",云南影视频道
+http://106.59.2.106:55555/rtp/239.200.200.15:8856
+#EXTINF:-1 tvg-id="云南影视频道" tvg-name="云南影视频道" group-title="☘️云南省",云南影视频道
+http://106.59.3.168:55555/rtp/239.200.200.15:8856
+#EXTINF:-1 tvg-id="云南康旅频道" tvg-name="云南康旅频道" group-title="☘️云南省",云南康旅频道
+http://106.59.2.106:55555/rtp/239.200.200.31:8860
+#EXTINF:-1 tvg-id="云南康旅频道" tvg-name="云南康旅频道" group-title="☘️云南省",云南康旅频道
+http://106.59.3.168:55555/rtp/239.200.200.31:8860
+#EXTINF:-1 tvg-id="云南少儿频道" tvg-name="云南少儿频道" group-title="☘️云南省",云南少儿频道
+http://106.59.2.106:55555/rtp/239.200.200.32:8864
+#EXTINF:-1 tvg-id="云南少儿频道" tvg-name="云南少儿频道" group-title="☘️云南省",云南少儿频道
+http://106.59.3.168:55555/rtp/239.200.200.32:8864
+#EXTINF:-1 tvg-id="澜湄国际频道" tvg-name="澜湄国际频道" group-title="☘️云南省",澜湄国际频道
+http://106.59.2.106:55555/rtp/239.200.200.33:8024
+#EXTINF:-1 tvg-id="澜湄国际频道" tvg-name="澜湄国际频道" group-title="☘️云南省",澜湄国际频道
+http://106.59.3.168:55555/rtp/239.200.200.33:8024
+#EXTINF:-1 tvg-id="楚雄新闻频道" tvg-name="楚雄新闻频道" group-title="☘️云南省",楚雄新闻频道
+http://106.59.2.106:55555/rtp/239.200.200.116:8708
+#EXTINF:-1 tvg-id="楚雄新闻频道" tvg-name="楚雄新闻频道" group-title="☘️云南省",楚雄新闻频道
+http://106.59.3.168:55555/rtp/239.200.200.116:8708
+#EXTINF:-1 tvg-id="禄丰市电视台" tvg-name="禄丰市电视台" group-title="☘️云南省",禄丰市电视台
+http://106.59.2.106:55555/rtp/239.200.200.163:8798
+#EXTINF:-1 tvg-id="禄丰市电视台" tvg-name="禄丰市电视台" group-title="☘️云南省",禄丰市电视台
+http://106.59.3.168:55555/rtp/239.200.200.163:8798
+#EXTINF:-1 tvg-id="华数动漫" tvg-name="华数动漫" group-title="☘️云南省",华数动漫
+http://106.59.2.106:55555/rtp/239.200.200.75:9000
+#EXTINF:-1 tvg-id="华数动漫" tvg-name="华数动漫" group-title="☘️云南省",华数动漫
+http://106.59.3.168:55555/rtp/239.200.200.75:9000
+#EXTINF:-1 tvg-id="云南4K频道" tvg-name="云南4K频道" group-title="4K频道",云南4K频道
+http://106.59.2.106:55555/rtp/239.200.200.178:8884
+#EXTINF:-1 tvg-id="云南4K频道" tvg-name="云南4K频道" group-title="4K频道",云南4K频道
+http://106.59.3.168:55555/rtp/239.200.200.178:8884
 #EXTINF:-1 tvg-id="华数电视剧1" tvg-name="华数电视剧1" group-title="☘️福建省",华数电视剧1
 http://106.59.2.106:55555/rtp/239.200.200.72:9020
 #EXTINF:-1 tvg-id="华数电视剧1" tvg-name="华数电视剧1" group-title="☘️福建省",华数电视剧1
@@ -463,3 +443,23 @@ http://106.59.3.168:55555/udp/239.200.200.11:8072
 http://106.59.2.106:55555/rtp/239.200.200.78:1234
 #EXTINF:-1 tvg-id="华数电视剧4" tvg-name="华数电视剧4" group-title="☘️福建省",华数电视剧4
 http://106.59.3.168:55555/rtp/239.200.200.78:1234
+#EXTINF:-1 tvg-id="重庆汽摩" tvg-name="重庆汽摩" tvg-logo="https://tb.zbds.top/logo/重庆汽摩.png" group-title="☘️天津市",重庆汽摩
+http://106.59.2.106:55555/rtp/239.200.200.98:8052
+#EXTINF:-1 tvg-id="重庆汽摩" tvg-name="重庆汽摩" tvg-logo="https://tb.zbds.top/logo/重庆汽摩.png" group-title="☘️天津市",重庆汽摩
+http://106.59.3.168:55555/rtp/239.200.200.98:8052
+#EXTINF:-1 tvg-id="IPTV1" tvg-name="IPTV1" group-title="☘️吉林省",IPTV1
+http://106.59.2.106:55555/udp/239.200.200.81:1234
+#EXTINF:-1 tvg-id="IPTV1" tvg-name="IPTV1" group-title="☘️吉林省",IPTV1
+http://106.59.3.168:55555/udp/239.200.200.81:1234
+#EXTINF:-1 tvg-id="IPTV10" tvg-name="IPTV10" group-title="☘️吉林省",IPTV10
+http://106.59.2.106:55555/rtp/239.200.200.80:1234
+#EXTINF:-1 tvg-id="IPTV10" tvg-name="IPTV10" group-title="☘️吉林省",IPTV10
+http://106.59.3.168:55555/rtp/239.200.200.80:1234
+#EXTINF:-1 tvg-id="河南文物宝库" tvg-name="河南文物宝库" group-title="☘️河南省",河南文物宝库
+http://106.59.2.106:55555/rtp/239.200.200.96:8112
+#EXTINF:-1 tvg-id="河南文物宝库" tvg-name="河南文物宝库" group-title="☘️河南省",河南文物宝库
+http://106.59.3.168:55555/rtp/239.200.200.96:8112
+#EXTINF:-1 tvg-id="河南武术世界" tvg-name="河南武术世界" group-title="☘️河南省",河南武术世界
+http://106.59.2.106:55555/rtp/239.200.200.90:8064
+#EXTINF:-1 tvg-id="河南武术世界" tvg-name="河南武术世界" group-title="☘️河南省",河南武术世界
+http://106.59.3.168:55555/rtp/239.200.200.90:8064

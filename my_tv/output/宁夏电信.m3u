@@ -45,17 +45,17 @@ http://111.113.88.15:2000/rtp/239.121.4.124:8002
 http://111.113.88.15:2000/rtp/239.121.4.123:8000
 #EXTINF:-1 tvg-id="中国天气" tvg-name="中国天气" group-title="央视频道",中国天气
 http://111.113.88.15:2000/rtp/239.121.4.112:8654
-#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语
+#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="央视频道",CGTN阿拉伯语
 http://111.113.88.15:2000/rtp/239.121.4.207:8026
-#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="央视频道",CGTN俄语
 http://111.113.88.15:2000/rtp/239.121.4.208:8030
-#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="其它频道",CGTN法语
+#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="央视频道",CGTN法语
 http://111.113.88.15:2000/rtp/239.121.4.206:8024
-#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语
+#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语
 http://111.113.88.15:2000/rtp/239.121.4.137:8020
-#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录
+#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="央视频道",CGTN纪录
 http://111.113.88.15:2000/rtp/239.121.4.136:8018
-#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="其它频道",CGTN英语
+#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
 http://111.113.88.15:2000/rtp/239.121.4.125:8014
 #EXTINF:-1 tvg-id="上海欢笑剧场" tvg-name="上海欢笑剧场" group-title="数字频道",上海欢笑剧场
 http://111.113.88.15:2000/rtp/239.121.4.64:8358

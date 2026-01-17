@@ -323,30 +323,6 @@ http://183.236.43.98:4013/udp/239.253.43.73:5146
 http://113.119.26.1:58888/udp/239.253.43.13:5146
 #EXTINF:-1 tvg-id="CCTV-文化精品" tvg-name="CCTV-文化精品" group-title="其它频道",CCTV-文化精品
 http://183.236.43.98:4013/udp/239.253.43.13:5146
-#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录
-http://113.119.26.1:58888/udp/239.253.43.122:5146
-#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录
-http://183.236.43.98:4013/udp/239.253.43.122:5146
-#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="其它频道",CGTN英语
-http://113.119.26.1:58888/udp/239.77.0.199:5146
-#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="其它频道",CGTN英语
-http://183.236.43.98:4013/udp/239.77.0.199:5146
-#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语
-http://113.119.26.1:58888/udp/239.77.0.221:5146
-#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语
-http://183.236.43.98:4013/udp/239.77.0.221:5146
-#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="其它频道",CGTN法语
-http://113.119.26.1:58888/udp/239.77.0.228:5146
-#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="其它频道",CGTN法语
-http://183.236.43.98:4013/udp/239.77.0.228:5146
-#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语
-http://113.119.26.1:58888/udp/239.253.43.200:5146
-#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语
-http://183.236.43.98:4013/udp/239.253.43.200:5146
-#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语
-http://113.119.26.1:58888/udp/239.253.43.201:5146
-#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语
-http://183.236.43.98:4013/udp/239.253.43.201:5146
 #EXTINF:-1 tvg-id="深圳都市频道" tvg-name="深圳都市频道" group-title="☘️上海市",深圳都市频道
 http://113.119.26.1:58888/udp/239.77.1.176:5146
 #EXTINF:-1 tvg-id="深圳都市频道" tvg-name="深圳都市频道" group-title="☘️上海市",深圳都市频道
@@ -503,3 +479,27 @@ http://183.236.43.98:4013/udp/239.253.43.40:5146
 http://113.119.26.1:58888/udp/239.77.0.180:5146
 #EXTINF:-1 tvg-id="CETV早期教育" tvg-name="CETV早期教育" group-title="央视频道",CETV早期教育
 http://183.236.43.98:4013/udp/239.77.0.180:5146
+#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="央视频道",CGTN纪录
+http://113.119.26.1:58888/udp/239.253.43.122:5146
+#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="央视频道",CGTN纪录
+http://183.236.43.98:4013/udp/239.253.43.122:5146
+#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
+http://113.119.26.1:58888/udp/239.77.0.199:5146
+#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
+http://183.236.43.98:4013/udp/239.77.0.199:5146
+#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语
+http://113.119.26.1:58888/udp/239.77.0.221:5146
+#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语
+http://183.236.43.98:4013/udp/239.77.0.221:5146
+#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="央视频道",CGTN法语
+http://113.119.26.1:58888/udp/239.77.0.228:5146
+#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="央视频道",CGTN法语
+http://183.236.43.98:4013/udp/239.77.0.228:5146
+#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="央视频道",CGTN阿拉伯语
+http://113.119.26.1:58888/udp/239.253.43.200:5146
+#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="央视频道",CGTN阿拉伯语
+http://183.236.43.98:4013/udp/239.253.43.200:5146
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="央视频道",CGTN俄语
+http://113.119.26.1:58888/udp/239.253.43.201:5146
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="央视频道",CGTN俄语
+http://183.236.43.98:4013/udp/239.253.43.201:5146

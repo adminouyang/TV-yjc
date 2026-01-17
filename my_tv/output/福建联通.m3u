@@ -101,8 +101,6 @@ http://112.109.206.85:9999/rtp/239.255.40.172:8208
 http://112.109.206.85:9999/rtp/239.255.40.140:8208
 #EXTINF:-1 tvg-id="华数电视剧" tvg-name="华数电视剧" group-title="☘️福建省",华数电视剧
 http://112.109.206.85:9999/rtp/239.255.40.65:8208
-#EXTINF:-1 tvg-id="华数影视" tvg-name="华数影视" group-title="☘️福建省",华数影视
-http://112.109.206.85:9999/rtp/239.255.40.159:8208
 #EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
 http://112.109.206.85:9999/rtp/239.255.40.35:8208
 #EXTINF:-1 tvg-id="CCTV-2财经" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经
@@ -145,26 +143,24 @@ http://112.109.206.85:9999/rtp/239.255.40.201:8208
 http://112.109.206.85:9999/rtp/239.255.40.30:8208
 #EXTINF:-1 tvg-id="CETV4" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4
 http://112.109.206.85:9999/rtp/239.255.40.31:8208
+#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
+http://112.109.206.85:9999/rtp/239.255.40.5:8208
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="央视频道",CGTN俄语
+http://112.109.206.85:9999/rtp/239.255.40.179:8208
+#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="央视频道",CGTN法语
+http://112.109.206.85:9999/rtp/239.255.40.178:8208
+#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="央视频道",CGTN纪录
+http://112.109.206.85:9999/rtp/239.255.40.183:8208
 #EXTINF:-1 tvg-id="中国天气" tvg-name="中国天气" group-title="央视频道",中国天气
 http://112.109.206.85:9999/rtp/239.255.40.89:8208
 #EXTINF:-1 tvg-id="中国交通" tvg-name="中国交通" group-title="央视频道",中国交通
 http://112.109.206.85:9999/rtp/239.255.40.211:8208
 #EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
 http://112.109.206.85:9999/rtp/239.255.40.10:8208
-#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="其它频道",CGTN英语
-http://112.109.206.85:9999/rtp/239.255.40.5:8208
-#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语
-http://112.109.206.85:9999/rtp/239.255.40.179:8208
-#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="其它频道",CGTN法语
-http://112.109.206.85:9999/rtp/239.255.40.178:8208
-#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录
-http://112.109.206.85:9999/rtp/239.255.40.183:8208
 #EXTINF:-1 tvg-id="山东教育" tvg-name="山东教育" tvg-logo="https://tb.zbds.top/logo/山东教育卫视.png" group-title="其它频道",山东教育
 http://112.109.206.85:9999/rtp/239.255.40.32:8208
 #EXTINF:-1 tvg-id="IPTV体育" tvg-name="IPTV体育" group-title="其它频道",IPTV体育
 http://112.109.206.85:9999/rtp/239.255.40.71:8208
-#EXTINF:-1 tvg-id="IPTV相声小品" tvg-name="IPTV相声小品" group-title="其它频道",IPTV相声小品
-http://112.109.206.85:9999/rtp/239.255.40.59:8208
 #EXTINF:-1 tvg-id="IPTV魅力时尚" tvg-name="IPTV魅力时尚" group-title="其它频道",IPTV魅力时尚
 http://112.109.206.85:9999/rtp/239.255.40.67:8208
 #EXTINF:-1 tvg-id="睛彩青少" tvg-name="睛彩青少" group-title="数字频道",睛彩青少
@@ -177,10 +173,14 @@ http://112.109.206.85:9999/rtp/239.255.40.209:8208
 http://112.109.206.85:9999/rtp/239.255.40.210:8208
 #EXTINF:-1 tvg-id="华数电影" tvg-name="华数电影" group-title="数字频道",华数电影
 http://112.109.206.85:9999/rtp/239.255.40.64:8208
+#EXTINF:-1 tvg-id="华数谍战剧场" tvg-name="华数谍战剧场" group-title="数字频道",华数谍战剧场
+http://112.109.206.85:9999/rtp/239.255.40.58:8208
 #EXTINF:-1 tvg-id="华数经典电影" tvg-name="华数经典电影" group-title="数字频道",华数经典电影
 http://112.109.206.85:9999/rtp/239.255.40.70:8208
 #EXTINF:-1 tvg-id="华数热播剧场" tvg-name="华数热播剧场" group-title="数字频道",华数热播剧场
 http://112.109.206.85:9999/rtp/239.255.40.69:8208
+#EXTINF:-1 tvg-id="华数影视" tvg-name="华数影视" group-title="数字频道",华数影视
+http://112.109.206.85:9999/rtp/239.255.40.159:8208
 #EXTINF:-1 tvg-id="华数少儿动画" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画
 http://112.109.206.85:9999/rtp/239.255.40.66:8208
 #EXTINF:-1 tvg-id="卡酷少儿" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿
@@ -199,7 +199,7 @@ http://112.109.206.85:9999/rtp/239.255.40.68:8208
 http://112.109.206.85:9999/rtp/239.255.40.62:8208
 #EXTINF:-1 tvg-id="IPTV法治" tvg-name="IPTV法治" group-title="数字频道",IPTV法治
 http://112.109.206.85:9999/rtp/239.255.40.61:8208
+#EXTINF:-1 tvg-id="IPTV相声小品" tvg-name="IPTV相声小品" group-title="数字频道",IPTV相声小品
+http://112.109.206.85:9999/rtp/239.255.40.59:8208
 #EXTINF:-1 tvg-id="IPTV野外" tvg-name="IPTV野外" group-title="数字频道",IPTV野外
 http://112.109.206.85:9999/rtp/239.255.40.60:8208
-#EXTINF:-1 tvg-id="华数谍战剧场" tvg-name="华数谍战剧场" group-title="☘️重庆市",华数谍战剧场
-http://112.109.206.85:9999/rtp/239.255.40.58:8208

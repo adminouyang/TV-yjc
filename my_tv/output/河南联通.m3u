@@ -143,62 +143,58 @@ http://115.58.216.71:4000/rtp/225.1.4.164:1205
 http://115.58.141.132:4000/rtp/225.1.4.52:1081
 #EXTINF:-1 tvg-id="河南都市频道" tvg-name="河南都市频道" group-title="☘️上海市",河南都市频道
 http://115.58.216.71:4000/rtp/225.1.4.52:1081
-#EXTINF:-1 tvg-id="河南民生频道" tvg-name="河南民生频道" group-title="其它频道",河南民生频道
+#EXTINF:-1 tvg-id="河南民生频道" tvg-name="河南民生频道" group-title="☘️河南省",河南民生频道
 http://115.58.141.132:4000/rtp/225.1.4.53:1082
-#EXTINF:-1 tvg-id="河南民生频道" tvg-name="河南民生频道" group-title="其它频道",河南民生频道
+#EXTINF:-1 tvg-id="河南民生频道" tvg-name="河南民生频道" group-title="☘️河南省",河南民生频道
 http://115.58.216.71:4000/rtp/225.1.4.53:1082
-#EXTINF:-1 tvg-id="河南法治频道" tvg-name="河南法治频道" group-title="其它频道",河南法治频道
+#EXTINF:-1 tvg-id="河南法治频道" tvg-name="河南法治频道" group-title="☘️河南省",河南法治频道
 http://115.58.141.132:4000/rtp/225.1.4.54:1083
-#EXTINF:-1 tvg-id="河南法治频道" tvg-name="河南法治频道" group-title="其它频道",河南法治频道
+#EXTINF:-1 tvg-id="河南法治频道" tvg-name="河南法治频道" group-title="☘️河南省",河南法治频道
 http://115.58.216.71:4000/rtp/225.1.4.54:1083
-#EXTINF:-1 tvg-id="河南电视剧频道" tvg-name="河南电视剧频道" group-title="其它频道",河南电视剧频道
+#EXTINF:-1 tvg-id="河南电视剧频道" tvg-name="河南电视剧频道" group-title="☘️河南省",河南电视剧频道
 http://115.58.141.132:4000/rtp/225.1.4.55:1084
-#EXTINF:-1 tvg-id="河南电视剧频道" tvg-name="河南电视剧频道" group-title="其它频道",河南电视剧频道
+#EXTINF:-1 tvg-id="河南电视剧频道" tvg-name="河南电视剧频道" group-title="☘️河南省",河南电视剧频道
 http://115.58.216.71:4000/rtp/225.1.4.55:1084
-#EXTINF:-1 tvg-id="河南新闻频道" tvg-name="河南新闻频道" group-title="其它频道",河南新闻频道
+#EXTINF:-1 tvg-id="河南新闻频道" tvg-name="河南新闻频道" group-title="☘️河南省",河南新闻频道
 http://115.58.141.132:4000/rtp/225.1.4.56:1085
-#EXTINF:-1 tvg-id="河南新闻频道" tvg-name="河南新闻频道" group-title="其它频道",河南新闻频道
+#EXTINF:-1 tvg-id="河南新闻频道" tvg-name="河南新闻频道" group-title="☘️河南省",河南新闻频道
 http://115.58.216.71:4000/rtp/225.1.4.56:1085
-#EXTINF:-1 tvg-id="河南公共频道" tvg-name="河南公共频道" group-title="其它频道",河南公共频道
+#EXTINF:-1 tvg-id="河南公共频道" tvg-name="河南公共频道" group-title="☘️河南省",河南公共频道
 http://115.58.141.132:4000/rtp/225.1.4.58:1087
-#EXTINF:-1 tvg-id="河南公共频道" tvg-name="河南公共频道" group-title="其它频道",河南公共频道
+#EXTINF:-1 tvg-id="河南公共频道" tvg-name="河南公共频道" group-title="☘️河南省",河南公共频道
 http://115.58.216.71:4000/rtp/225.1.4.58:1087
-#EXTINF:-1 tvg-id="河南乡村频道" tvg-name="河南乡村频道" group-title="其它频道",河南乡村频道
+#EXTINF:-1 tvg-id="河南乡村频道" tvg-name="河南乡村频道" group-title="☘️河南省",河南乡村频道
 http://115.58.141.132:4000/rtp/225.1.4.120:1149
-#EXTINF:-1 tvg-id="河南乡村频道" tvg-name="河南乡村频道" group-title="其它频道",河南乡村频道
+#EXTINF:-1 tvg-id="河南乡村频道" tvg-name="河南乡村频道" group-title="☘️河南省",河南乡村频道
 http://115.58.216.71:4000/rtp/225.1.4.120:1149
-#EXTINF:-1 tvg-id="河南收藏天下" tvg-name="河南收藏天下" group-title="其它频道",河南收藏天下
+#EXTINF:-1 tvg-id="河南收藏天下" tvg-name="河南收藏天下" group-title="☘️河南省",河南收藏天下
 http://115.58.141.132:4000/rtp/225.1.4.100:1129
-#EXTINF:-1 tvg-id="河南收藏天下" tvg-name="河南收藏天下" group-title="其它频道",河南收藏天下
+#EXTINF:-1 tvg-id="河南收藏天下" tvg-name="河南收藏天下" group-title="☘️河南省",河南收藏天下
 http://115.58.216.71:4000/rtp/225.1.4.100:1129
-#EXTINF:-1 tvg-id="河南戏曲频道" tvg-name="河南戏曲频道" group-title="其它频道",河南戏曲频道
+#EXTINF:-1 tvg-id="河南戏曲频道" tvg-name="河南戏曲频道" group-title="☘️河南省",河南戏曲频道
 http://115.58.141.132:4000/rtp/225.1.4.99:1128
-#EXTINF:-1 tvg-id="河南戏曲频道" tvg-name="河南戏曲频道" group-title="其它频道",河南戏曲频道
+#EXTINF:-1 tvg-id="河南戏曲频道" tvg-name="河南戏曲频道" group-title="☘️河南省",河南戏曲频道
 http://115.58.216.71:4000/rtp/225.1.4.99:1128
-#EXTINF:-1 tvg-id="河南中华功夫" tvg-name="河南中华功夫" group-title="其它频道",河南中华功夫
+#EXTINF:-1 tvg-id="河南中华功夫" tvg-name="河南中华功夫" group-title="☘️河南省",河南中华功夫
 http://115.58.141.132:4000/rtp/225.1.4.101:1130
-#EXTINF:-1 tvg-id="河南中华功夫" tvg-name="河南中华功夫" group-title="其它频道",河南中华功夫
+#EXTINF:-1 tvg-id="河南中华功夫" tvg-name="河南中华功夫" group-title="☘️河南省",河南中华功夫
 http://115.58.216.71:4000/rtp/225.1.4.101:1130
-#EXTINF:-1 tvg-id="河南移动电视" tvg-name="河南移动电视" group-title="其它频道",河南移动电视
+#EXTINF:-1 tvg-id="河南移动电视" tvg-name="河南移动电视" group-title="☘️河南省",河南移动电视
 http://115.58.141.132:4000/rtp/225.1.5.40:1350
-#EXTINF:-1 tvg-id="河南移动电视" tvg-name="河南移动电视" group-title="其它频道",河南移动电视
+#EXTINF:-1 tvg-id="河南移动电视" tvg-name="河南移动电视" group-title="☘️河南省",河南移动电视
 http://115.58.216.71:4000/rtp/225.1.5.40:1350
+#EXTINF:-1 tvg-id="河南IPTV导视" tvg-name="河南IPTV导视" group-title="☘️河南省",河南IPTV导视
+http://115.58.141.132:4000/rtp/225.1.4.194:1244
+#EXTINF:-1 tvg-id="河南IPTV导视" tvg-name="河南IPTV导视" group-title="☘️河南省",河南IPTV导视
+http://115.58.216.71:4000/rtp/225.1.4.194:1244
 #EXTINF:-1 tvg-id="河南欢腾购物" tvg-name="河南欢腾购物" group-title="其它频道",河南欢腾购物
 http://115.58.141.132:4000/rtp/225.1.4.57:1086
 #EXTINF:-1 tvg-id="河南欢腾购物" tvg-name="河南欢腾购物" group-title="其它频道",河南欢腾购物
 http://115.58.216.71:4000/rtp/225.1.4.57:1086
-#EXTINF:-1 tvg-id="河南IPTV导视" tvg-name="河南IPTV导视" group-title="其它频道",河南IPTV导视
-http://115.58.141.132:4000/rtp/225.1.4.194:1244
-#EXTINF:-1 tvg-id="河南IPTV导视" tvg-name="河南IPTV导视" group-title="其它频道",河南IPTV导视
-http://115.58.216.71:4000/rtp/225.1.4.194:1244
 #EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
 http://115.58.141.132:4000/rtp/225.1.4.39:1068
 #EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="其它频道",陕西卫视
 http://115.58.216.71:4000/rtp/225.1.4.39:1068
-#EXTINF:-1 tvg-id="IPTV相声小品" tvg-name="IPTV相声小品" group-title="其它频道",IPTV相声小品
-http://115.58.141.132:4000/rtp/225.1.4.186:1235
-#EXTINF:-1 tvg-id="IPTV相声小品" tvg-name="IPTV相声小品" group-title="其它频道",IPTV相声小品
-http://115.58.216.71:4000/rtp/225.1.4.186:1235
 #EXTINF:-1 tvg-id="IPTV音乐" tvg-name="IPTV音乐" group-title="其它频道",IPTV音乐
 http://115.58.141.132:4000/rtp/225.1.4.184:1224
 #EXTINF:-1 tvg-id="IPTV音乐" tvg-name="IPTV音乐" group-title="其它频道",IPTV音乐
@@ -207,22 +203,6 @@ http://115.58.216.71:4000/rtp/225.1.4.184:1224
 http://115.58.141.132:4000/rtp/225.1.4.176:1225
 #EXTINF:-1 tvg-id="IPTV生活" tvg-name="IPTV生活" group-title="其它频道",IPTV生活
 http://115.58.216.71:4000/rtp/225.1.4.176:1225
-#EXTINF:-1 tvg-id="IPTV好学生" tvg-name="IPTV好学生" group-title="其它频道",IPTV好学生
-http://115.58.141.132:4000/rtp/225.1.4.177:1226
-#EXTINF:-1 tvg-id="IPTV好学生" tvg-name="IPTV好学生" group-title="其它频道",IPTV好学生
-http://115.58.216.71:4000/rtp/225.1.4.177:1226
-#EXTINF:-1 tvg-id="IPTV美妆" tvg-name="IPTV美妆" group-title="其它频道",IPTV美妆
-http://115.58.141.132:4000/rtp/225.1.4.182:1231
-#EXTINF:-1 tvg-id="IPTV美妆" tvg-name="IPTV美妆" group-title="其它频道",IPTV美妆
-http://115.58.216.71:4000/rtp/225.1.4.182:1231
-#EXTINF:-1 tvg-id="IPTV地理" tvg-name="IPTV地理" group-title="其它频道",IPTV地理
-http://115.58.141.132:4000/rtp/225.1.4.183:1232
-#EXTINF:-1 tvg-id="IPTV地理" tvg-name="IPTV地理" group-title="其它频道",IPTV地理
-http://115.58.216.71:4000/rtp/225.1.4.183:1232
-#EXTINF:-1 tvg-id="IPTV足球" tvg-name="IPTV足球" group-title="其它频道",IPTV足球
-http://115.58.141.132:4000/rtp/225.1.4.200:1250
-#EXTINF:-1 tvg-id="IPTV足球" tvg-name="IPTV足球" group-title="其它频道",IPTV足球
-http://115.58.216.71:4000/rtp/225.1.4.200:1250
 #EXTINF:-1 tvg-id="IPTV综艺" tvg-name="IPTV综艺" group-title="其它频道",IPTV综艺
 http://115.58.141.132:4000/rtp/225.1.4.204:1252
 #EXTINF:-1 tvg-id="IPTV综艺" tvg-name="IPTV综艺" group-title="其它频道",IPTV综艺
@@ -231,46 +211,6 @@ http://115.58.216.71:4000/rtp/225.1.4.204:1252
 http://115.58.141.132:4000/rtp/225.1.4.168:1220
 #EXTINF:-1 tvg-id="IPTV体育" tvg-name="IPTV体育" group-title="其它频道",IPTV体育
 http://115.58.216.71:4000/rtp/225.1.4.168:1220
-#EXTINF:-1 tvg-id="IPTV收视指南" tvg-name="IPTV收视指南" group-title="其它频道",IPTV收视指南
-http://115.58.141.132:4000/rtp/225.1.4.50:1079
-#EXTINF:-1 tvg-id="IPTV收视指南" tvg-name="IPTV收视指南" group-title="其它频道",IPTV收视指南
-http://115.58.216.71:4000/rtp/225.1.4.50:1079
-#EXTINF:-1 tvg-id="华数爱电影" tvg-name="华数爱电影" group-title="其它频道",华数爱电影
-http://115.58.141.132:4000/rtp/225.1.4.6:1035
-#EXTINF:-1 tvg-id="华数爱电影" tvg-name="华数爱电影" group-title="其它频道",华数爱电影
-http://115.58.216.71:4000/rtp/225.1.4.6:1035
-#EXTINF:-1 tvg-id="爱大剧" tvg-name="爱大剧" group-title="其它频道",爱大剧
-http://115.58.141.132:4000/rtp/225.1.4.8:1037
-#EXTINF:-1 tvg-id="爱大剧" tvg-name="爱大剧" group-title="其它频道",爱大剧
-http://115.58.216.71:4000/rtp/225.1.4.8:1037
-#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="其它频道",CGTN英语
-http://115.58.141.132:4000/rtp/225.1.5.34:1344
-#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="其它频道",CGTN英语
-http://115.58.216.71:4000/rtp/225.1.5.34:1344
-#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录
-http://115.58.141.132:4000/rtp/225.1.5.35:1345
-#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="其它频道",CGTN纪录
-http://115.58.216.71:4000/rtp/225.1.5.35:1345
-#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语
-http://115.58.141.132:4000/rtp/225.1.5.36:1346
-#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="其它频道",CGTN西班牙语
-http://115.58.216.71:4000/rtp/225.1.5.36:1346
-#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="其它频道",CGTN法语
-http://115.58.141.132:4000/rtp/225.1.5.37:1347
-#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="其它频道",CGTN法语
-http://115.58.216.71:4000/rtp/225.1.5.37:1347
-#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语
-http://115.58.141.132:4000/rtp/225.1.5.38:1348
-#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="其它频道",CGTN阿拉伯语
-http://115.58.216.71:4000/rtp/225.1.5.38:1348
-#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语
-http://115.58.141.132:4000/rtp/225.1.5.39:1349
-#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="其它频道",CGTN俄语
-http://115.58.216.71:4000/rtp/225.1.5.39:1349
-#EXTINF:-1 tvg-id="爱上-4K" tvg-name="爱上-4K" group-title="其它频道",爱上-4K
-http://115.58.141.132:4000/rtp/225.1.4.162:1204
-#EXTINF:-1 tvg-id="爱上-4K" tvg-name="爱上-4K" group-title="其它频道",爱上-4K
-http://115.58.216.71:4000/rtp/225.1.4.162:1204
 #EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
 http://115.58.141.132:4000/rtp/225.1.4.73:1102
 #EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
@@ -359,6 +299,30 @@ http://115.58.216.71:4000/rtp/225.1.5.31:1342
 http://115.58.141.132:4000/rtp/225.1.5.32:1343
 #EXTINF:-1 tvg-id="CCTV-4美洲" tvg-name="CCTV-4美洲" group-title="央视频道",CCTV-4美洲
 http://115.58.216.71:4000/rtp/225.1.5.32:1343
+#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
+http://115.58.141.132:4000/rtp/225.1.5.34:1344
+#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
+http://115.58.216.71:4000/rtp/225.1.5.34:1344
+#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="央视频道",CGTN纪录
+http://115.58.141.132:4000/rtp/225.1.5.35:1345
+#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="央视频道",CGTN纪录
+http://115.58.216.71:4000/rtp/225.1.5.35:1345
+#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语
+http://115.58.141.132:4000/rtp/225.1.5.36:1346
+#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语
+http://115.58.216.71:4000/rtp/225.1.5.36:1346
+#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="央视频道",CGTN法语
+http://115.58.141.132:4000/rtp/225.1.5.37:1347
+#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="央视频道",CGTN法语
+http://115.58.216.71:4000/rtp/225.1.5.37:1347
+#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="央视频道",CGTN阿拉伯语
+http://115.58.141.132:4000/rtp/225.1.5.38:1348
+#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="央视频道",CGTN阿拉伯语
+http://115.58.216.71:4000/rtp/225.1.5.38:1348
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="央视频道",CGTN俄语
+http://115.58.141.132:4000/rtp/225.1.5.39:1349
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="央视频道",CGTN俄语
+http://115.58.216.71:4000/rtp/225.1.5.39:1349
 #EXTINF:-1 tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院
 http://115.58.141.132:4000/rtp/225.1.4.209:1262
 #EXTINF:-1 tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院
@@ -391,6 +355,14 @@ http://115.58.216.71:4000/rtp/225.1.4.48:1077
 http://115.58.141.132:4000/rtp/225.1.4.212:1265
 #EXTINF:-1 tvg-id="新动漫" tvg-name="新动漫" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/xindongman.png" group-title="数字频道",新动漫
 http://115.58.216.71:4000/rtp/225.1.4.212:1265
+#EXTINF:-1 tvg-id="IPTV相声小品" tvg-name="IPTV相声小品" group-title="数字频道",IPTV相声小品
+http://115.58.141.132:4000/rtp/225.1.4.186:1235
+#EXTINF:-1 tvg-id="IPTV相声小品" tvg-name="IPTV相声小品" group-title="数字频道",IPTV相声小品
+http://115.58.216.71:4000/rtp/225.1.4.186:1235
+#EXTINF:-1 tvg-id="IPTV好学生" tvg-name="IPTV好学生" group-title="数字频道",IPTV好学生
+http://115.58.141.132:4000/rtp/225.1.4.177:1226
+#EXTINF:-1 tvg-id="IPTV好学生" tvg-name="IPTV好学生" group-title="数字频道",IPTV好学生
+http://115.58.216.71:4000/rtp/225.1.4.177:1226
 #EXTINF:-1 tvg-id="IPTV国学" tvg-name="IPTV国学" group-title="数字频道",IPTV国学
 http://115.58.141.132:4000/rtp/225.1.4.178:1227
 #EXTINF:-1 tvg-id="IPTV国学" tvg-name="IPTV国学" group-title="数字频道",IPTV国学
@@ -403,6 +375,18 @@ http://115.58.216.71:4000/rtp/225.1.4.179:1228
 http://115.58.141.132:4000/rtp/225.1.4.181:1230
 #EXTINF:-1 tvg-id="IPTV军事" tvg-name="IPTV军事" group-title="数字频道",IPTV军事
 http://115.58.216.71:4000/rtp/225.1.4.181:1230
+#EXTINF:-1 tvg-id="IPTV美妆" tvg-name="IPTV美妆" group-title="数字频道",IPTV美妆
+http://115.58.141.132:4000/rtp/225.1.4.182:1231
+#EXTINF:-1 tvg-id="IPTV美妆" tvg-name="IPTV美妆" group-title="数字频道",IPTV美妆
+http://115.58.216.71:4000/rtp/225.1.4.182:1231
+#EXTINF:-1 tvg-id="IPTV地理" tvg-name="IPTV地理" group-title="数字频道",IPTV地理
+http://115.58.141.132:4000/rtp/225.1.4.183:1232
+#EXTINF:-1 tvg-id="IPTV地理" tvg-name="IPTV地理" group-title="数字频道",IPTV地理
+http://115.58.216.71:4000/rtp/225.1.4.183:1232
+#EXTINF:-1 tvg-id="IPTV足球" tvg-name="IPTV足球" group-title="数字频道",IPTV足球
+http://115.58.141.132:4000/rtp/225.1.4.200:1250
+#EXTINF:-1 tvg-id="IPTV足球" tvg-name="IPTV足球" group-title="数字频道",IPTV足球
+http://115.58.216.71:4000/rtp/225.1.4.200:1250
 #EXTINF:-1 tvg-id="IPTV野外" tvg-name="IPTV野外" group-title="数字频道",IPTV野外
 http://115.58.141.132:4000/rtp/225.1.4.187:1236
 #EXTINF:-1 tvg-id="IPTV野外" tvg-name="IPTV野外" group-title="数字频道",IPTV野外
@@ -411,10 +395,22 @@ http://115.58.216.71:4000/rtp/225.1.4.187:1236
 http://115.58.141.132:4000/rtp/225.1.4.188:1237
 #EXTINF:-1 tvg-id="IPTV法治" tvg-name="IPTV法治" group-title="数字频道",IPTV法治
 http://115.58.216.71:4000/rtp/225.1.4.188:1237
+#EXTINF:-1 tvg-id="IPTV收视指南" tvg-name="IPTV收视指南" group-title="数字频道",IPTV收视指南
+http://115.58.141.132:4000/rtp/225.1.4.50:1079
+#EXTINF:-1 tvg-id="IPTV收视指南" tvg-name="IPTV收视指南" group-title="数字频道",IPTV收视指南
+http://115.58.216.71:4000/rtp/225.1.4.50:1079
 #EXTINF:-1 tvg-id="华数经典电影" tvg-name="华数经典电影" group-title="数字频道",华数经典电影
 http://115.58.141.132:4000/rtp/225.1.4.175:1233
 #EXTINF:-1 tvg-id="华数经典电影" tvg-name="华数经典电影" group-title="数字频道",华数经典电影
 http://115.58.216.71:4000/rtp/225.1.4.175:1233
+#EXTINF:-1 tvg-id="华数精选" tvg-name="华数精选" group-title="数字频道",华数精选
+http://115.58.141.132:4000/rtp/225.1.4.253:1299
+#EXTINF:-1 tvg-id="华数精选" tvg-name="华数精选" group-title="数字频道",华数精选
+http://115.58.216.71:4000/rtp/225.1.4.253:1299
+#EXTINF:-1 tvg-id="华数谍战剧场" tvg-name="华数谍战剧场" group-title="数字频道",华数谍战剧场
+http://115.58.141.132:4000/rtp/225.1.4.185:1240
+#EXTINF:-1 tvg-id="华数谍战剧场" tvg-name="华数谍战剧场" group-title="数字频道",华数谍战剧场
+http://115.58.216.71:4000/rtp/225.1.4.185:1240
 #EXTINF:-1 tvg-id="华数少儿动画" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画
 http://115.58.141.132:4000/rtp/225.1.4.189:1238
 #EXTINF:-1 tvg-id="华数少儿动画" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画
@@ -423,19 +419,23 @@ http://115.58.216.71:4000/rtp/225.1.4.189:1238
 http://115.58.141.132:4000/rtp/225.1.4.190:1239
 #EXTINF:-1 tvg-id="华数热播剧场" tvg-name="华数热播剧场" group-title="数字频道",华数热播剧场
 http://115.58.216.71:4000/rtp/225.1.4.190:1239
+#EXTINF:-1 tvg-id="华数魅力时尚" tvg-name="华数魅力时尚" group-title="数字频道",华数魅力时尚
+http://115.58.141.132:4000/rtp/225.1.4.205:1253
+#EXTINF:-1 tvg-id="华数魅力时尚" tvg-name="华数魅力时尚" group-title="数字频道",华数魅力时尚
+http://115.58.216.71:4000/rtp/225.1.4.205:1253
+#EXTINF:-1 tvg-id="华数爱电影" tvg-name="华数爱电影" group-title="数字频道",华数爱电影
+http://115.58.141.132:4000/rtp/225.1.4.6:1035
+#EXTINF:-1 tvg-id="华数爱电影" tvg-name="华数爱电影" group-title="数字频道",华数爱电影
+http://115.58.216.71:4000/rtp/225.1.4.6:1035
+#EXTINF:-1 tvg-id="爱大剧" tvg-name="爱大剧" group-title="数字频道",爱大剧
+http://115.58.141.132:4000/rtp/225.1.4.8:1037
+#EXTINF:-1 tvg-id="爱大剧" tvg-name="爱大剧" group-title="数字频道",爱大剧
+http://115.58.216.71:4000/rtp/225.1.4.8:1037
 #EXTINF:-1 tvg-id="国学频道" tvg-name="国学频道" group-title="数字频道",国学频道
 http://115.58.141.132:4000/rtp/225.1.4.196:1311
 #EXTINF:-1 tvg-id="国学频道" tvg-name="国学频道" group-title="数字频道",国学频道
 http://115.58.216.71:4000/rtp/225.1.4.196:1311
-#EXTINF:-1 tvg-id="华数精选" tvg-name="华数精选" group-title="☘️重庆市",华数精选
-http://115.58.141.132:4000/rtp/225.1.4.253:1299
-#EXTINF:-1 tvg-id="华数精选" tvg-name="华数精选" group-title="☘️重庆市",华数精选
-http://115.58.216.71:4000/rtp/225.1.4.253:1299
-#EXTINF:-1 tvg-id="华数谍战剧场" tvg-name="华数谍战剧场" group-title="☘️重庆市",华数谍战剧场
-http://115.58.141.132:4000/rtp/225.1.4.185:1240
-#EXTINF:-1 tvg-id="华数谍战剧场" tvg-name="华数谍战剧场" group-title="☘️重庆市",华数谍战剧场
-http://115.58.216.71:4000/rtp/225.1.4.185:1240
-#EXTINF:-1 tvg-id="华数魅力时尚" tvg-name="华数魅力时尚" group-title="☘️重庆市",华数魅力时尚
-http://115.58.141.132:4000/rtp/225.1.4.205:1253
-#EXTINF:-1 tvg-id="华数魅力时尚" tvg-name="华数魅力时尚" group-title="☘️重庆市",华数魅力时尚
-http://115.58.216.71:4000/rtp/225.1.4.205:1253
+#EXTINF:-1 tvg-id="爱上-4K" tvg-name="爱上-4K" group-title="4K频道",爱上-4K
+http://115.58.141.132:4000/rtp/225.1.4.162:1204
+#EXTINF:-1 tvg-id="爱上-4K" tvg-name="爱上-4K" group-title="4K频道",爱上-4K
+http://115.58.216.71:4000/rtp/225.1.4.162:1204
