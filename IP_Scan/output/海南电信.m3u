@@ -484,53 +484,53 @@ http://112.66.143.36:8888/rtp/239.253.64.160:5140
 #EXTINF:-1 tvg-id="" tvg-name="IPTV8+" group-title="数字频道",IPTV8+
 http://112.66.231.34:554/rtp/239.253.64.160:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV4K" group-title="4K频道",CCTV4K
-239.253.64.48:5140
+http://112.66.143.36:8888/rtp/239.253.64.48:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV4K" group-title="4K频道",CCTV4K
-239.253.64.48:5140
+http://112.66.231.34:554/rtp/239.253.64.48:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV16 4K" group-title="4K频道",CCTV16 4K
-239.253.64.126:5140
+http://112.66.143.36:8888/rtp/239.253.64.126:5140
 #EXTINF:-1 tvg-id="" tvg-name="CCTV16 4K" group-title="4K频道",CCTV16 4K
-239.253.64.126:5140
+http://112.66.231.34:554/rtp/239.253.64.126:5140
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视4K" group-title="4K频道",北京卫视4K
-239.253.64.92:5140
+http://112.66.143.36:8888/rtp/239.253.64.92:5140
 #EXTINF:-1 tvg-id="" tvg-name="北京卫视4K" group-title="4K频道",北京卫视4K
-239.253.64.92:5140
+http://112.66.231.34:554/rtp/239.253.64.92:5140
 #EXTINF:-1 tvg-id="" tvg-name="东方卫视4K" group-title="4K频道",东方卫视4K
-239.253.64.63:5140
+http://112.66.143.36:8888/rtp/239.253.64.63:5140
 #EXTINF:-1 tvg-id="" tvg-name="东方卫视4K" group-title="4K频道",东方卫视4K
-239.253.64.63:5140
+http://112.66.231.34:554/rtp/239.253.64.63:5140
 #EXTINF:-1 tvg-id="" tvg-name="广东卫视4K" group-title="4K频道",广东卫视4K
-239.253.64.96:5140
+http://112.66.143.36:8888/rtp/239.253.64.96:5140
 #EXTINF:-1 tvg-id="" tvg-name="广东卫视4K" group-title="4K频道",广东卫视4K
-239.253.64.96:5140
+http://112.66.231.34:554/rtp/239.253.64.96:5140
 #EXTINF:-1 tvg-id="" tvg-name="深圳卫视4K" group-title="4K频道",深圳卫视4K
-239.253.64.95:5140
+http://112.66.143.36:8888/rtp/239.253.64.95:5140
 #EXTINF:-1 tvg-id="" tvg-name="深圳卫视4K" group-title="4K频道",深圳卫视4K
-239.253.64.95:5140
+http://112.66.231.34:554/rtp/239.253.64.95:5140
 #EXTINF:-1 tvg-id="" tvg-name="湖南卫视4K" group-title="4K频道",湖南卫视4K
-239.253.64.60:5140
+http://112.66.143.36:8888/rtp/239.253.64.60:5140
 #EXTINF:-1 tvg-id="" tvg-name="湖南卫视4K" group-title="4K频道",湖南卫视4K
-239.253.64.60:5140
+http://112.66.231.34:554/rtp/239.253.64.60:5140
 #EXTINF:-1 tvg-id="" tvg-name="山东卫视4K" group-title="4K频道",山东卫视4K
-239.253.64.65:5140
+http://112.66.143.36:8888/rtp/239.253.64.65:5140
 #EXTINF:-1 tvg-id="" tvg-name="山东卫视4K" group-title="4K频道",山东卫视4K
-239.253.64.65:5140
+http://112.66.231.34:554/rtp/239.253.64.65:5140
 #EXTINF:-1 tvg-id="" tvg-name="四川卫视4K" group-title="4K频道",四川卫视4K
-239.253.64.64:5140
+http://112.66.143.36:8888/rtp/239.253.64.64:5140
 #EXTINF:-1 tvg-id="" tvg-name="四川卫视4K" group-title="4K频道",四川卫视4K
-239.253.64.64:5140
+http://112.66.231.34:554/rtp/239.253.64.64:5140
 #EXTINF:-1 tvg-id="" tvg-name="浙江卫视4K" group-title="4K频道",浙江卫视4K
-239.253.64.62:5140
+http://112.66.143.36:8888/rtp/239.253.64.62:5140
 #EXTINF:-1 tvg-id="" tvg-name="浙江卫视4K" group-title="4K频道",浙江卫视4K
-239.253.64.62:5140
+http://112.66.231.34:554/rtp/239.253.64.62:5140
 #EXTINF:-1 tvg-id="" tvg-name="江苏卫视4K" group-title="4K频道",江苏卫视4K
-239.253.64.61:5140
+http://112.66.143.36:8888/rtp/239.253.64.61:5140
 #EXTINF:-1 tvg-id="" tvg-name="江苏卫视4K" group-title="4K频道",江苏卫视4K
-239.253.64.61:5140
+http://112.66.231.34:554/rtp/239.253.64.61:5140
 #EXTINF:-1 tvg-id="" tvg-name="爱上4K" group-title="4K频道",爱上4K
-239.253.64.243:5140
+http://112.66.143.36:8888/rtp/239.253.64.243:5140
 #EXTINF:-1 tvg-id="" tvg-name="爱上4K" group-title="4K频道",爱上4K
-239.253.64.243:5140
+http://112.66.231.34:554/rtp/239.253.64.243:5140
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="儿童频道",金鹰卡通
 http://112.66.143.36:8888/rtp/239.253.64.148:5140
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="儿童频道",金鹰卡通
