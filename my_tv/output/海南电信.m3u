@@ -1,7 +1,101 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV1.png" group-title="央视频道",CCTV1
+http://223.198.243.6:4000/rtp/239.253.64.120:5140
+#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV2.png" group-title="央视频道",CCTV2
+http://223.198.243.6:4000/rtp/239.253.64.195:5140
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV3.png" group-title="央视频道",CCTV3
+http://223.198.243.6:4000/rtp/239.253.64.244:5140
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV4.png" group-title="央视频道",CCTV4
+http://223.198.243.6:4000/rtp/239.253.64.196:5140
+#EXTINF:-1 tvg-id="CCTV4欧洲" tvg-name="CCTV4欧洲" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV4EUO.png" group-title="央视频道",CCTV4欧洲
+http://223.198.243.6:4000/rtp/239.253.64.77:5140
+#EXTINF:-1 tvg-id="CCTV4美洲" tvg-name="CCTV4美洲" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV4AME.png" group-title="央视频道",CCTV4美洲
+http://223.198.243.6:4000/rtp/239.253.64.78:5140
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV5.png" group-title="央视频道",CCTV5
+http://223.198.243.6:4000/rtp/239.253.64.245:5140
+#EXTINF:-1 tvg-id="CCTV5+" tvg-name="CCTV5+" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV5+.png" group-title="央视频道",CCTV5+
+http://223.198.243.6:4000/rtp/239.253.64.100:5140
+#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV6.png" group-title="央视频道",CCTV6
+http://223.198.243.6:4000/rtp/239.253.64.246:5140
+#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV7" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV7.png" group-title="央视频道",CCTV7
+http://223.198.243.6:4000/rtp/239.253.64.54:5140
+#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV8.png" group-title="央视频道",CCTV8
+http://223.198.243.6:4000/rtp/239.253.64.247:5140
+#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV9.png" group-title="央视频道",CCTV9
+http://223.198.243.6:4000/rtp/239.253.64.76:5140
+#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV10.png" group-title="央视频道",CCTV10
+http://223.198.243.6:4000/rtp/239.253.64.87:5140
+#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV11.png" group-title="央视频道",CCTV11
+http://223.198.243.6:4000/rtp/239.253.64.70:5140
+#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV12.png" group-title="央视频道",CCTV12
+http://223.198.243.6:4000/rtp/239.253.64.97:5140
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV13.png" group-title="央视频道",CCTV13
+http://223.198.243.6:4000/rtp/239.253.64.59:5140
+#EXTINF:-1 tvg-id="CCTV14" tvg-name="CCTV14" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV14.png" group-title="央视频道",CCTV14
+http://223.198.243.6:4000/rtp/239.253.64.115:5140
+#EXTINF:-1 tvg-id="CCTV15" tvg-name="CCTV15" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV15.png" group-title="央视频道",CCTV15
+http://223.198.243.6:4000/rtp/239.253.64.72:5140
+#EXTINF:-1 tvg-id="CCTV16" tvg-name="CCTV16" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV16.png" group-title="央视频道",CCTV16
+http://223.198.243.6:4000/rtp/239.253.64.251:5140
+#EXTINF:-1 tvg-id="CCTV17" tvg-name="CCTV17" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV17.png" group-title="央视频道",CCTV17
+http://223.198.243.6:4000/rtp/239.253.64.67:5140
+#EXTINF:-1 tvg-id="CETV1" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1
+http://223.198.243.6:4000/rtp/239.253.64.169:5140
+#EXTINF:-1 tvg-id="CETV2" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2
+http://223.198.243.6:4000/rtp/239.253.64.128:5140
+#EXTINF:-1 tvg-id="CETV4" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4
+http://223.198.243.6:4000/rtp/239.253.64.139:5140
+#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
+http://223.198.243.6:4000/rtp/239.253.64.17:5140
+#EXTINF:-1 tvg-id="CGTN记录" tvg-name="CGTN记录" group-title="央视频道",CGTN记录
+http://223.198.243.6:4000/rtp/239.253.64.58:5140
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="央视频道",CGTN俄语
+http://223.198.243.6:4000/rtp/239.253.64.75:5140
+#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="央视频道",CGTN法语
+http://223.198.243.6:4000/rtp/239.253.64.73:5140
+#EXTINF:-1 tvg-id="中国天气" tvg-name="中国天气" group-title="央视频道",中国天气
+http://223.198.243.6:4000/rtp/239.253.64.79:5140
+#EXTINF:-1 tvg-id="CCTV4K" tvg-name="CCTV4K" group-title="央视频道",CCTV4K
+239.253.64.48:5140
+#EXTINF:-1 tvg-id="CCTV16 4K" tvg-name="CCTV16 4K" group-title="央视频道",CCTV16 4K
+239.253.64.126:5140
+#EXTINF:-1 tvg-id="CGTN" tvg-name="CGTN" group-title="其它频道",CGTN
+http://223.198.243.6:4000/rtp/239.253.64.68:5140
+#EXTINF:-1 tvg-id="CGTN阿语" tvg-name="CGTN阿语" group-title="其它频道",CGTN阿语
+http://223.198.243.6:4000/rtp/239.253.64.74:5140
+#EXTINF:-1 tvg-id="CGTN西语" tvg-name="CGTN西语" group-title="其它频道",CGTN西语
+http://223.198.243.6:4000/rtp/239.253.64.71:5140
+#EXTINF:-1 tvg-id="百事通1" tvg-name="百事通1" group-title="其它频道",百事通1
+http://223.198.243.6:4000/rtp/239.253.64.189:5140
+#EXTINF:-1 tvg-id="百视通2" tvg-name="百视通2" group-title="其它频道",百视通2
+http://223.198.243.6:4000/rtp/239.253.64.184:5140
+#EXTINF:-1 tvg-id="百视通3" tvg-name="百视通3" group-title="其它频道",百视通3
+http://223.198.243.6:4000/rtp/239.253.64.185:5140
+#EXTINF:-1 tvg-id="百视通4" tvg-name="百视通4" group-title="其它频道",百视通4
+http://223.198.243.6:4000/rtp/239.253.64.186:5140
+#EXTINF:-1 tvg-id="百视通5" tvg-name="百视通5" group-title="其它频道",百视通5
+http://223.198.243.6:4000/rtp/239.253.64.187:5140
+#EXTINF:-1 tvg-id="百视通6" tvg-name="百视通6" group-title="其它频道",百视通6
+http://223.198.243.6:4000/rtp/239.253.64.188:5140
+#EXTINF:-1 tvg-id="百视通7" tvg-name="百视通7" group-title="其它频道",百视通7
+http://223.198.243.6:4000/rtp/239.253.64.190:5140
+#EXTINF:-1 tvg-id="精选电影" tvg-name="精选电影" group-title="其它频道",精选电影
+http://223.198.243.6:4000/rtp/239.253.64.224:5140
+#EXTINF:-1 tvg-id="海南社会与法" tvg-name="海南社会与法" group-title="其它频道",海南社会与法
+http://223.198.243.6:4000/rtp/239.253.64.14:5140
+#EXTINF:-1 tvg-id="海南少儿" tvg-name="海南少儿" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%B0%91%E5%84%BF.png" group-title="其它频道",海南少儿
+http://223.198.243.6:4000/rtp/239.253.64.124:5140
+#EXTINF:-1 tvg-id="海南文旅" tvg-name="海南文旅" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E6%96%87%E6%97%85.png" group-title="其它频道",海南文旅
+http://223.198.243.6:4000/rtp/239.253.64.122:5140
+#EXTINF:-1 tvg-id="海南新闻" tvg-name="海南新闻" tvg-logo="https://tb.zbds.top/logo/海南新闻.png" group-title="其它频道",海南新闻
+http://223.198.243.6:4000/rtp/239.253.64.121:5140
+#EXTINF:-1 tvg-id="海南自贸" tvg-name="海南自贸" tvg-logo="https://tb.zbds.top/logo/海南自贸.png" group-title="其它频道",海南自贸
+http://223.198.243.6:4000/rtp/239.253.64.119:5140
+#EXTINF:-1 tvg-id="电信宣传" tvg-name="电信宣传" group-title="其它频道",电信宣传
+http://223.198.243.6:4000/rtp/239.253.64.80:5140
 #EXTINF:-1 tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视
 http://223.198.243.6:4000/rtp/239.253.64.253:5140
-#EXTINF:-1 tvg-id="海南三沙卫视" tvg-name="海南三沙卫视" group-title="卫视频道",海南三沙卫视
+#EXTINF:-1 tvg-id="三沙卫视" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视
 http://223.198.243.6:4000/rtp/239.253.64.112:5140
 #EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视
 http://223.198.243.6:4000/rtp/239.253.64.204:5140
@@ -71,16 +165,124 @@ http://223.198.243.6:4000/rtp/239.253.64.147:5140
 http://223.198.243.6:4000/rtp/239.253.64.178:5140
 #EXTINF:-1 tvg-id="山东教育卫视" tvg-name="山东教育卫视" tvg-logo="https://tb.zbds.top/logo/山东教育.png" group-title="卫视频道",山东教育卫视
 http://223.198.243.6:4000/rtp/239.253.64.241:5140
-#EXTINF:-1 tvg-id="海南公共频道" tvg-name="海南公共频道" group-title="☘️海南省",海南公共频道
-http://223.198.243.6:4000/rtp/239.253.64.14:5140
-#EXTINF:-1 tvg-id="海南少儿频道" tvg-name="海南少儿频道" group-title="☘️海南省",海南少儿频道
-http://223.198.243.6:4000/rtp/239.253.64.124:5140
-#EXTINF:-1 tvg-id="海南文旅频道" tvg-name="海南文旅频道" group-title="☘️海南省",海南文旅频道
-http://223.198.243.6:4000/rtp/239.253.64.122:5140
-#EXTINF:-1 tvg-id="海南新闻频道" tvg-name="海南新闻频道" group-title="☘️海南省",海南新闻频道
-http://223.198.243.6:4000/rtp/239.253.64.121:5140
-#EXTINF:-1 tvg-id="海南自贸频道" tvg-name="海南自贸频道" group-title="☘️海南省",海南自贸频道
-http://223.198.243.6:4000/rtp/239.253.64.119:5140
+#EXTINF:-1 tvg-id="北京卫视4K" tvg-name="北京卫视4K" group-title="卫视频道",北京卫视4K
+239.253.64.92:5140
+#EXTINF:-1 tvg-id="东方卫视4K" tvg-name="东方卫视4K" group-title="卫视频道",东方卫视4K
+239.253.64.63:5140
+#EXTINF:-1 tvg-id="广东卫视4K" tvg-name="广东卫视4K" group-title="卫视频道",广东卫视4K
+239.253.64.96:5140
+#EXTINF:-1 tvg-id="深圳卫视4K" tvg-name="深圳卫视4K" group-title="卫视频道",深圳卫视4K
+239.253.64.95:5140
+#EXTINF:-1 tvg-id="湖南卫视4K" tvg-name="湖南卫视4K" group-title="卫视频道",湖南卫视4K
+239.253.64.60:5140
+#EXTINF:-1 tvg-id="山东卫视4K" tvg-name="山东卫视4K" group-title="卫视频道",山东卫视4K
+239.253.64.65:5140
+#EXTINF:-1 tvg-id="四川卫视4K" tvg-name="四川卫视4K" group-title="卫视频道",四川卫视4K
+239.253.64.64:5140
+#EXTINF:-1 tvg-id="浙江卫视4K" tvg-name="浙江卫视4K" group-title="卫视频道",浙江卫视4K
+239.253.64.62:5140
+#EXTINF:-1 tvg-id="江苏卫视4K" tvg-name="江苏卫视4K" group-title="卫视频道",江苏卫视4K
+239.253.64.61:5140
+#EXTINF:-1 tvg-id="CHC影迷电影" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影
+http://223.198.243.6:4000/rtp/239.253.64.52:5140
+#EXTINF:-1 tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院
+http://223.198.243.6:4000/rtp/239.253.64.50:5140
+#EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影
+http://223.198.243.6:4000/rtp/239.253.64.51:5140
+#EXTINF:-1 tvg-id="华数谍战剧场" tvg-name="华数谍战剧场" group-title="数字频道",华数谍战剧场
+http://223.198.243.6:4000/rtp/239.253.64.212:5140
+#EXTINF:-1 tvg-id="华数经典电影" tvg-name="华数经典电影" group-title="数字频道",华数经典电影
+http://223.198.243.6:4000/rtp/239.253.64.227:5140
+#EXTINF:-1 tvg-id="华数魅力时尚" tvg-name="华数魅力时尚" group-title="数字频道",华数魅力时尚
+http://223.198.243.6:4000/rtp/239.253.64.231:5140
+#EXTINF:-1 tvg-id="华数热播剧场" tvg-name="华数热播剧场" group-title="数字频道",华数热播剧场
+http://223.198.243.6:4000/rtp/239.253.64.211:5140
+#EXTINF:-1 tvg-id="华数影视" tvg-name="华数影视" group-title="数字频道",华数影视
+http://223.198.243.6:4000/rtp/239.253.64.49:5140
+#EXTINF:-1 tvg-id="华数喜剧影院" tvg-name="华数喜剧影院" group-title="数字频道",华数喜剧影院
+http://223.198.243.6:4000/rtp/239.253.64.233:5140
+#EXTINF:-1 tvg-id="华数武侠剧场" tvg-name="华数武侠剧场" group-title="数字频道",华数武侠剧场
+http://223.198.243.6:4000/rtp/239.253.64.254:5140
+#EXTINF:-1 tvg-id="华数少儿动画" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画
+http://223.198.243.6:4000/rtp/239.253.64.232:5140
+#EXTINF:-1 tvg-id="华数军旅剧场" tvg-name="华数军旅剧场" group-title="数字频道",华数军旅剧场
+http://223.198.243.6:4000/rtp/239.253.64.228:5140
+#EXTINF:-1 tvg-id="华数精选" tvg-name="华数精选" group-title="数字频道",华数精选
+http://223.198.243.6:4000/rtp/239.253.64.224:5140
+#EXTINF:-1 tvg-id="华数家庭影院" tvg-name="华数家庭影院" group-title="数字频道",华数家庭影院
+http://223.198.243.6:4000/rtp/239.253.64.225:5140
+#EXTINF:-1 tvg-id="华数古装剧场" tvg-name="华数古装剧场" group-title="数字频道",华数古装剧场
+http://223.198.243.6:4000/rtp/239.253.64.221:5140
+#EXTINF:-1 tvg-id="华数动作影院" tvg-name="华数动作影院" group-title="数字频道",华数动作影院
+http://223.198.243.6:4000/rtp/239.253.64.220:5140
+#EXTINF:-1 tvg-id="华数动画" tvg-name="华数动画" group-title="数字频道",华数动画
+http://223.198.243.6:4000/rtp/239.253.64.163:5140
+#EXTINF:-1 tvg-id="华数城市剧场" tvg-name="华数城市剧场" group-title="数字频道",华数城市剧场
+http://223.198.243.6:4000/rtp/239.253.64.218:5140
+#EXTINF:-1 tvg-id="睛彩竞技" tvg-name="睛彩竞技" group-title="数字频道",睛彩竞技
+http://223.198.243.6:4000/rtp/239.253.64.151:5140
+#EXTINF:-1 tvg-id="睛彩广场舞" tvg-name="睛彩广场舞" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%9D%9B%E5%BD%A9%E5%B9%BF%E5%9C%BA%E8%88%9E.png" group-title="数字频道",睛彩广场舞
+http://223.198.243.6:4000/rtp/239.253.64.154:5140
+#EXTINF:-1 tvg-id="睛彩篮球" tvg-name="睛彩篮球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%9D%9B%E5%BD%A9%E7%AF%AE%E7%90%83.png" group-title="数字频道",睛彩篮球
+http://223.198.243.6:4000/rtp/239.253.64.152:5140
+#EXTINF:-1 tvg-id="睛彩青少" tvg-name="睛彩青少" group-title="数字频道",睛彩青少
+http://223.198.243.6:4000/rtp/239.253.64.153:5140
+#EXTINF:-1 tvg-id="金鹰纪实" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实
+http://223.198.243.6:4000/rtp/239.253.64.168:5140
+#EXTINF:-1 tvg-id="上海纪实" tvg-name="上海纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%8A%E6%B5%B7%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",上海纪实
+http://223.198.243.6:4000/rtp/239.253.64.149:5140
+#EXTINF:-1 tvg-id="IPTV法治" tvg-name="IPTV法治" group-title="数字频道",IPTV法治
+http://223.198.243.6:4000/rtp/239.253.64.213:5140
+#EXTINF:-1 tvg-id="IPTV地理" tvg-name="IPTV地理" group-title="数字频道",IPTV地理
+http://223.198.243.6:4000/rtp/239.253.64.219:5140
+#EXTINF:-1 tvg-id="IPTV相声小品" tvg-name="IPTV相声小品" group-title="数字频道",IPTV相声小品
+http://223.198.243.6:4000/rtp/239.253.64.214:5140
+#EXTINF:-1 tvg-id="IPTV野外" tvg-name="IPTV野外" group-title="数字频道",IPTV野外
+http://223.198.243.6:4000/rtp/239.253.64.215:5140
+#EXTINF:-1 tvg-id="IPTV足球" tvg-name="IPTV足球" group-title="数字频道",IPTV足球
+http://223.198.243.6:4000/rtp/239.253.64.237:5140
+#EXTINF:-1 tvg-id="IPTV早教" tvg-name="IPTV早教" group-title="数字频道",IPTV早教
+http://223.198.243.6:4000/rtp/239.253.64.236:5140
+#EXTINF:-1 tvg-id="IPTV音乐现场" tvg-name="IPTV音乐现场" group-title="数字频道",IPTV音乐现场
+http://223.198.243.6:4000/rtp/239.253.64.235:5140
+#EXTINF:-1 tvg-id="IPTV戏曲" tvg-name="IPTV戏曲" group-title="数字频道",IPTV戏曲
+http://223.198.243.6:4000/rtp/239.253.64.234:5140
+#EXTINF:-1 tvg-id="IPTV武术" tvg-name="IPTV武术" group-title="数字频道",IPTV武术
+http://223.198.243.6:4000/rtp/239.253.64.170:5140
+#EXTINF:-1 tvg-id="高网" tvg-name="高网" group-title="数字频道",高网
+http://223.198.243.6:4000/rtp/239.253.64.250:5140
+#EXTINF:-1 tvg-id="IPTV台球" tvg-name="IPTV台球" group-title="数字频道",IPTV台球
+http://223.198.243.6:4000/rtp/239.253.64.164:5140
+#EXTINF:-1 tvg-id="IPTV收视指南" tvg-name="IPTV收视指南" group-title="数字频道",IPTV收视指南
+http://223.198.243.6:4000/rtp/239.253.64.238:5140
+#EXTINF:-1 tvg-id="IPTV墨宝" tvg-name="IPTV墨宝" group-title="数字频道",IPTV墨宝
+http://223.198.243.6:4000/rtp/239.253.64.158:5140
+#EXTINF:-1 tvg-id="IPTV美人" tvg-name="IPTV美人" group-title="数字频道",IPTV美人
+http://223.198.243.6:4000/rtp/239.253.64.123:5140
+#EXTINF:-1 tvg-id="IPTV军事" tvg-name="IPTV军事" group-title="数字频道",IPTV军事
+http://223.198.243.6:4000/rtp/239.253.64.229:5140
+#EXTINF:-1 tvg-id="IPTV解密" tvg-name="IPTV解密" group-title="数字频道",IPTV解密
+http://223.198.243.6:4000/rtp/239.253.64.141:5140
+#EXTINF:-1 tvg-id="IPTV好学生" tvg-name="IPTV好学生" group-title="数字频道",IPTV好学生
+http://223.198.243.6:4000/rtp/239.253.64.223:5140
+#EXTINF:-1 tvg-id="IPTV国学" tvg-name="IPTV国学" group-title="数字频道",IPTV国学
+http://223.198.243.6:4000/rtp/239.253.64.222:5140
+#EXTINF:-1 tvg-id="IPTV爱生活" tvg-name="IPTV爱生活" group-title="数字频道",IPTV爱生活
+http://223.198.243.6:4000/rtp/239.253.64.216:5140
+#EXTINF:-1 tvg-id="IPTV3+" tvg-name="IPTV3+" group-title="数字频道",IPTV3+
+http://223.198.243.6:4000/rtp/239.253.64.10:5140
+#EXTINF:-1 tvg-id="IPTV5+" tvg-name="IPTV5+" group-title="数字频道",IPTV5+
+http://223.198.243.6:4000/rtp/239.253.64.125:5140
+#EXTINF:-1 tvg-id="IPTV8+" tvg-name="IPTV8+" group-title="数字频道",IPTV8+
+http://223.198.243.6:4000/rtp/239.253.64.160:5140
+#EXTINF:-1 tvg-id="金鹰卡通" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通
+http://223.198.243.6:4000/rtp/239.253.64.148:5140
+#EXTINF:-1 tvg-id="卡酷少儿" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿
+http://223.198.243.6:4000/rtp/239.253.64.230:5140
+#EXTINF:-1 tvg-id="嘉佳卡通" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通
+http://223.198.243.6:4000/rtp/239.253.64.127:5140
+#EXTINF:-1 tvg-id="爱上4K" tvg-name="爱上4K" group-title="4K频道",爱上4K
+239.253.64.243:5140
 #EXTINF:-1 tvg-id="海口1台" tvg-name="海口1台" group-title="☘️海南省",海口1台
 http://223.198.243.6:4000/rtp/239.253.64.80:5140
 #EXTINF:-1 tvg-id="海口2台" tvg-name="海口2台" group-title="☘️海南省",海口2台
@@ -121,135 +323,3 @@ http://223.198.243.6:4000/rtp/239.253.64.167:5140
 http://223.198.243.6:4000/rtp/239.253.64.105:5140
 #EXTINF:-1 tvg-id="五指山TV" tvg-name="五指山TV" group-title="☘️海南省",五指山TV
 http://223.198.243.6:4000/rtp/239.253.64.69:5140
-#EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
-http://223.198.243.6:4000/rtp/239.253.64.120:5140
-#EXTINF:-1 tvg-id="CCTV-2财经" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经
-http://223.198.243.6:4000/rtp/239.253.64.195:5140
-#EXTINF:-1 tvg-id="CCTV-3综艺" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺
-http://223.198.243.6:4000/rtp/239.253.64.244:5140
-#EXTINF:-1 tvg-id="CCTV-4中文国际" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际
-http://223.198.243.6:4000/rtp/239.253.64.196:5140
-#EXTINF:-1 tvg-id="CCTV-5体育" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育
-http://223.198.243.6:4000/rtp/239.253.64.245:5140
-#EXTINF:-1 tvg-id="CCTV-5+体育赛事" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事
-http://223.198.243.6:4000/rtp/239.253.64.100:5140
-#EXTINF:-1 tvg-id="CCTV-6电影" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影
-http://223.198.243.6:4000/rtp/239.253.64.246:5140
-#EXTINF:-1 tvg-id="CCTV-7国防科技" tvg-name="CCTV-7国防科技" group-title="央视频道",CCTV-7国防科技
-http://223.198.243.6:4000/rtp/239.253.64.54:5140
-#EXTINF:-1 tvg-id="CCTV-8电视剧" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧
-http://223.198.243.6:4000/rtp/239.253.64.247:5140
-#EXTINF:-1 tvg-id="CCTV-9纪录" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录
-http://223.198.243.6:4000/rtp/239.253.64.76:5140
-#EXTINF:-1 tvg-id="CCTV-10科教" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教
-http://223.198.243.6:4000/rtp/239.253.64.87:5140
-#EXTINF:-1 tvg-id="CCTV-11戏曲" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲
-http://223.198.243.6:4000/rtp/239.253.64.70:5140
-#EXTINF:-1 tvg-id="CCTV-12社会与法" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法
-http://223.198.243.6:4000/rtp/239.253.64.97:5140
-#EXTINF:-1 tvg-id="CCTV-13新闻" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻
-http://223.198.243.6:4000/rtp/239.253.64.59:5140
-#EXTINF:-1 tvg-id="CCTV-14少儿" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿
-http://223.198.243.6:4000/rtp/239.253.64.115:5140
-#EXTINF:-1 tvg-id="CCTV-15音乐" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐
-http://223.198.243.6:4000/rtp/239.253.64.72:5140
-#EXTINF:-1 tvg-id="CCTV-16奥林匹克" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克
-http://223.198.243.6:4000/rtp/239.253.64.251:5140
-#EXTINF:-1 tvg-id="CCTV-16奥林匹克4K" tvg-name="CCTV-16奥林匹克4K" group-title="央视频道",CCTV-16奥林匹克4K
-http://223.198.243.6:4000/rtp/239.253.64.126:5140
-#EXTINF:-1 tvg-id="CCTV-17农业农村" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村
-http://223.198.243.6:4000/rtp/239.253.64.67:5140
-#EXTINF:-1 tvg-id="CETV1" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1
-http://223.198.243.6:4000/rtp/239.253.64.169:5140
-#EXTINF:-1 tvg-id="CETV2" tvg-name="CETV2" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育2台.png" group-title="央视频道",CETV2
-http://223.198.243.6:4000/rtp/239.253.64.128:5140
-#EXTINF:-1 tvg-id="CETV4" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4
-http://223.198.243.6:4000/rtp/239.253.64.139:5140
-#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
-http://223.198.243.6:4000/rtp/239.253.64.17:5140
-#EXTINF:-1 tvg-id="CGTN记录" tvg-name="CGTN记录" group-title="央视频道",CGTN记录
-http://223.198.243.6:4000/rtp/239.253.64.58:5140
-#EXTINF:-1 tvg-id="中国天气" tvg-name="中国天气" group-title="央视频道",中国天气
-http://223.198.243.6:4000/rtp/239.253.64.79:5140
-#EXTINF:-1 tvg-id="金鹰纪实" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实
-http://223.198.243.6:4000/rtp/239.253.64.168:5140
-#EXTINF:-1 tvg-id="上海纪实" tvg-name="上海纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%8A%E6%B5%B7%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",上海纪实
-http://223.198.243.6:4000/rtp/239.253.64.149:5140
-#EXTINF:-1 tvg-id="金鹰卡通" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通
-http://223.198.243.6:4000/rtp/239.253.64.148:5140
-#EXTINF:-1 tvg-id="卡酷少儿" tvg-name="卡酷少儿" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/kaku.png" group-title="数字频道",卡酷少儿
-http://223.198.243.6:4000/rtp/239.253.64.230:5140
-#EXTINF:-1 tvg-id="嘉佳卡通" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通
-http://223.198.243.6:4000/rtp/239.253.64.127:5140
-#EXTINF:-1 tvg-id="华数谍战剧场" tvg-name="华数谍战剧场" group-title="数字频道",华数谍战剧场
-http://223.198.243.6:4000/rtp/239.253.64.212:5140
-#EXTINF:-1 tvg-id="华数经典电影" tvg-name="华数经典电影" group-title="数字频道",华数经典电影
-http://223.198.243.6:4000/rtp/239.253.64.227:5140
-#EXTINF:-1 tvg-id="华数魅力时尚" tvg-name="华数魅力时尚" group-title="数字频道",华数魅力时尚
-http://223.198.243.6:4000/rtp/239.253.64.231:5140
-#EXTINF:-1 tvg-id="华数热播剧场" tvg-name="华数热播剧场" group-title="数字频道",华数热播剧场
-http://223.198.243.6:4000/rtp/239.253.64.211:5140
-#EXTINF:-1 tvg-id="华数影视" tvg-name="华数影视" group-title="数字频道",华数影视
-http://223.198.243.6:4000/rtp/239.253.64.49:5140
-#EXTINF:-1 tvg-id="华数喜剧影院" tvg-name="华数喜剧影院" group-title="数字频道",华数喜剧影院
-http://223.198.243.6:4000/rtp/239.253.64.233:5140
-#EXTINF:-1 tvg-id="华数武侠剧场" tvg-name="华数武侠剧场" group-title="数字频道",华数武侠剧场
-http://223.198.243.6:4000/rtp/239.253.64.254:5140
-#EXTINF:-1 tvg-id="华数少儿动画" tvg-name="华数少儿动画" group-title="数字频道",华数少儿动画
-http://223.198.243.6:4000/rtp/239.253.64.232:5140
-#EXTINF:-1 tvg-id="华数军旅剧场" tvg-name="华数军旅剧场" group-title="数字频道",华数军旅剧场
-http://223.198.243.6:4000/rtp/239.253.64.228:5140
-#EXTINF:-1 tvg-id="华数精选" tvg-name="华数精选" group-title="数字频道",华数精选
-http://223.198.243.6:4000/rtp/239.253.64.224:5140
-#EXTINF:-1 tvg-id="华数家庭影院" tvg-name="华数家庭影院" group-title="数字频道",华数家庭影院
-http://223.198.243.6:4000/rtp/239.253.64.225:5140
-#EXTINF:-1 tvg-id="华数古装剧场" tvg-name="华数古装剧场" group-title="数字频道",华数古装剧场
-http://223.198.243.6:4000/rtp/239.253.64.221:5140
-#EXTINF:-1 tvg-id="华数动作影院" tvg-name="华数动作影院" group-title="数字频道",华数动作影院
-http://223.198.243.6:4000/rtp/239.253.64.220:5140
-#EXTINF:-1 tvg-id="华数城市剧场" tvg-name="华数城市剧场" group-title="数字频道",华数城市剧场
-http://223.198.243.6:4000/rtp/239.253.64.218:5140
-#EXTINF:-1 tvg-id="IPTV法治" tvg-name="IPTV法治" group-title="数字频道",IPTV法治
-http://223.198.243.6:4000/rtp/239.253.64.213:5140
-#EXTINF:-1 tvg-id="IPTV地理" tvg-name="IPTV地理" group-title="数字频道",IPTV地理
-http://223.198.243.6:4000/rtp/239.253.64.219:5140
-#EXTINF:-1 tvg-id="IPTV相声小品" tvg-name="IPTV相声小品" group-title="数字频道",IPTV相声小品
-http://223.198.243.6:4000/rtp/239.253.64.214:5140
-#EXTINF:-1 tvg-id="IPTV野外" tvg-name="IPTV野外" group-title="数字频道",IPTV野外
-http://223.198.243.6:4000/rtp/239.253.64.215:5140
-#EXTINF:-1 tvg-id="IPTV足球" tvg-name="IPTV足球" group-title="数字频道",IPTV足球
-http://223.198.243.6:4000/rtp/239.253.64.237:5140
-#EXTINF:-1 tvg-id="IPTV早教" tvg-name="IPTV早教" group-title="数字频道",IPTV早教
-http://223.198.243.6:4000/rtp/239.253.64.236:5140
-#EXTINF:-1 tvg-id="IPTV音乐现场" tvg-name="IPTV音乐现场" group-title="数字频道",IPTV音乐现场
-http://223.198.243.6:4000/rtp/239.253.64.235:5140
-#EXTINF:-1 tvg-id="IPTV戏曲" tvg-name="IPTV戏曲" group-title="数字频道",IPTV戏曲
-http://223.198.243.6:4000/rtp/239.253.64.234:5140
-#EXTINF:-1 tvg-id="IPTV武术" tvg-name="IPTV武术" group-title="数字频道",IPTV武术
-http://223.198.243.6:4000/rtp/239.253.64.170:5140
-#EXTINF:-1 tvg-id="IPTV台球" tvg-name="IPTV台球" group-title="数字频道",IPTV台球
-http://223.198.243.6:4000/rtp/239.253.64.164:5140
-#EXTINF:-1 tvg-id="IPTV收视指南" tvg-name="IPTV收视指南" group-title="数字频道",IPTV收视指南
-http://223.198.243.6:4000/rtp/239.253.64.238:5140
-#EXTINF:-1 tvg-id="IPTV墨宝" tvg-name="IPTV墨宝" group-title="数字频道",IPTV墨宝
-http://223.198.243.6:4000/rtp/239.253.64.158:5140
-#EXTINF:-1 tvg-id="IPTV美人" tvg-name="IPTV美人" group-title="数字频道",IPTV美人
-http://223.198.243.6:4000/rtp/239.253.64.123:5140
-#EXTINF:-1 tvg-id="IPTV军事" tvg-name="IPTV军事" group-title="数字频道",IPTV军事
-http://223.198.243.6:4000/rtp/239.253.64.229:5140
-#EXTINF:-1 tvg-id="IPTV解密" tvg-name="IPTV解密" group-title="数字频道",IPTV解密
-http://223.198.243.6:4000/rtp/239.253.64.141:5140
-#EXTINF:-1 tvg-id="IPTV好学生" tvg-name="IPTV好学生" group-title="数字频道",IPTV好学生
-http://223.198.243.6:4000/rtp/239.253.64.223:5140
-#EXTINF:-1 tvg-id="IPTV国学" tvg-name="IPTV国学" group-title="数字频道",IPTV国学
-http://223.198.243.6:4000/rtp/239.253.64.222:5140
-#EXTINF:-1 tvg-id="IPTV爱生活" tvg-name="IPTV爱生活" group-title="数字频道",IPTV爱生活
-http://223.198.243.6:4000/rtp/239.253.64.216:5140
-#EXTINF:-1 tvg-id="IPTV3+" tvg-name="IPTV3+" group-title="数字频道",IPTV3+
-http://223.198.243.6:4000/rtp/239.253.64.10:5140
-#EXTINF:-1 tvg-id="IPTV5+" tvg-name="IPTV5+" group-title="数字频道",IPTV5+
-http://223.198.243.6:4000/rtp/239.253.64.125:5140
-#EXTINF:-1 tvg-id="IPTV8+" tvg-name="IPTV8+" group-title="数字频道",IPTV8+
-http://223.198.243.6:4000/rtp/239.253.64.160:5140
-#EXTINF:-1 tvg-id="爱上4K" tvg-name="爱上4K" group-title="4K频道",爱上4K
-http://223.198.243.6:4000/rtp/239.253.64.243:5140
