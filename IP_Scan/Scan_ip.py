@@ -726,19 +726,16 @@ def generate_files_for_city(city_name, ip_list, logo_dict, max_sources_per_chann
     
     return txt_file, m3u_file
 
-def merge_all_files():
-    """合并所有城市的TXT和M3U文件，按照频道模板排序"""
+def merge_all_files(processed_files):
+    """合并所有城市的TXT和M3U文件，按照频道模板排序
+    
+    Args:
+        processed_files: 字典，键为城市名称，值为包含'txt'和'm3u'文件路径的字典
+    """
     try:
-        txt_files = glob.glob("output/*.txt")
-        m3u_files = glob.glob("output/*.m3u")
-        
-        if not txt_files or not m3u_files:
-            print("没有找到输出文件可合并")
+        if not processed_files:
+            print("没有需要合并的文件")
             return
-        
-        # 按城市名称排序
-        txt_files.sort()
-        m3u_files.sort()
         
         # 读取频道模板
         channel_template = read_channel_template()
@@ -761,9 +758,12 @@ def merge_all_files():
         all_channels = {}
         
         # 先收集所有频道的源
-        for txt_file in txt_files:
-            city_name = os.path.basename(txt_file).replace('.txt', '')
-            
+        for city_name, file_dict in processed_files.items():
+            txt_file = file_dict.get('txt')
+            if not txt_file or not os.path.exists(txt_file):
+                print(f"跳过 {city_name}: 无TXT文件")
+                continue
+                
             with open(txt_file, 'r', encoding='utf-8') as f:
                 current_category = ""
                 for line in f:
@@ -888,7 +888,7 @@ def merge_all_files():
                                 display_name = f"{channel_name}"   #${city}
                                 
                                 if logo_url:
-                                    f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category},{display_name}"\n')
+                                    f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{category}",{display_name}\n')
                                 else:
                                     f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{channel_name}" group-title="{category}",{display_name}\n')
                                 f.write(f"{url}\n")
@@ -969,7 +969,20 @@ def main():
     print("\nIP测速完成！")
     time.sleep(2)
     
+    # 清空output目录，确保只包含本次生成的文件
+    print("\n清空output目录...")
+    for file in os.listdir('output'):
+        try:
+            file_path = os.path.join('output', file)
+            if os.path.isfile(file_path):
+                os.unlink(file_path)
+                print(f"  删除: {file_path}")
+        except Exception as e:
+            print(f"  删除文件{file_path}时出错: {e}")
+    
     # 处理每个城市
+    processed_files = {}  # 记录本次处理成功的文件
+    
     for city_name in CITY_STREAMS:
         print(f"\n{'='*60}")
         print(f"处理城市: {city_name}")
@@ -1000,7 +1013,13 @@ def main():
         logo_dict = read_logo_file()
         
         # 第三步：生成文件
-        generate_files_for_city(city_name, ip_list, logo_dict, max_sources_per_channel=2)
+        txt_file, m3u_file = generate_files_for_city(city_name, ip_list, logo_dict, max_sources_per_channel=2)
+        
+        if txt_file and m3u_file:
+            processed_files[city_name] = {
+                'txt': txt_file,
+                'm3u': m3u_file
+            }
         
         # 城市间延迟
         time.sleep(2)
@@ -1011,11 +1030,22 @@ def main():
         print(f"频道分类模板文件不存在: {demo_file}，无法进行文件合并")
         return
     
-    # 合并所有文件
+    # 检查是否有处理成功的文件
+    if not processed_files:
+        print(f"\n{'='*60}")
+        print("没有生成任何文件，跳过合并")
+        print(f"{'='*60}")
+        return
+    
+    # 只合并本次运行生成的文件
     print(f"\n{'='*60}")
-    print("开始合并所有文件...")
+    print("开始合并本次运行生成的文件...")
+    print(f"本次处理了 {len(processed_files)} 个城市的文件:")
+    for city_name in processed_files:
+        print(f"  - {city_name}")
     print(f"{'='*60}")
-    merge_all_files()
+    
+    merge_all_files(processed_files)
     
     print(f"\n{'='*60}")
     print("所有处理完成！")
