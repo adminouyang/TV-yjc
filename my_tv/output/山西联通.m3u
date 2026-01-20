@@ -1,59 +1,59 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
+#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV1.png" group-title="央视频道",CCTV1
 http://118.78.196.6:55555/rtp/226.0.2.153:9136
-#EXTINF:-1 tvg-id="CCTV-2财经" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经
+#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV2.png" group-title="央视频道",CCTV2
 http://118.78.196.6:55555/rtp/226.0.2.154:9144
-#EXTINF:-1 tvg-id="CCTV-3综艺" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV3.png" group-title="央视频道",CCTV3
 http://118.78.196.6:55555/rtp/226.0.2.208:9576
-#EXTINF:-1 tvg-id="CCTV-4中文国际" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV4.png" group-title="央视频道",CCTV4
 http://118.78.196.6:55555/rtp/226.0.2.156:9160
-#EXTINF:-1 tvg-id="CCTV-5体育" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV5.png" group-title="央视频道",CCTV5
 http://118.78.196.6:55555/rtp/226.0.2.209:9584
-#EXTINF:-1 tvg-id="CCTV-6电影" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影
+#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV6.png" group-title="央视频道",CCTV6
 http://118.78.196.6:55555/rtp/226.0.2.210:9592
-#EXTINF:-1 tvg-id="CCTV-7国防军事" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事
+#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV7" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV7.png" group-title="央视频道",CCTV7
 http://118.78.196.6:55555/rtp/226.0.2.159:9184
-#EXTINF:-1 tvg-id="CCTV-8电视剧" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧
+#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV8.png" group-title="央视频道",CCTV8
 http://118.78.196.6:55555/rtp/226.0.2.211:9600
-#EXTINF:-1 tvg-id="CCTV-9纪录" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录
+#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV9.png" group-title="央视频道",CCTV9
 http://118.78.196.6:55555/rtp/226.0.2.161:9200
-#EXTINF:-1 tvg-id="CCTV-10科教" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教
+#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV10.png" group-title="央视频道",CCTV10
 http://118.78.196.6:55555/rtp/226.0.2.162:9208
-#EXTINF:-1 tvg-id="CCTV-12社会与法" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法
+#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV12.png" group-title="央视频道",CCTV12
 http://118.78.196.6:55555/rtp/226.0.2.164:9224
-#EXTINF:-1 tvg-id="CCTV-13新闻" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV13.png" group-title="央视频道",CCTV13
 http://118.78.196.6:55555/rtp/226.0.2.165:9232
-#EXTINF:-1 tvg-id="CCTV-14少儿" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿
+#EXTINF:-1 tvg-id="CCTV14" tvg-name="CCTV14" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV14.png" group-title="央视频道",CCTV14
 http://118.78.196.6:55555/rtp/226.0.2.166:9240
-#EXTINF:-1 tvg-id="CCTV-16奥林匹克" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克
+#EXTINF:-1 tvg-id="CCTV16" tvg-name="CCTV16" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV16.png" group-title="央视频道",CCTV16
 http://118.78.196.6:55555/rtp/226.0.2.169:9264
-#EXTINF:-1 tvg-id="CCTV-17农业农村" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村
+#EXTINF:-1 tvg-id="CCTV17" tvg-name="CCTV17" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV17.png" group-title="央视频道",CCTV17
 http://118.78.196.6:55555/rtp/226.0.2.170:9272
-#EXTINF:-1 tvg-id="CCTV-5+体育赛事" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事
+#EXTINF:-1 tvg-id="CCTV5+" tvg-name="CCTV5+" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV5+.png" group-title="央视频道",CCTV5+
 http://118.78.196.6:55555/rtp/226.0.2.168:9256
-#EXTINF:-1 tvg-id="CCTV-风云足球" tvg-name="CCTV-风云足球" group-title="央视频道",CCTV-风云足球
+#EXTINF:-1 tvg-id="风云足球" tvg-name="风云足球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%A3%8E%E4%BA%91%E8%B6%B3%E7%90%83.png" group-title="央视频道",风云足球
 http://118.78.196.6:55555/rtp/226.0.2.225:9712
-#EXTINF:-1 tvg-id="CCTV-高尔夫网球" tvg-name="CCTV-高尔夫网球" group-title="央视频道",CCTV-高尔夫网球
+#EXTINF:-1 tvg-id="高尔夫网球" tvg-name="高尔夫网球" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/CCTVPAYFEE13.jpg" group-title="央视频道",高尔夫网球
 http://118.78.196.6:55555/rtp/226.0.2.217:9648
-#EXTINF:-1 tvg-id="CCTV-风云剧场" tvg-name="CCTV-风云剧场" group-title="央视频道",CCTV-风云剧场
+#EXTINF:-1 tvg-id="风云剧场" tvg-name="风云剧场" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTBfengyun.png" group-title="央视频道",风云剧场
 http://118.78.196.6:55555/rtp/226.0.2.227:9728
-#EXTINF:-1 tvg-id="CCTV-第一剧场" tvg-name="CCTV-第一剧场" group-title="央视频道",CCTV-第一剧场
+#EXTINF:-1 tvg-id="第一剧场" tvg-name="第一剧场" group-title="央视频道",第一剧场
 http://118.78.196.6:55555/rtp/226.0.2.221:9680
-#EXTINF:-1 tvg-id="CCTV-怀旧剧场" tvg-name="CCTV-怀旧剧场" group-title="央视频道",CCTV-怀旧剧场
+#EXTINF:-1 tvg-id="怀旧剧场" tvg-name="怀旧剧场" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/CCTVPAYFEE7.jpg" group-title="央视频道",怀旧剧场
 http://118.78.196.6:55555/rtp/226.0.2.224:9704
-#EXTINF:-1 tvg-id="CCTV-世界地理" tvg-name="CCTV-世界地理" group-title="央视频道",CCTV-世界地理
+#EXTINF:-1 tvg-id="世界地理" tvg-name="世界地理" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTVshijiedili.png" group-title="央视频道",世界地理
 http://118.78.196.6:55555/rtp/226.0.2.222:9688
-#EXTINF:-1 tvg-id="CCTV-兵器科技" tvg-name="CCTV-兵器科技" group-title="央视频道",CCTV-兵器科技
+#EXTINF:-1 tvg-id="兵器科技" tvg-name="兵器科技" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/CCTVPAYFEE8.jpg" group-title="央视频道",兵器科技
 http://118.78.196.6:55555/rtp/226.0.2.223:9696
-#EXTINF:-1 tvg-id="CCTV-电视指南" tvg-name="CCTV-电视指南" group-title="央视频道",CCTV-电视指南
+#EXTINF:-1 tvg-id="电视指南" tvg-name="电视指南" group-title="央视频道",电视指南
 http://118.78.196.6:55555/rtp/226.0.2.218:9656
-#EXTINF:-1 tvg-id="CCTV-文化精品" tvg-name="CCTV-文化精品" group-title="央视频道",CCTV-文化精品
+#EXTINF:-1 tvg-id="央视文化精品" tvg-name="央视文化精品" group-title="央视频道",央视文化精品
 http://118.78.196.6:55555/rtp/226.0.2.219:9664
-#EXTINF:-1 tvg-id="CCTV-央视台球" tvg-name="CCTV-央视台球" group-title="央视频道",CCTV-央视台球
+#EXTINF:-1 tvg-id="央视台球" tvg-name="央视台球" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTVtaiqiu.png" group-title="央视频道",央视台球
 http://118.78.196.6:55555/rtp/226.0.2.216:9640
-#EXTINF:-1 tvg-id="CCTV-风云音乐" tvg-name="CCTV-风云音乐" group-title="央视频道",CCTV-风云音乐
+#EXTINF:-1 tvg-id="风云音乐" tvg-name="风云音乐" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%A3%8E%E4%BA%91%E9%9F%B3%E4%B9%90.png" group-title="央视频道",风云音乐
 http://118.78.196.6:55555/rtp/226.0.2.220:9672
-#EXTINF:-1 tvg-id="CCTV-女性时尚" tvg-name="CCTV-女性时尚" group-title="央视频道",CCTV-女性时尚
+#EXTINF:-1 tvg-id="女性时尚" tvg-name="女性时尚" group-title="央视频道",女性时尚
 http://118.78.196.6:55555/rtp/226.0.2.226:9720
 #EXTINF:-1 tvg-id="CETV1" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1
 http://118.78.196.6:55555/rtp/226.0.2.181:9360
@@ -147,9 +147,9 @@ http://118.78.196.6:55555/rtp/226.0.2.238:9816
 http://118.78.196.6:55555/rtp/226.0.2.16:8040
 #EXTINF:-1 tvg-id="清徐" tvg-name="清徐" group-title="☘️山西省",清徐
 http://118.78.196.6:55555/rtp/226.0.2.191:9440
-#EXTINF:-1 tvg-id="朔州-1" tvg-name="朔州-1" group-title="☘️山西省",朔州-1
+#EXTINF:-1 tvg-id="朔州1" tvg-name="朔州1" group-title="☘️山西省",朔州1
 http://118.78.196.6:55555/rtp/226.0.2.185:9392
-#EXTINF:-1 tvg-id="朔州-2" tvg-name="朔州-2" group-title="☘️山西省",朔州-2
+#EXTINF:-1 tvg-id="朔州2" tvg-name="朔州2" group-title="☘️山西省",朔州2
 http://118.78.196.6:55555/rtp/226.0.2.186:9400
 #EXTINF:-1 tvg-id="孝义电视台" tvg-name="孝义电视台" group-title="☘️山西省",孝义电视台
 http://118.78.196.6:55555/rtp/226.0.2.189:9424
@@ -175,9 +175,9 @@ http://118.78.196.6:55555/rtp/226.0.2.206:9560
 http://118.78.196.6:55555/rtp/226.0.2.229:9744
 #EXTINF:-1 tvg-id="大同教育" tvg-name="大同教育" group-title="☘️山西省",大同教育
 http://118.78.196.6:55555/rtp/226.0.2.232:9772
-#EXTINF:-1 tvg-id="阳泉-2科教" tvg-name="阳泉-2科教" group-title="☘️山西省",阳泉-2科教
+#EXTINF:-1 tvg-id="阳泉2科教" tvg-name="阳泉2科教" group-title="☘️山西省",阳泉2科教
 http://118.78.196.6:55555/rtp/226.0.2.234:9784
-#EXTINF:-1 tvg-id="阳泉-1新闻综合" tvg-name="阳泉-1新闻综合" group-title="☘️上海市",阳泉-1新闻综合
+#EXTINF:-1 tvg-id="阳泉1新闻综合" tvg-name="阳泉1新闻综合" group-title="☘️上海市",阳泉1新闻综合
 http://118.78.196.6:55555/rtp/226.0.2.233:9776
 #EXTINF:-1 tvg-id="上海东方财经" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经
 http://118.78.196.6:55555/rtp/226.0.2.76:8520
