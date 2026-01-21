@@ -420,7 +420,7 @@ def read_config(config_file):
                         # 如果你需要原IP，可以这样：
                         # ip = ip_part
                         
-                        ip_configs.append((ip, port, region))
+                        ip_configs.append((ip, port))   #, region
                     else:
                         print(f"跳过无效IP格式: {ip_part}")
                 
