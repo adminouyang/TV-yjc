@@ -439,30 +439,18 @@ def check_ip_port(ip_port, url_end):
     except Exception as e:
         return None
 
-# 改进的扫描函数
+# 简化扫描函数：只检测给定的IP地址
 def scan_ip_port(ip, port, url_end, region=""):
+    """只检测给定的IP地址，不扫描C段"""
     valid_urls = []
     
-    if region:
-        # 如果有地区信息，直接检测给定的IP:端口
-        ip_port = f"{ip}:{port}"
-        result = check_ip_port(ip_port, url_end)
-        if result:
-            valid_urls.append(result)
-    else:
-        # 如果没有地区信息，扫描整个C段
-        try:
-            a, b, c, d = map(int, ip.split('.'))
-            ip_ports = [f"{a}.{b}.{c}.{x}:{port}" for x in range(1, 256)]
-            
-            with ThreadPoolExecutor(max_workers=100) as executor:
-                futures = {executor.submit(check_ip_port, ip_port, url_end): ip_port for ip_port in ip_ports}
-                for future in as_completed(futures):
-                    result = future.result()
-                    if result:
-                        valid_urls.append(result)
-        except:
-            pass
+    # 直接检测给定的IP:端口
+    ip_port = f"{ip}:{port}"
+    result = check_ip_port(ip_port, url_end)
+    
+    if result:
+        valid_urls.append(result)
+        print(f"  ✓ 找到可用URL: {ip_port}")
     
     return valid_urls
 
@@ -822,13 +810,17 @@ def hotel_iptv(config_file):
         for ip, port, region in ip_configs:
             configs.append((ip, port, url_end, region))
     
-    print(f"开始扫描可用URL...")
+    print(f"开始检测可用URL...")
     for ip, port, url_end, region in configs:
-        print(f"扫描: {ip}:{port} (地区: {region if region else '未知'})")
+        print(f"检测: {ip}:{port} (地区: {region if region else '未知'})")
         found_urls = scan_ip_port(ip, port, url_end, region)
         valid_urls.extend(found_urls)
+        if found_urls:
+            print(f"  ✓ 找到 {len(found_urls)} 个有效URL")
+        else:
+            print(f"  ✗ 未找到有效URL")
     
-    print(f"扫描完成，获取有效url共：{len(valid_urls)}个")
+    print(f"检测完成，获取有效url共：{len(valid_urls)}个")
     
     for valid_url in valid_urls:
         print(f"从 {valid_url} 提取频道...")
