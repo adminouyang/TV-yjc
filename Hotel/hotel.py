@@ -420,7 +420,7 @@ def read_config(config_file):
                         # 如果你需要原IP，可以这样：
                         # ip = ip_part
                         
-                        ip_configs.append((ip, port))
+                        ip_configs.append((ip, port, region))
                     else:
                         print(f"跳过无效IP格式: {ip_part}")
                 
@@ -790,17 +790,17 @@ def hotel_iptv(config_file):
         print(f"没有可用的IP，跳过 {config_file}")
         return
     
-    ip_configs = set(read_config(config_file))
+    ip_configs = read_config(config_file)  # 返回三元组列表
     valid_urls = []
     channels = []
     configs = []
     url_ends = ["/iptv/live/1000.json?key=txiptv", "/ZHGXTV/Public/json/live_interface.txt"]
     
     for url_end in url_ends:
-        for ip, port in ip_configs:
+        for ip, port, region in ip_configs:  # 解包为三个变量
             configs.append((ip, port, url_end))
     
-    for ip, port, url_end in configs:
+    for ip, port, url_end in configs:  # 解包为三个变量
         valid_urls.extend(scan_ip_port(ip, port, url_end))
     
     print(f"扫描完成，获取有效url共：{len(valid_urls)}个")
