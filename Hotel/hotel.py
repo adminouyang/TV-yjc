@@ -11,6 +11,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import concurrent.futures
 import json
 from bs4 import BeautifulSoup
+import socket
+import subprocess
 
 # 配置区
 HEADERS = {
@@ -280,15 +282,37 @@ def read_logo_file():
             print(f"读取台标文件错误: {e}")
     return logo_dict
 
-# 检测IP:端口可用性
-def check_ip_availability(ip_port, timeout=2):
-    """检测IP:端口是否可用"""
+# 改进的IP检测函数，处理带地区的格式
+def check_ip_availability(ip_port, timeout=3):
+    """检测IP:端口是否可用，支持带地区和不带地区的格式"""
     try:
+        # 解析IP:端口，去除地区信息
+        if '$' in ip_port:
+            ip_port_only = ip_port.split('$')[0].strip()
+        else:
+            ip_port_only = ip_port.strip()
+        
+        # 分割IP和端口
+        if ':' not in ip_port_only:
+            print(f"跳过无效格式: {ip_port}")
+            return False
+            
+        ip, port = ip_port_only.split(':', 1)
+        
+        # 首先检测端口是否开放
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(timeout)
+        result = sock.connect_ex((ip, int(port)))
+        sock.close()
+        
+        if result != 0:
+            return False
+            
         # 尝试连接HTTP服务
         test_urls = [
-            f"http://{ip_port}/",
-            f"http://{ip_port}/iptv/live/1000.json?key=txiptv",
-            f"http://{ip_port}/ZHGXTV/Public/json/live_interface.txt"
+            f"http://{ip_port_only}/",
+            f"http://{ip_port_only}/iptv/live/1000.json?key=txiptv",
+            f"http://{ip_port_only}/ZHGXTV/Public/json/live_interface.txt"
         ]
         
         for url in test_urls:
@@ -301,11 +325,12 @@ def check_ip_availability(ip_port, timeout=2):
                 
         return False
     except Exception as e:
+        print(f"检测IP {ip_port} 时出错: {e}")
         return False
 
 # 批量检测IP可用性并更新文件
 def check_and_update_ip_file(province_file):
-    """检测IP可用性并更新文件"""
+    """检测IP可用性并更新文件，支持带地区格式"""
     print(f"\n开始检测 {province_file} 中的IP可用性...")
     
     available_ips = []
@@ -320,7 +345,7 @@ def check_and_update_ip_file(province_file):
                     all_ips.append(line)
     except Exception as e:
         print(f"读取IP文件错误: {e}")
-        return
+        return []
     
     total_ips = len(all_ips)
     print(f"需要检测 {total_ips} 个IP")
@@ -328,22 +353,22 @@ def check_and_update_ip_file(province_file):
     # 使用线程池并行检测
     with ThreadPoolExecutor(max_workers=50) as executor:
         futures = {}
-        for ip_port in all_ips:
-            future = executor.submit(check_ip_availability, ip_port)
-            futures[future] = ip_port
+        for ip_line in all_ips:
+            future = executor.submit(check_ip_availability, ip_line)
+            futures[future] = ip_line
         
         completed = 0
         for future in as_completed(futures):
-            ip_port = futures[future]
+            ip_line = futures[future]
             try:
                 is_available = future.result()
                 completed += 1
                 
                 if is_available:
-                    available_ips.append(ip_port)
-                    print(f"✓ {ip_port} 可用 ({completed}/{total_ips})")
+                    available_ips.append(ip_line)
+                    print(f"✓ {ip_line} 可用 ({completed}/{total_ips})")
                 else:
-                    print(f"✗ {ip_port} 不可用 ({completed}/{total_ips})")
+                    print(f"✗ {ip_line} 不可用 ({completed}/{total_ips})")
                     
                 # 每检测10个IP显示一次进度
                 if completed % 10 == 0 or completed == total_ips:
@@ -351,13 +376,13 @@ def check_and_update_ip_file(province_file):
                     
             except Exception as e:
                 completed += 1
-                print(f"✗ {ip_port} 检测失败 ({completed}/{total_ips})")
+                print(f"✗ {ip_line} 检测失败: {e} ({completed}/{total_ips})")
     
     # 更新IP文件，只保留可用的IP
     if available_ips:
         with open(province_file, 'w', encoding='utf-8') as f:
-            for ip_port in available_ips:
-                f.write(f"{ip_port}\n")
+            for ip_line in available_ips:
+                f.write(f"{ip_line}\n")
         
         print(f"\n✓ 已更新 {province_file}")
         print(f"  原始IP数量: {total_ips}")
@@ -368,23 +393,7 @@ def check_and_update_ip_file(province_file):
     
     return available_ips
 
-# 读取文件并设置参数
-# def read_config(config_file):
-#     ip_configs = []
-#     try:
-#         with open(config_file, 'r', encoding='utf-8') as f:
-#             for line in f:
-#                 line = line.strip()
-#                 if line and not line.startswith("#"):
-#                     if ':' in line:
-#                         ip_part, port = line.split(':', 1)
-#                         a, b, c, d = ip_part.split('.')
-#                         ip = f"{a}.{b}.{c}.1"
-#                         ip_configs.append((ip, port))
-#         return ip_configs
-#     except Exception as e:
-#         print(f"读取文件错误: {e}")
-#         return []
+# 改进的读取配置文件函数
 def read_config(config_file):
     ip_configs = []
     try:
@@ -394,65 +403,71 @@ def read_config(config_file):
                 if not line or line.startswith("#"):
                     continue
                 
-                # 分割IP:端口和地区
+                # 解析每一行
                 if '$' in line:
                     # 格式: IP:端口$地区
                     ip_port, region = line.split('$', 1)
+                    ip_port = ip_port.strip()
+                    region = region.strip()
                 else:
                     # 格式: IP:端口 (无地区)
-                    ip_port = line
+                    ip_port = line.strip()
                     region = ""
                 
                 # 分割IP和端口
                 if ':' in ip_port:
                     ip_part, port = ip_port.split(':', 1)
                     
-                    # 解析IP的四个部分
-                    parts = ip_part.split('.')
-                    if len(parts) == 4:
-                        a, b, c, d = parts
-                        
-                        # 注意：原代码会将IP的第四段改为1
-                        # 例如 182.122.225.78 会变成 182.122.225.1
-                        # 如果你不需要这个修改，可以去掉这行
-                        ip = f"{a}.{b}.{c}.1"
-                        
-                        # 如果你需要原IP，可以这样：
-                        # ip = ip_part
-                        
-                        ip_configs.append((ip, port, region))
-                    else:
-                        print(f"跳过无效IP格式: {ip_part}")
+                    # 不再修改IP，使用原IP
+                    ip = ip_part
+                    ip_configs.append((ip, port, region))
                 
         return ip_configs
     except Exception as e:
         print(f"读取文件错误: {e}")
         return []
-        
+
 # 发送get请求检测url是否可访问
 def check_ip_port(ip_port, url_end):
     try:
         url = f"http://{ip_port}{url_end}"
-        resp = requests.get(url, timeout=3)
+        resp = requests.get(url, timeout=3, headers=HEADERS)
         resp.raise_for_status()
-        if "tsfile" in resp.text or "hls" in resp.text or "m3u8" in resp.text:
+        if "tsfile" in resp.text or "hls" in resp.text or "m3u8" in resp.text or ".json" in url_end:
             print(f"{url} 访问成功")
             return url
-    except:
+    except Exception as e:
         return None
 
-# 多线程检测url，获取有效ip_port
-def scan_ip_port(ip, port, url_end):
+# 修改扫描函数：无论是否有地区信息都扫描整个C段
+def scan_ip_port(ip, port, url_end, region=""):
+    """扫描整个C段，无论是否有地区信息"""
     valid_urls = []
-    a, b, c, d = map(int, ip.split('.'))
-    ip_ports = [f"{a}.{b}.{c}.{x}:{port}" for x in range(1, 256)]
-    with ThreadPoolExecutor(max_workers=100) as executor:
-        futures = {executor.submit(check_ip_port, ip_port, url_end): ip_port for ip_port in ip_ports}
-        for future in as_completed(futures):
-            result = future.result()
-            if result:
-                valid_urls.append(result)
-    return valid_urls    
+    
+    try:
+        # 提取IP的前三段
+        ip_parts = ip.split('.')
+        if len(ip_parts) != 4:
+            # 如果IP格式不正确，直接返回
+            return valid_urls
+            
+        a, b, c, d = map(int, ip_parts)
+        
+        # 生成整个C段的IP地址
+        ip_ports = [f"{a}.{b}.{c}.{x}:{port}" for x in range(1, 256)]
+        
+        print(f"开始扫描C段: {a}.{b}.{c}.0/24, 端口: {port}")
+        
+        with ThreadPoolExecutor(max_workers=100) as executor:
+            futures = {executor.submit(check_ip_port, ip_port, url_end): ip_port for ip_port in ip_ports}
+            for future in as_completed(futures):
+                result = future.result()
+                if result:
+                    valid_urls.append(result)
+    except Exception as e:
+        print(f"扫描C段时出错: {e}")
+    
+    return valid_urls
 
 # 发送GET请求获取JSON文件, 解析JSON文件, 获取频道信息
 def extract_channels(url):
@@ -463,34 +478,38 @@ def extract_channels(url):
         url_x = f"{urls[0]}//{urls[2]}"
         
         if "iptv" in url:
-            response = requests.get(url, timeout=3)
+            response = requests.get(url, timeout=3, headers=HEADERS)
             json_data = response.json()
             for item in json_data.get('data', []):
                 if isinstance(item, dict):
                     name = item.get('name')
                     urlx = item.get('url')
-                    if urlx and ("tsfile" in urlx or "m3u8" in urlx):
+                    if urlx and ("tsfile" in urlx or "m3u8" in urlx or "hls" in urlx):
                         # 确保urlx以斜杠开头，避免双斜杠
                         if not urlx.startswith('/'):
                             urlx = '/' + urlx
                         urld = f"{url_x}{urlx}"
                         hotel_channels.append((name, urld))
         elif "ZHGXTV" in url:
-            response = requests.get(url, timeout=2)
+            response = requests.get(url, timeout=2, headers=HEADERS)
             json_data = response.content.decode('utf-8')
             data_lines = json_data.split('\n')
             for line in data_lines:
-                if "," in line and ("hls" in line or "m3u8" in line):
-                    name, channel_url = line.strip().split(',')
-                    parts = channel_url.split('/', 3)
-                    if len(parts) >= 4:
-                        urld = f"{url_x}/{parts[3]}"
-                        hotel_channels.append((name, urld))
+                if "," in line and ("hls" in line or "m3u8" in line or "tsfile" in line):
+                    try:
+                        name, channel_url = line.strip().split(',', 1)
+                        parts = channel_url.split('/', 3)
+                        if len(parts) >= 4:
+                            urld = f"{url_x}/{parts[3]}"
+                            hotel_channels.append((name, urld))
+                    except:
+                        continue
         return hotel_channels
-    except Exception:
+    except Exception as e:
+        print(f"提取频道时出错: {e}")
         return []
 
-#测速
+# 测速
 def speed_test(channels):
     def show_progress():
         while checked[0] < len(channels):
@@ -501,17 +520,16 @@ def speed_test(channels):
     def worker():
         while True:
             try:
-                channel_name, channel_url = task_queue.get()
+                channel_name, channel_url = task_queue.get(timeout=1)
                 try:
                     channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])
-                    lines = requests.get(channel_url, timeout=2).text.strip().split('\n')
+                    lines = requests.get(channel_url, timeout=2, headers=HEADERS).text.strip().split('\n')
                     ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]
                     if ts_lists:
                         ts_url = channel_url_t + ts_lists[0]
-                        ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])
                         with eventlet.Timeout(5, False):
                             start_time = time.time()
-                            cont = requests.get(ts_url, timeout=6).content
+                            cont = requests.get(ts_url, timeout=6, headers=HEADERS).content
                             resp_time = (time.time() - start_time) * 1                    
                         if cont and resp_time > 0:
                             checked[0] += 1
@@ -531,10 +549,16 @@ def speed_test(channels):
                             checked[0] += 1
                 except Exception as e:
                     checked[0] += 1
-            except:
+            except Empty:
+                break
+            except Exception as e:
                 checked[0] += 1
             finally:
-                task_queue.task_done()
+                if not task_queue.empty():
+                    task_queue.task_done()
+    
+    if not channels:
+        return []
     
     task_queue = Queue()
     results = []
@@ -542,24 +566,23 @@ def speed_test(channels):
     
     Thread(target=show_progress, daemon=True).start()
     
-    for _ in range(min(10, len(channels))):
+    for _ in range(min(20, len(channels))):
         Thread(target=worker, daemon=True).start()
     
     for channel in channels:
         task_queue.put(channel)
     
-    task_queue.join()
+    try:
+        task_queue.join()
+    except:
+        pass
+    
     return results
 
 # 精确频道名称匹配函数
 def exact_channel_match(channel_name, pattern_name):
     """
     精确匹配频道名称，避免CCTV1匹配到CCTV10等问题
-    规则：
-    1. 移除特殊符号
-    2. 转换为小写
-    3. 检查精确匹配或包含匹配
-    4. 对于数字频道，确保数字边界
     """
     # 清理名称
     clean_name = remove_special_symbols(channel_name.strip().lower())
@@ -637,8 +660,6 @@ def unify_channel_name(channels_list):
             unified_name = original_name
         
         new_channels_list.append(f"{unified_name},{channel_url},{speed}\n")
-        if original_name != unified_name:
-            print(f"频道名称统一: '{original_name}' -> '{unified_name}'")
     
     return new_channels_list
 
@@ -784,32 +805,51 @@ def group_and_sort_channels_by_category(categorized_channels):
 # 获取酒店源流程        
 def hotel_iptv(config_file):
     # 先检测并更新IP文件
+    print(f"\n{'='*50}")
+    print(f"开始处理配置文件: {config_file}")
+    print(f"{'='*50}")
+    
     available_ips = check_and_update_ip_file(config_file)
     
     if not available_ips:
         print(f"没有可用的IP，跳过 {config_file}")
         return
     
-    ip_configs = read_config(config_file)  # 返回三元组列表
+    ip_configs = read_config(config_file)
     valid_urls = []
     channels = []
     configs = []
     url_ends = ["/iptv/live/1000.json?key=txiptv", "/ZHGXTV/Public/json/live_interface.txt"]
     
     for url_end in url_ends:
-        for ip, port, region in ip_configs:  # 解包为三个变量
-            configs.append((ip, port, url_end))
+        for ip, port, region in ip_configs:
+            configs.append((ip, port, url_end, region))
     
-    for ip, port, url_end in configs:  # 解包为三个变量
-        valid_urls.extend(scan_ip_port(ip, port, url_end))
+    print(f"开始扫描可用URL...")
+    for ip, port, url_end, region in configs:
+        print(f"扫描: {ip}:{port} (地区: {region if region else '未知'})")
+        found_urls = scan_ip_port(ip, port, url_end, region)
+        valid_urls.extend(found_urls)
+        print(f"  找到 {len(found_urls)} 个有效URL")
     
     print(f"扫描完成，获取有效url共：{len(valid_urls)}个")
     
     for valid_url in valid_urls:
-        channels.extend(extract_channels(valid_url))
+        print(f"从 {valid_url} 提取频道...")
+        extracted_channels = extract_channels(valid_url)
+        channels.extend(extracted_channels)
+        print(f"  提取到 {len(extracted_channels)} 个频道")
     
+    if not channels:
+        print(f"从 {config_file} 中未提取到任何频道")
+        return
+        
     print(f"共获取频道：{len(channels)}个\n开始测速")
     results = speed_test(channels)
+    
+    if not results:
+        print(f"测速后没有可用的频道")
+        return
     
     # 对频道进行排序
     results.sort(key=lambda x: -float(x[2]))
@@ -822,7 +862,7 @@ def hotel_iptv(config_file):
     with open('1.txt', 'a', encoding='utf-8') as f:
         for line in unified_channels:
             f.write(line.split(',')[0] + ',' + line.split(',')[1] + '\n')
-    print("测速完成")
+    print(f"测速完成，获取到 {len(results)} 个可用频道")
 
 # 主函数
 def main():
@@ -830,13 +870,20 @@ def main():
     start_time = datetime.datetime.now()
     print(f"脚本开始运行时间: {start_time.strftime('%Y-%m-%d %H:%M:%S')} (北京时间)")
     
+    # 清空1.txt文件
+    if os.path.exists('1.txt'):
+        with open('1.txt', 'w', encoding='utf-8') as f:
+            f.write('')
+    
     # 第二步：处理每个省份的IP
     province_files = [f for f in os.listdir(IP_DIR) if f.endswith('.txt')]
     
+    if not province_files:
+        print(f"在 {IP_DIR} 目录中没有找到txt文件")
+        return
+    
     for province_file in province_files:
         province_name = province_file.replace('.txt', '')
-        print(f"\n处理 {province_name} 的IP...")
-        
         config_file = os.path.join(IP_DIR, province_file)
         hotel_iptv(config_file)
     
@@ -848,6 +895,10 @@ def main():
     with open('1.txt', 'r', encoding='utf-8') as f:
         raw_lines = f.readlines()
     
+    if not raw_lines:
+        print("频道数据文件为空")
+        return
+    
     # 转换为(channel, url, speed)格式
     channels_data = []
     for line in raw_lines:
@@ -858,6 +909,10 @@ def main():
                 url = parts[1]
                 speed = parts[2] if len(parts) > 2 else "0.000"
                 channels_data.append(f"{name},{url},{speed}")
+    
+    if not channels_data:
+        print("没有可用的频道数据")
+        return
     
     # 对数据进行分类
     categorized = classify_channels_by_category(channels_data)
