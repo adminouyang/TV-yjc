@@ -797,7 +797,7 @@ def hotel_iptv(config_file):
     url_ends = ["/iptv/live/1000.json?key=txiptv", "/ZHGXTV/Public/json/live_interface.txt"]
     
     for url_end in url_ends:
-        for ip, port, region in ip_configs:  # 解包为三个变量
+        for ip, port in ip_configs:  # 解包为三个变量for ip, port, region in ip_configs: 
             configs.append((ip, port, url_end))
     
     for ip, port, url_end in configs:  # 解包为三个变量
