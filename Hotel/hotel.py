@@ -439,33 +439,30 @@ def check_ip_port(ip_port, url_end):
     except Exception as e:
         return None
 
-# 修改扫描函数：无论是否有地区信息都扫描整个C段
+# 改进的扫描函数
 def scan_ip_port(ip, port, url_end, region=""):
-    """扫描整个C段，无论是否有地区信息"""
     valid_urls = []
     
-    try:
-        # 提取IP的前三段
-        ip_parts = ip.split('.')
-        if len(ip_parts) != 4:
-            # 如果IP格式不正确，直接返回
-            return valid_urls
+    if region:
+        # 如果有地区信息，直接检测给定的IP:端口
+        ip_port = f"{ip}:{port}"
+        result = check_ip_port(ip_port, url_end)
+        if result:
+            valid_urls.append(result)
+    else:
+        # 如果没有地区信息，扫描整个C段
+        try:
+            a, b, c, d = map(int, ip.split('.'))
+            ip_ports = [f"{a}.{b}.{c}.{x}:{port}" for x in range(1, 256)]
             
-        a, b, c, d = map(int, ip_parts)
-        
-        # 生成整个C段的IP地址
-        ip_ports = [f"{a}.{b}.{c}.{x}:{port}" for x in range(1, 256)]
-        
-        print(f"开始扫描C段: {a}.{b}.{c}.0/24, 端口: {port}")
-        
-        with ThreadPoolExecutor(max_workers=100) as executor:
-            futures = {executor.submit(check_ip_port, ip_port, url_end): ip_port for ip_port in ip_ports}
-            for future in as_completed(futures):
-                result = future.result()
-                if result:
-                    valid_urls.append(result)
-    except Exception as e:
-        print(f"扫描C段时出错: {e}")
+            with ThreadPoolExecutor(max_workers=50) as executor:
+                futures = {executor.submit(check_ip_port, ip_port, url_end): ip_port for ip_port in ip_ports}
+                for future in as_completed(futures):
+                    result = future.result()
+                    if result:
+                        valid_urls.append(result)
+        except:
+            pass
     
     return valid_urls
 
@@ -830,7 +827,6 @@ def hotel_iptv(config_file):
         print(f"扫描: {ip}:{port} (地区: {region if region else '未知'})")
         found_urls = scan_ip_port(ip, port, url_end, region)
         valid_urls.extend(found_urls)
-        print(f"  找到 {len(found_urls)} 个有效URL")
     
     print(f"扫描完成，获取有效url共：{len(valid_urls)}个")
     
