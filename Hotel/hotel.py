@@ -369,23 +369,66 @@ def check_and_update_ip_file(province_file):
     return available_ips
 
 # 读取文件并设置参数
+# def read_config(config_file):
+#     ip_configs = []
+#     try:
+#         with open(config_file, 'r', encoding='utf-8') as f:
+#             for line in f:
+#                 line = line.strip()
+#                 if line and not line.startswith("#"):
+#                     if ':' in line:
+#                         ip_part, port = line.split(':', 1)
+#                         a, b, c, d = ip_part.split('.')
+#                         ip = f"{a}.{b}.{c}.1"
+#                         ip_configs.append((ip, port))
+#         return ip_configs
+#     except Exception as e:
+#         print(f"读取文件错误: {e}")
+#         return []
 def read_config(config_file):
     ip_configs = []
     try:
         with open(config_file, 'r', encoding='utf-8') as f:
             for line in f:
                 line = line.strip()
-                if line and not line.startswith("#"):
-                    if ':' in line:
-                        ip_part, port = line.split(':', 1)
-                        a, b, c, d = ip_part.split('.')
+                if not line or line.startswith("#"):
+                    continue
+                
+                # 分割IP:端口和地区
+                if '$' in line:
+                    # 格式: IP:端口$地区
+                    ip_port, region = line.split('$', 1)
+                else:
+                    # 格式: IP:端口 (无地区)
+                    ip_port = line
+                    region = ""
+                
+                # 分割IP和端口
+                if ':' in ip_port:
+                    ip_part, port = ip_port.split(':', 1)
+                    
+                    # 解析IP的四个部分
+                    parts = ip_part.split('.')
+                    if len(parts) == 4:
+                        a, b, c, d = parts
+                        
+                        # 注意：原代码会将IP的第四段改为1
+                        # 例如 182.122.225.78 会变成 182.122.225.1
+                        # 如果你不需要这个修改，可以去掉这行
                         ip = f"{a}.{b}.{c}.1"
-                        ip_configs.append((ip, port))
+                        
+                        # 如果你需要原IP，可以这样：
+                        # ip = ip_part
+                        
+                        ip_configs.append((ip, port, region))
+                    else:
+                        print(f"跳过无效IP格式: {ip_part}")
+                
         return ip_configs
     except Exception as e:
         print(f"读取文件错误: {e}")
         return []
-
+        
 # 发送get请求检测url是否可访问
 def check_ip_port(ip_port, url_end):
     try:
