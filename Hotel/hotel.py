@@ -204,7 +204,6 @@ CHANNEL_MAPPING = {
     "睛彩青少": ["睛彩青少", "睛彩羽毛球"],
     "求索纪录": ["求索纪录", "求索记录"],
     "金鹰纪实": ["金鹰纪实", "金鹰记实"],
-    "": ["", ""],
     "上海纪实": ["上海纪实高清"],
     "星空卫视": ["星空卫视", "星空衛視"],
     "CHANNEL[V]": ["Channel[V]", "CHANNEL[V]"],
@@ -755,19 +754,19 @@ def generate_m3u_file(txt_file_path, m3u_file_path):
                 # 处理频道行
                 if ',' in line and not line.startswith('#'):
                     try:
-                            parts = line.split(',')
-                            if len(parts) >= 2:
-                                channel_name = parts[0]
-                                channel_url = parts[1]
-                                
-                                # 获取台标
-                                logo_url = logo_dict.get(channel_name, "")
-                                
-                                # 写入M3U条目
-                                m3u_file.write(f'#EXTINF:-1 tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{current_group}",{channel_name}\n')
-                                m3u_file.write(f'{channel_url}\n')
-                        except Exception as e:
-                            print(f"处理频道行错误: {line}, 错误: {e}")
+                        parts = line.split(',')
+                        if len(parts) >= 2:
+                            channel_name = parts[0]
+                            channel_url = parts[1]
+                            
+                            # 获取台标
+                            logo_url = logo_dict.get(channel_name, "")
+                            
+                            # 写入M3U条目
+                            m3u_file.write(f'#EXTINF:-1 tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{current_group}",{channel_name}\n')
+                            m3u_file.write(f'{channel_url}\n')
+                    except Exception as e:
+                        print(f"处理频道行错误: {line}, 错误: {e}")
     
     print(f"M3U文件已生成: {m3u_file_path}")
 
