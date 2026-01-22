@@ -507,38 +507,75 @@ def speed_test(channels):
                 while attempts < max_attempts:
                     attempts += 1
                     try:
-                        channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])
-                        lines = requests.get(channel_url, timeout=2).text.strip().split('\n')
+                        # 获取m3u8文件内容
+                        response = requests.get(channel_url, timeout=2)
+                        if response.status_code != 200:
+                            if attempts < max_attempts:
+                                print(f"第{attempts}次测速 {channel_name}: HTTP {response.status_code}，将重试")
+                            continue
+                            
+                        lines = response.text.strip().split('\n')
                         ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]
-                        if ts_lists:
-                            ts_url = channel_url_t + ts_lists[0]
-                            with eventlet.Timeout(5, False):
-                                start_time = time.time()
-                                cont = requests.get(ts_url, timeout=6).content
-                                resp_time = (time.time() - start_time) * 1                    
-                            if cont and resp_time > 0:
-                                temp_filename = f"temp_{hash(channel_url)}_{attempts}.ts"
-                                with open(temp_filename, 'wb') as f:
-                                    f.write(cont)
-                                normalized_speed = len(cont) / resp_time / 1024 / 1024
-                                os.remove(temp_filename)
-                                
-                                # 更新最佳速度
-                                if normalized_speed > best_speed:
-                                    best_speed = normalized_speed
-                                
-                                # 如果速度合格，不再重试
-                                if normalized_speed > 0.001 and attempts < max_attempts:
-                                    break
-                            else:
-                                if attempts < max_attempts:
-                                    print(f"第{attempts}次测速 {channel_name}: 获取内容失败，将重试")
-                        else:
+                        if not ts_lists:
                             if attempts < max_attempts:
                                 print(f"第{attempts}次测速 {channel_name}: 没有找到TS列表，将重试")
+                            continue
+                        
+                        # 获取TS文件的URL
+                        channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])
+                        ts_url = channel_url_t + ts_lists[0]
+                        
+                        # 测速逻辑
+                        start_time = time.time()
+                        try:
+                            with eventlet.Timeout(5, False):
+                                ts_response = requests.get(ts_url, timeout=6, stream=True)
+                                if ts_response.status_code != 200:
+                                    if attempts < max_attempts:
+                                        print(f"第{attempts}次测速 {channel_name}: TS文件HTTP {ts_response.status_code}，将重试")
+                                    continue
+                                
+                                # 读取部分内容进行测速
+                                content_length = 0
+                                chunk_size = 1024 * 1024  # 1MB
+                                for chunk in ts_response.iter_content(chunk_size=chunk_size):
+                                    if chunk:
+                                        content_length += len(chunk)
+                                        # 只读取1MB用于测速
+                                        if content_length >= chunk_size:
+                                            break
+                                
+                                resp_time = (time.time() - start_time) * 1
+                                
+                                if content_length > 0 and resp_time > 0:
+                                    normalized_speed = content_length / resp_time / 1024 / 1024
+                                    
+                                    # 更新最佳速度
+                                    if normalized_speed > best_speed:
+                                        best_speed = normalized_speed
+                                    
+                                    # 如果速度合格，不再重试
+                                    if normalized_speed > 0.001 and attempts < max_attempts:
+                                        break
+                                    else:
+                                        if attempts < max_attempts:
+                                            print(f"第{attempts}次测速 {channel_name}: {normalized_speed:.3f} MB/s，将重试")
+                                else:
+                                    if attempts < max_attempts:
+                                        print(f"第{attempts}次测速 {channel_name}: 获取内容失败，将重试")
+                        except eventlet.Timeout:
+                            if attempts < max_attempts:
+                                print(f"第{attempts}次测速 {channel_name}: 请求超时，将重试")
+                            continue
+                        except Exception as e:
+                            if attempts < max_attempts:
+                                print(f"第{attempts}次测速 {channel_name} 失败: {str(e)}，将重试")
+                            continue
+                            
                     except Exception as e:
                         if attempts < max_attempts:
-                            print(f"第{attempts}次测速 {channel_name} 失败: {str(e)}，将重试")
+                            print(f"第{attempts}次测速 {channel_name} 处理失败: {str(e)}，将重试")
+                        continue
                 
                 # 根据最佳速度决定是否保留
                 if best_speed > 0.001:
