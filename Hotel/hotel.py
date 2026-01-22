@@ -99,13 +99,16 @@ CHANNEL_CATEGORIES = {
 }
 
 # 特殊符号映射，在匹配时将特殊符号替换为空
-SPECIAL_SYMBOLS = ["HD", "LT", "XF", "", "", "", "", "", "", "", ""]
+SPECIAL_SYMBOLS = ["HD", "LT", "XF", "-", "_", " ", ".", "·", "高清", "标清", "超清", "H265", "4K", "FHD", "HDTV"]
 
 # 移除特殊符号的函数
 def remove_special_symbols(text):
     """移除频道名称中的特殊符号"""
     for symbol in SPECIAL_SYMBOLS:
         text = text.replace(symbol, "")
+    
+    # 移除多余的空格
+    text = re.sub(r'\s+', '', text)
     return text.strip()
 
 # 改进的频道名称映射，使用精确匹配
@@ -378,22 +381,6 @@ def check_and_update_ip_file(province_file):
     return available_ips
 
 # 读取文件并设置参数
-# def read_config(config_file):
-#     ip_configs = []
-#     try:
-#         with open(config_file, 'r', encoding='utf-8') as f:
-#             for line in f:
-#                 line = line.strip()
-#                 if line and not line.startswith("#"):
-#                     if ':' in line:
-#                         ip_part, port = line.split(':', 1)
-#                         a, b, c, d = ip_part.split('.')
-#                         ip = f"{a}.{b}.{c}.1"
-#                         ip_configs.append((ip, port))
-#         return ip_configs
-#     except Exception as e:
-#         print(f"读取文件错误: {e}")
-#         return []
 def read_config(config_file):
     ip_configs = []
     try:
@@ -563,12 +550,8 @@ def speed_test(channels):
 # 精确频道名称匹配函数
 def exact_channel_match(channel_name, pattern_name):
     """
-    精确匹配频道名称，避免CCTV1匹配到CCTV10等问题
-    规则：
-    1. 移除特殊符号
-    2. 转换为小写
-    3. 检查精确匹配或包含匹配
-    4. 对于数字频道，确保数字边界
+    更严格的精确匹配频道名称
+    避免CCTV1匹配到CCTV10、CCTV-10、CCTV-11等问题
     """
     # 清理名称
     clean_name = remove_special_symbols(channel_name.strip().lower())
@@ -578,32 +561,38 @@ def exact_channel_match(channel_name, pattern_name):
     if clean_name == clean_pattern:
         return True
     
-    # 如果模式是"cctv1"，但名称是"cctv10"，应该不匹配
-    # 检查数字边界
-    if clean_pattern.startswith("cctv") and clean_name.startswith("cctv"):
-        # 提取数字部分
-        pattern_num_match = re.search(r'cctv(\d+)', clean_pattern)
-        name_num_match = re.search(r'cctv(\d+)', clean_name)
-        
-        if pattern_num_match and name_num_match:
-            pattern_num = pattern_num_match.group(1)
-            name_num = name_num_match.group(1)
-            
-            # 如果数字不同，不匹配
-            if pattern_num != name_num:
-                return False
-            
-            # 如果数字相同，检查剩余部分
-            pattern_rest = clean_pattern.replace(f"cctv{pattern_num}", "")
-            name_rest = clean_name.replace(f"cctv{name_num}", "")
-            
-            # 如果剩余部分相同或模式没有剩余部分，则匹配
-            if pattern_rest == "" or name_rest.startswith(pattern_rest):
-                return True
-            return False
+    # 处理CCTV数字频道
+    cctv_match = re.match(r'^cctv[-_\s]?(\d+[a-z]?)$', clean_name)
+    pattern_match = re.match(r'^cctv[-_\s]?(\d+[a-z]?)$', clean_pattern)
     
-    # 对于非CCTV频道，使用简单的包含匹配
+    if cctv_match and pattern_match:
+        # 提取数字部分进行比较
+        cctv_num1 = cctv_match.group(1)
+        cctv_num2 = pattern_match.group(1)
+        
+        # 如果数字不同，不匹配
+        if cctv_num1 != cctv_num2:
+            return False
+        else:
+            # 数字相同，再检查完整名称
+            return clean_name == clean_pattern
+    
+    # 处理CCTV5+等带+的频道
+    if "+" in clean_name and "+" in clean_pattern:
+        if "cctv5+" in clean_name and "cctv5+" in clean_pattern:
+            return True
+    
+    # 对于非CCTV数字频道，使用更严格的前缀匹配
+    # 检查clean_pattern是否是clean_name的前缀，但要有边界检查
     if clean_pattern in clean_name:
+        # 确保不是像"CCTV1"匹配"CCTV10"这样的情况
+        if clean_pattern.endswith(('1', '2', '3', '4', '5', '6', '7', '8', '9', '0')):
+            # 如果是数字结尾，需要确保下一个字符是结束符
+            pattern_len = len(clean_pattern)
+            if len(clean_name) > pattern_len:
+                next_char = clean_name[pattern_len]
+                if next_char.isdigit():
+                    return False
         return True
     
     return False
@@ -619,27 +608,48 @@ def unify_channel_name(channels_list):
         # 清理原始名称
         clean_name = remove_special_symbols(name.strip().lower())
         
-        # 先尝试精确匹配
-        for standard_name, variants in CHANNEL_MAPPING.items():
-            for variant in variants:
-                if exact_channel_match(name, variant):
-                    unified_name = standard_name
-                    break
-            if unified_name:
-                break
+        # 首先尝试精确的数字匹配
+        cctv_match = re.search(r'^cctv[-_\s]?(\d+[a-z]?)$', clean_name, re.IGNORECASE)
+        if cctv_match:
+            cctv_num = cctv_match.group(1)
+            
+            # 构建标准的CCTV名称
+            if cctv_num == "5+":
+                standard_name = "CCTV5+"
+            else:
+                standard_name = f"CCTV{cctv_num}"
+            
+            # 在映射表中查找标准名称
+            if standard_name in CHANNEL_MAPPING:
+                unified_name = standard_name
+                print(f"数字匹配: '{original_name}' -> '{standard_name}'")
         
-        # 如果没有找到精确匹配，尝试其他匹配策略
+        # 如果没有通过数字匹配，再尝试映射表匹配
         if not unified_name:
-            # 尝试处理CCTV数字频道
-            cctv_match = re.search(r'cctv[-_\s]?(\d+)', clean_name, re.IGNORECASE)
-            if cctv_match:
-                cctv_num = cctv_match.group(1)
-                for standard_name, variants in CHANNEL_MAPPING.items():
-                    if standard_name.startswith("CCTV"):
-                        std_match = re.search(r'cctv(\d+)', standard_name.lower())
-                        if std_match and std_match.group(1) == cctv_num:
-                            unified_name = standard_name
-                            break
+            for standard_name, variants in CHANNEL_MAPPING.items():
+                for variant in variants:
+                    if exact_channel_match(name, variant):
+                        unified_name = standard_name
+                        break
+                if unified_name:
+                    break
+        
+        # 如果还没有找到，尝试其他匹配策略
+        if not unified_name:
+            # 处理特殊格式的CCTV频道
+            for pattern in [r'cctv[-\s]?(\d+)高清?', r'cctv[-\s]?(\d+)hd', r'cctv[-\s]?(\d+).*']:
+                match = re.search(pattern, clean_name, re.IGNORECASE)
+                if match:
+                    cctv_num = match.group(1)
+                    if cctv_num == "5+":
+                        standard_name = "CCTV5+"
+                    else:
+                        standard_name = f"CCTV{cctv_num}"
+                    
+                    if standard_name in CHANNEL_MAPPING:
+                        unified_name = standard_name
+                        print(f"正则匹配: '{original_name}' -> '{standard_name}'")
+                        break
         
         # 如果还是没有找到，保留原名称
         if not unified_name:
@@ -650,6 +660,26 @@ def unify_channel_name(channels_list):
             print(f"频道名称统一: '{original_name}' -> '{unified_name}'")
     
     return new_channels_list
+
+# 按照CHANNEL_CATEGORIES中指定的顺序排序
+def sort_channels_by_specified_order(channels_list, category_channels):
+    """按照指定的顺序对频道进行排序"""
+    # 创建频道到索引的映射
+    channel_order = {channel: index for index, channel in enumerate(category_channels)}
+    
+    def get_channel_sort_key(item):
+        """获取频道的排序键值"""
+        name, url, speed = item
+        
+        # 如果频道在指定列表中，使用指定顺序
+        if name in channel_order:
+            return (channel_order[name], -float(speed))  # 相同频道按速度降序
+        else:
+            # 不在列表中的频道放在最后，按名称排序
+            return (float('inf'), name)
+    
+    # 按照指定顺序排序
+    return sorted(channels_list, key=get_channel_sort_key)
 
 # 定义排序函数
 def channel_key(channel_name):
@@ -725,57 +755,101 @@ def generate_m3u_file(txt_file_path, m3u_file_path):
                 # 处理频道行
                 if ',' in line and not line.startswith('#'):
                     try:
-                        parts = line.split(',')
-                        if len(parts) >= 2:
-                            channel_name = parts[0]
-                            channel_url = parts[1]
-                            
-                            # 获取台标
-                            logo_url = logo_dict.get(channel_name, "")
-                            
-                            # 写入M3U条目
-                            m3u_file.write(f'#EXTINF:-1 tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{current_group}",{channel_name}\n')
-                            m3u_file.write(f'{channel_url}\n')
-                    except Exception as e:
-                        print(f"处理频道行错误: {line}, 错误: {e}")
+                            parts = line.split(',')
+                            if len(parts) >= 2:
+                                channel_name = parts[0]
+                                channel_url = parts[1]
+                                
+                                # 获取台标
+                                logo_url = logo_dict.get(channel_name, "")
+                                
+                                # 写入M3U条目
+                                m3u_file.write(f'#EXTINF:-1 tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{current_group}",{channel_name}\n')
+                                m3u_file.write(f'{channel_url}\n')
+                        except Exception as e:
+                            print(f"处理频道行错误: {line}, 错误: {e}")
     
     print(f"M3U文件已生成: {m3u_file_path}")
 
 # 分组并排序频道
 def group_and_sort_channels_by_category(categorized_channels):
-    """对分类后的频道进行分组和排序"""
+    """对分类后的频道进行分组、排序和数量限制"""
     processed_categories = {}
     
     for category, channels in categorized_channels.items():
-        if category == "央视频道":
-            # 央视频道保持原有逻辑
-            channels.sort(key=lambda x: channel_key(x[0]))
+        if not channels:
+            continue
             
-            # 限制每个频道的结果数量
-            channel_count = {}
-            filtered_channels = []
+        if category in CHANNEL_CATEGORIES:
+            # 获取该分类的频道列表顺序
+            category_order = CHANNEL_CATEGORIES[category]
             
-            for name, url, speed in channels:
-                if name not in channel_count:
-                    channel_count[name] = 0
+            if category == "央视频道":
+                # 央视频道：先按指定顺序分组，然后按速度排序
+                channel_groups = {}
+                for name, url, speed in channels:
+                    if name not in channel_groups:
+                        channel_groups[name] = []
+                    channel_groups[name].append((name, url, speed))
                 
-                if channel_count[name] < RESULTS_PER_CHANNEL:
-                    filtered_channels.append((name, url, speed))
-                    channel_count[name] += 1
-            
-            # 按照速度排序
-            filtered_channels.sort(key=lambda x: -float(x[2]))
-            processed_categories[category] = filtered_channels
+                # 对每个频道按速度排序并限制数量
+                grouped_channels = []
+                for channel_name in category_order:
+                    if channel_name in channel_groups:
+                        # 对每个频道的URL按速度排序
+                        url_list = channel_groups[channel_name]
+                        url_list.sort(key=lambda x: -float(x[2]))
+                        # 限制每个频道最多RESULTS_PER_CHANNEL个URL
+                        url_list = url_list[:RESULTS_PER_CHANNEL]
+                        grouped_channels.extend(url_list)
+                        del channel_groups[channel_name]
+                
+                # 添加不在指定顺序中的其他频道
+                for channel_name, url_list in channel_groups.items():
+                    url_list.sort(key=lambda x: -float(x[2]))
+                    url_list = url_list[:RESULTS_PER_CHANNEL]
+                    grouped_channels.extend(url_list)
+                
+                # 按照指定顺序排序
+                grouped_channels = sort_channels_by_specified_order(grouped_channels, category_order)
+                processed_categories[category] = grouped_channels
+            else:
+                # 其他分类：先分组，按速度排序，限制数量，然后按指定顺序排序
+                channel_groups = {}
+                for name, url, speed in channels:
+                    if name not in channel_groups:
+                        channel_groups[name] = []
+                    channel_groups[name].append((name, url, speed))
+                
+                # 对每个频道的URL按速度排序
+                grouped_channels = []
+                for channel_name in category_order:
+                    if channel_name in channel_groups:
+                        url_list = channel_groups[channel_name]
+                        url_list.sort(key=lambda x: -float(x[2]))
+                        url_list = url_list[:RESULTS_PER_CHANNEL]
+                        grouped_channels.extend(url_list)
+                        del channel_groups[channel_name]
+                
+                # 添加不在指定顺序中的其他频道
+                for channel_name, url_list in channel_groups.items():
+                    url_list.sort(key=lambda x: -float(x[2]))
+                    url_list = url_list[:RESULTS_PER_CHANNEL]
+                    grouped_channels.extend(url_list)
+                
+                # 按照指定顺序排序
+                grouped_channels = sort_channels_by_specified_order(grouped_channels, category_order)
+                processed_categories[category] = grouped_channels
         else:
-            # 其他分类：将同一频道名称的多个URL放在一起
-            # 按频道名称分组
+            # 其他频道分类：简单按速度排序
+            channels.sort(key=lambda x: -float(x[2]))
             channel_groups = {}
+            
             for name, url, speed in channels:
                 if name not in channel_groups:
                     channel_groups[name] = []
                 channel_groups[name].append((name, url, speed))
             
-            # 对每个频道的URL按速度排序
             grouped_channels = []
             for channel_name, url_list in channel_groups.items():
                 # 按速度从高到低排序
@@ -785,7 +859,7 @@ def group_and_sort_channels_by_category(categorized_channels):
                 grouped_channels.extend(url_list)
             
             # 按频道名称排序
-            grouped_channels.sort(key=lambda x: channel_key(x[0]))
+            grouped_channels.sort(key=lambda x: x[0])
             processed_categories[category] = grouped_channels
     
     return processed_categories
