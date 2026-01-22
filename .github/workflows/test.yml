@@ -1,8 +1,8 @@
 name: test
 
 on:
-  # schedule:
-  #   - cron: "* */1 * * *"
+  schedule:
+    - cron: "* */2 * * *"
   workflow_dispatch:          # 手动触发
 
 jobs:
