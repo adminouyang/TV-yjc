@@ -292,7 +292,7 @@ def read_logo_file():
     return logo_dict
 
 # 检测IP:端口可用性
-def check_ip_availability(ip_port, timeout=2):
+def check_ip_availability(ip_port, timeout=3):
     """检测IP:端口是否可用"""
     try:
         # 尝试连接HTTP服务
@@ -515,7 +515,7 @@ def speed_test(channels):
                 for attempt in range(max_retries):
                     try:
                         channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])
-                        lines = requests.get(channel_url, timeout=2).text.strip().split('\n')
+                        lines = requests.get(channel_url, timeout=3).text.strip().split('\n')
                         ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]
                         if ts_lists:
                             ts_url = channel_url_t + ts_lists[0]
