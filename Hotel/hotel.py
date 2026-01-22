@@ -461,40 +461,57 @@ def extract_channels(url):
         response = requests.get(url, timeout=3)
         response_text = response.text
         
-        # 处理可能包含XML包装的JSON响应
-        if "<?xml" in response_text and "{" in response_text:
-            # 提取JSON部分
-            start_idx = response_text.find('{')
-            end_idx = response_text.rfind('}') + 1
-            if start_idx != -1 and end_idx != -1:
-                json_text = response_text[start_idx:end_idx]
-                json_data = json.loads(json_text)
+        # 处理iptv接口
+        if "iptv" in url:
+            # 处理可能包含XML包装的JSON响应
+            if "<?xml" in response_text and "{" in response_text:
+                # 提取JSON部分
+                start_idx = response_text.find('{')
+                end_idx = response_text.rfind('}') + 1
+                if start_idx != -1 and end_idx != -1:
+                    json_text = response_text[start_idx:end_idx]
+                    json_data = json.loads(json_text)
+                else:
+                    return []
             else:
-                return []
-        else:
-            json_data = response.json()
-        
-        # 处理不同的数据格式
-        if "data" in json_data:
-            for item in json_data.get('data', []):
-                if isinstance(item, dict):
-                    name = item.get('name', '')
-                    urlx = item.get('url', '')
-                    
-                    # 统一处理频道名称
-                    if name and urlx and ("tsfile" in urlx or "m3u8" in urlx or "hls" in urlx):
-                        # 确保urlx以斜杠开头，避免双斜杠
-                        if not urlx.startswith('/'):
-                            urlx = '/' + urlx
-                        urld = f"{url_x}{urlx}"
-                        hotel_channels.append((name, urld))
-                        print(f"解析到频道: {name} -> {urld}")
+                json_data = response.json()
+            
+            # 处理不同的数据格式
+            if "data" in json_data:
+                for item in json_data.get('data', []):
+                    if isinstance(item, dict):
+                        name = item.get('name', '')
+                        urlx = item.get('url', '')
+                        
+                        # 统一处理频道名称
+                        if name and urlx and ("tsfile" in urlx or "m3u8" in urlx or "hls" in urlx):
+                            # 确保urlx以斜杠开头，避免双斜杠
+                            if not urlx.startswith('/'):
+                                urlx = '/' + urlx
+                            urld = f"{url_x}{urlx}"
+                            hotel_channels.append((name, urld))
+                            print(f"解析到iptv频道: {name} -> {urld}")
+        # 处理ZHGXTV接口
+        elif "ZHGXTV" in url:
+            json_data = response.content.decode('utf-8')
+            data_lines = json_data.split('\n')
+            for line in data_lines:
+                if "," in line and ("hls" in line or "m3u8" in line):
+                    try:
+                        name, channel_url = line.strip().split(',')
+                        parts = channel_url.split('/', 3)
+                        if len(parts) >= 4:
+                            urld = f"{url_x}/{parts[3]}"
+                            hotel_channels.append((name, urld))
+                            print(f"解析到ZHGXTV频道: {name} -> {urld}")
+                    except Exception as e:
+                        print(f"解析ZHGXTV行错误: {line}, 错误: {e}")
+                        continue
         
         return hotel_channels
     except Exception as e:
         print(f"解析频道错误 {url}: {e}")
         return []
-
 
 #测速
 # 修改测速函数，增加重复测速逻辑
@@ -509,52 +526,35 @@ def speed_test(channels):
         while True:
             try:
                 channel_name, channel_url = task_queue.get()
-                max_retries = 3  # 最大重试次数
-                best_speed = 0.0
-                
-                for attempt in range(max_retries):
-                    try:
-                        channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])
-                        lines = requests.get(channel_url, timeout=3).text.strip().split('\n')
-                        ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]
-                        if ts_lists:
-                            ts_url = channel_url_t + ts_lists[0]
-                            with eventlet.Timeout(5, False):
-                                start_time = time.time()
-                                cont = requests.get(ts_url, timeout=6).content
-                                resp_time = (time.time() - start_time) * 1                    
-                            if cont and resp_time > 0:
-                                temp_filename = f"temp_{hash(channel_url)}_{attempt}.ts"
-                                with open(temp_filename, 'wb') as f:
-                                    f.write(cont)
-                                normalized_speed = len(cont) / resp_time / 1024 / 1024
-                                os.remove(temp_filename)
-                                
-                                # 记录最佳速度
-                                if normalized_speed > best_speed:
-                                    best_speed = normalized_speed
-                                
-                                # 如果速度合格，直接通过
-                                if normalized_speed > 0.001:
-                                    break
-                                else:
-                                    print(f"第{attempt+1}次测速 {channel_name}: {normalized_speed:.3f} MB/s")
+                try:
+                    channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])
+                    lines = requests.get(channel_url, timeout=2).text.strip().split('\n')
+                    ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]
+                    if ts_lists:
+                        ts_url = channel_url_t + ts_lists[0]
+                        ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])
+                        with eventlet.Timeout(5, False):
+                            start_time = time.time()
+                            cont = requests.get(ts_url, timeout=6).content
+                            resp_time = (time.time() - start_time) * 1                    
+                        if cont and resp_time > 0:
+                            checked[0] += 1
+                            temp_filename = f"temp_{hash(channel_url)}.ts"
+                            with open(temp_filename, 'wb') as f:
+                                f.write(cont)
+                            normalized_speed = len(cont) / resp_time / 1024 / 1024
+                            os.remove(temp_filename)
+                            # 过滤掉速度过慢的频道（≤0.001 MB/s）
+                            if normalized_speed > 0.001:
+                                result = channel_name, channel_url, f"{normalized_speed:.3f}"
+                                print(f"✓ {channel_name}, {channel_url}: {normalized_speed:.3f} MB/s")
+                                results.append(result)
                             else:
-                                print(f"第{attempt+1}次测速 {channel_name}: 获取内容失败")
+                                print(f"× {channel_name}, {channel_url}: 速度过慢 ({normalized_speed:.3f} MB/s)，已过滤")
                         else:
-                            print(f"第{attempt+1}次测速 {channel_name}: 没有找到TS列表")
-                    except Exception as e:
-                        print(f"第{attempt+1}次测速 {channel_name} 失败: {str(e)}")
-                
-                # 根据最佳速度决定是否保留
-                if best_speed > 0.001:
-                    result = channel_name, channel_url, f"{best_speed:.3f}"
-                    print(f"✓ {channel_name}, {channel_url}: {best_speed:.3f} MB/s (经过{max_retries}次测速)")
-                    results.append(result)
-                else:
-                    print(f"× {channel_name}, {channel_url}: 经过{max_retries}次测速，最佳速度 {best_speed:.3f} MB/s，已过滤")
-                
-                checked[0] += 1
+                            checked[0] += 1
+                except Exception as e:
+                    checked[0] += 1
             except:
                 checked[0] += 1
             finally:
