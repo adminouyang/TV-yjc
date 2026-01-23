@@ -45,8 +45,7 @@ def get_ip_info(ip_port):
         # 添加重试机制
         for attempt in range(3):
             try:
-                res = requests.get(f"http://ip-api.com/json/{ip}?lang=zh-CN", 
-                                  timeout=10, headers=HEADERS)
+                res = requests.get(f"http://ip-api.com/json/{ip}?lang=zh-CN", timeout=10, headers=HEADERS)
                 if res.status_code == 200:
                     data = res.json()
                     if data.get("status") == "success":
