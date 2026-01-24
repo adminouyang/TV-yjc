@@ -331,7 +331,7 @@ def check_and_update_ip_file(province_file):
                     all_ips.append(line)
     except Exception as e:
         print(f"读取IP文件错误: {e}")
-        return
+        return []
     
     total_ips = len(all_ips)
     print(f"需要检测 {total_ips} 个IP")
@@ -364,18 +364,18 @@ def check_and_update_ip_file(province_file):
                 completed += 1
                 print(f"✗ {ip_port} 检测失败 ({completed}/{total_ips})")
     
-    # 更新IP文件，只保留可用的IP
+    # 修复：总是更新IP文件，即使可用IP列表为空
+    with open(province_file, 'w', encoding='utf-8') as f:
+        for ip_port in available_ips:
+            f.write(f"{ip_port}\n")
+    
     if available_ips:
-        with open(province_file, 'w', encoding='utf-8') as f:
-            for ip_port in available_ips:
-                f.write(f"{ip_port}\n")
-        
         print(f"\n✓ 已更新 {province_file}")
         print(f"  原始IP数量: {total_ips}")
         print(f"  可用IP数量: {len(available_ips)}")
         print(f"  不可用IP已删除: {total_ips - len(available_ips)}")
     else:
-        print(f"\n✗ 没有可用的IP，文件 {province_file} 将保持不变")
+        print(f"\n✓ 已更新 {province_file}，没有可用的IP，文件已清空")
     
     return available_ips
 
@@ -936,17 +936,17 @@ def hotel_iptv(config_file):
         print(f"没有可用的IP，跳过 {config_file}")
         return
     
-    ip_configs = read_config(config_file)  # 返回三元组列表
+    ip_configs = read_config(config_file)
     valid_urls = []
     channels = []
     configs = []
     url_ends = ["/iptv/live/1000.json?key=txiptv", "/ZHGXTV/Public/json/live_interface.txt"]
     
     for url_end in url_ends:
-        for ip, port in ip_configs:  # 解包为三个变量for ip, port, region in ip_configs: 
+        for ip, port in ip_configs:
             configs.append((ip, port, url_end))
     
-    for ip, port, url_end in configs:  # 解包为三个变量
+    for ip, port, url_end in configs:
         valid_urls.extend(scan_ip_port(ip, port, url_end))
     
     print(f"扫描完成，获取有效url共：{len(valid_urls)}个")
@@ -957,17 +957,31 @@ def hotel_iptv(config_file):
     print(f"共获取频道：{len(channels)}个\n开始测速")
     results = speed_test(channels)
     
-    # 对频道进行排序
+    # 修复：测速后检查是否有可用频道
+    if not results:
+        print(f"⚠️ 警告：IP检测通过但所有频道都不可用，将该IP视为不可用")
+        print(f"🗑️ 从 {config_file} 中删除该IP")
+        
+        # 清空IP文件
+        with open(config_file, 'w', encoding='utf-8') as f:
+            f.write("")
+        
+        print(f"✓ 已清空 {config_file}（没有可用的频道）")
+        return
+    else:
+        print(f"✓ 找到 {len(results)} 个可用频道，IP保持有效")
+    
+    # 对频道进行排序和统一名称（原有逻辑）
     results.sort(key=lambda x: -float(x[2]))
     results.sort(key=lambda x: channel_key(x[0]))
     
-    # 统一频道名称
     unified_channels = unify_channel_name(results)
     
     # 写入原始数据文件
     with open('1.txt', 'a', encoding='utf-8') as f:
         for line in unified_channels:
             f.write(line.split(',')[0] + ',' + line.split(',')[1] + '\n')
+    
     print("测速完成")
 
 # 主函数
