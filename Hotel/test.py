@@ -20,8 +20,6 @@ USER_AGENTS = [
 # 搜索关键词（base64编码）
 SEARCH_QUERIES = [
     "ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04i",  # IPTV直播
-    "InVkcHh5IiAmJiBjb3VudHJ5PSJDTiI=",  # UDPXY
-    "ImlwdHYvbGl2ZSIgJiYgY291bnRyeT0iQ04i",  # IPTV直播通用
 ]
 
 # IP存储目录
