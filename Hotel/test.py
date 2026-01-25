@@ -90,8 +90,8 @@ def read_existing_ips(filepath):
 def generate_fofa_urls():
     """生成FOFA搜索URL"""
     urls = []
-    pages = 5
-    page_size = 20
+    pages = 1
+    page_size = 50
     
     for query in SEARCH_QUERIES:
         for page in range(1, pages + 1):
