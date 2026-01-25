@@ -1,0 +1,14 @@
+{
+  "fofa": {
+    "email": "2856364053@qq.com",
+    "password": "OUyang1822",
+    "api_key": "你的FOFA API密钥（可选）",
+    "max_pages": 5,
+    "page_size": 20
+  },
+  "zoomeye": {
+    "username": "你的ZoomEye用户名",
+    "password": "你的ZoomEye密码",
+    "api_key": "你的ZoomEye API密钥（可选）"
+  }
+}
