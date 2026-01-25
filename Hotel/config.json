@@ -1,7 +1,7 @@
 {
   "fofa": {
     "email": "2856364053@qq.com",
-    "password": "OUyang1822",
+    "password": "",
     "api_key": "你的FOFA API密钥（可选）",
     "max_pages": 5,
     "page_size": 20
