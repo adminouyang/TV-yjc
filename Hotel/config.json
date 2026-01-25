@@ -1,10 +1,10 @@
 {
   "fofa": {
     "email": "2856364053@qq.com",
-    "password": "",
-    "api_key": "你的FOFA API密钥（可选）",
-    "max_pages": 5,
-    "page_size": 20
+    "password": "OUyang1822",
+    "api_key": "https://fofa.info/api/v1/search/all?key=9495b90e65813ae0e9188e6a5928d1f1&qbase64=SW1sd2RIWXZiR2wyWlM5NmFGOWpiaTVxY3lJZ0ppWWdZMjkxYm5SeWVUMGlRMDRp",
+    "max_pages": 1,
+    "page_size": 50
   },
   "zoomeye": {
     "username": "你的ZoomEye用户名",
