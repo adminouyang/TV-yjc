@@ -1,0 +1,145 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="吉林篮球" tvg-name="吉林篮球" group-title="☘️吉林省",吉林篮球
+http://36.49.51.207:8800/rtp/239.37.0.212:5540
+#EXTINF:-1 tvg-id="吉林教育" tvg-name="吉林教育" group-title="☘️吉林省",吉林教育
+http://36.49.51.207:8800/rtp/239.37.0.126:5540
+#EXTINF:-1 tvg-id="长影频道" tvg-name="长影频道" tvg-logo="https://tb.zbds.top/logo/长影频道.png" group-title="☘️吉林省",长影频道
+http://36.49.51.207:8800/rtp/239.37.0.125:5540
+#EXTINF:-1 tvg-id="扶余电视台" tvg-name="扶余电视台" group-title="☘️吉林省",扶余电视台
+http://36.49.51.207:8800/rtp/239.37.0.180:5540
+#EXTINF:-1 tvg-id="延边TV1" tvg-name="延边TV1" group-title="☘️吉林省",延边TV1
+http://36.49.51.207:8800/rtp/239.37.0.248:5540
+#EXTINF:-1 tvg-id="延边TV2" tvg-name="延边TV2" group-title="☘️吉林省",延边TV2
+http://36.49.51.207:8800/rtp/239.37.0.249:5540
+#EXTINF:-1 tvg-id="TTV洮南1" tvg-name="TTV洮南1" group-title="☘️吉林省",TTV洮南1
+http://36.49.51.207:8800/rtp/239.37.0.218:5540
+#EXTINF:-1 tvg-id="农安综合" tvg-name="农安综合" group-title="☘️吉林省",农安综合
+http://36.49.51.207:8800/rtp/239.37.0.144:5540
+#EXTINF:-1 tvg-id="生活频道" tvg-name="生活频道" group-title="☘️吉林省",生活频道
+http://36.49.51.207:8800/rtp/239.37.0.129:5540
+#EXTINF:-1 tvg-id="民生社会" tvg-name="民生社会" group-title="☘️吉林省",民生社会
+http://36.49.51.207:8800/rtp/239.37.0.251:5540
+#EXTINF:-1 tvg-id="松原综合频道" tvg-name="松原综合频道" group-title="☘️吉林省",松原综合频道
+http://36.49.51.207:8800/rtp/239.37.0.246:5540
+#EXTINF:-1 tvg-id="松原生活频道" tvg-name="松原生活频道" group-title="☘️吉林省",松原生活频道
+http://36.49.51.207:8800/rtp/239.37.0.247:5540
+#EXTINF:-1 tvg-id="白山旅游生活2" tvg-name="白山旅游生活2" group-title="☘️吉林省",白山旅游生活2
+http://36.49.51.207:8800/rtp/239.37.0.138:5540
+#EXTINF:-1 tvg-id="四平1" tvg-name="四平1" group-title="☘️吉林省",四平1
+http://36.49.51.207:8800/rtp/239.37.0.130:5540
+#EXTINF:-1 tvg-id="四平2" tvg-name="四平2" group-title="☘️吉林省",四平2
+http://36.49.51.207:8800/rtp/239.37.0.131:5540
+#EXTINF:-1 tvg-id="TTV1" tvg-name="TTV1" group-title="☘️吉林省",TTV1
+http://36.49.51.207:8800/rtp/239.37.0.132:5540
+#EXTINF:-1 tvg-id="TTV2" tvg-name="TTV2" group-title="☘️吉林省",TTV2
+http://36.49.51.207:8800/rtp/239.37.0.133:5540
+#EXTINF:-1 tvg-id="TTV3" tvg-name="TTV3" group-title="☘️吉林省",TTV3
+http://36.49.51.207:8800/rtp/239.37.0.134:5540
+#EXTINF:-1 tvg-id="磐石综合频道" tvg-name="磐石综合频道" group-title="☘️吉林省",磐石综合频道
+http://36.49.51.207:8800/rtp/239.37.0.164:5540
+#EXTINF:-1 tvg-id="图门电视台" tvg-name="图门电视台" group-title="☘️吉林省",图门电视台
+http://36.49.51.207:8800/rtp/239.37.0.166:5540
+#EXTINF:-1 tvg-id="未知" tvg-name="未知" group-title="☘️吉林省",未知
+http://36.49.51.207:8800/rtp/239.37.0.165:5540
+#EXTINF:-1 tvg-id="梨树新闻" tvg-name="梨树新闻" group-title="☘️吉林省",梨树新闻
+http://36.49.51.207:8800/rtp/239.37.0.168:5540
+#EXTINF:-1 tvg-id="tv1" tvg-name="tv1" group-title="☘️吉林省",tv1
+http://36.49.51.207:8800/rtp/239.37.0.167:5540
+#EXTINF:-1 tvg-id="综合纪实" tvg-name="综合纪实" group-title="☘️吉林省",综合纪实
+http://36.49.51.207:8800/rtp/239.37.0.170:5540
+#EXTINF:-1 tvg-id="双辽" tvg-name="双辽" group-title="☘️吉林省",双辽
+http://36.49.51.207:8800/rtp/239.37.0.169:5540
+#EXTINF:-1 tvg-id="未知综合" tvg-name="未知综合" group-title="☘️吉林省",未知综合
+http://36.49.51.207:8800/rtp/239.37.0.172:5540
+#EXTINF:-1 tvg-id="未知TV" tvg-name="未知TV" group-title="☘️吉林省",未知TV
+http://36.49.51.207:8800/rtp/239.37.0.171:5540
+#EXTINF:-1 tvg-id="梅河口电视台" tvg-name="梅河口电视台" group-title="☘️吉林省",梅河口电视台
+http://36.49.51.207:8800/rtp/239.37.0.173:5540
+#EXTINF:-1 tvg-id="未知地方综合" tvg-name="未知地方综合" group-title="☘️吉林省",未知地方综合
+http://36.49.51.207:8800/rtp/239.37.0.175:5540
+#EXTINF:-1 tvg-id="DFTV综合" tvg-name="DFTV综合" group-title="☘️吉林省",DFTV综合
+http://36.49.51.207:8800/rtp/239.37.0.179:5540
+#EXTINF:-1 tvg-id="乾安综合" tvg-name="乾安综合" group-title="☘️吉林省",乾安综合
+http://36.49.51.207:8800/rtp/239.37.0.181:5540
+#EXTINF:-1 tvg-id="未知电视台" tvg-name="未知电视台" group-title="☘️吉林省",未知电视台
+http://36.49.51.207:8800/rtp/239.37.0.220:5540
+#EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
+http://36.49.51.207:8800/rtp/239.37.0.235:5540
+#EXTINF:-1 tvg-id="CCTV-3综艺" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺
+http://36.49.51.207:8800/rtp/239.37.0.231:5540
+#EXTINF:-1 tvg-id="CCTV-5体育" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育
+http://36.49.51.207:8800/rtp/239.37.0.232:5540
+#EXTINF:-1 tvg-id="CCTV-5+体育赛事" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事
+http://36.49.51.207:8800/rtp/239.37.0.121:5540
+#EXTINF:-1 tvg-id="CCTV-6电影" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影
+http://36.49.51.207:8800/rtp/239.37.0.233:5540
+#EXTINF:-1 tvg-id="CCTV-8电视剧" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧
+http://36.49.51.207:8800/rtp/239.37.0.234:5540
+#EXTINF:-1 tvg-id="CCTV电视指南" tvg-name="CCTV电视指南" group-title="央视频道",CCTV电视指南
+http://36.49.51.207:8800/rtp/239.37.0.115:5540
+#EXTINF:-1 tvg-id="CCTV高尔夫网球" tvg-name="CCTV高尔夫网球" group-title="央视频道",CCTV高尔夫网球
+http://36.49.51.207:8800/rtp/239.37.0.230:5540
+#EXTINF:-1 tvg-id="CCTV卫生健康" tvg-name="CCTV卫生健康" group-title="央视频道",CCTV卫生健康
+http://36.49.51.207:8800/rtp/239.37.0.229:5540
+#EXTINF:-1 tvg-id="CCTV风云剧场" tvg-name="CCTV风云剧场" group-title="央视频道",CCTV风云剧场
+http://36.49.51.207:8800/rtp/239.37.0.114:5540
+#EXTINF:-1 tvg-id="CCTV央视台球" tvg-name="CCTV央视台球" group-title="央视频道",CCTV央视台球
+http://36.49.51.207:8800/rtp/239.37.0.163:5540
+#EXTINF:-1 tvg-id="中国交通" tvg-name="中国交通" group-title="央视频道",中国交通
+http://36.49.51.207:8800/rtp/239.37.0.226:5540
+#EXTINF:-1 tvg-id="CETV1" tvg-name="CETV1" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育1台.png" group-title="央视频道",CETV1
+http://36.49.51.207:8800/rtp/239.37.0.193:5540
+#EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影
+http://36.49.51.207:8800/rtp/239.37.0.186:5540
+#EXTINF:-1 tvg-id="CHC影迷电影" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影
+http://36.49.51.207:8800/rtp/239.37.0.187:5540
+#EXTINF:-1 tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院
+http://36.49.51.207:8800/rtp/239.37.0.188:5540
+#EXTINF:-1 tvg-id="北京纪实科教" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教
+http://36.49.51.207:8800/rtp/239.37.0.101:5540
+#EXTINF:-1 tvg-id="上海都市剧场" tvg-name="上海都市剧场" group-title="数字频道",上海都市剧场
+http://36.49.51.207:8800/rtp/239.37.0.241:5540
+#EXTINF:-1 tvg-id="上海生活时尚" tvg-name="上海生活时尚" group-title="数字频道",上海生活时尚
+http://36.49.51.207:8800/rtp/239.37.0.240:5540
+#EXTINF:-1 tvg-id="上海法治天地" tvg-name="上海法治天地" group-title="数字频道",上海法治天地
+http://36.49.51.207:8800/rtp/239.37.0.238:5540
+#EXTINF:-1 tvg-id="上海金色学堂" tvg-name="上海金色学堂" group-title="数字频道",上海金色学堂
+http://36.49.51.207:8800/rtp/239.37.0.239:5540
+#EXTINF:-1 tvg-id="上海动漫秀场" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场
+http://36.49.51.207:8800/rtp/239.37.0.242:5540
+#EXTINF:-1 tvg-id="上海乐游频道" tvg-name="上海乐游频道" group-title="数字频道",上海乐游频道
+http://36.49.51.207:8800/rtp/239.37.0.236:5540
+#EXTINF:-1 tvg-id="金鹰纪实" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实
+http://36.49.51.207:8800/rtp/239.37.0.161:5540
+#EXTINF:-1 tvg-id="快乐垂钓" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓
+http://36.49.51.207:8800/rtp/239.37.0.244:5540
+#EXTINF:-1 tvg-id="茶频道" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="数字频道",茶频道
+http://36.49.51.207:8800/rtp/239.37.0.245:5540
+#EXTINF:-1 tvg-id="河南梨园频道" tvg-name="河南梨园频道" group-title="数字频道",河南梨园频道
+http://36.49.51.207:8800/rtp/239.37.0.228:5540
+#EXTINF:-1 tvg-id="BesTV游戏" tvg-name="BesTV游戏" group-title="数字频道",BesTV游戏
+http://36.49.51.207:8800/rtp/239.37.0.162:5540
+#EXTINF:-1 tvg-id="咪咕体育" tvg-name="咪咕体育" group-title="数字频道",咪咕体育
+http://36.49.51.207:8800/rtp/239.37.0.194:5540
+#EXTINF:-1 tvg-id="环球奇观" tvg-name="环球奇观" group-title="数字频道",环球奇观
+http://36.49.51.207:8800/rtp/239.37.0.105:5540
+#EXTINF:-1 tvg-id="优优宝贝" tvg-name="优优宝贝" group-title="数字频道",优优宝贝
+http://36.49.51.207:8800/rtp/239.37.0.107:5540
+#EXTINF:-1 tvg-id="新动漫" tvg-name="新动漫" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/xindongman.png" group-title="数字频道",新动漫
+http://36.49.51.207:8800/rtp/239.37.0.106:5540
+#EXTINF:-1 tvg-id="北京卫视4K超高清" tvg-name="北京卫视4K超高清" group-title="卫视频道",北京卫视4K超高清
+http://36.49.51.207:8800/rtp/239.37.0.109:5540
+#EXTINF:-1 tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视
+http://36.49.51.207:8800/rtp/239.37.0.102:5540
+#EXTINF:-1 tvg-id="青海卫视" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视
+http://36.49.51.207:8800/rtp/239.37.0.104:5540
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://36.49.51.207:8800/rtp/239.37.0.103:5540
+#EXTINF:-1 tvg-id="延边卫视" tvg-name="延边卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BB%B6%E8%BE%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",延边卫视
+http://36.49.51.207:8800/rtp/239.37.0.116:5540
+#EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="☘️上海市",上海游戏风云
+http://36.49.51.207:8800/rtp/239.37.0.243:5540
+#EXTINF:-1 tvg-id="新闻综合" tvg-name="新闻综合" tvg-logo="https://tb.zbds.top/logo/新闻综合.png" group-title="☘️上海市",新闻综合
+http://36.49.51.207:8800/rtp/239.37.0.250:5540
+#EXTINF:-1 tvg-id="白山新闻综合1" tvg-name="白山新闻综合1" group-title="☘️上海市",白山新闻综合1
+http://36.49.51.207:8800/rtp/239.37.0.137:5540
