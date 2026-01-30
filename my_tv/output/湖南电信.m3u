@@ -1,0 +1,345 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="九画面" tvg-name="九画面" group-title="其它频道",九画面
+http://58.46.29.252:8188/udp/239.76.245.131:1234
+#EXTINF:-1 tvg-id="北京KAKU少儿" tvg-name="北京KAKU少儿" group-title="其它频道",北京KAKU少儿
+http://58.46.29.252:8188/udp/239.76.254.81:9000
+#EXTINF:-1 tvg-id="长沙新闻频道" tvg-name="长沙新闻频道" tvg-logo="http://tv.haoqu99.com/d/file/2021/0215/small7ff3d34c5627b5c263817abeff70e23d.gif" group-title="其它频道",长沙新闻频道
+http://58.46.29.252:8188/udp/239.76.246.121:1234
+#EXTINF:-1 tvg-id="张家界公共频道" tvg-name="张家界公共频道" group-title="其它频道",张家界公共频道
+http://58.46.29.252:8188/udp/239.76.245.235:1234
+#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视
+http://58.46.29.252:8188/udp/239.76.253.101:9000
+#EXTINF:-1 tvg-id="湖南卫视FHD" tvg-name="湖南卫视FHD" group-title="卫视频道",湖南卫视FHD
+http://58.46.29.252:8188/udp/239.76.252.115:9000
+#EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" group-title="卫视频道",凤凰中文
+http://58.46.29.252:8188/udp/239.76.253.134:9000
+#EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" group-title="卫视频道",凤凰资讯
+http://58.46.29.252:8188/udp/239.76.253.135:9000
+#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视
+http://58.46.29.252:8188/udp/239.76.253.184:9000
+#EXTINF:-1 tvg-id="北京卫视4K超高清" tvg-name="北京卫视4K超高清" group-title="卫视频道",北京卫视4K超高清
+http://58.46.29.252:8188/udp/239.76.253.246:9000
+#EXTINF:-1 tvg-id="三沙卫视" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视
+http://58.46.29.252:8188/udp/239.76.253.74:9000
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视
+http://58.46.29.252:8188/udp/239.76.253.186:9000
+#EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视
+http://58.46.29.252:8188/udp/239.76.253.201:9000
+#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视
+http://58.46.29.252:8188/udp/239.76.253.91:9000
+#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视
+http://58.46.29.252:8188/udp/239.76.253.185:9000
+#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视
+http://58.46.29.252:8188/udp/239.76.253.195:9000
+#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视
+http://58.46.29.252:8188/udp/239.76.253.181:9000
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视
+http://58.46.29.252:8188/udp/239.76.253.202:9000
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视
+http://58.46.29.252:8188/udp/239.76.253.182:9000
+#EXTINF:-1 tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",海南卫视
+http://58.46.29.252:8188/udp/239.76.253.203:9000
+#EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视
+http://58.46.29.252:8188/udp/239.76.253.188:9000
+#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视
+http://58.46.29.252:8188/udp/239.76.253.193:9000
+#EXTINF:-1 tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="https://tb.zbds.top/logo/甘肃卫视.png" group-title="卫视频道",甘肃卫视
+http://58.46.29.252:8188/udp/239.76.253.94:9000
+#EXTINF:-1 tvg-id="重庆卫视" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视
+http://58.46.29.252:8188/udp/239.76.253.92:9000
+#EXTINF:-1 tvg-id="广东卫视" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视
+http://58.46.29.252:8188/udp/239.76.252.189:9000
+#EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视
+http://58.46.29.252:8188/udp/239.76.252.199:9000
+#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视
+http://58.46.29.252:8188/udp/239.76.252.196:9000
+#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视
+http://58.46.29.252:8188/udp/239.76.252.225:9000
+#EXTINF:-1 tvg-id="东南卫视" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视
+http://58.46.29.252:8188/udp/239.76.252.190:9000
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视
+http://58.46.29.252:8188/udp/239.76.252.197:9000
+#EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视
+http://58.46.29.252:8188/udp/239.76.252.198:9000
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视
+http://58.46.29.252:8188/udp/239.76.253.200:9000
+#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视
+http://58.46.29.252:8188/udp/239.76.254.60:9000
+#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://tb.zbds.top/logo/广西卫视.png" group-title="卫视频道",广西卫视
+http://58.46.29.252:8188/udp/239.76.254.54:9000
+#EXTINF:-1 tvg-id="陕西卫视" tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://58.46.29.252:8188/udp/239.76.254.76:9000
+#EXTINF:-1 tvg-id="青海卫视" tvg-name="青海卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",青海卫视
+http://58.46.29.252:8188/udp/239.76.254.132:9000
+#EXTINF:-1 tvg-id="湖南经视频道" tvg-name="湖南经视频道" group-title="☘️湖南省",湖南经视频道
+http://58.46.29.252:8188/udp/239.76.253.103:9000
+#EXTINF:-1 tvg-id="湖南国际频道" tvg-name="湖南国际频道" tvg-logo="http://tv.haoqu99.com/d/file/2016/0614/20160614032623217.jpg" group-title="☘️湖南省",湖南国际频道
+http://58.46.29.252:8188/udp/239.76.253.102:9000
+#EXTINF:-1 tvg-id="湖南公共频道" tvg-name="湖南公共频道" group-title="☘️湖南省",湖南公共频道
+http://58.46.29.252:8188/udp/239.76.253.109:9000
+#EXTINF:-1 tvg-id="湖南娱乐频道" tvg-name="湖南娱乐频道" tvg-logo="http://tv.haoqu99.com/d/file/2015/0417/20150417125630263.jpg" group-title="☘️湖南省",湖南娱乐频道
+http://58.46.29.252:8188/udp/239.76.253.105:9000
+#EXTINF:-1 tvg-id="湖南电影频道" tvg-name="湖南电影频道" group-title="☘️湖南省",湖南电影频道
+http://58.46.29.252:8188/udp/239.76.253.106:9000
+#EXTINF:-1 tvg-id="湖南电视剧频道" tvg-name="湖南电视剧频道" group-title="☘️湖南省",湖南电视剧频道
+http://58.46.29.252:8188/udp/239.76.253.108:9000
+#EXTINF:-1 tvg-id="湖南教育台" tvg-name="湖南教育台" group-title="☘️湖南省",湖南教育台
+http://58.46.29.252:8188/udp/239.76.252.233:9000
+#EXTINF:-1 tvg-id="湖南经视FHD" tvg-name="湖南经视FHD" group-title="☘️湖南省",湖南经视FHD
+http://58.46.29.252:8188/udp/239.76.252.116:9000
+#EXTINF:-1 tvg-id="湖南都市FHD" tvg-name="湖南都市FHD" group-title="☘️湖南省",湖南都市FHD
+http://58.46.29.252:8188/udp/239.76.252.117:9000
+#EXTINF:-1 tvg-id="湖南电视剧FHD" tvg-name="湖南电视剧FHD" group-title="☘️湖南省",湖南电视剧FHD
+http://58.46.29.252:8188/udp/239.76.252.118:9000
+#EXTINF:-1 tvg-id="湖南电影FHD" tvg-name="湖南电影FHD" group-title="☘️湖南省",湖南电影FHD
+http://58.46.29.252:8188/udp/239.76.252.119:9000
+#EXTINF:-1 tvg-id="湖南娱乐FHD" tvg-name="湖南娱乐FHD" group-title="☘️湖南省",湖南娱乐FHD
+http://58.46.29.252:8188/udp/239.76.252.121:9000
+#EXTINF:-1 tvg-id="湖南公共FHD" tvg-name="湖南公共FHD" group-title="☘️湖南省",湖南公共FHD
+http://58.46.29.252:8188/udp/239.76.252.123:9000
+#EXTINF:-1 tvg-id="湖南国际FHD" tvg-name="湖南国际FHD" group-title="☘️湖南省",湖南国际FHD
+http://58.46.29.252:8188/udp/239.76.252.124:9000
+#EXTINF:-1 tvg-id="试播4K超高清" tvg-name="试播4K超高清" group-title="☘️湖南省",试播4K超高清
+http://58.46.29.252:8188/udp/239.76.253.214:9000
+#EXTINF:-1 tvg-id="长沙政法频道" tvg-name="长沙政法频道" group-title="☘️湖南省",长沙政法频道
+http://58.46.29.252:8188/udp/239.76.253.122:9000
+#EXTINF:-1 tvg-id="长沙文旅频道" tvg-name="长沙文旅频道" group-title="☘️湖南省",长沙文旅频道
+http://58.46.29.252:8188/udp/239.76.255.42:9000
+#EXTINF:-1 tvg-id="益阳公共频道" tvg-name="益阳公共频道" group-title="☘️湖南省",益阳公共频道
+http://58.46.29.252:8188/udp/239.76.255.16:9000
+#EXTINF:-1 tvg-id="岳阳文旅都市" tvg-name="岳阳文旅都市" group-title="☘️湖南省",岳阳文旅都市
+http://58.46.29.252:8188/udp/239.76.255.8:9000
+#EXTINF:-1 tvg-id="张家界2公共频道" tvg-name="张家界2公共频道" group-title="☘️湖南省",张家界2公共频道
+http://58.46.29.252:8188/udp/239.76.252.235:9000
+#EXTINF:-1 tvg-id="湘西文化旅游" tvg-name="湘西文化旅游" group-title="☘️湖南省",湘西文化旅游
+http://58.46.29.252:8188/udp/239.76.252.209:9000
+#EXTINF:-1 tvg-id="永州经济生活" tvg-name="永州经济生活" group-title="☘️湖南省",永州经济生活
+http://58.46.29.252:8188/udp/239.76.255.24:9000
+#EXTINF:-1 tvg-id="湘潭县电视台" tvg-name="湘潭县电视台" group-title="☘️湖南省",湘潭县电视台
+http://58.46.29.252:8188/udp/239.76.255.41:9000
+#EXTINF:-1 tvg-id="衡阳文旅法治" tvg-name="衡阳文旅法治" group-title="☘️湖南省",衡阳文旅法治
+http://58.46.29.252:8188/udp/239.76.255.14:9000
+#EXTINF:-1 tvg-id="衡阳县电视台" tvg-name="衡阳县电视台" group-title="☘️湖南省",衡阳县电视台
+http://58.46.29.252:8188/udp/239.76.255.26:9000
+#EXTINF:-1 tvg-id="邵阳文旅民生" tvg-name="邵阳文旅民生" group-title="☘️湖南省",邵阳文旅民生
+http://58.46.29.252:8188/udp/239.76.255.22:9000
+#EXTINF:-1 tvg-id="郴州综合频道" tvg-name="郴州综合频道" group-title="☘️湖南省",郴州综合频道
+http://58.46.29.252:8188/udp/239.76.253.75:9000
+#EXTINF:-1 tvg-id="郴州公共频道" tvg-name="郴州公共频道" group-title="☘️湖南省",郴州公共频道
+http://58.46.29.252:8188/udp/239.76.255.39:9000
+#EXTINF:-1 tvg-id="常德公共频道" tvg-name="常德公共频道" group-title="☘️湖南省",常德公共频道
+http://58.46.29.252:8188/udp/239.76.255.11:9000
+#EXTINF:-1 tvg-id="娄底综合频道" tvg-name="娄底综合频道" group-title="☘️湖南省",娄底综合频道
+http://58.46.29.252:8188/udp/239.76.255.18:9000
+#EXTINF:-1 tvg-id="娄底公共频道" tvg-name="娄底公共频道" group-title="☘️湖南省",娄底公共频道
+http://58.46.29.252:8188/udp/239.76.255.19:9000
+#EXTINF:-1 tvg-id="娄底教育频道" tvg-name="娄底教育频道" group-title="☘️湖南省",娄底教育频道
+http://58.46.29.252:8188/udp/239.76.255.20:9000
+#EXTINF:-1 tvg-id="桃源综合频道" tvg-name="桃源综合频道" group-title="☘️湖南省",桃源综合频道
+http://58.46.29.252:8188/udp/239.76.255.36:9000
+#EXTINF:-1 tvg-id="麻阳综合频道" tvg-name="麻阳综合频道" group-title="☘️湖南省",麻阳综合频道
+http://58.46.29.252:8188/udp/239.76.255.45:9000
+#EXTINF:-1 tvg-id="宁远综合频道" tvg-name="宁远综合频道" group-title="☘️湖南省",宁远综合频道
+http://58.46.29.252:8188/udp/239.76.255.34:9000
+#EXTINF:-1 tvg-id="汨罗综合频道" tvg-name="汨罗综合频道" group-title="☘️湖南省",汨罗综合频道
+http://58.46.29.252:8188/udp/239.76.255.47:9000
+#EXTINF:-1 tvg-id="新化电视台" tvg-name="新化电视台" group-title="☘️湖南省",新化电视台
+http://58.46.29.252:8188/udp/239.76.255.31:9000
+#EXTINF:-1 tvg-id="津市电视台" tvg-name="津市电视台" group-title="☘️湖南省",津市电视台
+http://58.46.29.252:8188/udp/239.76.255.30:9000
+#EXTINF:-1 tvg-id="武冈综合频道" tvg-name="武冈综合频道" group-title="☘️湖南省",武冈综合频道
+http://58.46.29.252:8188/udp/239.76.255.29:9000
+#EXTINF:-1 tvg-id="未知频道" tvg-name="未知频道" group-title="☘️湖南省",未知频道
+http://58.46.29.252:8188/udp/239.76.255.46:9000
+#EXTINF:-1 tvg-id="江永新闻频道" tvg-name="江永新闻频道" group-title="☘️湖南省",江永新闻频道
+http://58.46.29.252:8188/udp/239.76.255.35:9000
+#EXTINF:-1 tvg-id="洪江新闻频道" tvg-name="洪江新闻频道" group-title="☘️湖南省",洪江新闻频道
+http://58.46.29.252:8188/udp/239.76.255.37:9000
+#EXTINF:-1 tvg-id="涟源综合频道" tvg-name="涟源综合频道" group-title="☘️湖南省",涟源综合频道
+http://58.46.29.252:8188/udp/239.76.255.48:9000
+#EXTINF:-1 tvg-id="溆浦综合频道" tvg-name="溆浦综合频道" group-title="☘️湖南省",溆浦综合频道
+http://58.46.29.252:8188/udp/239.76.255.25:9000
+#EXTINF:-1 tvg-id="蓝山综合频道" tvg-name="蓝山综合频道" group-title="☘️湖南省",蓝山综合频道
+http://58.46.29.252:8188/udp/239.76.255.38:9000
+#EXTINF:-1 tvg-id="新田综合频道" tvg-name="新田综合频道" group-title="☘️湖南省",新田综合频道
+http://58.46.29.252:8188/udp/239.76.255.44:9000
+#EXTINF:-1 tvg-id="道县综合频道" tvg-name="道县综合频道" group-title="☘️湖南省",道县综合频道
+http://58.46.29.252:8188/udp/239.76.255.28:9000
+#EXTINF:-1 tvg-id="中方台" tvg-name="中方台" group-title="☘️湖南省",中方台
+http://58.46.29.252:8188/udp/239.76.255.43:9000
+#EXTINF:-1 tvg-id="桂东融媒" tvg-name="桂东融媒" group-title="☘️湖南省",桂东融媒
+http://58.46.29.252:8188/udp/239.76.253.231:9000
+#EXTINF:-1 tvg-id="湖南都市频道" tvg-name="湖南都市频道" group-title="☘️上海市",湖南都市频道
+http://58.46.29.252:8188/udp/239.76.253.104:9000
+#EXTINF:-1 tvg-id="上海东方财经" tvg-name="上海东方财经" group-title="☘️上海市",上海东方财经
+http://58.46.29.252:8188/udp/239.76.254.69:9000
+#EXTINF:-1 tvg-id="上海游戏风云" tvg-name="上海游戏风云" group-title="☘️上海市",上海游戏风云
+http://58.46.29.252:8188/udp/239.76.254.71:9000
+#EXTINF:-1 tvg-id="长沙新闻综合" tvg-name="长沙新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%95%BF%E6%B2%99%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️上海市",长沙新闻综合
+http://58.46.29.252:8188/udp/239.76.253.121:9000
+#EXTINF:-1 tvg-id="益阳新闻综合" tvg-name="益阳新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%9B%8A%E9%98%B3%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️上海市",益阳新闻综合
+http://58.46.29.252:8188/udp/239.76.255.15:9000
+#EXTINF:-1 tvg-id="岳阳新闻综合" tvg-name="岳阳新闻综合" group-title="☘️上海市",岳阳新闻综合
+http://58.46.29.252:8188/udp/239.76.255.7:9000
+#EXTINF:-1 tvg-id="张家界1新闻综合" tvg-name="张家界1新闻综合" group-title="☘️上海市",张家界1新闻综合
+http://58.46.29.252:8188/udp/239.76.252.234:9000
+#EXTINF:-1 tvg-id="湘西新闻综合" tvg-name="湘西新闻综合" group-title="☘️上海市",湘西新闻综合
+http://58.46.29.252:8188/udp/239.76.252.208:9000
+#EXTINF:-1 tvg-id="株洲新闻综合" tvg-name="株洲新闻综合" group-title="☘️上海市",株洲新闻综合
+http://58.46.29.252:8188/udp/239.76.255.1:9000
+#EXTINF:-1 tvg-id="永州新闻综合" tvg-name="永州新闻综合" group-title="☘️上海市",永州新闻综合
+http://58.46.29.252:8188/udp/239.76.255.23:9000
+#EXTINF:-1 tvg-id="湘潭新闻综合" tvg-name="湘潭新闻综合" group-title="☘️上海市",湘潭新闻综合
+http://58.46.29.252:8188/udp/239.76.255.4:9000
+#EXTINF:-1 tvg-id="衡阳新闻综合" tvg-name="衡阳新闻综合" group-title="☘️上海市",衡阳新闻综合
+http://58.46.29.252:8188/udp/239.76.255.13:9000
+#EXTINF:-1 tvg-id="邵阳新闻综合" tvg-name="邵阳新闻综合" group-title="☘️上海市",邵阳新闻综合
+http://58.46.29.252:8188/udp/239.76.255.21:9000
+#EXTINF:-1 tvg-id="怀化新闻综合" tvg-name="怀化新闻综合" group-title="☘️上海市",怀化新闻综合
+http://58.46.29.252:8188/udp/239.76.255.12:9000
+#EXTINF:-1 tvg-id="常德新闻综合" tvg-name="常德新闻综合" group-title="☘️上海市",常德新闻综合
+http://58.46.29.252:8188/udp/239.76.255.10:9000
+#EXTINF:-1 tvg-id="东安新闻综合" tvg-name="东安新闻综合" group-title="☘️上海市",东安新闻综合
+http://58.46.29.252:8188/udp/239.76.255.32:9000
+#EXTINF:-1 tvg-id="双牌新闻综合" tvg-name="双牌新闻综合" group-title="☘️上海市",双牌新闻综合
+http://58.46.29.252:8188/udp/239.76.255.33:9000
+#EXTINF:-1 tvg-id="张家界新闻综合" tvg-name="张家界新闻综合" group-title="☘️上海市",张家界新闻综合
+http://58.46.29.252:8188/udp/239.76.245.234:1234
+#EXTINF:-1 tvg-id="未知新闻综合" tvg-name="未知新闻综合" group-title="☘️上海市",未知新闻综合
+http://58.46.29.252:8188/udp/239.76.248.27:1234
+#EXTINF:-1 tvg-id="金鹰卡通" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通
+http://58.46.29.252:8188/udp/239.76.253.107:9000
+#EXTINF:-1 tvg-id="金鹰纪实" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实
+http://58.46.29.252:8188/udp/239.76.253.110:9000
+#EXTINF:-1 tvg-id="快乐垂钓" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓
+http://58.46.29.252:8188/udp/239.76.253.5:9000
+#EXTINF:-1 tvg-id="茶频道" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="数字频道",茶频道
+http://58.46.29.252:8188/udp/239.76.252.239:9000
+#EXTINF:-1 tvg-id="金鹰卡通FHD" tvg-name="金鹰卡通FHD" group-title="数字频道",金鹰卡通FHD
+http://58.46.29.252:8188/udp/239.76.252.120:9000
+#EXTINF:-1 tvg-id="金鹰纪实FHD" tvg-name="金鹰纪实FHD" group-title="数字频道",金鹰纪实FHD
+http://58.46.29.252:8188/udp/239.76.252.122:9000
+#EXTINF:-1 tvg-id="快乐垂钓FHD" tvg-name="快乐垂钓FHD" group-title="数字频道",快乐垂钓FHD
+http://58.46.29.252:8188/udp/239.76.252.127:9000
+#EXTINF:-1 tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院
+http://58.46.29.252:8188/udp/239.76.252.241:9000
+#EXTINF:-1 tvg-id="CHC影迷电影" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影
+http://58.46.29.252:8188/udp/239.76.252.242:9000
+#EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影
+http://58.46.29.252:8188/udp/239.76.252.243:9000
+#EXTINF:-1 tvg-id="北京纪实科教" tvg-name="北京纪实科教" group-title="数字频道",北京纪实科教
+http://58.46.29.252:8188/udp/239.76.254.65:9000
+#EXTINF:-1 tvg-id="上海乐游频道" tvg-name="上海乐游频道" group-title="数字频道",上海乐游频道
+http://58.46.29.252:8188/udp/239.76.254.68:9000
+#EXTINF:-1 tvg-id="上海动漫秀场" tvg-name="上海动漫秀场" group-title="数字频道",上海动漫秀场
+http://58.46.29.252:8188/udp/239.76.254.70:9000
+#EXTINF:-1 tvg-id="上海法治天地" tvg-name="上海法治天地" group-title="数字频道",上海法治天地
+http://58.46.29.252:8188/udp/239.76.254.67:9000
+#EXTINF:-1 tvg-id="上海生活时尚" tvg-name="上海生活时尚" group-title="数字频道",上海生活时尚
+http://58.46.29.252:8188/udp/239.76.254.73:9000
+#EXTINF:-1 tvg-id="上海都市剧场" tvg-name="上海都市剧场" group-title="数字频道",上海都市剧场
+http://58.46.29.252:8188/udp/239.76.254.74:9000
+#EXTINF:-1 tvg-id="上海金色学堂" tvg-name="上海金色学堂" group-title="数字频道",上海金色学堂
+http://58.46.29.252:8188/udp/239.76.254.75:9000
+#EXTINF:-1 tvg-id="河南梨园频道" tvg-name="河南梨园频道" group-title="数字频道",河南梨园频道
+http://58.46.29.252:8188/udp/239.76.252.179:9000
+#EXTINF:-1 tvg-id="魅力足球" tvg-name="魅力足球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%AD%85%E5%8A%9B%E8%B6%B3%E7%90%83.png" group-title="数字频道",魅力足球
+http://58.46.29.252:8188/udp/239.76.254.72:9000
+#EXTINF:-1 tvg-id="天元围棋" tvg-name="天元围棋" group-title="数字频道",天元围棋
+http://58.46.29.252:8188/udp/239.76.253.2:9000
+#EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
+http://58.46.29.252:8188/udp/239.76.253.151:9000
+#EXTINF:-1 tvg-id="CCTV-2财经" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经
+http://58.46.29.252:8188/udp/239.76.253.152:9000
+#EXTINF:-1 tvg-id="CCTV-3综艺" tvg-name="CCTV-3综艺" group-title="央视频道",CCTV-3综艺
+http://58.46.29.252:8188/udp/239.76.253.153:9000
+#EXTINF:-1 tvg-id="CCTV-4中文国际" tvg-name="CCTV-4中文国际" group-title="央视频道",CCTV-4中文国际
+http://58.46.29.252:8188/udp/239.76.253.154:9000
+#EXTINF:-1 tvg-id="CCTV-5体育" tvg-name="CCTV-5体育" group-title="央视频道",CCTV-5体育
+http://58.46.29.252:8188/udp/239.76.253.155:9000
+#EXTINF:-1 tvg-id="CCTV-5+体育赛事" tvg-name="CCTV-5+体育赛事" group-title="央视频道",CCTV-5+体育赛事
+http://58.46.29.252:8188/udp/239.76.253.168:9000
+#EXTINF:-1 tvg-id="CCTV-6电影" tvg-name="CCTV-6电影" group-title="央视频道",CCTV-6电影
+http://58.46.29.252:8188/udp/239.76.253.156:9000
+#EXTINF:-1 tvg-id="CCTV-7国防军事" tvg-name="CCTV-7国防军事" group-title="央视频道",CCTV-7国防军事
+http://58.46.29.252:8188/udp/239.76.253.157:9000
+#EXTINF:-1 tvg-id="CCTV-8电视剧" tvg-name="CCTV-8电视剧" group-title="央视频道",CCTV-8电视剧
+http://58.46.29.252:8188/udp/239.76.253.158:9000
+#EXTINF:-1 tvg-id="CCTV-9纪录" tvg-name="CCTV-9纪录" group-title="央视频道",CCTV-9纪录
+http://58.46.29.252:8188/udp/239.76.253.159:9000
+#EXTINF:-1 tvg-id="CCTV-10科教" tvg-name="CCTV-10科教" group-title="央视频道",CCTV-10科教
+http://58.46.29.252:8188/udp/239.76.253.160:9000
+#EXTINF:-1 tvg-id="CCTV-11戏曲" tvg-name="CCTV-11戏曲" group-title="央视频道",CCTV-11戏曲
+http://58.46.29.252:8188/udp/239.76.252.251:9000
+#EXTINF:-1 tvg-id="CCTV-12社会与法" tvg-name="CCTV-12社会与法" group-title="央视频道",CCTV-12社会与法
+http://58.46.29.252:8188/udp/239.76.253.162:9000
+#EXTINF:-1 tvg-id="CCTV-13新闻" tvg-name="CCTV-13新闻" group-title="央视频道",CCTV-13新闻
+http://58.46.29.252:8188/udp/239.76.253.93:9000
+#EXTINF:-1 tvg-id="CCTV-14少儿" tvg-name="CCTV-14少儿" group-title="央视频道",CCTV-14少儿
+http://58.46.29.252:8188/udp/239.76.253.164:9000
+#EXTINF:-1 tvg-id="CCTV-15音乐" tvg-name="CCTV-15音乐" group-title="央视频道",CCTV-15音乐
+http://58.46.29.252:8188/udp/239.76.252.252:9000
+#EXTINF:-1 tvg-id="CCTV-16奥林匹克" tvg-name="CCTV-16奥林匹克" group-title="央视频道",CCTV-16奥林匹克
+http://58.46.29.252:8188/udp/239.76.253.98:9000
+#EXTINF:-1 tvg-id="CCTV-17农业农村" tvg-name="CCTV-17农业农村" group-title="央视频道",CCTV-17农业农村
+http://58.46.29.252:8188/udp/239.76.252.238:9000
+#EXTINF:-1 tvg-id="CCTV-16奥林匹克4K" tvg-name="CCTV-16奥林匹克4K" group-title="央视频道",CCTV-16奥林匹克4K
+http://58.46.29.252:8188/udp/239.76.253.230:9000
+#EXTINF:-1 tvg-id="CCTV-4K超高清" tvg-name="CCTV-4K超高清" group-title="央视频道",CCTV-4K超高清
+http://58.46.29.252:8188/udp/239.76.254.101:9000
+#EXTINF:-1 tvg-id="CCTV-第一剧场" tvg-name="CCTV-第一剧场" group-title="央视频道",CCTV-第一剧场
+http://58.46.29.252:8188/udp/239.76.254.49:9000
+#EXTINF:-1 tvg-id="CCTV-风云剧场" tvg-name="CCTV-风云剧场" group-title="央视频道",CCTV-风云剧场
+http://58.46.29.252:8188/udp/239.76.254.50:9000
+#EXTINF:-1 tvg-id="CCTV-怀旧剧场" tvg-name="CCTV-怀旧剧场" group-title="央视频道",CCTV-怀旧剧场
+http://58.46.29.252:8188/udp/239.76.254.53:9000
+#EXTINF:-1 tvg-id="CCTV-电视指南" tvg-name="CCTV-电视指南" group-title="央视频道",CCTV-电视指南
+http://58.46.29.252:8188/udp/239.76.254.61:9000
+#EXTINF:-1 tvg-id="CCTV-世界地理" tvg-name="CCTV-世界地理" group-title="央视频道",CCTV-世界地理
+http://58.46.29.252:8188/udp/239.76.254.57:9000
+#EXTINF:-1 tvg-id="CCTV-兵器科技" tvg-name="CCTV-兵器科技" group-title="央视频道",CCTV-兵器科技
+http://58.46.29.252:8188/udp/239.76.254.59:9000
+#EXTINF:-1 tvg-id="CCTV-央视台球" tvg-name="CCTV-央视台球" group-title="央视频道",CCTV-央视台球
+http://58.46.29.252:8188/udp/239.76.254.58:9000
+#EXTINF:-1 tvg-id="CCTV-文化精品" tvg-name="CCTV-文化精品" group-title="央视频道",CCTV-文化精品
+http://58.46.29.252:8188/udp/239.76.254.56:9000
+#EXTINF:-1 tvg-id="CCTV-女性时尚" tvg-name="CCTV-女性时尚" group-title="央视频道",CCTV-女性时尚
+http://58.46.29.252:8188/udp/239.76.254.55:9000
+#EXTINF:-1 tvg-id="CCTV-风云足球" tvg-name="CCTV-风云足球" group-title="央视频道",CCTV-风云足球
+http://58.46.29.252:8188/udp/239.76.254.52:9000
+#EXTINF:-1 tvg-id="CCTV-风云音乐" tvg-name="CCTV-风云音乐" group-title="央视频道",CCTV-风云音乐
+http://58.46.29.252:8188/udp/239.76.254.51:9000
+#EXTINF:-1 tvg-id="CCTV-高尔夫网球" tvg-name="CCTV-高尔夫网球" group-title="央视频道",CCTV-高尔夫网球
+http://58.46.29.252:8188/udp/239.76.254.62:9000
+#EXTINF:-1 tvg-id="CCTV-4中文国际 欧洲" tvg-name="CCTV-4中文国际 欧洲" group-title="央视频道",CCTV-4中文国际 欧洲
+http://58.46.29.252:8188/udp/239.76.253.95:9000
+#EXTINF:-1 tvg-id="CCTV-4中文国际 美洲" tvg-name="CCTV-4中文国际 美洲" group-title="央视频道",CCTV-4中文国际 美洲
+http://58.46.29.252:8188/udp/239.76.253.96:9000
+#EXTINF:-1 tvg-id="CETV-1" tvg-name="CETV-1" group-title="央视频道",CETV-1
+http://58.46.29.252:8188/udp/239.76.252.192:9000
+#EXTINF:-1 tvg-id="CETV-4" tvg-name="CETV-4" group-title="央视频道",CETV-4
+http://58.46.29.252:8188/udp/239.76.252.254:9000
+#EXTINF:-1 tvg-id="CETV早期教育" tvg-name="CETV早期教育" group-title="央视频道",CETV早期教育
+http://58.46.29.252:8188/udp/239.76.254.202:9000
+#EXTINF:-1 tvg-id="CGTN英语" tvg-name="CGTN英语" group-title="央视频道",CGTN英语
+http://58.46.29.252:8188/udp/239.76.252.66:9000
+#EXTINF:-1 tvg-id="CGTN纪录" tvg-name="CGTN纪录" group-title="央视频道",CGTN纪录
+http://58.46.29.252:8188/udp/239.76.252.67:9000
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" group-title="央视频道",CGTN俄语
+http://58.46.29.252:8188/udp/239.76.253.86:9000
+#EXTINF:-1 tvg-id="CGTN法语" tvg-name="CGTN法语" group-title="央视频道",CGTN法语
+http://58.46.29.252:8188/udp/239.76.253.87:9000
+#EXTINF:-1 tvg-id="CGTN西班牙语" tvg-name="CGTN西班牙语" group-title="央视频道",CGTN西班牙语
+http://58.46.29.252:8188/udp/239.76.253.88:9000
+#EXTINF:-1 tvg-id="CGTN阿拉伯语" tvg-name="CGTN阿拉伯语" group-title="央视频道",CGTN阿拉伯语
+http://58.46.29.252:8188/udp/239.76.253.97:9000
+#EXTINF:-1 tvg-id="中国天气" tvg-name="中国天气" group-title="央视频道",中国天气
+http://58.46.29.252:8188/udp/239.76.253.61:9000
+#EXTINF:-1 tvg-id="上海欢笑剧场4K" tvg-name="上海欢笑剧场4K" group-title="4K频道",上海欢笑剧场4K
+http://58.46.29.252:8188/udp/239.76.254.66:9000
+#EXTINF:-1 tvg-id="河南文物宝库" tvg-name="河南文物宝库" group-title="☘️河南省",河南文物宝库
+http://58.46.29.252:8188/udp/239.76.252.180:9000
+#EXTINF:-1 tvg-id="河南武术世界" tvg-name="河南武术世界" group-title="☘️河南省",河南武术世界
+http://58.46.29.252:8188/udp/239.76.252.181:9000
+#EXTINF:-1 tvg-id="宁乡综合频道" tvg-name="宁乡综合频道" group-title="☘️新疆",宁乡综合频道
+http://58.46.29.252:8188/udp/239.76.248.57:1234
