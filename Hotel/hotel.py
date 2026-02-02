@@ -578,7 +578,7 @@ def speed_test(channels):
                         continue
                 
                 # 根据最佳速度决定是否保留
-                if best_speed > 0.001:
+                if best_speed > 0.2:
                     result = channel_name, channel_url, f"{best_speed:.3f}"
                     if attempts > 1:
                         print(f"✓ {channel_name}, {channel_url}: {best_speed:.3f} MB/s (经过{attempts}次测速)")
