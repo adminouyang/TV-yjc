@@ -41,6 +41,7 @@ jobs:
           # 配置区
           FOFA_URLS = {
               "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04i": "ip.txt",
+              "https://fofa.info/result?qbase64=IlpIR1hUViIgJiYgY291bnRyeT0iQ04i": "ip.txt",
           }
           HEADERS = {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
