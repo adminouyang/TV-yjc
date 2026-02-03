@@ -2,7 +2,7 @@ name: my_tv
 
 on:
   schedule:
-    - cron: '0 */12 * * *'  # 每6小时运行一次
+    - cron: '0 23,11 * * *'  # 每天早上7点、晚上7点更新
   workflow_dispatch:  # 支持手动触发
 
 env:
