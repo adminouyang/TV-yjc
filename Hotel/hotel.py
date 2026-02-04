@@ -832,7 +832,7 @@ def generate_m3u_file(txt_file_path, m3u_file_path):
     logo_dict = read_logo_file()
     
     # EPG链接
-    epg_url = "https://gh.catmak.name/https://raw.githubusercontent.com/Guovin/iptv-api/refs/heads/master/output/epg/epg.gz"
+    epg_url = "https://gh.catmak.name/https://raw.githubusercontent.com/adminouyang/231006/refs/heads/main/py/TV/EPG/epg.xml"
     
     with open(m3u_file_path, 'w', encoding='utf-8') as m3u_file:
         # 写入M3U头部
