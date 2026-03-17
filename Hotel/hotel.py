@@ -926,11 +926,32 @@ def generate_m3u_file(txt_file_path, m3u_file_path):
     """从txt文件生成m3u文件"""
     print(f"开始生成M3U文件: {m3u_file_path}")
     
-    # 读取台标文件
+    # 1. 读取台标文件
     logo_dict = read_logo_file()
     
-    # EPG链接
-    epg_url = "https://gh.catmak.name/https://raw.githubusercontent.com/adminouyang/231006/refs/heads/main/py/TV/EPG/epg.xml"
+    # 2. EPG链接
+    epg_url = "https://gh-proxy.com/https://raw.githubusercontent.com/adminouyang/231006/refs/heads/main/py/TV/EPG/epg.xml"
+    
+    # --- 新增：解析EPG，构建频道名到ID的映射 ---
+    channel_id_map = {}
+    try:
+        print("正在解析EPG数据以获取频道ID...")
+        response = requests.get(epg_url, timeout=10)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'xml') # 使用xml解析器
+        
+        for channel_tag in soup.find_all('channel'):
+            channel_id = channel_tag.get('id')
+            # 查找display-name，通常第一个是主要名称
+            display_name_tag = channel_tag.find('display-name')
+            if channel_id and display_name_tag:
+                channel_name_in_epg = display_name_tag.text.strip()
+                # 将EPG中的频道名作为键，其id作为值存入映射表
+                channel_id_map[channel_name_in_epg] = channel_id
+        print(f"从EPG解析了 {len(channel_id_map)} 个频道的ID映射。")
+    except Exception as e:
+        print(f"警告：解析EPG链接失败，tvg-id将无法填入。错误: {e}")
+    # --- 新增部分结束 ---
     
     with open(m3u_file_path, 'w', encoding='utf-8') as m3u_file:
         # 写入M3U头部
@@ -945,12 +966,10 @@ def generate_m3u_file(txt_file_path, m3u_file_path):
                 if not line:
                     continue
                 
-                # 检查是否是分组行
                 if line.endswith(',#genre#'):
                     current_group = line.replace(',#genre#', '')
                     continue
                 
-                # 处理频道行
                 if ',' in line and not line.startswith('#'):
                     try:
                         parts = line.split(',')
@@ -961,8 +980,13 @@ def generate_m3u_file(txt_file_path, m3u_file_path):
                             # 获取台标
                             logo_url = logo_dict.get(channel_name, "")
                             
-                            # 写入M3U条目
-                            m3u_file.write(f'#EXTINF:-1 tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{current_group}",{channel_name}\n')
+                            # --- 修改：查询并添加tvg-id属性 ---
+                            tvg_id = channel_id_map.get(channel_name, "") # 根据频道名查找id
+                            tvg_id_attr = f' tvg-id="{tvg_id}"' if tvg_id else ""
+                            # --- 修改部分结束 ---
+                            
+                            # 修改写入格式，加入tvg-id
+                            m3u_file.write(f'#EXTINF:-1 {tvg_id_attr} tvg-name="{channel_name}" tvg-logo="{logo_url}" group-title="{current_group}",{channel_name}\n')
                             m3u_file.write(f'{channel_url}\n')
                     except Exception as e:
                         print(f"处理频道行错误: {line}, 错误: {e}")
