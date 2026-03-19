@@ -121,6 +121,7 @@ jobs:
             # 支持txt和m3u格式
             urls = [
                 "https://raw.githubusercontent.com/jn950/live/refs/heads/main/tv/holive.m3u",  # txt格式
+                "https://raw.githubusercontent.com/whyun-pages/hotel-tvn/refs/heads/main/lives.txt",
             ]
             hotel_ip_port_from_urls(urls)
         EOF
