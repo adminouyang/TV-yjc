@@ -1,0 +1,107 @@
+name: Extract IP and Port
+
+on:
+  schedule:
+    # 每天凌晨3点自动运行（UTC时间，北京时间+8）
+    - cron: '0 9 * * *'
+  #push:
+    # 当脚本文件有更新时触发
+    #paths:
+      #- 'hotel_ip_port.yml'
+  #pull_request:
+    #paths:
+      #- 'hotel_ip_port.yml'
+  # 支持手动触发
+  workflow_dispatch:
+
+jobs:
+  hotel-ip:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+        
+    - name: 提取ip
+      run: |
+        cat > hotel_ip_port.py << 'EOF'
+        import requests
+        import os
+        import re
+        
+        def hotel_ip_port_from_urls(url_list):
+            """
+            从给定的URL列表中读取直播源文件，提取包含"tsfile"或"hls"的IP和端口，去重后保存到文件。
+            """
+            ip_port_set = set()  # 使用集合自动去重
+            
+            for url in url_list:
+                try:
+                    response = requests.get(url, timeout=10)
+                    response.raise_for_status()  # 检查HTTP请求是否成功
+                    lines = response.text.splitlines()
+                    
+                    for line in lines:
+                        line = line.strip()
+                        if not line or ',' not in line:
+                            continue  # 跳过空行或不含逗号的行（如标题行）
+                        
+                        parts = line.split(',', 1)  # 最多分割成两部分，防止频道名中含逗号
+                        if len(parts) < 2:
+                            continue
+                        
+                        url_part = parts[1].strip()  # 提取URL部分
+                        # 只处理包含"tsfile"或"hls"的URL
+                        if 'tsfile' in url_part or 'hls' in url_part:
+                            # 使用正则表达式提取IP和端口
+                            match = re.search(r'https?://([^:/]+):(\d+)', url_part)
+                            if match:
+                                ip = match.group(1)
+                                port = match.group(2)
+                                ip_port_set.add((ip, port))
+                except requests.exceptions.RequestException as e:
+                    print(f"网络请求错误: 处理URL {url} 时失败 - {e}")
+                except Exception as e:
+                    print(f"处理URL {url} 时发生未知错误: {e}")
+            
+            # 保存到文件
+            output_dir = "Hotel/ip"
+            os.makedirs(output_dir, exist_ok=True)  # 创建文件夹（如果不存在）
+            output_file = os.path.join(output_dir, "hotel_ip.txt")
+            
+            with open(output_file, 'w', encoding='utf-8') as f:
+                for ip, port in sorted(ip_port_set):  # 排序后写入，便于阅读
+                    f.write(f"{ip}:{port}\n")
+            
+            print(f"成功提取 {len(ip_port_set)} 个唯一的IP:端口对，已保存到: {output_file}")
+        
+        if __name__ == "__main__":
+            # 示例URL列表，可替换或添加更多直播源链接
+            urls = [
+                "https://raw.githubusercontent.com/adminouyang/TV-yjc/refs/heads/main/Hotel/iptv.txt",
+                # 在此添加更多URL，例如：
+                # "https://example.com/other_iptv.txt",
+            ]
+            hotel_ip_port_from_urls(urls)
+        EOF
+        
+        python hotel_ip_port.py
+      
+    - name: Commit and push if changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add Hotel/ip/hotel_ip.txt
+        git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: 提取ip $(date '+%Y-%m-%d %H:%M:%S')"
+        git push
