@@ -1,16 +1,16 @@
-name: Extract IP and Port
+name: hotel IP and Port 
 
 on:
   schedule:
     # 每天凌晨3点自动运行（UTC时间，北京时间+8）
-    - cron: '0 9 * * *'
-  #push:
-    # 当脚本文件有更新时触发
-    #paths:
-      #- 'hotel_ip_port.yml'
-  #pull_request:
-    #paths:
-      #- 'hotel_ip_port.yml'
+    - cron: '0 19 * * *'
+  # push:
+  #   # 当脚本文件有更新时触发
+  #   paths:
+  #     - 'hotel_ip_port.yml'
+  # pull_request:
+  #   paths:
+  #     - 'hotel_ip_port.yml'
   # 支持手动触发
   workflow_dispatch:
 
@@ -33,16 +33,18 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
         
-    - name: 提取ip
+    - name: 开始提取ip
       run: |
         cat > hotel_ip_port.py << 'EOF'
         import requests
         import os
         import re
+        from urllib.parse import urlparse
         
         def hotel_ip_port_from_urls(url_list):
             """
             从给定的URL列表中读取直播源文件，提取包含"tsfile"或"hls"的IP和端口，去重后保存到文件。
+            支持txt格式（逗号分隔）和m3u格式
             """
             ip_port_set = set()  # 使用集合自动去重
             
@@ -50,26 +52,49 @@ jobs:
                 try:
                     response = requests.get(url, timeout=10)
                     response.raise_for_status()  # 检查HTTP请求是否成功
-                    lines = response.text.splitlines()
+                    content = response.text
+                    
+                    # 按行处理
+                    lines = content.splitlines()
                     
                     for line in lines:
                         line = line.strip()
-                        if not line or ',' not in line:
-                            continue  # 跳过空行或不含逗号的行（如标题行）
-                        
-                        parts = line.split(',', 1)  # 最多分割成两部分，防止频道名中含逗号
-                        if len(parts) < 2:
+                        if not line:
                             continue
                         
-                        url_part = parts[1].strip()  # 提取URL部分
+                        # 跳过m3u文件中的注释行
+                        if line.startswith('#'):
+                            continue
+                        
+                        # 判断文件格式并提取URL
+                        # 1. txt格式: 频道名,URL
+                        if ',' in line:
+                            parts = line.split(',', 1)  # 最多分割成两部分
+                            if len(parts) < 2:
+                                continue
+                            url_part = parts[1].strip()
+                        # 2. m3u格式: 直接是URL
+                        else:
+                            url_part = line
+                        
                         # 只处理包含"tsfile"或"hls"的URL
                         if 'tsfile' in url_part or 'hls' in url_part:
-                            # 使用正则表达式提取IP和端口
+                            # 尝试正则表达式提取IP和端口
                             match = re.search(r'https?://([^:/]+):(\d+)', url_part)
                             if match:
                                 ip = match.group(1)
                                 port = match.group(2)
                                 ip_port_set.add((ip, port))
+                            else:
+                                # 如果正则匹配失败，尝试使用urlparse
+                                parsed_url = urlparse(url_part)
+                                if parsed_url.hostname and parsed_url.port:
+                                    ip_port_set.add((parsed_url.hostname, str(parsed_url.port)))
+                                elif parsed_url.hostname and parsed_url.scheme in ['http', 'https']:
+                                    # 没有显式端口，使用默认端口
+                                    default_port = 443 if parsed_url.scheme == 'https' else 80
+                                    ip_port_set.add((parsed_url.hostname, str(default_port)))
+                                    
                 except requests.exceptions.RequestException as e:
                     print(f"网络请求错误: 处理URL {url} 时失败 - {e}")
                 except Exception as e:
@@ -85,13 +110,17 @@ jobs:
                     f.write(f"{ip}:{port}\n")
             
             print(f"成功提取 {len(ip_port_set)} 个唯一的IP:端口对，已保存到: {output_file}")
+            
+            # 输出示例
+            print("提取到的前10个IP:端口:")
+            for i, (ip, port) in enumerate(list(sorted(ip_port_set))[:10]):
+                print(f"{i+1}. {ip}:{port}")
         
         if __name__ == "__main__":
             # 示例URL列表，可替换或添加更多直播源链接
+            # 支持txt和m3u格式
             urls = [
-                "https://raw.githubusercontent.com/adminouyang/TV-yjc/refs/heads/main/Hotel/iptv.txt",
-                # 在此添加更多URL，例如：
-                # "https://example.com/other_iptv.txt",
+                "https://raw.githubusercontent.com/jn950/live/refs/heads/main/tv/holive.m3u",  # txt格式
             ]
             hotel_ip_port_from_urls(urls)
         EOF
