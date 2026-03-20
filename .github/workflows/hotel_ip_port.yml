@@ -122,6 +122,7 @@ jobs:
             urls = [
                 "https://raw.githubusercontent.com/jn950/live/refs/heads/main/tv/holive.m3u",  # txt格式
                 "https://raw.githubusercontent.com/whyun-pages/hotel-tvn/refs/heads/main/lives.txt",
+                "https://raw.githubusercontent.com/mzky/checklist/refs/heads/master/itvlist.m3u",
             ]
             hotel_ip_port_from_urls(urls)
         EOF
