@@ -123,6 +123,7 @@ jobs:
                 "https://raw.githubusercontent.com/jn950/live/refs/heads/main/tv/holive.m3u",  # txt格式
                 "https://raw.githubusercontent.com/whyun-pages/hotel-tvn/refs/heads/main/lives.txt",
                 "https://raw.githubusercontent.com/mzky/checklist/refs/heads/master/itvlist.m3u",
+                #"http://129.211.14.102:50085/sub?tv.sohu.blog=txt",
             ]
             hotel_ip_port_from_urls(urls)
         EOF
