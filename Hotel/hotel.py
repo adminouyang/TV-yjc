@@ -1167,6 +1167,14 @@ def main():
         
         config_file = os.path.join(IP_DIR, province_file)
         hotel_iptv(config_file)
+        # ========== 新增：检查并删除空文件 ==========
+        try:
+        # 检查文件是否为空
+            if os.path.exists(config_file) and os.path.getsize(config_file) == 0:
+                os.remove(config_file)
+                print(f"  检测到空文件，已删除: {province_file}")
+        except Exception as e:
+            print(f"  处理文件 {province_file} 时发生错误: {e}")
     
     # 第三步：读取统一后的频道数据并进行分类
     if not os.path.exists('1.txt'):
