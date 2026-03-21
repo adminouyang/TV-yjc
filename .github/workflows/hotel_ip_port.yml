@@ -1,4 +1,4 @@
-name:  IP and Port 
+name: hotel IP and Port
 
 on:
   schedule:
@@ -34,7 +34,7 @@ jobs:
         pip install requests
         pip install pysocks
         
-    - name: Create and run hotelion script
+    - name: 提取ip并检测
       run: |
         cat > hotel_ip_port.py << 'EOF'
         import requests
@@ -42,9 +42,9 @@ jobs:
         import os
         import random
         import time
+        import json
         from urllib.parse import urlparse
         from concurrent.futures import ThreadPoolExecutor, as_completed
-        import json
         
         # 请求头设置
         HEADERS = {
@@ -68,7 +68,7 @@ jobs:
                         response = requests.get(url, timeout=timeout, headers=HEADERS, verify=False)
                         if response.status_code == 200:
                             return True, url
-                    except Exception as e:
+                    except:
                         continue
                         
                 return False, None
@@ -88,13 +88,12 @@ jobs:
                 if "iptv" in interface_url:
                     # 处理JSON格式
                     json_data = response.json()
-                    url_x = interface_url.rsplit('/', 1)[0]  # 获取基础URL
                     
                     for item in json_data.get('data', []):
                         if isinstance(item, dict):
-                            name = item.get('name')
-                            urlx = item.get('url')
-                            if urlx and ("tsfile" in urlx or "m3u8" in urlx or "hls" in urlx):
+                            name = item.get('name', '')
+                            urlx = item.get('url', '')
+                            if name and urlx and ("tsfile" in urlx or "m3u8" in urlx or "hls" in urlx):
                                 # 确保urlx以斜杠开头,避免双斜杠
                                 if not urlx.startswith('/'):
                                     urlx = '/' + urlx
@@ -102,20 +101,31 @@ jobs:
                                 hotel_channels.append((name, urld))
                 elif "ZHGXTV" in interface_url:
                     # 处理TXT格式
-                    content = response.content.decode('utf-8')
+                    content = response.text
                     data_lines = content.split('\\n')
-                    url_x = interface_url.rsplit('/', 1)[0]  # 获取基础URL
                     
                     for line in data_lines:
-                        if "," in line and ("hls" in line or "m3u8" in line or "tsfile" in line):
-                            parts = line.strip().split(',')
-                            if len(parts) >= 2:
-                                name = parts[0]
-                                channel_url = parts[1]
-                                url_parts = channel_url.split('/', 3)
-                                if len(url_parts) >= 4:
-                                    urld = f"http://{ip_port}/{url_parts[3]}"
-                                    hotel_channels.append((name, urld))
+                        line = line.strip()
+                        if not line or ',' not in line:
+                            continue
+                        
+                        parts = line.split(',', 1)
+                        if len(parts) < 2:
+                            continue
+                        
+                        name = parts[0].strip()
+                        full_url = parts[1].strip()
+                        
+                        # 提取路径部分
+                        parsed_url = urlparse(full_url)
+                        path_with_query = parsed_url.path
+                        if parsed_url.query:
+                            path_with_query += '?' + parsed_url.query
+                        
+                        # 构建新的URL
+                        urld = f"http://{ip_port}{path_with_query}"
+                        hotel_channels.append((name, urld))
+                
                 return hotel_channels
             except Exception as e:
                 print(f"解析频道错误 {interface_url}: {e}")
@@ -161,7 +171,6 @@ jobs:
             然后检测IP端口有效性，解析频道，测速，最终保存有效的IP端口
             """
             ip_port_set = set()  # 使用集合自动去重
-            all_channels = []  # 存储所有频道信息
             
             print("步骤1: 从直播源URL提取IP和端口...")
             for url in url_list:
@@ -172,7 +181,7 @@ jobs:
                     
                     for line in lines:
                         line = line.strip()
-                        if not line or ',' not in line:
+                        if not line or line.startswith('#') or ',' not in line:
                             continue
                         
                         parts = line.split(',', 1)
@@ -181,13 +190,23 @@ jobs:
                         
                         url_part = parts[1].strip()
                         if 'tsfile' in url_part or 'hls' in url_part or 'm3u8' in url_part:
+                            # 尝试多种方式提取IP和端口
                             match = re.search(r'https?://([^:/]+):(\d+)', url_part)
                             if match:
                                 ip = match.group(1)
                                 port = match.group(2)
                                 ip_port_set.add(f"{ip}:{port}")
-                
-                    print(f"从 {url} 提取完成")
+                            else:
+                                # 如果正则匹配失败，尝试使用urlparse
+                                parsed_url = urlparse(url_part)
+                                if parsed_url.hostname and parsed_url.port:
+                                    ip_port_set.add(f"{parsed_url.hostname}:{parsed_url.port}")
+                                elif parsed_url.hostname and parsed_url.scheme in ['http', 'https']:
+                                    # 没有显式端口，使用默认端口
+                                    default_port = 443 if parsed_url.scheme == 'https' else 80
+                                    ip_port_set.add(f"{parsed_url.hostname}:{default_port}")
+                    
+                    print(f"  从 {url} 提取完成")
                     
                 except requests.exceptions.RequestException as e:
                     print(f"网络请求错误: 处理URL {url} 时失败 - {e}")
@@ -212,49 +231,51 @@ jobs:
                         is_available, interface_url = future.result()
                         if is_available:
                             available_ips.append((ip_port, interface_url))
-                            print(f"✓ {ip_port} 可用 (接口: {interface_url})")
+                            print(f"  ✓ {ip_port} 可用 (接口: {interface_url})")
                         else:
-                            print(f"✗ {ip_port} 不可用")
+                            print(f"  ✗ {ip_port} 不可用")
                     except Exception as e:
                         print(f"检测 {ip_port} 时出错: {e}")
             
             print(f"\\n共 {len(available_ips)} 个IP:端口可用")
             
-            print(f"\\n步骤3: 从可用IP解析频道信息...")
+            print(f"\\n步骤3: 从可用IP解析频道信息并测速...")
             speed_tested_ips = []
             
-            for ip_port, interface_url in available_ips:
+            for idx, (ip_port, interface_url) in enumerate(available_ips, 1):
                 try:
+                    print(f"  [{idx}/{len(available_ips)}] 处理 {ip_port}...")
+                    
                     # 解析频道
-                    channels = hotel_channels_from_ip_port(ip_port, f"http://{interface_url}")
+                    channels = hotel_channels_from_ip_port(ip_port, interface_url)
                     
                     if not channels:
-                        print(f"  {ip_port}: 无频道信息")
+                        print(f"    {ip_port}: 无频道信息")
                         continue
                     
                     # 过滤包含"CCTV"的频道
                     cctv_channels = [(name, url) for name, url in channels if "CCTV" in name.upper()]
                     
                     if not cctv_channels:
-                        print(f"  {ip_port}: 无CCTV频道")
+                        print(f"    {ip_port}: 无CCTV频道")
                         continue
                     
-                    print(f"  {ip_port}: 找到 {len(cctv_channels)} 个CCTV频道")
+                    print(f"    {ip_port}: 找到 {len(cctv_channels)} 个CCTV频道")
                     
                     # 随机选择一个CCTV频道进行测速
                     random_channel_name, random_channel_url = random.choice(cctv_channels)
                     
-                    print(f"  {ip_port}: 测试频道 [{random_channel_name}]")
+                    print(f"    {ip_port}: 测试频道 [{random_channel_name}]")
                     speed = test_channel_speed(random_channel_url)
                     
                     if speed > 100:  # 速度大于100KB/s
                         speed_tested_ips.append(ip_port)
-                        print(f"  {ip_port}: 通过测速 ({speed:.2f} KB/s)")
+                        print(f"    {ip_port}: 通过测速 ({speed:.2f} KB/s)")
                     else:
-                        print(f"  {ip_port}: 测速失败 ({speed:.2f} KB/s)")
+                        print(f"    {ip_port}: 测速失败 ({speed:.2f} KB/s)")
                         
                 except Exception as e:
-                    print(f"  {ip_port}: 处理失败 - {e}")
+                    print(f"    {ip_port}: 处理失败 - {e}")
             
             print(f"\\n步骤4: 保存通过测速的IP端口...")
             
@@ -267,18 +288,23 @@ jobs:
                 for ip_port in sorted(speed_tested_ips):
                     f.write(f"{ip_port}\\n")
             
-            print(f"\\n处理完成!")
-            print(f"初始提取IP端口: {len(ip_port_set)} 个")
-            print(f"可用IP端口: {len(available_ips)} 个")
-            print(f"通过测速IP端口: {len(speed_tested_ips)} 个")
-            print(f"结果已保存到: {output_file}")
+            # 统计信息
+            print(f"\\n" + "="*50)
+            print(f"处理完成统计:")
+            print(f"  - 初始提取IP端口: {len(ip_port_set)} 个")
+            print(f"  - 可用IP端口: {len(available_ips)} 个")
+            print(f"  - 通过测速IP端口: {len(speed_tested_ips)} 个")
+            print(f"  - 结果已保存到: {output_file}")
+            print("="*50)
             
             if speed_tested_ips:
-                print(f"\\n通过测速的IP端口:")
-                for ip_port in speed_tested_ips[:10]:  # 只显示前10个
-                    print(f"  {ip_port}")
-                if len(speed_tested_ips) > 10:
-                    print(f"  ... 还有 {len(speed_tested_ips)-10} 个")
+                print(f"\\n通过测速的IP端口 (前20个):")
+                for i, ip_port in enumerate(speed_tested_ips[:20], 1):
+                    print(f"  {i:2d}. {ip_port}")
+                if len(speed_tested_ips) > 20:
+                    print(f"  ... 还有 {len(speed_tested_ips)-20} 个")
+            else:
+                print("\\n警告: 没有找到通过测速的IP端口")
         
         if __name__ == "__main__":
             # 禁用SSL警告
@@ -292,7 +318,6 @@ jobs:
                 "https://raw.githubusercontent.com/mzky/checklist/refs/heads/master/itvlist.m3u",
                 #"http://129.211.14.102:50085/sub?tv.sohu.blog=txt",
                 #"https://raw.githubusercontent.com/kenye201/TVlog/refs/heads/main/final_hotel.txt",
-               
             ]
             
             hotel_ip_port_from_urls(urls)
@@ -305,5 +330,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add Hotel/ip/hotel_ip.txt
-        git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: hoteled and tested IP and Port $(date '+%Y-%m-%d %H:%M:%S')"
+        git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: 提取 IP and Port $(date '+%Y-%m-%d %H:%M:%S')"
         git push
