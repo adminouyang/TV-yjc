@@ -3,7 +3,7 @@ name:  IP and Port
 on:
   schedule:
     # 每天凌晨3点自动运行（UTC时间，北京时间+8）
-    - cron: '0 19 * * *'
+    - cron: '0 9 * * *'
   # push:
   #   # 当脚本文件有更新时触发
   #   paths:
