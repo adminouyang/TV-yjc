@@ -245,6 +245,7 @@ jobs:
                 try:
                     start_time = time.time()
                     response = session.get(channel_url, timeout=5, verify=False, stream=True)
+                    elapsed = time.time() - start_time
                     
                     if response.status_code == 200:
                         # 尝试读取一小段数据
