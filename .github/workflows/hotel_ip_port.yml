@@ -3,7 +3,7 @@ name: hotel IP and Port
 on:
   schedule:
     # 每天凌晨3点自动运行（UTC时间，北京时间+8）
-    - cron: '0 9 * * *'
+    - cron: '0 19 * * *'
   # push:
   #   # 当脚本文件有更新时触发
   #   paths:
@@ -44,19 +44,20 @@ jobs:
         import time
         import json
         import socket
-        from urllib.parse import urlparse
+        from urllib.parse import urlparse, urljoin
         from concurrent.futures import ThreadPoolExecutor, as_completed
         
         # 请求头设置
         HEADERS = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept': 'application/json,text/plain,*/*',
+            'Accept': '*/*',
             'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
             'Connection': 'keep-alive',
             'Accept-Encoding': 'gzip, deflate',
+            'Range': 'bytes=0-',
         }
         
-        def check_ip_availability(ip_port, timeout=2):
+        def check_ip_availability(ip_port, timeout=3):
             """检测IP:端口是否可用"""
             try:
                 # 尝试连接HTTP服务
@@ -70,7 +71,7 @@ jobs:
                         response = requests.get(url, timeout=timeout, headers=HEADERS, verify=False)
                         if response.status_code == 200:
                             return True, url
-                    except:
+                    except Exception as e:
                         continue
                         
                 return False, None
@@ -85,22 +86,26 @@ jobs:
             hotel_channels = []
             try:
                 # 发送GET请求获取数据
-                response = requests.get(interface_url, timeout=3, headers=HEADERS, verify=False)
+                response = requests.get(interface_url, timeout=5, headers=HEADERS, verify=False)
                 
                 if "iptv" in interface_url:
                     # 处理JSON格式
-                    json_data = response.json()
-                    
-                    for item in json_data.get('data', []):
-                        if isinstance(item, dict):
-                            name = item.get('name', '')
-                            urlx = item.get('url', '')
-                            if name and urlx and ("tsfile" in urlx or "m3u8" in urlx or "hls" in urlx):
-                                # 确保urlx以斜杠开头,避免双斜杠
-                                if not urlx.startswith('/'):
-                                    urlx = '/' + urlx
-                                urld = f"http://{ip_port}{urlx}"
-                                hotel_channels.append((name, urld))
+                    try:
+                        json_data = response.json()
+                        
+                        for item in json_data.get('data', []):
+                            if isinstance(item, dict):
+                                name = item.get('name', '')
+                                urlx = item.get('url', '')
+                                if name and urlx and ("tsfile" in urlx or "m3u8" in urlx or "hls" in urlx):
+                                    # 确保urlx以斜杠开头,避免双斜杠
+                                    if not urlx.startswith('/'):
+                                        urlx = '/' + urlx
+                                    urld = f"http://{ip_port}{urlx}"
+                                    hotel_channels.append((name, urld))
+                    except json.JSONDecodeError:
+                        print(f"JSON解析错误: {interface_url}")
+                        
                 elif "ZHGXTV" in interface_url:
                     # 处理TXT格式
                     content = response.text
@@ -118,14 +123,14 @@ jobs:
                         name = parts[0].strip()
                         full_url = parts[1].strip()
                         
-                        # 提取路径部分
+                        # 解析完整URL，提取路径
                         parsed_url = urlparse(full_url)
-                        path_with_query = parsed_url.path
+                        path = parsed_url.path
                         if parsed_url.query:
-                            path_with_query += '?' + parsed_url.query
+                            path += '?' + parsed_url.query
                         
-                        # 构建新的URL
-                        urld = f"http://{ip_port}{path_with_query}"
+                        # 构建基于当前IP端口的URL
+                        urld = f"http://{ip_port}{path}"
                         hotel_channels.append((name, urld))
                 
                 return hotel_channels
@@ -133,118 +138,155 @@ jobs:
                 print(f"解析频道错误 {interface_url}: {e}")
                 return []
         
-        def test_channel_speed(channel_url, timeout=8):
+        def get_chunk_size_from_m3u8(channel_url, timeout=5):
+            """尝试从m3u8文件中获取chunk大小信息"""
+            try:
+                # 先获取m3u8文件内容
+                response = requests.get(channel_url, timeout=timeout, headers=HEADERS, verify=False)
+                if response.status_code != 200:
+                    return None
+                
+                content = response.text
+                lines = content.split('\\n')
+                
+                # 查找TS文件
+                ts_files = [line for line in lines if line.endswith('.ts') and not line.startswith('#')]
+                
+                if ts_files:
+                    # 尝试获取第一个TS文件的大小
+                    base_url = channel_url.rsplit('/', 1)[0] if '/' in channel_url else channel_url
+                    ts_url = urljoin(base_url + '/', ts_files[0]) if base_url else None
+                    
+                    if ts_url:
+                        head_response = requests.head(ts_url, timeout=3, headers=HEADERS, verify=False)
+                        if head_response.status_code == 200:
+                            content_length = head_response.headers.get('Content-Length')
+                            if content_length:
+                                return int(content_length)
+                
+                return None
+            except:
+                return None
+        
+        def test_stream_speed(channel_url, timeout=10):
             """
-            优化版测速函数
-            返回速度(KB/s)，0表示测速失败
+            针对流媒体的智能测速
+            1. 首先检查是否能够访问
+            2. 尝试获取m3u8文件
+            3. 如果有TS文件，测试TS文件的下载速度
+            4. 如果没有TS文件，测试m3u8文件的下载速度
             """
             try:
-                # 设置更合理的超时和连接参数
+                # 创建session
                 session = requests.Session()
-                adapter = requests.adapters.HTTPAdapter(
-                    pool_connections=1,
-                    pool_maxsize=1,
-                    max_retries=1
-                )
-                session.mount('http://', adapter)
-                session.mount('https://', adapter)
                 
-                # 优化测速参数
-                test_headers = HEADERS.copy()
-                test_headers.update({
-                    'Range': 'bytes=0-102399',  # 请求前100KB
-                    'Cache-Control': 'no-cache',
-                    'Pragma': 'no-cache',
-                })
-                
-                start_time = time.time()
-                
-                # 尝试多种测速方法
-                # 方法1: 使用HEAD请求获取信息
+                # 方法1: 尝试直接访问频道URL
                 try:
-                    head_response = session.head(
-                        channel_url, 
-                        timeout=2, 
-                        headers=HEADERS, 
-                        verify=False,
-                        allow_redirects=True
-                    )
-                    if head_response.status_code != 200:
+                    start_time = time.time()
+                    response = session.head(channel_url, timeout=3, headers=HEADERS, verify=False, allow_redirects=True)
+                    head_time = time.time() - start_time
+                    
+                    if response.status_code != 200:
                         # 尝试GET请求
-                        pass
+                        start_time = time.time()
+                        response = session.get(channel_url, timeout=5, headers=HEADERS, verify=False, stream=True)
+                        if response.status_code == 200:
+                            # 尝试读取一小段数据
+                            content_length = 0
+                            chunk_size = 4096
+                            for chunk in response.iter_content(chunk_size=chunk_size):
+                                if chunk:
+                                    content_length += len(chunk)
+                                    if content_length >= 8192:  # 读取8KB
+                                        break
+                            
+                            if content_length > 0:
+                                elapsed = time.time() - start_time
+                                if elapsed > 0:
+                                    speed = (content_length / 1024) / elapsed
+                                    return speed
                 except:
                     pass
                 
-                # 方法2: 流式下载测速
-                download_size = 0
-                chunk_size = 8192  # 8KB chunk
-                max_download = 102400  # 最大下载100KB
-                test_duration = 5  # 最长测速5秒
-                
-                try:
-                    response = session.get(
-                        channel_url, 
-                        stream=True, 
-                        timeout=timeout, 
-                        headers=test_headers, 
-                        verify=False,
-                        allow_redirects=True
-                    )
-                    
-                    # 确保请求成功
-                    if response.status_code != 200 and response.status_code != 206:
-                        return 0
-                    
-                    end_time = start_time + test_duration
-                    chunk_count = 0
-                    
-                    for chunk in response.iter_content(chunk_size=chunk_size):
-                        if not chunk:
-                            break
-                        
-                        download_size += len(chunk)
-                        chunk_count += 1
-                        
-                        # 计算当前速度
-                        current_time = time.time()
-                        elapsed = current_time - start_time
-                        
-                        if elapsed >= 1.0:  # 至少测速1秒
-                            speed_kb = (download_size / 1024) / elapsed
+                # 方法2: 如果是m3u8文件，尝试下载其中的TS片段
+                if channel_url.endswith('.m3u8'):
+                    try:
+                        # 获取m3u8内容
+                        response = session.get(channel_url, timeout=5, headers=HEADERS, verify=False)
+                        if response.status_code == 200:
+                            content = response.text
+                            lines = content.split('\\n')
                             
-                            # 如果速度足够高，提前结束
-                            if speed_kb > 500:  # 500KB/s
-                                break
-                        
-                        # 达到最大下载量或时间限制
-                        if download_size >= max_download or current_time >= end_time:
-                            break
+                            # 查找TS文件
+                            ts_lines = [line.strip() for line in lines if line.strip() and not line.startswith('#') and line.endswith('.ts')]
+                            
+                            if ts_lines:
+                                # 取第一个TS文件
+                                ts_file = ts_lines[0]
+                                base_url = channel_url.rsplit('/', 1)[0] if '/' in channel_url else channel_url
+                                ts_url = ts_file
+                                
+                                # 如果是相对路径，转换为绝对路径
+                                if not ts_url.startswith('http'):
+                                    if base_url:
+                                        ts_url = urljoin(base_url + '/', ts_file)
+                                    else:
+                                        ts_url = channel_url.rsplit('/', 1)[0] + '/' + ts_file if '/' in channel_url else ts_file
+                                
+                                # 测试TS文件下载速度
+                                try:
+                                    start_time = time.time()
+                                    response = session.get(ts_url, timeout=5, headers=HEADERS, verify=False, stream=True)
+                                    
+                                    if response.status_code == 200:
+                                        downloaded = 0
+                                        chunk_size = 8192
+                                        target_size = 16384  # 下载16KB
+                                        
+                                        for chunk in response.iter_content(chunk_size=chunk_size):
+                                            if chunk:
+                                                downloaded += len(chunk)
+                                                if downloaded >= target_size:
+                                                    break
+                                        
+                                        elapsed = time.time() - start_time
+                                        if elapsed > 0 and downloaded > 0:
+                                            speed = (downloaded / 1024) / elapsed
+                                            return speed
+                                except:
+                                    pass
+                    except:
+                        pass
+                
+                # 方法3: 简单测速 - 下载前32KB数据
+                try:
+                    start_time = time.time()
                     
-                    # 计算最终速度
-                    elapsed_time = time.time() - start_time
+                    # 设置Range头，只请求前32KB
+                    speed_headers = HEADERS.copy()
+                    speed_headers['Range'] = 'bytes=0-32767'
                     
-                    if elapsed_time < 0.5:  # 测速时间太短，结果可能不准确
-                        elapsed_time = 0.5
+                    response = session.get(channel_url, timeout=5, headers=speed_headers, verify=False, stream=True)
                     
-                    if download_size > 0:
-                        speed_kb = (download_size / 1024) / elapsed_time
+                    if response.status_code in [200, 206]:  # 200 OK 或 206 Partial Content
+                        downloaded = 0
+                        target_size = 32768  # 32KB
                         
-                        # 如果速度异常高，可能是测速不准确，进行二次验证
-                        if speed_kb > 10000:  # 10MB/s
-                            # 尝试用更小的chunk重新测速
-                            return speed_kb * 0.5  # 保守估计
+                        for chunk in response.iter_content(chunk_size=8192):
+                            if chunk:
+                                downloaded += len(chunk)
+                                if downloaded >= target_size:
+                                    break
                         
-                        return speed_kb
-                    else:
-                        return 0
-                        
-                except requests.exceptions.Timeout:
-                    return 0
-                except requests.exceptions.RequestException as e:
-                    return 0
-                except Exception as e:
-                    return 0
-                    
+                        elapsed = time.time() - start_time
+                        if elapsed > 0 and downloaded > 0:
+                            speed = (downloaded / 1024) / elapsed
+                            return speed
+                except:
+                    pass
+                
+                return 0
+                
             except Exception as e:
                 return 0
         
@@ -279,22 +321,11 @@ jobs:
                                 ip = match.group(1)
                                 port = match.group(2)
                                 ip_port_set.add(f"{ip}:{port}")
-                            else:
-                                # 如果正则匹配失败，尝试使用urlparse
-                                parsed_url = urlparse(url_part)
-                                if parsed_url.hostname and parsed_url.port:
-                                    ip_port_set.add(f"{parsed_url.hostname}:{parsed_url.port}")
-                                elif parsed_url.hostname and parsed_url.scheme in ['http', 'https']:
-                                    # 没有显式端口，使用默认端口
-                                    default_port = 443 if parsed_url.scheme == 'https' else 80
-                                    ip_port_set.add(f"{parsed_url.hostname}:{default_port}")
                     
                     print(f"  从 {url} 提取完成")
                     
-                except requests.exceptions.RequestException as e:
-                    print(f"网络请求错误: 处理URL {url} 时失败 - {e}")
                 except Exception as e:
-                    print(f"处理URL {url} 时发生未知错误: {e}")
+                    print(f"处理URL {url} 时发生错误: {e}")
             
             print(f"共提取到 {len(ip_port_set)} 个IP:端口")
             
@@ -348,7 +379,7 @@ jobs:
                     # 尝试多个CCTV频道测速，取最高速度
                     best_speed = 0
                     tested_channels = 0
-                    max_test_channels = min(3, len(cctv_channels))  # 最多测试3个频道
+                    max_test_channels = min(2, len(cctv_channels))  # 最多测试2个频道
                     
                     # 随机选择几个频道进行测试
                     test_channels = random.sample(cctv_channels, max_test_channels) if len(cctv_channels) > 1 else cctv_channels
@@ -358,7 +389,7 @@ jobs:
                         print(f"    {ip_port}: 测试频道 [{channel_name}] ({tested_channels}/{max_test_channels})")
                         
                         # 测速
-                        speed = test_channel_speed(channel_url)
+                        speed = test_stream_speed(channel_url)
                         
                         if speed > best_speed:
                             best_speed = speed
@@ -369,7 +400,7 @@ jobs:
                         if speed > 1000:  # 1MB/s
                             break
                     
-                    if best_speed > 100:  # 速度大于100KB/s
+                    if best_speed > 10:  # 速度大于10KB/s (降低阈值)
                         speed_tested_ips.append((ip_port, best_speed))
                         print(f"    {ip_port}: 通过测速 (最佳速度: {best_speed:.2f} KB/s)")
                     else:
@@ -434,5 +465,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add Hotel/ip/hotel_ip.txt
-        git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: 更新提取 IP and Port $(date '+%Y-%m-%d %H:%M:%S')"
+        git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: 自动更新 IP  $(date '+%Y-%m-%d %H:%M:%S')"
         git push
