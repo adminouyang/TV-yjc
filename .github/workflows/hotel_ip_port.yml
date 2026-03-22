@@ -434,7 +434,7 @@ jobs:
             
             with open(output_file, 'w', encoding='utf-8') as f:
                 for ip_port, speed in speed_tested_ips:
-                    f.write(f"{ip_port}  # 速度: {speed:.2f} KB/s\n")
+                    f.write(f"{ip_port}\n")  # 速度: {speed:.2f} KB/s
             
             # 如果没有通过测速的，保存所有可用的IP端口
             if not speed_tested_ips:
