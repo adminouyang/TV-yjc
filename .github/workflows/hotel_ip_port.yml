@@ -249,8 +249,8 @@ jobs:
                     if response.status_code == 200:
                         # 尝试读取一小段数据
                         downloaded = 0
-                        chunk_size = 8192
-                        target_size = 32768  # 32KB
+                        chunk_size = 102400
+                        target_size = 204800  # 32KB
                         
                         for chunk in response.iter_content(chunk_size=chunk_size):
                             if chunk:
