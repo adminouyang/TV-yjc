@@ -414,9 +414,9 @@ jobs:
                     # 降低阈值，只要有速度就认为可用
                     if best_speed > 0.1:  # 速度大于0.1MB/s
                         speed_tested_ips.append((ip_port, best_speed))
-                        print(f"    {ip_port}: 通过测速 (最佳速度: {best_speed:.3f} KB/s)")
+                        print(f"    {ip_port}: 通过测速 (最佳速度: {best_speed:.3f} MB/s)")
                     else:
-                        print(f"    {ip_port}: 测速失败 (最佳速度: {best_speed:.3f} KB/s)")
+                        print(f"    {ip_port}: 测速失败 (最佳速度: {best_speed:.3f} MB/s)")
                         
                 except Exception as e:
                     print(f"    {ip_port}: 处理失败 - {e}")
@@ -433,7 +433,7 @@ jobs:
             
             with open(output_file, 'w', encoding='utf-8') as f:
                 for ip_port, speed in speed_tested_ips:
-                    f.write(f"{ip_port}\n  # 速度: {speed:.3f} BB/s\n")
+                    f.write(f"{ip_port}\n  # 速度: {speed:.3f} MB/s\n")
             
             # 如果没有通过测速的，保存所有可用的IP端口
             if not speed_tested_ips:
