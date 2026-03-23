@@ -260,7 +260,7 @@ jobs:
                         
                         elapsed = time.time() - start_time
                         if elapsed > 0 and downloaded > 0:
-                            speed = (downloaded / 1024) / elapsed * 370
+                            speed = (downloaded / 1024) / elapsed /1024 * 300
                             return max(speed, 0.1)  # 至少返回0.1KB/s
                 except:
                     pass
@@ -405,18 +405,18 @@ jobs:
                         if speed > best_speed:
                             best_speed = speed
                         
-                        print(f"    {ip_port}: 频道 [{channel_name}] 速度: {speed:.2f} KB/s")
+                        print(f"    {ip_port}: 频道 [{channel_name}] 速度: {speed:.3f} MB/s")
                         
                         # 如果速度已经很高，可以提前结束
-                        if speed > 500:  # 500KB/s
+                        if speed > 0.5:  # 0.5MB/s
                             break
                     
                     # 降低阈值，只要有速度就认为可用
-                    if best_speed > 0.1:  # 速度大于0.1KB/s
+                    if best_speed > 0.1:  # 速度大于0.1MB/s
                         speed_tested_ips.append((ip_port, best_speed))
-                        print(f"    {ip_port}: 通过测速 (最佳速度: {best_speed:.2f} KB/s)")
+                        print(f"    {ip_port}: 通过测速 (最佳速度: {best_speed:.3f} KB/s)")
                     else:
-                        print(f"    {ip_port}: 测速失败 (最佳速度: {best_speed:.2f} KB/s)")
+                        print(f"    {ip_port}: 测速失败 (最佳速度: {best_speed:.3f} KB/s)")
                         
                 except Exception as e:
                     print(f"    {ip_port}: 处理失败 - {e}")
@@ -433,7 +433,7 @@ jobs:
             
             with open(output_file, 'w', encoding='utf-8') as f:
                 for ip_port, speed in speed_tested_ips:
-                    f.write(f"{ip_port}\n  # 速度: {speed:.2f} KB/s\n")
+                    f.write(f"{ip_port}\n  # 速度: {speed:.3f} BB/s\n")
             
             # 如果没有通过测速的，保存所有可用的IP端口
             if not speed_tested_ips:
