@@ -512,11 +512,11 @@ jobs:
             
             # 示例URL列表
             urls = [
-                "https://raw.githubusercontent.com/jn950/live/refs/heads/main/tv/holive.m3u",  # txt格式
-                "https://raw.githubusercontent.com/whyun-pages/hotel-tvn/refs/heads/main/lives.txt",
-                "https://raw.githubusercontent.com/mzky/checklist/refs/heads/master/itvlist.m3u",
+                "https://gh-proxy.com/https://raw.githubusercontent.com/jn950/live/refs/heads/main/tv/holive.m3u",  # txt格式
+                "https://gh-proxy.com/https://raw.githubusercontent.com/whyun-pages/hotel-tvn/refs/heads/main/lives.txt",
+                "https://gh-proxy.com/https://raw.githubusercontent.com/mzky/checklist/refs/heads/master/itvlist.m3u",
                 #"http://129.211.14.102:50085/sub?tv.sohu.blog=txt",
-                #"https://raw.githubusercontent.com/kenye201/TVlog/refs/heads/main/final_hotel.txt",
+                #"https://gh-proxy.com/https://raw.githubusercontent.com/kenye201/TVlog/refs/heads/main/final_hotel.txt",
             ]
             
             hotel__ip_port_from_urls(urls)
