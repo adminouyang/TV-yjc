@@ -412,7 +412,7 @@ jobs:
                             break
                     
                     # 降低阈值，只要有速度就认为可用
-                    if best_speed > 0.1:  # 速度大于0.1MB/s
+                    if best_speed > 0.2:  # 速度大于0.1MB/s
                         speed_tested_ips.append((ip_port, best_speed))
                         print(f"    {ip_port}: 通过测速 (最佳速度: {best_speed:.3f} MB/s)")
                     else:
