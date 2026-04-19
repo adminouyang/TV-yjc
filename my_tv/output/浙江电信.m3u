@@ -1,0 +1,171 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV1.png" group-title="央视频道",CCTV1
+http://125.107.55.100:8888/udp/233.50.200.130:5140
+#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV2.png" group-title="央视频道",CCTV2
+http://125.107.55.100:8888/udp/233.50.200.25:5140
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV3" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV3.png" group-title="央视频道",CCTV3
+http://125.107.55.100:8888/udp/233.50.201.196:5140
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV4" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV4.png" group-title="央视频道",CCTV4
+http://125.107.55.100:8888/udp/233.50.200.101:5140
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV5.png" group-title="央视频道",CCTV5
+http://125.107.55.100:8888/udp/233.50.201.197:5140
+#EXTINF:-1 tvg-id="CCTV5+" tvg-name="CCTV5+" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV5+.png" group-title="央视频道",CCTV5+
+http://125.107.55.100:8888/udp/233.50.201.220:5140
+#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV6.png" group-title="央视频道",CCTV6
+http://125.107.55.100:8888/udp/233.50.201.198:5140
+#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV7" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV7.png" group-title="央视频道",CCTV7
+http://125.107.55.100:8888/udp/233.50.200.24:5140
+#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV8" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV8.png" group-title="央视频道",CCTV8
+http://125.107.55.100:8888/udp/233.50.201.199:5140
+#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV9" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV9.png" group-title="央视频道",CCTV9
+http://125.107.55.100:8888/udp/233.50.201.121:5140
+#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV10.png" group-title="央视频道",CCTV10
+http://125.107.55.100:8888/udp/233.50.201.122:5140
+#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV12.png" group-title="央视频道",CCTV12
+http://125.107.55.100:8888/udp/233.50.201.123:5140
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV13.png" group-title="央视频道",CCTV13
+http://125.107.55.100:8888/udp/233.50.201.246:5140
+#EXTINF:-1 tvg-id="CCTV14" tvg-name="CCTV14" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV14.png" group-title="央视频道",CCTV14
+http://125.107.55.100:8888/udp/233.50.201.124:5140
+#EXTINF:-1 tvg-id="CCTV16" tvg-name="CCTV16" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV16.png" group-title="央视频道",CCTV16
+http://125.107.55.100:8888/udp/233.50.201.192:5140
+#EXTINF:-1 tvg-id="CCTV16_4K" tvg-name="CCTV16_4K" group-title="央视频道",CCTV16_4K
+http://125.107.55.100:8888/udp/233.50.201.63:5140
+#EXTINF:-1 tvg-id="CCTV17" tvg-name="CCTV17" tvg-logo="https://epg.51zmt.top:8001/tb1/CCTV/CCTV17.png" group-title="央视频道",CCTV17
+http://125.107.55.100:8888/udp/233.50.200.113:5140
+#EXTINF:-1 tvg-id="CETV4" tvg-name="CETV4" tvg-logo="https://epg.51zmt.top:8001/tb1/qt/中国教育4台.png" group-title="央视频道",CETV4
+http://125.107.55.100:8888/udp/233.50.200.162:5140
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",浙江卫视
+http://125.107.55.100:8888/udp/233.50.201.100:5140
+#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖南卫视
+http://125.107.55.100:8888/udp/233.50.201.103:5140
+#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视
+http://125.107.55.100:8888/udp/233.50.201.106:5140
+#EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视
+http://125.107.55.100:8888/udp/233.50.201.125:5140
+#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",湖北卫视
+http://125.107.55.100:8888/udp/233.50.201.114:5140
+#EXTINF:-1 tvg-id="广东卫视" tvg-name="广东卫视" tvg-logo="https://tb.zbds.top/logo/广东卫视.png" group-title="卫视频道",广东卫视
+http://125.107.55.100:8888/udp/233.50.201.102:5140
+#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",北京卫视
+http://125.107.55.100:8888/udp/233.50.201.107:5140
+#EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视
+http://125.107.55.100:8888/udp/233.50.201.101:5140
+#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://tb.zbds.top/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",天津卫视
+http://125.107.55.100:8888/udp/233.50.201.104:5140
+#EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://tb.zbds.top/logo/河北卫视.png" group-title="卫视频道",河北卫视
+http://125.107.55.100:8888/udp/233.50.201.140:5140
+#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://tb.zbds.top/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",安徽卫视
+http://125.107.55.100:8888/udp/233.50.201.113:5140
+#EXTINF:-1 tvg-id="重庆卫视" tvg-name="重庆卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",重庆卫视
+http://125.107.55.100:8888/udp/233.50.200.114:5140
+#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",云南卫视
+http://125.107.55.100:8888/udp/233.50.200.115:5140
+#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视
+http://125.107.55.100:8888/udp/233.50.201.139:5140
+#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视
+http://125.107.55.100:8888/udp/233.50.201.145:5140
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视
+http://125.107.55.100:8888/udp/233.50.201.115:5140
+#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://tb.zbds.top/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",山东卫视
+http://125.107.55.100:8888/udp/233.50.201.105:5140
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",辽宁卫视
+http://125.107.55.100:8888/udp/233.50.201.141:5140
+#EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视
+http://125.107.55.100:8888/udp/233.50.201.142:5140
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://tb.zbds.top/logo/河南卫视.png" group-title="卫视频道",河南卫视
+http://125.107.55.100:8888/udp/233.50.201.144:5140
+#EXTINF:-1 tvg-id="东南卫视" tvg-name="东南卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东南卫视
+http://125.107.55.100:8888/udp/233.50.201.146:5140
+#EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" group-title="卫视频道",凤凰中文
+http://125.107.55.100:8888/udp/233.50.200.191:5140
+#EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" group-title="卫视频道",凤凰资讯
+http://125.107.55.100:8888/udp/233.50.200.192:5140
+#EXTINF:-1 tvg-id="中国蓝直播" tvg-name="中国蓝直播" group-title="☘️浙江省",中国蓝直播
+http://125.107.55.100:8888/udp/233.50.201.108:5140
+#EXTINF:-1 tvg-id="浙江钱江" tvg-name="浙江钱江" tvg-logo="https://tb.zbds.top/logo/浙江钱江.png" group-title="☘️浙江省",浙江钱江
+http://125.107.55.100:8888/udp/233.50.201.132:5140
+#EXTINF:-1 tvg-id="浙江经济生活" tvg-name="浙江经济生活" tvg-logo="https://tb.zbds.top/logo/浙江经济生活.png" group-title="☘️浙江省",浙江经济生活
+http://125.107.55.100:8888/udp/233.50.201.133:5140
+#EXTINF:-1 tvg-id="浙江教育" tvg-name="浙江教育" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E6%95%99%E8%82%B2.png" group-title="☘️浙江省",浙江教育
+http://125.107.55.100:8888/udp/233.50.201.134:5140
+#EXTINF:-1 tvg-id="浙江民生休闲" tvg-name="浙江民生休闲" tvg-logo="https://tb.zbds.top/logo/浙江民生休闲.png" group-title="☘️浙江省",浙江民生休闲
+http://125.107.55.100:8888/udp/233.50.201.136:5140
+#EXTINF:-1 tvg-id="浙江新闻" tvg-name="浙江新闻" tvg-logo="https://tb.zbds.top/logo/浙江新闻.png" group-title="☘️浙江省",浙江新闻
+http://125.107.55.100:8888/udp/233.50.201.137:5140
+#EXTINF:-1 tvg-id="浙江少儿频道" tvg-name="浙江少儿频道" group-title="☘️浙江省",浙江少儿频道
+http://125.107.55.100:8888/udp/233.50.201.138:5140
+#EXTINF:-1 tvg-id="浙江之江纪录" tvg-name="浙江之江纪录" group-title="☘️浙江省",浙江之江纪录
+http://125.107.55.100:8888/udp/233.50.202.25:5140
+#EXTINF:-1 tvg-id="杭州综合" tvg-name="杭州综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%9D%AD%E5%B7%9E%E7%BB%BC%E5%90%88.png" group-title="☘️浙江省",杭州综合
+http://125.107.55.100:8888/udp/233.50.201.173:5140
+#EXTINF:-1 tvg-id="杭州西湖明珠" tvg-name="杭州西湖明珠" group-title="☘️浙江省",杭州西湖明珠
+http://125.107.55.100:8888/udp/233.50.201.174:5140
+#EXTINF:-1 tvg-id="杭州生活" tvg-name="杭州生活" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%9D%AD%E5%B7%9E%E7%94%9F%E6%B4%BB.png" group-title="☘️浙江省",杭州生活
+http://125.107.55.100:8888/udp/233.50.201.175:5140
+#EXTINF:-1 tvg-id="杭州影视" tvg-name="杭州影视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%9D%AD%E5%B7%9E%E5%BD%B1%E8%A7%86.png" group-title="☘️浙江省",杭州影视
+http://125.107.55.100:8888/udp/233.50.201.176:5140
+#EXTINF:-1 tvg-id="杭州青少" tvg-name="杭州青少" group-title="☘️浙江省",杭州青少
+http://125.107.55.100:8888/udp/233.50.201.177:5140
+#EXTINF:-1 tvg-id="杭州导视" tvg-name="杭州导视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%9D%AD%E5%B7%9E%E5%AF%BC%E8%A7%86.png" group-title="☘️浙江省",杭州导视
+http://125.107.55.100:8888/udp/233.50.201.182:5140
+#EXTINF:-1 tvg-id="宁波生活频道" tvg-name="宁波生活频道" group-title="☘️浙江省",宁波生活频道
+http://125.107.55.100:8888/udp/233.50.201.178:5140
+#EXTINF:-1 tvg-id="宁波文体频道" tvg-name="宁波文体频道" group-title="☘️浙江省",宁波文体频道
+http://125.107.55.100:8888/udp/233.50.201.179:5140
+#EXTINF:-1 tvg-id="宁波影视频道" tvg-name="宁波影视频道" group-title="☘️浙江省",宁波影视频道
+http://125.107.55.100:8888/udp/233.50.201.180:5140
+#EXTINF:-1 tvg-id="衢州公共频道" tvg-name="衢州公共频道" group-title="☘️浙江省",衢州公共频道
+http://125.107.55.100:8888/udp/233.50.202.12:5140
+#EXTINF:-1 tvg-id="湖州新闻" tvg-name="湖州新闻" group-title="☘️浙江省",湖州新闻
+http://125.107.55.100:8888/udp/233.50.201.158:5140
+#EXTINF:-1 tvg-id="金华新闻" tvg-name="金华新闻" group-title="☘️浙江省",金华新闻
+http://125.107.55.100:8888/udp/233.50.201.161:5140
+#EXTINF:-1 tvg-id="丽水新闻" tvg-name="丽水新闻" group-title="☘️浙江省",丽水新闻
+http://125.107.55.100:8888/udp/233.50.201.162:5140
+#EXTINF:-1 tvg-id="嘉兴新闻" tvg-name="嘉兴新闻" group-title="☘️浙江省",嘉兴新闻
+http://125.107.55.100:8888/udp/233.50.201.163:5140
+#EXTINF:-1 tvg-id="桐乡新闻" tvg-name="桐乡新闻" group-title="☘️浙江省",桐乡新闻
+http://125.107.55.100:8888/udp/233.50.201.169:5140
+#EXTINF:-1 tvg-id="宁波新闻综合" tvg-name="宁波新闻综合" group-title="☘️上海市",宁波新闻综合
+http://125.107.55.100:8888/udp/233.50.201.168:5140
+#EXTINF:-1 tvg-id="温州新闻综合" tvg-name="温州新闻综合" group-title="☘️上海市",温州新闻综合
+http://125.107.55.100:8888/udp/233.50.201.87:5140
+#EXTINF:-1 tvg-id="绍兴新闻综合" tvg-name="绍兴新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%BB%8D%E5%85%B4%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️上海市",绍兴新闻综合
+http://125.107.55.100:8888/udp/233.50.201.156:5140
+#EXTINF:-1 tvg-id="衢州新闻综合" tvg-name="衢州新闻综合" group-title="☘️上海市",衢州新闻综合
+http://125.107.55.100:8888/udp/233.50.202.11:5140
+#EXTINF:-1 tvg-id="第一财经" tvg-name="第一财经" tvg-logo="https://tb.zbds.top/logo/第一财经.png" group-title="☘️上海市",第一财经
+http://125.107.55.100:8888/udp/233.50.200.125:5140
+#EXTINF:-1 tvg-id="都市剧场" tvg-name="都市剧场" tvg-logo="https://tb.zbds.top/logo/都市剧场.png" group-title="数字频道",都市剧场
+http://125.107.55.100:8888/udp/233.50.201.190:5140
+#EXTINF:-1 tvg-id="欢笑剧场" tvg-name="欢笑剧场" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%AC%A2%E7%AC%91%E5%89%A7%E5%9C%BA.png" group-title="数字频道",欢笑剧场
+http://125.107.55.100:8888/udp/233.50.201.189:5140
+#EXTINF:-1 tvg-id="动漫秀场" tvg-name="动漫秀场" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8A%A8%E6%BC%AB%E7%A7%80%E5%9C%BA.png" group-title="数字频道",动漫秀场
+http://125.107.55.100:8888/udp/233.50.201.184:5140
+#EXTINF:-1 tvg-id="生活时尚" tvg-name="生活时尚" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A.png" group-title="数字频道",生活时尚
+http://125.107.55.100:8888/udp/233.50.201.187:5140
+#EXTINF:-1 tvg-id="法治天地" tvg-name="法治天地" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B3%95%E6%B2%BB%E5%A4%A9%E5%9C%B0.png" group-title="数字频道",法治天地
+http://125.107.55.100:8888/udp/233.50.201.191:5140
+#EXTINF:-1 tvg-id="乐游纪实" tvg-name="乐游纪实" group-title="数字频道",乐游纪实
+http://125.107.55.100:8888/udp/233.50.201.185:5140
+#EXTINF:-1 tvg-id="金色学堂" tvg-name="金色学堂" group-title="数字频道",金色学堂
+http://125.107.55.100:8888/udp/233.50.201.186:5140
+#EXTINF:-1 tvg-id="快乐垂钓" tvg-name="快乐垂钓" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="数字频道",快乐垂钓
+http://125.107.55.100:8888/udp/233.50.201.109:5140
+#EXTINF:-1 tvg-id="茶频道" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="数字频道",茶频道
+http://125.107.55.100:8888/udp/233.50.201.188:5140
+#EXTINF:-1 tvg-id="游戏风云" tvg-name="游戏风云" group-title="其它频道",游戏风云
+http://125.107.55.100:8888/udp/233.50.201.183:5140
+#EXTINF:-1 tvg-id="晴彩竞技" tvg-name="晴彩竞技" group-title="其它频道",晴彩竞技
+http://125.107.55.100:8888/udp/233.50.202.26:5140
+#EXTINF:-1 tvg-id="晴彩篮球" tvg-name="晴彩篮球" group-title="其它频道",晴彩篮球
+http://125.107.55.100:8888/udp/233.50.202.27:5140
+#EXTINF:-1 tvg-id="晴彩羽毛球" tvg-name="晴彩羽毛球" group-title="其它频道",晴彩羽毛球
+http://125.107.55.100:8888/udp/233.50.202.28:5140
+#EXTINF:-1 tvg-id="晴彩广场舞" tvg-name="晴彩广场舞" group-title="其它频道",晴彩广场舞
+http://125.107.55.100:8888/udp/233.50.202.29:5140
+#EXTINF:-1 tvg-id="轮播频道1" tvg-name="轮播频道1" group-title="其它频道",轮播频道1
+http://125.107.55.100:8888/udp/233.50.201.116:5140
+#EXTINF:-1 tvg-id="轮播频道2" tvg-name="轮播频道2" group-title="其它频道",轮播频道2
+http://125.107.55.100:8888/udp/233.50.201.117:5140
