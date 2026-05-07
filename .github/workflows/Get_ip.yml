@@ -1,8 +1,8 @@
 name: Get IP
 
 on:
-  schedule:
-    - cron: "* */2 * * *"
+  # schedule:
+  #   - cron: "* */2 * * *"
   workflow_dispatch:          # 手动触发
 env:
   TZ: 'Asia/Shanghai'
