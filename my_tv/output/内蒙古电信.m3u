@@ -217,8 +217,6 @@ http://123.179.63.66:4022/rtp/239.29.0.23:5000
 http://123.179.63.66:4022/rtp/239.29.0.17:5000
 #EXTINF:-1 tvg-id="兴安影视娱乐" tvg-name="兴安影视娱乐" group-title="☘️内蒙古",兴安影视娱乐
 http://123.179.63.66:4022/rtp/239.29.0.18:5000
-#EXTINF:-1 tvg-id="XHTV" tvg-name="XHTV" group-title="☘️内蒙古",XHTV
-http://123.179.63.66:4022/rtp/239.29.0.187:5000
 #EXTINF:-1 tvg-id="ELTV" tvg-name="ELTV" group-title="☘️内蒙古",ELTV
 http://123.179.63.66:4022/rtp/239.29.1.113:5000
 #EXTINF:-1 tvg-id="五原" tvg-name="五原" group-title="☘️内蒙古",五原
@@ -297,3 +295,5 @@ http://123.179.63.66:4022/rtp/239.29.0.22:5000
 http://123.179.63.66:4022/rtp/239.29.0.16:5000
 #EXTINF:-1 tvg-id="阿拉善新闻综合" tvg-name="阿拉善新闻综合" group-title="☘️上海市",阿拉善新闻综合
 http://123.179.63.66:4022/rtp/239.29.0.28:5000
+#EXTINF:-1 tvg-id="XHTV" tvg-name="XHTV" group-title="其它频道",XHTV
+http://123.179.63.66:4022/rtp/239.29.0.187:5000

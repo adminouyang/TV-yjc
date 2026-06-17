@@ -77,12 +77,12 @@ http://220.176.218.173:9000/rtp/239.252.220.242:5140
 http://220.176.218.173:9000/udp/239.252.220.102:5140
 #EXTINF:-1 tvg-id="江西少儿频道" tvg-name="江西少儿频道" group-title="☘️江西省",江西少儿频道
 http://220.176.218.173:9000/udp/239.252.219.113:5140
-#EXTINF:-1 tvg-id="江西新闻频道" tvg-name="江西新闻频道" group-title="☘️江西省",江西新闻频道
-http://220.176.218.173:9000/udp/239.252.220.100:5140
 #EXTINF:-1 tvg-id="江西教育频道" tvg-name="江西教育频道" group-title="☘️江西省",江西教育频道
 http://220.176.218.173:9000/udp/239.252.219.115:5140
 #EXTINF:-1 tvg-id="昌飞航空" tvg-name="昌飞航空" group-title="☘️江西省",昌飞航空
 http://220.176.218.173:9000/udp/239.252.220.47:5140
+#EXTINF:-1 tvg-id="江西新闻频道" tvg-name="江西新闻频道" group-title="☘️江苏省",江西新闻频道
+http://220.176.218.173:9000/udp/239.252.220.100:5140
 #EXTINF:-1 tvg-id="CCTV-1综合" tvg-name="CCTV-1综合" group-title="央视频道",CCTV-1综合
 http://220.176.218.173:9000/udp/239.252.219.200:5140
 #EXTINF:-1 tvg-id="CCTV-2财经" tvg-name="CCTV-2财经" group-title="央视频道",CCTV-2财经
@@ -171,12 +171,12 @@ http://220.176.218.173:9000/rtp/239.252.219.60:5140
 http://220.176.218.173:9000/rtp/239.252.219.143:5140
 #EXTINF:-1 tvg-id="IPTV5体育" tvg-name="IPTV5体育" group-title="央视频道",IPTV5体育
 http://220.176.218.173:9000/udp/239.252.220.211:5140
-#EXTINF:-1 tvg-id="CHC影迷电影" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影
+#EXTINF:-1 tvg-id="CHC影迷电影" tvg-name="CHC影迷电影" group-title="其它频道",CHC影迷电影
 http://220.176.218.173:9000/udp/239.252.219.83:5140
+#EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="其它频道",CHC动作电影
+http://220.176.218.173:9000/udp/239.252.219.85:5140
 #EXTINF:-1 tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院
 http://220.176.218.173:9000/udp/239.252.219.84:5140
-#EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影
-http://220.176.218.173:9000/udp/239.252.219.85:5140
 #EXTINF:-1 tvg-id="金鹰卡通" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通
 http://220.176.218.173:9000/rtp/239.252.219.69:5140
 #EXTINF:-1 tvg-id="金鹰纪实" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实

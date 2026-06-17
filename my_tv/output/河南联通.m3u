@@ -155,10 +155,6 @@ http://219.156.95.119:4022/rtp/225.1.5.38:1348
 http://219.156.95.119:4022/rtp/225.1.5.39:1349
 #EXTINF:-1 tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院
 http://219.156.95.119:4022/rtp/225.1.4.209:1262
-#EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影
-http://219.156.95.119:4022/rtp/225.1.4.208:1261
-#EXTINF:-1 tvg-id="CHC影迷电影" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影
-http://219.156.95.119:4022/rtp/225.1.4.207:1260
 #EXTINF:-1 tvg-id="金鹰卡通" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通
 http://219.156.95.119:4022/rtp/225.1.4.49:1078
 #EXTINF:-1 tvg-id="金鹰纪实" tvg-name="金鹰纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",金鹰纪实
@@ -217,5 +213,9 @@ http://219.156.95.119:4022/rtp/225.1.4.6:1035
 http://219.156.95.119:4022/rtp/225.1.4.8:1037
 #EXTINF:-1 tvg-id="国学频道" tvg-name="国学频道" group-title="数字频道",国学频道
 http://219.156.95.119:4022/rtp/225.1.4.196:1311
+#EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="其它频道",CHC动作电影
+http://219.156.95.119:4022/rtp/225.1.4.208:1261
+#EXTINF:-1 tvg-id="CHC影迷电影" tvg-name="CHC影迷电影" group-title="其它频道",CHC影迷电影
+http://219.156.95.119:4022/rtp/225.1.4.207:1260
 #EXTINF:-1 tvg-id="爱上-4K" tvg-name="爱上-4K" group-title="4K频道",爱上-4K
 http://219.156.95.119:4022/rtp/225.1.4.162:1204
