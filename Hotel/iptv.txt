@@ -1,25 +1,24 @@
-2026/06/22 08:16更新,#genre#
+2026/06/22 23:27更新,#genre#
 浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
 
 央视频道,#genre#
-CCTV1,http://120.196.235.42:9901/tsfile/live/1020_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV1,http://115.150.63.77:9902/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV2,http://115.150.63.77:9902/tsfile/live/0001_2.m3u8?key=txiptv&playlive=1&authid=0
+CCTV5,http://115.150.63.77:9902/tsfile/live/0001_5.m3u8?key=txiptv&playlive=1&authid=0
+CCTV7,http://115.150.63.77:9902/tsfile/live/0001_8.m3u8?key=txiptv&playlive=1&authid=0
+CCTV8,http://115.150.63.77:9902/tsfile/live/0001_9.m3u8?key=txiptv&playlive=1&authid=0
 CCTV9,http://60.16.18.243:4949/hls/9/index.m3u8
-CETV1,http://115.150.63.77:9902/tsfile/live/1042_1.m3u8?key=txiptv&playlive=1&authid=0
+风云剧场,http://115.150.63.77:9902/tsfile/live/0001_48.m3u8?key=txiptv&playlive=1&authid=0
 卫视频道,#genre#
 东方卫视,http://60.16.18.243:4949/hls/39/index.m3u8
 深圳卫视,http://60.16.18.243:4949/hls/46/index.m3u8
+深圳卫视,http://115.150.63.77:9902/tsfile/live/0001_23.m3u8?key=txiptv&playlive=1&authid=0
 海南卫视,http://60.16.18.243:4949/hls/57/index.m3u8
-天津卫视,http://115.150.63.77:9902/tsfile/live/0001_25.m3u8?key=txiptv&playlive=1&authid=0
-黑龙江卫视,http://115.150.63.77:9902/tsfile/live/0001_21.m3u8?key=txiptv&playlive=1&authid=0
-数字频道,#genre#
-求索纪录,http://115.150.63.77:9902/tsfile/live/0001_33.m3u8?key=txiptv&playlive=1&authid=0
-港澳台频道,#genre#
-凤凰卫视中文台,http://120.196.235.42:9901/tsfile/live/1036_1.m3u8?key=txiptv&playlive=1&authid=0
 少儿频道,#genre#
 哈哈炫动,http://120.196.235.42:9901/tsfile/live/1040_1.m3u8?key=txiptv&playlive=1&authid=0
-广东频道,#genre#
-云浮综合,http://120.196.235.42:9901/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&authid=0
+北京频道,#genre#
+北京纪实科教,http://115.150.63.77:9902/tsfile/live/0001_40.m3u8?key=txiptv&playlive=1&authid=0
+上海频道,#genre#
+乐游,http://115.150.63.77:9902/tsfile/live/0001_44.m3u8?key=txiptv&playlive=1&authid=0
 江西频道,#genre#
-章贡综合,http://115.150.63.77:9902/tsfile/live/0001_53.m3u8?key=txiptv&playlive=1&authid=0
-其他频道,#genre#
-五华,http://120.196.235.42:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
+抚州综合,http://115.150.63.77:9902/tsfile/live/1044_1.m3u8?key=txiptv&playlive=1&authid=0
