@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="https://gh-proxy.com/https://raw.githubusercontent.com/adminouyang/231006/refs/heads/main/py/TV/EPG/epg.xml"
-#EXTINF:-1  tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="2026/07/19 19:12更新",浙江卫视
+#EXTINF:-1  tvg-name="浙江卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="2026/07/20 08:01更新",浙江卫视
 http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
 #EXTINF:-1  tvg-name="CCTV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" group-title="央视频道",CCTV1
 http://218.104.239.114:9901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -27,8 +27,6 @@ http://218.104.239.114:9901/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid
 http://218.104.239.114:9901/tsfile/live/0013_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="CCTV14" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV14.png" group-title="央视频道",CCTV14
 http://218.104.239.114:9901/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1  tvg-name="CCTV14" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV14.png" group-title="央视频道",CCTV14
-http://115.150.63.77:9902/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="CCTV15" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV15.png" group-title="央视频道",CCTV15
 http://218.104.239.114:9901/tsfile/live/0015_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="CCTV16" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV16.png" group-title="央视频道",CCTV16
@@ -41,8 +39,6 @@ http://218.104.239.114:9901/tsfile/live/0128_1.m3u8?key=txiptv&playlive=1&authid
 http://218.104.239.114:9901/tsfile/live/0124_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视
 http://218.104.239.114:9901/tsfile/live/0127_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1  tvg-name="江苏卫视" tvg-logo="https://tb.zbds.top/logo/江苏卫视.png" group-title="卫视频道",江苏卫视
-http://115.150.63.77:9902/tsfile/live/0001_17.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="东方卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",东方卫视
 http://218.104.239.114:9901/tsfile/live/0107_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="深圳卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",深圳卫视
@@ -59,8 +55,6 @@ http://218.104.239.114:9901/tsfile/live/0117_1.m3u8?key=txiptv&playlive=1&authid
 http://218.104.239.114:9901/tsfile/live/0132_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视
 http://218.104.239.114:9901/tsfile/live/0138_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1  tvg-name="江西卫视" tvg-logo="https://tb.zbds.top/logo/江西卫视.png" group-title="卫视频道",江西卫视
-http://115.150.63.77:9902/tsfile/live/0138_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="四川卫视" tvg-logo="http://tv.haoqu99.com/d/file/2014/0722/20140722105013368.jpg" group-title="卫视频道",四川卫视
 http://218.104.239.114:9901/tsfile/live/0123_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="贵州卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",贵州卫视
@@ -75,16 +69,12 @@ http://218.104.239.114:9901/tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid
 http://218.104.239.114:9901/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="黑龙江卫视" tvg-logo="" group-title="卫视频道",黑龙江卫视
 http://218.104.239.114:9901/tsfile/live/0143_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1  tvg-name="吉林卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",吉林卫视
-http://115.150.63.77:9902/tsfile/live/0001_31.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="凤凰卫视中文台" tvg-logo="" group-title="港澳台频道",凤凰卫视中文台
 http://218.104.239.114:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1  tvg-name="凤凰卫视中文台" tvg-logo="" group-title="港澳台频道",凤凰卫视中文台
-http://115.150.63.77:9902/tsfile/live/1040_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="凤凰卫视资讯台" tvg-logo="" group-title="港澳台频道",凤凰卫视资讯台
 http://218.104.239.114:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1  tvg-name="河南新闻频道" tvg-logo="" group-title="河南频道",河南新闻频道
-http://115.150.63.77:9902/tsfile/live/1061_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1  tvg-name="生活时尚" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A.png" group-title="上海频道",生活时尚
+http://115.150.63.77:9902/tsfile/live/0001_45.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="江西指南" tvg-logo="" group-title="江西频道",江西指南
 http://115.150.63.77:9902/tsfile/live/1041_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="福建综合" tvg-logo="https://tb.zbds.top/logo/福建综合.png" group-title="福建频道",福建综合
