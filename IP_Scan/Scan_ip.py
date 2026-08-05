@@ -829,7 +829,7 @@ def merge_all_files(processed_files):
         # 写入合并的TXT文件
         with open("zubo_all.txt", "w", encoding="utf-8") as f:
             f.write(f"{current_time}更新,#genre#\n")
-            f.write(f"浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8\n")
+            f.write(f"2026功夫女足,https://v.lfthirtytwo.com/20260723/8846_f4084a75/index.m3u8\n")
             
             # 按照模板定义的分类顺序写入
             for category in channel_template.keys():
