@@ -1,0 +1,27 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name="辽宁都市频道" group-title="辽宁",辽宁都市频道
+http://116.2.172.210:4010/rtp/232.0.0.154:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁影视剧频道" group-title="辽宁",辽宁影视剧频道
+http://116.2.172.210:4010/rtp/232.0.0.25:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁体育休闲" group-title="辽宁",辽宁体育休闲
+http://116.2.172.210:4010/rtp/232.0.0.164:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁生活频道" group-title="辽宁",辽宁生活频道
+http://116.2.172.210:4010/rtp/232.0.0.150:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁教育青少" tvg-logo="https://tb.zbds.top/logo/辽宁教育青少.png" group-title="辽宁",辽宁教育青少
+http://116.2.172.210:4010/rtp/232.0.0.241:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁北方频道" group-title="辽宁",辽宁北方频道
+http://116.2.172.210:4010/rtp/232.0.0.151:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁公共频道" group-title="辽宁",辽宁公共频道
+http://116.2.172.210:4010/rtp/232.0.0.168:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁经济频道" group-title="辽宁",辽宁经济频道
+http://116.2.172.210:4010/rtp/232.0.0.156:1234
+#EXTINF:-1 tvg-id="" tvg-name="移动电视" group-title="辽宁",移动电视
+http://116.2.172.210:4010/rtp/232.0.0.165:1234
+#EXTINF:-1 tvg-id="" tvg-name="沈阳新闻综合" group-title="辽宁",沈阳新闻综合
+http://116.2.172.210:4010/rtp/232.0.0.206:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽河新闻综合" group-title="辽宁",辽河新闻综合
+http://116.2.172.210:4010/rtp/232.0.0.214:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽河文化生活" group-title="辽宁",辽河文化生活
+http://116.2.172.210:4010/rtp/232.0.0.215:1234
+#EXTINF:-1 tvg-id="" tvg-name="劲爆电影" group-title="辽宁",劲爆电影
+http://116.2.172.210:4010/rtp/232.0.0.155:1234
