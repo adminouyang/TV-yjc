@@ -1,6 +1,6 @@
-<<<<<<< Updated upstream
 # 海南电信 无可用IP
-=======
 112.66.104.101:8888
 112.66.104.143:8888
+<<<<<<< Updated upstream
+=======
 >>>>>>> Stashed changes
