@@ -1,4 +1,4 @@
-2026/09/03 09:02更新,#genre#
+2026/09/03 22:14更新,#genre#
 浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
 
 央视频道,#genre#
@@ -34,14 +34,13 @@ CCTV17,http://218.104.239.114:9901/tsfile/live/0019_2.m3u8?key=txiptv&playlive=1
 贵州卫视,http://218.104.239.114:9901/tsfile/live/0120_1.m3u8?key=txiptv&playlive=1&authid=0
 天津卫视,http://218.104.239.114:9901/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0
 安徽卫视,http://218.104.239.114:9901/tsfile/live/0130_1.m3u8?key=txiptv&playlive=1&authid=0
+安徽卫视,http://115.150.63.77:9902/tsfile/live/1066_1.m3u8?key=txiptv&playlive=1&authid=0
 山东卫视,http://218.104.239.114:9901/tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0
 辽宁卫视,http://218.104.239.114:9901/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0
 黑龙江卫视,http://218.104.239.114:9901/tsfile/live/0143_1.m3u8?key=txiptv&playlive=1&authid=0
 港澳台频道,#genre#
 凤凰卫视中文台,http://218.104.239.114:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
 凤凰卫视资讯台,http://218.104.239.114:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
-江西频道,#genre#
-江西指南,http://115.150.63.77:9902/tsfile/live/1041_1.m3u8?key=txiptv&playlive=1&authid=0
 福建频道,#genre#
 福建综合,http://218.104.239.114:9901/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&authid=0
 福建教育,http://218.104.239.114:9901/tsfile/live/1018_1.m3u8?key=txiptv&playlive=1&authid=0
