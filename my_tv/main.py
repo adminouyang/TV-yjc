@@ -61,7 +61,7 @@ CITY_STREAMS = {
 }
 
 # 远程GitHub仓库的基础URL
-GITHUB_BASE_URL = "https://raw.githubusercontent.com/q1017673817/iptvz/refs/heads/main"
+#GITHUB_BASE_URL = "https://raw.githubusercontent.com/q1017673817/iptvz/refs/heads/main"
 
 # 设置工作目录
 WORKING_DIR = os.getcwd()  # GitHub Actions的工作目录
