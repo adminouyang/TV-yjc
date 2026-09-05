@@ -3,14 +3,14 @@ name: Checkout IP Speed Test
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 18 * * *'   # 每天 UTC 18:00（北京时间次日02:00）
+    - cron: '0 18 * * *'   # UTC 18:00 = 北京时间 02:00
 
 jobs:
-  checkout-ip:
+  scan:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: IP_Scan   # 关键修正：去掉 TV-yjc/ 前缀
+        working-directory: IP_Scan   # 脚本在此目录下
 
     steps:
       - name: Checkout repository
