@@ -1,0 +1,66 @@
+name: checkout_ip
+
+# 触发方式：可手动触发（workflow_dispatch），也可定时触发（示例：每天 02:00 UTC）
+on:
+  workflow_dispatch:
+    inputs:
+      city_choice:
+        description: "城市选项 (1-35，留空或 0 表示全部)"
+        required: false
+        default: "0"
+  schedule:
+    - cron: "0 2 * * *"   # 每日 02:00 UTC，按需调整
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # 需要提交结果回仓库时，使用默认 GITHUB_TOKEN
+          persist-credentials: true
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y netcat-openbsd curl
+
+      - name: Prepare output directory
+        run: |
+          mkdir -p "TV-yjc/IP_Scan/checkout_ip/result_ip_file"
+
+      - name: Run checkout_ip.sh
+        run: |
+          chmod +x "${{ github.workspace }}/checkout_ip.sh.sh"
+          if [ -n "${{ github.event.inputs.city_choice }}" ]; then
+            bash "${{ github.workspace }}/scan.sh" "${{ github.event.inputs.city_choice }}"
+          else
+            bash "${{ github.workspace }}/scan.sh" "0"
+          fi
+        env:
+          # 若脚本需要代理或超时配置，可在此添加环境变量
+          CURL_CONNECT_TIMEOUT: "5"
+          CURL_MAX_TIME: "40"
+
+      - name: Upload scan results as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: scan-results
+          path: TV-yjc/IP_Scan/checkout_ip/result_ip_file/
+          retention-days: 30
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "TV-yjc/IP_Scan/checkout_ip/result_ip_file/"
+          # 仅在有变更时提交
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update checkout_ip results [skip ci]"
+            git push
+          fi
+        continue-on-error: true
