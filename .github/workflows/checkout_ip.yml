@@ -33,7 +33,7 @@ jobs:
 
       - name: Run checkout_ip.sh
         run: |
-          chmod +x "${{ github.workspace }}/checkout_ip.sh.sh"
+          chmod +x "${{ github.workspace }}/checkout_ip.sh"
           if [ -n "${{ github.event.inputs.city_choice }}" ]; then
             bash "${{ github.workspace }}/scan.sh" "${{ github.event.inputs.city_choice }}"
           else
