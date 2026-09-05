@@ -1,53 +1,37 @@
 name: Checkout IP Speed Test
 
 on:
-  # 定时触发：每天 02:00（UTC+8 对应 18:00 UTC 前一天）
-  schedule:
-    - cron: '0 18 * * *'
-
-  # 手动触发
   workflow_dispatch:
+  schedule:
+    - cron: '0 18 * * *'   # 每天 UTC 18:00（北京时间次日02:00）
 
 jobs:
-  checkout:
+  checkout-ip:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: IP_Scan   # 关键修正：去掉 TV-yjc/ 前缀
 
     steps:
-      # 1. 检出仓库代码
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. 安装依赖工具（nc、curl 通常已预装，此处确保存在）
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y netcat-openbsd curl
 
-      # 3. 赋予脚本执行权限并运行
-      #    脚本位于 IP_Scan/checkout_ip.sh
-      #    结果输出到 IP_Scan/checkout_ip/result_ip_file/${city}.txt
-      - name: Run Checkout IP Script
-        working-directory: TV-yjc/IP_Scan
-        run: |
-          chmod +x checkout_ip.sh
-          bash checkout_ip.sh
+      - name: Run checkout_ip.sh
+        run: bash checkout_ip.sh
 
-      # 4. 提交并推送结果文件
-      #    - 当某城市无可用 IP 时，原 ${city}_ip.txt 已被脚本删除
-      #    - 当结果与已有文件相同时，脚本不会更新，git 无变化
-      - name: Commit and Push Results
-        working-directory: TV-yjc
+      - name: Commit and push results
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-          # 添加可能被修改/删除的文件
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A IP_Scan/checkout_ip/
-
-          # 仅在有变更时提交
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: update checkout ip results [skip ci]"
+            git commit -m "Update IP speed test results [skip ci]"
             git push
           fi
