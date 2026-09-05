@@ -35,9 +35,9 @@ jobs:
         run: |
           chmod +x "${{ github.workspace }}/IP_Scan/checkout_ip.sh"
           if [ -n "${{ github.event.inputs.city_choice }}" ]; then
-            bash "${{ github.workspace }}/scan.sh" "${{ github.event.inputs.city_choice }}"
+            bash "${{ github.workspace }}/checkout_ip.sh" "${{ github.event.inputs.city_choice }}"
           else
-            bash "${{ github.workspace }}/scan.sh" "0"
+            bash "${{ github.workspace }}/checkout_ip.sh" "0"
           fi
         env:
           # 若脚本需要代理或超时配置，可在此添加环境变量
