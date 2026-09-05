@@ -1,4 +1,4 @@
-name: Get IP
+name: checkout ip scan
 
 on:
   # schedule:
@@ -30,8 +30,7 @@ jobs:
           
       - name: Run 获取IP 
         run: | 
-          python IP_Scan/Get_ip.py
-          # python IP_Scan/Detection_ip.py
+          python IP_Scan/checkout_ip_scan.py
         
       - name: Commit and push changes
         run: |
