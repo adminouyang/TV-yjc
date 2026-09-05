@@ -29,15 +29,15 @@ jobs:
 
       - name: Prepare output directory
         run: |
-          mkdir -p "TV-yjc/IP_Scan/checkout_ip/result_ip_file"
+          mkdir -p "IP_Scan/checkout_ip/result_ip_file"
 
       - name: Run checkout_ip.sh
         run: |
           chmod +x "${{ github.workspace }}/IP_Scan/checkout_ip.sh"
           if [ -n "${{ github.event.inputs.city_choice }}" ]; then
-            bash "${{ github.workspace }}/checkout_ip.sh" "${{ github.event.inputs.city_choice }}"
+            bash "${{ github.workspace }}/IP_Scan/checkout_ip.sh" "${{ github.event.inputs.city_choice }}"
           else
-            bash "${{ github.workspace }}/checkout_ip.sh" "0"
+            bash "${{ github.workspace }}/IP_Scan/checkout_ip.sh" "0"
           fi
         env:
           # 若脚本需要代理或超时配置，可在此添加环境变量
@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: scan-results
-          path: TV-yjc/IP_Scan/checkout_ip/result_ip_file/
+          path: IP_Scan/checkout_ip/result_ip_file/
           retention-days: 30
 
       - name: Commit and push results
