@@ -1,66 +1,53 @@
-name: checkout_ip
+name: Checkout IP Speed Test
 
-# 触发方式：可手动触发（workflow_dispatch），也可定时触发（示例：每天 02:00 UTC）
 on:
-  workflow_dispatch:
-    inputs:
-      city_choice:
-        description: "城市选项 (1-35，留空或 0 表示全部)"
-        required: false
-        default: "0"
+  # 定时触发：每天 02:00（UTC+8 对应 18:00 UTC 前一天）
   schedule:
-    - cron: "0 2 * * *"   # 每日 02:00 UTC，按需调整
+    - cron: '0 18 * * *'
+
+  # 手动触发
+  workflow_dispatch:
 
 jobs:
-  scan:
+  checkout:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      # 1. 检出仓库代码
+      - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          # 需要提交结果回仓库时，使用默认 GITHUB_TOKEN
-          persist-credentials: true
 
-      - name: Install dependencies
+      # 2. 安装依赖工具（nc、curl 通常已预装，此处确保存在）
+      - name: Install Dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y netcat-openbsd curl
 
-      - name: Prepare output directory
+      # 3. 赋予脚本执行权限并运行
+      #    脚本位于 IP_Scan/checkout_ip.sh
+      #    结果输出到 IP_Scan/checkout_ip/result_ip_file/${city}.txt
+      - name: Run Checkout IP Script
+        working-directory: TV-yjc/IP_Scan
         run: |
-          mkdir -p "IP_Scan/checkout_ip/result_ip_file"
+          chmod +x checkout_ip.sh
+          bash checkout_ip.sh
 
-      - name: Run checkout_ip.sh
+      # 4. 提交并推送结果文件
+      #    - 当某城市无可用 IP 时，原 ${city}_ip.txt 已被脚本删除
+      #    - 当结果与已有文件相同时，脚本不会更新，git 无变化
+      - name: Commit and Push Results
+        working-directory: TV-yjc
         run: |
-          chmod +x "${{ github.workspace }}/IP_Scan/checkout_ip.sh"
-          if [ -n "${{ github.event.inputs.city_choice }}" ]; then
-            bash "${{ github.workspace }}/IP_Scan/checkout_ip.sh" "${{ github.event.inputs.city_choice }}"
-          else
-            bash "${{ github.workspace }}/IP_Scan/checkout_ip.sh" "0"
-          fi
-        env:
-          # 若脚本需要代理或超时配置，可在此添加环境变量
-          CURL_CONNECT_TIMEOUT: "5"
-          CURL_MAX_TIME: "40"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Upload scan results as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: scan-results
-          path: IP_Scan/checkout_ip/result_ip_file/
-          retention-days: 30
+          # 添加可能被修改/删除的文件
+          git add -A IP_Scan/checkout_ip/
 
-      - name: Commit and push results
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "IP_Scan/checkout_ip/result_ip_file/"
           # 仅在有变更时提交
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: update checkout_ip results [skip ci]"
+            git commit -m "chore: update checkout ip results [skip ci]"
             git push
           fi
-        continue-on-error: true
