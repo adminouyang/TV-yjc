@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 基础目录
-BASE_DIR="TV-yjc/IP_Scan/checkout_ip"
+BASE_DIR="IP_Scan/checkout_ip"
 RESULT_DIR="$BASE_DIR/result_ip_file"
 
 # 确保结果目录存在
