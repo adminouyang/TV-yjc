@@ -57,7 +57,7 @@ def read_config(config_file):
             url_end = "/status" if (option is None or option >= 10) else "/stat"
 
             ip_configs.append((ip, port, option, url_end))
-            print(f"第{line_num}行：http://{ip}:{port}{url_end} 添加成功")
+            print(f"第{line_num}行：http://{ip}:{port}{url_end}  option={option} 添加成功")
 
     return ip_configs
 
