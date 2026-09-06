@@ -1,42 +1,69 @@
-name: checkout_ip_scan test
+name: Checkout IP Scan Test
 
-"on":
-  workflow_dispatch:
+on:
+  # 定时触发：每天 02:00（北京时间 = 18:00 UTC 前一天）
   schedule:
-    # UTC 18:00 = 北京时间次日 02:00
     - cron: '0 18 * * *'
 
+  # 手动触发
+  workflow_dispatch:
+
 jobs:
-  scan:
+  checkout:
     runs-on: ubuntu-latest
-    # 脚本里 BASE_DIR / SAVE_DIR 都是 "IP_Scan/checkout_ip" 相对路径，
-    # 所以所有 run 步骤都在仓库根下、以仓库根为 cwd 执行即可，不要切到 IP_Scan 子目录
+
+    # 脚本内部 BASE_DIR = "IP_Scan/checkout_ip"（相对路径），
+    # 因此所有 run 命令在仓库根目录下执行，保证 glob 能找到 IP_Scan/checkout_ip/*_config.txt
+    defaults:
+      run:
+        working-directory: .
+
     steps:
-      - name: Checkout repository
+      # 1. 检出仓库代码
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # 2. 设置 Python 环境
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      # 3. 安装 Python 依赖（新脚本基于 asyncio + aiohttp）
+      - name: Install Python Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install aiohttp
 
-      - name: Run IP scan
-        run: python IP_Scan/checkout_ip_scan.py
-
-      - name: Commit and push results
+      # 4. 运行扫描脚本
+      #    入口：IP_Scan/checkout_ip.py
+      #    输出：
+      #      - IP_Scan/checkout_ip/${province}_ip.txt            （有效 IP）
+      #      - IP_Scan/checkout_ip/Invalid_ip_file/${province}_invalid.txt （无效 IP 记录）
+      #    副作用：无区间且无有效的行会从原 *_config.txt 中删除
+      - name: Run Checkout IP Script
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          # 脚本在仓库根下运行，结果相对路径就是 IP_Scan/checkout_ip/
+          python IP_Scan/checkout_ip_scan.py
+
+      # 5. 提交并推送结果
+      #    可能变化的文件：
+      #      - 新生成/更新的 *_ip.txt
+      #      - 追加的 Invalid_ip_file/*_invalid.txt
+      #      - 被删除了无效行的 *_config.txt（原文件被回写）
+      #    无变化时（diff 为空）不产生空提交，避免死循环
+      - name: Commit and Push Results
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 添加 checkout_ip 目录下所有可能变化的文件（新增/修改/删除均覆盖）
           git add -A IP_Scan/checkout_ip/
+
+          # 仅在有变更时提交
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update IP scan results [skip ci]"
+            echo "Changes detected, committing..."
+            git commit -m "chore: update checkout ip results [skip ci]"
             git push
           fi
