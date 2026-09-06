@@ -24,7 +24,7 @@ jobs:
         run: pip install aiohttp
 
       - name: Run checkout_ip_scan.py
-        run: python IP_Scan/checkout_ip.py
+        run: python IP_Scan/checkout_ip_scan.py
 
       - name: Commit and push results
         run: |
