@@ -73,44 +73,44 @@ async def probe_tcp(sem, ip_port, timeout=TCP_TIMEOUT):
     except:
         return None
 
-async def check_ip_port_async(session, sem, ip_port, url_end):
-    # 尝试的路径列表：优先配置的路径，失败后再试另一个
-    alternative_end = "/stat" if url_end == "/status" else "/status"
-    
-    for attempt_end in [url_end, alternative_end]:
-        url = f"http://{ip_port}{attempt_end}"
-        try:
-            async with sem:
-                async with session.get(url, timeout=... ) as resp:
-                    if resp.status == 200:
-                        body = await resp.content.read(2048)
-                        text = body.decode('utf-8', errors='ignore')
-                        if "udpxy" in text or "Multi stream daemon" in text:
-                            return ip_port
-        except:
-            continue
-    return None
-
 # async def check_ip_port_async(session, sem, ip_port, url_end):
-#     url = f"http://{ip_port}{url_end}"
-#     for attempt in range(HTTP_RETRY + 1):
+#     # 尝试的路径列表：优先配置的路径，失败后再试另一个
+#     alternative_end = "/stat" if url_end == "/status" else "/status"
+    
+#     for attempt_end in [url_end, alternative_end]:
+#         url = f"http://{ip_port}{attempt_end}"
 #         try:
 #             async with sem:
-#                 async with session.get(
-#                     url,
-#                     timeout=ClientTimeout(total=HTTP_TIMEOUT,
-#                                          connect=HTTP_CONNECT_TIMEOUT)
-#                 ) as resp:
+#                 async with session.get(url, timeout=... ) as resp:
 #                     if resp.status == 200:
 #                         body = await resp.content.read(2048)
 #                         text = body.decode('utf-8', errors='ignore')
 #                         if "udpxy" in text or "Multi stream daemon" in text:
 #                             return ip_port
-#         except (asyncio.TimeoutError, aiohttp.ClientError, OSError):
-#             if attempt == HTTP_RETRY:
-#                 return None
-#             await asyncio.sleep(0.05)
+#         except:
+#             continue
 #     return None
+
+async def check_ip_port_async(session, sem, ip_port, url_end):
+    url = f"http://{ip_port}{url_end}"
+    for attempt in range(HTTP_RETRY + 1):
+        try:
+            async with sem:
+                async with session.get(
+                    url,
+                    timeout=ClientTimeout(total=HTTP_TIMEOUT,
+                                         connect=HTTP_CONNECT_TIMEOUT)
+                ) as resp:
+                    if resp.status == 200:
+                        body = await resp.content.read(2048)
+                        text = body.decode('utf-8', errors='ignore')
+                        if "udpxy" in text or "Multi stream daemon" in text:
+                            return ip_port
+        except (asyncio.TimeoutError, aiohttp.ClientError, OSError):
+            if attempt == HTTP_RETRY:
+                return None
+            await asyncio.sleep(0.05)
+    return None
 
 
 async def scan_candidates(ip_ports, url_end):
