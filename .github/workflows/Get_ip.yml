@@ -31,6 +31,9 @@ jobs:
       - name: Run 获取IP 
         run: | 
           python IP_Scan/checkout_ip_scan.py
+          pip install aiohttp requests netcat-openbsd 2>/dev/null || true
+          # 系统层 netcat/curl（若脚本仍用到 nc/curl 可保留）
+          sudo apt-get install -y netcat-openbsd curl 2>/dev/null || true
         
       - name: Commit and push changes
         run: |
