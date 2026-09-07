@@ -1,0 +1,67 @@
+name: IP Scan & Checkout
+
+on:
+  # 定时触发：每天 UTC 18:00（北京时间次日 02:00）
+  schedule:
+    - cron: '0 18 * * *'
+  # 手动触发：Actions 页面点 Run workflow 即可立即执行
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    # 默认工作目录：仓库根
+    # 脚本内 BASE_DIR = "IP_Scan/checkout_ip"，相对路径基于此
+    defaults:
+      run:
+        working-directory: ${{ github.workspace }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # 完整历史，便于后续 git push 不丢提交
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install aiohttp
+
+      - name: Show working directory & input file
+        run: |
+          pwd
+          ls -la IP_Scan/checkout_ip/ || true
+          echo "---------- test_ip.txt ----------"
+          cat IP_Scan/checkout_ip/test_ip.txt 2>/dev/null || echo "(空或不存在)"
+
+      - name: Run scan script
+        run: python IP_Scan/checkout_ip/Test_ip.py
+
+      - name: Show scan results
+        if: always()
+        run: |
+          echo "---------- 生成的 *_config.txt ----------"
+          ls -la IP_Scan/checkout_ip/*_config.txt 2>/dev/null || echo "(无)"
+          echo "---------- 无效 IP 记录 ----------"
+          ls -la IP_Scan/checkout_ip/Invalid_ip_file/ 2>/dev/null || echo "(空)"
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 脚本在 IP_Scan/checkout_ip/ 下生成/修改的文件统一提交
+          git add -A IP_Scan/checkout_ip/
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update IP scan results [skip ci]"
+            git push
+          fi
