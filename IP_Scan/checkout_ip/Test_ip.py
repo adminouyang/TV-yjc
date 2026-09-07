@@ -195,11 +195,12 @@ async def scan_group(a, b, c_str, d_str, port, has_range):
             valid = await scan_until(session, sem, ip_ports, D_STOP_COUNT, "D段")
             all_valid.extend(valid)
 
-            if len(all_valid) >= D_STOP_COUNT:
+            # === 关键修改：只要有有效 IP 就停止，不再扩展 ===
+            if all_valid:
                 return sorted(set(all_valid))
 
-            # --- D 段不足，转扫 C+D ---
-            print(f"D段有效 {len(all_valid)} 个(<{D_STOP_COUNT})，扩展扫描 C(1-255)+D(1-255)")
+            # --- D 段 0 个有效，才转扫 C+D ---
+            print(f"D段有效 0 个，扩展扫描 C(1-255)+D(1-255)")
             ip_ports_cd = generate_cd_full(a, b, c_str, d_str, port)
             print(f"开始扫描：{a}.{b}.*.{d_str}:{port}  (C+D 共 {len(ip_ports_cd)} 个)")
             valid_cd = await scan_until(session, sem, ip_ports_cd, CD_STOP_COUNT, "C+D段")
