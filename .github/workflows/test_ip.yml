@@ -1,9 +1,9 @@
 name: IP Scan & Checkout
 
 on:
-  # 定时触发：每天 UTC 18:00（北京时间次日 02:00）
-  schedule:
-    - cron: '0 18 * * *'
+#   # 定时触发：每天 UTC 18:00（北京时间次日 02:00）
+#   schedule:
+#     - cron: '0 18 * * *'
   # 手动触发：Actions 页面点 Run workflow 即可立即执行
   workflow_dispatch:
 
