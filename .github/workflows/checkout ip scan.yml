@@ -1,63 +1,69 @@
-name: Checkout IP Scan text
+name: Checkout IP Scan Test
 
 on:
-  workflow_dispatch:
+  # 定时触发：每天 02:00（北京时间 = 18:00 UTC 前一天）
   schedule:
-    - cron: '0 18 * * *'   # UTC 18:00 = 北京时间 02:00
+    - cron: '0 18 * * *'
+
+  # 手动触发
+  workflow_dispatch:
 
 jobs:
-  scan:
+  checkout:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0    # 拉取完整历史，确保 rebase 可以正常工作
+    # 脚本内部 BASE_DIR = "IP_Scan/checkout_ip"（相对路径），
+    # 因此所有 run 命令在仓库根目录下执行，保证 glob 能找到 IP_Scan/checkout_ip/*_config.txt
+    defaults:
+      run:
+        working-directory: .
 
+    steps:
+      # 1. 检出仓库代码
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 2. 设置 Python 环境
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
-        run: pip install aiohttp
-
-      - name: Run checkout_ip_scan.py
-        run: python IP_Scan/checkout_ip_scan.py
-
-      - name: Commit and push results
+      # 3. 安装 Python 依赖（新脚本基于 asyncio + aiohttp）
+      - name: Install Python Dependencies
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          python -m pip install --upgrade pip
+          pip install aiohttp
 
-          # 暂存扫描结果目录下的所有变更（新增/修改/删除）
+      # 4. 运行扫描脚本
+      #    入口：IP_Scan/checkout_ip.py
+      #    输出：
+      #      - IP_Scan/checkout_ip/${province}_ip.txt            （有效 IP）
+      #      - IP_Scan/checkout_ip/Invalid_ip_file/${province}_invalid.txt （无效 IP 记录）
+      #    副作用：无区间且无有效的行会从原 *_config.txt 中删除
+      - name: Run Checkout IP Script
+        run: |
+          python IP_Scan/checkout_ip_scan.py
+
+      # 5. 提交并推送结果
+      #    可能变化的文件：
+      #      - 新生成/更新的 *_ip.txt
+      #      - 追加的 Invalid_ip_file/*_invalid.txt
+      #      - 被删除了无效行的 *_config.txt（原文件被回写）
+      #    无变化时（diff 为空）不产生空提交，避免死循环
+      - name: Commit and Push Results
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 添加 checkout_ip 目录下所有可能变化的文件（新增/修改/删除均覆盖）
           git add -A IP_Scan/checkout_ip/
 
+          # 仅在有变更时提交
           if git diff --cached --quiet; then
             echo "No changes to commit"
-            exit 0
-          fi
-
-          git commit -m "Update IP scan test results [skip ci]"
-
-          # 拉取远程最新 main，并将本次提交 rebase 到最新提交之上
-          # 这样即使远程有别人提交的内容，也能顺利推送，且不会产生合并冲突
-          echo "Fetching remote main..."
-          git fetch origin main
-
-          if git rebase origin/main; then
-            echo "Rebase succeeded"
           else
-            echo "Rebase failed, attempting merge..."
-            git rebase --abort
-            if git pull --no-edit origin main; then
-              echo "Merge succeeded"
-            else
-              echo "Merge failed, cannot auto-resolve conflicts"
-              git merge --abort
-              exit 1
-            fi
+            echo "Changes detected, committing..."
+            git commit -m "chore: update checkout ip results [skip ci]"
+            git push
           fi
-
-          git push origin main
