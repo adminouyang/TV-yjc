@@ -30,8 +30,8 @@ BASE_DIR = "IP_Scan/checkout_ip"
 INVALID_DIR = os.path.join(BASE_DIR, "Invalid_ip_file")
 
 HTTP_CONCURRENCY = 300        # 并发数
-HTTP_TIMEOUT = 4.0            # 总超时(秒)
-HTTP_CONNECT_TIMEOUT = 1.0    # 连接超时(秒)
+HTTP_TIMEOUT = 3.0            # 总超时(秒)
+HTTP_CONNECT_TIMEOUT = 0.6    # 连接超时(秒)
 D_STOP_COUNT = 2              # D 段扫描停止阈值（凑满即停）
 CD_STOP_COUNT = 1             # C+D 段扫描停止阈值
 # =================================================
