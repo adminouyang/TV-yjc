@@ -1,28 +1,26 @@
 name: Checkout IP Scan Test
 
+# 并发控制：同一时间只运行一个，后触发的等待前一个完成
+concurrency:
+  group: ip-scan
+  cancel-in-progress: false
 on:
-  # 定时触发：每天 02:00（北京时间 = 18:00 UTC 前一天）
-  schedule:
-    - cron: '0 18 * * *'
-
-  # 手动触发
   workflow_dispatch:
+  schedule:
+    - cron: '0 18 * * *'   # UTC 18:00 = 北京时间 02:00
 
 jobs:
   checkout:
     runs-on: ubuntu-latest
-
-    # 脚本内部 BASE_DIR = "IP_Scan/checkout_ip"（相对路径），
-    # 因此所有 run 命令在仓库根目录下执行，保证 glob 能找到 IP_Scan/checkout_ip/*_config.txt
-    defaults:
-      run:
-        working-directory: .
+    permissions:
+      contents: write
 
     steps:
       # 1. 检出仓库代码
       - name: Checkout Repository
         uses: actions/checkout@v4
-
+        with:
+          fetch-depth: 0
       # 2. 设置 Python 环境
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -30,10 +28,8 @@ jobs:
           python-version: '3.11'
 
       # 3. 安装 Python 依赖（新脚本基于 asyncio + aiohttp）
-      - name: Install Python Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install aiohttp
+      - name: Install dependencies
+        run: pip install aiohttp
 
       # 4. 运行扫描脚本
       #    入口：IP_Scan/checkout_ip.py
@@ -53,17 +49,20 @@ jobs:
       #    无变化时（diff 为空）不产生空提交，避免死循环
       - name: Commit and Push Results
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # 添加 checkout_ip 目录下所有可能变化的文件（新增/修改/删除均覆盖）
           git add -A IP_Scan/checkout_ip/
-
-          # 仅在有变更时提交
           if git diff --cached --quiet; then
             echo "No changes to commit"
-          else
-            echo "Changes detected, committing..."
-            git commit -m "chore: update checkout ip results [skip ci]"
-            git push
+            exit 0
           fi
+
+          git commit -m "Update IP scan results [skip ci]"
+
+          # 拉取远程最新 main，并将本地提交 rebase 到其上
+          echo "Pulling remote main with rebase..."
+          git pull --rebase --autostash origin main
+
+          # 推送
+          git push origin main
