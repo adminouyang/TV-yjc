@@ -341,6 +341,10 @@ http://112.66.101.245:8888/rtp/239.253.64.143:5140
 http://112.66.101.245:8888/rtp/239.253.64.178:5140
 #EXTINF:-1 tvg-id="" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视
 http://112.66.101.245:8888/rtp/239.253.64.112:5140
+#EXTINF:-1 tvg-id="" tvg-name="云南4K频道" group-title="4K频道",云南4K频道
+http://106.59.3.228:55555/rtp/239.200.200.178:8884
+#EXTINF:-1 tvg-id="" tvg-name="云南4K频道" group-title="4K频道",云南4K频道
+http://106.59.2.152:55555/rtp/239.200.200.178:8884
 #EXTINF:-1 tvg-id="" tvg-name="爱上4K" group-title="4K频道",爱上4K
 http://112.66.101.245:8888/rtp/239.253.64.243:5140
 #EXTINF:-1 tvg-id="" tvg-name="4K现场" group-title="4K频道",4K现场
@@ -359,6 +363,8 @@ http://112.66.101.245:8888/rtp/239.253.64.51:5140
 http://223.167.230.155:4022/rtp/233.18.204.173:5140
 #EXTINF:-1 tvg-id="" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院
 http://112.66.101.245:8888/rtp/239.253.64.50:5140
+#EXTINF:-1 tvg-id="" tvg-name="劲爆电影" group-title="数字频道",劲爆电影
+http://116.2.165.86:4010/rtp/232.0.0.155:1234
 #EXTINF:-1 tvg-id="" tvg-name="华数谍战剧场" group-title="数字频道",华数谍战剧场
 http://112.66.101.245:8888/rtp/239.253.64.212:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数经典电影" group-title="数字频道",华数经典电影
@@ -497,6 +503,10 @@ http://112.66.101.245:8888/rtp/239.253.64.230:5140
 http://121.237.245.25:8888/rtp/239.49.8.119:8000
 #EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通
 http://112.66.101.245:8888/rtp/239.253.64.127:5140
+#EXTINF:-1 tvg-id="" tvg-name="新动漫" group-title="数字频道",新动漫
+http://106.59.3.228:55555/rtp/239.200.201.32:4120
+#EXTINF:-1 tvg-id="" tvg-name="新动漫" group-title="数字频道",新动漫
+http://106.59.2.152:55555/rtp/239.200.201.32:4120
 #EXTINF:-1 tvg-id="" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="数字频道",茶频道
 http://121.237.245.25:8888/rtp/239.49.1.234:6000
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通
@@ -753,6 +763,14 @@ http://121.237.245.25:8888/rtp/239.49.0.223:8000
 http://121.237.245.25:8888/rtp/239.49.0.225:8000
 #EXTINF:-1 tvg-id="" tvg-name="新闻综合" tvg-logo="https://tb.zbds.top/logo/新闻综合.png" group-title="☘️江苏省",新闻综合
 http://121.237.245.25:8888/rtp/239.49.0.214:8000
+#EXTINF:-1 tvg-id="" tvg-name="楚雄新闻频道" group-title="☘️江苏省",楚雄新闻频道
+http://106.59.3.228:55555/rtp/239.200.200.116:8708
+#EXTINF:-1 tvg-id="" tvg-name="楚雄新闻频道" group-title="☘️江苏省",楚雄新闻频道
+http://106.59.2.152:55555/rtp/239.200.200.116:8708
+#EXTINF:-1 tvg-id="" tvg-name="沈阳新闻综合" group-title="☘️江苏省",沈阳新闻综合
+http://116.2.165.86:4010/rtp/232.0.0.206:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽河新闻综合" group-title="☘️江苏省",辽河新闻综合
+http://116.2.165.86:4010/rtp/232.0.0.214:1234
 #EXTINF:-1 tvg-id="" tvg-name="宿豫综合" group-title="☘️江苏省",宿豫综合
 http://121.237.245.25:8888/rtp/239.49.1.98:6000
 #EXTINF:-1 tvg-id="" tvg-name="宿豫综合" group-title="☘️江苏省",宿豫综合
@@ -793,6 +811,58 @@ http://121.237.245.25:8888/rtp/239.49.1.246:6000
 http://121.237.245.25:8888/rtp/239.49.0.239:8000
 #EXTINF:-1 tvg-id="" tvg-name="赣榆" group-title="☘️江苏省",赣榆
 http://121.237.245.25:8888/rtp/239.49.0.241:8000
+#EXTINF:-1 tvg-id="" tvg-name="辽宁都市频道" group-title="☘️辽宁省",辽宁都市频道
+http://116.2.165.86:4010/rtp/232.0.0.154:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁影视剧频道" group-title="☘️辽宁省",辽宁影视剧频道
+http://116.2.165.86:4010/rtp/232.0.0.25:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁体育休闲" group-title="☘️辽宁省",辽宁体育休闲
+http://116.2.165.86:4010/rtp/232.0.0.164:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁生活频道" group-title="☘️辽宁省",辽宁生活频道
+http://116.2.165.86:4010/rtp/232.0.0.150:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁教育青少" tvg-logo="https://tb.zbds.top/logo/辽宁教育青少.png" group-title="☘️辽宁省",辽宁教育青少
+http://116.2.165.86:4010/rtp/232.0.0.241:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁北方频道" group-title="☘️辽宁省",辽宁北方频道
+http://116.2.165.86:4010/rtp/232.0.0.151:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁公共频道" group-title="☘️辽宁省",辽宁公共频道
+http://116.2.165.86:4010/rtp/232.0.0.168:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁经济频道" group-title="☘️辽宁省",辽宁经济频道
+http://116.2.165.86:4010/rtp/232.0.0.156:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽河文化生活" group-title="☘️辽宁省",辽河文化生活
+http://116.2.165.86:4010/rtp/232.0.0.215:1234
+#EXTINF:-1 tvg-id="" tvg-name="移动电视" group-title="☘️辽宁省",移动电视
+http://116.2.165.86:4010/rtp/232.0.0.165:1234
+#EXTINF:-1 tvg-id="" tvg-name="重庆汽摩" tvg-logo="https://tb.zbds.top/logo/重庆汽摩.png" group-title="☘️天津市",重庆汽摩
+http://106.59.3.228:55555/rtp/239.200.200.98:8052
+#EXTINF:-1 tvg-id="" tvg-name="重庆汽摩" tvg-logo="https://tb.zbds.top/logo/重庆汽摩.png" group-title="☘️天津市",重庆汽摩
+http://106.59.2.152:55555/rtp/239.200.200.98:8052
+#EXTINF:-1 tvg-id="" tvg-name="云南都市频道" group-title="☘️云南省",云南都市频道
+http://106.59.3.228:55555/rtp/239.200.200.12:8844
+#EXTINF:-1 tvg-id="" tvg-name="云南都市频道" group-title="☘️云南省",云南都市频道
+http://106.59.2.152:55555/rtp/239.200.200.12:8844
+#EXTINF:-1 tvg-id="" tvg-name="云南娱乐频道" group-title="☘️云南省",云南娱乐频道
+http://106.59.3.228:55555/rtp/239.200.200.13:8848
+#EXTINF:-1 tvg-id="" tvg-name="云南娱乐频道" group-title="☘️云南省",云南娱乐频道
+http://106.59.2.152:55555/rtp/239.200.200.13:8848
+#EXTINF:-1 tvg-id="" tvg-name="云南影视频道" group-title="☘️云南省",云南影视频道
+http://106.59.3.228:55555/rtp/239.200.200.15:8856
+#EXTINF:-1 tvg-id="" tvg-name="云南影视频道" group-title="☘️云南省",云南影视频道
+http://106.59.2.152:55555/rtp/239.200.200.15:8856
+#EXTINF:-1 tvg-id="" tvg-name="云南康旅频道" group-title="☘️云南省",云南康旅频道
+http://106.59.3.228:55555/rtp/239.200.200.31:8860
+#EXTINF:-1 tvg-id="" tvg-name="云南康旅频道" group-title="☘️云南省",云南康旅频道
+http://106.59.2.152:55555/rtp/239.200.200.31:8860
+#EXTINF:-1 tvg-id="" tvg-name="云南少儿频道" group-title="☘️云南省",云南少儿频道
+http://106.59.3.228:55555/rtp/239.200.200.32:8864
+#EXTINF:-1 tvg-id="" tvg-name="云南少儿频道" group-title="☘️云南省",云南少儿频道
+http://106.59.2.152:55555/rtp/239.200.200.32:8864
+#EXTINF:-1 tvg-id="" tvg-name="澜湄国际频道" group-title="☘️云南省",澜湄国际频道
+http://106.59.3.228:55555/rtp/239.200.200.33:8024
+#EXTINF:-1 tvg-id="" tvg-name="澜湄国际频道" group-title="☘️云南省",澜湄国际频道
+http://106.59.2.152:55555/rtp/239.200.200.33:8024
+#EXTINF:-1 tvg-id="" tvg-name="禄丰市电视台" group-title="☘️云南省",禄丰市电视台
+http://106.59.3.228:55555/rtp/239.200.200.163:8798
+#EXTINF:-1 tvg-id="" tvg-name="禄丰市电视台" group-title="☘️云南省",禄丰市电视台
+http://106.59.2.152:55555/rtp/239.200.200.163:8798
 #EXTINF:-1 tvg-id="" tvg-name="CGTN" group-title="其它频道",CGTN
 http://112.66.101.245:8888/rtp/239.253.64.68:5140
 #EXTINF:-1 tvg-id="" tvg-name="CGTN西语" group-title="其它频道",CGTN西语
