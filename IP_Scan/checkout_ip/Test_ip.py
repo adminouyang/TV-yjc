@@ -12,14 +12,16 @@ IP 扫描检测脚本（完善版 · 按省份分流）
 
 扫描策略（按 IP 是否含 C 段区间）：
   - 无区间（如 58.37.152.210:4022）：
-       先扫 D 段(1-255)，凑满 2 个有效即停；
-       D 段无有效则转扫 C(1-255)+D(1-255)，凑满 1 个即停
+       先扫 D 段(1-255)，凑满 D_STOP_COUNT 个有效即停；
+       D 段 0 有效才转扫 C(1-255)+D(1-255)，凑满 CD_STOP_COUNT 个即停
   - 有区间（如 106.59.2-3.195:55555）：
-       直接扫 C(区间)+D(1-255)，凑满 1 个即停
+       直接扫 C(区间)+D(1-255)，凑满 CD_STOP_COUNT 个即停
 
-test_ip.txt 维护规则：
-  - 无区间 IP：两阶段都无有效 → 从 test_ip.txt 删除该行，并记录到 Invalid_ip_file/
-  - 有区间 IP：无有效 → 不删除（保留在 test_ip.txt），仍记录到 Invalid_ip_file/
+test_ip.txt 维护规则（本版）：
+  无区间 + 有效 -> 不删除，追加到省份 config
+  有区间 + 有效 -> 不删除，追加到省份 config
+  无区间 + 无效 -> 从 test_ip.txt 删除该行
+  有区间 + 无效 -> 不删除（保留在 test_ip.txt）
 """
 
 import asyncio
@@ -56,6 +58,8 @@ def parse_test_ip_line(line):
     else:
         addr, province = line, ""
     province = province.strip()
+    if not province:
+        raise ValueError("缺少省份信息")
     ip_part, port = addr.strip().split(':')
     a, b, c_str, d_str = ip_part.split('.')
     has_range = '-' in c_str
@@ -84,16 +88,18 @@ def read_test_ip(input_file):
             if ":" not in stripped:
                 continue
             try:
-                a, b, c_str, d_str, port, has_range, province = parse_test_ip_line(stripped)
-            except Exception as e:
-                print(f"第{line_num}行：解析失败，跳过 ({e}) -> {stripped}")
+                parsed = parse_test_ip_line(stripped)
+            except ValueError:
+                # 格式错误（如缺少省份）由 parse_test_ip_line 抛出
+                print(f"第{line_num}行：解析失败，跳过 -> {stripped}")
                 continue
+            a, b, c_str, d_str, port, has_range, province = parsed
 
             if not province:
                 print(f"第{line_num}行：缺少省份信息，跳过 -> {stripped}")
                 continue
 
-            c_disp = c_str if has_range else c_str
+            c_disp = c_str
             print(f"第{line_num}行：http://{a}.{b}.{c_disp}.{d_str}:{port}/status 添加成功  ({province})")
             raw_lines.append(stripped)
             groups.append((a, b, c_str, d_str, port, has_range, province))
@@ -195,11 +201,11 @@ async def scan_group(a, b, c_str, d_str, port, has_range):
             valid = await scan_until(session, sem, ip_ports, D_STOP_COUNT, "D段")
             all_valid.extend(valid)
 
-            # === 关键修改：只要有有效 IP 就停止，不再扩展 ===
+            # D 段只要 >=1 个有效即停止，不再扩展（避免与 C+D 阶段重复）
             if all_valid:
                 return sorted(set(all_valid))
 
-            # --- D 段 0 个有效，才转扫 C+D ---
+            # --- D 段 0 有效，才转扫 C+D ---
             print(f"D段有效 0 个，扩展扫描 C(1-255)+D(1-255)")
             ip_ports_cd = generate_cd_full(a, b, c_str, d_str, port)
             print(f"开始扫描：{a}.{b}.*.{d_str}:{port}  (C+D 共 {len(ip_ports_cd)} 个)")
@@ -255,7 +261,7 @@ def write_invalid_records(province, invalid_ips):
 
 
 def rewrite_test_ip(kept_raw_lines):
-    """将保留的行回写 test_ip.txt（去掉已成功分流的有效行）"""
+    """将保留的行回写 test_ip.txt"""
     with open(INPUT_FILE, 'w', encoding='utf-8') as f:
         for line in kept_raw_lines:
             f.write(line + "\n")
@@ -274,9 +280,10 @@ def main():
         print("无有效配置，跳过")
         return
 
-    # 按省份收集：有效 IP / 无效 IP / 需保留在 test_ip.txt 的原始行
     # province_results[province] = {
-    #     "valid": [], "invalid": [], "kept_raw": []
+    #     "valid": [],      # 本轮有效 IP（追加到省份 config）
+    #     "invalid": [],    # 本轮无效 IP（记录到 Invalid_ip_file）
+    #     "kept_raw": []    # 需保留在 test_ip.txt 的原始行
     # }
     province_results = {}
 
@@ -286,48 +293,48 @@ def main():
         res = province_results[province]
 
         original_raw = f"{a}.{b}.{c_str}.{d_str}:{port}${province}"
-        original_addr = f"{a}.{b}.{c_str}.{d_str}:{port}"
 
         print(f"\n--- 第 {idx}/{len(groups)} 组 ({province}) ---")
         valid = asyncio.run(scan_group(a, b, c_str, d_str, port, has_range))
 
         if valid:
+            # ===== 有效：无论有无区间，一律【不删除】并保存到省份 config =====
             res["valid"].extend(valid)
-            res["kept_raw"].append(original_raw)   # 有效：从 test_ip.txt 移除（不保留）
-            print(f"  本组获得 {len(valid)} 个有效 IP")
+            res["kept_raw"].append(original_raw)   # 保留在 test_ip.txt
+            print(f"  本组获得 {len(valid)} 个有效 IP（保留在 test_ip.txt）")
         else:
-            print(f"  本组无有效 IP")
-            res["invalid"].append(original_addr)
+            # ===== 无效 =====
+            res["invalid"].append(original_raw)
             if has_range:
-                # 有区间：保留在 test_ip.txt，不删除
+                # 有区间：不删除，保留在 test_ip.txt
                 res["kept_raw"].append(original_raw)
-                print(f"  有区间配置，保留在 {os.path.basename(INPUT_FILE)}：{original_addr}")
+                print(f"  有区间配置，保留在 {os.path.basename(INPUT_FILE)}：{original_raw}")
             else:
                 # 无区间：从 test_ip.txt 删除（不加入 kept_raw）
-                print(f"  无区间配置，从 {os.path.basename(INPUT_FILE)} 删除：{original_addr}")
+                print(f"  无区间配置，从 {os.path.basename(INPUT_FILE)} 删除：{original_raw}")
 
-    # 汇总回写：按省份追加有效 IP 到 *_config.txt
+    # 汇总回写
     print(f"\n{'='*30}\n  汇总保存\n{'='*30}")
     for province in sorted(province_results.keys()):
         res = province_results[province]
 
-        # 有效 IP 追加到省份 config（去重）
         if res["valid"]:
             all_valid = sorted(set(res["valid"]))
             append_to_config(province, all_valid)
             print(f"{province} 本轮有效 IP {len(all_valid)} 个，已追加至 {province}_config.txt")
 
-        # 无效 IP 记录
         if res["invalid"]:
             write_invalid_records(province, sorted(set(res["invalid"])))
 
-    # 回写 test_ip.txt：仅保留「有区间且无效」的行
+    # 回写 test_ip.txt：只保留 kept_raw 中的行（去掉"无区间+无效"的行）
     kept_all = []
     for province in sorted(province_results.keys()):
         kept_all.extend(province_results[province]["kept_raw"])
     rewrite_test_ip(kept_all)
 
-    print(f"\n全部扫描完成，耗时 {time.time() - start:.1f} 秒")
+    removed = len(raw_lines) - len(kept_all)
+    print(f"\ntest_ip.txt：保留 {len(kept_all)} 行，删除（无区间+无效）{removed} 行")
+    print(f"全部扫描完成，耗时 {time.time() - start:.1f} 秒")
 
 
 if __name__ == "__main__":
