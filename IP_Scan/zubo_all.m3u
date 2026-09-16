@@ -91,42 +91,22 @@ http://112.66.102.186:8888/rtp/239.253.64.75:5140
 http://121.237.245.25:8888/rtp/239.49.9.15:6000
 #EXTINF:-1 tvg-id="" tvg-name="第一剧场" group-title="央视频道",第一剧场
 http://121.237.245.25:8888/rtp/239.49.1.226:6000
-#EXTINF:-1 tvg-id="" tvg-name="第一剧场" group-title="央视频道",第一剧场
-http://223.167.230.155:4022/rtp/233.18.204.184:5140
 #EXTINF:-1 tvg-id="" tvg-name="怀旧剧场" group-title="央视频道",怀旧剧场
 http://121.237.245.25:8888/rtp/239.49.9.12:6000
-#EXTINF:-1 tvg-id="" tvg-name="怀旧剧场" group-title="央视频道",怀旧剧场
-http://223.167.230.155:4022/rtp/233.18.204.182:5140
 #EXTINF:-1 tvg-id="" tvg-name="风云剧场" group-title="央视频道",风云剧场
 http://121.237.245.25:8888/rtp/239.49.9.10:6000
-#EXTINF:-1 tvg-id="" tvg-name="风云剧场" group-title="央视频道",风云剧场
-http://223.167.230.155:4022/rtp/233.18.204.183:5140
 #EXTINF:-1 tvg-id="" tvg-name="风云音乐" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%A3%8E%E4%BA%91%E9%9F%B3%E4%B9%90.png" group-title="央视频道",风云音乐
 http://121.237.245.25:8888/rtp/239.49.9.13:6000
-#EXTINF:-1 tvg-id="" tvg-name="风云音乐" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%A3%8E%E4%BA%91%E9%9F%B3%E4%B9%90.png" group-title="央视频道",风云音乐
-http://223.167.230.155:4022/rtp/233.18.204.185:5140
 #EXTINF:-1 tvg-id="" tvg-name="兵器科技" group-title="央视频道",兵器科技
 http://121.237.245.25:8888/rtp/239.49.9.9:6000
-#EXTINF:-1 tvg-id="" tvg-name="兵器科技" group-title="央视频道",兵器科技
-http://223.167.230.155:4022/rtp/233.18.204.178:5140
 #EXTINF:-1 tvg-id="" tvg-name="风云足球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%A3%8E%E4%BA%91%E8%B6%B3%E7%90%83.png" group-title="央视频道",风云足球
 http://121.237.245.25:8888/rtp/239.49.9.6:6000
-#EXTINF:-1 tvg-id="" tvg-name="风云足球" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%A3%8E%E4%BA%91%E8%B6%B3%E7%90%83.png" group-title="央视频道",风云足球
-http://223.167.230.155:4022/rtp/233.18.204.176:5140
-#EXTINF:-1 tvg-id="" tvg-name="高尔夫网球" group-title="央视频道",高尔夫网球
-http://223.167.230.155:4022/rtp/233.18.204.181:5140
-#EXTINF:-1 tvg-id="" tvg-name="央视台球" group-title="央视频道",央视台球
-http://223.167.230.155:4022/rtp/233.18.204.177:5140
 #EXTINF:-1 tvg-id="" tvg-name="女性时尚" group-title="央视频道",女性时尚
 http://121.237.245.25:8888/rtp/239.49.9.14:6000
-#EXTINF:-1 tvg-id="" tvg-name="女性时尚" group-title="央视频道",女性时尚
-http://223.167.230.155:4022/rtp/233.18.204.180:5140
 #EXTINF:-1 tvg-id="" tvg-name="电视指南" group-title="央视频道",电视指南
 http://121.237.245.25:8888/rtp/239.49.9.5:6000
 #EXTINF:-1 tvg-id="" tvg-name="世界地理" group-title="央视频道",世界地理
 http://121.237.245.25:8888/rtp/239.49.9.8:6000
-#EXTINF:-1 tvg-id="" tvg-name="世界地理" group-title="央视频道",世界地理
-http://223.167.230.155:4022/rtp/233.18.204.179:5140
 #EXTINF:-1 tvg-id="" tvg-name="中国天气" group-title="央视频道",中国天气
 http://112.66.102.186:8888/rtp/239.253.64.79:5140
 #EXTINF:-1 tvg-id="" tvg-name="CETV1" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CETV1.png" group-title="央视频道",CETV1
@@ -342,9 +322,9 @@ http://112.66.102.186:8888/rtp/239.253.64.178:5140
 #EXTINF:-1 tvg-id="" tvg-name="三沙卫视" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png" group-title="卫视频道",三沙卫视
 http://112.66.102.186:8888/rtp/239.253.64.112:5140
 #EXTINF:-1 tvg-id="" tvg-name="云南4K频道" group-title="4K频道",云南4K频道
-http://106.59.2.108:55555/rtp/239.200.200.178:8884
-#EXTINF:-1 tvg-id="" tvg-name="云南4K频道" group-title="4K频道",云南4K频道
 http://106.59.2.196:55555/rtp/239.200.200.178:8884
+#EXTINF:-1 tvg-id="" tvg-name="云南4K频道" group-title="4K频道",云南4K频道
+http://106.59.2.108:55555/rtp/239.200.200.178:8884
 #EXTINF:-1 tvg-id="" tvg-name="爱上4K" group-title="4K频道",爱上4K
 http://112.66.102.186:8888/rtp/239.253.64.243:5140
 #EXTINF:-1 tvg-id="" tvg-name="4K现场" group-title="4K频道",4K现场
@@ -352,17 +332,13 @@ http://121.237.245.25:8888/rtp/239.49.8.222:6000
 #EXTINF:-1 tvg-id="" tvg-name="4K花园" group-title="4K频道",4K花园
 http://121.237.245.25:8888/rtp/239.49.8.208:6000
 #EXTINF:-1 tvg-id="" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影
-http://223.167.230.155:4022/rtp/233.18.204.175:5140
-#EXTINF:-1 tvg-id="" tvg-name="CHC影迷电影" group-title="数字频道",CHC影迷电影
 http://112.66.102.186:8888/rtp/239.253.64.52:5140
-#EXTINF:-1 tvg-id="" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影
-http://223.167.230.155:4022/rtp/233.18.204.174:5140
 #EXTINF:-1 tvg-id="" tvg-name="CHC动作电影" tvg-logo="https://tb.zbds.top/logo/CHC动作电影.png" group-title="数字频道",CHC动作电影
 http://112.66.102.186:8888/rtp/239.253.64.51:5140
 #EXTINF:-1 tvg-id="" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院
-http://223.167.230.155:4022/rtp/233.18.204.173:5140
-#EXTINF:-1 tvg-id="" tvg-name="CHC家庭影院" tvg-logo="https://tb.zbds.top/logo/CHC家庭影院.png" group-title="数字频道",CHC家庭影院
 http://112.66.102.186:8888/rtp/239.253.64.50:5140
+#EXTINF:-1 tvg-id="" tvg-name="劲爆电影" group-title="数字频道",劲爆电影
+http://116.2.169.233:4010/rtp/232.0.0.155:1234
 #EXTINF:-1 tvg-id="" tvg-name="华数谍战剧场" group-title="数字频道",华数谍战剧场
 http://112.66.102.186:8888/rtp/239.253.64.212:5140
 #EXTINF:-1 tvg-id="" tvg-name="华数经典电影" group-title="数字频道",华数经典电影
@@ -477,26 +453,16 @@ http://121.237.245.25:8888/rtp/239.49.1.175:6000
 http://121.237.245.25:8888/rtp/239.49.1.180:6000
 #EXTINF:-1 tvg-id="" tvg-name="法治天地" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B3%95%E6%B2%BB%E5%A4%A9%E5%9C%B0.png" group-title="数字频道",法治天地
 http://121.237.245.25:8888/rtp/239.49.1.174:6000
-#EXTINF:-1 tvg-id="" tvg-name="法治天地" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B3%95%E6%B2%BB%E5%A4%A9%E5%9C%B0.png" group-title="数字频道",法治天地
-http://223.167.230.155:4022/rtp/233.18.204.49:5140
-#EXTINF:-1 tvg-id="" tvg-name="乐游" group-title="数字频道",乐游
-http://223.167.230.155:4022/rtp/233.18.204.47:5140
 #EXTINF:-1 tvg-id="" tvg-name="动漫秀场" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8A%A8%E6%BC%AB%E7%A7%80%E5%9C%BA.png" group-title="数字频道",动漫秀场
 http://121.237.245.25:8888/rtp/239.49.8.178:6000
 #EXTINF:-1 tvg-id="" tvg-name="动漫秀场" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8A%A8%E6%BC%AB%E7%A7%80%E5%9C%BA.png" group-title="数字频道",动漫秀场
 http://121.237.245.25:8888/rtp/239.49.1.171:6000
-#EXTINF:-1 tvg-id="" tvg-name="动漫秀场" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8A%A8%E6%BC%AB%E7%A7%80%E5%9C%BA.png" group-title="数字频道",动漫秀场
-http://223.167.230.155:4022/rtp/233.18.204.46:5140
-#EXTINF:-1 tvg-id="" tvg-name="动漫秀场" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8A%A8%E6%BC%AB%E7%A7%80%E5%9C%BA.png" group-title="数字频道",动漫秀场
-http://223.167.230.155:4022/rtp/233.18.204.54:5140
 #EXTINF:-1 tvg-id="" tvg-name="动漫秀场" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8A%A8%E6%BC%AB%E7%A7%80%E5%9C%BA.png" group-title="数字频道",动漫秀场
 http://125.126.119.144:8088/udp/233.50.200.12:5140
 #EXTINF:-1 tvg-id="" tvg-name="动漫秀场" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E5%8A%A8%E6%BC%AB%E7%A7%80%E5%9C%BA.png" group-title="数字频道",动漫秀场
 http://125.126.119.144:8088/udp/233.50.201.184:5140
 #EXTINF:-1 tvg-id="" tvg-name="生活时尚" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A.png" group-title="数字频道",生活时尚
 http://121.237.245.25:8888/rtp/239.49.1.181:6000
-#EXTINF:-1 tvg-id="" tvg-name="生活时尚" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A.png" group-title="数字频道",生活时尚
-http://223.167.230.155:4022/rtp/233.18.204.45:5140
 #EXTINF:-1 tvg-id="" tvg-name="热门剧场" group-title="数字频道",热门剧场
 http://121.237.245.25:8888/rtp/239.49.1.198:6000
 #EXTINF:-1 tvg-id="" tvg-name="谍战剧场" group-title="数字频道",谍战剧场
@@ -510,9 +476,9 @@ http://121.237.245.25:8888/rtp/239.49.8.119:8000
 #EXTINF:-1 tvg-id="" tvg-name="嘉佳卡通" group-title="数字频道",嘉佳卡通
 http://112.66.102.186:8888/rtp/239.253.64.127:5140
 #EXTINF:-1 tvg-id="" tvg-name="新动漫" group-title="数字频道",新动漫
-http://106.59.2.108:55555/rtp/239.200.201.32:4120
-#EXTINF:-1 tvg-id="" tvg-name="新动漫" group-title="数字频道",新动漫
 http://106.59.2.196:55555/rtp/239.200.201.32:4120
+#EXTINF:-1 tvg-id="" tvg-name="新动漫" group-title="数字频道",新动漫
+http://106.59.2.108:55555/rtp/239.200.201.32:4120
 #EXTINF:-1 tvg-id="" tvg-name="茶频道" tvg-logo="https://tb.zbds.top/logo/茶频道.png" group-title="数字频道",茶频道
 http://121.237.245.25:8888/rtp/239.49.1.234:6000
 #EXTINF:-1 tvg-id="" tvg-name="金鹰卡通" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A.png" group-title="数字频道",金鹰卡通
@@ -527,36 +493,14 @@ http://121.237.245.25:8888/rtp/239.49.1.180:6000
 http://121.237.245.25:8888/rtp/239.49.1.225:6000
 #EXTINF:-1 tvg-id="" tvg-name="上海纪实" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%8A%E6%B5%B7%E7%BA%AA%E5%AE%9E.png" group-title="数字频道",上海纪实
 http://112.66.102.186:8888/rtp/239.253.64.149:5140
-#EXTINF:-1 tvg-id="" tvg-name="上海新闻综合" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%8A%E6%B5%B7%E6%96%B0%E9%97%BB%E7%BB%BC%E5%90%88.png" group-title="☘️上海市",上海新闻综合
-http://223.167.230.155:4022/rtp/233.18.204.57:5140
-#EXTINF:-1 tvg-id="" tvg-name="上海都市" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%8A%E6%B5%B7%E9%83%BD%E5%B8%82.png" group-title="☘️上海市",上海都市
-http://223.167.230.155:4022/rtp/233.18.204.53:5140
-#EXTINF:-1 tvg-id="" tvg-name="多彩文体4K" group-title="☘️上海市",多彩文体4K
-http://223.167.230.155:4022/rtp/233.18.204.115:5140
-#EXTINF:-1 tvg-id="" tvg-name="多彩文体4K" group-title="☘️上海市",多彩文体4K
-http://223.167.230.155:4022/rtp/233.18.204.205:5140
 #EXTINF:-1 tvg-id="" tvg-name="多彩文体4K" group-title="☘️上海市",多彩文体4K
 http://125.126.119.144:8088/udp/233.50.200.229:5140
 #EXTINF:-1 tvg-id="" tvg-name="多彩文体4K" group-title="☘️上海市",多彩文体4K
 http://125.126.119.144:8088/udp/233.50.201.189:5140
-#EXTINF:-1 tvg-id="" tvg-name="五星体育" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%BA%94%E6%98%9F%E4%BD%93%E8%82%B2.png" group-title="☘️上海市",五星体育
-http://223.167.230.155:4022/rtp/233.18.204.58:5140
 #EXTINF:-1 tvg-id="" tvg-name="东方财经" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E8%B4%A2%E7%BB%8F.png" group-title="☘️上海市",东方财经
 http://121.237.245.25:8888/rtp/239.49.1.182:6000
-#EXTINF:-1 tvg-id="" tvg-name="东方财经" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E4%B8%9C%E6%96%B9%E8%B4%A2%E7%BB%8F.png" group-title="☘️上海市",东方财经
-http://223.167.230.155:4022/rtp/233.18.204.65:5140
 #EXTINF:-1 tvg-id="" tvg-name="第一财经" tvg-logo="https://tb.zbds.top/logo/第一财经.png" group-title="☘️上海市",第一财经
 http://121.237.245.25:8888/rtp/239.49.1.199:6000
-#EXTINF:-1 tvg-id="" tvg-name="第一财经" tvg-logo="https://tb.zbds.top/logo/第一财经.png" group-title="☘️上海市",第一财经
-http://223.167.230.155:4022/rtp/233.18.204.59:5140
-#EXTINF:-1 tvg-id="" tvg-name="BesTV4K电影" group-title="☘️上海市",BesTV4K电影
-http://223.167.230.155:4022/rtp/233.18.204.169:5140
-#EXTINF:-1 tvg-id="" tvg-name="BesTV4K记录" group-title="☘️上海市",BesTV4K记录
-http://223.167.230.155:4022/rtp/233.18.204.170:5140
-#EXTINF:-1 tvg-id="" tvg-name="BesTV4K动画" group-title="☘️上海市",BesTV4K动画
-http://223.167.230.155:4022/rtp/233.18.204.171:5140
-#EXTINF:-1 tvg-id="" tvg-name="BesTV影视解说" group-title="☘️上海市",BesTV影视解说
-http://223.167.230.155:4022/rtp/233.18.204.116:5140
 #EXTINF:-1 tvg-id="" tvg-name="海南社会与法" group-title="☘️海南省",海南社会与法
 http://112.66.102.186:8888/rtp/239.253.64.14:5140
 #EXTINF:-1 tvg-id="" tvg-name="海南少儿" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/%E6%B5%B7%E5%8D%97%E5%B0%91%E5%84%BF.png" group-title="☘️海南省",海南少儿
@@ -774,9 +718,9 @@ http://121.237.245.25:8888/rtp/239.49.0.225:8000
 #EXTINF:-1 tvg-id="" tvg-name="新闻综合" tvg-logo="https://tb.zbds.top/logo/新闻综合.png" group-title="☘️江苏省",新闻综合
 http://121.237.245.25:8888/rtp/239.49.0.214:8000
 #EXTINF:-1 tvg-id="" tvg-name="楚雄新闻频道" group-title="☘️江苏省",楚雄新闻频道
-http://106.59.2.108:55555/rtp/239.200.200.116:8708
-#EXTINF:-1 tvg-id="" tvg-name="楚雄新闻频道" group-title="☘️江苏省",楚雄新闻频道
 http://106.59.2.196:55555/rtp/239.200.200.116:8708
+#EXTINF:-1 tvg-id="" tvg-name="楚雄新闻频道" group-title="☘️江苏省",楚雄新闻频道
+http://106.59.2.108:55555/rtp/239.200.200.116:8708
 #EXTINF:-1 tvg-id="" tvg-name="浙江新闻" tvg-logo="https://tb.zbds.top/logo/浙江新闻.png" group-title="☘️江苏省",浙江新闻
 http://125.126.119.144:8088/udp/233.50.201.137:5140
 #EXTINF:-1 tvg-id="" tvg-name="丽水新闻综合" group-title="☘️江苏省",丽水新闻综合
@@ -793,6 +737,10 @@ http://125.126.119.144:8088/udp/233.50.201.161:5140
 http://125.126.119.144:8088/udp/233.50.201.163:5140
 #EXTINF:-1 tvg-id="" tvg-name="桐乡新闻" group-title="☘️江苏省",桐乡新闻
 http://125.126.119.144:8088/udp/233.50.201.169:5140
+#EXTINF:-1 tvg-id="" tvg-name="沈阳新闻综合" group-title="☘️江苏省",沈阳新闻综合
+http://116.2.169.233:4010/rtp/232.0.0.206:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽河新闻综合" group-title="☘️江苏省",辽河新闻综合
+http://116.2.169.233:4010/rtp/232.0.0.214:1234
 #EXTINF:-1 tvg-id="" tvg-name="宿豫综合" group-title="☘️江苏省",宿豫综合
 http://121.237.245.25:8888/rtp/239.49.1.98:6000
 #EXTINF:-1 tvg-id="" tvg-name="宿豫综合" group-title="☘️江苏省",宿豫综合
@@ -833,6 +781,26 @@ http://121.237.245.25:8888/rtp/239.49.1.246:6000
 http://121.237.245.25:8888/rtp/239.49.0.239:8000
 #EXTINF:-1 tvg-id="" tvg-name="赣榆" group-title="☘️江苏省",赣榆
 http://121.237.245.25:8888/rtp/239.49.0.241:8000
+#EXTINF:-1 tvg-id="" tvg-name="辽宁都市频道" group-title="☘️辽宁省",辽宁都市频道
+http://116.2.169.233:4010/rtp/232.0.0.154:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁影视剧频道" group-title="☘️辽宁省",辽宁影视剧频道
+http://116.2.169.233:4010/rtp/232.0.0.25:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁体育休闲" group-title="☘️辽宁省",辽宁体育休闲
+http://116.2.169.233:4010/rtp/232.0.0.164:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁生活频道" group-title="☘️辽宁省",辽宁生活频道
+http://116.2.169.233:4010/rtp/232.0.0.150:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁教育青少" tvg-logo="https://tb.zbds.top/logo/辽宁教育青少.png" group-title="☘️辽宁省",辽宁教育青少
+http://116.2.169.233:4010/rtp/232.0.0.241:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁北方频道" group-title="☘️辽宁省",辽宁北方频道
+http://116.2.169.233:4010/rtp/232.0.0.151:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁公共频道" group-title="☘️辽宁省",辽宁公共频道
+http://116.2.169.233:4010/rtp/232.0.0.168:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽宁经济频道" group-title="☘️辽宁省",辽宁经济频道
+http://116.2.169.233:4010/rtp/232.0.0.156:1234
+#EXTINF:-1 tvg-id="" tvg-name="辽河文化生活" group-title="☘️辽宁省",辽河文化生活
+http://116.2.169.233:4010/rtp/232.0.0.215:1234
+#EXTINF:-1 tvg-id="" tvg-name="移动电视" group-title="☘️辽宁省",移动电视
+http://116.2.169.233:4010/rtp/232.0.0.165:1234
 #EXTINF:-1 tvg-id="" tvg-name="中国蓝直播" group-title="☘️浙江省",中国蓝直播
 http://125.126.119.144:8088/udp/233.50.201.108:5140
 #EXTINF:-1 tvg-id="" tvg-name="浙江钱江" tvg-logo="https://tb.zbds.top/logo/浙江钱江.png" group-title="☘️浙江省",浙江钱江
@@ -868,37 +836,37 @@ http://125.126.119.144:8088/udp/233.50.201.156:5140
 #EXTINF:-1 tvg-id="" tvg-name="衢州综合" group-title="☘️新疆",衢州综合
 http://125.126.119.144:8088/udp/233.50.202.11:5140
 #EXTINF:-1 tvg-id="" tvg-name="重庆汽摩" tvg-logo="https://tb.zbds.top/logo/重庆汽摩.png" group-title="☘️天津市",重庆汽摩
-http://106.59.2.108:55555/rtp/239.200.200.98:8052
-#EXTINF:-1 tvg-id="" tvg-name="重庆汽摩" tvg-logo="https://tb.zbds.top/logo/重庆汽摩.png" group-title="☘️天津市",重庆汽摩
 http://106.59.2.196:55555/rtp/239.200.200.98:8052
-#EXTINF:-1 tvg-id="" tvg-name="云南都市频道" group-title="☘️云南省",云南都市频道
-http://106.59.2.108:55555/rtp/239.200.200.12:8844
+#EXTINF:-1 tvg-id="" tvg-name="重庆汽摩" tvg-logo="https://tb.zbds.top/logo/重庆汽摩.png" group-title="☘️天津市",重庆汽摩
+http://106.59.2.108:55555/rtp/239.200.200.98:8052
 #EXTINF:-1 tvg-id="" tvg-name="云南都市频道" group-title="☘️云南省",云南都市频道
 http://106.59.2.196:55555/rtp/239.200.200.12:8844
-#EXTINF:-1 tvg-id="" tvg-name="云南娱乐频道" group-title="☘️云南省",云南娱乐频道
-http://106.59.2.108:55555/rtp/239.200.200.13:8848
+#EXTINF:-1 tvg-id="" tvg-name="云南都市频道" group-title="☘️云南省",云南都市频道
+http://106.59.2.108:55555/rtp/239.200.200.12:8844
 #EXTINF:-1 tvg-id="" tvg-name="云南娱乐频道" group-title="☘️云南省",云南娱乐频道
 http://106.59.2.196:55555/rtp/239.200.200.13:8848
-#EXTINF:-1 tvg-id="" tvg-name="云南影视频道" group-title="☘️云南省",云南影视频道
-http://106.59.2.108:55555/rtp/239.200.200.15:8856
+#EXTINF:-1 tvg-id="" tvg-name="云南娱乐频道" group-title="☘️云南省",云南娱乐频道
+http://106.59.2.108:55555/rtp/239.200.200.13:8848
 #EXTINF:-1 tvg-id="" tvg-name="云南影视频道" group-title="☘️云南省",云南影视频道
 http://106.59.2.196:55555/rtp/239.200.200.15:8856
-#EXTINF:-1 tvg-id="" tvg-name="云南康旅频道" group-title="☘️云南省",云南康旅频道
-http://106.59.2.108:55555/rtp/239.200.200.31:8860
+#EXTINF:-1 tvg-id="" tvg-name="云南影视频道" group-title="☘️云南省",云南影视频道
+http://106.59.2.108:55555/rtp/239.200.200.15:8856
 #EXTINF:-1 tvg-id="" tvg-name="云南康旅频道" group-title="☘️云南省",云南康旅频道
 http://106.59.2.196:55555/rtp/239.200.200.31:8860
-#EXTINF:-1 tvg-id="" tvg-name="云南少儿频道" group-title="☘️云南省",云南少儿频道
-http://106.59.2.108:55555/rtp/239.200.200.32:8864
+#EXTINF:-1 tvg-id="" tvg-name="云南康旅频道" group-title="☘️云南省",云南康旅频道
+http://106.59.2.108:55555/rtp/239.200.200.31:8860
 #EXTINF:-1 tvg-id="" tvg-name="云南少儿频道" group-title="☘️云南省",云南少儿频道
 http://106.59.2.196:55555/rtp/239.200.200.32:8864
-#EXTINF:-1 tvg-id="" tvg-name="澜湄国际频道" group-title="☘️云南省",澜湄国际频道
-http://106.59.2.108:55555/rtp/239.200.200.33:8024
+#EXTINF:-1 tvg-id="" tvg-name="云南少儿频道" group-title="☘️云南省",云南少儿频道
+http://106.59.2.108:55555/rtp/239.200.200.32:8864
 #EXTINF:-1 tvg-id="" tvg-name="澜湄国际频道" group-title="☘️云南省",澜湄国际频道
 http://106.59.2.196:55555/rtp/239.200.200.33:8024
-#EXTINF:-1 tvg-id="" tvg-name="禄丰市电视台" group-title="☘️云南省",禄丰市电视台
-http://106.59.2.108:55555/rtp/239.200.200.163:8798
+#EXTINF:-1 tvg-id="" tvg-name="澜湄国际频道" group-title="☘️云南省",澜湄国际频道
+http://106.59.2.108:55555/rtp/239.200.200.33:8024
 #EXTINF:-1 tvg-id="" tvg-name="禄丰市电视台" group-title="☘️云南省",禄丰市电视台
 http://106.59.2.196:55555/rtp/239.200.200.163:8798
+#EXTINF:-1 tvg-id="" tvg-name="禄丰市电视台" group-title="☘️云南省",禄丰市电视台
+http://106.59.2.108:55555/rtp/239.200.200.163:8798
 #EXTINF:-1 tvg-id="" tvg-name="CGTN" group-title="其它频道",CGTN
 http://112.66.102.186:8888/rtp/239.253.64.68:5140
 #EXTINF:-1 tvg-id="" tvg-name="CGTN西语" group-title="其它频道",CGTN西语
@@ -915,12 +883,6 @@ http://121.237.245.25:8888/rtp/239.49.1.173:6000
 http://121.237.245.25:8888/rtp/239.49.8.179:6000
 #EXTINF:-1 tvg-id="" tvg-name="冬奥纪实" group-title="其它频道",冬奥纪实
 http://121.237.245.25:8888/rtp/239.49.8.202:6000
-#EXTINF:-1 tvg-id="" tvg-name="多彩文体" group-title="其它频道",多彩文体
-http://223.167.230.155:4022/rtp/233.18.204.50:5140
-#EXTINF:-1 tvg-id="" tvg-name="多彩文体" group-title="其它频道",多彩文体
-http://223.167.230.155:4022/rtp/233.18.204.55:5140
-#EXTINF:-1 tvg-id="" tvg-name="天翼高清4K" group-title="其它频道",天翼高清4K
-http://223.167.230.155:4022/rtp/233.18.204.201:5140
 #EXTINF:-1 tvg-id="" tvg-name="宁波少儿" group-title="其它频道",宁波少儿
 http://125.126.119.144:8088/udp/233.50.201.181:5140
 #EXTINF:-1 tvg-id="" tvg-name="宁波影视" group-title="其它频道",宁波影视
@@ -939,8 +901,6 @@ http://121.237.245.25:8888/rtp/239.49.1.172:6000
 http://121.237.245.25:8888/rtp/239.49.1.120:6000
 #EXTINF:-1 tvg-id="" tvg-name="文化精品" group-title="其它频道",文化精品
 http://121.237.245.25:8888/rtp/239.49.9.11:6000
-#EXTINF:-1 tvg-id="" tvg-name="文化精品" group-title="其它频道",文化精品
-http://223.167.230.155:4022/rtp/233.18.204.186:5140
 #EXTINF:-1 tvg-id="" tvg-name="暴走汽车" group-title="其它频道",暴走汽车
 http://121.237.245.25:8888/rtp/239.49.8.206:6000
 #EXTINF:-1 tvg-id="" tvg-name="极速汽车" group-title="其它频道",极速汽车
