@@ -15,7 +15,7 @@ on:
   #     - 'IP_Scan/ip-Scan.py'
 
 jobs:
-  scan-ip:
+  ip-Scan:
     runs-on: ubuntu-latest
     timeout-minutes: 240  # 设置超时时间
 
